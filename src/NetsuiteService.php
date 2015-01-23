@@ -8,15 +8,6 @@ class NetsuiteService extends NetsuiteClient {
 
     public $generated_from_endpoint = "2014_2";
 
-    /*
-    * Constructor using wsdl location and options array
-    * @param string $wsdl WSDL location for this service
-    * @param array $options Options for the SoapClient
-    */
-    //public function __construct($wsdl=null, $options=array(), $config = array()) {
-    //	parent::__construct($wsdl, $options, $config);
-    //}
-
     /**
      * Service Call: login
      * Parameter options:

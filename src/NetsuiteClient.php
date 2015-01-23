@@ -14,11 +14,11 @@ class NetsuiteClient
     private $soapHeaders = array();
 
 
-    function __construct($wsdl = null, $options = array(), $config = array()) {
+    function __construct($config = array(), $wsdl = null, $options = array()) {
         global $debuginfo;
 
         $this->config = $config ?: include "../config/netsuite.php";
-        $this->classmap = include "classmap.php";
+        $this->classmap = include "includes/classmap.php";
 
         if (!isset($wsdl)) {
              if (!isset($this->config['host'])) {
