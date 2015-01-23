@@ -13,11 +13,13 @@
   "require": {
     "php": ">=5.3.0",
     "ext-soap": "*",
+    "ext-openssl": "*",
     "ext-SimpleXML": "*"
   },
   "autoload": {
-    "psr-4": {
-      "": "src/"
+    "psr-0": {
+      "NetsuiteClient": "src/",
+      "NetsuiteService": "src/"
     },
     "files": [
       "src/includes/functions.php",
