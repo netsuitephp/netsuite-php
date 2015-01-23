@@ -21,9 +21,11 @@
       "NetsuiteClient": "src/",
       "NetsuiteService": "src/"
     },
+    "psr-4": {
+      "": "src/Classes/"
+    },
     "files": [
-      "src/includes/functions.php",
-      "src/includes/services.php"
+      "src/includes/functions.php"
     ]
   },
   "minimum-stability": "stable"

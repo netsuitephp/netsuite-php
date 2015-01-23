@@ -1,0 +1,185 @@
+<?php
+
+class CreditMemo extends Record {
+	public $createdDate;
+	public $lastModifiedDate;
+	public $customForm;
+	public $currency;
+	public $entity;
+	public $vatRegNum;
+	public $tranDate;
+	public $tranId;
+	public $createdFrom;
+	public $postingPeriod;
+	public $department;
+	public $class;
+	public $location;
+	public $subsidiary;
+	public $job;
+	public $salesRep;
+	public $partner;
+	public $contribPct;
+	public $otherRefNum;
+	public $memo;
+	public $excludeCommission;
+	public $leadSource;
+	public $balance;
+	public $account;
+	public $exchangeRate;
+	public $onCreditHold;
+	public $amountPaid;
+	public $salesEffectiveDate;
+	public $totalCostEstimate;
+	public $estGrossProfit;
+	public $estGrossProfitPercent;
+	public $currencyName;
+	public $promoCode;
+	public $amountRemaining;
+	public $discountItem;
+	public $source;
+	public $discountRate;
+	public $isTaxable;
+	public $taxItem;
+	public $taxRate;
+	public $unapplied;
+	public $autoApply;
+	public $applied;
+	public $toBePrinted;
+	public $toBeEmailed;
+	public $email;
+	public $toBeFaxed;
+	public $fax;
+	public $messageSel;
+	public $message;
+	public $billingAddress;
+	public $billAddressList;
+	public $shipMethod;
+	public $shippingCost;
+	public $shippingTax1Rate;
+	public $shippingTaxCode;
+	public $handlingTaxCode;
+	public $shippingTax2Rate;
+	public $handlingTax1Rate;
+	public $handlingTax2Rate;
+	public $handlingCost;
+	public $subTotal;
+	public $discountTotal;
+	public $revenueStatus;
+	public $recognizedRevenue;
+	public $deferredRevenue;
+	public $revRecOnRevCommitment;
+	public $taxTotal;
+	public $tax2Total;
+	public $altShippingCost;
+	public $altHandlingCost;
+	public $total;
+	public $salesGroup;
+	public $syncSalesTeams;
+	public $status;
+	public $giftCert;
+	public $giftCertTotal;
+	public $giftCertApplied;
+	public $giftCertAvailable;
+	public $tranIsVsoeBundle;
+	public $vsoeAutoCalc;
+	public $syncPartnerTeams;
+	public $salesTeamList;
+	public $itemList;
+	public $partnersList;
+	public $applyList;
+	public $customFieldList;
+	public $internalId;
+	public $externalId;
+	static $paramtypesmap = array(
+		"createdDate" => "dateTime",
+		"lastModifiedDate" => "dateTime",
+		"customForm" => "RecordRef",
+		"currency" => "RecordRef",
+		"entity" => "RecordRef",
+		"vatRegNum" => "string",
+		"tranDate" => "dateTime",
+		"tranId" => "string",
+		"createdFrom" => "RecordRef",
+		"postingPeriod" => "RecordRef",
+		"department" => "RecordRef",
+		"class" => "RecordRef",
+		"location" => "RecordRef",
+		"subsidiary" => "RecordRef",
+		"job" => "RecordRef",
+		"salesRep" => "RecordRef",
+		"partner" => "RecordRef",
+		"contribPct" => "string",
+		"otherRefNum" => "string",
+		"memo" => "string",
+		"excludeCommission" => "boolean",
+		"leadSource" => "RecordRef",
+		"balance" => "float",
+		"account" => "RecordRef",
+		"exchangeRate" => "float",
+		"onCreditHold" => "string",
+		"amountPaid" => "float",
+		"salesEffectiveDate" => "dateTime",
+		"totalCostEstimate" => "float",
+		"estGrossProfit" => "float",
+		"estGrossProfitPercent" => "float",
+		"currencyName" => "string",
+		"promoCode" => "RecordRef",
+		"amountRemaining" => "float",
+		"discountItem" => "RecordRef",
+		"source" => "string",
+		"discountRate" => "string",
+		"isTaxable" => "boolean",
+		"taxItem" => "RecordRef",
+		"taxRate" => "float",
+		"unapplied" => "float",
+		"autoApply" => "boolean",
+		"applied" => "float",
+		"toBePrinted" => "boolean",
+		"toBeEmailed" => "boolean",
+		"email" => "string",
+		"toBeFaxed" => "boolean",
+		"fax" => "string",
+		"messageSel" => "RecordRef",
+		"message" => "string",
+		"billingAddress" => "Address",
+		"billAddressList" => "RecordRef",
+		"shipMethod" => "RecordRef",
+		"shippingCost" => "float",
+		"shippingTax1Rate" => "float",
+		"shippingTaxCode" => "RecordRef",
+		"handlingTaxCode" => "RecordRef",
+		"shippingTax2Rate" => "string",
+		"handlingTax1Rate" => "float",
+		"handlingTax2Rate" => "string",
+		"handlingCost" => "float",
+		"subTotal" => "float",
+		"discountTotal" => "float",
+		"revenueStatus" => "RevenueStatus",
+		"recognizedRevenue" => "float",
+		"deferredRevenue" => "float",
+		"revRecOnRevCommitment" => "boolean",
+		"taxTotal" => "float",
+		"tax2Total" => "float",
+		"altShippingCost" => "float",
+		"altHandlingCost" => "float",
+		"total" => "float",
+		"salesGroup" => "RecordRef",
+		"syncSalesTeams" => "boolean",
+		"status" => "string",
+		"giftCert" => "RecordRef",
+		"giftCertTotal" => "float",
+		"giftCertApplied" => "float",
+		"giftCertAvailable" => "float",
+		"tranIsVsoeBundle" => "boolean",
+		"vsoeAutoCalc" => "boolean",
+		"syncPartnerTeams" => "boolean",
+		"salesTeamList" => "CreditMemoSalesTeamList",
+		"itemList" => "CreditMemoItemList",
+		"partnersList" => "CreditMemoPartnersList",
+		"applyList" => "CreditMemoApplyList",
+		"customFieldList" => "CustomFieldList",
+		"internalId" => "string",
+		"externalId" => "string",
+	);
+}
+
