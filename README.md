@@ -4,10 +4,10 @@ Massaged the Netsuite PHP Toolkit into a nice little composer package.
 
 Currently using: *Netsuite PHPToolkit 2014_2*
 
-### An Example of how to use this:
+### An example of how to use this:
 
 ```
-composer require "fungku/netsuite-php-toolkit": "~1.0"
+composer require "fungku/netsuite-php-toolkit:~1.0"
 ```
 
 ```php
