@@ -12,7 +12,7 @@ composer require "fungku/netsuite-php-toolkit": "~1.0"
 
 ```php
 $config = array(
-   "endpoint" => "2014_2",
+   "endpoint"  => "2014_2",
     "host"     => "https://webservices.netsuite.com",
     "email"    => "jDoe@netsuite.com",
     "password" => "mySecretPwd",
@@ -27,8 +27,6 @@ $request->baseRef = new RecordRef();
 $request->baseRef->internalId = "123";
 $request->baseRef->type = "customer";
 $getResponse = $service->get($request);
-
-die(var_dump($getResponse));
 
 if ( ! $getResponse->readResponse->status->isSuccess) {
     echo "GET ERROR";
