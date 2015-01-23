@@ -1,0 +1,9 @@
+<?php
+
+class LongCustomFieldRef extends CustomFieldRef {
+	public $value;
+	static $paramtypesmap = array(
+		"value" => "integer",
+	);
+}
+
