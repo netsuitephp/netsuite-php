@@ -1,6 +1,8 @@
 {
   "name": "fungku/netsuite-php-toolkit",
   "description": "Netsuite PHP Toolkit Package",
+  "keywords": [ "netsuite", "php", "composer", "package" ],
+  "type": "library",
   "license": "Apache-2.0",
   "authors": [
     {
@@ -9,7 +11,9 @@
     }
   ],
   "require": {
-    "php": ">=5.3.0"
+    "php": ">=5.3.0",
+    "ext-soap": "*",
+    "ext-SimpleXML": "*"
   },
   "autoload": {
     "psr-4": {
