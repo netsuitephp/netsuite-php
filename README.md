@@ -1,8 +1,8 @@
-# Netsuite PHP Toolkit - Package
+# Netsuite PHP API Client
 
 [![Latest Stable Version](https://poser.pugx.org/fungku/netsuite-php-toolkit/v/stable.svg)](https://packagist.org/packages/fungku/netsuite-php-toolkit) [![Total Downloads](https://poser.pugx.org/fungku/netsuite-php-toolkit/downloads.svg)](https://packagist.org/packages/fungku/netsuite-php-toolkit) [![Latest Unstable Version](https://poser.pugx.org/fungku/netsuite-php-toolkit/v/unstable.svg)](https://packagist.org/packages/fungku/netsuite-php-toolkit) [![License](https://poser.pugx.org/fungku/netsuite-php-toolkit/license.svg)](https://packagist.org/packages/fungku/netsuite-php-toolkit)
 
-Netsuite PHP Toolkit worked into a composer package.
+A PHP API client package for NetSuite, pried from the [NetSuite PHP Toolkit](http://www.netsuite.com/portal/developers/resources/suitetalk-sample-applications.shtml).
 
 You can now pass the configuration to the constructor or set environment variables to instantiate the service class.
 
@@ -119,20 +119,14 @@ NETSUITE_ACCOUNT=MYACCT1
 
 ## Status
 
-(:ballot_box_with_check: Complete, :wavy_dash: In Progress, :white_medium_small_square: Todo)
-
-:ballot_box_with_check: Extract the ~1500 classes from their single file...
-
-:ballot_box_with_check: Composer package with autoloading
-
-:ballot_box_with_check: Refactor to pass config through constructor
-
-:ballot_box_with_check: Refactor for optional environment variable config
-
-:white_medium_small_square: Namespacing
+ - [x] Extract the ~1500 classes from their single file...
+ - [x] Composer package with autoloading
+ - [x] Refactor to pass config through constructor
+ - [x] Refactor for optional environment variable config
+ - [ ] Namespacing
 
 ## License
 
-Original work is Copyright (c) 2010-2012 NetSuite Inc. and provided "as is." Refer to `Netsuite Toolkit License Agreement` file.
+[Original work](http://www.netsuite.com/portal/developers/resources/suitetalk-sample-applications.shtml) is Copyright (c) 2010-2012 NetSuite Inc. and provided "as is." Refer to `Netsuite Toolkit License Agreement` file.
 
 Modified work is Copyright (c) 2015 Ryan Winchester (fungku), licensed under the **Apache 2.0** license. Refer to the `LICENSE` file.
