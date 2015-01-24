@@ -35,3 +35,13 @@ if ( ! $getResponse->readResponse->status->isSuccess) {
     $customer = $getResponse->readResponse->record;
 }
 ```
+
+You can optionally avoid passing configuration array to the constructor by setting the following environment variables:
+```
+NETSUITE_ENDPOINT=2014_2
+NETSUITE_HOST=https://webservices.netsuite.com
+NETSUITE_EMAIL=jDoe@netsuite.com
+NETSUITE_PASSWORD=mySecretPwd
+NETSUITE_ROLE=3
+NETSUITE_ACCOUNT=MYACCT1
+```
