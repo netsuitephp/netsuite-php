@@ -1,6 +1,6 @@
 {
-  "name": "fungku/netsuite-php-toolkit",
-  "description": "Netsuite PHP Toolkit Package",
+  "name": "fungku/netsuite-php",
+  "description": "Netsuite PHP API Client",
   "keywords": [ "netsuite", "php", "composer", "package" ],
   "type": "library",
   "license": "Apache-2.0",
