@@ -1,4 +1,4 @@
-<?php
+<?php namespace Fungku\NetSuite\Classes;
 
 class NonInventoryResaleItem extends Record {
 	public $createdDate;

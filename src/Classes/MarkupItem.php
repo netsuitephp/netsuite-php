@@ -1,4 +1,4 @@
-<?php
+<?php namespace Fungku\NetSuite\Classes;
 
 class MarkupItem extends Record {
 	public $createdDate;

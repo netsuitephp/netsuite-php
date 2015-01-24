@@ -1,4 +1,4 @@
-<?php
+<?php namespace Fungku\NetSuite\Classes;
 
 class DepartmentSearchRowBasic extends SearchRowBasic {
 	public $externalId;

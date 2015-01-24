@@ -1,4 +1,4 @@
-<?php
+<?php namespace Fungku\NetSuite\Classes;
 
 class InventoryItem extends Record {
 	public $createdDate;

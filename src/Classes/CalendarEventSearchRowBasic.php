@@ -1,4 +1,4 @@
-<?php
+<?php namespace Fungku\NetSuite\Classes;
 
 class CalendarEventSearchRowBasic extends SearchRowBasic {
 	public $attendee;

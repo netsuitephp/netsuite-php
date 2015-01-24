@@ -1,4 +1,4 @@
-<?php
+<?php namespace Fungku\NetSuite\Classes;
 
 class TaskSearch extends SearchRecord {
 	public $basic;

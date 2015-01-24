@@ -1,4 +1,4 @@
-<?php
+<?php namespace Fungku\NetSuite\Classes;
 
 class EntitySearchRowBasic extends SearchRowBasic {
 	public $address;

@@ -1,4 +1,4 @@
-<?php
+<?php namespace Fungku\NetSuite\Classes;
 
 class TaskSearchRow extends SearchRow {
 	public $basic;

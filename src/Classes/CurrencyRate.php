@@ -1,4 +1,4 @@
-<?php
+<?php namespace Fungku\NetSuite\Classes;
 
 class CurrencyRate extends Record {
 	public $baseCurrency;

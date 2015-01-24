@@ -1,4 +1,4 @@
-<?php
+<?php namespace Fungku\NetSuite\Classes;
 
 class GeneralRateType {
 	static $paramtypesmap = array(

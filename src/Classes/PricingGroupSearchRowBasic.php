@@ -1,4 +1,4 @@
-<?php
+<?php namespace Fungku\NetSuite\Classes;
 
 class PricingGroupSearchRowBasic extends SearchRowBasic {
 	public $externalId;

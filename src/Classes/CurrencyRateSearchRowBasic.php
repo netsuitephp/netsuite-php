@@ -1,4 +1,4 @@
-<?php
+<?php namespace Fungku\NetSuite\Classes;
 
 class CurrencyRateSearchRowBasic extends SearchRowBasic {
 	public $baseCurrency;

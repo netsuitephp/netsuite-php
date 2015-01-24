@@ -48,7 +48,8 @@ class ClassSeparator
 
         // Pick out the Class map array and store it in a file
         preg_match('~\$classmap \= ([^;]+)~', $serviceClass, $classmap);
-        $this->makeClassmapFile($classmap[1]);
+        $classmap = str_replace('=> "', '=> "Fungku\\\\NetSuite\\\\Classes\\\\', $classmap[1]);
+        $this->makeClassmapFile($classmap);
 
         // Remove the class map from the service class
         $serviceClass = preg_replace('~\/\*\*\W+Class map[^\;]+\;~', '', $serviceClass);
