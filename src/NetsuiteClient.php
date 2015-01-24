@@ -17,7 +17,7 @@ class NetSuiteClient
     function __construct($config = array(), $wsdl = null, $options = array()) {
         global $debuginfo;
 
-        $this->config = $config ?: include "../config/netsuite.php";
+        $this->setConfig($config);
         $this->classmap = include "includes/classmap.php";
 
         if (!isset($wsdl)) {
@@ -69,6 +69,25 @@ class NetSuiteClient
         $this->setPassport();
 
         $this->client = new SoapClient($wsdl, $options);
+    }
+
+    private function setConfig($config)
+    {
+        $this->config = $config;
+
+        if (empty($this->config)) {
+            $this->config = array(
+                'endpoint' => getenv('NETSUITE_ENDPOINT'),
+                'host'     => getenv('NETSUITE_HOST'),
+                'email'    => getenv('NETSUITE_EMAIL'),
+                'password' => getenv('NETSUITE_PASSWORD'),
+                'role'     => getenv('NETSUITE_ROLE'),
+                'account'  => getenv('NETSUITE_ACCOUNT'),
+            );
+            if (in_array(false, $this->config)) {
+                throw new \InvalidArgumentException("You must provide all the required NetSuite configuration options.");
+            }
+        }
     }
 
     public function setPassport() {
