@@ -1,8 +1,8 @@
 ## Netsuite PHP Toolkit - Package
 
-Massaged the Netsuite PHP Toolkit into a nice little composer package.
+[![Latest Stable Version](https://poser.pugx.org/fungku/netsuite-php-toolkit/v/stable.svg)](https://packagist.org/packages/fungku/netsuite-php-toolkit) [![Total Downloads](https://poser.pugx.org/fungku/netsuite-php-toolkit/downloads.svg)](https://packagist.org/packages/fungku/netsuite-php-toolkit) [![Latest Unstable Version](https://poser.pugx.org/fungku/netsuite-php-toolkit/v/unstable.svg)](https://packagist.org/packages/fungku/netsuite-php-toolkit) [![License](https://poser.pugx.org/fungku/netsuite-php-toolkit/license.svg)](https://packagist.org/packages/fungku/netsuite-php-toolkit)
 
-Currently using: *Netsuite PHPToolkit 2014_2*
+Netsuite PHP Toolkit worked into a composer package.
 
 ### An example of how to use this:
 
@@ -10,6 +10,7 @@ Currently using: *Netsuite PHPToolkit 2014_2*
 composer require "fungku/netsuite-php-toolkit:~1.0"
 ```
 
+Retreiving a customer record:
 ```php
 $config = array(
    "endpoint"  => "2014_2",
