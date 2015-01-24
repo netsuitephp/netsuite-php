@@ -17,7 +17,9 @@ composer require "fungku/netsuite-php-toolkit:~1.0"
 
 ## Examples:
 
-#### Retreiving a customer record:
+#### Instantiating the NetSuiteService class:
+
+The rest of the examples assume that you have done this.
 
 ```php
 $config = array(
@@ -30,7 +32,13 @@ $config = array(
 );
 
 $service = new NetSuiteService($config);
+```
 
+If you would rather use environment variables, [you can do that](#using-environment-variables-instead-of-a-config-array) instead of the config array.
+
+#### Retreiving a customer record:
+
+```php
 $request = new GetRequest();
 $request->baseRef = new RecordRef();
 $request->baseRef->internalId = "123";
@@ -43,6 +51,61 @@ if ( ! $getResponse->readResponse->status->isSuccess) {
     $customer = $getResponse->readResponse->record;
 }
 ```
+
+### Searching for customers who emails start with "j":
+
+```php
+$service->setSearchPreferences(false, 20);
+
+$emailSearchField = new SearchStringField();
+$emailSearchField->operator = "startsWith";
+$emailSearchField->searchValue = "j";
+
+$search = new CustomerSearchBasic();
+$search->email = $emailSearchField;
+
+$request = new SearchRequest();
+$request->searchRecord = $search;
+
+$searchResponse = $service->search($request);
+
+if (!$searchResponse->searchResult->status->isSuccess) {
+    echo "SEARCH ERROR";
+} else {
+    $result = $searchResponse->searchResult;
+    $count = $result->totalRecords;
+    $records = $result->recordList;
+    
+    echo $count . " records were found.";
+}
+```
+
+### Adding a new customer:
+
+```php
+$customer = new Customer();
+$customer->lastName = "Doe";
+$customer->firstName = "John";
+$customer->companyName = "ABC company";
+$customer->phone = "123456789";
+$customer->email = "joe.doe@abc.com";
+
+$customer->customForm = new RecordRef();
+$customer->customForm->internalId = -8;
+
+$request = new AddRequest();
+$request->record = $customer;
+
+$addResponse = $service->add($request);
+
+if (!$addResponse->writeResponse->status->isSuccess) {
+    echo "ADD ERROR";
+} else {
+    echo "ADD SUCCESS, id " . $addResponse->writeResponse->baseRef->internalId;
+}
+```
+
+#### Using environment variables instead of a config array:
 
 You can optionally avoid passing configuration array to the constructor by setting the following environment variables:
 ```
