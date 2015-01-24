@@ -1,4 +1,4 @@
-<?php
+<?php namespace Fungku\NetSuite\Classes;
 
 class AssemblyUnbuild extends Record {
 	public $createdDate;

@@ -1,4 +1,4 @@
-<?php
+<?php namespace Fungku\NetSuite\Classes;
 
 class TimeSheetSearchRow extends SearchRow {
 	public $basic;

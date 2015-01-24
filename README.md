@@ -9,6 +9,8 @@ You can now pass the configuration to the constructor or set environment variabl
 Also, the classes have been extracted for PSR autoloading, and for better IDE integration. As well as just making
 it easier to scan and see what is available.
 
+Just added Namespaces :new:
+
 ## Adding it to your project:
 
 ```
@@ -31,7 +33,7 @@ $config = array(
     "account"  => "MYACCT1",
 );
 
-$service = new NetSuiteService($config);
+$service = new Fungku\NetSuite\NetSuiteService($config);
 ```
 
 If you would rather use environment variables, [you can do that](#using-environment-variables-instead-of-a-config-array) instead of the config array.
@@ -39,10 +41,14 @@ If you would rather use environment variables, [you can do that](#using-environm
 #### Retreiving a customer record:
 
 ```php
+use Fungku\NetSuite\Classes\GetRequest;
+use Fungku\NetSuite\Classes\RecordRef;
+
 $request = new GetRequest();
 $request->baseRef = new RecordRef();
 $request->baseRef->internalId = "123";
 $request->baseRef->type = "customer";
+
 $getResponse = $service->get($request);
 
 if ( ! $getResponse->readResponse->status->isSuccess) {
@@ -55,6 +61,10 @@ if ( ! $getResponse->readResponse->status->isSuccess) {
 ### Searching for customers who emails start with "j":
 
 ```php
+use Fungku\NetSuite\Classes\SearchStringField;
+use Fungku\NetSuite\Classes\CustomerSearchBasic;
+use Fungku\NetSuite\Classes\SearchRequest;
+
 $service->setSearchPreferences(false, 20);
 
 $emailSearchField = new SearchStringField();
@@ -83,6 +93,10 @@ if (!$searchResponse->searchResult->status->isSuccess) {
 ### Adding a new customer:
 
 ```php
+use Fungku\NetSuite\Classes\Customer;
+use Fungku\NetSuite\Classes\RecordRef;
+use Fungku\NetSuite\Classes\AddRequest;
+
 $customer = new Customer();
 $customer->lastName = "Doe";
 $customer->firstName = "John";
@@ -123,7 +137,7 @@ NETSUITE_ACCOUNT=MYACCT1
  - [x] Composer package with autoloading
  - [x] Pass config through constructor
  - [x] Optional environment variable config
- - [ ] Namespacing
+ - [x] Namespacing
 
 ## License
 

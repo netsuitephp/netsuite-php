@@ -1,4 +1,9 @@
-<?php
+<?php namespace Fungku\NetSuite;
+
+use Fungku\NetSuite\Classes\Passport;
+use Fungku\NetSuite\Classes\Preferences;
+use Fungku\NetSuite\Classes\RecordRef;
+use Fungku\NetSuite\Classes\SearchPreferences;
 
 class NetSuiteClient
 {
@@ -22,10 +27,10 @@ class NetSuiteClient
 
         if (!isset($wsdl)) {
              if (!isset($this->config['host'])) {
-                throw new Exception('Webservice host must be specified');
+                throw new \Exception('Webservice host must be specified');
              }
              if (!isset($this->config['endpoint'])) {
-                throw new Exception('Webservice endpoint must be specified');
+                throw new \Exception('Webservice endpoint must be specified');
              }
              $wsdl = $this->config['host'] . "/wsdl/v" . $this->config['endpoint'] . "_0/netsuite.wsdl";
         }
@@ -68,7 +73,7 @@ class NetSuiteClient
         $options['user_agent'] =  $httpheaders;
         $this->setPassport();
 
-        $this->client = new SoapClient($wsdl, $options);
+        $this->client = new \SoapClient($wsdl, $options);
     }
 
     private function setConfig($config)
@@ -133,7 +138,7 @@ class NetSuiteClient
     }
 
     public function addHeader($header_name, $header) {
-        $this->soapHeaders[$header_name] = new SoapHeader("ns", $header_name, $header);
+        $this->soapHeaders[$header_name] = new \SoapHeader("ns", $header_name, $header);
     }
     public function clearHeader($header_name) {
         unset($this->soapHeaders[$header_name]);

@@ -1,4 +1,4 @@
-<?php
+<?php namespace Fungku\NetSuite\Classes;
 
 class PermissionLevel {
 	static $paramtypesmap = array(

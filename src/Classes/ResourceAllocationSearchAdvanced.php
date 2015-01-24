@@ -1,4 +1,4 @@
-<?php
+<?php namespace Fungku\NetSuite\Classes;
 
 class ResourceAllocationSearchAdvanced extends SearchRecord {
 	public $criteria;

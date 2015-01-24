@@ -1,4 +1,4 @@
-<?php
+<?php namespace Fungku\NetSuite\Classes;
 
 class TransferOrderItemCommitInventory {
 	static $paramtypesmap = array(

@@ -1,4 +1,4 @@
-<?php
+<?php namespace Fungku\NetSuite\Classes;
 
 class SearchColumnStringField extends SearchColumnField {
 	public $searchValue;

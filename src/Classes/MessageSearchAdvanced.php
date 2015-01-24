@@ -1,4 +1,4 @@
-<?php
+<?php namespace Fungku\NetSuite\Classes;
 
 class MessageSearchAdvanced extends SearchRecord {
 	public $criteria;

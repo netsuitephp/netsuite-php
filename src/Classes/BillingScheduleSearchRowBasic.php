@@ -1,4 +1,4 @@
-<?php
+<?php namespace Fungku\NetSuite\Classes;
 
 class BillingScheduleSearchRowBasic extends SearchRowBasic {
 	public $applyToSubtotal;
