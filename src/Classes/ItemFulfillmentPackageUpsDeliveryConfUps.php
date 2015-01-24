@@ -1,4 +1,4 @@
-<?php
+<?php namespace Fungku\NetSuite\Classes;
 
 class ItemFulfillmentPackageUpsDeliveryConfUps {
 	static $paramtypesmap = array(

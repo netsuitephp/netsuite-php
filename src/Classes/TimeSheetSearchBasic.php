@@ -1,4 +1,4 @@
-<?php
+<?php namespace Fungku\NetSuite\Classes;
 
 class TimeSheetSearchBasic extends SearchRecordBasic {
 	public $approvalStatus;

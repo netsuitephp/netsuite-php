@@ -1,4 +1,4 @@
-<?php
+<?php namespace Fungku\NetSuite\Classes;
 
 class WorkOrderCompletion extends Record {
 	public $createdDate;

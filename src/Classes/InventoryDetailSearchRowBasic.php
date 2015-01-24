@@ -1,4 +1,4 @@
-<?php
+<?php namespace Fungku\NetSuite\Classes;
 
 class InventoryDetailSearchRowBasic extends SearchRowBasic {
 	public $binNumber;

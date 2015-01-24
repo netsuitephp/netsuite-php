@@ -1,4 +1,4 @@
-<?php
+<?php namespace Fungku\NetSuite\Classes;
 
 class BudgetSearchAdvanced extends SearchRecord {
 	public $criteria;

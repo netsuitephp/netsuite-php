@@ -1,4 +1,4 @@
-<?php
+<?php namespace Fungku\NetSuite\Classes;
 
 class SubsidiarySearchBasic extends SearchRecordBasic {
 	public $accountingBook;
