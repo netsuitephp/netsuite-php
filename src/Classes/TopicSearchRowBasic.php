@@ -1,4 +1,4 @@
-<?php
+<?php namespace Fungku\NetSuite\Classes;
 
 class TopicSearchRowBasic extends SearchRowBasic {
 	public $description;

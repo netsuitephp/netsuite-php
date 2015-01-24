@@ -16,12 +16,8 @@
     "ext-SimpleXML": "*"
   },
   "autoload": {
-    "psr-0": {
-      "NetSuiteClient": "src/",
-      "NetSuiteService": "src/"
-    },
     "psr-4": {
-      "": "src/Classes/"
+      "Fungku\\NetSuite\\": "src/"
     },
     "files": [
       "src/includes/functions.php"

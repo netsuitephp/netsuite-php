@@ -1,4 +1,4 @@
-<?php
+<?php namespace Fungku\NetSuite\Classes;
 
 class PriceLevelSearchBasic extends SearchRecordBasic {
 	public $discountPct;

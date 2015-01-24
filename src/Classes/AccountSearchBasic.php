@@ -1,4 +1,4 @@
-<?php
+<?php namespace Fungku\NetSuite\Classes;
 
 class AccountSearchBasic extends SearchRecordBasic {
 	public $balance;

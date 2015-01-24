@@ -1,4 +1,4 @@
-<?php
+<?php namespace Fungku\NetSuite\Classes;
 
 class OriginatingLeadSearch extends SearchRecord {
 	public $basic;

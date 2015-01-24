@@ -1,4 +1,4 @@
-<?php
+<?php namespace Fungku\NetSuite\Classes;
 
 class SubtotalItem extends Record {
 	public $createdDate;

@@ -1,4 +1,4 @@
-<?php
+<?php namespace Fungku\NetSuite\Classes;
 
 class ItemRevisionSearch extends SearchRecord {
 	public $basic;

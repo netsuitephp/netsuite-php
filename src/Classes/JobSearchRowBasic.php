@@ -1,4 +1,4 @@
-<?php
+<?php namespace Fungku\NetSuite\Classes;
 
 class JobSearchRowBasic extends SearchRowBasic {
 	public $accountNumber;

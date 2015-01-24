@@ -1,4 +1,4 @@
-<?php
+<?php namespace Fungku\NetSuite\Classes;
 
 class ManufacturingRoutingSearchAdvanced extends SearchRecord {
 	public $criteria;

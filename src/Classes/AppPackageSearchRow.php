@@ -1,4 +1,4 @@
-<?php
+<?php namespace Fungku\NetSuite\Classes;
 
 class AppPackageSearchRow extends SearchRow {
 	public $basic;

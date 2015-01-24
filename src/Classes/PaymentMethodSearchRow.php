@@ -1,4 +1,4 @@
-<?php
+<?php namespace Fungku\NetSuite\Classes;
 
 class PaymentMethodSearchRow extends SearchRow {
 	public $basic;

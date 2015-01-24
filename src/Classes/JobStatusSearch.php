@@ -1,4 +1,4 @@
-<?php
+<?php namespace Fungku\NetSuite\Classes;
 
 class JobStatusSearch extends SearchRecord {
 	public $basic;
