@@ -1,4 +1,4 @@
-# Netsuite PHP API Client
+# NetSuite PHP API Client
 
 [![Latest Stable Version](https://poser.pugx.org/fungku/netsuite-php/v/stable.svg)](https://packagist.org/packages/fungku/netsuite-php) [![Total Downloads](https://poser.pugx.org/fungku/netsuite-php/downloads.svg)](https://packagist.org/packages/fungku/netsuite-php) [![Latest Unstable Version](https://poser.pugx.org/fungku/netsuite-php/v/unstable.svg)](https://packagist.org/packages/fungku/netsuite-php) [![License](https://poser.pugx.org/fungku/netsuite-php/license.svg)](https://packagist.org/packages/fungku/netsuite-php)
 
@@ -127,6 +127,6 @@ NETSUITE_ACCOUNT=MYACCT1
 
 ## License
 
-[Original work](http://www.netsuite.com/portal/developers/resources/suitetalk-sample-applications.shtml) is Copyright &copy; 2010-2012 NetSuite Inc. and provided "as is." Refer to the [Netsuite Toolkit License Agreement](https://github.com/fungku/netsuite-php/blob/master/original/NetSuite%20Toolkit%20License%20Agreement.docx?raw=true) file.
+[Original work](http://www.netsuite.com/portal/developers/resources/suitetalk-sample-applications.shtml) is Copyright &copy; 2010-2012 NetSuite Inc. and provided "as is." Refer to the [NetSuite Toolkit License Agreement](https://github.com/fungku/netsuite-php/blob/master/original/NetSuite%20Toolkit%20License%20Agreement.docx?raw=true) file.
 
 Modified and new work is Copyright &copy; 2015 Ryan Winchester (fungku), licensed under the **Apache 2.0** open source software license. Refer to the [LICENSE](https://github.com/fungku/netsuite-php/blob/master/LICENSE.txt) file.
