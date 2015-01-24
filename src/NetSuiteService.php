@@ -1,6 +1,6 @@
 <?php
 
-class NetSuiteService extends NetsuiteClient {
+class NetSuiteService extends NetSuiteClient {
 
 	public $generated_from_endpoint = "2014_2";
 	

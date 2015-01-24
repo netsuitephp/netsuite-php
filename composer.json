@@ -18,8 +18,8 @@
   },
   "autoload": {
     "psr-0": {
-      "NetsuiteClient": "src/",
-      "NetsuiteService": "src/"
+      "NetSuiteClient": "src/",
+      "NetSuiteService": "src/"
     },
     "psr-4": {
       "": "src/Classes/"
