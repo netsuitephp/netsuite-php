@@ -33,7 +33,7 @@ $config = array(
     "account"  => "MYACCT1",
 );
 
-$service = new NetSuiteService($config);
+$service = new Fungku\NetSuite\NetSuiteService($config);
 ```
 
 If you would rather use environment variables, [you can do that](#using-environment-variables-instead-of-a-config-array) instead of the config array.
