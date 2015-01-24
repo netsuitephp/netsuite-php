@@ -121,8 +121,8 @@ NETSUITE_ACCOUNT=MYACCT1
 
  - [x] Extract the ~1500 classes from their single file...
  - [x] Composer package with autoloading
- - [x] Refactor to pass config through constructor
- - [x] Refactor for optional environment variable config
+ - [x] Pass config through constructor
+ - [x] Optional environment variable config
  - [ ] Namespacing
 
 ## License
