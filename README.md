@@ -4,13 +4,16 @@
 
 Netsuite PHP Toolkit worked into a composer package.
 
-### An example of how to use this:
+### Adding it to your project:
 
 ```
 composer require "fungku/netsuite-php-toolkit:~1.0"
 ```
 
-Retreiving a customer record:
+### Examples:
+
+#### Retreiving a customer record:
+
 ```php
 $config = array(
    "endpoint"  => "2014_2",
@@ -35,3 +38,6 @@ if ( ! $getResponse->readResponse->status->isSuccess) {
     $customer = $getResponse->readResponse->record;
 }
 ```
+
+Original work Copyright (c) 2010-2012 NetSuite Inc., refer to `Netsuite Toolkit License Agreement`
+Modified work Copyright (c) 2015 Ryan Winchester (fungku), refer to `LICENSE`
