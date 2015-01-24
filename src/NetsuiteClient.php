@@ -1,6 +1,6 @@
 <?php
 
-class NetsuiteClient
+class NetSuiteClient
 {
     public $client = null;
     public $passport = null;
