@@ -127,6 +127,6 @@ NETSUITE_ACCOUNT=MYACCT1
 
 ## License
 
-[Original work](http://www.netsuite.com/portal/developers/resources/suitetalk-sample-applications.shtml) is Copyright (c) 2010-2012 NetSuite Inc. and provided "as is." Refer to `Netsuite Toolkit License Agreement` file.
+[Original work](http://www.netsuite.com/portal/developers/resources/suitetalk-sample-applications.shtml) is Copyright &copy; 2010-2012 NetSuite Inc. and provided "as is." Refer to `Netsuite Toolkit License Agreement` file.
 
-Modified work is Copyright (c) 2015 Ryan Winchester (fungku), licensed under the **Apache 2.0** license. Refer to the `LICENSE` file.
+Modified work is Copyright &copy; 2015 Ryan Winchester (fungku), licensed under the **Apache 2.0** license. Refer to the `LICENSE` file.
