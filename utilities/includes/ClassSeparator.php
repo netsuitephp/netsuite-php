@@ -1,5 +1,10 @@
 <?php
 
+/**
+ * @author Ryan Winchester (fungku)
+ * @license Apache 2.0
+ */
+
 require_once "functions.php";
 
 class ClassSeparator
