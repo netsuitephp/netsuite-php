@@ -58,7 +58,7 @@ if ( ! $getResponse->readResponse->status->isSuccess) {
 }
 ```
 
-### Searching for customers who emails start with "j":
+#### Searching for customers who emails start with "j":
 
 ```php
 use Fungku\NetSuite\Classes\SearchStringField;
@@ -90,7 +90,7 @@ if (!$searchResponse->searchResult->status->isSuccess) {
 }
 ```
 
-### Adding a new customer:
+#### Adding a new customer:
 
 ```php
 use Fungku\NetSuite\Classes\Customer;
