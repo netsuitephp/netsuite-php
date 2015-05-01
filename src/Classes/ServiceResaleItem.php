@@ -8,9 +8,11 @@ class ServiceResaleItem extends Record {
 	public $cost;
 	public $costUnits;
 	public $expenseAccount;
+	public $intercoExpenseAccount;
 	public $salesDescription;
 	public $includeChildren;
 	public $incomeAccount;
+	public $intercoIncomeAccount;
 	public $taxSchedule;
 	public $matrixType;
 	public $isTaxable;
@@ -37,6 +39,7 @@ class ServiceResaleItem extends Record {
 	public $useMarginalRates;
 	public $overallQuantityPricingType;
 	public $isFulfillable;
+	public $generateAccruals;
 	public $costCategory;
 	public $purchaseOrderQuantity;
 	public $purchaseOrderAmount;
@@ -116,9 +119,11 @@ class ServiceResaleItem extends Record {
 		"cost" => "float",
 		"costUnits" => "string",
 		"expenseAccount" => "RecordRef",
+		"intercoExpenseAccount" => "RecordRef",
 		"salesDescription" => "string",
 		"includeChildren" => "boolean",
 		"incomeAccount" => "RecordRef",
+		"intercoIncomeAccount" => "RecordRef",
 		"taxSchedule" => "RecordRef",
 		"matrixType" => "ItemMatrixType",
 		"isTaxable" => "boolean",
@@ -145,6 +150,7 @@ class ServiceResaleItem extends Record {
 		"useMarginalRates" => "boolean",
 		"overallQuantityPricingType" => "ItemOverallQuantityPricingType",
 		"isFulfillable" => "boolean",
+		"generateAccruals" => "boolean",
 		"costCategory" => "RecordRef",
 		"purchaseOrderQuantity" => "float",
 		"purchaseOrderAmount" => "float",

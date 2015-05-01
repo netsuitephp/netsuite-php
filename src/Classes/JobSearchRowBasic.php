@@ -108,7 +108,6 @@ class JobSearchRowBasic extends SearchRowBasic {
 	public $subscriptionStatus;
 	public $subsidiary;
 	public $timeRemaining;
-	public $type;
 	public $zipCode;
 	public $customFieldList;
 	static $paramtypesmap = array(
@@ -219,7 +218,6 @@ class JobSearchRowBasic extends SearchRowBasic {
 		"subscriptionStatus" => "SearchColumnBooleanField[]",
 		"subsidiary" => "SearchColumnSelectField[]",
 		"timeRemaining" => "SearchColumnDoubleField[]",
-		"type" => "SearchColumnSelectField[]",
 		"zipCode" => "SearchColumnStringField[]",
 		"customFieldList" => "SearchColumnCustomFieldList",
 	);

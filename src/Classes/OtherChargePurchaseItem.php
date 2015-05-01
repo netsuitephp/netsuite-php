@@ -32,6 +32,7 @@ class OtherChargePurchaseItem extends Record {
 	public $residual;
 	public $amortizationPeriod;
 	public $isFulfillable;
+	public $generateAccruals;
 	public $accountingBookDetailList;
 	public $costCategory;
 	public $overheadType;
@@ -84,6 +85,7 @@ class OtherChargePurchaseItem extends Record {
 		"residual" => "string",
 		"amortizationPeriod" => "integer",
 		"isFulfillable" => "boolean",
+		"generateAccruals" => "boolean",
 		"accountingBookDetailList" => "ItemAccountingBookDetailList",
 		"costCategory" => "RecordRef",
 		"overheadType" => "ItemOverheadType",

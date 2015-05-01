@@ -9,6 +9,7 @@ class PromotionCode extends Record {
 	public $codePattern;
 	public $numberToGenerate;
 	public $description;
+	public $locationList;
 	public $isInactive;
 	public $discount;
 	public $rate;
@@ -24,6 +25,7 @@ class PromotionCode extends Record {
 	public $name;
 	public $itemsList;
 	public $partnersList;
+	public $customFieldList;
 	public $internalId;
 	public $externalId;
 	static $paramtypesmap = array(
@@ -35,6 +37,7 @@ class PromotionCode extends Record {
 		"codePattern" => "string",
 		"numberToGenerate" => "integer",
 		"description" => "string",
+		"locationList" => "RecordRefList",
 		"isInactive" => "boolean",
 		"discount" => "RecordRef",
 		"rate" => "string",
@@ -50,6 +53,7 @@ class PromotionCode extends Record {
 		"name" => "string",
 		"itemsList" => "PromotionCodeItemsList",
 		"partnersList" => "PromotionCodePartnersList",
+		"customFieldList" => "CustomFieldList",
 		"internalId" => "string",
 		"externalId" => "string",
 	);

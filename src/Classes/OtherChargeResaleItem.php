@@ -8,9 +8,11 @@ class OtherChargeResaleItem extends Record {
 	public $cost;
 	public $costUnits;
 	public $expenseAccount;
+	public $intercoExpenseAccount;
 	public $salesDescription;
 	public $includeChildren;
 	public $incomeAccount;
+	public $intercoIncomeAccount;
 	public $isTaxable;
 	public $matrixType;
 	public $taxSchedule;
@@ -34,6 +36,7 @@ class OtherChargeResaleItem extends Record {
 	public $enforceMinQtyInternally;
 	public $softDescriptor;
 	public $isFulfillable;
+	public $generateAccruals;
 	public $costCategory;
 	public $purchaseOrderQuantity;
 	public $purchaseOrderAmount;
@@ -88,9 +91,11 @@ class OtherChargeResaleItem extends Record {
 		"cost" => "float",
 		"costUnits" => "string",
 		"expenseAccount" => "RecordRef",
+		"intercoExpenseAccount" => "RecordRef",
 		"salesDescription" => "string",
 		"includeChildren" => "boolean",
 		"incomeAccount" => "RecordRef",
+		"intercoIncomeAccount" => "RecordRef",
 		"isTaxable" => "boolean",
 		"matrixType" => "ItemMatrixType",
 		"taxSchedule" => "RecordRef",
@@ -114,6 +119,7 @@ class OtherChargeResaleItem extends Record {
 		"enforceMinQtyInternally" => "boolean",
 		"softDescriptor" => "string",
 		"isFulfillable" => "boolean",
+		"generateAccruals" => "boolean",
 		"costCategory" => "RecordRef",
 		"purchaseOrderQuantity" => "float",
 		"purchaseOrderAmount" => "float",

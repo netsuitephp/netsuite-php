@@ -35,6 +35,7 @@ class TransactionLinkType {
 	const _revalueWorkOrder = "_revalueWorkOrder";
 	const _revenueAmortizatonRecognition = "_revenueAmortizatonRecognition";
 	const _revenueCommitted = "_revenueCommitted";
+	const _rfqToVendorRfq = "_rfqToVendorRfq";
 	const _saleReturn = "_saleReturn";
 	const _salesOrderDegross = "_salesOrderDegross";
 	const _salesOrderDeposit = "_salesOrderDeposit";
@@ -42,6 +43,7 @@ class TransactionLinkType {
 	const _sourceOfRevenueContract = "_sourceOfRevenueContract";
 	const _specialOrder = "_specialOrder";
 	const _vendorBillVariance = "_vendorBillVariance";
+	const _vendorRfqToPurchaseContract = "_vendorRfqToPurchaseContract";
 	const _wipBuild = "_wipBuild";
 	const _workOrderBuild = "_workOrderBuild";
 }

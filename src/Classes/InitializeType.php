@@ -17,6 +17,7 @@ class InitializeType {
 	const itemFulfillment = "itemFulfillment";
 	const itemReceipt = "itemReceipt";
 	const inventoryTransfer = "inventoryTransfer";
+	const purchaseOrder = "purchaseOrder";
 	const returnAuthorization = "returnAuthorization";
 	const salesOrder = "salesOrder";
 	const vendorBill = "vendorBill";

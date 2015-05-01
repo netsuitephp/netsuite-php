@@ -14,6 +14,9 @@ class ItemAccountMappingItemAccount {
 	const _expense = "_expense";
 	const _gainLoss = "_gainLoss";
 	const _income = "_income";
+	const _intercompanyCostOfGoods = "_intercompanyCostOfGoods";
+	const _intercompanyExpense = "_intercompanyExpense";
+	const _intercompanyIncome = "_intercompanyIncome";
 	const _liability = "_liability";
 	const _markup = "_markup";
 	const _payment = "_payment";

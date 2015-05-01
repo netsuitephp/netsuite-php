@@ -17,6 +17,7 @@ class InitializeRefType {
 	const lotNumberedAssemblyItem = "lotNumberedAssemblyItem";
 	const opportunity = "opportunity";
 	const purchaseOrder = "purchaseOrder";
+	const purchaseRequisition = "purchaseRequisition";
 	const returnAuthorization = "returnAuthorization";
 	const salesOrder = "salesOrder";
 	const serializedAssemblyItem = "serializedAssemblyItem";

@@ -208,6 +208,7 @@ class TransactionSearchBasic extends SearchRecordBasic {
 	public $paymentEventPurchaseDataSent;
 	public $paymentEventResult;
 	public $paymentEventType;
+	public $paymentHold;
 	public $paymentMethod;
 	public $payPalPending;
 	public $payPalStatus;
@@ -527,6 +528,7 @@ class TransactionSearchBasic extends SearchRecordBasic {
 		"paymentEventPurchaseDataSent" => "SearchBooleanField",
 		"paymentEventResult" => "SearchEnumMultiSelectField",
 		"paymentEventType" => "SearchEnumMultiSelectField",
+		"paymentHold" => "SearchBooleanField",
 		"paymentMethod" => "SearchMultiSelectField",
 		"payPalPending" => "SearchBooleanField",
 		"payPalStatus" => "SearchStringField",

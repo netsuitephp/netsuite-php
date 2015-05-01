@@ -8,9 +8,11 @@ class NonInventoryResaleItem extends Record {
 	public $cost;
 	public $costUnits;
 	public $expenseAccount;
+	public $intercoExpenseAccount;
 	public $salesDescription;
 	public $includeChildren;
 	public $incomeAccount;
+	public $intercoIncomeAccount;
 	public $isTaxable;
 	public $matrixType;
 	public $taxSchedule;
@@ -67,6 +69,7 @@ class NonInventoryResaleItem extends Record {
 	public $shipPackage;
 	public $shipIndividually;
 	public $isFulfillable;
+	public $generateAccruals;
 	public $costCategory;
 	public $pricesIncludeTax;
 	public $quantityPricingSchedule;
@@ -155,9 +158,11 @@ class NonInventoryResaleItem extends Record {
 		"cost" => "float",
 		"costUnits" => "string",
 		"expenseAccount" => "RecordRef",
+		"intercoExpenseAccount" => "RecordRef",
 		"salesDescription" => "string",
 		"includeChildren" => "boolean",
 		"incomeAccount" => "RecordRef",
+		"intercoIncomeAccount" => "RecordRef",
 		"isTaxable" => "boolean",
 		"matrixType" => "ItemMatrixType",
 		"taxSchedule" => "RecordRef",
@@ -214,6 +219,7 @@ class NonInventoryResaleItem extends Record {
 		"shipPackage" => "RecordRef",
 		"shipIndividually" => "boolean",
 		"isFulfillable" => "boolean",
+		"generateAccruals" => "boolean",
 		"costCategory" => "RecordRef",
 		"pricesIncludeTax" => "boolean",
 		"quantityPricingSchedule" => "RecordRef",

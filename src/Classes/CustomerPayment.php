@@ -12,6 +12,7 @@ class CustomerPayment extends Record {
 	public $payment;
 	public $autoApply;
 	public $tranDate;
+	public $tranId;
 	public $postingPeriod;
 	public $paymentMethod;
 	public $ccIsPurchaseCardBin;
@@ -68,6 +69,7 @@ class CustomerPayment extends Record {
 		"payment" => "float",
 		"autoApply" => "boolean",
 		"tranDate" => "dateTime",
+		"tranId" => "string",
 		"postingPeriod" => "RecordRef",
 		"paymentMethod" => "RecordRef",
 		"ccIsPurchaseCardBin" => "boolean",

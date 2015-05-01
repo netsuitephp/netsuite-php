@@ -23,6 +23,7 @@ class DeletedRecordType {
 	const creditMemo = "creditMemo";
 	const currencyRate = "currencyRate";
 	const customRecord = "customRecord";
+	const customTransaction = "customTransaction";
 	const customer = "customer";
 	const customerCategory = "customerCategory";
 	const customerMessage = "customerMessage";
@@ -90,6 +91,7 @@ class DeletedRecordType {
 	const projectTask = "projectTask";
 	const promotionCode = "promotionCode";
 	const purchaseOrder = "purchaseOrder";
+	const purchaseRequisition = "purchaseRequisition";
 	const resourceAllocation = "resourceAllocation";
 	const returnAuthorization = "returnAuthorization";
 	const salesOrder = "salesOrder";

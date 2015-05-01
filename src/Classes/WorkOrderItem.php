@@ -3,6 +3,7 @@
 class WorkOrderItem {
 	public $line;
 	public $item;
+	public $operationSequenceNumber;
 	public $componentYield;
 	public $bomQuantity;
 	public $quantityCommitted;
@@ -28,10 +29,12 @@ class WorkOrderItem {
 	public $commit;
 	public $createPo;
 	public $createWo;
+	public $plannedIssueDate;
 	public $customFieldList;
 	static $paramtypesmap = array(
 		"line" => "integer",
 		"item" => "RecordRef",
+		"operationSequenceNumber" => "integer",
 		"componentYield" => "float",
 		"bomQuantity" => "float",
 		"quantityCommitted" => "float",
@@ -57,6 +60,7 @@ class WorkOrderItem {
 		"commit" => "WorkOrderItemItemCommitInventory",
 		"createPo" => "WorkOrderItemItemCreatePo",
 		"createWo" => "boolean",
+		"plannedIssueDate" => "dateTime",
 		"customFieldList" => "CustomFieldList",
 	);
 }

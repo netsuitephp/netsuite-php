@@ -2,9 +2,11 @@
 
 class VendorSearch extends SearchRecord {
 	public $basic;
+	public $accountJoin;
 	public $campaignResponseJoin;
 	public $contactJoin;
 	public $contactPrimaryJoin;
+	public $expAccountJoin;
 	public $fileJoin;
 	public $messagesJoin;
 	public $messagesFromJoin;
@@ -15,9 +17,11 @@ class VendorSearch extends SearchRecord {
 	public $customSearchJoin;
 	static $paramtypesmap = array(
 		"basic" => "VendorSearchBasic",
+		"accountJoin" => "AccountSearchBasic",
 		"campaignResponseJoin" => "CampaignSearchBasic",
 		"contactJoin" => "ContactSearchBasic",
 		"contactPrimaryJoin" => "ContactSearchBasic",
+		"expAccountJoin" => "AccountSearchBasic",
 		"fileJoin" => "FileSearchBasic",
 		"messagesJoin" => "MessageSearchBasic",
 		"messagesFromJoin" => "MessageSearchBasic",

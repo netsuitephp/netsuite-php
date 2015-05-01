@@ -83,6 +83,7 @@ class ItemSearchRowBasic extends SearchRowBasic {
 	public $froogleProductFeed;
 	public $fxCost;
 	public $gainLossAccount;
+	public $generateAccruals;
 	public $giftCertAuthCode;
 	public $giftCertEmail;
 	public $giftCertExpirationDate;
@@ -93,6 +94,8 @@ class ItemSearchRowBasic extends SearchRowBasic {
 	public $hits;
 	public $imageUrl;
 	public $incomeAccount;
+	public $intercoExpenseAccount;
+	public $intercoIncomeAccount;
 	public $internalId;
 	public $inventoryLocation;
 	public $invtClassification;
@@ -169,6 +172,7 @@ class ItemSearchRowBasic extends SearchRowBasic {
 	public $metaTagHtml;
 	public $minimumQuantity;
 	public $modified;
+	public $mossApplies;
 	public $mpn;
 	public $multManufactureAddr;
 	public $nextagCategory;
@@ -381,6 +385,7 @@ class ItemSearchRowBasic extends SearchRowBasic {
 		"froogleProductFeed" => "SearchColumnBooleanField[]",
 		"fxCost" => "SearchColumnDoubleField[]",
 		"gainLossAccount" => "SearchColumnSelectField[]",
+		"generateAccruals" => "SearchColumnBooleanField[]",
 		"giftCertAuthCode" => "SearchColumnStringField[]",
 		"giftCertEmail" => "SearchColumnStringField[]",
 		"giftCertExpirationDate" => "SearchColumnStringField[]",
@@ -391,6 +396,8 @@ class ItemSearchRowBasic extends SearchRowBasic {
 		"hits" => "SearchColumnLongField[]",
 		"imageUrl" => "SearchColumnStringField[]",
 		"incomeAccount" => "SearchColumnSelectField[]",
+		"intercoExpenseAccount" => "SearchColumnSelectField[]",
+		"intercoIncomeAccount" => "SearchColumnSelectField[]",
 		"internalId" => "SearchColumnSelectField[]",
 		"inventoryLocation" => "SearchColumnSelectField[]",
 		"invtClassification" => "SearchColumnEnumSelectField[]",
@@ -467,6 +474,7 @@ class ItemSearchRowBasic extends SearchRowBasic {
 		"metaTagHtml" => "SearchColumnStringField[]",
 		"minimumQuantity" => "SearchColumnStringField[]",
 		"modified" => "SearchColumnDateField[]",
+		"mossApplies" => "SearchColumnBooleanField[]",
 		"mpn" => "SearchColumnStringField[]",
 		"multManufactureAddr" => "SearchColumnBooleanField[]",
 		"nextagCategory" => "SearchColumnStringField[]",

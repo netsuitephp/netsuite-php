@@ -15,6 +15,9 @@ class WorkOrderIssue extends Record {
 	public $class;
 	public $location;
 	public $revision;
+	public $manufacturingRouting;
+	public $startOperation;
+	public $endOperation;
 	public $componentList;
 	public $customFieldList;
 	public $internalId;
@@ -34,6 +37,9 @@ class WorkOrderIssue extends Record {
 		"class" => "RecordRef",
 		"location" => "RecordRef",
 		"revision" => "RecordRef",
+		"manufacturingRouting" => "RecordRef",
+		"startOperation" => "RecordRef",
+		"endOperation" => "RecordRef",
 		"componentList" => "WorkOrderIssueComponentList",
 		"customFieldList" => "CustomFieldList",
 		"internalId" => "string",

@@ -211,6 +211,7 @@ class TransactionSearchRowBasic extends SearchRowBasic {
 	public $paymentEventPurchaseDataSent;
 	public $paymentEventResult;
 	public $paymentEventType;
+	public $paymentHold;
 	public $paymentMethod;
 	public $payPalPending;
 	public $payPalStatus;
@@ -537,6 +538,7 @@ class TransactionSearchRowBasic extends SearchRowBasic {
 		"paymentEventPurchaseDataSent" => "SearchColumnBooleanField[]",
 		"paymentEventResult" => "SearchColumnEnumSelectField[]",
 		"paymentEventType" => "SearchColumnEnumSelectField[]",
+		"paymentHold" => "SearchColumnBooleanField[]",
 		"paymentMethod" => "SearchColumnSelectField[]",
 		"payPalPending" => "SearchColumnBooleanField[]",
 		"payPalStatus" => "SearchColumnStringField[]",

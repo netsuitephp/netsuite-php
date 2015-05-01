@@ -21,6 +21,7 @@ class VendorBill extends Record {
 	public $userTotal;
 	public $discountAmount;
 	public $taxTotal;
+	public $paymentHold;
 	public $memo;
 	public $tax2Total;
 	public $creditLimit;
@@ -60,6 +61,7 @@ class VendorBill extends Record {
 		"userTotal" => "float",
 		"discountAmount" => "float",
 		"taxTotal" => "float",
+		"paymentHold" => "boolean",
 		"memo" => "string",
 		"tax2Total" => "float",
 		"creditLimit" => "float",

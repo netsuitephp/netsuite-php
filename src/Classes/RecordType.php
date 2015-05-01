@@ -45,6 +45,8 @@ class RecordType {
 	const customRecord = "customRecord";
 	const customRecordCustomField = "customRecordCustomField";
 	const customRecordType = "customRecordType";
+	const customTransaction = "customTransaction";
+	const customTransactionType = "customTransactionType";
 	const customer = "customer";
 	const customerCategory = "customerCategory";
 	const customerDeposit = "customerDeposit";
@@ -126,6 +128,7 @@ class RecordType {
 	const projectTask = "projectTask";
 	const promotionCode = "promotionCode";
 	const purchaseOrder = "purchaseOrder";
+	const purchaseRequisition = "purchaseRequisition";
 	const resourceAllocation = "resourceAllocation";
 	const returnAuthorization = "returnAuthorization";
 	const revRecSchedule = "revRecSchedule";

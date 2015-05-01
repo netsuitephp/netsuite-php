@@ -76,6 +76,7 @@ class ItemSearchBasic extends SearchRecordBasic {
 	public $fraudRisk;
 	public $froogleProductFeed;
 	public $fxCost;
+	public $generateAccruals;
 	public $giftCertAuthCode;
 	public $giftCertEmail;
 	public $giftCertExpDate;
@@ -160,6 +161,7 @@ class ItemSearchBasic extends SearchRecordBasic {
 	public $matrixChild;
 	public $metaTagHtml;
 	public $minimumQuantity;
+	public $mossApplies;
 	public $mpn;
 	public $multManufactureAddr;
 	public $nexTagCategory;
@@ -347,6 +349,7 @@ class ItemSearchBasic extends SearchRecordBasic {
 		"fraudRisk" => "SearchEnumMultiSelectField",
 		"froogleProductFeed" => "SearchBooleanField",
 		"fxCost" => "SearchDoubleField",
+		"generateAccruals" => "SearchBooleanField",
 		"giftCertAuthCode" => "SearchStringField",
 		"giftCertEmail" => "SearchStringField",
 		"giftCertExpDate" => "SearchDateField",
@@ -431,6 +434,7 @@ class ItemSearchBasic extends SearchRecordBasic {
 		"matrixChild" => "SearchBooleanField",
 		"metaTagHtml" => "SearchStringField",
 		"minimumQuantity" => "SearchLongField",
+		"mossApplies" => "SearchBooleanField",
 		"mpn" => "SearchStringField",
 		"multManufactureAddr" => "SearchBooleanField",
 		"nexTagCategory" => "SearchStringField",

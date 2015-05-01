@@ -18,6 +18,7 @@ class AccountingTransactionSearchBasic extends SearchRecordBasic {
 	public $internalIdNumber;
 	public $multiSubsidiary;
 	public $netAmount;
+	public $posting;
 	public $quantityRevCommitted;
 	public $recognizedRevenue;
 	public $revCommitStatus;
@@ -47,6 +48,7 @@ class AccountingTransactionSearchBasic extends SearchRecordBasic {
 		"internalIdNumber" => "SearchLongField",
 		"multiSubsidiary" => "SearchBooleanField",
 		"netAmount" => "SearchDoubleField",
+		"posting" => "SearchBooleanField",
 		"quantityRevCommitted" => "SearchDoubleField",
 		"recognizedRevenue" => "SearchDoubleField",
 		"revCommitStatus" => "SearchEnumMultiSelectField",

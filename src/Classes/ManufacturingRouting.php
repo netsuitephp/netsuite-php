@@ -11,6 +11,7 @@ class ManufacturingRouting extends Record {
 	public $isInactive;
 	public $autoCalculateLag;
 	public $routingStepList;
+	public $routingComponentList;
 	public $customFieldList;
 	public $internalId;
 	public $externalId;
@@ -25,6 +26,7 @@ class ManufacturingRouting extends Record {
 		"isInactive" => "boolean",
 		"autoCalculateLag" => "boolean",
 		"routingStepList" => "ManufacturingRoutingRoutingStepList",
+		"routingComponentList" => "ManufacturingRoutingRoutingComponentList",
 		"customFieldList" => "CustomFieldList",
 		"internalId" => "string",
 		"externalId" => "string",

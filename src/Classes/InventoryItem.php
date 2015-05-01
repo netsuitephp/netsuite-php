@@ -10,10 +10,12 @@ class InventoryItem extends Record {
 	public $originalItemType;
 	public $originalItemSubtype;
 	public $cogsAccount;
+	public $intercoCogsAccount;
 	public $salesDescription;
 	public $fraudRisk;
 	public $includeChildren;
 	public $incomeAccount;
+	public $intercoIncomeAccount;
 	public $taxSchedule;
 	public $dropshipExpenseAccount;
 	public $deferRevRec;
@@ -224,10 +226,12 @@ class InventoryItem extends Record {
 		"originalItemType" => "ItemType",
 		"originalItemSubtype" => "ItemSubType",
 		"cogsAccount" => "RecordRef",
+		"intercoCogsAccount" => "RecordRef",
 		"salesDescription" => "string",
 		"fraudRisk" => "InventoryItemFraudRisk",
 		"includeChildren" => "boolean",
 		"incomeAccount" => "RecordRef",
+		"intercoIncomeAccount" => "RecordRef",
 		"taxSchedule" => "RecordRef",
 		"dropshipExpenseAccount" => "RecordRef",
 		"deferRevRec" => "boolean",

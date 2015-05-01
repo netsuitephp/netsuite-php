@@ -33,6 +33,7 @@ class SerializedInventoryItem extends Record {
 	public $issueProduct;
 	public $currency;
 	public $cogsAccount;
+	public $intercoCogsAccount;
 	public $vendor;
 	public $salesDescription;
 	public $lastInvtCountDate;
@@ -40,6 +41,7 @@ class SerializedInventoryItem extends Record {
 	public $invtCountInterval;
 	public $invtClassification;
 	public $incomeAccount;
+	public $intercoIncomeAccount;
 	public $isTaxable;
 	public $taxSchedule;
 	public $dropshipExpenseAccount;
@@ -238,6 +240,7 @@ class SerializedInventoryItem extends Record {
 		"issueProduct" => "RecordRef",
 		"currency" => "string",
 		"cogsAccount" => "RecordRef",
+		"intercoCogsAccount" => "RecordRef",
 		"vendor" => "RecordRef",
 		"salesDescription" => "string",
 		"lastInvtCountDate" => "dateTime",
@@ -245,6 +248,7 @@ class SerializedInventoryItem extends Record {
 		"invtCountInterval" => "integer",
 		"invtClassification" => "ItemInvtClassification",
 		"incomeAccount" => "RecordRef",
+		"intercoIncomeAccount" => "RecordRef",
 		"isTaxable" => "boolean",
 		"taxSchedule" => "RecordRef",
 		"dropshipExpenseAccount" => "RecordRef",

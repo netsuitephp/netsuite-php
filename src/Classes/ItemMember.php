@@ -18,6 +18,7 @@ class ItemMember {
 	public $effectiveRevision;
 	public $obsoleteRevision;
 	public $lineNumber;
+	public $memberKey;
 	static $paramtypesmap = array(
 		"memberDescr" => "string",
 		"componentYield" => "float",
@@ -36,6 +37,7 @@ class ItemMember {
 		"effectiveRevision" => "RecordRef",
 		"obsoleteRevision" => "RecordRef",
 		"lineNumber" => "integer",
+		"memberKey" => "string",
 	);
 }
 

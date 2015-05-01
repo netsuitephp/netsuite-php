@@ -50,7 +50,7 @@ use Fungku\NetSuite\Classes\UpsertRequest;
 
 class NetSuiteService extends NetSuiteClient {
 
-	public $generated_from_endpoint = "2014_2";
+	public $generated_from_endpoint = "2015_1";
 	
 
 	 

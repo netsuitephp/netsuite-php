@@ -5,8 +5,10 @@ class TransactionSearchRow extends SearchRow {
 	public $accountJoin;
 	public $accountingPeriodJoin;
 	public $accountingTransactionJoin;
+	public $advanceToApplyAccountJoin;
 	public $appliedToTransactionJoin;
 	public $applyingTransactionJoin;
+	public $billingAddressJoin;
 	public $billingTransactionJoin;
 	public $binNumberJoin;
 	public $callJoin;
@@ -48,6 +50,7 @@ class TransactionSearchRow extends SearchRow {
 	public $rgPostingTransactionJoin;
 	public $salesOrderJoin;
 	public $salesRepJoin;
+	public $shippingAddressJoin;
 	public $subsidiaryJoin;
 	public $taskJoin;
 	public $toLocationJoin;
@@ -61,8 +64,10 @@ class TransactionSearchRow extends SearchRow {
 		"accountJoin" => "AccountSearchRowBasic",
 		"accountingPeriodJoin" => "AccountingPeriodSearchRowBasic",
 		"accountingTransactionJoin" => "AccountingTransactionSearchRowBasic",
+		"advanceToApplyAccountJoin" => "AccountSearchRowBasic",
 		"appliedToTransactionJoin" => "TransactionSearchRowBasic",
 		"applyingTransactionJoin" => "TransactionSearchRowBasic",
+		"billingAddressJoin" => "AddressSearchRowBasic",
 		"billingTransactionJoin" => "TransactionSearchRowBasic",
 		"binNumberJoin" => "BinSearchRowBasic",
 		"callJoin" => "PhoneCallSearchRowBasic",
@@ -104,6 +109,7 @@ class TransactionSearchRow extends SearchRow {
 		"rgPostingTransactionJoin" => "TransactionSearchRowBasic",
 		"salesOrderJoin" => "TransactionSearchRowBasic",
 		"salesRepJoin" => "EmployeeSearchRowBasic",
+		"shippingAddressJoin" => "AddressSearchRowBasic",
 		"subsidiaryJoin" => "SubsidiarySearchRowBasic",
 		"taskJoin" => "TaskSearchRowBasic",
 		"toLocationJoin" => "LocationSearchRowBasic",

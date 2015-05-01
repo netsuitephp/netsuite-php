@@ -20,6 +20,7 @@ class AccountingTransactionSearchRowBasic extends SearchRowBasic {
 	public $lastModifiedDate;
 	public $multiSubsidiary;
 	public $netAmount;
+	public $posting;
 	public $quantityRevCommitted;
 	public $recognizedRevenue;
 	public $revCommitStatus;
@@ -50,6 +51,7 @@ class AccountingTransactionSearchRowBasic extends SearchRowBasic {
 		"lastModifiedDate" => "SearchColumnDateField[]",
 		"multiSubsidiary" => "SearchColumnBooleanField[]",
 		"netAmount" => "SearchColumnDoubleField[]",
+		"posting" => "SearchColumnBooleanField[]",
 		"quantityRevCommitted" => "SearchColumnDoubleField[]",
 		"recognizedRevenue" => "SearchColumnDoubleField[]",
 		"revCommitStatus" => "SearchColumnEnumSelectField[]",

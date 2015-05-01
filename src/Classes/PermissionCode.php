@@ -4,6 +4,7 @@ class PermissionCode {
 	static $paramtypesmap = array(
 	);
 	const _accessPaymentAuditLog = "_accessPaymentAuditLog";
+	const _accessTokenManagement = "_accessTokenManagement";
 	const _accountDetail = "_accountDetail";
 	const _accounting = "_accounting";
 	const _accountingBook = "_accountingBook";
@@ -25,6 +26,7 @@ class PermissionCode {
 	const _advancedPDFHTMLTemplates = "_advancedPDFHTMLTemplates";
 	const _allocationSchedules = "_allocationSchedules";
 	const _allowNonGLChanges = "_allowNonGLChanges";
+	const _allowPendingBookJournalEntry = "_allowPendingBookJournalEntry";
 	const _amendW4 = "_amendW4";
 	const _amortizationReports = "_amortizationReports";
 	const _amortizationSchedules = "_amortizationSchedules";
@@ -40,7 +42,6 @@ class PermissionCode {
 	const _bankAccountRegisters = "_bankAccountRegisters";
 	const _billingInformation = "_billingInformation";
 	const _billingSchedules = "_billingSchedules";
-	const _billingSetup = "_billingSetup";
 	const _billOfDistribution = "_billOfDistribution";
 	const _billOfMaterialsInquiry = "_billOfMaterialsInquiry";
 	const _billPurchaseOrders = "_billPurchaseOrders";
@@ -136,6 +137,7 @@ class PermissionCode {
 	const _customSubtabs = "_customSubtabs";
 	const _customTransactionFields = "_customTransactionFields";
 	const _customTransactionForms = "_customTransactionForms";
+	const _customTransactionTypes = "_customTransactionTypes";
 	const _deferredExpenseRegisters = "_deferredExpenseRegisters";
 	const _deferredRevenueRegisters = "_deferredRevenueRegisters";
 	const _deleteAllData = "_deleteAllData";
@@ -254,6 +256,7 @@ class PermissionCode {
 	const _locations = "_locations";
 	const _locationSegmentMapping = "_locationSegmentMapping";
 	const _lockTransactions = "_lockTransactions";
+	const _logInUsingAccessTokens = "_logInUsingAccessTokens";
 	const _longTermLiabilityRegisters = "_longTermLiabilityRegisters";
 	const _mailMerge = "_mailMerge";
 	const _makeJournalEntry = "_makeJournalEntry";
@@ -324,8 +327,11 @@ class PermissionCode {
 	const _pdfMessages = "_pdfMessages";
 	const _pdfTemplate = "_pdfTemplate";
 	const _performSearch = "_performSearch";
+	const _persistSearch = "_persistSearch";
+	const _phasedProcesses = "_phasedProcesses";
 	const _phoneCalls = "_phoneCalls";
 	const _plannedStandardCost = "_plannedStandardCost";
+	const _positions = "_positions";
 	const _postingPeriodOnTransactions = "_postingPeriodOnTransactions";
 	const _postTime = "_postTime";
 	const _postVendorBillVariances = "_postVendorBillVariances";
@@ -346,6 +352,8 @@ class PermissionCode {
 	const _publicTemplateCategories = "_publicTemplateCategories";
 	const _publishDashboards = "_publishDashboards";
 	const _publishEmployeeList = "_publishEmployeeList";
+	const _publisherApplications = "_publisherApplications";
+	const _publisherId = "_publisherId";
 	const _publishForms = "_publishForms";
 	const _publishKnowledgeBase = "_publishKnowledgeBase";
 	const _publishRSSFeeds = "_publishRSSFeeds";
@@ -367,6 +375,7 @@ class PermissionCode {
 	const _relatedItems = "_relatedItems";
 	const _reportCustomization = "_reportCustomization";
 	const _reportScheduling = "_reportScheduling";
+	const _requestForQuote = "_requestForQuote";
 	const _requisition = "_requisition";
 	const _requisitionApproval = "_requisitionApproval";
 	const _resource = "_resource";
@@ -437,6 +446,7 @@ class PermissionCode {
 	const _storeLogoUpload = "_storeLogoUpload";
 	const _storeTabs = "_storeTabs";
 	const _subsidiaries = "_subsidiaries";
+	const _suiteAppInstallation = "_suiteAppInstallation";
 	const _suiteBundler = "_suiteBundler";
 	const _suiteBundlerUpgrades = "_suiteBundlerUpgrades";
 	const _suiteScript = "_suiteScript";
@@ -464,6 +474,7 @@ class PermissionCode {
 	const _tegataReceivable = "_tegataReceivable";
 	const _telephonyIntegration = "_telephonyIntegration";
 	const _templateCategories = "_templateCategories";
+	const _terminationReasons = "_terminationReasons";
 	const _testdriveMasters = "_testdriveMasters";
 	const _timer = "_timer";
 	const _timeTracking = "_timeTracking";
@@ -486,10 +497,12 @@ class PermissionCode {
 	const _upsellAssistant = "_upsellAssistant";
 	const _upsellSetup = "_upsellSetup";
 	const _upsellWizard = "_upsellWizard";
+	const _userAccessTokens = "_userAccessTokens";
 	const _userPreferences = "_userPreferences";
 	const _usersAndPasswords = "_usersAndPasswords";
 	const _vendorBillApproval = "_vendorBillApproval";
 	const _vendorPaymentStatus = "_vendorPaymentStatus";
+	const _vendorRequestForQuote = "_vendorRequestForQuote";
 	const _vendorReturnAuthApproval = "_vendorReturnAuthApproval";
 	const _vendorReturnAuthorization = "_vendorReturnAuthorization";
 	const _vendorReturns = "_vendorReturns";
@@ -500,6 +513,7 @@ class PermissionCode {
 	const _viewUnencryptedCreditCards = "_viewUnencryptedCreditCards";
 	const _webServices = "_webServices";
 	const _webSiteExternalPublisher = "_webSiteExternalPublisher";
+	const _webSiteManagement = "_webSiteManagement";
 	const _webSiteReport = "_webSiteReport";
 	const _webStoreEmailTemplate = "_webStoreEmailTemplate";
 	const _webStoreReport = "_webStoreReport";

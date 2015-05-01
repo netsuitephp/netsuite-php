@@ -5,8 +5,10 @@ class TransactionSearch extends SearchRecord {
 	public $accountJoin;
 	public $accountingPeriodJoin;
 	public $accountingTransactionJoin;
+	public $advanceToApplyAccountJoin;
 	public $appliedToTransactionJoin;
 	public $applyingTransactionJoin;
+	public $billingAddressJoin;
 	public $billingTransactionJoin;
 	public $binNumberJoin;
 	public $callJoin;
@@ -48,6 +50,7 @@ class TransactionSearch extends SearchRecord {
 	public $rgPostingTransactionJoin;
 	public $salesOrderJoin;
 	public $salesRepJoin;
+	public $shippingAddressJoin;
 	public $subsidiaryJoin;
 	public $taskJoin;
 	public $toLocationJoin;
@@ -61,8 +64,10 @@ class TransactionSearch extends SearchRecord {
 		"accountJoin" => "AccountSearchBasic",
 		"accountingPeriodJoin" => "AccountingPeriodSearchBasic",
 		"accountingTransactionJoin" => "AccountingTransactionSearchBasic",
+		"advanceToApplyAccountJoin" => "AccountSearchBasic",
 		"appliedToTransactionJoin" => "TransactionSearchBasic",
 		"applyingTransactionJoin" => "TransactionSearchBasic",
+		"billingAddressJoin" => "AddressSearchBasic",
 		"billingTransactionJoin" => "TransactionSearchBasic",
 		"binNumberJoin" => "BinSearchBasic",
 		"callJoin" => "PhoneCallSearchBasic",
@@ -104,6 +109,7 @@ class TransactionSearch extends SearchRecord {
 		"rgPostingTransactionJoin" => "TransactionSearchBasic",
 		"salesOrderJoin" => "TransactionSearchBasic",
 		"salesRepJoin" => "EmployeeSearchBasic",
+		"shippingAddressJoin" => "AddressSearchBasic",
 		"subsidiaryJoin" => "SubsidiarySearchBasic",
 		"taskJoin" => "TaskSearchBasic",
 		"toLocationJoin" => "LocationSearchBasic",
