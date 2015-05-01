@@ -13,9 +13,13 @@ Just added Namespaces :new:
 
 ## Adding it to your project:
 
+For endpoint 2015_1
+
 ```
-composer require "fungku/netsuite-php:~1.0"
+composer require "fungku/netsuite-php: 2015.1.*"
 ```
+
+The versions now match the endpoint version. So whatever endpoint you are using, you should match the version to that.
 
 ## Examples:
 
