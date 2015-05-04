@@ -1,6 +1,10 @@
 # NetSuite PHP API Client
 
-[![Latest Stable Version](https://poser.pugx.org/fungku/netsuite-php/v/stable.svg)](https://packagist.org/packages/fungku/netsuite-php) [![Total Downloads](https://poser.pugx.org/fungku/netsuite-php/downloads.svg)](https://packagist.org/packages/fungku/netsuite-php) [![Latest Unstable Version](https://poser.pugx.org/fungku/netsuite-php/v/unstable.svg)](https://packagist.org/packages/fungku/netsuite-php) [![License](https://poser.pugx.org/fungku/netsuite-php/license.svg)](https://packagist.org/packages/fungku/netsuite-php) [![Scrutinizer Code Quality](https://img.shields.io/scrutinizer/g/fungku/netsuite-php.svg)](https://scrutinizer-ci.com/g/fungku/netsuite-php/?branch=master)
+[![Version](https://img.shields.io/packagist/v/fungku/netsuite-php.svg?style=flat-square)](https://packagist.org/packages/fungku/netsuite-php)
+ [![Total Downloads](https://img.shields.io/packagist/dt/fungku/netsuite-php.svg?style=flat-square)](https://packagist.org/packages/fungku/netsuite-php)
+ [![License](https://img.shields.io/packagist/l/fungku/netsuite-php.svg?style=flat-square)](https://packagist.org/packages/fungku/netsuite-php)
+ [![Scrutinizer Code Quality](https://img.shields.io/scrutinizer/g/fungku/netsuite-php.svg?style=flat-square)](https://scrutinizer-ci.com/g/fungku/netsuite-php/?branch=master)
+ [![Build Status](https://img.shields.io/travis/fungku/netsuite-php.svg?style=flat-square)](https://travis-ci.org/fungku/netsuite-php)
 
 A PHP API client package for NetSuite, pried from the [NetSuite PHP Toolkit](http://www.netsuite.com/portal/developers/resources/suitetalk-sample-applications.shtml).
 
