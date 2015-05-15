@@ -18,6 +18,12 @@ class NetSuiteClient
     private $config;
     private $soapHeaders = array();
 
+    /**
+     * @param array $config
+     * @param string $wsdl
+     * @param array $options
+     * @throws \Exception
+     */
     public function __construct($config = array(), $wsdl = null, $options = array())
     {
         global $debuginfo;
@@ -76,7 +82,10 @@ class NetSuiteClient
         $this->client = new \SoapClient($wsdl, $options);
     }
 
-    private function setConfig($config)
+    /**
+     * @param array $config
+     */
+    private function setConfig(array $config)
     {
         // Required config parameters.
         $required = array(
@@ -95,12 +104,24 @@ class NetSuiteClient
 
         // Optional config parameters.
         $optional = array(
+            'logging'  => isset($config['logging'])  ? $config['logging']  : getenv('NETSUITE_LOGGING'),
             'log_path' => isset($config['log_path']) ? $config['log_path'] : getenv('NETSUITE_LOG_PATH'),
         );
 
         $this->config = array_merge($required, $optional);
     }
 
+    /**
+     * @param bool $on
+     */
+    public function logRequests($on = true)
+    {
+        $this->config['logging'] = $on;
+    }
+
+    /**
+     * Set the Passport.
+     */
     public function setPassport()
     {
         $this->passport = new Passport();
@@ -111,11 +132,22 @@ class NetSuiteClient
         $this->passport->role->internalId = $this->config['role'];
     }
 
+    /**
+     * @param $option
+     */
     public function useRequestLevelCredentials($option)
     {
         $this->userequest = $option;
     }
 
+    /**
+     * Set preferences.
+     *
+     * @param bool $warningAsError
+     * @param bool $disableMandatoryCustomFieldValidation
+     * @param bool $disableSystemNotesForCustomFields
+     * @param bool $ignoreReadOnlyFields
+     */
     public function setPreferences($warningAsError = false, $disableMandatoryCustomFieldValidation = false, $disableSystemNotesForCustomFields = false,  $ignoreReadOnlyFields = false)
     {
         $sp = new Preferences();
@@ -126,12 +158,20 @@ class NetSuiteClient
 
         $this->addHeader("preferences", $sp);
     }
-                
+
+    /**
+     * Clear preferences.
+     */
     public function clearPreferences()
     {
         $this->clearHeader("preferences");
     }
 
+    /**
+     * @param bool $bodyFieldsOnly
+     * @param int $pageSize
+     * @param bool $returnSearchColumns
+     */
     public function setSearchPreferences($bodyFieldsOnly = true, $pageSize = 50, $returnSearchColumns = true)
     {
         $sp = new SearchPreferences();
@@ -142,21 +182,36 @@ class NetSuiteClient
         $this->addHeader("searchPreferences", $sp);
     }
 
+    /**
+     * Clear the search preferences.
+     */
     public function clearSearchPreferences()
     {
         $this->clearHeader("searchPreferences");
     }
 
+    /**
+     * @param string $header_name
+     * @param mixed $header
+     */
     public function addHeader($header_name, $header)
     {
         $this->soapHeaders[$header_name] = new \SoapHeader("ns", $header_name, $header);
     }
 
+    /**
+     * @param string $header_name
+     */
     public function clearHeader($header_name)
     {
         unset($this->soapHeaders[$header_name]);
     }
 
+    /**
+     * @param string $operation
+     * @param mixed $parameter
+     * @return mixed
+     */
     protected function makeSoapCall($operation, $parameter)
     {
         if ($this->userequest) {
@@ -170,14 +225,26 @@ class NetSuiteClient
 
         $response = $this->client->__soapCall($operation, array($parameter), null, $this->soapHeaders);
 
-        if (file_exists($this->config['log_path'])) {
-            $logFile = $this->config['log_path'] . "/fungku-netsuite-php";
-            // log the request and response into the nslog directory. Code taken from PHP toolkit
-            // REQUEST
-            $req = $logFile . "-" . date("Ymd.His") . "-" . $operation . "-request.xml";
-            $Handle = fopen($req, 'w');
-            $Data = $this->client->__getLastRequest();
+        $this->logSoapCall($operation);
 
+        return $response;
+    }
+
+    /**
+     * Log the last soap call as request and response XML files.
+     *
+     * @param string $operation
+     */
+    private function logSoapCall($operation)
+    {
+        if ($this->config['logging'] && file_exists($this->config['log_path'])) {
+            $fileName = "fungku-netsuite-php-" . date("Ymd.His") . "-" . $operation;
+            $logFile = $this->config['log_path'] ."/". $fileName;
+
+            // REQUEST
+            $request = $logFile . "-request.xml";
+            $Handle = fopen($request, 'w');
+            $Data = $this->client->__getLastRequest();
             $Data = cleanUpNamespaces($Data);
 
             $xml = simplexml_load_string($Data, 'SimpleXMLElement', LIBXML_NOCDATA);
@@ -200,13 +267,11 @@ class NetSuiteClient
             fclose($Handle);
 
             // RESPONSE
-            $resp = $logFile . "-" . date("Ymd.His") . "-" . $operation . "-response.xml";
-            $Handle = fopen($resp, 'w');
+            $response = $logFile . "-response.xml";
+            $Handle = fopen($response, 'w');
             $Data = $this->client->__getLastResponse();
             fwrite($Handle, $Data);
             fclose($Handle);
         }
-
-        return $response;
     }
 }
