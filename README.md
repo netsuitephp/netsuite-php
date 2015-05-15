@@ -136,19 +136,19 @@ if (!$addResponse->writeResponse->status->isSuccess) {
 You can set logging on or off on the fly, or override the configuration setting passed in. 
 Please note that if you don't specify a logging directory in the config or afterwards, then you won't get logs no matter what you do.
 
-#### Set a logging path
+**Set a logging path**
 
 ```php
 $service->setLogPath('/path/to/logs');
 ```
 
-#### Turn logging on
+**Turn logging on**
 
 ```php
 $service->logRequests(true);  // Turn logging on.
 ```
 
-#### Turn logging off
+**Turn logging off**
 
 ```php
 $service->logRequests(false); // Turn logging off.
