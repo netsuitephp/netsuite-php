@@ -165,10 +165,10 @@ class NetSuiteClient
 
         $response = $this->client->__soapCall($operation, array($parameter), null, $this->soapHeaders);
 
-        if (file_exists(dirname(__FILE__) . '/nslog')) {
+        if (isset($this->config['log_path']) && file_exists($this->config['log_path'])) {
             // log the request and response into the nslog directory. Code taken from PHP toolkit
             // REQUEST
-            $req = dirname(__FILE__) . '/nslog' . "/" . date("Ymd.His") . "." . milliseconds() . "-" . $operation . "-request.xml";
+            $req = $this->config['log_path'] . "/" . date("Ymd.His") . "." . milliseconds() . "-" . $operation . "-request.xml";
             $Handle = fopen($req, 'w');
             $Data = $this->client->__getLastRequest();
 
@@ -194,7 +194,7 @@ class NetSuiteClient
             fclose($Handle);
 
             // RESPONSE
-            $resp = dirname(__FILE__) . '/nslog' . "/" . date("Ymd.His") . "." . milliseconds() . "-" . $operation . "-response.xml";
+            $resp = $this->config['log_path'] . "/" . date("Ymd.His") . "." . milliseconds() . "-" . $operation . "-response.xml";
             $Handle = fopen($resp, 'w');
             $Data = $this->client->__getLastResponse();
             fwrite($Handle, $Data);
