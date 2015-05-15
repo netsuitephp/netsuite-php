@@ -33,12 +33,16 @@ The rest of the examples assume that you have done this.
 
 ```php
 $config = array(
+   // Required
    "endpoint"  => "2014_2",
     "host"     => "https://webservices.netsuite.com",
     "email"    => "jDoe@netsuite.com",
     "password" => "mySecretPwd",
     "role"     => "3",
     "account"  => "MYACCT1",
+    // Optional
+    "logging"  => true,
+    "log_path" => "/var/www/myapp/logs/netsuite"
 );
 
 $service = new Fungku\NetSuite\NetSuiteService($config);
@@ -127,6 +131,22 @@ if (!$addResponse->writeResponse->status->isSuccess) {
 }
 ```
 
+### Logging
+
+You can set logging on or off on the fly, or override the configuration setting passed in.
+
+#### Turn logging on
+
+```php
+$service->logRequests(true);  // Turn logging on.
+```
+
+#### Turn logging off
+
+```php
+$service->logRequests(false); // Turn logging off.
+```
+
 #### Using environment variables instead of a config array:
 
 You can optionally avoid passing configuration array to the constructor by setting the following environment variables:
@@ -146,6 +166,7 @@ NETSUITE_ACCOUNT=MYACCT1
  - [x] Pass config through constructor
  - [x] Optional environment variable config
  - [x] Namespacing
+ - [x] Logging
 
 ## License
 
