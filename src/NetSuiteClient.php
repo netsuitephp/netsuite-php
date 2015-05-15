@@ -171,10 +171,10 @@ class NetSuiteClient
         $response = $this->client->__soapCall($operation, array($parameter), null, $this->soapHeaders);
 
         if (file_exists($this->config['log_path'])) {
-            $logFile = $this->config['log_path'] . "/fungku-netsuite-php-";
+            $logFile = $this->config['log_path'] . "/fungku-netsuite-php";
             // log the request and response into the nslog directory. Code taken from PHP toolkit
             // REQUEST
-            $req = $logFile . date("Ymd.His") . "." . milliseconds() . "-" . $operation . "-request.xml";
+            $req = $logFile . "-" . date("Ymd.His") . "-" . $operation . "-request.xml";
             $Handle = fopen($req, 'w');
             $Data = $this->client->__getLastRequest();
 
@@ -200,7 +200,7 @@ class NetSuiteClient
             fclose($Handle);
 
             // RESPONSE
-            $resp = $logFile . "/" . date("Ymd.His") . "." . milliseconds() . "-" . $operation . "-response.xml";
+            $resp = $logFile . date("Ymd.His") . "-" . $operation . "-response.xml";
             $Handle = fopen($resp, 'w');
             $Data = $this->client->__getLastResponse();
             fwrite($Handle, $Data);
