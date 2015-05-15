@@ -43,19 +43,26 @@ class NetSuiteClient
 
         if (! extension_loaded('soap')) {
             // check for loaded SOAP extension
-            $soap_warning = 'The SOAP PHP extension is not loaded. Please modify the extension settings in php.ini accordingly.';
+            $soap_warning = 'The SOAP PHP extension is not loaded. '
+                          . 'Please modify the extension settings in php.ini accordingly.';
+
             trigger_error($soap_warning, E_USER_WARNING);
         }
 
         if (! extension_loaded('openssl') && substr($wsdl, 0, 5) == "https") {
             // check for loaded SOAP extension
-            $soap_warning = 'The Open SSL PHP extension is not loaded and you are trying to use HTTPS protocol. Please modify the extension settings in php.ini accordingly.';
+            $soap_warning = 'The Open SSL PHP extension is not loaded and you are trying to use HTTPS protocol. '
+                          . 'Please modify the extension settings in php.ini accordingly.';
+
             trigger_error($soap_warning, E_USER_WARNING);
         }
 
         if ($this->generated_from_endpoint != $this->config['endpoint']) {
             // check for the endpoint compatibility failed, but it might still be compatible. Issue only warning
-            $endpoint_warning = 'The NetSuiteService classes were generated from the '.$this->generated_from_endpoint .' endpoint but you are running against ' . $this->config['endpoint'];
+            $endpoint_warning = 'The NetSuiteService classes were generated from the '
+                              . $this->generated_from_endpoint .' endpoint but you are running against '
+                              . $this->config['endpoint'];
+
             trigger_error($endpoint_warning, E_USER_WARNING);
         }
 
@@ -156,8 +163,12 @@ class NetSuiteClient
      * @param bool $disableSystemNotesForCustomFields
      * @param bool $ignoreReadOnlyFields
      */
-    public function setPreferences($warningAsError = false, $disableMandatoryCustomFieldValidation = false, $disableSystemNotesForCustomFields = false,  $ignoreReadOnlyFields = false)
-    {
+    public function setPreferences(
+        $warningAsError = false,
+        $disableMandatoryCustomFieldValidation = false,
+        $disableSystemNotesForCustomFields = false,
+        $ignoreReadOnlyFields = false
+    ) {
         $sp = new Preferences();
         $sp->warningAsError  = $warningAsError;
         $sp->disableMandatoryCustomFieldValidation = $disableMandatoryCustomFieldValidation;
@@ -225,7 +236,8 @@ class NetSuiteClient
         if ($this->userequest) {
             // use request level credentials, add passport as a SOAP header
             $this->addHeader("passport", $this->passport);
-            // SoapClient, even with keep-alive set to false, keeps sending the JSESSIONID cookie back to the server on subsequent requests. Unsetting the cookie to prevent this.
+            // SoapClient, even with keep-alive set to false, keeps sending the JSESSIONID cookie back to
+            // the server on subsequent requests. Unsetting the cookie to prevent this.
             $this->client->__setCookie("JSESSIONID");
         } else {
             $this->clearHeader("passport");
@@ -257,10 +269,21 @@ class NetSuiteClient
 
             $xml = simplexml_load_string($Data, 'SimpleXMLElement', LIBXML_NOCDATA);
 
-            $passwordFields = $xml->xpath("//password | //password2 | //currentPassword | //newPassword | //newPassword2 | //ccNumber | //ccSecurityCode | //socialSecurityNumber");
+            $privateFieldXpaths = array(
+                '//password',
+                '//password2',
+                '//currentPassword',
+                '//newPassword',
+                '//newPassword2',
+                '//ccNumber',
+                '//ccSecurityCode',
+                '//socialSecurityNumber',
+            );
 
-            foreach ($passwordFields as &$pwdField) {
-                (string)$pwdField[0] = "[Content Removed for Security Reasons]";
+            $privateFields = $xml->xpath(implode(" | ", $privateFieldXpaths));
+
+            foreach ($privateFields as &$field) {
+                (string) $field[0] = "[Content Removed for Security Reasons]";
             }
 
             $stringCustomFields = $xml->xpath("//customField[@xsitype='StringCustomFieldRef']");
@@ -278,6 +301,7 @@ class NetSuiteClient
             $response = $logFile . "-response.xml";
             $Handle = fopen($response, 'w');
             $Data = $this->client->__getLastResponse();
+
             fwrite($Handle, $Data);
             fclose($Handle);
         }
