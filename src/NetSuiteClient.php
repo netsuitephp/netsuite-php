@@ -13,11 +13,10 @@ class NetSuiteClient
 
     protected $classmap;
 
-    private $nsversion = "2014_2r1";
+    private $nsversion = "2015_1r1";
     private $userequest = true;
     private $config;
     private $soapHeaders = array();
-
 
     public function __construct($config = array(), $wsdl = null, $options = array())
     {
@@ -36,13 +35,13 @@ class NetSuiteClient
             $wsdl = $this->config['host'] . "/wsdl/v" . $this->config['endpoint'] . "_0/netsuite.wsdl";
         }
 
-        if (!extension_loaded('soap')) {
+        if (! extension_loaded('soap')) {
             // check for loaded SOAP extension
             $soap_warning = 'The SOAP PHP extension is not loaded. Please modify the extension settings in php.ini accordingly.';
             trigger_error($soap_warning, E_USER_WARNING);
         }
 
-        if (!extension_loaded('openssl') && substr($wsdl, 0, 5) == "https") {
+        if (! extension_loaded('openssl') && substr($wsdl, 0, 5) == "https") {
             // check for loaded SOAP extension
             $soap_warning = 'The Open SSL PHP extension is not loaded and you are trying to use HTTPS protocol. Please modify the extension settings in php.ini accordingly.';
             trigger_error($soap_warning, E_USER_WARNING);
@@ -79,22 +78,27 @@ class NetSuiteClient
 
     private function setConfig($config)
     {
-        $this->config = $config;
+        // Required config parameters.
+        $required = array(
+            'endpoint' => isset($config['endpoint']) ? $config['endpoint'] : getenv('NETSUITE_ENDPOINT'),
+            'host'     => isset($config['host'])     ? $config['host']     : getenv('NETSUITE_HOST'),
+            'email'    => isset($config['email'])    ? $config['email']    : getenv('NETSUITE_EMAIL'),
+            'password' => isset($config['password']) ? $config['password'] : getenv('NETSUITE_PASSWORD'),
+            'role'     => isset($config['role'])     ? $config['role']     : getenv('NETSUITE_ROLE'),
+            'account'  => isset($config['account'])  ? $config['account']  : getenv('NETSUITE_ACCOUNT'),
+        );
 
-        if (empty($this->config)) {
-            $this->config = array(
-                'endpoint' => getenv('NETSUITE_ENDPOINT'),
-                'host'     => getenv('NETSUITE_HOST'),
-                'email'    => getenv('NETSUITE_EMAIL'),
-                'password' => getenv('NETSUITE_PASSWORD'),
-                'role'     => getenv('NETSUITE_ROLE'),
-                'account'  => getenv('NETSUITE_ACCOUNT'),
-                'log_path' => getenv('NETSUITE_LOG_PATH'),
-            );
-            if (in_array(false, $this->config)) {
-                throw new \InvalidArgumentException("You must provide all the required NetSuite configuration options.");
-            }
+        // Verify all the required parameters are set.
+        if (in_array(false, $required)) {
+            throw new \InvalidArgumentException("You must provide all the required NetSuite configuration options.");
         }
+
+        // Optional config parameters.
+        $optional = array(
+            'log_path' => isset($config['log_path']) ? $config['log_path'] : getenv('NETSUITE_LOG_PATH'),
+        );
+
+        $this->config = array_merge($required, $optional);
     }
 
     public function setPassport()
@@ -147,6 +151,7 @@ class NetSuiteClient
     {
         $this->soapHeaders[$header_name] = new \SoapHeader("ns", $header_name, $header);
     }
+
     public function clearHeader($header_name)
     {
         unset($this->soapHeaders[$header_name]);
@@ -165,10 +170,11 @@ class NetSuiteClient
 
         $response = $this->client->__soapCall($operation, array($parameter), null, $this->soapHeaders);
 
-        if (isset($this->config['log_path']) && file_exists($this->config['log_path'])) {
+        if (file_exists($this->config['log_path'])) {
+            $logFile = $this->config['log_path'] . "/fungku-netsuite-php-";
             // log the request and response into the nslog directory. Code taken from PHP toolkit
             // REQUEST
-            $req = $this->config['log_path'] . "/" . date("Ymd.His") . "." . milliseconds() . "-" . $operation . "-request.xml";
+            $req = $logFile . date("Ymd.His") . "." . milliseconds() . "-" . $operation . "-request.xml";
             $Handle = fopen($req, 'w');
             $Data = $this->client->__getLastRequest();
 
@@ -185,7 +191,7 @@ class NetSuiteClient
             $stringCustomFields = $xml->xpath("//customField[@xsitype='StringCustomFieldRef']");
 
             foreach ($stringCustomFields as $field) {
-                (string)$field->value = "[Content Removed for Security Reasons]";
+                (string) $field->value = "[Content Removed for Security Reasons]";
             }
 
             $xml_string = str_replace('xsitype', 'xsi:type', $xml->asXML());
@@ -194,7 +200,7 @@ class NetSuiteClient
             fclose($Handle);
 
             // RESPONSE
-            $resp = $this->config['log_path'] . "/" . date("Ymd.His") . "." . milliseconds() . "-" . $operation . "-response.xml";
+            $resp = $logFile . "/" . date("Ymd.His") . "." . milliseconds() . "-" . $operation . "-response.xml";
             $Handle = fopen($resp, 'w');
             $Data = $this->client->__getLastResponse();
             fwrite($Handle, $Data);
