@@ -200,7 +200,7 @@ class NetSuiteClient
             fclose($Handle);
 
             // RESPONSE
-            $resp = $logFile . date("Ymd.His") . "-" . $operation . "-response.xml";
+            $resp = $logFile . "-" . date("Ymd.His") . "-" . $operation . "-response.xml";
             $Handle = fopen($resp, 'w');
             $Data = $this->client->__getLastResponse();
             fwrite($Handle, $Data);
