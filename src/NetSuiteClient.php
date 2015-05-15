@@ -19,20 +19,21 @@ class NetSuiteClient
     private $soapHeaders = array();
 
 
-    function __construct($config = array(), $wsdl = null, $options = array()) {
+    public function __construct($config = array(), $wsdl = null, $options = array())
+    {
         global $debuginfo;
 
         $this->setConfig($config);
         $this->classmap = include "includes/classmap.php";
 
         if (!isset($wsdl)) {
-             if (!isset($this->config['host'])) {
+            if (!isset($this->config['host'])) {
                 throw new \Exception('Webservice host must be specified');
-             }
-             if (!isset($this->config['endpoint'])) {
+            }
+            if (!isset($this->config['endpoint'])) {
                 throw new \Exception('Webservice endpoint must be specified');
-             }
-             $wsdl = $this->config['host'] . "/wsdl/v" . $this->config['endpoint'] . "_0/netsuite.wsdl";
+            }
+            $wsdl = $this->config['host'] . "/wsdl/v" . $this->config['endpoint'] . "_0/netsuite.wsdl";
         }
 
         if (!extension_loaded('soap')) {
@@ -47,7 +48,7 @@ class NetSuiteClient
             trigger_error($soap_warning, E_USER_WARNING);
         }
 
-        if ( $this->generated_from_endpoint != $this->config['endpoint'] ) {
+        if ($this->generated_from_endpoint != $this->config['endpoint']) {
             // check for the endpoint compatibility failed, but it might still be compatible. Issue only warning
             $endpoint_warning = 'The NetSuiteService classes were generated from the '.$this->generated_from_endpoint .' endpoint but you are running against ' . $this->config['endpoint'];
             trigger_error($endpoint_warning, E_USER_WARNING);
@@ -88,6 +89,7 @@ class NetSuiteClient
                 'password' => getenv('NETSUITE_PASSWORD'),
                 'role'     => getenv('NETSUITE_ROLE'),
                 'account'  => getenv('NETSUITE_ACCOUNT'),
+                'log_path' => getenv('NETSUITE_LOG_PATH'),
             );
             if (in_array(false, $this->config)) {
                 throw new \InvalidArgumentException("You must provide all the required NetSuite configuration options.");
@@ -95,7 +97,8 @@ class NetSuiteClient
         }
     }
 
-    public function setPassport() {
+    public function setPassport()
+    {
         $this->passport = new Passport();
         $this->passport->account = $this->config['account'];
         $this->passport->email = $this->config['email'];
@@ -104,26 +107,28 @@ class NetSuiteClient
         $this->passport->role->internalId = $this->config['role'];
     }
 
-    public function useRequestLevelCredentials($option) {
-         $this->userequest = $option;
+    public function useRequestLevelCredentials($option)
+    {
+        $this->userequest = $option;
     }
 
-    public function setPreferences ($warningAsError = false, $disableMandatoryCustomFieldValidation = false, $disableSystemNotesForCustomFields = false,  $ignoreReadOnlyFields = false)
+    public function setPreferences($warningAsError = false, $disableMandatoryCustomFieldValidation = false, $disableSystemNotesForCustomFields = false,  $ignoreReadOnlyFields = false)
     {
         $sp = new Preferences();
         $sp->warningAsError  = $warningAsError;
         $sp->disableMandatoryCustomFieldValidation = $disableMandatoryCustomFieldValidation;
         $sp->disableSystemNotesForCustomFields = $disableSystemNotesForCustomFields;
-                                $sp->ignoreReadOnlyFields = $ignoreReadOnlyFields;
+        $sp->ignoreReadOnlyFields = $ignoreReadOnlyFields;
 
         $this->addHeader("preferences", $sp);
-    }          
+    }
                 
-    public function clearPreferences() {
+    public function clearPreferences()
+    {
         $this->clearHeader("preferences");
-    }        
+    }
 
-    public function setSearchPreferences ($bodyFieldsOnly = true, $pageSize = 50, $returnSearchColumns = true)
+    public function setSearchPreferences($bodyFieldsOnly = true, $pageSize = 50, $returnSearchColumns = true)
     {
         $sp = new SearchPreferences();
         $sp->bodyFieldsOnly = $bodyFieldsOnly;
@@ -133,18 +138,22 @@ class NetSuiteClient
         $this->addHeader("searchPreferences", $sp);
     }
 
-    public function clearSearchPreferences() {
+    public function clearSearchPreferences()
+    {
         $this->clearHeader("searchPreferences");
     }
 
-    public function addHeader($header_name, $header) {
+    public function addHeader($header_name, $header)
+    {
         $this->soapHeaders[$header_name] = new \SoapHeader("ns", $header_name, $header);
     }
-    public function clearHeader($header_name) {
+    public function clearHeader($header_name)
+    {
         unset($this->soapHeaders[$header_name]);
     }
 
-    protected function makeSoapCall($operation, $parameter) {
+    protected function makeSoapCall($operation, $parameter)
+    {
         if ($this->userequest) {
             // use request level credentials, add passport as a SOAP header
             $this->addHeader("passport", $this->passport);
@@ -154,9 +163,9 @@ class NetSuiteClient
             $this->clearHeader("passport");
         }
 
-        $response = $this->client->__soapCall($operation, array($parameter), NULL, $this->soapHeaders);
+        $response = $this->client->__soapCall($operation, array($parameter), null, $this->soapHeaders);
 
-        if ( file_exists(dirname(__FILE__) . '/nslog') ) {
+        if (file_exists(dirname(__FILE__) . '/nslog')) {
             // log the request and response into the nslog directory. Code taken from PHP toolkit
             // REQUEST
             $req = dirname(__FILE__) . '/nslog' . "/" . date("Ymd.His") . "." . milliseconds() . "-" . $operation . "-request.xml";
@@ -190,11 +199,8 @@ class NetSuiteClient
             $Data = $this->client->__getLastResponse();
             fwrite($Handle, $Data);
             fclose($Handle);
-
         }
 
         return $response;
-
     }
-
 }
