@@ -120,6 +120,14 @@ class NetSuiteClient
     }
 
     /**
+     * @param string $logPath
+     */
+    public function setLogPath($logPath)
+    {
+        $this->config['log_path'] = $logPath;
+    }
+
+    /**
      * Set the Passport.
      */
     public function setPassport()
