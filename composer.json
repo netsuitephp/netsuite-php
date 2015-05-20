@@ -1,6 +1,6 @@
 {
   "name": "fungku/netsuite-php",
-  "description": "Netsuite PHP API Client",
+  "description": "NetSuite PHP API Client with namespaces and autoloading",
   "keywords": [ "netsuite", "api" ],
   "type": "library",
   "license": "Apache-2.0",
