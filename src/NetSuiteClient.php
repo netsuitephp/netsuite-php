@@ -67,9 +67,18 @@ class NetSuiteClient
         }
 
         $options['classmap'] = $this->classmap;
-        $options['trace'] = 1;
-        $options['connection_timeout'] = 5;
-        $options['cache_wsdl'] = WSDL_CACHE_BOTH;
+
+        // defaults if trace, connection_timeout, or cache_wsdl options are not provided
+        if (!isset($options['trace'])) {
+            $options['trace'] = 1;
+        }
+        if (!isset($options['connection_timeout'])) {
+            $options['connection_timeout'] = 5;
+        }
+        if (!isset($options['cache_wsdl'])) {
+            $options['cache_wsdl'] = WSDL_CACHE_BOTH;
+        }
+
         $httpheaders = "PHP-SOAP/" . phpversion() . " + NetSuite PHP Toolkit " . $this->nsversion;
 
         $options['location'] = $this->config['host'] . "/services/NetSuitePort_" . $this->config['endpoint'];
