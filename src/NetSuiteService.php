@@ -113,7 +113,7 @@ class NetSuiteService extends NetSuiteClient {
 	 * Parameter options:
 	 * (SearchRequest) parameters
 	 * @param Classes\SearchRequest $arg
-	 * @return Classes\SearchRequest
+	 * @return Classes\SearchResponse
 	 * @throws Exception invalid function signature message
 	 */
 	public function search(Classes\SearchRequest $arg) {
