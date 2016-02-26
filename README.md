@@ -34,7 +34,7 @@ The rest of the examples assume that you have done this.
 ```php
 $config = array(
    // Required
-   "endpoint"  => "2014_2",
+   "endpoint"  => "2015_1",
     "host"     => "https://webservices.netsuite.com",
     "email"    => "jDoe@netsuite.com",
     "password" => "mySecretPwd",
@@ -158,7 +158,7 @@ $service->logRequests(false); // Turn logging off.
 
 You can optionally avoid passing configuration array to the constructor by setting the following environment variables:
 ```
-NETSUITE_ENDPOINT=2014_2
+NETSUITE_ENDPOINT=2015_1
 NETSUITE_HOST=https://webservices.netsuite.com
 NETSUITE_EMAIL=jDoe@netsuite.com
 NETSUITE_PASSWORD=mySecretPwd
