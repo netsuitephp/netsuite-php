@@ -1,7 +1,5 @@
 <?php namespace Fungku\NetSuite;
 
-use Fungku\NetSuite\Classes as NetSuite;
-
 class NetSuiteService extends NetSuiteClient {
 
 	public $generated_from_endpoint = "2015_1";
@@ -14,7 +12,7 @@ class NetSuiteService extends NetSuiteClient {
 	 * @throws Exception invalid function signature message
 	 * @return mixed
 	 */
-	public function login(NetSuite\LoginRequest $arg) {
+	public function login(Classes\LoginRequest $arg) {
 		return $this->makeSoapCall("login", $arg);
 	}
 
@@ -24,10 +22,10 @@ class NetSuiteService extends NetSuiteClient {
 	 * Parameter options:
 	 * (SsoLoginRequest) parameters
 	 * @param Classes\SsoLoginRequest $arg
-	 * @return NetSuite\SsoLoginResponse
+	 * @return Classes\SsoLoginResponse
 	 * @throws Exception invalid function signature message
 	 */
-	public function ssoLogin(NetSuite\SsoLoginRequest $arg) {
+	public function ssoLogin(Classes\SsoLoginRequest $arg) {
 		return $this->makeSoapCall("ssoLogin", $arg);
 	}
 
@@ -37,10 +35,10 @@ class NetSuiteService extends NetSuiteClient {
 	 * Parameter options:
 	 * (MapSsoRequest) parameters
 	 * @param Classes\MapSsoRequest $arg
-	 * @return NetSuite\MapSsoResponse
+	 * @return Classes\MapSsoResponse
 	 * @throws Exception invalid function signature message
 	 */
-	public function mapSso(NetSuite\MapSsoRequest $arg) {
+	public function mapSso(Classes\MapSsoRequest $arg) {
 		return $this->makeSoapCall("mapSso", $arg);
 	}
 
@@ -50,10 +48,10 @@ class NetSuiteService extends NetSuiteClient {
 	 * Parameter options:
 	 * (ChangePasswordRequest) parameters
 	 * @param Classes\ChangePasswordRequest $arg
-	 * @return NetSuite\ChangePasswordResponse
+	 * @return Classes\ChangePasswordResponse
 	 * @throws Exception invalid function signature message
 	 */
-	public function changePassword(NetSuite\ChangePasswordRequest $arg) {
+	public function changePassword(Classes\ChangePasswordRequest $arg) {
 		return $this->makeSoapCall("changePassword", $arg);
 	}
 
@@ -63,10 +61,10 @@ class NetSuiteService extends NetSuiteClient {
 	 * Parameter options:
 	 * (ChangeEmailRequest) parameters
 	 * @param Classes\ChangeEmailRequest $arg
-	 * @return NetSuite\ChangeEmailResponse
+	 * @return Classes\ChangeEmailResponse
 	 * @throws Exception invalid function signature message
 	 */
-	public function changeEmail(NetSuite\ChangeEmailRequest $arg) {
+	public function changeEmail(Classes\ChangeEmailRequest $arg) {
 		return $this->makeSoapCall("changeEmail", $arg);
 	}
 
@@ -76,10 +74,10 @@ class NetSuiteService extends NetSuiteClient {
 	 * Parameter options:
 	 * (LogoutRequest) parameters
 	 * @param Classes\LogoutRequest $arg
-	 * @return NetSuite\LogoutResponse
+	 * @return Classes\LogoutResponse
 	 * @throws Exception invalid function signature message
 	 */
-	public function logout(NetSuite\LogoutRequest $arg) {
+	public function logout(Classes\LogoutRequest $arg) {
 		return $this->makeSoapCall("logout", $arg);
 	}
 
@@ -89,10 +87,10 @@ class NetSuiteService extends NetSuiteClient {
 	 * Parameter options:
 	 * (AddRequest) parameters
 	 * @param Classes\AddRequest $arg
-	 * @return NetSuite\AddResponse
+	 * @return Classes\AddResponse
 	 * @throws Exception invalid function signature message
 	 */
-	public function add(NetSuite\AddRequest $arg) {
+	public function add(Classes\AddRequest $arg) {
 		return $this->makeSoapCall("add", $arg);
 	}
 
@@ -102,10 +100,10 @@ class NetSuiteService extends NetSuiteClient {
 	 * Parameter options:
 	 * (DeleteRequest) parameters
 	 * @param Classes\DeleteRequest $arg
-	 * @return NetSuite\DeleteResponse
+	 * @return Classes\DeleteResponse
 	 * @throws Exception invalid function signature message
 	 */
-	public function delete(NetSuite\DeleteRequest $arg) {
+	public function delete(Classes\DeleteRequest $arg) {
 		return $this->makeSoapCall("delete", $arg);
 	}
 
@@ -115,10 +113,10 @@ class NetSuiteService extends NetSuiteClient {
 	 * Parameter options:
 	 * (SearchRequest) parameters
 	 * @param Classes\SearchRequest $arg
-	 * @return NetSuite\SearchRequest
+	 * @return Classes\SearchRequest
 	 * @throws Exception invalid function signature message
 	 */
-	public function search(NetSuite\SearchRequest $arg) {
+	public function search(Classes\SearchRequest $arg) {
 		return $this->makeSoapCall("search", $arg);
 	}
 
@@ -128,10 +126,10 @@ class NetSuiteService extends NetSuiteClient {
 	 * Parameter options:
 	 * (SearchMoreRequest) parameters
 	 * @param Classes\SearchMoreRequest $arg
-	 * @return NetSuite\SearchMoreResponse
+	 * @return Classes\SearchMoreResponse
 	 * @throws Exception invalid function signature message
 	 */
-	public function searchMore(NetSuite\SearchMoreRequest $arg) {
+	public function searchMore(Classes\SearchMoreRequest $arg) {
 		return $this->makeSoapCall("searchMore", $arg);
 	}
 
@@ -141,10 +139,10 @@ class NetSuiteService extends NetSuiteClient {
 	 * Parameter options:
 	 * (SearchMoreWithIdRequest) parameters
 	 * @param Classes\SearchMoreWithIdRequest $arg
-	 * @return NetSuite\SearchMoreWithIdResponse
+	 * @return Classes\SearchMoreWithIdResponse
 	 * @throws Exception invalid function signature message
 	 */
-	public function searchMoreWithId(NetSuite\SearchMoreWithIdRequest $arg) {
+	public function searchMoreWithId(Classes\SearchMoreWithIdRequest $arg) {
 		return $this->makeSoapCall("searchMoreWithId", $arg);
 	}
 
@@ -154,10 +152,10 @@ class NetSuiteService extends NetSuiteClient {
 	 * Parameter options:
 	 * (SearchNextRequest) parameters
 	 * @param Classes\SearchNextRequest $arg
-	 * @return NetSuite\SearchNextResponse
+	 * @return Classes\SearchNextResponse
 	 * @throws Exception invalid function signature message
 	 */
-	public function searchNext(NetSuite\SearchNextRequest $arg) {
+	public function searchNext(Classes\SearchNextRequest $arg) {
 		return $this->makeSoapCall("searchNext", $arg);
 	}
 
@@ -167,10 +165,10 @@ class NetSuiteService extends NetSuiteClient {
 	 * Parameter options:
 	 * (UpdateRequest) parameters
 	 * @param Classes\UpdateRequest $arg
-	 * @return NetSuite\UpdateResponse
+	 * @return Classes\UpdateResponse
 	 * @throws Exception invalid function signature message
 	 */
-	public function update(NetSuite\UpdateRequest $arg) {
+	public function update(Classes\UpdateRequest $arg) {
 		return $this->makeSoapCall("update", $arg);
 	}
 
@@ -180,10 +178,10 @@ class NetSuiteService extends NetSuiteClient {
 	 * Parameter options:
 	 * (UpsertRequest) parameters
 	 * @param Classes\UpsertRequest $arg
-	 * @return NetSuite\UpsertResponse
+	 * @return Classes\UpsertResponse
 	 * @throws Exception invalid function signature message
 	 */
-	public function upsert(NetSuite\UpsertRequest $arg) {
+	public function upsert(Classes\UpsertRequest $arg) {
 		return $this->makeSoapCall("upsert", $arg);
 	}
 
@@ -193,10 +191,10 @@ class NetSuiteService extends NetSuiteClient {
 	 * Parameter options:
 	 * (AddListRequest) parameters
 	 * @param Classes\AddListRequest $arg
-	 * @return NetSuite\AddListResponse
+	 * @return Classes\AddListResponse
 	 * @throws Exception invalid function signature message
 	 */
-	public function addList(NetSuite\AddListRequest $arg) {
+	public function addList(Classes\AddListRequest $arg) {
 		return $this->makeSoapCall("addList", $arg);
 	}
 
@@ -206,10 +204,10 @@ class NetSuiteService extends NetSuiteClient {
 	 * Parameter options:
 	 * (DeleteListRequest) parameters
 	 * @param Classes\DeleteListRequest $arg
-	 * @return NetSuite\DeleteListResponse
+	 * @return Classes\DeleteListResponse
 	 * @throws Exception invalid function signature message
 	 */
-	public function deleteList(NetSuite\DeleteListRequest $arg) {
+	public function deleteList(Classes\DeleteListRequest $arg) {
 		return $this->makeSoapCall("deleteList", $arg);
 	}
 
@@ -219,10 +217,10 @@ class NetSuiteService extends NetSuiteClient {
 	 * Parameter options:
 	 * (UpdateListRequest) parameters
 	 * @param Classes\UpdateListRequest $arg
-	 * @return NetSuite\UpdateListResponse
+	 * @return Classes\UpdateListResponse
 	 * @throws Exception invalid function signature message
 	 */
-	public function updateList(NetSuite\UpdateListRequest $arg) {
+	public function updateList(Classes\UpdateListRequest $arg) {
 		return $this->makeSoapCall("updateList", $arg);
 	}
 
@@ -232,10 +230,10 @@ class NetSuiteService extends NetSuiteClient {
 	 * Parameter options:
 	 * (UpsertListRequest) parameters
 	 * @param Classes\UpsertListRequest $arg
-	 * @return NetSuite\UpsertListResponse
+	 * @return Classes\UpsertListResponse
 	 * @throws Exception invalid function signature message
 	 */
-	public function upsertList(NetSuite\UpsertListRequest $arg) {
+	public function upsertList(Classes\UpsertListRequest $arg) {
 		return $this->makeSoapCall("upsertList", $arg);
 	}
 
@@ -245,10 +243,10 @@ class NetSuiteService extends NetSuiteClient {
 	 * Parameter options:
 	 * (GetRequest) parameters
 	 * @param Classes\GetRequest $arg
-	 * @return NetSuite\GetResponse
+	 * @return Classes\GetResponse
 	 * @throws Exception invalid function signature message
 	 */
-	public function get(NetSuite\GetRequest $arg) {
+	public function get(Classes\GetRequest $arg) {
 		return $this->makeSoapCall("get", $arg);
 	}
 
@@ -258,10 +256,10 @@ class NetSuiteService extends NetSuiteClient {
 	 * Parameter options:
 	 * (GetListRequest) parameters
 	 * @param Classes\GetListRequest $arg
-	 * @return NetSuite\GetListResponse
+	 * @return Classes\GetListResponse
 	 * @throws Exception invalid function signature message
 	 */
-	public function getList(NetSuite\GetListRequest $arg) {
+	public function getList(Classes\GetListRequest $arg) {
 		return $this->makeSoapCall("getList", $arg);
 	}
 
@@ -271,10 +269,10 @@ class NetSuiteService extends NetSuiteClient {
 	 * Parameter options:
 	 * (GetAllRequest) parameters
 	 * @param Classes\GetAllRequest $arg
-	 * @return NetSuite\GetAllResponse
+	 * @return Classes\GetAllResponse
 	 * @throws Exception invalid function signature message
 	 */
-	public function getAll(NetSuite\GetAllRequest $arg) {
+	public function getAll(Classes\GetAllRequest $arg) {
 		return $this->makeSoapCall("getAll", $arg);
 	}
 
@@ -284,10 +282,10 @@ class NetSuiteService extends NetSuiteClient {
 	 * Parameter options:
 	 * (GetSavedSearchRequest) parameters
 	 * @param Classes\GetSavedSearchRequest $arg
-	 * @return NetSuite\GetSavedSearchResponse
+	 * @return Classes\GetSavedSearchResponse
 	 * @throws Exception invalid function signature message
 	 */
-	public function getSavedSearch(NetSuite\GetSavedSearchRequest $arg) {
+	public function getSavedSearch(Classes\GetSavedSearchRequest $arg) {
 		return $this->makeSoapCall("getSavedSearch", $arg);
 	}
 
@@ -297,10 +295,10 @@ class NetSuiteService extends NetSuiteClient {
 	 * Parameter options:
 	 * (GetCustomizationIdRequest) parameters
 	 * @param Classes\GetCustomizationIdRequest $arg
-	 * @return NetSuite\GetCustomizationIdResponse
+	 * @return Classes\GetCustomizationIdResponse
 	 * @throws Exception invalid function signature message
 	 */
-	public function getCustomizationId(NetSuite\GetCustomizationIdRequest $arg) {
+	public function getCustomizationId(Classes\GetCustomizationIdRequest $arg) {
 		return $this->makeSoapCall("getCustomizationId", $arg);
 	}
 
@@ -310,10 +308,10 @@ class NetSuiteService extends NetSuiteClient {
 	 * Parameter options:
 	 * (InitializeRequest) parameters
 	 * @param Classes\InitializeRequest $arg
-	 * @return NetSuite\InitializeResponse
+	 * @return Classes\InitializeResponse
 	 * @throws Exception invalid function signature message
 	 */
-	public function initialize(NetSuite\InitializeRequest $arg) {
+	public function initialize(Classes\InitializeRequest $arg) {
 		return $this->makeSoapCall("initialize", $arg);
 	}
 
@@ -323,10 +321,10 @@ class NetSuiteService extends NetSuiteClient {
 	 * Parameter options:
 	 * (InitializeListRequest) parameters
 	 * @param Classes\InitializeListRequest $arg
-	 * @return NetSuite\InitializeListResponse
+	 * @return Classes\InitializeListResponse
 	 * @throws Exception invalid function signature message
 	 */
-	public function initializeList(NetSuite\InitializeListRequest $arg) {
+	public function initializeList(Classes\InitializeListRequest $arg) {
 		return $this->makeSoapCall("initializeList", $arg);
 	}
 
@@ -336,10 +334,10 @@ class NetSuiteService extends NetSuiteClient {
 	 * Parameter options:
 	 * (getSelectValueRequest) parameters
 	 * @param Classes\getSelectValueRequest $arg
-	 * @return NetSuite\getSelectValueResponse
+	 * @return Classes\getSelectValueResponse
 	 * @throws Exception invalid function signature message
 	 */
-	public function getSelectValue(NetSuite\getSelectValueRequest $arg) {
+	public function getSelectValue(Classes\getSelectValueRequest $arg) {
 		return $this->makeSoapCall("getSelectValue", $arg);
 	}
 
@@ -349,10 +347,10 @@ class NetSuiteService extends NetSuiteClient {
 	 * Parameter options:
 	 * (GetItemAvailabilityRequest) parameters
 	 * @param Classes\GetItemAvailabilityRequest $arg
-	 * @return NetSuite\GetItemAvailabilityResponse
+	 * @return Classes\GetItemAvailabilityResponse
 	 * @throws Exception invalid function signature message
 	 */
-	public function getItemAvailability(NetSuite\GetItemAvailabilityRequest $arg) {
+	public function getItemAvailability(Classes\GetItemAvailabilityRequest $arg) {
 		return $this->makeSoapCall("getItemAvailability", $arg);
 	}
 
@@ -362,10 +360,10 @@ class NetSuiteService extends NetSuiteClient {
 	 * Parameter options:
 	 * (GetBudgetExchangeRateRequest) parameter
 	 * @param Classes\GetBudgetExchangeRateRequest $arg
-	 * @return NetSuite\GetBudgetExchangeRateResponse
+	 * @return Classes\GetBudgetExchangeRateResponse
 	 * @throws Exception invalid function signature message
 	 */
-	public function getBudgetExchangeRate(NetSuite\GetBudgetExchangeRateRequest $arg) {
+	public function getBudgetExchangeRate(Classes\GetBudgetExchangeRateRequest $arg) {
 		return $this->makeSoapCall("getBudgetExchangeRate", $arg);
 	}
 
@@ -375,10 +373,10 @@ class NetSuiteService extends NetSuiteClient {
 	 * Parameter options:
 	 * (GetConsolidatedExchangeRateRequest) parameters
 	 * @param Classes\GetConsolidatedExchangeRateRequest $arg
-	 * @return NetSuite\GetConsolidatedExchangeRateResponse
+	 * @return Classes\GetConsolidatedExchangeRateResponse
 	 * @throws Exception invalid function signature message
 	 */
-	public function getConsolidatedExchangeRate(NetSuite\GetConsolidatedExchangeRateRequest $arg) {
+	public function getConsolidatedExchangeRate(Classes\GetConsolidatedExchangeRateRequest $arg) {
 		return $this->makeSoapCall("getConsolidatedExchangeRate", $arg);
 	}
 
@@ -388,10 +386,10 @@ class NetSuiteService extends NetSuiteClient {
 	 * Parameter options:
 	 * (GetCurrencyRateRequest) parameters
 	 * @param Classes\GetCurrencyRateRequest $arg
-	 * @return NetSuite\GetCurrencyRateResponse
+	 * @return Classes\GetCurrencyRateResponse
 	 * @throws Exception invalid function signature message
 	 */
-	public function getCurrencyRate(NetSuite\GetCurrencyRateRequest $arg) {
+	public function getCurrencyRate(Classes\GetCurrencyRateRequest $arg) {
 		return $this->makeSoapCall("getCurrencyRate", $arg);
 	}
 
@@ -401,10 +399,10 @@ class NetSuiteService extends NetSuiteClient {
 	 * Parameter options:
 	 * (GetDataCenterUrlsRequest) parameters
 	 * @param Classes\GetDataCenterUrlsRequest $arg
-	 * @return NetSuite\GetDataCenterUrlsResponse
+	 * @return Classes\GetDataCenterUrlsResponse
 	 * @throws Exception invalid function signature message
 	 */
-	public function getDataCenterUrls(NetSuite\GetDataCenterUrlsRequest $arg) {
+	public function getDataCenterUrls(Classes\GetDataCenterUrlsRequest $arg) {
 		return $this->makeSoapCall("getDataCenterUrls", $arg);
 	}
 
@@ -414,10 +412,10 @@ class NetSuiteService extends NetSuiteClient {
 	 * Parameter options:
 	 * (GetPostingTransactionSummaryRequest) parameters
 	 * @param Classes\GetPostingTransactionSummaryRequest $arg
-	 * @return NetSuite\GetPostingTransactionSummaryResponse
+	 * @return Classes\GetPostingTransactionSummaryResponse
 	 * @throws Exception invalid function signature message
 	 */
-	public function getPostingTransactionSummary(NetSuite\GetPostingTransactionSummaryRequest $arg) {
+	public function getPostingTransactionSummary(Classes\GetPostingTransactionSummaryRequest $arg) {
 		return $this->makeSoapCall("getPostingTransactionSummary", $arg);
 	}
 
@@ -427,10 +425,10 @@ class NetSuiteService extends NetSuiteClient {
 	 * Parameter options:
 	 * (GetServerTimeRequest) parameters
 	 * @param Classes\GetServerTimeRequest $arg
-	 * @return NetSuite\GetServerTimeResponse
+	 * @return Classes\GetServerTimeResponse
 	 * @throws Exception invalid function signature message
 	 */
-	public function getServerTime(NetSuite\GetServerTimeRequest $arg) {
+	public function getServerTime(Classes\GetServerTimeRequest $arg) {
 		return $this->makeSoapCall("getServerTime", $arg);
 	}
 
@@ -440,10 +438,10 @@ class NetSuiteService extends NetSuiteClient {
 	 * Parameter options:
 	 * (AttachRequest) parameters
 	 * @param Classes\AttachRequest $arg
-	 * @return NetSuite\AttachResponse
+	 * @return Classes\AttachResponse
 	 * @throws Exception invalid function signature message
 	 */
-	public function attach(NetSuite\AttachRequest $arg) {
+	public function attach(Classes\AttachRequest $arg) {
 		return $this->makeSoapCall("attach", $arg);
 	}
 
@@ -453,10 +451,10 @@ class NetSuiteService extends NetSuiteClient {
 	 * Parameter options:
 	 * (DetachRequest) parameters
 	 * @param Classes\DetachRequest $arg
-	 * @return NetSuite\DetachResponse
+	 * @return Classes\DetachResponse
 	 * @throws Exception invalid function signature message
 	 */
-	public function detach(NetSuite\DetachRequest $arg) {
+	public function detach(Classes\DetachRequest $arg) {
 		return $this->makeSoapCall("detach", $arg);
 	}
 
@@ -466,10 +464,10 @@ class NetSuiteService extends NetSuiteClient {
 	 * Parameter options:
 	 * (UpdateInviteeStatusRequest) parameters
 	 * @param Classes\UpdateInviteeStatusRequest $arg
-	 * @return NetSuite\UpdateInviteeStatusResponse
+	 * @return Classes\UpdateInviteeStatusResponse
 	 * @throws Exception invalid function signature message
 	 */
-	public function updateInviteeStatus(NetSuite\UpdateInviteeStatusRequest $arg) {
+	public function updateInviteeStatus(Classes\UpdateInviteeStatusRequest $arg) {
 		return $this->makeSoapCall("updateInviteeStatus", $arg);
 	}
 
@@ -479,10 +477,10 @@ class NetSuiteService extends NetSuiteClient {
 	 * Parameter options:
 	 * (UpdateInviteeStatusListRequest) parameters
 	 * @param Classes\UpdateInviteeStatusListRequest $arg
-	 * @return NetSuite\UpdateInviteeStatusListResponse
+	 * @return Classes\UpdateInviteeStatusListResponse
 	 * @throws Exception invalid function signature message
 	 */
-	public function updateInviteeStatusList(NetSuite\UpdateInviteeStatusListRequest $arg) {
+	public function updateInviteeStatusList(Classes\UpdateInviteeStatusListRequest $arg) {
 		return $this->makeSoapCall("updateInviteeStatusList", $arg);
 	}
 
@@ -492,10 +490,10 @@ class NetSuiteService extends NetSuiteClient {
 	 * Parameter options:
 	 * (AsyncAddListRequest) parameters
 	 * @param Classes\AsyncAddListRequest $arg
-	 * @return NetSuite\AsyncStatusResponse
+	 * @return Classes\AsyncStatusResponse
 	 * @throws Exception invalid function signature message
 	 */
-	public function asyncAddList(NetSuite\AsyncAddListRequest $arg) {
+	public function asyncAddList(Classes\AsyncAddListRequest $arg) {
 		return $this->makeSoapCall("asyncAddList", $arg);
 	}
 
@@ -505,10 +503,10 @@ class NetSuiteService extends NetSuiteClient {
 	 * Parameter options:
 	 * (AsyncUpdateListRequest) parameters
 	 * @param Classes\AsyncUpdateListRequest $arg
-	 * @return NetSuite\AsyncStatusResponse
+	 * @return Classes\AsyncStatusResponse
 	 * @throws Exception invalid function signature message
 	 */
-	public function asyncUpdateList(NetSuite\AsyncUpdateListRequest $arg) {
+	public function asyncUpdateList(Classes\AsyncUpdateListRequest $arg) {
 		return $this->makeSoapCall("asyncUpdateList", $arg);
 	}
 
@@ -518,10 +516,10 @@ class NetSuiteService extends NetSuiteClient {
 	 * Parameter options:
 	 * (AsyncUpsertListRequest) parameters
 	 * @param Classes\AsyncUpsertListRequest $arg
-	 * @return NetSuite\AsyncStatusResponse
+	 * @return Classes\AsyncStatusResponse
 	 * @throws Exception invalid function signature message
 	 */
-	public function asyncUpsertList(NetSuite\AsyncUpsertListRequest $arg) {
+	public function asyncUpsertList(Classes\AsyncUpsertListRequest $arg) {
 		return $this->makeSoapCall("asyncUpsertList", $arg);
 	}
 
@@ -531,10 +529,10 @@ class NetSuiteService extends NetSuiteClient {
 	 * Parameter options:
 	 * (AsyncDeleteListRequest) parameters
 	 * @param Classes\AsyncDeleteListRequest $arg
-	 * @return NetSuite\AsyncStatusResponse
+	 * @return Classes\AsyncStatusResponse
 	 * @throws Exception invalid function signature message
 	 */
-	public function asyncDeleteList(NetSuite\AsyncDeleteListRequest $arg) {
+	public function asyncDeleteList(Classes\AsyncDeleteListRequest $arg) {
 		return $this->makeSoapCall("asyncDeleteList", $arg);
 	}
 
@@ -544,10 +542,10 @@ class NetSuiteService extends NetSuiteClient {
 	 * Parameter options:
 	 * (AsyncGetListRequest) parameters
 	 * @param Classes\AsyncGetListRequest $arg
-	 * @return NetSuite\AsyncStatusResponse
+	 * @return Classes\AsyncStatusResponse
 	 * @throws Exception invalid function signature message
 	 */
-	public function asyncGetList(NetSuite\AsyncGetListRequest $arg) {
+	public function asyncGetList(Classes\AsyncGetListRequest $arg) {
 		return $this->makeSoapCall("asyncGetList", $arg);
 	}
 
@@ -557,10 +555,10 @@ class NetSuiteService extends NetSuiteClient {
 	 * Parameter options:
 	 * (AsyncInitializeListRequest) parameters
 	 * @param Classes\AsyncInitializeListRequest $arg
-	 * @return NetSuite\AsyncStatusResponse
+	 * @return Classes\AsyncStatusResponse
 	 * @throws Exception invalid function signature message
 	 */
-	public function asyncInitializeList(NetSuite\AsyncInitializeListRequest $arg) {
+	public function asyncInitializeList(Classes\AsyncInitializeListRequest $arg) {
 		return $this->makeSoapCall("asyncInitializeList", $arg);
 	}
 
@@ -570,10 +568,10 @@ class NetSuiteService extends NetSuiteClient {
 	 * Parameter options:
 	 * (AsyncSearchRequest) parameters
 	 * @param Classes\AsyncSearchRequest $arg
-	 * @return NetSuite\AsyncStatusResponse
+	 * @return Classes\AsyncStatusResponse
 	 * @throws Exception invalid function signature message
 	 */
-	public function asyncSearch(NetSuite\AsyncSearchRequest $arg) {
+	public function asyncSearch(Classes\AsyncSearchRequest $arg) {
 		return $this->makeSoapCall("asyncSearch", $arg);
 	}
 
@@ -583,10 +581,10 @@ class NetSuiteService extends NetSuiteClient {
 	 * Parameter options:
 	 * (GetAsyncResultRequest) parameters
 	 * @param Classes\GetAsyncResultRequest $arg
-	 * @return NetSuite\GetAsyncResultResponse
+	 * @return Classes\GetAsyncResultResponse
 	 * @throws Exception invalid function signature message
 	 */
-	public function getAsyncResult(NetSuite\GetAsyncResultRequest $arg) {
+	public function getAsyncResult(Classes\GetAsyncResultRequest $arg) {
 		return $this->makeSoapCall("getAsyncResult", $arg);
 	}
 
@@ -596,10 +594,10 @@ class NetSuiteService extends NetSuiteClient {
 	 * Parameter options:
 	 * (CheckAsyncStatusRequest) parameters
 	 * @param Classes\CheckAsyncStatusRequest $arg
-	 * @return NetSuite\AsyncStatusResponse
+	 * @return Classes\AsyncStatusResponse
 	 * @throws Exception invalid function signature message
 	 */
-	public function checkAsyncStatus(NetSuite\CheckAsyncStatusRequest $arg) {
+	public function checkAsyncStatus(Classes\CheckAsyncStatusRequest $arg) {
 		return $this->makeSoapCall("checkAsyncStatus", $arg);
 	}
 
@@ -609,10 +607,10 @@ class NetSuiteService extends NetSuiteClient {
 	 * Parameter options:
 	 * (GetDeletedRequest) parameters
 	 * @param Classes\GetDeletedRequest $arg
-	 * @return NetSuite\GetDeletedResponse
+	 * @return Classes\GetDeletedResponse
 	 * @throws Exception invalid function signature message
 	 */
-	public function getDeleted(NetSuite\GetDeletedRequest $arg) {
+	public function getDeleted(Classes\GetDeletedRequest $arg) {
 		return $this->makeSoapCall("getDeleted", $arg);
 	}
 
