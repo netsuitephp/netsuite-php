@@ -13,7 +13,8 @@
   "require": {
     "php": ">=5.3.0",
     "ext-soap": "*",
-    "ext-SimpleXML": "*"
+    "ext-SimpleXML": "*",
+    "ext-openssl": "*"
   },
   "autoload": {
     "psr-4": {
