@@ -1,4 +1,6 @@
-<?php namespace Fungku\NetSuite\Classes;
+<?php
+
+namespace Fungku\NetSuite\Classes;
 
 class EstimateItem {
 	public $job;
@@ -24,6 +26,7 @@ class EstimateItem {
 	public $fromJob;
 	public $grossAmt;
 	public $isEstimate;
+	public $subscription;
 	public $tax1Amt;
 	public $taxCode;
 	public $costEstimateType;
@@ -62,6 +65,7 @@ class EstimateItem {
 		"fromJob" => "boolean",
 		"grossAmt" => "float",
 		"isEstimate" => "boolean",
+		"subscription" => "RecordRef",
 		"tax1Amt" => "float",
 		"taxCode" => "RecordRef",
 		"costEstimateType" => "ItemCostEstimateType",

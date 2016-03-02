@@ -1,4 +1,6 @@
-<?php namespace Fungku\NetSuite\Classes;
+<?php
+
+namespace Fungku\NetSuite\Classes;
 
 class ItemSearchBasic extends SearchRecordBasic {
 	public $account;
@@ -43,6 +45,7 @@ class ItemSearchBasic extends SearchRecordBasic {
 	public $countryOfManufacture;
 	public $created;
 	public $createJob;
+	public $createRevenuePlansOn;
 	public $dateViewed;
 	public $daysBeforeExpiration;
 	public $defaultReturnCost;
@@ -106,6 +109,7 @@ class ItemSearchBasic extends SearchRecordBasic {
 	public $isVsoeBundle;
 	public $isWip;
 	public $itemId;
+	public $itemRevenueCategory;
 	public $itemUrl;
 	public $lastInvtCountDate;
 	public $lastModifiedDate;
@@ -210,6 +214,8 @@ class ItemSearchBasic extends SearchRecordBasic {
 	public $rescheduleInDays;
 	public $rescheduleOutDays;
 	public $reservePrice;
+	public $revenueAllocationGroup;
+	public $revenueRecognitionRule;
 	public $revRecSchedule;
 	public $roundUpAsComponent;
 	public $safetyStockLevel;
@@ -316,6 +322,7 @@ class ItemSearchBasic extends SearchRecordBasic {
 		"countryOfManufacture" => "SearchEnumMultiSelectField",
 		"created" => "SearchDateField",
 		"createJob" => "SearchBooleanField",
+		"createRevenuePlansOn" => "SearchEnumMultiSelectField",
 		"dateViewed" => "SearchDateField",
 		"daysBeforeExpiration" => "SearchDoubleField",
 		"defaultReturnCost" => "SearchDoubleField",
@@ -379,6 +386,7 @@ class ItemSearchBasic extends SearchRecordBasic {
 		"isVsoeBundle" => "SearchBooleanField",
 		"isWip" => "SearchBooleanField",
 		"itemId" => "SearchStringField",
+		"itemRevenueCategory" => "SearchMultiSelectField",
 		"itemUrl" => "SearchStringField",
 		"lastInvtCountDate" => "SearchDateField",
 		"lastModifiedDate" => "SearchDateField",
@@ -483,6 +491,8 @@ class ItemSearchBasic extends SearchRecordBasic {
 		"rescheduleInDays" => "SearchLongField",
 		"rescheduleOutDays" => "SearchLongField",
 		"reservePrice" => "SearchDoubleField",
+		"revenueAllocationGroup" => "SearchMultiSelectField",
+		"revenueRecognitionRule" => "SearchMultiSelectField",
 		"revRecSchedule" => "SearchMultiSelectField",
 		"roundUpAsComponent" => "SearchBooleanField",
 		"safetyStockLevel" => "SearchDoubleField",

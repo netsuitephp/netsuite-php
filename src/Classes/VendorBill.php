@@ -1,9 +1,12 @@
-<?php namespace Fungku\NetSuite\Classes;
+<?php
+
+namespace Fungku\NetSuite\Classes;
 
 class VendorBill extends Record {
 	public $createdDate;
 	public $lastModifiedDate;
 	public $customForm;
+	public $billAddressList;
 	public $account;
 	public $entity;
 	public $subsidiary;
@@ -13,6 +16,7 @@ class VendorBill extends Record {
 	public $postingPeriod;
 	public $tranDate;
 	public $currencyName;
+	public $billingAddress;
 	public $exchangeRate;
 	public $terms;
 	public $dueDate;
@@ -44,6 +48,7 @@ class VendorBill extends Record {
 		"createdDate" => "dateTime",
 		"lastModifiedDate" => "dateTime",
 		"customForm" => "RecordRef",
+		"billAddressList" => "RecordRef",
 		"account" => "RecordRef",
 		"entity" => "RecordRef",
 		"subsidiary" => "RecordRef",
@@ -53,6 +58,7 @@ class VendorBill extends Record {
 		"postingPeriod" => "RecordRef",
 		"tranDate" => "dateTime",
 		"currencyName" => "string",
+		"billingAddress" => "Address",
 		"exchangeRate" => "float",
 		"terms" => "RecordRef",
 		"dueDate" => "dateTime",

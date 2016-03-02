@@ -1,4 +1,6 @@
-<?php namespace Fungku\NetSuite\Classes;
+<?php
+
+namespace Fungku\NetSuite\Classes;
 
 class TransactionSearchRowBasic extends SearchRowBasic {
 	public $abbrev;
@@ -37,6 +39,7 @@ class TransactionSearchRowBasic extends SearchRowBasic {
 	public $billCountry;
 	public $billCountryCode;
 	public $billedDate;
+	public $billingAccount;
 	public $billingAmount;
 	public $billingSchedule;
 	public $billingTransaction;
@@ -82,6 +85,7 @@ class TransactionSearchRowBasic extends SearchRowBasic {
 	public $cscMatch;
 	public $currency;
 	public $customForm;
+	public $customGL;
 	public $custType;
 	public $dateCreated;
 	public $daysOpen;
@@ -239,6 +243,7 @@ class TransactionSearchRowBasic extends SearchRowBasic {
 	public $realizedGainPostingTransaction;
 	public $recognizedRevenue;
 	public $recordType;
+	public $recurringBill;
 	public $refNumber;
 	public $revCommitStatus;
 	public $revCommittingTransaction;
@@ -284,6 +289,8 @@ class TransactionSearchRowBasic extends SearchRowBasic {
 	public $source;
 	public $startDate;
 	public $status;
+	public $subscription;
+	public $subscriptionLine;
 	public $subsidiary;
 	public $taxAmount;
 	public $taxCode;
@@ -292,6 +299,7 @@ class TransactionSearchRowBasic extends SearchRowBasic {
 	public $taxTotal;
 	public $termInMonths;
 	public $terms;
+	public $termsOfSale;
 	public $title;
 	public $toBeEmailed;
 	public $toBePrinted;
@@ -364,6 +372,7 @@ class TransactionSearchRowBasic extends SearchRowBasic {
 		"billCountry" => "SearchColumnEnumSelectField[]",
 		"billCountryCode" => "SearchColumnStringField[]",
 		"billedDate" => "SearchColumnDateField[]",
+		"billingAccount" => "SearchColumnSelectField[]",
 		"billingAmount" => "SearchColumnDoubleField[]",
 		"billingSchedule" => "SearchColumnSelectField[]",
 		"billingTransaction" => "SearchColumnSelectField[]",
@@ -409,6 +418,7 @@ class TransactionSearchRowBasic extends SearchRowBasic {
 		"cscMatch" => "SearchColumnEnumSelectField[]",
 		"currency" => "SearchColumnSelectField[]",
 		"customForm" => "SearchColumnSelectField[]",
+		"customGL" => "SearchColumnBooleanField[]",
 		"custType" => "SearchColumnSelectField[]",
 		"dateCreated" => "SearchColumnDateField[]",
 		"daysOpen" => "SearchColumnLongField[]",
@@ -566,6 +576,7 @@ class TransactionSearchRowBasic extends SearchRowBasic {
 		"realizedGainPostingTransaction" => "SearchColumnStringField[]",
 		"recognizedRevenue" => "SearchColumnDoubleField[]",
 		"recordType" => "SearchColumnStringField[]",
+		"recurringBill" => "SearchColumnBooleanField[]",
 		"refNumber" => "SearchColumnLongField[]",
 		"revCommitStatus" => "SearchColumnEnumSelectField[]",
 		"revCommittingTransaction" => "SearchColumnSelectField[]",
@@ -611,6 +622,8 @@ class TransactionSearchRowBasic extends SearchRowBasic {
 		"source" => "SearchColumnStringField[]",
 		"startDate" => "SearchColumnDateField[]",
 		"status" => "SearchColumnEnumSelectField[]",
+		"subscription" => "SearchColumnStringField[]",
+		"subscriptionLine" => "SearchColumnSelectField[]",
 		"subsidiary" => "SearchColumnSelectField[]",
 		"taxAmount" => "SearchColumnDoubleField[]",
 		"taxCode" => "SearchColumnSelectField[]",
@@ -619,6 +632,7 @@ class TransactionSearchRowBasic extends SearchRowBasic {
 		"taxTotal" => "SearchColumnDoubleField[]",
 		"termInMonths" => "SearchColumnLongField[]",
 		"terms" => "SearchColumnSelectField[]",
+		"termsOfSale" => "SearchColumnStringField[]",
 		"title" => "SearchColumnStringField[]",
 		"toBeEmailed" => "SearchColumnBooleanField[]",
 		"toBePrinted" => "SearchColumnBooleanField[]",

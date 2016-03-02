@@ -1,4 +1,6 @@
-<?php namespace Fungku\NetSuite\Classes;
+<?php
+
+namespace Fungku\NetSuite\Classes;
 
 class CashSaleItem {
 	public $job;
@@ -29,6 +31,7 @@ class CashSaleItem {
 	public $revRecSchedule;
 	public $revRecStartDate;
 	public $revRecEndDate;
+	public $subscriptionLine;
 	public $grossAmt;
 	public $costEstimateType;
 	public $excludeFromRateRequest;
@@ -90,6 +93,7 @@ class CashSaleItem {
 		"revRecSchedule" => "RecordRef",
 		"revRecStartDate" => "dateTime",
 		"revRecEndDate" => "dateTime",
+		"subscriptionLine" => "RecordRef",
 		"grossAmt" => "float",
 		"costEstimateType" => "ItemCostEstimateType",
 		"excludeFromRateRequest" => "boolean",

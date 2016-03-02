@@ -1,12 +1,16 @@
-<?php namespace Fungku\NetSuite\Classes;
+<?php
+
+namespace Fungku\NetSuite\Classes;
 
 class MediaType {
 	static $paramtypesmap = array(
 	);
 	const _AUTOCAD = "_AUTOCAD";
 	const _BMPIMAGE = "_BMPIMAGE";
+	const _CFF = "_CFF";
 	const _CONFIG = "_CONFIG";
 	const _CSV = "_CSV";
+	const _EOT = "_EOT";
 	const _EXCEL = "_EXCEL";
 	const _FLASH = "_FLASH";
 	const _FREEMARKER = "_FREEMARKER";
@@ -24,6 +28,7 @@ class MediaType {
 	const _MP3 = "_MP3";
 	const _MPEGMOVIE = "_MPEGMOVIE";
 	const _MSPROJECT = "_MSPROJECT";
+	const _OTF = "_OTF";
 	const _PDF = "_PDF";
 	const _PJPGIMAGE = "_PJPGIMAGE";
 	const _PLAINTEXT = "_PLAINTEXT";
@@ -34,12 +39,16 @@ class MediaType {
 	const _RTF = "_RTF";
 	const _SMS = "_SMS";
 	const _STYLESHEET = "_STYLESHEET";
+	const _SVG = "_SVG";
 	const _TAR = "_TAR";
 	const _TARCOMP = "_TARCOMP";
 	const _TIFFIMAGE = "_TIFFIMAGE";
+	const _TTF = "_TTF";
 	const _VISIO = "_VISIO";
 	const _WEBAPPPAGE = "_WEBAPPPAGE";
 	const _WEBAPPSCRIPT = "_WEBAPPSCRIPT";
+	const _WOFF = "_WOFF";
+	const _WOFF2 = "_WOFF2";
 	const _WORD = "_WORD";
 	const _XMLDOC = "_XMLDOC";
 	const _XSD = "_XSD";

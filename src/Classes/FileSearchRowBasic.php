@@ -1,4 +1,6 @@
-<?php namespace Fungku\NetSuite\Classes;
+<?php
+
+namespace Fungku\NetSuite\Classes;
 
 class FileSearchRowBasic extends SearchRowBasic {
 	public $availableWithoutLogin;

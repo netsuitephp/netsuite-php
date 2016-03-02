@@ -1,4 +1,6 @@
-<?php namespace Fungku\NetSuite\Classes;
+<?php
+
+namespace Fungku\NetSuite\Classes;
 
 class AccountingTransactionSearchBasic extends SearchRecordBasic {
 	public $account;
@@ -10,6 +12,7 @@ class AccountingTransactionSearchBasic extends SearchRecordBasic {
 	public $bookSpecificTransaction;
 	public $catchUpPeriod;
 	public $creditAmount;
+	public $customGL;
 	public $debitAmount;
 	public $deferRevRec;
 	public $exchangeRate;
@@ -40,6 +43,7 @@ class AccountingTransactionSearchBasic extends SearchRecordBasic {
 		"bookSpecificTransaction" => "SearchBooleanField",
 		"catchUpPeriod" => "SearchMultiSelectField",
 		"creditAmount" => "SearchDoubleField",
+		"customGL" => "SearchBooleanField",
 		"debitAmount" => "SearchDoubleField",
 		"deferRevRec" => "SearchBooleanField",
 		"exchangeRate" => "SearchDoubleField",

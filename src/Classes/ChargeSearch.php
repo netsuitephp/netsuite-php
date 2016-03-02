@@ -1,7 +1,11 @@
-<?php namespace Fungku\NetSuite\Classes;
+<?php
+
+namespace Fungku\NetSuite\Classes;
 
 class ChargeSearch extends SearchRecord {
 	public $basic;
+	public $billingAccountJoin;
+	public $chargeEmployeeJoin;
 	public $invoiceJoin;
 	public $jobJoin;
 	public $salesOrderJoin;
@@ -11,6 +15,8 @@ class ChargeSearch extends SearchRecord {
 	public $customSearchJoin;
 	static $paramtypesmap = array(
 		"basic" => "ChargeSearchBasic",
+		"billingAccountJoin" => "BillingAccountSearchBasic",
+		"chargeEmployeeJoin" => "EmployeeSearchBasic",
 		"invoiceJoin" => "TransactionSearchBasic",
 		"jobJoin" => "JobSearchBasic",
 		"salesOrderJoin" => "TransactionSearchBasic",

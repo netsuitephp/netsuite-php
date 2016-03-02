@@ -1,4 +1,6 @@
-<?php namespace Fungku\NetSuite\Classes;
+<?php
+
+namespace Fungku\NetSuite\Classes;
 
 class TransactionLinkType {
 	static $paramtypesmap = array(
@@ -8,6 +10,7 @@ class TransactionLinkType {
 	const _cogsLink = "_cogsLink";
 	const _collectTegata = "_collectTegata";
 	const _commission = "_commission";
+	const _contractCostDeferral = "_contractCostDeferral";
 	const _deferredRevenueReallocation = "_deferredRevenueReallocation";
 	const _depositApplication = "_depositApplication";
 	const _depositRefundCheck = "_depositRefundCheck";
@@ -34,6 +37,7 @@ class TransactionLinkType {
 	const _reimbursement = "_reimbursement";
 	const _revalueWorkOrder = "_revalueWorkOrder";
 	const _revenueAmortizatonRecognition = "_revenueAmortizatonRecognition";
+	const _revenueArrangement = "_revenueArrangement";
 	const _revenueCommitted = "_revenueCommitted";
 	const _rfqToVendorRfq = "_rfqToVendorRfq";
 	const _saleReturn = "_saleReturn";

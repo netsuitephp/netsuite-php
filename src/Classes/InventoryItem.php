@@ -1,4 +1,6 @@
-<?php namespace Fungku\NetSuite\Classes;
+<?php
+
+namespace Fungku\NetSuite\Classes;
 
 class InventoryItem extends Record {
 	public $createdDate;
@@ -19,6 +21,9 @@ class InventoryItem extends Record {
 	public $taxSchedule;
 	public $dropshipExpenseAccount;
 	public $deferRevRec;
+	public $revenueRecognitionRule;
+	public $revenueAllocationGroup;
+	public $createRevenuePlansOn;
 	public $isTaxable;
 	public $matrixType;
 	public $assetAccount;
@@ -96,6 +101,7 @@ class InventoryItem extends Record {
 	public $vsoeDeferral;
 	public $vsoePermitDiscount;
 	public $vsoeDelivered;
+	public $itemRevenueCategory;
 	public $preferredLocation;
 	public $reorderMultiple;
 	public $cost;
@@ -235,6 +241,9 @@ class InventoryItem extends Record {
 		"taxSchedule" => "RecordRef",
 		"dropshipExpenseAccount" => "RecordRef",
 		"deferRevRec" => "boolean",
+		"revenueRecognitionRule" => "RecordRef",
+		"revenueAllocationGroup" => "RecordRef",
+		"createRevenuePlansOn" => "ItemCreateRevenuePlansOn",
 		"isTaxable" => "boolean",
 		"matrixType" => "ItemMatrixType",
 		"assetAccount" => "RecordRef",
@@ -312,6 +321,7 @@ class InventoryItem extends Record {
 		"vsoeDeferral" => "VsoeDeferral",
 		"vsoePermitDiscount" => "VsoePermitDiscount",
 		"vsoeDelivered" => "boolean",
+		"itemRevenueCategory" => "RecordRef",
 		"preferredLocation" => "RecordRef",
 		"reorderMultiple" => "integer",
 		"cost" => "float",

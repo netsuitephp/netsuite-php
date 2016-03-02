@@ -1,16 +1,20 @@
-<?php namespace Fungku\NetSuite;
+<?php
 
-class NetSuiteService extends NetSuiteClient {
+namespace Fungku\NetSuite;
 
-	public $generated_from_endpoint = "2015_1";
+use Fungku\NetSuite\Classes;
+
+class NetSuiteService extends NetSuiteClient
+{
+	public $generated_from_endpoint = "2015_2";
+
 
 	/**
 	 * Service Call: login
 	 * Parameter options:
 	 * (LoginRequest) parameters
-	 * @param Classes\LoginRequest $arg
+	 * @return Classes\LoginResponse
 	 * @throws Exception invalid function signature message
-	 * @return mixed
 	 */
 	public function login(Classes\LoginRequest $arg) {
 		return $this->makeSoapCall("login", $arg);
@@ -21,7 +25,6 @@ class NetSuiteService extends NetSuiteClient {
 	 * Service Call: ssoLogin
 	 * Parameter options:
 	 * (SsoLoginRequest) parameters
-	 * @param Classes\SsoLoginRequest $arg
 	 * @return Classes\SsoLoginResponse
 	 * @throws Exception invalid function signature message
 	 */
@@ -34,7 +37,6 @@ class NetSuiteService extends NetSuiteClient {
 	 * Service Call: mapSso
 	 * Parameter options:
 	 * (MapSsoRequest) parameters
-	 * @param Classes\MapSsoRequest $arg
 	 * @return Classes\MapSsoResponse
 	 * @throws Exception invalid function signature message
 	 */
@@ -47,7 +49,6 @@ class NetSuiteService extends NetSuiteClient {
 	 * Service Call: changePassword
 	 * Parameter options:
 	 * (ChangePasswordRequest) parameters
-	 * @param Classes\ChangePasswordRequest $arg
 	 * @return Classes\ChangePasswordResponse
 	 * @throws Exception invalid function signature message
 	 */
@@ -60,7 +61,6 @@ class NetSuiteService extends NetSuiteClient {
 	 * Service Call: changeEmail
 	 * Parameter options:
 	 * (ChangeEmailRequest) parameters
-	 * @param Classes\ChangeEmailRequest $arg
 	 * @return Classes\ChangeEmailResponse
 	 * @throws Exception invalid function signature message
 	 */
@@ -73,7 +73,6 @@ class NetSuiteService extends NetSuiteClient {
 	 * Service Call: logout
 	 * Parameter options:
 	 * (LogoutRequest) parameters
-	 * @param Classes\LogoutRequest $arg
 	 * @return Classes\LogoutResponse
 	 * @throws Exception invalid function signature message
 	 */
@@ -86,7 +85,6 @@ class NetSuiteService extends NetSuiteClient {
 	 * Service Call: add
 	 * Parameter options:
 	 * (AddRequest) parameters
-	 * @param Classes\AddRequest $arg
 	 * @return Classes\AddResponse
 	 * @throws Exception invalid function signature message
 	 */
@@ -99,7 +97,6 @@ class NetSuiteService extends NetSuiteClient {
 	 * Service Call: delete
 	 * Parameter options:
 	 * (DeleteRequest) parameters
-	 * @param Classes\DeleteRequest $arg
 	 * @return Classes\DeleteResponse
 	 * @throws Exception invalid function signature message
 	 */
@@ -112,7 +109,6 @@ class NetSuiteService extends NetSuiteClient {
 	 * Service Call: search
 	 * Parameter options:
 	 * (SearchRequest) parameters
-	 * @param Classes\SearchRequest $arg
 	 * @return Classes\SearchResponse
 	 * @throws Exception invalid function signature message
 	 */
@@ -125,7 +121,6 @@ class NetSuiteService extends NetSuiteClient {
 	 * Service Call: searchMore
 	 * Parameter options:
 	 * (SearchMoreRequest) parameters
-	 * @param Classes\SearchMoreRequest $arg
 	 * @return Classes\SearchMoreResponse
 	 * @throws Exception invalid function signature message
 	 */
@@ -138,7 +133,6 @@ class NetSuiteService extends NetSuiteClient {
 	 * Service Call: searchMoreWithId
 	 * Parameter options:
 	 * (SearchMoreWithIdRequest) parameters
-	 * @param Classes\SearchMoreWithIdRequest $arg
 	 * @return Classes\SearchMoreWithIdResponse
 	 * @throws Exception invalid function signature message
 	 */
@@ -151,7 +145,6 @@ class NetSuiteService extends NetSuiteClient {
 	 * Service Call: searchNext
 	 * Parameter options:
 	 * (SearchNextRequest) parameters
-	 * @param Classes\SearchNextRequest $arg
 	 * @return Classes\SearchNextResponse
 	 * @throws Exception invalid function signature message
 	 */
@@ -164,7 +157,6 @@ class NetSuiteService extends NetSuiteClient {
 	 * Service Call: update
 	 * Parameter options:
 	 * (UpdateRequest) parameters
-	 * @param Classes\UpdateRequest $arg
 	 * @return Classes\UpdateResponse
 	 * @throws Exception invalid function signature message
 	 */
@@ -177,7 +169,6 @@ class NetSuiteService extends NetSuiteClient {
 	 * Service Call: upsert
 	 * Parameter options:
 	 * (UpsertRequest) parameters
-	 * @param Classes\UpsertRequest $arg
 	 * @return Classes\UpsertResponse
 	 * @throws Exception invalid function signature message
 	 */
@@ -190,7 +181,6 @@ class NetSuiteService extends NetSuiteClient {
 	 * Service Call: addList
 	 * Parameter options:
 	 * (AddListRequest) parameters
-	 * @param Classes\AddListRequest $arg
 	 * @return Classes\AddListResponse
 	 * @throws Exception invalid function signature message
 	 */
@@ -203,7 +193,6 @@ class NetSuiteService extends NetSuiteClient {
 	 * Service Call: deleteList
 	 * Parameter options:
 	 * (DeleteListRequest) parameters
-	 * @param Classes\DeleteListRequest $arg
 	 * @return Classes\DeleteListResponse
 	 * @throws Exception invalid function signature message
 	 */
@@ -216,7 +205,6 @@ class NetSuiteService extends NetSuiteClient {
 	 * Service Call: updateList
 	 * Parameter options:
 	 * (UpdateListRequest) parameters
-	 * @param Classes\UpdateListRequest $arg
 	 * @return Classes\UpdateListResponse
 	 * @throws Exception invalid function signature message
 	 */
@@ -229,7 +217,6 @@ class NetSuiteService extends NetSuiteClient {
 	 * Service Call: upsertList
 	 * Parameter options:
 	 * (UpsertListRequest) parameters
-	 * @param Classes\UpsertListRequest $arg
 	 * @return Classes\UpsertListResponse
 	 * @throws Exception invalid function signature message
 	 */
@@ -242,7 +229,6 @@ class NetSuiteService extends NetSuiteClient {
 	 * Service Call: get
 	 * Parameter options:
 	 * (GetRequest) parameters
-	 * @param Classes\GetRequest $arg
 	 * @return Classes\GetResponse
 	 * @throws Exception invalid function signature message
 	 */
@@ -255,7 +241,6 @@ class NetSuiteService extends NetSuiteClient {
 	 * Service Call: getList
 	 * Parameter options:
 	 * (GetListRequest) parameters
-	 * @param Classes\GetListRequest $arg
 	 * @return Classes\GetListResponse
 	 * @throws Exception invalid function signature message
 	 */
@@ -268,7 +253,6 @@ class NetSuiteService extends NetSuiteClient {
 	 * Service Call: getAll
 	 * Parameter options:
 	 * (GetAllRequest) parameters
-	 * @param Classes\GetAllRequest $arg
 	 * @return Classes\GetAllResponse
 	 * @throws Exception invalid function signature message
 	 */
@@ -281,7 +265,6 @@ class NetSuiteService extends NetSuiteClient {
 	 * Service Call: getSavedSearch
 	 * Parameter options:
 	 * (GetSavedSearchRequest) parameters
-	 * @param Classes\GetSavedSearchRequest $arg
 	 * @return Classes\GetSavedSearchResponse
 	 * @throws Exception invalid function signature message
 	 */
@@ -294,7 +277,6 @@ class NetSuiteService extends NetSuiteClient {
 	 * Service Call: getCustomizationId
 	 * Parameter options:
 	 * (GetCustomizationIdRequest) parameters
-	 * @param Classes\GetCustomizationIdRequest $arg
 	 * @return Classes\GetCustomizationIdResponse
 	 * @throws Exception invalid function signature message
 	 */
@@ -307,7 +289,6 @@ class NetSuiteService extends NetSuiteClient {
 	 * Service Call: initialize
 	 * Parameter options:
 	 * (InitializeRequest) parameters
-	 * @param Classes\InitializeRequest $arg
 	 * @return Classes\InitializeResponse
 	 * @throws Exception invalid function signature message
 	 */
@@ -320,7 +301,6 @@ class NetSuiteService extends NetSuiteClient {
 	 * Service Call: initializeList
 	 * Parameter options:
 	 * (InitializeListRequest) parameters
-	 * @param Classes\InitializeListRequest $arg
 	 * @return Classes\InitializeListResponse
 	 * @throws Exception invalid function signature message
 	 */
@@ -333,7 +313,6 @@ class NetSuiteService extends NetSuiteClient {
 	 * Service Call: getSelectValue
 	 * Parameter options:
 	 * (getSelectValueRequest) parameters
-	 * @param Classes\getSelectValueRequest $arg
 	 * @return Classes\getSelectValueResponse
 	 * @throws Exception invalid function signature message
 	 */
@@ -346,7 +325,6 @@ class NetSuiteService extends NetSuiteClient {
 	 * Service Call: getItemAvailability
 	 * Parameter options:
 	 * (GetItemAvailabilityRequest) parameters
-	 * @param Classes\GetItemAvailabilityRequest $arg
 	 * @return Classes\GetItemAvailabilityResponse
 	 * @throws Exception invalid function signature message
 	 */
@@ -358,8 +336,7 @@ class NetSuiteService extends NetSuiteClient {
 	/**
 	 * Service Call: getBudgetExchangeRate
 	 * Parameter options:
-	 * (GetBudgetExchangeRateRequest) parameter
-	 * @param Classes\GetBudgetExchangeRateRequest $arg
+	 * (GetBudgetExchangeRateRequest) parameters
 	 * @return Classes\GetBudgetExchangeRateResponse
 	 * @throws Exception invalid function signature message
 	 */
@@ -372,7 +349,6 @@ class NetSuiteService extends NetSuiteClient {
 	 * Service Call: getConsolidatedExchangeRate
 	 * Parameter options:
 	 * (GetConsolidatedExchangeRateRequest) parameters
-	 * @param Classes\GetConsolidatedExchangeRateRequest $arg
 	 * @return Classes\GetConsolidatedExchangeRateResponse
 	 * @throws Exception invalid function signature message
 	 */
@@ -385,7 +361,6 @@ class NetSuiteService extends NetSuiteClient {
 	 * Service Call: getCurrencyRate
 	 * Parameter options:
 	 * (GetCurrencyRateRequest) parameters
-	 * @param Classes\GetCurrencyRateRequest $arg
 	 * @return Classes\GetCurrencyRateResponse
 	 * @throws Exception invalid function signature message
 	 */
@@ -398,7 +373,6 @@ class NetSuiteService extends NetSuiteClient {
 	 * Service Call: getDataCenterUrls
 	 * Parameter options:
 	 * (GetDataCenterUrlsRequest) parameters
-	 * @param Classes\GetDataCenterUrlsRequest $arg
 	 * @return Classes\GetDataCenterUrlsResponse
 	 * @throws Exception invalid function signature message
 	 */
@@ -411,7 +385,6 @@ class NetSuiteService extends NetSuiteClient {
 	 * Service Call: getPostingTransactionSummary
 	 * Parameter options:
 	 * (GetPostingTransactionSummaryRequest) parameters
-	 * @param Classes\GetPostingTransactionSummaryRequest $arg
 	 * @return Classes\GetPostingTransactionSummaryResponse
 	 * @throws Exception invalid function signature message
 	 */
@@ -424,7 +397,6 @@ class NetSuiteService extends NetSuiteClient {
 	 * Service Call: getServerTime
 	 * Parameter options:
 	 * (GetServerTimeRequest) parameters
-	 * @param Classes\GetServerTimeRequest $arg
 	 * @return Classes\GetServerTimeResponse
 	 * @throws Exception invalid function signature message
 	 */
@@ -437,7 +409,6 @@ class NetSuiteService extends NetSuiteClient {
 	 * Service Call: attach
 	 * Parameter options:
 	 * (AttachRequest) parameters
-	 * @param Classes\AttachRequest $arg
 	 * @return Classes\AttachResponse
 	 * @throws Exception invalid function signature message
 	 */
@@ -450,7 +421,6 @@ class NetSuiteService extends NetSuiteClient {
 	 * Service Call: detach
 	 * Parameter options:
 	 * (DetachRequest) parameters
-	 * @param Classes\DetachRequest $arg
 	 * @return Classes\DetachResponse
 	 * @throws Exception invalid function signature message
 	 */
@@ -463,7 +433,6 @@ class NetSuiteService extends NetSuiteClient {
 	 * Service Call: updateInviteeStatus
 	 * Parameter options:
 	 * (UpdateInviteeStatusRequest) parameters
-	 * @param Classes\UpdateInviteeStatusRequest $arg
 	 * @return Classes\UpdateInviteeStatusResponse
 	 * @throws Exception invalid function signature message
 	 */
@@ -476,7 +445,6 @@ class NetSuiteService extends NetSuiteClient {
 	 * Service Call: updateInviteeStatusList
 	 * Parameter options:
 	 * (UpdateInviteeStatusListRequest) parameters
-	 * @param Classes\UpdateInviteeStatusListRequest $arg
 	 * @return Classes\UpdateInviteeStatusListResponse
 	 * @throws Exception invalid function signature message
 	 */
@@ -489,7 +457,6 @@ class NetSuiteService extends NetSuiteClient {
 	 * Service Call: asyncAddList
 	 * Parameter options:
 	 * (AsyncAddListRequest) parameters
-	 * @param Classes\AsyncAddListRequest $arg
 	 * @return Classes\AsyncStatusResponse
 	 * @throws Exception invalid function signature message
 	 */
@@ -502,7 +469,6 @@ class NetSuiteService extends NetSuiteClient {
 	 * Service Call: asyncUpdateList
 	 * Parameter options:
 	 * (AsyncUpdateListRequest) parameters
-	 * @param Classes\AsyncUpdateListRequest $arg
 	 * @return Classes\AsyncStatusResponse
 	 * @throws Exception invalid function signature message
 	 */
@@ -515,7 +481,6 @@ class NetSuiteService extends NetSuiteClient {
 	 * Service Call: asyncUpsertList
 	 * Parameter options:
 	 * (AsyncUpsertListRequest) parameters
-	 * @param Classes\AsyncUpsertListRequest $arg
 	 * @return Classes\AsyncStatusResponse
 	 * @throws Exception invalid function signature message
 	 */
@@ -528,7 +493,6 @@ class NetSuiteService extends NetSuiteClient {
 	 * Service Call: asyncDeleteList
 	 * Parameter options:
 	 * (AsyncDeleteListRequest) parameters
-	 * @param Classes\AsyncDeleteListRequest $arg
 	 * @return Classes\AsyncStatusResponse
 	 * @throws Exception invalid function signature message
 	 */
@@ -541,7 +505,6 @@ class NetSuiteService extends NetSuiteClient {
 	 * Service Call: asyncGetList
 	 * Parameter options:
 	 * (AsyncGetListRequest) parameters
-	 * @param Classes\AsyncGetListRequest $arg
 	 * @return Classes\AsyncStatusResponse
 	 * @throws Exception invalid function signature message
 	 */
@@ -554,7 +517,6 @@ class NetSuiteService extends NetSuiteClient {
 	 * Service Call: asyncInitializeList
 	 * Parameter options:
 	 * (AsyncInitializeListRequest) parameters
-	 * @param Classes\AsyncInitializeListRequest $arg
 	 * @return Classes\AsyncStatusResponse
 	 * @throws Exception invalid function signature message
 	 */
@@ -567,7 +529,6 @@ class NetSuiteService extends NetSuiteClient {
 	 * Service Call: asyncSearch
 	 * Parameter options:
 	 * (AsyncSearchRequest) parameters
-	 * @param Classes\AsyncSearchRequest $arg
 	 * @return Classes\AsyncStatusResponse
 	 * @throws Exception invalid function signature message
 	 */
@@ -580,7 +541,6 @@ class NetSuiteService extends NetSuiteClient {
 	 * Service Call: getAsyncResult
 	 * Parameter options:
 	 * (GetAsyncResultRequest) parameters
-	 * @param Classes\GetAsyncResultRequest $arg
 	 * @return Classes\GetAsyncResultResponse
 	 * @throws Exception invalid function signature message
 	 */
@@ -593,7 +553,6 @@ class NetSuiteService extends NetSuiteClient {
 	 * Service Call: checkAsyncStatus
 	 * Parameter options:
 	 * (CheckAsyncStatusRequest) parameters
-	 * @param Classes\CheckAsyncStatusRequest $arg
 	 * @return Classes\AsyncStatusResponse
 	 * @throws Exception invalid function signature message
 	 */
@@ -606,7 +565,6 @@ class NetSuiteService extends NetSuiteClient {
 	 * Service Call: getDeleted
 	 * Parameter options:
 	 * (GetDeletedRequest) parameters
-	 * @param Classes\GetDeletedRequest $arg
 	 * @return Classes\GetDeletedResponse
 	 * @throws Exception invalid function signature message
 	 */
@@ -616,5 +574,3 @@ class NetSuiteService extends NetSuiteClient {
 
 
 }
-
-

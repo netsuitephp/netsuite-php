@@ -1,7 +1,10 @@
-<?php namespace Fungku\NetSuite\Classes;
+<?php
+
+namespace Fungku\NetSuite\Classes;
 
 class ChargeSearchRowBasic extends SearchRowBasic {
 	public $amount;
+	public $billingAccount;
 	public $billingItem;
 	public $billTo;
 	public $chargeDate;
@@ -22,10 +25,12 @@ class ChargeSearchRowBasic extends SearchRowBasic {
 	public $runId;
 	public $salesOrder;
 	public $stage;
+	public $subscriptionLine;
 	public $use;
 	public $customFieldList;
 	static $paramtypesmap = array(
 		"amount" => "SearchColumnDoubleField[]",
+		"billingAccount" => "SearchColumnSelectField[]",
 		"billingItem" => "SearchColumnSelectField[]",
 		"billTo" => "SearchColumnSelectField[]",
 		"chargeDate" => "SearchColumnDateField[]",
@@ -46,6 +51,7 @@ class ChargeSearchRowBasic extends SearchRowBasic {
 		"runId" => "SearchColumnStringField[]",
 		"salesOrder" => "SearchColumnStringField[]",
 		"stage" => "SearchColumnEnumSelectField[]",
+		"subscriptionLine" => "SearchColumnSelectField[]",
 		"use" => "SearchColumnEnumSelectField[]",
 		"customFieldList" => "SearchColumnCustomFieldList",
 	);

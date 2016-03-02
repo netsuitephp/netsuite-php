@@ -1,4 +1,6 @@
-<?php namespace Fungku\NetSuite\Classes;
+<?php
+
+namespace Fungku\NetSuite\Classes;
 
 class StatisticalJournalEntry extends Record {
 	public $createdDate;
@@ -10,6 +12,7 @@ class StatisticalJournalEntry extends Record {
 	public $tranDate;
 	public $postingPeriod;
 	public $reversalDate;
+	public $memo;
 	public $reversalDefer;
 	public $subsidiary;
 	public $unitsType;
@@ -27,6 +30,7 @@ class StatisticalJournalEntry extends Record {
 		"tranDate" => "dateTime",
 		"postingPeriod" => "RecordRef",
 		"reversalDate" => "dateTime",
+		"memo" => "string",
 		"reversalDefer" => "boolean",
 		"subsidiary" => "RecordRef",
 		"unitsType" => "RecordRef",

@@ -1,4 +1,6 @@
-<?php namespace Fungku\NetSuite\Classes;
+<?php
+
+namespace Fungku\NetSuite\Classes;
 
 class OtherChargeResaleItem extends Record {
 	public $createdDate;
@@ -30,6 +32,9 @@ class OtherChargeResaleItem extends Record {
 	public $amortizationTemplate;
 	public $residual;
 	public $deferRevRec;
+	public $revenueRecognitionRule;
+	public $revenueAllocationGroup;
+	public $createRevenuePlansOn;
 	public $amortizationPeriod;
 	public $minimumQuantity;
 	public $minimumQuantityUnits;
@@ -69,6 +74,7 @@ class OtherChargeResaleItem extends Record {
 	public $vsoeDeferral;
 	public $vsoePermitDiscount;
 	public $vsoeDelivered;
+	public $itemRevenueCategory;
 	public $currency;
 	public $itemOptionsList;
 	public $matrixOptionList;
@@ -113,6 +119,9 @@ class OtherChargeResaleItem extends Record {
 		"amortizationTemplate" => "RecordRef",
 		"residual" => "string",
 		"deferRevRec" => "boolean",
+		"revenueRecognitionRule" => "RecordRef",
+		"revenueAllocationGroup" => "RecordRef",
+		"createRevenuePlansOn" => "ItemCreateRevenuePlansOn",
 		"amortizationPeriod" => "integer",
 		"minimumQuantity" => "integer",
 		"minimumQuantityUnits" => "string",
@@ -152,6 +161,7 @@ class OtherChargeResaleItem extends Record {
 		"vsoeDeferral" => "VsoeDeferral",
 		"vsoePermitDiscount" => "VsoePermitDiscount",
 		"vsoeDelivered" => "boolean",
+		"itemRevenueCategory" => "RecordRef",
 		"currency" => "string",
 		"itemOptionsList" => "ItemOptionsList",
 		"matrixOptionList" => "MatrixOptionList",

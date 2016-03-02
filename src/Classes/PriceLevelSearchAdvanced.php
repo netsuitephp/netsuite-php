@@ -1,4 +1,6 @@
-<?php namespace Fungku\NetSuite\Classes;
+<?php
+
+namespace Fungku\NetSuite\Classes;
 
 class PriceLevelSearchAdvanced extends SearchRecord {
 	public $criteria;

@@ -1,4 +1,6 @@
-<?php namespace Fungku\NetSuite\Classes;
+<?php
+
+namespace Fungku\NetSuite\Classes;
 
 class TransactionStatus {
 	static $paramtypesmap = array(
@@ -109,6 +111,7 @@ class TransactionStatus {
 	const _tegataReceivablesDiscounted = "_tegataReceivablesDiscounted";
 	const _tegataReceivablesEndorsed = "_tegataReceivablesEndorsed";
 	const _tegataReceivablesHolding = "_tegataReceivablesHolding";
+	const _tegataReceivablesVoided = "_tegataReceivablesVoided";
 	const _transferOrderClosed = "_transferOrderClosed";
 	const _transferOrderPartiallyFulfilled = "_transferOrderPartiallyFulfilled";
 	const _transferOrderPendingApproval = "_transferOrderPendingApproval";

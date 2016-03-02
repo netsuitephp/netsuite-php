@@ -1,4 +1,6 @@
-<?php namespace Fungku\NetSuite\Classes;
+<?php
+
+namespace Fungku\NetSuite\Classes;
 
 class SerializedAssemblyItem extends Record {
 	public $createdDate;
@@ -124,7 +126,11 @@ class SerializedAssemblyItem extends Record {
 	public $vsoeDeferral;
 	public $vsoePermitDiscount;
 	public $vsoeDelivered;
+	public $itemRevenueCategory;
 	public $unbuildVarianceAccount;
+	public $revenueRecognitionRule;
+	public $revenueAllocationGroup;
+	public $createRevenuePlansOn;
 	public $dropshipExpenseAccount;
 	public $preferredLocation;
 	public $totalValue;
@@ -331,7 +337,11 @@ class SerializedAssemblyItem extends Record {
 		"vsoeDeferral" => "VsoeDeferral",
 		"vsoePermitDiscount" => "VsoePermitDiscount",
 		"vsoeDelivered" => "boolean",
+		"itemRevenueCategory" => "RecordRef",
 		"unbuildVarianceAccount" => "RecordRef",
+		"revenueRecognitionRule" => "RecordRef",
+		"revenueAllocationGroup" => "RecordRef",
+		"createRevenuePlansOn" => "ItemCreateRevenuePlansOn",
 		"dropshipExpenseAccount" => "RecordRef",
 		"preferredLocation" => "RecordRef",
 		"totalValue" => "float",

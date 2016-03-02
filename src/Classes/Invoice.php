@@ -1,4 +1,6 @@
-<?php namespace Fungku\NetSuite\Classes;
+<?php
+
+namespace Fungku\NetSuite\Classes;
 
 class Invoice extends Record {
 	public $createdDate;
@@ -6,6 +8,8 @@ class Invoice extends Record {
 	public $customForm;
 	public $nextApprover;
 	public $entity;
+	public $billingAccount;
+	public $recurringBill;
 	public $tranDate;
 	public $tranId;
 	public $source;
@@ -141,6 +145,8 @@ class Invoice extends Record {
 		"customForm" => "RecordRef",
 		"nextApprover" => "RecordRef",
 		"entity" => "RecordRef",
+		"billingAccount" => "RecordRef",
+		"recurringBill" => "boolean",
 		"tranDate" => "dateTime",
 		"tranId" => "string",
 		"source" => "string",

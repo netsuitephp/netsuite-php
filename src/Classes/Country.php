@@ -1,4 +1,6 @@
-<?php namespace Fungku\NetSuite\Classes;
+<?php
+
+namespace Fungku\NetSuite\Classes;
 
 class Country {
 	static $paramtypesmap = array(
@@ -176,7 +178,6 @@ class Country {
 	const _oman = "_oman";
 	const _pakistan = "_pakistan";
 	const _palau = "_palau";
-	const _palestinianTerritories = "_palestinianTerritories";
 	const _panama = "_panama";
 	const _papuaNewGuinea = "_papuaNewGuinea";
 	const _paraguay = "_paraguay";
@@ -216,6 +217,7 @@ class Country {
 	const _southSudan = "_southSudan";
 	const _spain = "_spain";
 	const _sriLanka = "_sriLanka";
+	const _stateOfPalestine = "_stateOfPalestine";
 	const _stPierreAndMiquelon = "_stPierreAndMiquelon";
 	const _sudan = "_sudan";
 	const _suriname = "_suriname";

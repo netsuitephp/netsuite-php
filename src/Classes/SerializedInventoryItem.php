@@ -1,4 +1,6 @@
-<?php namespace Fungku\NetSuite\Classes;
+<?php
+
+namespace Fungku\NetSuite\Classes;
 
 class SerializedInventoryItem extends Record {
 	public $createdDate;
@@ -45,6 +47,9 @@ class SerializedInventoryItem extends Record {
 	public $isTaxable;
 	public $taxSchedule;
 	public $dropshipExpenseAccount;
+	public $revenueRecognitionRule;
+	public $revenueAllocationGroup;
+	public $createRevenuePlansOn;
 	public $assetAccount;
 	public $matchBillToReceipt;
 	public $billQtyVarianceAcct;
@@ -115,6 +120,7 @@ class SerializedInventoryItem extends Record {
 	public $vsoeDeferral;
 	public $vsoePermitDiscount;
 	public $vsoeDelivered;
+	public $itemRevenueCategory;
 	public $cost;
 	public $costUnits;
 	public $quantityReorderUnits;
@@ -252,6 +258,9 @@ class SerializedInventoryItem extends Record {
 		"isTaxable" => "boolean",
 		"taxSchedule" => "RecordRef",
 		"dropshipExpenseAccount" => "RecordRef",
+		"revenueRecognitionRule" => "RecordRef",
+		"revenueAllocationGroup" => "RecordRef",
+		"createRevenuePlansOn" => "ItemCreateRevenuePlansOn",
 		"assetAccount" => "RecordRef",
 		"matchBillToReceipt" => "boolean",
 		"billQtyVarianceAcct" => "RecordRef",
@@ -322,6 +331,7 @@ class SerializedInventoryItem extends Record {
 		"vsoeDeferral" => "VsoeDeferral",
 		"vsoePermitDiscount" => "VsoePermitDiscount",
 		"vsoeDelivered" => "boolean",
+		"itemRevenueCategory" => "RecordRef",
 		"cost" => "float",
 		"costUnits" => "string",
 		"quantityReorderUnits" => "string",

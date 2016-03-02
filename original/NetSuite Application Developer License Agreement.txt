@@ -1,0 +1,47 @@
+﻿Revision Date: April 22, 2015
+© NetSuite Inc. 2015
+
+Application Developer License Agreement 
+  
+ATTENTION! THE FOLLOWING TERMS AND CONDITIONS WILL BE LEGALLY BINDING UPON YOU AT THE TIME YOU INSTALL, COPY OR OTHERWISE USE ANY OF THE NETSUITE MATERIALS (AS DESCRIBED BELOW). YOU SHOULD CAREFULLY READ THE FOLLOWING AGREEMENT PRIOR TO INSTALLING, COPYING OR BEGINNING TO USE THE NETSUITE MATERIALS. YOU ARE REPRESENTING THAT YOU HAVE AUTHORITY TO ENTER INTO AGREEMENT ON BEHALF OF YOU OR YOUR COMPANY (OR OTHER ENTITY). IF YOU DO NOT HAVE SUCH AUTHORITY OR YOU DO NOT AGREE WITH THE TERMS AND CONDITIONS CONTAINED HEREIN, DO NOT INSTALL, COPY OR OTHERWISE USE THE NETSUITE MATERIALS IN ANY MANNER.  
+
+In this Application Developer License Agreement (“Agreement”), “NetSuite Materials” means one or more of the following: the application programming interfaces (“APIs”) and any accompanying or related documentation, source code, executable applications, software libraries, documentation, sample files, and other related items or other materials, including, but not limited to, as made available through the NetSuite website(s), as modified from time to time. “You,” and “Your” refer to any person or entity accessing or using the NetSuite Materials, and “NetSuite” means NetSuite Inc. and any of its wholly-owned subsidiaries.  
+
+Subject to the terms and conditions of this Agreement, including the restrictions set forth herein, NetSuite grants You a nonexclusive, nontransferable, nonsublicensable, worldwide, revocable right and license during the term of this Agreement to use, develop, implement and distribute software applications, services or products using or incorporating the applicable NetSuite Materials (the “Licensee Applications”).  The Licensee Applications do not include any software applications, services or products that access any of the NetSuite platform services for any benchmarking or other competitive purposes.
+
+Modification, redistribution and use of the NetSuite Materials in either source or compiled code are permitted provided that all of the following conditions are met and that You expressly agree as follows: 
+ 
+1) 	Redistribution of either modified or unmodified, source or compiled code, must retain: (i) the above copyright notice, (ii) this list of redistribution conditions, and (iii) the disclaimer appearing below in the documentation and/or any other materials provided with the distribution. 
+
+2)	You will not modify any APIs.  You will respect the letter and spirit of any programmatic limitations imposed on the use of any APIs included in the NetSuite Materials.  For example, You won’t work around any explicit API limitation, even if such is possible by avoiding use of the API.  In addition, You will comply with any limitations imposed by NetSuite on the frequency of access and calls made to the NetSuite platform using the APIs.
+ 
+3) 	NetSuite may modify the NetSuite Materials or the permitted uses under this Agreement, or any NetSuite website or service, with or without notice to You.  Modifications may affect Your Licensee Applications and may require You to make changes to your Licensee Applications at Your own cost for those Licensee Applications to continue to be compatible with or interface with the applicable NetSuite platform service. 
+
+4)	You acknowledge and agree that, at all times, Your Licensee Applications and Your use of the NetSuite Materials will comply with all applicable laws, regulations and best practices concerning privacy, data protection and on demand or downloadable software.
+
+5)	You acknowledge and agree that You may not use the name “NetSuite Inc.” or “NetSuite” or any other NetSuite intellectual property to endorse or promote products derived from the NetSuite Materials without specific prior written permission of NetSuite. 
+
+6)	This Agreement is effective until terminated. NetSuite may terminate this Agreement immediately and without notice if You fail to comply with any term of this Agreement. Upon any such termination, You must destroy all full and partial copies of the NetSuite Materials immediately and, if requested by NetSuite, certify in writing that the NetSuite were destroyed.
+
+7)	Except as expressly licensed to You in this Agreement, NetSuite retains all right, title, and interest in and to all patents, trademarks, trade names, inventions, copyrights, know-how, and trade secrets relating to the design, manufacture, operation, or service of the NetSuite Materials.
+
+8)	The NetSuite Materials may contain third party materials that are subject to the terms of a separate third party license agreement (hereinafter “Third Party Software”) that will be made available to You when You view or download the applicable NetSuite Materials.  Use of any Third Party Software accompanied by a separate license agreement is governed by that separate license agreement and not the terms of this Agreement, except that Sections 10 and 11 shall apply to the Third Party Software. 
+
+9) 	Your license rights, as granted in this Agreement, are conditioned upon Your having a NetSuite account or log-in.] 
+
+10)	 DISCLAIMER: This Agreement does not entitle you to any support for the NetSuite Materials, unless you make separate arrangements with NetSuite in another written agreement.  THE NETSUITE MATERIALS ARE PROVIDED BY NETSUITE “AS IS". NETSUITE DOES NOT REPRESENT THAT THE NETSUITE MATERIALS WILL BE ERROR-FREE OR THAT THE NETSUITE MATERIALS WILL MEET ANY REQUIREMENTS. ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, AND NONINFRINGEMENT OF THIRD PARTY RIGHTS ARE HEREBY EXPRESSLY AND COMPLETELY DISCLAIMED.
+
+11)	 LIMITATION OF LIABILITY. IN NO EVENT SHALL NETSUITE BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY WHATSOEVER, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THE NETSUITE MATERIALS, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE. THE PERSON OR ENTITY USING THE NETSUITE MATERIALS ASSUMES ALL RESPONSIBILITY FOR DETERMINING WHETHER IT IS ACCURATE OR SUFFICIENT FOR THE USERS’ PURPOSES. 
+
+13)	If any part of the NetSuite Materials are identified as export controlled items under the applicable export laws and regulations, You represent and warrant that You are not a citizen or permanent resident of, or otherwise located within, an embargoed nation as defined by U.S. law and that You are not otherwise prohibited under applicable export laws from receiving the NetSuite Materials. Your rights to use the NetSuite Materials are forfeited if you fail to comply with the terms of this Agreement.
+14)	This Agreement is governed by and construed in accordance with the substantive laws in force in the State of California.  Any disputes, actions, claims or causes of action arising out of or in connection with this Agreement shall be subject to the exclusive jurisdiction of the state and federal courts located in California. 
+15)	None of the provisions of this Agreement shall be deemed to have been waived by any act or acquiescence on the part of NetSuite, its agents, or employees, but only by an instrument in writing signed by an authorized signatory of NetSuite. 
+16)	It is expressly agreed that a breach this Agreement may cause irreparable harm to NetSuite and that a remedy at law may be inadequate. Therefore, in addition to any and all remedies available at law, NetSuite will be entitled to seek an injunction or other equitable remedies in all legal proceedings in the event of any threatened or actual violation thereof. 
+17)	You acknowledge that You have read this Agreement, understand it, and that it is the complete and exclusive statement of Your agreement with NetSuite, which supersedes any prior agreement, oral or written, between NetSuite and You with respect to the licensing to You of the NetSuite Materials. 
+
+END OF AGREEMENT
+
+***
+THIRD PARTY SOFTWARE AND LICENSES
+Third Party Code and Third Party Licenses may be included with the NetSuite Materials.  This information is provided below or with the materials made available in the download of the NetSuite Materials. 
+

@@ -1,4 +1,6 @@
-<?php namespace Fungku\NetSuite\Classes;
+<?php
+
+namespace Fungku\NetSuite\Classes;
 
 class TransactionSearchRow extends SearchRow {
 	public $basic;
@@ -37,6 +39,7 @@ class TransactionSearchRow extends SearchRow {
 	public $locationJoin;
 	public $manufacturingOperationTaskJoin;
 	public $messagesJoin;
+	public $nextApproverJoin;
 	public $opportunityJoin;
 	public $paidTransactionJoin;
 	public $partnerJoin;
@@ -53,6 +56,7 @@ class TransactionSearchRow extends SearchRow {
 	public $shippingAddressJoin;
 	public $subsidiaryJoin;
 	public $taskJoin;
+	public $timeJoin;
 	public $toLocationJoin;
 	public $userJoin;
 	public $userNotesJoin;
@@ -96,6 +100,7 @@ class TransactionSearchRow extends SearchRow {
 		"locationJoin" => "LocationSearchRowBasic",
 		"manufacturingOperationTaskJoin" => "ManufacturingOperationTaskSearchRowBasic",
 		"messagesJoin" => "MessageSearchRowBasic",
+		"nextApproverJoin" => "EntitySearchRowBasic",
 		"opportunityJoin" => "OpportunitySearchRowBasic",
 		"paidTransactionJoin" => "TransactionSearchRowBasic",
 		"partnerJoin" => "PartnerSearchRowBasic",
@@ -112,6 +117,7 @@ class TransactionSearchRow extends SearchRow {
 		"shippingAddressJoin" => "AddressSearchRowBasic",
 		"subsidiaryJoin" => "SubsidiarySearchRowBasic",
 		"taskJoin" => "TaskSearchRowBasic",
+		"timeJoin" => "TimeBillSearchRowBasic",
 		"toLocationJoin" => "LocationSearchRowBasic",
 		"userJoin" => "EmployeeSearchRowBasic",
 		"userNotesJoin" => "NoteSearchRowBasic",

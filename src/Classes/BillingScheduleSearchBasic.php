@@ -1,4 +1,6 @@
-<?php namespace Fungku\NetSuite\Classes;
+<?php
+
+namespace Fungku\NetSuite\Classes;
 
 class BillingScheduleSearchBasic extends SearchRecordBasic {
 	public $applyToSubtotal;
@@ -14,6 +16,7 @@ class BillingScheduleSearchBasic extends SearchRecordBasic {
 	public $isPublic;
 	public $name;
 	public $recurrenceCount;
+	public $recurrencePattern;
 	public $recurrenceTerms;
 	public $repeatEvery;
 	public $type;
@@ -31,6 +34,7 @@ class BillingScheduleSearchBasic extends SearchRecordBasic {
 		"isPublic" => "SearchBooleanField",
 		"name" => "SearchStringField",
 		"recurrenceCount" => "SearchLongField",
+		"recurrencePattern" => "SearchEnumMultiSelectField",
 		"recurrenceTerms" => "SearchMultiSelectField",
 		"repeatEvery" => "SearchLongField",
 		"type" => "SearchEnumMultiSelectField",

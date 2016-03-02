@@ -1,4 +1,6 @@
-<?php namespace Fungku\NetSuite\Classes;
+<?php
+
+namespace Fungku\NetSuite\Classes;
 
 class ManufacturingRoutingSearchBasic extends SearchRecordBasic {
 	public $autoCalculateLag;

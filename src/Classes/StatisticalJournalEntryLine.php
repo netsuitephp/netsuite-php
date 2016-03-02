@@ -1,7 +1,10 @@
-<?php namespace Fungku\NetSuite\Classes;
+<?php
+
+namespace Fungku\NetSuite\Classes;
 
 class StatisticalJournalEntryLine {
 	public $account;
+	public $line;
 	public $location;
 	public $scheduleNum;
 	public $debit;
@@ -14,6 +17,7 @@ class StatisticalJournalEntryLine {
 	public $customFieldList;
 	static $paramtypesmap = array(
 		"account" => "RecordRef",
+		"line" => "integer",
 		"location" => "RecordRef",
 		"scheduleNum" => "RecordRef",
 		"debit" => "float",

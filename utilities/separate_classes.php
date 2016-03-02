@@ -8,7 +8,9 @@
 require_once "includes/functions.php";
 require "includes/ClassSeparator.php";
 
-$file = base_path() . '/original/PHPToolkit/NetSuiteService.php';
+$version = "2015_2";
+
+$file = base_path() . "/original/PHPToolkit_{$version}/PHPToolkit/NetSuiteService.php";
 
 $separator = new ClassSeparator($file);
 

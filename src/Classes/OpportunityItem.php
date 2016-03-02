@@ -1,4 +1,6 @@
-<?php namespace Fungku\NetSuite\Classes;
+<?php
+
+namespace Fungku\NetSuite\Classes;
 
 class OpportunityItem {
 	public $job;
@@ -28,6 +30,7 @@ class OpportunityItem {
 	public $taxRate1;
 	public $taxRate2;
 	public $expectedShipDate;
+	public $subscription;
 	public $customFieldList;
 	static $paramtypesmap = array(
 		"job" => "RecordRef",
@@ -57,6 +60,7 @@ class OpportunityItem {
 		"taxRate1" => "float",
 		"taxRate2" => "float",
 		"expectedShipDate" => "dateTime",
+		"subscription" => "RecordRef",
 		"customFieldList" => "CustomFieldList",
 	);
 }

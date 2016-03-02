@@ -1,4 +1,6 @@
-<?php namespace Fungku\NetSuite\Classes;
+<?php
+
+namespace Fungku\NetSuite\Classes;
 
 class RecordType {
 	static $paramtypesmap = array(
@@ -10,6 +12,7 @@ class RecordType {
 	const assemblyBuild = "assemblyBuild";
 	const assemblyUnbuild = "assemblyUnbuild";
 	const assemblyItem = "assemblyItem";
+	const billingAccount = "billingAccount";
 	const billingSchedule = "billingSchedule";
 	const bin = "bin";
 	const binTransfer = "binTransfer";

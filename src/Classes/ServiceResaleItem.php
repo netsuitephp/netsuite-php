@@ -1,4 +1,6 @@
-<?php namespace Fungku\NetSuite\Classes;
+<?php
+
+namespace Fungku\NetSuite\Classes;
 
 class ServiceResaleItem extends Record {
 	public $createdDate;
@@ -30,6 +32,9 @@ class ServiceResaleItem extends Record {
 	public $amortizationTemplate;
 	public $residual;
 	public $deferRevRec;
+	public $revenueRecognitionRule;
+	public $revenueAllocationGroup;
+	public $createRevenuePlansOn;
 	public $amortizationPeriod;
 	public $minimumQuantity;
 	public $enforceMinQtyInternally;
@@ -54,6 +59,7 @@ class ServiceResaleItem extends Record {
 	public $vsoeDeferral;
 	public $vsoePermitDiscount;
 	public $vsoeDelivered;
+	public $itemRevenueCategory;
 	public $createJob;
 	public $storeDisplayName;
 	public $storeDisplayThumbnail;
@@ -141,6 +147,9 @@ class ServiceResaleItem extends Record {
 		"amortizationTemplate" => "RecordRef",
 		"residual" => "string",
 		"deferRevRec" => "boolean",
+		"revenueRecognitionRule" => "RecordRef",
+		"revenueAllocationGroup" => "RecordRef",
+		"createRevenuePlansOn" => "ItemCreateRevenuePlansOn",
 		"amortizationPeriod" => "integer",
 		"minimumQuantity" => "integer",
 		"enforceMinQtyInternally" => "boolean",
@@ -165,6 +174,7 @@ class ServiceResaleItem extends Record {
 		"vsoeDeferral" => "VsoeDeferral",
 		"vsoePermitDiscount" => "VsoePermitDiscount",
 		"vsoeDelivered" => "boolean",
+		"itemRevenueCategory" => "RecordRef",
 		"createJob" => "boolean",
 		"storeDisplayName" => "string",
 		"storeDisplayThumbnail" => "RecordRef",

@@ -1,9 +1,12 @@
-<?php namespace Fungku\NetSuite\Classes;
+<?php
+
+namespace Fungku\NetSuite\Classes;
 
 class Charge extends Record {
 	public $customForm;
 	public $salesOrder;
 	public $billTo;
+	public $billingAccount;
 	public $stage;
 	public $chargeDate;
 	public $use;
@@ -23,6 +26,7 @@ class Charge extends Record {
 	public $department;
 	public $location;
 	public $salesOrderLine;
+	public $subscriptionLine;
 	public $invoice;
 	public $invoiceLine;
 	public $rule;
@@ -33,6 +37,7 @@ class Charge extends Record {
 		"customForm" => "RecordRef",
 		"salesOrder" => "RecordRef",
 		"billTo" => "RecordRef",
+		"billingAccount" => "RecordRef",
 		"stage" => "ChargeStage",
 		"chargeDate" => "dateTime",
 		"use" => "ChargeUse",
@@ -52,6 +57,7 @@ class Charge extends Record {
 		"department" => "RecordRef",
 		"location" => "RecordRef",
 		"salesOrderLine" => "RecordRef",
+		"subscriptionLine" => "RecordRef",
 		"invoice" => "RecordRef",
 		"invoiceLine" => "RecordRef",
 		"rule" => "RecordRef",

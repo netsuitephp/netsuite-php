@@ -1,4 +1,6 @@
-<?php namespace Fungku\NetSuite\Classes;
+<?php
+
+namespace Fungku\NetSuite\Classes;
 
 class TransactionSearchBasic extends SearchRecordBasic {
 	public $account;
@@ -34,6 +36,7 @@ class TransactionSearchBasic extends SearchRecordBasic {
 	public $billCountry;
 	public $billCounty;
 	public $billedDate;
+	public $billingAccount;
 	public $billingSchedule;
 	public $billingStatus;
 	public $billingTransaction;
@@ -79,6 +82,7 @@ class TransactionSearchBasic extends SearchRecordBasic {
 	public $currency;
 	public $customerSubOf;
 	public $customForm;
+	public $customGL;
 	public $custType;
 	public $dateCreated;
 	public $daysOpen;
@@ -233,6 +237,7 @@ class TransactionSearchBasic extends SearchRecordBasic {
 	public $quantityShipRecv;
 	public $recognizedRevenue;
 	public $recordType;
+	public $recurringBill;
 	public $refNumber;
 	public $revCommitStatus;
 	public $revCommittingStatus;
@@ -276,6 +281,8 @@ class TransactionSearchBasic extends SearchRecordBasic {
 	public $startDate;
 	public $statistical;
 	public $status;
+	public $subscription;
+	public $subscriptionLine;
 	public $subsidiary;
 	public $taxItem;
 	public $taxLine;
@@ -283,6 +290,7 @@ class TransactionSearchBasic extends SearchRecordBasic {
 	public $taxPeriodRelative;
 	public $taxRate;
 	public $terms;
+	public $termsOfSale;
 	public $title;
 	public $toBeEmailed;
 	public $toBePrinted;
@@ -354,6 +362,7 @@ class TransactionSearchBasic extends SearchRecordBasic {
 		"billCountry" => "SearchEnumMultiSelectField",
 		"billCounty" => "SearchStringField",
 		"billedDate" => "SearchDateField",
+		"billingAccount" => "SearchMultiSelectField",
 		"billingSchedule" => "SearchMultiSelectField",
 		"billingStatus" => "SearchBooleanField",
 		"billingTransaction" => "SearchMultiSelectField",
@@ -399,6 +408,7 @@ class TransactionSearchBasic extends SearchRecordBasic {
 		"currency" => "SearchMultiSelectField",
 		"customerSubOf" => "SearchMultiSelectField",
 		"customForm" => "SearchMultiSelectField",
+		"customGL" => "SearchBooleanField",
 		"custType" => "SearchMultiSelectField",
 		"dateCreated" => "SearchDateField",
 		"daysOpen" => "SearchLongField",
@@ -553,6 +563,7 @@ class TransactionSearchBasic extends SearchRecordBasic {
 		"quantityShipRecv" => "SearchDoubleField",
 		"recognizedRevenue" => "SearchDoubleField",
 		"recordType" => "SearchStringField",
+		"recurringBill" => "SearchBooleanField",
 		"refNumber" => "SearchLongField",
 		"revCommitStatus" => "SearchEnumMultiSelectField",
 		"revCommittingStatus" => "SearchBooleanField",
@@ -596,6 +607,8 @@ class TransactionSearchBasic extends SearchRecordBasic {
 		"startDate" => "SearchDateField",
 		"statistical" => "SearchBooleanField",
 		"status" => "SearchEnumMultiSelectField",
+		"subscription" => "SearchMultiSelectField",
+		"subscriptionLine" => "SearchMultiSelectField",
 		"subsidiary" => "SearchMultiSelectField",
 		"taxItem" => "SearchMultiSelectField",
 		"taxLine" => "SearchBooleanField",
@@ -603,6 +616,7 @@ class TransactionSearchBasic extends SearchRecordBasic {
 		"taxPeriodRelative" => "PostingPeriodDate",
 		"taxRate" => "SearchDoubleField",
 		"terms" => "SearchMultiSelectField",
+		"termsOfSale" => "SearchEnumMultiSelectField",
 		"title" => "SearchStringField",
 		"toBeEmailed" => "SearchBooleanField",
 		"toBePrinted" => "SearchBooleanField",

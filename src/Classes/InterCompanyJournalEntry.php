@@ -1,4 +1,6 @@
-<?php namespace Fungku\NetSuite\Classes;
+<?php
+
+namespace Fungku\NetSuite\Classes;
 
 class InterCompanyJournalEntry extends Record {
 	public $postingPeriod;
@@ -18,6 +20,7 @@ class InterCompanyJournalEntry extends Record {
 	public $class;
 	public $location;
 	public $subsidiary;
+	public $memo;
 	public $toSubsidiary;
 	public $approved;
 	public $createdDate;
@@ -44,6 +47,7 @@ class InterCompanyJournalEntry extends Record {
 		"class" => "RecordRef",
 		"location" => "RecordRef",
 		"subsidiary" => "RecordRef",
+		"memo" => "string",
 		"toSubsidiary" => "RecordRef",
 		"approved" => "boolean",
 		"createdDate" => "dateTime",

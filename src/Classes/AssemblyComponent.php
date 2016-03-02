@@ -1,4 +1,6 @@
-<?php namespace Fungku\NetSuite\Classes;
+<?php
+
+namespace Fungku\NetSuite\Classes;
 
 class AssemblyComponent {
 	public $item;
@@ -7,6 +9,7 @@ class AssemblyComponent {
 	public $componentInventoryDetail;
 	public $componentNumbers;
 	public $binNumbers;
+	public $lineNumber;
 	static $paramtypesmap = array(
 		"item" => "RecordRef",
 		"quantity" => "float",
@@ -14,6 +17,7 @@ class AssemblyComponent {
 		"componentInventoryDetail" => "InventoryDetail",
 		"componentNumbers" => "string",
 		"binNumbers" => "string",
+		"lineNumber" => "integer",
 	);
 }
 

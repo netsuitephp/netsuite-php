@@ -1,8 +1,11 @@
-<?php namespace Fungku\NetSuite\Classes;
+<?php
+
+namespace Fungku\NetSuite\Classes;
 
 class InterCompanyJournalEntryLine {
 	public $lineSubsidiary;
 	public $account;
+	public $line;
 	public $debit;
 	public $credit;
 	public $taxCode;
@@ -16,6 +19,7 @@ class InterCompanyJournalEntryLine {
 	public $class;
 	public $endDate;
 	public $location;
+	public $revenueRecognitionRule;
 	public $eliminate;
 	public $residual;
 	public $amortizationSched;
@@ -29,6 +33,7 @@ class InterCompanyJournalEntryLine {
 	static $paramtypesmap = array(
 		"lineSubsidiary" => "RecordRef",
 		"account" => "RecordRef",
+		"line" => "integer",
 		"debit" => "float",
 		"credit" => "float",
 		"taxCode" => "RecordRef",
@@ -42,6 +47,7 @@ class InterCompanyJournalEntryLine {
 		"class" => "RecordRef",
 		"endDate" => "dateTime",
 		"location" => "RecordRef",
+		"revenueRecognitionRule" => "RecordRef",
 		"eliminate" => "boolean",
 		"residual" => "string",
 		"amortizationSched" => "RecordRef",
