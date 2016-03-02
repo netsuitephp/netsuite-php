@@ -3,7 +3,9 @@
 $php_tag = '<?php';
 
 return <<<PHP
-$php_tag namespace Fungku\NetSuite\Classes;
+$php_tag
+
+namespace Fungku\NetSuite\Classes;
 
 class $class
 
