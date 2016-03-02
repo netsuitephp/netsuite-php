@@ -1,4 +1,6 @@
-<?php namespace Fungku\NetSuite\Classes;
+<?php
+
+namespace Fungku\NetSuite\Classes;
 
 class ItemSearchRowBasic extends SearchRowBasic {
 	public $accountingBook;
@@ -45,6 +47,7 @@ class ItemSearchRowBasic extends SearchRowBasic {
 	public $countryOfManufacture;
 	public $created;
 	public $createJob;
+	public $createRevenuePlansOn;
 	public $custReturnVarianceAccount;
 	public $dateViewed;
 	public $daysBeforeExpiration;
@@ -83,6 +86,7 @@ class ItemSearchRowBasic extends SearchRowBasic {
 	public $froogleProductFeed;
 	public $fxCost;
 	public $gainLossAccount;
+	public $generateAccruals;
 	public $giftCertAuthCode;
 	public $giftCertEmail;
 	public $giftCertExpirationDate;
@@ -93,6 +97,8 @@ class ItemSearchRowBasic extends SearchRowBasic {
 	public $hits;
 	public $imageUrl;
 	public $incomeAccount;
+	public $intercoExpenseAccount;
+	public $intercoIncomeAccount;
 	public $internalId;
 	public $inventoryLocation;
 	public $invtClassification;
@@ -112,6 +118,7 @@ class ItemSearchRowBasic extends SearchRowBasic {
 	public $isVsoeBundle;
 	public $isWip;
 	public $itemId;
+	public $itemRevenueCategory;
 	public $itemUrl;
 	public $lastInvtCountDate;
 	public $lastPurchasePrice;
@@ -169,6 +176,7 @@ class ItemSearchRowBasic extends SearchRowBasic {
 	public $metaTagHtml;
 	public $minimumQuantity;
 	public $modified;
+	public $mossApplies;
 	public $mpn;
 	public $multManufactureAddr;
 	public $nextagCategory;
@@ -224,6 +232,8 @@ class ItemSearchRowBasic extends SearchRowBasic {
 	public $rescheduleInDays;
 	public $rescheduleOutDays;
 	public $reservePrice;
+	public $revenueAllocationGroup;
+	public $revenueRecognitionRule;
 	public $revRecSchedule;
 	public $roundUpAsComponent;
 	public $safetyStockLevel;
@@ -343,6 +353,7 @@ class ItemSearchRowBasic extends SearchRowBasic {
 		"countryOfManufacture" => "SearchColumnEnumSelectField[]",
 		"created" => "SearchColumnDateField[]",
 		"createJob" => "SearchColumnBooleanField[]",
+		"createRevenuePlansOn" => "SearchColumnEnumSelectField[]",
 		"custReturnVarianceAccount" => "SearchColumnSelectField[]",
 		"dateViewed" => "SearchColumnDateField[]",
 		"daysBeforeExpiration" => "SearchColumnStringField[]",
@@ -381,6 +392,7 @@ class ItemSearchRowBasic extends SearchRowBasic {
 		"froogleProductFeed" => "SearchColumnBooleanField[]",
 		"fxCost" => "SearchColumnDoubleField[]",
 		"gainLossAccount" => "SearchColumnSelectField[]",
+		"generateAccruals" => "SearchColumnBooleanField[]",
 		"giftCertAuthCode" => "SearchColumnStringField[]",
 		"giftCertEmail" => "SearchColumnStringField[]",
 		"giftCertExpirationDate" => "SearchColumnStringField[]",
@@ -391,6 +403,8 @@ class ItemSearchRowBasic extends SearchRowBasic {
 		"hits" => "SearchColumnLongField[]",
 		"imageUrl" => "SearchColumnStringField[]",
 		"incomeAccount" => "SearchColumnSelectField[]",
+		"intercoExpenseAccount" => "SearchColumnSelectField[]",
+		"intercoIncomeAccount" => "SearchColumnSelectField[]",
 		"internalId" => "SearchColumnSelectField[]",
 		"inventoryLocation" => "SearchColumnSelectField[]",
 		"invtClassification" => "SearchColumnEnumSelectField[]",
@@ -410,6 +424,7 @@ class ItemSearchRowBasic extends SearchRowBasic {
 		"isVsoeBundle" => "SearchColumnBooleanField[]",
 		"isWip" => "SearchColumnBooleanField[]",
 		"itemId" => "SearchColumnStringField[]",
+		"itemRevenueCategory" => "SearchColumnSelectField[]",
 		"itemUrl" => "SearchColumnStringField[]",
 		"lastInvtCountDate" => "SearchColumnDateField[]",
 		"lastPurchasePrice" => "SearchColumnDoubleField[]",
@@ -467,6 +482,7 @@ class ItemSearchRowBasic extends SearchRowBasic {
 		"metaTagHtml" => "SearchColumnStringField[]",
 		"minimumQuantity" => "SearchColumnStringField[]",
 		"modified" => "SearchColumnDateField[]",
+		"mossApplies" => "SearchColumnBooleanField[]",
 		"mpn" => "SearchColumnStringField[]",
 		"multManufactureAddr" => "SearchColumnBooleanField[]",
 		"nextagCategory" => "SearchColumnStringField[]",
@@ -522,6 +538,8 @@ class ItemSearchRowBasic extends SearchRowBasic {
 		"rescheduleInDays" => "SearchColumnLongField[]",
 		"rescheduleOutDays" => "SearchColumnLongField[]",
 		"reservePrice" => "SearchColumnDoubleField[]",
+		"revenueAllocationGroup" => "SearchColumnSelectField[]",
+		"revenueRecognitionRule" => "SearchColumnSelectField[]",
 		"revRecSchedule" => "SearchColumnSelectField[]",
 		"roundUpAsComponent" => "SearchColumnBooleanField[]",
 		"safetyStockLevel" => "SearchColumnDoubleField[]",

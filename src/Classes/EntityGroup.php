@@ -1,4 +1,6 @@
-<?php namespace Fungku\NetSuite\Classes;
+<?php
+
+namespace Fungku\NetSuite\Classes;
 
 class EntityGroup extends Record {
 	public $groupName;
@@ -19,11 +21,6 @@ class EntityGroup extends Record {
 	public $isFunctionalTeam;
 	public $issueRole;
 	public $isManufacturingWorkCenter;
-	public $calendarName;
-	public $calendarStartTime;
-	public $calendarEndTime;
-	public $calendarDefaultView;
-	public $calendarPeriod;
 	public $subsidiary;
 	public $machineResources;
 	public $laborResources;
@@ -50,11 +47,6 @@ class EntityGroup extends Record {
 		"isFunctionalTeam" => "boolean",
 		"issueRole" => "RecordRef",
 		"isManufacturingWorkCenter" => "boolean",
-		"calendarName" => "string",
-		"calendarStartTime" => "EntityGroupDailyTime",
-		"calendarEndTime" => "EntityGroupDailyTime",
-		"calendarDefaultView" => "EntityGroupDefView",
-		"calendarPeriod" => "EntityGroupPeriodSize",
 		"subsidiary" => "RecordRef",
 		"machineResources" => "integer",
 		"laborResources" => "integer",

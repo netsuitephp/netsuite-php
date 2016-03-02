@@ -1,4 +1,6 @@
-<?php namespace Fungku\NetSuite\Classes;
+<?php
+
+namespace Fungku\NetSuite\Classes;
 
 class LotNumberedAssemblyItem extends Record {
 	public $createdDate;
@@ -25,6 +27,7 @@ class LotNumberedAssemblyItem extends Record {
 	public $description;
 	public $cogsAccount;
 	public $incomeAccount;
+	public $intercoIncomeAccount;
 	public $assetAccount;
 	public $matchBillToReceipt;
 	public $billQtyVarianceAcct;
@@ -108,12 +111,17 @@ class LotNumberedAssemblyItem extends Record {
 	public $transferPrice;
 	public $overallQuantityPricingType;
 	public $pricingGroup;
+	public $intercoCogsAccount;
 	public $vsoePrice;
 	public $vsoeSopGroup;
 	public $vsoeDeferral;
 	public $vsoePermitDiscount;
 	public $vsoeDelivered;
+	public $itemRevenueCategory;
 	public $unbuildVarianceAccount;
+	public $revenueRecognitionRule;
+	public $revenueAllocationGroup;
+	public $createRevenuePlansOn;
 	public $dropshipExpenseAccount;
 	public $preferredLocation;
 	public $totalValue;
@@ -223,6 +231,7 @@ class LotNumberedAssemblyItem extends Record {
 		"description" => "string",
 		"cogsAccount" => "RecordRef",
 		"incomeAccount" => "RecordRef",
+		"intercoIncomeAccount" => "RecordRef",
 		"assetAccount" => "RecordRef",
 		"matchBillToReceipt" => "boolean",
 		"billQtyVarianceAcct" => "RecordRef",
@@ -306,12 +315,17 @@ class LotNumberedAssemblyItem extends Record {
 		"transferPrice" => "float",
 		"overallQuantityPricingType" => "ItemOverallQuantityPricingType",
 		"pricingGroup" => "RecordRef",
+		"intercoCogsAccount" => "RecordRef",
 		"vsoePrice" => "float",
 		"vsoeSopGroup" => "VsoeSopGroup",
 		"vsoeDeferral" => "VsoeDeferral",
 		"vsoePermitDiscount" => "VsoePermitDiscount",
 		"vsoeDelivered" => "boolean",
+		"itemRevenueCategory" => "RecordRef",
 		"unbuildVarianceAccount" => "RecordRef",
+		"revenueRecognitionRule" => "RecordRef",
+		"revenueAllocationGroup" => "RecordRef",
+		"createRevenuePlansOn" => "ItemCreateRevenuePlansOn",
 		"dropshipExpenseAccount" => "RecordRef",
 		"preferredLocation" => "RecordRef",
 		"totalValue" => "float",

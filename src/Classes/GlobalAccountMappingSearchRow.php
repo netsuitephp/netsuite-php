@@ -1,4 +1,6 @@
-<?php namespace Fungku\NetSuite\Classes;
+<?php
+
+namespace Fungku\NetSuite\Classes;
 
 class GlobalAccountMappingSearchRow extends SearchRow {
 	public $basic;

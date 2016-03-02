@@ -1,4 +1,6 @@
-<?php namespace Fungku\NetSuite\Classes;
+<?php
+
+namespace Fungku\NetSuite\Classes;
 
 class ItemSearchBasic extends SearchRecordBasic {
 	public $account;
@@ -43,6 +45,7 @@ class ItemSearchBasic extends SearchRecordBasic {
 	public $countryOfManufacture;
 	public $created;
 	public $createJob;
+	public $createRevenuePlansOn;
 	public $dateViewed;
 	public $daysBeforeExpiration;
 	public $defaultReturnCost;
@@ -76,6 +79,7 @@ class ItemSearchBasic extends SearchRecordBasic {
 	public $fraudRisk;
 	public $froogleProductFeed;
 	public $fxCost;
+	public $generateAccruals;
 	public $giftCertAuthCode;
 	public $giftCertEmail;
 	public $giftCertExpDate;
@@ -105,6 +109,7 @@ class ItemSearchBasic extends SearchRecordBasic {
 	public $isVsoeBundle;
 	public $isWip;
 	public $itemId;
+	public $itemRevenueCategory;
 	public $itemUrl;
 	public $lastInvtCountDate;
 	public $lastModifiedDate;
@@ -160,6 +165,7 @@ class ItemSearchBasic extends SearchRecordBasic {
 	public $matrixChild;
 	public $metaTagHtml;
 	public $minimumQuantity;
+	public $mossApplies;
 	public $mpn;
 	public $multManufactureAddr;
 	public $nexTagCategory;
@@ -208,6 +214,8 @@ class ItemSearchBasic extends SearchRecordBasic {
 	public $rescheduleInDays;
 	public $rescheduleOutDays;
 	public $reservePrice;
+	public $revenueAllocationGroup;
+	public $revenueRecognitionRule;
 	public $revRecSchedule;
 	public $roundUpAsComponent;
 	public $safetyStockLevel;
@@ -314,6 +322,7 @@ class ItemSearchBasic extends SearchRecordBasic {
 		"countryOfManufacture" => "SearchEnumMultiSelectField",
 		"created" => "SearchDateField",
 		"createJob" => "SearchBooleanField",
+		"createRevenuePlansOn" => "SearchEnumMultiSelectField",
 		"dateViewed" => "SearchDateField",
 		"daysBeforeExpiration" => "SearchDoubleField",
 		"defaultReturnCost" => "SearchDoubleField",
@@ -347,6 +356,7 @@ class ItemSearchBasic extends SearchRecordBasic {
 		"fraudRisk" => "SearchEnumMultiSelectField",
 		"froogleProductFeed" => "SearchBooleanField",
 		"fxCost" => "SearchDoubleField",
+		"generateAccruals" => "SearchBooleanField",
 		"giftCertAuthCode" => "SearchStringField",
 		"giftCertEmail" => "SearchStringField",
 		"giftCertExpDate" => "SearchDateField",
@@ -376,6 +386,7 @@ class ItemSearchBasic extends SearchRecordBasic {
 		"isVsoeBundle" => "SearchBooleanField",
 		"isWip" => "SearchBooleanField",
 		"itemId" => "SearchStringField",
+		"itemRevenueCategory" => "SearchMultiSelectField",
 		"itemUrl" => "SearchStringField",
 		"lastInvtCountDate" => "SearchDateField",
 		"lastModifiedDate" => "SearchDateField",
@@ -431,6 +442,7 @@ class ItemSearchBasic extends SearchRecordBasic {
 		"matrixChild" => "SearchBooleanField",
 		"metaTagHtml" => "SearchStringField",
 		"minimumQuantity" => "SearchLongField",
+		"mossApplies" => "SearchBooleanField",
 		"mpn" => "SearchStringField",
 		"multManufactureAddr" => "SearchBooleanField",
 		"nexTagCategory" => "SearchStringField",
@@ -479,6 +491,8 @@ class ItemSearchBasic extends SearchRecordBasic {
 		"rescheduleInDays" => "SearchLongField",
 		"rescheduleOutDays" => "SearchLongField",
 		"reservePrice" => "SearchDoubleField",
+		"revenueAllocationGroup" => "SearchMultiSelectField",
+		"revenueRecognitionRule" => "SearchMultiSelectField",
 		"revRecSchedule" => "SearchMultiSelectField",
 		"roundUpAsComponent" => "SearchBooleanField",
 		"safetyStockLevel" => "SearchDoubleField",

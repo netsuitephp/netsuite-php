@@ -1,4 +1,6 @@
-<?php namespace Fungku\NetSuite\Classes;
+<?php
+
+namespace Fungku\NetSuite\Classes;
 
 class TransactionType {
 	static $paramtypesmap = array(
@@ -11,6 +13,7 @@ class TransactionType {
 	const _cashSale = "_cashSale";
 	const _check = "_check";
 	const _creditMemo = "_creditMemo";
+	const _custom = "_custom";
 	const _customerDeposit = "_customerDeposit";
 	const _customerPayment = "_customerPayment";
 	const _customerRefund = "_customerRefund";
@@ -28,6 +31,7 @@ class TransactionType {
 	const _opportunity = "_opportunity";
 	const _paycheckJournal = "_paycheckJournal";
 	const _purchaseOrder = "_purchaseOrder";
+	const _requisition = "_requisition";
 	const _returnAuthorization = "_returnAuthorization";
 	const _salesOrder = "_salesOrder";
 	const _transferOrder = "_transferOrder";

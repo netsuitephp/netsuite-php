@@ -1,4 +1,6 @@
-<?php namespace Fungku\NetSuite\Classes;
+<?php
+
+namespace Fungku\NetSuite\Classes;
 
 class ServicePurchaseItem extends Record {
 	public $createdDate;
@@ -32,6 +34,7 @@ class ServicePurchaseItem extends Record {
 	public $residual;
 	public $amortizationPeriod;
 	public $isFulfillable;
+	public $generateAccruals;
 	public $accountingBookDetailList;
 	public $costCategory;
 	public $purchaseOrderQuantity;
@@ -83,6 +86,7 @@ class ServicePurchaseItem extends Record {
 		"residual" => "string",
 		"amortizationPeriod" => "integer",
 		"isFulfillable" => "boolean",
+		"generateAccruals" => "boolean",
 		"accountingBookDetailList" => "ItemAccountingBookDetailList",
 		"costCategory" => "RecordRef",
 		"purchaseOrderQuantity" => "float",

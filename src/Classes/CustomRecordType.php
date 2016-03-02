@@ -1,4 +1,6 @@
-<?php namespace Fungku\NetSuite\Classes;
+<?php
+
+namespace Fungku\NetSuite\Classes;
 
 class CustomRecordType extends Record {
 	public $recordName;
@@ -18,6 +20,7 @@ class CustomRecordType extends Record {
 	public $isOrdered;
 	public $isAvailableOffline;
 	public $allowQuickSearch;
+	public $hierarchical;
 	public $enableDle;
 	public $enableNameTranslation;
 	public $isInactive;
@@ -63,6 +66,7 @@ class CustomRecordType extends Record {
 		"isOrdered" => "boolean",
 		"isAvailableOffline" => "boolean",
 		"allowQuickSearch" => "boolean",
+		"hierarchical" => "boolean",
 		"enableDle" => "boolean",
 		"enableNameTranslation" => "boolean",
 		"isInactive" => "boolean",

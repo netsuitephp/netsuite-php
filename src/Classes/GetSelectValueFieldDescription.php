@@ -1,8 +1,11 @@
-<?php namespace Fungku\NetSuite\Classes;
+<?php
+
+namespace Fungku\NetSuite\Classes;
 
 class GetSelectValueFieldDescription {
 	public $recordType;
 	public $customRecordType;
+	public $customTransactionType;
 	public $sublist;
 	public $field;
 	public $customForm;
@@ -11,6 +14,7 @@ class GetSelectValueFieldDescription {
 	static $paramtypesmap = array(
 		"recordType" => "RecordType",
 		"customRecordType" => "RecordRef",
+		"customTransactionType" => "RecordRef",
 		"sublist" => "string",
 		"field" => "string",
 		"customForm" => "RecordRef",

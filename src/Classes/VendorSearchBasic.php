@@ -1,4 +1,6 @@
-<?php namespace Fungku\NetSuite\Classes;
+<?php
+
+namespace Fungku\NetSuite\Classes;
 
 class VendorSearchBasic extends SearchRecordBasic {
 	public $accountNumber;
@@ -37,6 +39,7 @@ class VendorSearchBasic extends SearchRecordBasic {
 	public $group;
 	public $hasDuplicates;
 	public $image;
+	public $incoterm;
 	public $internalId;
 	public $internalIdNumber;
 	public $is1099Eligible;
@@ -113,6 +116,7 @@ class VendorSearchBasic extends SearchRecordBasic {
 		"group" => "SearchMultiSelectField",
 		"hasDuplicates" => "SearchBooleanField",
 		"image" => "SearchStringField",
+		"incoterm" => "SearchMultiSelectField",
 		"internalId" => "SearchMultiSelectField",
 		"internalIdNumber" => "SearchLongField",
 		"is1099Eligible" => "SearchBooleanField",

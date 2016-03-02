@@ -1,4 +1,6 @@
-<?php namespace Fungku\NetSuite\Classes;
+<?php
+
+namespace Fungku\NetSuite\Classes;
 
 class TransactionStatus {
 	static $paramtypesmap = array(
@@ -54,12 +56,12 @@ class TransactionStatus {
 	const _opportunityInProgress = "_opportunityInProgress";
 	const _opportunityIssuedEstimate = "_opportunityIssuedEstimate";
 	const _paycheckCommitted = "_paycheckCommitted";
+	const _paycheckCreated = "_paycheckCreated";
 	const _paycheckError = "_paycheckError";
 	const _paycheckPendingCommitment = "_paycheckPendingCommitment";
 	const _paycheckPendingTaxCalculation = "_paycheckPendingTaxCalculation";
 	const _paycheckPreview = "_paycheckPreview";
 	const _paycheckReversed = "_paycheckReversed";
-	const _paycheckUndefined = "_paycheckUndefined";
 	const _paymentDeposited = "_paymentDeposited";
 	const _paymentNotDeposited = "_paymentNotDeposited";
 	const _paymentUnapprovedPayment = "_paymentUnapprovedPayment";
@@ -72,6 +74,15 @@ class TransactionStatus {
 	const _purchaseOrderPendingReceipt = "_purchaseOrderPendingReceipt";
 	const _purchaseOrderPendingSupervisorApproval = "_purchaseOrderPendingSupervisorApproval";
 	const _purchaseOrderRejectedBySupervisor = "_purchaseOrderRejectedBySupervisor";
+	const _requisitionCancelled = "_requisitionCancelled";
+	const _requisitionClosed = "_requisitionClosed";
+	const _requisitionFullyOrdered = "_requisitionFullyOrdered";
+	const _requisitionFullyReceived = "_requisitionFullyReceived";
+	const _requisitionPartiallyOrdered = "_requisitionPartiallyOrdered";
+	const _requisitionPartiallyReceived = "_requisitionPartiallyReceived";
+	const _requisitionPendingApproval = "_requisitionPendingApproval";
+	const _requisitionPendingOrder = "_requisitionPendingOrder";
+	const _requisitionRejected = "_requisitionRejected";
 	const _returnAuthorizationCancelled = "_returnAuthorizationCancelled";
 	const _returnAuthorizationClosed = "_returnAuthorizationClosed";
 	const _returnAuthorizationPartiallyReceived = "_returnAuthorizationPartiallyReceived";
@@ -100,6 +111,7 @@ class TransactionStatus {
 	const _tegataReceivablesDiscounted = "_tegataReceivablesDiscounted";
 	const _tegataReceivablesEndorsed = "_tegataReceivablesEndorsed";
 	const _tegataReceivablesHolding = "_tegataReceivablesHolding";
+	const _tegataReceivablesVoided = "_tegataReceivablesVoided";
 	const _transferOrderClosed = "_transferOrderClosed";
 	const _transferOrderPartiallyFulfilled = "_transferOrderPartiallyFulfilled";
 	const _transferOrderPendingApproval = "_transferOrderPendingApproval";

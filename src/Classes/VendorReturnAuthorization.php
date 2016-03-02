@@ -1,4 +1,6 @@
-<?php namespace Fungku\NetSuite\Classes;
+<?php
+
+namespace Fungku\NetSuite\Classes;
 
 class VendorReturnAuthorization extends Record {
 	public $createdDate;
@@ -12,6 +14,8 @@ class VendorReturnAuthorization extends Record {
 	public $userTotal;
 	public $currency;
 	public $currencyName;
+	public $billingAddress;
+	public $billAddressList;
 	public $memo;
 	public $exchangeRate;
 	public $department;
@@ -37,6 +41,8 @@ class VendorReturnAuthorization extends Record {
 		"userTotal" => "float",
 		"currency" => "RecordRef",
 		"currencyName" => "string",
+		"billingAddress" => "Address",
+		"billAddressList" => "RecordRef",
 		"memo" => "string",
 		"exchangeRate" => "float",
 		"department" => "RecordRef",

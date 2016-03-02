@@ -1,4 +1,6 @@
-<?php namespace Fungku\NetSuite\Classes;
+<?php
+
+namespace Fungku\NetSuite\Classes;
 
 class FaultCodeType {
 	static $paramtypesmap = array(
@@ -26,5 +28,6 @@ class FaultCodeType {
 	const WS_FEATURE_REQD = "WS_FEATURE_REQD";
 	const WS_PERMISSION_REQD = "WS_PERMISSION_REQD";
 	const WS_LOG_IN_REQD = "WS_LOG_IN_REQD";
+	const WS_REQUEST_BLOCKED = "WS_REQUEST_BLOCKED";
 }
 

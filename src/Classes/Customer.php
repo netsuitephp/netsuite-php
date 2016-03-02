@@ -1,4 +1,6 @@
-<?php namespace Fungku\NetSuite\Classes;
+<?php
+
+namespace Fungku\NetSuite\Classes;
 
 class Customer extends Record {
 	public $customForm;
@@ -59,6 +61,10 @@ class Customer extends Record {
 	public $consolDepositBalance;
 	public $consolBalance;
 	public $consolAging;
+	public $consolAging1;
+	public $consolAging2;
+	public $consolAging3;
+	public $consolAging4;
 	public $consolDaysOverdue;
 	public $priceLevel;
 	public $currency;
@@ -69,7 +75,12 @@ class Customer extends Record {
 	public $taxItem;
 	public $resaleNumber;
 	public $aging;
+	public $aging1;
+	public $aging2;
+	public $aging3;
+	public $aging4;
 	public $startDate;
+	public $alcoholRecipientType;
 	public $endDate;
 	public $reminderDays;
 	public $shippingItem;
@@ -184,6 +195,10 @@ class Customer extends Record {
 		"consolDepositBalance" => "float",
 		"consolBalance" => "float",
 		"consolAging" => "float",
+		"consolAging1" => "float",
+		"consolAging2" => "float",
+		"consolAging3" => "float",
+		"consolAging4" => "float",
 		"consolDaysOverdue" => "integer",
 		"priceLevel" => "RecordRef",
 		"currency" => "RecordRef",
@@ -194,7 +209,12 @@ class Customer extends Record {
 		"taxItem" => "RecordRef",
 		"resaleNumber" => "string",
 		"aging" => "float",
+		"aging1" => "float",
+		"aging2" => "float",
+		"aging3" => "float",
+		"aging4" => "float",
 		"startDate" => "dateTime",
+		"alcoholRecipientType" => "AlcoholRecipientType",
 		"endDate" => "dateTime",
 		"reminderDays" => "integer",
 		"shippingItem" => "RecordRef",

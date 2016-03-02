@@ -1,9 +1,4 @@
-   Original work Copyright (c) 2010-2012 NetSuite Inc.
-   Modified work Copyright (c) 2015 Ryan Winchester (fungku)
-
-   Original work: see the NetSuite Toolkit License Agreement
-
-   Modified work:
+   Modified and new work Copyright (c) 2015 Ryan Winchester (fungku)
 
    Licensed under the Apache License, Version 2.0 (the "License");
    you may not use this file except in compliance with the License.

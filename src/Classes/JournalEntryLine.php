@@ -1,7 +1,10 @@
-<?php namespace Fungku\NetSuite\Classes;
+<?php
+
+namespace Fungku\NetSuite\Classes;
 
 class JournalEntryLine {
 	public $account;
+	public $line;
 	public $debit;
 	public $credit;
 	public $taxCode;
@@ -12,6 +15,7 @@ class JournalEntryLine {
 	public $department;
 	public $class;
 	public $location;
+	public $revenueRecognitionRule;
 	public $eliminate;
 	public $schedule;
 	public $startDate;
@@ -23,6 +27,7 @@ class JournalEntryLine {
 	public $customFieldList;
 	static $paramtypesmap = array(
 		"account" => "RecordRef",
+		"line" => "integer",
 		"debit" => "float",
 		"credit" => "float",
 		"taxCode" => "RecordRef",
@@ -33,6 +38,7 @@ class JournalEntryLine {
 		"department" => "RecordRef",
 		"class" => "RecordRef",
 		"location" => "RecordRef",
+		"revenueRecognitionRule" => "RecordRef",
 		"eliminate" => "boolean",
 		"schedule" => "RecordRef",
 		"startDate" => "dateTime",

@@ -1,4 +1,6 @@
-<?php namespace Fungku\NetSuite\Classes;
+<?php
+
+namespace Fungku\NetSuite\Classes;
 
 class ItemFulfillmentPackageFedEx {
 	public $packageWeightFedEx;
@@ -8,6 +10,7 @@ class ItemFulfillmentPackageFedEx {
 	public $admPackageTypeFedEx;
 	public $isNonStandardContainerFedEx;
 	public $isAlcoholFedEx;
+	public $alcoholRecipientTypeFedEx;
 	public $isNonHazLithiumFedEx;
 	public $insuredValueFedEx;
 	public $useInsuredValueFedEx;
@@ -33,6 +36,7 @@ class ItemFulfillmentPackageFedEx {
 		"admPackageTypeFedEx" => "ItemFulfillmentPackageFedExAdmPackageTypeFedEx",
 		"isNonStandardContainerFedEx" => "boolean",
 		"isAlcoholFedEx" => "boolean",
+		"alcoholRecipientTypeFedEx" => "AlcoholRecipientType",
 		"isNonHazLithiumFedEx" => "boolean",
 		"insuredValueFedEx" => "float",
 		"useInsuredValueFedEx" => "boolean",

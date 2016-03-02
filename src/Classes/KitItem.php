@@ -1,4 +1,6 @@
-<?php namespace Fungku\NetSuite\Classes;
+<?php
+
+namespace Fungku\NetSuite\Classes;
 
 class KitItem extends Record {
 	public $createdDate;
@@ -26,6 +28,9 @@ class KitItem extends Record {
 	public $handlingCost;
 	public $isTaxable;
 	public $deferRevRec;
+	public $revenueRecognitionRule;
+	public $revenueAllocationGroup;
+	public $createRevenuePlansOn;
 	public $salesTaxCode;
 	public $weight;
 	public $weightUnit;
@@ -76,6 +81,7 @@ class KitItem extends Record {
 	public $vsoeDeferral;
 	public $vsoePermitDiscount;
 	public $vsoeDelivered;
+	public $itemRevenueCategory;
 	public $shipIndividually;
 	public $shipPackage;
 	public $storeDisplayName;
@@ -141,6 +147,9 @@ class KitItem extends Record {
 		"handlingCost" => "float",
 		"isTaxable" => "boolean",
 		"deferRevRec" => "boolean",
+		"revenueRecognitionRule" => "RecordRef",
+		"revenueAllocationGroup" => "RecordRef",
+		"createRevenuePlansOn" => "ItemCreateRevenuePlansOn",
 		"salesTaxCode" => "RecordRef",
 		"weight" => "float",
 		"weightUnit" => "RecordRef",
@@ -191,6 +200,7 @@ class KitItem extends Record {
 		"vsoeDeferral" => "VsoeDeferral",
 		"vsoePermitDiscount" => "VsoePermitDiscount",
 		"vsoeDelivered" => "boolean",
+		"itemRevenueCategory" => "RecordRef",
 		"shipIndividually" => "boolean",
 		"shipPackage" => "RecordRef",
 		"storeDisplayName" => "string",

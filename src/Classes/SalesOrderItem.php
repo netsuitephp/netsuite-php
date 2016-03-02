@@ -1,7 +1,10 @@
-<?php namespace Fungku\NetSuite\Classes;
+<?php
+
+namespace Fungku\NetSuite\Classes;
 
 class SalesOrderItem {
 	public $job;
+	public $subscription;
 	public $item;
 	public $quantityAvailable;
 	public $expandItemGroup;
@@ -77,6 +80,7 @@ class SalesOrderItem {
 	public $customFieldList;
 	static $paramtypesmap = array(
 		"job" => "RecordRef",
+		"subscription" => "RecordRef",
 		"item" => "RecordRef",
 		"quantityAvailable" => "float",
 		"expandItemGroup" => "boolean",

@@ -1,4 +1,6 @@
-<?php namespace Fungku\NetSuite\Classes;
+<?php
+
+namespace Fungku\NetSuite\Classes;
 
 class Job extends Record {
 	public $customForm;
@@ -10,6 +12,7 @@ class Job extends Record {
 	public $defaultAddress;
 	public $parent;
 	public $isInactive;
+	public $percentCompleteOverrideList;
 	public $lastModifiedDate;
 	public $billPay;
 	public $dateCreated;
@@ -87,6 +90,7 @@ class Job extends Record {
 		"defaultAddress" => "string",
 		"parent" => "RecordRef",
 		"isInactive" => "boolean",
+		"percentCompleteOverrideList" => "JobPercentCompleteOverrideList",
 		"lastModifiedDate" => "dateTime",
 		"billPay" => "boolean",
 		"dateCreated" => "dateTime",

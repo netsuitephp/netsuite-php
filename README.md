@@ -1,6 +1,10 @@
-# Netsuite PHP API Client
+# NetSuite PHP API Client
 
-[![Latest Stable Version](https://poser.pugx.org/fungku/netsuite-php/v/stable.svg)](https://packagist.org/packages/fungku/netsuite-php) [![Total Downloads](https://poser.pugx.org/fungku/netsuite-php/downloads.svg)](https://packagist.org/packages/fungku/netsuite-php) [![Latest Unstable Version](https://poser.pugx.org/fungku/netsuite-php/v/unstable.svg)](https://packagist.org/packages/fungku/netsuite-php) [![License](https://poser.pugx.org/fungku/netsuite-php/license.svg)](https://packagist.org/packages/fungku/netsuite-php)
+[![Version](https://img.shields.io/packagist/v/fungku/netsuite-php.svg?style=flat-square)](https://packagist.org/packages/fungku/netsuite-php)
+ [![Total Downloads](https://img.shields.io/packagist/dt/fungku/netsuite-php.svg?style=flat-square)](https://packagist.org/packages/fungku/netsuite-php)
+ [![License](https://img.shields.io/packagist/l/fungku/netsuite-php.svg?style=flat-square)](https://packagist.org/packages/fungku/netsuite-php)
+ [![Scrutinizer Code Quality](https://img.shields.io/scrutinizer/g/fungku/netsuite-php.svg?style=flat-square)](https://scrutinizer-ci.com/g/fungku/netsuite-php/?branch=master)
+ [![Build Status](https://img.shields.io/travis/fungku/netsuite-php.svg?style=flat-square)](https://travis-ci.org/fungku/netsuite-php)
 
 A PHP API client package for NetSuite, pried from the [NetSuite PHP Toolkit](http://www.netsuite.com/portal/developers/resources/suitetalk-sample-applications.shtml).
 
@@ -13,9 +17,13 @@ Just added Namespaces :new:
 
 ## Adding it to your project:
 
+For endpoint 2015_1
+
 ```
-composer require "fungku/netsuite-php:~1.0"
+composer require "fungku/netsuite-php: 2015.1.*"
 ```
+
+The versions now match the endpoint version. So whatever endpoint you are using, you should match the version to that.
 
 ## Examples:
 
@@ -25,12 +33,16 @@ The rest of the examples assume that you have done this.
 
 ```php
 $config = array(
-   "endpoint"  => "2014_2",
+   // Required
+   "endpoint"  => "2015_1",
     "host"     => "https://webservices.netsuite.com",
     "email"    => "jDoe@netsuite.com",
     "password" => "mySecretPwd",
     "role"     => "3",
     "account"  => "MYACCT1",
+    // Optional
+    "logging"  => true,
+    "log_path" => "/var/www/myapp/logs/netsuite"
 );
 
 $service = new Fungku\NetSuite\NetSuiteService($config);
@@ -58,7 +70,7 @@ if ( ! $getResponse->readResponse->status->isSuccess) {
 }
 ```
 
-### Searching for customers who emails start with "j":
+#### Searching for customers who emails start with "j":
 
 ```php
 use Fungku\NetSuite\Classes\SearchStringField;
@@ -90,7 +102,7 @@ if (!$searchResponse->searchResult->status->isSuccess) {
 }
 ```
 
-### Adding a new customer:
+#### Adding a new customer:
 
 ```php
 use Fungku\NetSuite\Classes\Customer;
@@ -119,11 +131,34 @@ if (!$addResponse->writeResponse->status->isSuccess) {
 }
 ```
 
+### Logging
+
+You can set logging on or off on the fly, or override the configuration setting passed in. 
+Please note that if you don't specify a logging directory in the config or afterwards, then you won't get logs no matter what you do.
+
+**Set a logging path**
+
+```php
+$service->setLogPath('/path/to/logs');
+```
+
+**Turn logging on**
+
+```php
+$service->logRequests(true);  // Turn logging on.
+```
+
+**Turn logging off**
+
+```php
+$service->logRequests(false); // Turn logging off.
+```
+
 #### Using environment variables instead of a config array:
 
 You can optionally avoid passing configuration array to the constructor by setting the following environment variables:
 ```
-NETSUITE_ENDPOINT=2014_2
+NETSUITE_ENDPOINT=2015_1
 NETSUITE_HOST=https://webservices.netsuite.com
 NETSUITE_EMAIL=jDoe@netsuite.com
 NETSUITE_PASSWORD=mySecretPwd
@@ -135,12 +170,13 @@ NETSUITE_ACCOUNT=MYACCT1
 
  - [x] Extract the ~1500 classes from their single file...
  - [x] Composer package with autoloading
- - [x] Refactor to pass config through constructor
- - [x] Refactor for optional environment variable config
+ - [x] Pass config through constructor
+ - [x] Optional environment variable config
  - [x] Namespacing
+ - [x] Logging
 
 ## License
 
-[Original work](http://www.netsuite.com/portal/developers/resources/suitetalk-sample-applications.shtml) is Copyright (c) 2010-2012 NetSuite Inc. and provided "as is." Refer to `Netsuite Toolkit License Agreement` file.
+[Original work](http://www.netsuite.com/portal/developers/resources/suitetalk-sample-applications.shtml) is Copyright &copy; 2010-2012 NetSuite Inc. and provided "as is." Refer to the [NetSuite Toolkit License Agreement](https://github.com/fungku/netsuite-php/blob/master/original-agreement.docx?raw=true) file.
 
-Modified work is Copyright (c) 2015 Ryan Winchester (fungku), licensed under the **Apache 2.0** license. Refer to the `LICENSE` file.
+Modified and new work is Copyright &copy; 2015 Ryan Winchester (fungku), licensed under the **Apache 2.0** open source software license. Refer to the [LICENSE](https://github.com/fungku/netsuite-php/blob/master/LICENSE.txt) file.

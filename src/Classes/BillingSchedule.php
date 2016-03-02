@@ -1,8 +1,11 @@
-<?php namespace Fungku\NetSuite\Classes;
+<?php
+
+namespace Fungku\NetSuite\Classes;
 
 class BillingSchedule extends Record {
 	public $scheduleType;
 	public $name;
+	public $recurrencePattern;
 	public $project;
 	public $initialAmount;
 	public $initialTerms;
@@ -36,6 +39,7 @@ class BillingSchedule extends Record {
 	static $paramtypesmap = array(
 		"scheduleType" => "BillingScheduleType",
 		"name" => "string",
+		"recurrencePattern" => "BillingScheduleRecurrencePattern",
 		"project" => "RecordRef",
 		"initialAmount" => "string",
 		"initialTerms" => "RecordRef",

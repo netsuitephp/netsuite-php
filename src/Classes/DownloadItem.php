@@ -1,4 +1,6 @@
-<?php namespace Fungku\NetSuite\Classes;
+<?php
+
+namespace Fungku\NetSuite\Classes;
 
 class DownloadItem extends Record {
 	public $createdDate;
@@ -42,7 +44,11 @@ class DownloadItem extends Record {
 	public $vsoeDeferral;
 	public $vsoePermitDiscount;
 	public $vsoeDelivered;
+	public $itemRevenueCategory;
 	public $deferRevRec;
+	public $revenueRecognitionRule;
+	public $revenueAllocationGroup;
+	public $createRevenuePlansOn;
 	public $storeDisplayName;
 	public $storeDisplayThumbnail;
 	public $storeDisplayImage;
@@ -113,7 +119,11 @@ class DownloadItem extends Record {
 		"vsoeDeferral" => "VsoeDeferral",
 		"vsoePermitDiscount" => "VsoePermitDiscount",
 		"vsoeDelivered" => "boolean",
+		"itemRevenueCategory" => "RecordRef",
 		"deferRevRec" => "boolean",
+		"revenueRecognitionRule" => "RecordRef",
+		"revenueAllocationGroup" => "RecordRef",
+		"createRevenuePlansOn" => "ItemCreateRevenuePlansOn",
 		"storeDisplayName" => "string",
 		"storeDisplayThumbnail" => "RecordRef",
 		"storeDisplayImage" => "RecordRef",

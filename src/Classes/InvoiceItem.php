@@ -1,4 +1,6 @@
-<?php namespace Fungku\NetSuite\Classes;
+<?php
+
+namespace Fungku\NetSuite\Classes;
 
 class InvoiceItem {
 	public $job;
@@ -8,6 +10,7 @@ class InvoiceItem {
 	public $amount;
 	public $isTaxable;
 	public $options;
+	public $subscriptionLine;
 	public $deferRevRec;
 	public $quantity;
 	public $currentPercent;
@@ -69,6 +72,7 @@ class InvoiceItem {
 		"amount" => "float",
 		"isTaxable" => "boolean",
 		"options" => "CustomFieldList",
+		"subscriptionLine" => "RecordRef",
 		"deferRevRec" => "boolean",
 		"quantity" => "float",
 		"currentPercent" => "float",

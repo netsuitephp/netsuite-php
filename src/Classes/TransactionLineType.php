@@ -1,9 +1,12 @@
-<?php namespace Fungku\NetSuite\Classes;
+<?php
+
+namespace Fungku\NetSuite\Classes;
 
 class TransactionLineType {
 	static $paramtypesmap = array(
 	);
 	const _adjustedQuantity = "_adjustedQuantity";
+	const _advanceToApplyAmount = "_advanceToApplyAmount";
 	const _billExchangeRateVariance = "_billExchangeRateVariance";
 	const _billPriceVariance = "_billPriceVariance";
 	const _billQuantityVariance = "_billQuantityVariance";

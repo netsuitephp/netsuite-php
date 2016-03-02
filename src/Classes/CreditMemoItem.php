@@ -1,4 +1,6 @@
-<?php namespace Fungku\NetSuite\Classes;
+<?php
+
+namespace Fungku\NetSuite\Classes;
 
 class CreditMemoItem {
 	public $job;
@@ -46,6 +48,7 @@ class CreditMemoItem {
 	public $vsoeDelivered;
 	public $catchUpPeriod;
 	public $chargeType;
+	public $subscriptionLine;
 	public $chargesList;
 	public $customFieldList;
 	static $paramtypesmap = array(
@@ -94,6 +97,7 @@ class CreditMemoItem {
 		"vsoeDelivered" => "boolean",
 		"catchUpPeriod" => "RecordRef",
 		"chargeType" => "RecordRef",
+		"subscriptionLine" => "RecordRef",
 		"chargesList" => "RecordRefList",
 		"customFieldList" => "CustomFieldList",
 	);

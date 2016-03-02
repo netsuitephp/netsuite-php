@@ -1,4 +1,6 @@
-<?php namespace Fungku\NetSuite\Classes;
+<?php
+
+namespace Fungku\NetSuite\Classes;
 
 class Vendor extends Record {
 	public $customForm;
@@ -38,6 +40,7 @@ class Vendor extends Record {
 	public $expenseAccount;
 	public $payablesAccount;
 	public $terms;
+	public $incoterm;
 	public $creditLimit;
 	public $balancePrimary;
 	public $openingBalance;
@@ -117,6 +120,7 @@ class Vendor extends Record {
 		"expenseAccount" => "RecordRef",
 		"payablesAccount" => "RecordRef",
 		"terms" => "RecordRef",
+		"incoterm" => "RecordRef",
 		"creditLimit" => "float",
 		"balancePrimary" => "float",
 		"openingBalance" => "float",

@@ -1,4 +1,6 @@
-<?php namespace Fungku\NetSuite\Classes;
+<?php
+
+namespace Fungku\NetSuite\Classes;
 
 class LotNumberedInventoryItem extends Record {
 	public $createdDate;
@@ -32,12 +34,17 @@ class LotNumberedInventoryItem extends Record {
 	public $copyDescription;
 	public $currency;
 	public $cogsAccount;
+	public $intercoCogsAccount;
 	public $vendor;
 	public $salesDescription;
 	public $incomeAccount;
+	public $intercoIncomeAccount;
 	public $issueProduct;
 	public $taxSchedule;
 	public $dropshipExpenseAccount;
+	public $revenueRecognitionRule;
+	public $revenueAllocationGroup;
+	public $createRevenuePlansOn;
 	public $isTaxable;
 	public $assetAccount;
 	public $matchBillToReceipt;
@@ -110,6 +117,7 @@ class LotNumberedInventoryItem extends Record {
 	public $vsoeDeferral;
 	public $vsoePermitDiscount;
 	public $vsoeDelivered;
+	public $itemRevenueCategory;
 	public $cost;
 	public $costUnits;
 	public $reorderMultiple;
@@ -238,12 +246,17 @@ class LotNumberedInventoryItem extends Record {
 		"copyDescription" => "boolean",
 		"currency" => "string",
 		"cogsAccount" => "RecordRef",
+		"intercoCogsAccount" => "RecordRef",
 		"vendor" => "RecordRef",
 		"salesDescription" => "string",
 		"incomeAccount" => "RecordRef",
+		"intercoIncomeAccount" => "RecordRef",
 		"issueProduct" => "RecordRef",
 		"taxSchedule" => "RecordRef",
 		"dropshipExpenseAccount" => "RecordRef",
+		"revenueRecognitionRule" => "RecordRef",
+		"revenueAllocationGroup" => "RecordRef",
+		"createRevenuePlansOn" => "ItemCreateRevenuePlansOn",
 		"isTaxable" => "boolean",
 		"assetAccount" => "RecordRef",
 		"matchBillToReceipt" => "boolean",
@@ -316,6 +329,7 @@ class LotNumberedInventoryItem extends Record {
 		"vsoeDeferral" => "VsoeDeferral",
 		"vsoePermitDiscount" => "VsoePermitDiscount",
 		"vsoeDelivered" => "boolean",
+		"itemRevenueCategory" => "RecordRef",
 		"cost" => "float",
 		"costUnits" => "string",
 		"reorderMultiple" => "integer",

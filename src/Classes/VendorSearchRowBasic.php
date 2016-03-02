@@ -1,4 +1,6 @@
-<?php namespace Fungku\NetSuite\Classes;
+<?php
+
+namespace Fungku\NetSuite\Classes;
 
 class VendorSearchRowBasic extends SearchRowBasic {
 	public $accountNumber;
@@ -57,6 +59,7 @@ class VendorSearchRowBasic extends SearchRowBasic {
 	public $hasDuplicates;
 	public $homePhone;
 	public $image;
+	public $incoterm;
 	public $internalId;
 	public $is1099Eligible;
 	public $isDefaultBilling;
@@ -168,6 +171,7 @@ class VendorSearchRowBasic extends SearchRowBasic {
 		"hasDuplicates" => "SearchColumnBooleanField[]",
 		"homePhone" => "SearchColumnStringField[]",
 		"image" => "SearchColumnSelectField[]",
+		"incoterm" => "SearchColumnSelectField[]",
 		"internalId" => "SearchColumnSelectField[]",
 		"is1099Eligible" => "SearchColumnBooleanField[]",
 		"isDefaultBilling" => "SearchColumnBooleanField[]",

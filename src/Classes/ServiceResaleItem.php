@@ -1,4 +1,6 @@
-<?php namespace Fungku\NetSuite\Classes;
+<?php
+
+namespace Fungku\NetSuite\Classes;
 
 class ServiceResaleItem extends Record {
 	public $createdDate;
@@ -8,9 +10,11 @@ class ServiceResaleItem extends Record {
 	public $cost;
 	public $costUnits;
 	public $expenseAccount;
+	public $intercoExpenseAccount;
 	public $salesDescription;
 	public $includeChildren;
 	public $incomeAccount;
+	public $intercoIncomeAccount;
 	public $taxSchedule;
 	public $matrixType;
 	public $isTaxable;
@@ -28,6 +32,9 @@ class ServiceResaleItem extends Record {
 	public $amortizationTemplate;
 	public $residual;
 	public $deferRevRec;
+	public $revenueRecognitionRule;
+	public $revenueAllocationGroup;
+	public $createRevenuePlansOn;
 	public $amortizationPeriod;
 	public $minimumQuantity;
 	public $enforceMinQtyInternally;
@@ -37,6 +44,7 @@ class ServiceResaleItem extends Record {
 	public $useMarginalRates;
 	public $overallQuantityPricingType;
 	public $isFulfillable;
+	public $generateAccruals;
 	public $costCategory;
 	public $purchaseOrderQuantity;
 	public $purchaseOrderAmount;
@@ -51,6 +59,7 @@ class ServiceResaleItem extends Record {
 	public $vsoeDeferral;
 	public $vsoePermitDiscount;
 	public $vsoeDelivered;
+	public $itemRevenueCategory;
 	public $createJob;
 	public $storeDisplayName;
 	public $storeDisplayThumbnail;
@@ -116,9 +125,11 @@ class ServiceResaleItem extends Record {
 		"cost" => "float",
 		"costUnits" => "string",
 		"expenseAccount" => "RecordRef",
+		"intercoExpenseAccount" => "RecordRef",
 		"salesDescription" => "string",
 		"includeChildren" => "boolean",
 		"incomeAccount" => "RecordRef",
+		"intercoIncomeAccount" => "RecordRef",
 		"taxSchedule" => "RecordRef",
 		"matrixType" => "ItemMatrixType",
 		"isTaxable" => "boolean",
@@ -136,6 +147,9 @@ class ServiceResaleItem extends Record {
 		"amortizationTemplate" => "RecordRef",
 		"residual" => "string",
 		"deferRevRec" => "boolean",
+		"revenueRecognitionRule" => "RecordRef",
+		"revenueAllocationGroup" => "RecordRef",
+		"createRevenuePlansOn" => "ItemCreateRevenuePlansOn",
 		"amortizationPeriod" => "integer",
 		"minimumQuantity" => "integer",
 		"enforceMinQtyInternally" => "boolean",
@@ -145,6 +159,7 @@ class ServiceResaleItem extends Record {
 		"useMarginalRates" => "boolean",
 		"overallQuantityPricingType" => "ItemOverallQuantityPricingType",
 		"isFulfillable" => "boolean",
+		"generateAccruals" => "boolean",
 		"costCategory" => "RecordRef",
 		"purchaseOrderQuantity" => "float",
 		"purchaseOrderAmount" => "float",
@@ -159,6 +174,7 @@ class ServiceResaleItem extends Record {
 		"vsoeDeferral" => "VsoeDeferral",
 		"vsoePermitDiscount" => "VsoePermitDiscount",
 		"vsoeDelivered" => "boolean",
+		"itemRevenueCategory" => "RecordRef",
 		"createJob" => "boolean",
 		"storeDisplayName" => "string",
 		"storeDisplayThumbnail" => "RecordRef",

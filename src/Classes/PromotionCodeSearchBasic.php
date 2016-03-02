@@ -1,4 +1,6 @@
-<?php namespace Fungku\NetSuite\Classes;
+<?php
+
+namespace Fungku\NetSuite\Classes;
 
 class PromotionCodeSearchBasic extends SearchRecordBasic {
 	public $applyDiscountTo;
@@ -15,6 +17,7 @@ class PromotionCodeSearchBasic extends SearchRecordBasic {
 	public $isInactive;
 	public $isPublic;
 	public $item;
+	public $location;
 	public $name;
 	public $partner;
 	public $startDate;
@@ -34,6 +37,7 @@ class PromotionCodeSearchBasic extends SearchRecordBasic {
 		"isInactive" => "SearchBooleanField",
 		"isPublic" => "SearchBooleanField",
 		"item" => "SearchMultiSelectField",
+		"location" => "SearchMultiSelectField",
 		"name" => "SearchStringField",
 		"partner" => "SearchMultiSelectField",
 		"startDate" => "SearchDateField",

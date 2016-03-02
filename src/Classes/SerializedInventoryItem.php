@@ -1,4 +1,6 @@
-<?php namespace Fungku\NetSuite\Classes;
+<?php
+
+namespace Fungku\NetSuite\Classes;
 
 class SerializedInventoryItem extends Record {
 	public $createdDate;
@@ -33,6 +35,7 @@ class SerializedInventoryItem extends Record {
 	public $issueProduct;
 	public $currency;
 	public $cogsAccount;
+	public $intercoCogsAccount;
 	public $vendor;
 	public $salesDescription;
 	public $lastInvtCountDate;
@@ -40,9 +43,13 @@ class SerializedInventoryItem extends Record {
 	public $invtCountInterval;
 	public $invtClassification;
 	public $incomeAccount;
+	public $intercoIncomeAccount;
 	public $isTaxable;
 	public $taxSchedule;
 	public $dropshipExpenseAccount;
+	public $revenueRecognitionRule;
+	public $revenueAllocationGroup;
+	public $createRevenuePlansOn;
 	public $assetAccount;
 	public $matchBillToReceipt;
 	public $billQtyVarianceAcct;
@@ -113,6 +120,7 @@ class SerializedInventoryItem extends Record {
 	public $vsoeDeferral;
 	public $vsoePermitDiscount;
 	public $vsoeDelivered;
+	public $itemRevenueCategory;
 	public $cost;
 	public $costUnits;
 	public $quantityReorderUnits;
@@ -238,6 +246,7 @@ class SerializedInventoryItem extends Record {
 		"issueProduct" => "RecordRef",
 		"currency" => "string",
 		"cogsAccount" => "RecordRef",
+		"intercoCogsAccount" => "RecordRef",
 		"vendor" => "RecordRef",
 		"salesDescription" => "string",
 		"lastInvtCountDate" => "dateTime",
@@ -245,9 +254,13 @@ class SerializedInventoryItem extends Record {
 		"invtCountInterval" => "integer",
 		"invtClassification" => "ItemInvtClassification",
 		"incomeAccount" => "RecordRef",
+		"intercoIncomeAccount" => "RecordRef",
 		"isTaxable" => "boolean",
 		"taxSchedule" => "RecordRef",
 		"dropshipExpenseAccount" => "RecordRef",
+		"revenueRecognitionRule" => "RecordRef",
+		"revenueAllocationGroup" => "RecordRef",
+		"createRevenuePlansOn" => "ItemCreateRevenuePlansOn",
 		"assetAccount" => "RecordRef",
 		"matchBillToReceipt" => "boolean",
 		"billQtyVarianceAcct" => "RecordRef",
@@ -318,6 +331,7 @@ class SerializedInventoryItem extends Record {
 		"vsoeDeferral" => "VsoeDeferral",
 		"vsoePermitDiscount" => "VsoePermitDiscount",
 		"vsoeDelivered" => "boolean",
+		"itemRevenueCategory" => "RecordRef",
 		"cost" => "float",
 		"costUnits" => "string",
 		"quantityReorderUnits" => "string",

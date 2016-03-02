@@ -135,6 +135,11 @@ function milliseconds()
     return (int)round($m[0]*10000,4);
 }
 
+/**
+ * @param string $xml_root
+ *
+ * @return string
+ */
 function cleanUpNamespaces($xml_root)
 {
     $xml_root = str_replace('xsi:type', 'xsitype', $xml_root);

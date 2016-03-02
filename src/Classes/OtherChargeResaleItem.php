@@ -1,4 +1,6 @@
-<?php namespace Fungku\NetSuite\Classes;
+<?php
+
+namespace Fungku\NetSuite\Classes;
 
 class OtherChargeResaleItem extends Record {
 	public $createdDate;
@@ -8,9 +10,11 @@ class OtherChargeResaleItem extends Record {
 	public $cost;
 	public $costUnits;
 	public $expenseAccount;
+	public $intercoExpenseAccount;
 	public $salesDescription;
 	public $includeChildren;
 	public $incomeAccount;
+	public $intercoIncomeAccount;
 	public $isTaxable;
 	public $matrixType;
 	public $taxSchedule;
@@ -28,12 +32,16 @@ class OtherChargeResaleItem extends Record {
 	public $amortizationTemplate;
 	public $residual;
 	public $deferRevRec;
+	public $revenueRecognitionRule;
+	public $revenueAllocationGroup;
+	public $createRevenuePlansOn;
 	public $amortizationPeriod;
 	public $minimumQuantity;
 	public $minimumQuantityUnits;
 	public $enforceMinQtyInternally;
 	public $softDescriptor;
 	public $isFulfillable;
+	public $generateAccruals;
 	public $costCategory;
 	public $purchaseOrderQuantity;
 	public $purchaseOrderAmount;
@@ -66,6 +74,7 @@ class OtherChargeResaleItem extends Record {
 	public $vsoeDeferral;
 	public $vsoePermitDiscount;
 	public $vsoeDelivered;
+	public $itemRevenueCategory;
 	public $currency;
 	public $itemOptionsList;
 	public $matrixOptionList;
@@ -88,9 +97,11 @@ class OtherChargeResaleItem extends Record {
 		"cost" => "float",
 		"costUnits" => "string",
 		"expenseAccount" => "RecordRef",
+		"intercoExpenseAccount" => "RecordRef",
 		"salesDescription" => "string",
 		"includeChildren" => "boolean",
 		"incomeAccount" => "RecordRef",
+		"intercoIncomeAccount" => "RecordRef",
 		"isTaxable" => "boolean",
 		"matrixType" => "ItemMatrixType",
 		"taxSchedule" => "RecordRef",
@@ -108,12 +119,16 @@ class OtherChargeResaleItem extends Record {
 		"amortizationTemplate" => "RecordRef",
 		"residual" => "string",
 		"deferRevRec" => "boolean",
+		"revenueRecognitionRule" => "RecordRef",
+		"revenueAllocationGroup" => "RecordRef",
+		"createRevenuePlansOn" => "ItemCreateRevenuePlansOn",
 		"amortizationPeriod" => "integer",
 		"minimumQuantity" => "integer",
 		"minimumQuantityUnits" => "string",
 		"enforceMinQtyInternally" => "boolean",
 		"softDescriptor" => "string",
 		"isFulfillable" => "boolean",
+		"generateAccruals" => "boolean",
 		"costCategory" => "RecordRef",
 		"purchaseOrderQuantity" => "float",
 		"purchaseOrderAmount" => "float",
@@ -146,6 +161,7 @@ class OtherChargeResaleItem extends Record {
 		"vsoeDeferral" => "VsoeDeferral",
 		"vsoePermitDiscount" => "VsoePermitDiscount",
 		"vsoeDelivered" => "boolean",
+		"itemRevenueCategory" => "RecordRef",
 		"currency" => "string",
 		"itemOptionsList" => "ItemOptionsList",
 		"matrixOptionList" => "MatrixOptionList",

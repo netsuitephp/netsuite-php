@@ -1,4 +1,6 @@
-<?php namespace Fungku\NetSuite\Classes;
+<?php
+
+namespace Fungku\NetSuite\Classes;
 
 class PromotionCodeSearchRowBasic extends SearchRowBasic {
 	public $code;
@@ -10,6 +12,7 @@ class PromotionCodeSearchRowBasic extends SearchRowBasic {
 	public $internalId;
 	public $isInactive;
 	public $isPublic;
+	public $location;
 	public $name;
 	public $startDate;
 	public $customFieldList;
@@ -23,6 +26,7 @@ class PromotionCodeSearchRowBasic extends SearchRowBasic {
 		"internalId" => "SearchColumnSelectField[]",
 		"isInactive" => "SearchColumnBooleanField[]",
 		"isPublic" => "SearchColumnBooleanField[]",
+		"location" => "SearchColumnSelectField[]",
 		"name" => "SearchColumnStringField[]",
 		"startDate" => "SearchColumnDateField[]",
 		"customFieldList" => "SearchColumnCustomFieldList",

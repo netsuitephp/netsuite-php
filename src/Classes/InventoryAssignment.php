@@ -1,4 +1,6 @@
-<?php namespace Fungku\NetSuite\Classes;
+<?php
+
+namespace Fungku\NetSuite\Classes;
 
 class InventoryAssignment {
 	public $internalId;
@@ -17,7 +19,7 @@ class InventoryAssignment {
 		"toBinNumber" => "RecordRef",
 		"quantity" => "float",
 		"expirationDate" => "dateTime",
-		"quantityAvailable" => "boolean",
+		"quantityAvailable" => "float",
 	);
 }
 

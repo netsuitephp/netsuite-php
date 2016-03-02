@@ -1,10 +1,14 @@
-<?php namespace Fungku\NetSuite\Classes;
+<?php
+
+namespace Fungku\NetSuite\Classes;
 
 class CashSale extends Record {
 	public $createdDate;
 	public $lastModifiedDate;
 	public $customForm;
 	public $entity;
+	public $billingAccount;
+	public $recurringBill;
 	public $tranDate;
 	public $tranId;
 	public $source;
@@ -158,6 +162,8 @@ class CashSale extends Record {
 		"lastModifiedDate" => "dateTime",
 		"customForm" => "RecordRef",
 		"entity" => "RecordRef",
+		"billingAccount" => "RecordRef",
+		"recurringBill" => "boolean",
 		"tranDate" => "dateTime",
 		"tranId" => "string",
 		"source" => "string",

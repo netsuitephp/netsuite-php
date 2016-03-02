@@ -1,4 +1,6 @@
-<?php namespace Fungku\NetSuite\Classes;
+<?php
+
+namespace Fungku\NetSuite\Classes;
 
 class CustomRecordSearchRowBasic extends SearchRowBasic {
 	public $recType;
@@ -13,6 +15,7 @@ class CustomRecordSearchRowBasic extends SearchRowBasic {
 	public $lastModifiedBy;
 	public $name;
 	public $owner;
+	public $parent;
 	public $customFieldList;
 	static $paramtypesmap = array(
 		"recType" => "RecordRef",
@@ -27,6 +30,7 @@ class CustomRecordSearchRowBasic extends SearchRowBasic {
 		"lastModifiedBy" => "SearchColumnSelectField[]",
 		"name" => "SearchColumnStringField[]",
 		"owner" => "SearchColumnSelectField[]",
+		"parent" => "SearchColumnSelectField[]",
 		"customFieldList" => "SearchColumnCustomFieldList",
 	);
 }

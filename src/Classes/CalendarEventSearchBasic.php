@@ -1,6 +1,9 @@
-<?php namespace Fungku\NetSuite\Classes;
+<?php
+
+namespace Fungku\NetSuite\Classes;
 
 class CalendarEventSearchBasic extends SearchRecordBasic {
+	public $accessLevel;
 	public $attendee;
 	public $calendar;
 	public $completedDate;
@@ -23,6 +26,7 @@ class CalendarEventSearchBasic extends SearchRecordBasic {
 	public $title;
 	public $customFieldList;
 	static $paramtypesmap = array(
+		"accessLevel" => "SearchEnumMultiSelectField",
 		"attendee" => "SearchMultiSelectField",
 		"calendar" => "SearchMultiSelectField",
 		"completedDate" => "SearchDateField",

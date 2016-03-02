@@ -1,4 +1,6 @@
-<?php namespace Fungku\NetSuite\Classes;
+<?php
+
+namespace Fungku\NetSuite\Classes;
 
 class AccountingTransactionSearchRowBasic extends SearchRowBasic {
 	public $account;
@@ -10,6 +12,7 @@ class AccountingTransactionSearchRowBasic extends SearchRowBasic {
 	public $baseCurrency;
 	public $catchUpPeriod;
 	public $creditAmount;
+	public $customGL;
 	public $dateCreated;
 	public $debitAmount;
 	public $deferRevRec;
@@ -20,6 +23,7 @@ class AccountingTransactionSearchRowBasic extends SearchRowBasic {
 	public $lastModifiedDate;
 	public $multiSubsidiary;
 	public $netAmount;
+	public $posting;
 	public $quantityRevCommitted;
 	public $recognizedRevenue;
 	public $revCommitStatus;
@@ -40,6 +44,7 @@ class AccountingTransactionSearchRowBasic extends SearchRowBasic {
 		"baseCurrency" => "SearchColumnStringField[]",
 		"catchUpPeriod" => "SearchColumnStringField[]",
 		"creditAmount" => "SearchColumnDoubleField[]",
+		"customGL" => "SearchColumnBooleanField[]",
 		"dateCreated" => "SearchColumnDateField[]",
 		"debitAmount" => "SearchColumnDoubleField[]",
 		"deferRevRec" => "SearchColumnBooleanField[]",
@@ -50,6 +55,7 @@ class AccountingTransactionSearchRowBasic extends SearchRowBasic {
 		"lastModifiedDate" => "SearchColumnDateField[]",
 		"multiSubsidiary" => "SearchColumnBooleanField[]",
 		"netAmount" => "SearchColumnDoubleField[]",
+		"posting" => "SearchColumnBooleanField[]",
 		"quantityRevCommitted" => "SearchColumnDoubleField[]",
 		"recognizedRevenue" => "SearchColumnDoubleField[]",
 		"revCommitStatus" => "SearchColumnEnumSelectField[]",

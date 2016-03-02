@@ -1,4 +1,6 @@
-<?php namespace Fungku\NetSuite\Classes;
+<?php
+
+namespace Fungku\NetSuite\Classes;
 
 class JobSearchRowBasic extends SearchRowBasic {
 	public $accountNumber;
@@ -108,7 +110,6 @@ class JobSearchRowBasic extends SearchRowBasic {
 	public $subscriptionStatus;
 	public $subsidiary;
 	public $timeRemaining;
-	public $type;
 	public $zipCode;
 	public $customFieldList;
 	static $paramtypesmap = array(
@@ -219,7 +220,6 @@ class JobSearchRowBasic extends SearchRowBasic {
 		"subscriptionStatus" => "SearchColumnBooleanField[]",
 		"subsidiary" => "SearchColumnSelectField[]",
 		"timeRemaining" => "SearchColumnDoubleField[]",
-		"type" => "SearchColumnSelectField[]",
 		"zipCode" => "SearchColumnStringField[]",
 		"customFieldList" => "SearchColumnCustomFieldList",
 	);

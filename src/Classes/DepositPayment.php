@@ -1,4 +1,6 @@
-<?php namespace Fungku\NetSuite\Classes;
+<?php
+
+namespace Fungku\NetSuite\Classes;
 
 class DepositPayment {
 	public $deposit;
@@ -13,6 +15,7 @@ class DepositPayment {
 	public $currency;
 	public $transactionAmount;
 	public $paymentAmount;
+	public $lineId;
 	static $paramtypesmap = array(
 		"deposit" => "boolean",
 		"id" => "integer",
@@ -26,6 +29,7 @@ class DepositPayment {
 		"currency" => "RecordRef",
 		"transactionAmount" => "float",
 		"paymentAmount" => "float",
+		"lineId" => "integer",
 	);
 }
 

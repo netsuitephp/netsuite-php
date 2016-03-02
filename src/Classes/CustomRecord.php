@@ -1,9 +1,12 @@
-<?php namespace Fungku\NetSuite\Classes;
+<?php
+
+namespace Fungku\NetSuite\Classes;
 
 class CustomRecord extends Record {
 	public $customRecordId;
 	public $customForm;
 	public $isInactive;
+	public $parent;
 	public $disclaimer;
 	public $created;
 	public $lastModified;
@@ -48,6 +51,7 @@ class CustomRecord extends Record {
 		"customRecordId" => "string",
 		"customForm" => "RecordRef",
 		"isInactive" => "boolean",
+		"parent" => "RecordRef",
 		"disclaimer" => "string",
 		"created" => "dateTime",
 		"lastModified" => "dateTime",

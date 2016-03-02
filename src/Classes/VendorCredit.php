@@ -1,4 +1,6 @@
-<?php namespace Fungku\NetSuite\Classes;
+<?php
+
+namespace Fungku\NetSuite\Classes;
 
 class VendorCredit extends Record {
 	public $createdDate;
@@ -6,6 +8,7 @@ class VendorCredit extends Record {
 	public $customForm;
 	public $account;
 	public $unApplied;
+	public $billAddressList;
 	public $autoApply;
 	public $applied;
 	public $transactionNumber;
@@ -16,6 +19,7 @@ class VendorCredit extends Record {
 	public $userTotal;
 	public $currency;
 	public $currencyName;
+	public $billingAddress;
 	public $tranDate;
 	public $exchangeRate;
 	public $postingPeriod;
@@ -36,6 +40,7 @@ class VendorCredit extends Record {
 		"customForm" => "RecordRef",
 		"account" => "RecordRef",
 		"unApplied" => "float",
+		"billAddressList" => "RecordRef",
 		"autoApply" => "boolean",
 		"applied" => "float",
 		"transactionNumber" => "string",
@@ -46,6 +51,7 @@ class VendorCredit extends Record {
 		"userTotal" => "float",
 		"currency" => "RecordRef",
 		"currencyName" => "string",
+		"billingAddress" => "Address",
 		"tranDate" => "dateTime",
 		"exchangeRate" => "float",
 		"postingPeriod" => "RecordRef",

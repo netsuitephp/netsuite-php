@@ -1,10 +1,13 @@
-<?php namespace Fungku\NetSuite\Classes;
+<?php
+
+namespace Fungku\NetSuite\Classes;
 
 class ResourceAllocationSearchRow extends SearchRow {
 	public $basic;
 	public $customerJoin;
 	public $employeeJoin;
 	public $jobJoin;
+	public $projectTaskJoin;
 	public $requestedByJoin;
 	public $resourceJoin;
 	public $userJoin;
@@ -15,6 +18,7 @@ class ResourceAllocationSearchRow extends SearchRow {
 		"customerJoin" => "CustomerSearchRowBasic",
 		"employeeJoin" => "EmployeeSearchRowBasic",
 		"jobJoin" => "JobSearchRowBasic",
+		"projectTaskJoin" => "ProjectTaskSearchRowBasic",
 		"requestedByJoin" => "EntitySearchRowBasic",
 		"resourceJoin" => "EntitySearchRowBasic",
 		"userJoin" => "EmployeeSearchRowBasic",

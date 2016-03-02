@@ -1,12 +1,16 @@
-<?php namespace Fungku\NetSuite\Classes;
+<?php
+
+namespace Fungku\NetSuite\Classes;
 
 class TransactionSearch extends SearchRecord {
 	public $basic;
 	public $accountJoin;
 	public $accountingPeriodJoin;
 	public $accountingTransactionJoin;
+	public $advanceToApplyAccountJoin;
 	public $appliedToTransactionJoin;
 	public $applyingTransactionJoin;
+	public $billingAddressJoin;
 	public $billingTransactionJoin;
 	public $binNumberJoin;
 	public $callJoin;
@@ -35,6 +39,7 @@ class TransactionSearch extends SearchRecord {
 	public $locationJoin;
 	public $manufacturingOperationTaskJoin;
 	public $messagesJoin;
+	public $nextApproverJoin;
 	public $opportunityJoin;
 	public $paidTransactionJoin;
 	public $partnerJoin;
@@ -48,8 +53,10 @@ class TransactionSearch extends SearchRecord {
 	public $rgPostingTransactionJoin;
 	public $salesOrderJoin;
 	public $salesRepJoin;
+	public $shippingAddressJoin;
 	public $subsidiaryJoin;
 	public $taskJoin;
+	public $timeJoin;
 	public $toLocationJoin;
 	public $userJoin;
 	public $userNotesJoin;
@@ -61,8 +68,10 @@ class TransactionSearch extends SearchRecord {
 		"accountJoin" => "AccountSearchBasic",
 		"accountingPeriodJoin" => "AccountingPeriodSearchBasic",
 		"accountingTransactionJoin" => "AccountingTransactionSearchBasic",
+		"advanceToApplyAccountJoin" => "AccountSearchBasic",
 		"appliedToTransactionJoin" => "TransactionSearchBasic",
 		"applyingTransactionJoin" => "TransactionSearchBasic",
+		"billingAddressJoin" => "AddressSearchBasic",
 		"billingTransactionJoin" => "TransactionSearchBasic",
 		"binNumberJoin" => "BinSearchBasic",
 		"callJoin" => "PhoneCallSearchBasic",
@@ -91,6 +100,7 @@ class TransactionSearch extends SearchRecord {
 		"locationJoin" => "LocationSearchBasic",
 		"manufacturingOperationTaskJoin" => "ManufacturingOperationTaskSearchBasic",
 		"messagesJoin" => "MessageSearchBasic",
+		"nextApproverJoin" => "EntitySearchBasic",
 		"opportunityJoin" => "OpportunitySearchBasic",
 		"paidTransactionJoin" => "TransactionSearchBasic",
 		"partnerJoin" => "PartnerSearchBasic",
@@ -104,8 +114,10 @@ class TransactionSearch extends SearchRecord {
 		"rgPostingTransactionJoin" => "TransactionSearchBasic",
 		"salesOrderJoin" => "TransactionSearchBasic",
 		"salesRepJoin" => "EmployeeSearchBasic",
+		"shippingAddressJoin" => "AddressSearchBasic",
 		"subsidiaryJoin" => "SubsidiarySearchBasic",
 		"taskJoin" => "TaskSearchBasic",
+		"timeJoin" => "TimeBillSearchBasic",
 		"toLocationJoin" => "LocationSearchBasic",
 		"userJoin" => "EmployeeSearchBasic",
 		"userNotesJoin" => "NoteSearchBasic",

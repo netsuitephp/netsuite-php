@@ -1,4 +1,6 @@
-<?php namespace Fungku\NetSuite\Classes;
+<?php
+
+namespace Fungku\NetSuite\Classes;
 
 class NonInventoryResaleItem extends Record {
 	public $createdDate;
@@ -8,14 +10,19 @@ class NonInventoryResaleItem extends Record {
 	public $cost;
 	public $costUnits;
 	public $expenseAccount;
+	public $intercoExpenseAccount;
 	public $salesDescription;
 	public $includeChildren;
 	public $incomeAccount;
+	public $intercoIncomeAccount;
 	public $isTaxable;
 	public $matrixType;
 	public $taxSchedule;
 	public $dropshipExpenseAccount;
 	public $deferRevRec;
+	public $revenueRecognitionRule;
+	public $revenueAllocationGroup;
+	public $createRevenuePlansOn;
 	public $isDropShipItem;
 	public $isSpecialOrderItem;
 	public $shippingCost;
@@ -67,6 +74,7 @@ class NonInventoryResaleItem extends Record {
 	public $shipPackage;
 	public $shipIndividually;
 	public $isFulfillable;
+	public $generateAccruals;
 	public $costCategory;
 	public $pricesIncludeTax;
 	public $quantityPricingSchedule;
@@ -79,6 +87,7 @@ class NonInventoryResaleItem extends Record {
 	public $vsoeDeferral;
 	public $vsoePermitDiscount;
 	public $vsoeDelivered;
+	public $itemRevenueCategory;
 	public $storeDisplayName;
 	public $storeDisplayThumbnail;
 	public $storeDisplayImage;
@@ -155,14 +164,19 @@ class NonInventoryResaleItem extends Record {
 		"cost" => "float",
 		"costUnits" => "string",
 		"expenseAccount" => "RecordRef",
+		"intercoExpenseAccount" => "RecordRef",
 		"salesDescription" => "string",
 		"includeChildren" => "boolean",
 		"incomeAccount" => "RecordRef",
+		"intercoIncomeAccount" => "RecordRef",
 		"isTaxable" => "boolean",
 		"matrixType" => "ItemMatrixType",
 		"taxSchedule" => "RecordRef",
 		"dropshipExpenseAccount" => "RecordRef",
 		"deferRevRec" => "boolean",
+		"revenueRecognitionRule" => "RecordRef",
+		"revenueAllocationGroup" => "RecordRef",
+		"createRevenuePlansOn" => "ItemCreateRevenuePlansOn",
 		"isDropShipItem" => "boolean",
 		"isSpecialOrderItem" => "boolean",
 		"shippingCost" => "float",
@@ -214,6 +228,7 @@ class NonInventoryResaleItem extends Record {
 		"shipPackage" => "RecordRef",
 		"shipIndividually" => "boolean",
 		"isFulfillable" => "boolean",
+		"generateAccruals" => "boolean",
 		"costCategory" => "RecordRef",
 		"pricesIncludeTax" => "boolean",
 		"quantityPricingSchedule" => "RecordRef",
@@ -226,6 +241,7 @@ class NonInventoryResaleItem extends Record {
 		"vsoeDeferral" => "VsoeDeferral",
 		"vsoePermitDiscount" => "VsoePermitDiscount",
 		"vsoeDelivered" => "boolean",
+		"itemRevenueCategory" => "RecordRef",
 		"storeDisplayName" => "string",
 		"storeDisplayThumbnail" => "RecordRef",
 		"storeDisplayImage" => "RecordRef",
