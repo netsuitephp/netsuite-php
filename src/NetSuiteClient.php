@@ -20,6 +20,10 @@ class NetSuiteClient
      */
     private $options;
     /**
+     * @var SoapClient
+     */
+    private $client;
+    /**
      * @var array
      */
     private $soapHeaders = array();
@@ -27,31 +31,41 @@ class NetSuiteClient
     /**
      * @param array $config
      * @param array $options
+     * @param SoapClient $client
      */
-    public function __construct($config, $options = array())
+    public function __construct($config, $options = array(), SoapClient $client = null)
     {
         $this->config = $config;
         $this->options = array_merge($this->createOptionsFromConfig($this->config), $options);
+        $this->client = $client ?: new SoapClient($this->config['host'], $this->options);
     }
 
     /**
+     * Make the SOAP call!
+     *
      * @param string $operation
      * @param mixed $parameter
      * @return mixed
      */
     protected function makeSoapCall($operation, $parameter)
     {
-        $client = new SoapClient($this->config['host'], $this->options);
-        // SoapClient, even with keep-alive set to false, keeps sending the JSESSIONID cookie back to
-        // the server on subsequent requests. Unsetting the cookie to prevent this.
-        $client->__setCookie("JSESSIONID");
+        $this->fixWtfCookieBug();
         $this->addHeader("passport", $this->createPassportFromConfig($this->config));
 
-        $response = $client->__soapCall($operation, array($parameter), null, $this->soapHeaders);
+        $response = $this->client->__soapCall($operation, array($parameter), null, $this->soapHeaders);
 
-        $this->logSoapCall($client, $operation);
+        $this->logSoapCall($this->client, $operation);
 
         return $response;
+    }
+
+    /**
+     * SoapClient, even with keep-alive set to false, keeps sending the JSESSIONID cookie back to
+     * the server on subsequent requests. Un-setting the cookie will prevent this.
+     */
+    private function fixWtfCookieBug()
+    {
+        $this->client->__setCookie("JSESSIONID");
     }
 
     /**
@@ -63,7 +77,7 @@ class NetSuiteClient
     private function createOptionsFromConfig($config)
     {
         return array(
-            'classmap' => require "includes/classmap.php",
+            'classmap' => require __DIR__."/includes/classmap.php",
             'trace' => 1,
             'connection_timeout' => 5,
             'cache_wsdl' => WSDL_CACHE_BOTH,
