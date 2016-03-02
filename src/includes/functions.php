@@ -1,16 +1,13 @@
 <?php
 
-function arrayValuesAreEmpty ($array)
+function arrayValuesAreEmpty($array)
 {
-    if (!is_array($array))
-    {
+    if (!is_array($array)) {
         return false;
     }
 
-    foreach ($array as $key => $value)
-    {
-        if ( $value === false || ( !is_null($value) && $value != "" && !arrayValuesAreEmpty($value)))
-        {
+    foreach ($array as $key => $value) {
+        if ($value === false || (!is_null($value) && $value != "" && !arrayValuesAreEmpty($value))) {
             return false;
         }
     }
@@ -18,13 +15,13 @@ function arrayValuesAreEmpty ($array)
     return true;
 }
 
-function array_is_associative ($array)
+function array_is_associative($array)
 {
-    if ( is_array($array) && ! empty($array) )
-    {
-        for ( $iterator = count($array) - 1; $iterator; $iterator-- )
-        {
-            if ( ! array_key_exists($iterator, $array) ) { return true; }
+    if (is_array($array) && ! empty($array)) {
+        for ($iterator = count($array) - 1; $iterator; $iterator--) {
+            if (! array_key_exists($iterator, $array)) {
+                return true;
+            }
         }
         return ! array_key_exists(0, $array);
     }
@@ -38,21 +35,18 @@ function setFields($object, array $fieldArray=null)
     // a static map that maps class parameters to their types. needed for knowing which objects to create
     $typesmap = $classname::$paramtypesmap;
 
-    if (!isset ($typesmap)) {
+    if (!isset($typesmap)) {
         // if the class does not have paramtypesmap, consider it empty
         $typesmap = array();
     }
 
-    if ($fieldArray == null)
-    {
+    if ($fieldArray == null) {
         // nothign to do
         return;
     }
 
-    foreach ($fieldArray as $fldName => $fldValue)
-    {
-        if (((is_null($fldValue) || $fldValue == "") && $fldValue !== false) || arrayValuesAreEmpty($fldValue))
-        {
+    foreach ($fieldArray as $fldName => $fldValue) {
+        if (((is_null($fldValue) || $fldValue == "") && $fldValue !== false) || arrayValuesAreEmpty($fldValue)) {
             //empty param
             continue;
         }
@@ -63,19 +57,14 @@ function setFields($object, array $fieldArray=null)
             continue;
         }
 
-        if ($fldValue === 'false')
-        {
+        if ($fldValue === 'false') {
             // taken from the PHP toolkit, but is it really necessary?
-            $object->$fldName = FALSE;
-        }
-        elseif (is_object($fldValue))
-        {
+            $object->$fldName = false;
+        } elseif (is_object($fldValue)) {
             $object->$fldName = $fldValue;
-        }
-        elseif (is_array($fldValue) && array_is_associative($fldValue))
-        {
+        } elseif (is_array($fldValue) && array_is_associative($fldValue)) {
             // example: 'itemList'  => array('item' => array($item1, $item2), 'replaceAll'  => false)
-            if (substr($typesmap[$fldName],-2) == "[]") {
+            if (substr($typesmap[$fldName], -2) == "[]") {
                 trigger_error("Trying to assign an object into an array parameter \"" .$fldName . "\" of class \"" . $classname . "\", it will be omitted", E_USER_WARNING);
                 continue;
             }
@@ -83,34 +72,26 @@ function setFields($object, array $fieldArray=null)
             $obj = new $class();
             setFields($obj, $fldValue);
             $object->$fldName = $obj;
-        }
-        elseif (is_array($fldValue) && !array_is_associative($fldValue))
-        {
+        } elseif (is_array($fldValue) && !array_is_associative($fldValue)) {
             // array type
-            if (substr($typesmap[$fldName],-2) != "[]") {
+            if (substr($typesmap[$fldName], -2) != "[]") {
                 // the type is not an array, skipping this value
                 trigger_error("Trying to assign an array value into parameter \"" .$fldName . "\" of class \"" . $classname . "\", it will be omitted", E_USER_WARNING);
                 continue;
             }
 
             // get the base type  - the string is of type <type>[]
-            $basetype = substr($typesmap[$fldName],0,-2);
+            $basetype = substr($typesmap[$fldName], 0, -2);
 
             // example: 'item' => array($item1, $item2)
-            foreach ($fldValue as $item)
-            {
-                if (is_object($item))
-                {
+            foreach ($fldValue as $item) {
+                if (is_object($item)) {
                     // example: $item1 = new nsComplexObject('SalesOrderItem');
                     $val[] = $item;
-                }
-                elseif ($typesmap[$fldName] == "string")
-                {
+                } elseif ($typesmap[$fldName] == "string") {
                     // handle enums
                     $val[] = $item;
-                }
-                else
-                {
+                } else {
                     // example: $item2 = array( 'item'      => new nsComplexObject('RecordRef', array('internalId' => '17')),
                     //                          'quantity'  => '3')
                     $class = 'Fungku\\NetSuite\\Classes\\'. $basetype;
@@ -121,9 +102,7 @@ function setFields($object, array $fieldArray=null)
             }
 
             $object->$fldName = $val;
-        }
-        else
-        {
+        } else {
             $object->$fldName = $fldValue;
         }
     }
@@ -131,8 +110,8 @@ function setFields($object, array $fieldArray=null)
 
 function milliseconds()
 {
-    $m = explode(' ',microtime());
-    return (int)round($m[0]*10000,4);
+    $m = explode(' ', microtime());
+    return (int)round($m[0]*10000, 4);
 }
 
 /**
@@ -145,24 +124,19 @@ function cleanUpNamespaces($xml_root)
     $xml_root = str_replace('xsi:type', 'xsitype', $xml_root);
     $record_element = new SimpleXMLElement($xml_root);
 
-    foreach ($record_element->getDocNamespaces() as $name => $ns)
-    {
-        if ( $name != "" )
-        {
+    foreach ($record_element->getDocNamespaces() as $name => $ns) {
+        if ($name != "") {
             $xml_root = str_replace($name . ':', '', $xml_root);
         }
     }
 
     $record_element = new SimpleXMLElement($xml_root);
 
-    foreach($record_element->children() as $field)
-    {
+    foreach ($record_element->children() as $field) {
         $field_element = new SimpleXMLElement($field->asXML());
 
-        foreach ($field_element->getDocNamespaces() as $name2 => $ns2)
-        {
-            if ($name2 != "")
-            {
+        foreach ($field_element->getDocNamespaces() as $name2 => $ns2) {
+            if ($name2 != "") {
                 $xml_root = str_replace($name2 . ':', '', $xml_root);
             }
         }

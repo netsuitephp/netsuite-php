@@ -1,162 +1,125 @@
-<?php namespace Fungku\NetSuite;
+<?php
+
+namespace Fungku\NetSuite;
 
 use Fungku\NetSuite\Classes\Passport;
 use Fungku\NetSuite\Classes\Preferences;
 use Fungku\NetSuite\Classes\RecordRef;
 use Fungku\NetSuite\Classes\SearchPreferences;
+use SoapClient;
+use SoapHeader;
 
 class NetSuiteClient
 {
-    public $client = null;
-    public $passport = null;
-    public $generated_from_endpoint = "";
-
-    protected $classmap;
-
-    private $nsversion = "2015_1r1";
-    private $userequest = true;
+    /**
+     * @var array
+     */
     private $config;
+    /**
+     * @var array
+     */
+    private $options;
+    /**
+     * @var SoapClient
+     */
+    private $client;
+    /**
+     * @var array
+     */
     private $soapHeaders = array();
 
     /**
      * @param array $config
-     * @param string $wsdl
      * @param array $options
-     * @throws \Exception
+     * @param SoapClient $client
      */
-    public function __construct($config = array(), $wsdl = null, $options = array())
+    public function __construct($config, $options = array(), $client = null)
     {
-        global $debuginfo;
-
-        $this->setConfig($config);
-        $this->classmap = include "includes/classmap.php";
-
-        if (!isset($wsdl)) {
-            if (!isset($this->config['host'])) {
-                throw new \Exception('Webservice host must be specified');
-            }
-            if (!isset($this->config['endpoint'])) {
-                throw new \Exception('Webservice endpoint must be specified');
-            }
-            $wsdl = $this->config['host'] . "/wsdl/v" . $this->config['endpoint'] . "_0/netsuite.wsdl";
-        }
-
-        if (! extension_loaded('soap')) {
-            // check for loaded SOAP extension
-            $soap_warning = 'The SOAP PHP extension is not loaded. '
-                          . 'Please modify the extension settings in php.ini accordingly.';
-
-            trigger_error($soap_warning, E_USER_WARNING);
-        }
-
-        if (! extension_loaded('openssl') && substr($wsdl, 0, 5) == "https") {
-            // check for loaded SOAP extension
-            $soap_warning = 'The Open SSL PHP extension is not loaded and you are trying to use HTTPS protocol. '
-                          . 'Please modify the extension settings in php.ini accordingly.';
-
-            trigger_error($soap_warning, E_USER_WARNING);
-        }
-
-        if ($this->generated_from_endpoint != $this->config['endpoint']) {
-            // check for the endpoint compatibility failed, but it might still be compatible. Issue only warning
-            $endpoint_warning = 'The NetSuiteService classes were generated from the '
-                              . $this->generated_from_endpoint .' endpoint but you are running against '
-                              . $this->config['endpoint'];
-
-            trigger_error($endpoint_warning, E_USER_WARNING);
-        }
-
-        $options['classmap'] = $this->classmap;
-        $options['trace'] = 1;
-        $options['connection_timeout'] = 5;
-        $options['cache_wsdl'] = WSDL_CACHE_BOTH;
-        $httpheaders = "PHP-SOAP/" . phpversion() . " + NetSuite PHP Toolkit " . $this->nsversion;
-
-        $options['location'] = $this->config['host'] . "/services/NetSuitePort_" . $this->config['endpoint'];
-        $options['keep_alive'] = false; // do not maintain http connection to the server.
-        $options['features'] = SOAP_SINGLE_ELEMENT_ARRAYS;
-
-        if (isset($debuginfo)) {
-            $httpheaders .= "\r\nDebug: true";
-            $httpheaders .= "\r\nUser: " . $debuginfo["email"];
-            $httpheaders .= "\r\nPassword: " . $debuginfo["password"];
-            $httpheaders .= "\r\nIssue: " . $debuginfo["issue"];
-        }
-
-        $options['user_agent'] =  $httpheaders;
-        $this->setPassport();
-
-        $this->client = new \SoapClient($wsdl, $options);
+        $this->config = $config;
+        $this->options = array_merge($this->createOptionsFromConfig($this->config), $options);
+        $this->client = $client ?: new SoapClient($this->config['host'], $this->options);
     }
 
     /**
+     * Make the SOAP call!
+     *
+     * @param string $operation
+     * @param mixed $parameter
+     * @return mixed
+     */
+    protected function makeSoapCall($operation, $parameter)
+    {
+        $this->fixWtfCookieBug();
+        $this->addHeader("passport", $this->createPassportFromConfig($this->config));
+
+        $response = $this->client->__soapCall($operation, array($parameter), null, $this->soapHeaders);
+
+        $this->logSoapCall($operation);
+
+        return $response;
+    }
+
+    /**
+     * Create the options array.
+     *
      * @param array $config
+     * @return array
      */
-    private function setConfig(array $config)
+    private function createOptionsFromConfig($config)
     {
-        // Required config parameters.
-        $required = array(
-            'endpoint' => isset($config['endpoint']) ? $config['endpoint'] : getenv('NETSUITE_ENDPOINT'),
-            'host'     => isset($config['host'])     ? $config['host']     : getenv('NETSUITE_HOST'),
-            'email'    => isset($config['email'])    ? $config['email']    : getenv('NETSUITE_EMAIL'),
-            'password' => isset($config['password']) ? $config['password'] : getenv('NETSUITE_PASSWORD'),
-            'role'     => isset($config['role'])     ? $config['role']     : getenv('NETSUITE_ROLE'),
-            'account'  => isset($config['account'])  ? $config['account']  : getenv('NETSUITE_ACCOUNT'),
+        return array(
+            'classmap' => require __DIR__."/includes/classmap.php",
+            'trace' => 1,
+            'connection_timeout' => 5,
+            'cache_wsdl' => WSDL_CACHE_BOTH,
+            'location' => $config['host'] . "/services/NetSuitePort_" . $config['endpoint'],
+            'keep_alive' => false,
+            'features' => SOAP_SINGLE_ELEMENT_ARRAYS,
+            'user_agent' =>  "PHP-SOAP/" . phpversion() . " + ryanwinchester/netsuite-php",
         );
-
-        // Verify all the required parameters are set.
-        if (in_array(false, $required)) {
-            throw new \InvalidArgumentException("You must provide all the required NetSuite configuration options.");
-        }
-
-        // Optional config parameters.
-        $optional = array(
-            'logging'  => isset($config['logging'])  ? $config['logging']  : getenv('NETSUITE_LOGGING'),
-            'log_path' => isset($config['log_path']) ? $config['log_path'] : getenv('NETSUITE_LOG_PATH'),
-        );
-
-        $this->config = array_merge($required, $optional);
     }
 
     /**
-     * @param bool $on
+     * Create the Passport.
+     *
+     * @param array $config
+     * @return Passport
      */
-    public function logRequests($on = true)
+    public function createPassportFromConfig($config)
     {
-        $this->config['logging'] = $on;
+        $passport = new Passport();
+        $passport->account = $config['account'];
+        $passport->email = $config['email'];
+        $passport->password = $config['password'];
+        $passport->role = new RecordRef();
+        $passport->role->internalId = $config['role'];
+
+        return $passport;
     }
 
     /**
-     * @param string $logPath
+     * Add a header by name.
+     *
+     * @param string $header
+     * @param mixed $value
      */
-    public function setLogPath($logPath)
+    public function addHeader($header, $value)
     {
-        $this->config['log_path'] = $logPath;
+        $this->soapHeaders[$header] = new SoapHeader("ns", $header, $value);
     }
 
     /**
-     * Set the Passport.
+     * Remove a header by name.
+     *
+     * @param string $header
      */
-    public function setPassport()
+    public function clearHeader($header)
     {
-        $this->passport = new Passport();
-        $this->passport->account = $this->config['account'];
-        $this->passport->email = $this->config['email'];
-        $this->passport->password = $this->config['password'];
-        $this->passport->role = new RecordRef();
-        $this->passport->role->internalId = $this->config['role'];
+        unset($this->soapHeaders[$header]);
     }
 
     /**
-     * @param $option
-     */
-    public function useRequestLevelCredentials($option)
-    {
-        $this->userequest = $option;
-    }
-
-    /**
-     * Set preferences.
+     * Set preferences header.
      *
      * @param bool $warningAsError
      * @param bool $disableMandatoryCustomFieldValidation
@@ -169,17 +132,17 @@ class NetSuiteClient
         $disableSystemNotesForCustomFields = false,
         $ignoreReadOnlyFields = false
     ) {
-        $sp = new Preferences();
-        $sp->warningAsError  = $warningAsError;
-        $sp->disableMandatoryCustomFieldValidation = $disableMandatoryCustomFieldValidation;
-        $sp->disableSystemNotesForCustomFields = $disableSystemNotesForCustomFields;
-        $sp->ignoreReadOnlyFields = $ignoreReadOnlyFields;
+        $preferences = new Preferences();
+        $preferences->warningAsError = $warningAsError;
+        $preferences->disableMandatoryCustomFieldValidation = $disableMandatoryCustomFieldValidation;
+        $preferences->disableSystemNotesForCustomFields = $disableSystemNotesForCustomFields;
+        $preferences->ignoreReadOnlyFields = $ignoreReadOnlyFields;
 
-        $this->addHeader("preferences", $sp);
+        $this->addHeader("preferences", $preferences);
     }
 
     /**
-     * Clear preferences.
+     * Clear preferences header.
      */
     public function clearPreferences()
     {
@@ -187,18 +150,20 @@ class NetSuiteClient
     }
 
     /**
+     * Set the search preferences header.
+     *
      * @param bool $bodyFieldsOnly
      * @param int $pageSize
      * @param bool $returnSearchColumns
      */
     public function setSearchPreferences($bodyFieldsOnly = true, $pageSize = 50, $returnSearchColumns = true)
     {
-        $sp = new SearchPreferences();
-        $sp->bodyFieldsOnly = $bodyFieldsOnly;
-        $sp->pageSize = $pageSize;
-        $sp->returnSearchColumns = $returnSearchColumns;
+        $preferences = new SearchPreferences();
+        $preferences->bodyFieldsOnly = $bodyFieldsOnly;
+        $preferences->pageSize = $pageSize;
+        $preferences->returnSearchColumns = $returnSearchColumns;
 
-        $this->addHeader("searchPreferences", $sp);
+        $this->addHeader("searchPreferences", $preferences);
     }
 
     /**
@@ -210,100 +175,44 @@ class NetSuiteClient
     }
 
     /**
-     * @param string $header_name
-     * @param mixed $header
+     * SoapClient, even with keep-alive set to false, keeps sending the JSESSIONID cookie back to
+     * the server on subsequent requests. Un-setting the cookie will prevent this.
      */
-    public function addHeader($header_name, $header)
+    private function fixWtfCookieBug()
     {
-        $this->soapHeaders[$header_name] = new \SoapHeader("ns", $header_name, $header);
+        $this->client->__setCookie("JSESSIONID");
     }
 
     /**
-     * @param string $header_name
+     * Turn request logging on or off.
+     *
+     * @param bool $on
      */
-    public function clearHeader($header_name)
+    public function logRequests($on = true)
     {
-        unset($this->soapHeaders[$header_name]);
+        $this->config['logging'] = $on;
     }
 
     /**
-     * @param string $operation
-     * @param mixed $parameter
-     * @return mixed
+     * Set the logging path.
+     *
+     * @param string $logPath
      */
-    protected function makeSoapCall($operation, $parameter)
+    public function setLogPath($logPath)
     {
-        if ($this->userequest) {
-            // use request level credentials, add passport as a SOAP header
-            $this->addHeader("passport", $this->passport);
-            // SoapClient, even with keep-alive set to false, keeps sending the JSESSIONID cookie back to
-            // the server on subsequent requests. Unsetting the cookie to prevent this.
-            $this->client->__setCookie("JSESSIONID");
-        } else {
-            $this->clearHeader("passport");
-        }
-
-        $response = $this->client->__soapCall($operation, array($parameter), null, $this->soapHeaders);
-
-        $this->logSoapCall($operation);
-
-        return $response;
+        $this->config['log_path'] = $logPath;
     }
 
     /**
-     * Log the last soap call as request and response XML files.
+     * Log the last SOAP call.
      *
      * @param string $operation
      */
     private function logSoapCall($operation)
     {
         if ($this->config['logging'] && file_exists($this->config['log_path'])) {
-            $fileName = "fungku-netsuite-php-" . date("Ymd.His") . "-" . $operation;
-            $logFile = $this->config['log_path'] ."/". $fileName;
-
-            // REQUEST
-            $request = $logFile . "-request.xml";
-            $Handle = fopen($request, 'w');
-            $Data = $this->client->__getLastRequest();
-            $Data = cleanUpNamespaces($Data);
-
-            $xml = simplexml_load_string($Data, 'SimpleXMLElement', LIBXML_NOCDATA);
-
-            $privateFieldXpaths = array(
-                '//password',
-                '//password2',
-                '//currentPassword',
-                '//newPassword',
-                '//newPassword2',
-                '//ccNumber',
-                '//ccSecurityCode',
-                '//socialSecurityNumber',
-            );
-
-            $privateFields = $xml->xpath(implode(" | ", $privateFieldXpaths));
-
-            foreach ($privateFields as &$field) {
-                (string) $field[0] = "[Content Removed for Security Reasons]";
-            }
-
-            $stringCustomFields = $xml->xpath("//customField[@xsitype='StringCustomFieldRef']");
-
-            foreach ($stringCustomFields as $field) {
-                (string) $field->value = "[Content Removed for Security Reasons]";
-            }
-
-            $xml_string = str_replace('xsitype', 'xsi:type', $xml->asXML());
-
-            fwrite($Handle, $xml_string);
-            fclose($Handle);
-
-            // RESPONSE
-            $response = $logFile . "-response.xml";
-            $Handle = fopen($response, 'w');
-            $Data = $this->client->__getLastResponse();
-
-            fwrite($Handle, $Data);
-            fclose($Handle);
+            $logger = new Logger($this->config['log_path']);
+            $logger->logSoapCall($this->client, $operation);
         }
     }
 }
