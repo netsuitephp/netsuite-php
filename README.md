@@ -17,10 +17,10 @@ Just added Namespaces :new:
 
 ## Adding it to your project:
 
-For endpoint 2015_1
+For example, for endpoint 2015_2
 
 ```
-composer require "fungku/netsuite-php: 2015.1.*"
+composer require "fungku/netsuite-php: 2015.2.*"
 ```
 
 The versions now match the endpoint version. So whatever endpoint you are using, you should match the version to that.
@@ -32,23 +32,25 @@ The versions now match the endpoint version. So whatever endpoint you are using,
 The rest of the examples assume that you have done this.
 
 ```php
+require 'vendor/autoload.php';
+
+use Fungku\NetSuite\NetSuiteService
+
 $config = array(
-   // Required
-   "endpoint"  => "2015_1",
-    "host"     => "https://webservices.netsuite.com",
-    "email"    => "jDoe@netsuite.com",
-    "password" => "mySecretPwd",
-    "role"     => "3",
-    "account"  => "MYACCT1",
-    // Optional
-    "logging"  => true,
-    "log_path" => "/var/www/myapp/logs/netsuite"
+   // required -------------------------------------
+   "endpoint" => "2015_2",
+   "host"     => "https://webservices.netsuite.com",
+   "email"    => "jDoe@netsuite.com",
+   "password" => "mySecretPwd",
+   "role"     => "3",
+   "account"  => "MYACCT1",
+   // optional -------------------------------------
+   "logging"  => true,
+   "log_path" => "/var/www/myapp/logs/netsuite"
 );
 
-$service = new Fungku\NetSuite\NetSuiteService($config);
+$service = new NetSuiteService($config);
 ```
-
-If you would rather use environment variables, [you can do that](#using-environment-variables-instead-of-a-config-array) instead of the config array.
 
 #### Retreiving a customer record:
 
@@ -154,18 +156,6 @@ $service->logRequests(true);  // Turn logging on.
 $service->logRequests(false); // Turn logging off.
 ```
 
-#### Using environment variables instead of a config array:
-
-You can optionally avoid passing configuration array to the constructor by setting the following environment variables:
-```
-NETSUITE_ENDPOINT=2015_1
-NETSUITE_HOST=https://webservices.netsuite.com
-NETSUITE_EMAIL=jDoe@netsuite.com
-NETSUITE_PASSWORD=mySecretPwd
-NETSUITE_ROLE=3
-NETSUITE_ACCOUNT=MYACCT1
-```
-
 ## Status
 
  - [x] Extract the ~1500 classes from their single file...
@@ -177,6 +167,6 @@ NETSUITE_ACCOUNT=MYACCT1
 
 ## License
 
-[Original work](http://www.netsuite.com/portal/developers/resources/suitetalk-sample-applications.shtml) is Copyright &copy; 2010-2012 NetSuite Inc. and provided "as is." Refer to the [NetSuite Toolkit License Agreement](https://github.com/fungku/netsuite-php/blob/master/original-agreement.docx?raw=true) file.
+[Original work](http://www.netsuite.com/portal/developers/resources/suitetalk-sample-applications.shtml) is Copyright &copy; 2010-2015 NetSuite Inc. and provided "as is." Refer to the [NetSuite Toolkit License Agreement](https://github.com/ryanwinchester/netsuite-php/blob/master/original/NetSuite%20Application%20Developer%20License%20Agreement.txt) file.
 
-Modified and new work is Copyright &copy; 2015 Ryan Winchester (fungku), licensed under the **Apache 2.0** open source software license. Refer to the [LICENSE](https://github.com/fungku/netsuite-php/blob/master/LICENSE.txt) file.
+All additional work is licensed under the **Apache 2.0** open source software license according to the included [LICENSE](https://github.com/fungku/netsuite-php/blob/master/LICENSE.txt) file.

@@ -1,0 +1,5 @@
+suites:
+    main:
+        namespace: Fungku\NetSuite
+        psr4_prefix: Fungku\NetSuite
+        src_path: src

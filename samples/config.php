@@ -1,5 +1,6 @@
 <?php
 
+// An example of loading your config from environment variables with optional defaults.
 return array(
     'endpoint' => getenv('NETSUITE_ENDPOINT') ?: '2015_2',
     'host'     => getenv('NETSUITE_HOST')     ?: 'https://webservices.netsuite.com',
