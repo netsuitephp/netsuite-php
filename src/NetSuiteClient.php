@@ -33,7 +33,7 @@ class NetSuiteClient
      * @param array $options
      * @param SoapClient $client
      */
-    public function __construct($config, $options = array(), SoapClient $client = null)
+    public function __construct($config, $options = array(), $client = null)
     {
         $this->config = $config;
         $this->options = array_merge($this->createOptionsFromConfig($this->config), $options);
