@@ -85,7 +85,7 @@ class NetSuiteClient
      * @param array $config
      * @return Passport
      */
-    public function createPassportFromConfig($config)
+    private function createPassportFromConfig($config)
     {
         $passport = new Passport();
         $passport->account = $config['account'];
