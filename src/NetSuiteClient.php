@@ -1,11 +1,22 @@
 <?php
+/**
+ * This file is part of the SevenShores/NetSuite library.
+ *
+ * @package    ryanwinchester/netsuite-php
+ * @author     Ryan Winchester <fungku@gmail.com>
+ * @copyright  Copyright (c) Ryan Winchester
+ * @license    http://www.apache.org/licenses/LICENSE-2.0 Apache-2.0
+ * @link       https://github.com/ryanwinchester/netsuite-php
+ * created:    2015-01-22  1:04 PM
+ */
 
-namespace Fungku\NetSuite;
+namespace NetSuite;
 
-use Fungku\NetSuite\Classes\Passport;
-use Fungku\NetSuite\Classes\Preferences;
-use Fungku\NetSuite\Classes\RecordRef;
-use Fungku\NetSuite\Classes\SearchPreferences;
+use NetSuite\Classes\ApplicationInfo;
+use NetSuite\Classes\Passport;
+use NetSuite\Classes\Preferences;
+use NetSuite\Classes\RecordRef;
+use NetSuite\Classes\SearchPreferences;
 use SoapClient;
 use SoapHeader;
 
@@ -37,6 +48,23 @@ class NetSuiteClient
         $this->client = $client ?: new SoapClient($wsdl, $options);
     }
 
+    public static function createFromEnv($options = array(), $client = null)
+    {
+        $config = array(
+            'endpoint' => getenv('NETSUITE_ENDPOINT') ?: '2015_2',
+            'host' => getenv('NETSUITE_HOST') ?: 'https://webservices.sandbox.netsuite.com',
+            'email' => getenv('NETSUITE_EMAIL'),
+            'password' => getenv('NETSUITE_PASSWORD'),
+            'role' => getenv('NETSUITE_ROLE') ?: '3',
+            'account' => getenv('NETSUITE_ACCOUNT'),
+            'app_id' => getenv('NETSUITE_APP_ID') ?: '4AD027CA-88B3-46EC-9D3E-41C6E6A325E2',
+            'logging' => getenv('NETSUITE_LOGGING'),
+            'log_path' => getenv('NETSUITE_LOG_PATH') ?: '',
+        );
+
+        return new static($config, $options, $client);
+    }
+
     /**
      * Make the SOAP call!
      *
@@ -47,6 +75,7 @@ class NetSuiteClient
     protected function makeSoapCall($operation, $parameter)
     {
         $this->fixWtfCookieBug();
+        $this->setApplicationInfo($this->config['app_id']);
         $this->addHeader("passport", $this->createPassportFromConfig($this->config));
 
         try {
@@ -73,10 +102,10 @@ class NetSuiteClient
             'trace' => 1,
             'connection_timeout' => 5,
             'cache_wsdl' => WSDL_CACHE_BOTH,
-            'location' => $config['host'] . "/services/NetSuitePort_" . $config['endpoint'],
+            'location' => $config['host']."/services/NetSuitePort_".$config['endpoint'],
             'keep_alive' => false,
             'features' => SOAP_SINGLE_ELEMENT_ARRAYS,
-            'user_agent' =>  "PHP-SOAP/" . phpversion() . " + ryanwinchester/netsuite-php",
+            'user_agent' => "PHP-SOAP/".phpversion()." + ryanwinchester/netsuite-php",
         ), $overrides);
     }
 
@@ -131,6 +160,18 @@ class NetSuiteClient
     }
 
     /**
+     * Set the application id.
+     *
+     * @param string $appId
+     */
+    public function setApplicationInfo($appId = null)
+    {
+        $applicationInfo = new ApplicationInfo();
+        $applicationInfo->applicationId = $appId;
+        $this->addHeader("applicationInfo", $applicationInfo);
+    }
+
+    /**
      * Set preferences header.
      *
      * @param bool $warningAsError
@@ -149,7 +190,6 @@ class NetSuiteClient
         $preferences->disableMandatoryCustomFieldValidation = $disableMandatoryCustomFieldValidation;
         $preferences->disableSystemNotesForCustomFields = $disableSystemNotesForCustomFields;
         $preferences->ignoreReadOnlyFields = $ignoreReadOnlyFields;
-
         $this->addHeader("preferences", $preferences);
     }
 
@@ -187,8 +227,8 @@ class NetSuiteClient
     }
 
     /**
-     * SoapClient, even with keep-alive set to false, keeps sending the JSESSIONID cookie back to
-     * the server on subsequent requests. Un-setting the cookie will prevent this.
+     * SoapClient apparently always sends the JSESSIONID cookie.
+     * So we'll just un-set it to prevent this.
      */
     private function fixWtfCookieBug()
     {

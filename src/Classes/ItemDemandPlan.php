@@ -1,39 +1,56 @@
 <?php
+/**
+ * This file is part of the SevenShores/NetSuite library
+ * AND originally from the NetSuite PHP Toolkit.
+ *
+ * New content:
+ * @package    ryanwinchester/netsuite-php
+ * @copyright  Copyright (c) Ryan Winchester
+ * @license    http://www.apache.org/licenses/LICENSE-2.0 Apache-2.0
+ * @link       https://github.com/ryanwinchester/netsuite-php
+ *
+ * Original content:
+ * @copyright  Copyright (c) NetSuite Inc.
+ * @license    https://raw.githubusercontent.com/ryanwinchester/netsuite-php/master/original/NetSuite%20Application%20Developer%20License%20Agreement.txt
+ * @link       http://www.netsuite.com/portal/developers/resources/suitetalk-sample-applications.shtml
+ *
+ * generated:  2016-03-04 07:23:27 PM UTC
+ */
 
-namespace Fungku\NetSuite\Classes;
+namespace NetSuite\Classes;
 
 class ItemDemandPlan extends Record {
-	public $customForm;
-	public $subsidiary;
-	public $location;
-	public $item;
-	public $units;
-	public $memo;
-	public $year;
-	public $month;
-	public $startDate;
-	public $endDate;
-	public $demandPlanCalendarType;
-	public $demandPlanMatrix;
-	public $customFieldList;
-	public $internalId;
-	public $externalId;
-	static $paramtypesmap = array(
-		"customForm" => "RecordRef",
-		"subsidiary" => "RecordRef",
-		"location" => "RecordRef",
-		"item" => "RecordRef",
-		"units" => "RecordRef",
-		"memo" => "string",
-		"year" => "integer",
-		"month" => "DemandPlanMonth",
-		"startDate" => "dateTime",
-		"endDate" => "dateTime",
-		"demandPlanCalendarType" => "DemandPlanCalendarType",
-		"demandPlanMatrix" => "DemandPlanMatrix",
-		"customFieldList" => "CustomFieldList",
-		"internalId" => "string",
-		"externalId" => "string",
-	);
+    public $customForm;
+    public $subsidiary;
+    public $location;
+    public $item;
+    public $units;
+    public $memo;
+    public $year;
+    public $month;
+    public $startDate;
+    public $endDate;
+    public $demandPlanCalendarType;
+    public $demandPlanMatrix;
+    public $customFieldList;
+    public $internalId;
+    public $externalId;
+    static $paramtypesmap = array(
+        "customForm" => "RecordRef",
+        "subsidiary" => "RecordRef",
+        "location" => "RecordRef",
+        "item" => "RecordRef",
+        "units" => "RecordRef",
+        "memo" => "string",
+        "year" => "integer",
+        "month" => "DemandPlanMonth",
+        "startDate" => "dateTime",
+        "endDate" => "dateTime",
+        "demandPlanCalendarType" => "DemandPlanCalendarType",
+        "demandPlanMatrix" => "DemandPlanMatrix",
+        "customFieldList" => "CustomFieldList",
+        "internalId" => "string",
+        "externalId" => "string",
+    );
 }
 

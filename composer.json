@@ -1,7 +1,7 @@
 {
-  "name": "fungku/netsuite-php",
-  "description": "NetSuite PHP API Client with namespaces and autoloading",
-  "keywords": [ "netsuite", "api" ],
+  "name": "ryanwinchester/netsuite-php",
+  "description": "NetSuite PHP API wrapper",
+  "keywords": [ "netsuite", "api", "php" ],
   "type": "library",
   "license": "Apache-2.0",
   "authors": [
@@ -21,7 +21,7 @@
   },
   "autoload": {
     "psr-4": {
-      "Fungku\\NetSuite\\": "src/"
+      "NetSuite\\": "src/"
     },
     "files": [
       "src/includes/functions.php"

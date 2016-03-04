@@ -8,24 +8,15 @@
 
 A PHP API client package for NetSuite, pried from the [NetSuite PHP Toolkit](http://www.netsuite.com/portal/developers/resources/suitetalk-sample-applications.shtml).
 
-You can now pass the configuration to the constructor or set environment variables to instantiate the service class.
-
-Also, the classes have been extracted for PSR autoloading, and for better IDE integration. As well as just making
-it easier to scan and see what is available.
-
-Just added Namespaces :new:
-
 ## Adding it to your project:
 
-For example, for endpoint 2015_2
+Require with composer:
 
 ```
-composer require "fungku/netsuite-php: 2015.2.*"
+composer require "ryanwinchester/netsuite-php:~1.0"
 ```
 
-The versions now match the endpoint version. So whatever endpoint you are using, you should match the version to that.
-
-## Examples:
+## Quickstart:
 
 #### Instantiating the NetSuiteService class:
 
@@ -34,7 +25,7 @@ The rest of the examples assume that you have done this.
 ```php
 require 'vendor/autoload.php';
 
-use Fungku\NetSuite\NetSuiteService
+use SevenShores\NetSuite\Service as NetSuite;
 
 $config = array(
    // required -------------------------------------
@@ -44,19 +35,20 @@ $config = array(
    "password" => "mySecretPwd",
    "role"     => "3",
    "account"  => "MYACCT1",
+   "app_id"   => "4AD027CA-88B3-46EC-9D3E-41C6E6A325E2",
    // optional -------------------------------------
    "logging"  => true,
    "log_path" => "/var/www/myapp/logs/netsuite"
 );
 
-$service = new NetSuiteService($config);
+$netsuite = new NetSuite($config);
 ```
 
 #### Retreiving a customer record:
 
 ```php
-use Fungku\NetSuite\Classes\GetRequest;
-use Fungku\NetSuite\Classes\RecordRef;
+use SevenShores\NetSuite\Classes\GetRequest;
+use SevenShores\NetSuite\Classes\RecordRef;
 
 $request = new GetRequest();
 $request->baseRef = new RecordRef();
@@ -75,9 +67,9 @@ if ( ! $getResponse->readResponse->status->isSuccess) {
 #### Searching for customers who emails start with "j":
 
 ```php
-use Fungku\NetSuite\Classes\SearchStringField;
-use Fungku\NetSuite\Classes\CustomerSearchBasic;
-use Fungku\NetSuite\Classes\SearchRequest;
+use SevenShores\NetSuite\Classes\SearchStringField;
+use SevenShores\NetSuite\Classes\CustomerSearchBasic;
+use SevenShores\NetSuite\Classes\SearchRequest;
 
 $service->setSearchPreferences(false, 20);
 
@@ -107,9 +99,9 @@ if (!$searchResponse->searchResult->status->isSuccess) {
 #### Adding a new customer:
 
 ```php
-use Fungku\NetSuite\Classes\Customer;
-use Fungku\NetSuite\Classes\RecordRef;
-use Fungku\NetSuite\Classes\AddRequest;
+use SevenShores\NetSuite\Classes\Customer;
+use SevenShores\NetSuite\Classes\RecordRef;
+use SevenShores\NetSuite\Classes\AddRequest;
 
 $customer = new Customer();
 $customer->lastName = "Doe";
