@@ -16,10 +16,6 @@ class NetSuiteClient
      */
     private $config;
     /**
-     * @var array
-     */
-    private $options;
-    /**
      * @var SoapClient
      */
     private $client;
@@ -36,8 +32,9 @@ class NetSuiteClient
     public function __construct($config, $options = array(), $client = null)
     {
         $this->config = $config;
-        $this->options = array_merge($this->createOptionsFromConfig($this->config), $options);
-        $this->client = $client ?: new SoapClient($this->config['host'], $this->options);
+        $options = $this->createOptions($this->config, $options);
+        $wsdl = $this->createWsdl($this->config);
+        $this->client = $client ?: new SoapClient($wsdl, $options);
     }
 
     /**
@@ -52,22 +49,26 @@ class NetSuiteClient
         $this->fixWtfCookieBug();
         $this->addHeader("passport", $this->createPassportFromConfig($this->config));
 
-        $response = $this->client->__soapCall($operation, array($parameter), null, $this->soapHeaders);
-
-        $this->logSoapCall($operation);
-
-        return $response;
+        try {
+            $response = $this->client->__soapCall($operation, array($parameter), null, $this->soapHeaders);
+            $this->logSoapCall($operation);
+            return $response;
+        } catch (\Exception $e) {
+            $this->logSoapCall($operation);
+            throw new $e($e->getMessage(), $e->getCode(), $e);
+        }
     }
 
     /**
      * Create the options array.
      *
      * @param array $config
+     * @param array $overrides
      * @return array
      */
-    private function createOptionsFromConfig($config)
+    private function createOptions($config, $overrides = array())
     {
-        return array(
+        return array_merge(array(
             'classmap' => require __DIR__."/includes/classmap.php",
             'trace' => 1,
             'connection_timeout' => 5,
@@ -76,7 +77,18 @@ class NetSuiteClient
             'keep_alive' => false,
             'features' => SOAP_SINGLE_ELEMENT_ARRAYS,
             'user_agent' =>  "PHP-SOAP/" . phpversion() . " + ryanwinchester/netsuite-php",
-        );
+        ), $overrides);
+    }
+
+    /**
+     * Build the WSDL address from the config.
+     *
+     * @param array $config
+     * @return string
+     */
+    private function createWsdl($config)
+    {
+        return $config['host'].'/wsdl/v'.$config['endpoint'].'_0/netsuite.wsdl';
     }
 
     /**
