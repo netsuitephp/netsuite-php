@@ -24,5 +24,4 @@ $php_tag
  */
 
 return $classmap;
-
 PHP;

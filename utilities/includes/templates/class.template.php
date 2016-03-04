@@ -26,5 +26,4 @@ $php_tag
 namespace NetSuite\Classes;
 
 class $class
-
 PHP;

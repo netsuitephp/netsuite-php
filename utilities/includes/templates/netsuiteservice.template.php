@@ -29,5 +29,4 @@ namespace NetSuite;
 use NetSuite\Classes;
 
 class $serviceClass
-
 PHP;
