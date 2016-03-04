@@ -25,7 +25,7 @@ The rest of the examples assume that you have done this.
 ```php
 require 'vendor/autoload.php';
 
-use SevenShores\NetSuite\Service as NetSuite;
+use NetSuite\Service as NetSuite;
 
 $config = array(
    // required -------------------------------------
@@ -47,8 +47,8 @@ $netsuite = new NetSuite($config);
 #### Retreiving a customer record:
 
 ```php
-use SevenShores\NetSuite\Classes\GetRequest;
-use SevenShores\NetSuite\Classes\RecordRef;
+use NetSuite\Classes\GetRequest;
+use NetSuite\Classes\RecordRef;
 
 $request = new GetRequest();
 $request->baseRef = new RecordRef();
@@ -67,9 +67,9 @@ if ( ! $getResponse->readResponse->status->isSuccess) {
 #### Searching for customers who emails start with "j":
 
 ```php
-use SevenShores\NetSuite\Classes\SearchStringField;
-use SevenShores\NetSuite\Classes\CustomerSearchBasic;
-use SevenShores\NetSuite\Classes\SearchRequest;
+use NetSuite\Classes\SearchStringField;
+use NetSuite\Classes\CustomerSearchBasic;
+use NetSuite\Classes\SearchRequest;
 
 $service->setSearchPreferences(false, 20);
 
@@ -99,9 +99,9 @@ if (!$searchResponse->searchResult->status->isSuccess) {
 #### Adding a new customer:
 
 ```php
-use SevenShores\NetSuite\Classes\Customer;
-use SevenShores\NetSuite\Classes\RecordRef;
-use SevenShores\NetSuite\Classes\AddRequest;
+use NetSuite\Classes\Customer;
+use NetSuite\Classes\RecordRef;
+use NetSuite\Classes\AddRequest;
 
 $customer = new Customer();
 $customer->lastName = "Doe";
