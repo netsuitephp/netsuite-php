@@ -12,8 +12,10 @@ A PHP API client package for NetSuite, pried from the [NetSuite PHP Toolkit](htt
 
 Require with composer:
 
+**V2 in Alpha**
+
 ```
-composer require "ryanwinchester/netsuite-php: v2.0.1-alpha@dev"
+composer require "ryanwinchester/netsuite-php: 2.0.*@dev"
 ```
 
 ## Quickstart:
