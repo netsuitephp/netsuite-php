@@ -13,7 +13,7 @@ A PHP API client package for NetSuite, pried from the [NetSuite PHP Toolkit](htt
 Require with composer:
 
 ```
-composer require "ryanwinchester/netsuite-php: v2.0.0-alpha@dev"
+composer require "ryanwinchester/netsuite-php: v2.0.1-alpha@dev"
 ```
 
 ## Quickstart:
