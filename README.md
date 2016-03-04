@@ -1,10 +1,6 @@
 # NetSuite PHP API Client
 
-[![Version](https://img.shields.io/packagist/v/fungku/netsuite-php.svg?style=flat-square)](https://packagist.org/packages/fungku/netsuite-php)
- [![Total Downloads](https://img.shields.io/packagist/dt/fungku/netsuite-php.svg?style=flat-square)](https://packagist.org/packages/fungku/netsuite-php)
- [![License](https://img.shields.io/packagist/l/fungku/netsuite-php.svg?style=flat-square)](https://packagist.org/packages/fungku/netsuite-php)
- [![Scrutinizer Code Quality](https://img.shields.io/scrutinizer/g/fungku/netsuite-php.svg?style=flat-square)](https://scrutinizer-ci.com/g/fungku/netsuite-php/?branch=master)
- [![Build Status](https://img.shields.io/travis/fungku/netsuite-php.svg?style=flat-square)](https://travis-ci.org/fungku/netsuite-php)
+ [![License](https://img.shields.io/packagist/l/ryanwinchester/netsuite-php.svg?style=flat-square)](https://packagist.org/packages/ryanwinchester/netsuite-php)
 
 A PHP API client package for NetSuite, pried from the [NetSuite PHP Toolkit](http://www.netsuite.com/portal/developers/resources/suitetalk-sample-applications.shtml).
 
@@ -14,9 +10,18 @@ Require with composer:
 
 **V2 in Alpha**
 
+**NOTE: package name change**
+
 ```
 composer require "ryanwinchester/netsuite-php: 2.0.*@dev"
 ```
+
+## Changes in v2:
+
+- Changed namespaces
+- Significantly simplified NetSuiteClient
+- Added a convenience method for creating an instance using environment variables for configuration
+- Improved logging, still logs even if exception is thrown in soap call.
 
 ## Quickstart:
 
@@ -27,7 +32,7 @@ The rest of the examples assume that you have done this.
 ```php
 require 'vendor/autoload.php';
 
-use NetSuite\Service as NetSuite;
+use NetSuite\NetSuiteService;
 
 $config = array(
    // required -------------------------------------
@@ -43,7 +48,7 @@ $config = array(
    "log_path" => "/var/www/myapp/logs/netsuite"
 );
 
-$netsuite = new NetSuite($config);
+$netsuite = new NetSuiteService($config);
 ```
 
 #### Retreiving a customer record:
