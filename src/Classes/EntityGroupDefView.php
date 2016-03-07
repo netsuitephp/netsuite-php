@@ -1,4 +1,4 @@
-<?php namespace Fungku\NetSuite\Classes;
+<?php namespace NetSuite\Classes;
 
 class EntityGroupDefView {
 	static $paramtypesmap = array(
