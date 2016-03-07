@@ -68,7 +68,7 @@ function setFields($object, array $fieldArray=null)
                 trigger_error("Trying to assign an object into an array parameter \"" .$fldName . "\" of class \"" . $classname . "\", it will be omitted", E_USER_WARNING);
                 continue;
             }
-            $class = 'Fungku\\NetSuite\\Classes\\' . $typesmap[$fldName];
+            $class = 'NetSuite\\Classes\\' . $typesmap[$fldName];
             $obj = new $class();
             setFields($obj, $fldValue);
             $object->$fldName = $obj;
@@ -94,7 +94,7 @@ function setFields($object, array $fieldArray=null)
                 } else {
                     // example: $item2 = array( 'item'      => new nsComplexObject('RecordRef', array('internalId' => '17')),
                     //                          'quantity'  => '3')
-                    $class = 'Fungku\\NetSuite\\Classes\\'. $basetype;
+                    $class = 'NetSuite\\Classes\\'. $basetype;
                     $obj = new $class();
                     setFields($obj, $item);
                     $val[] = $obj;
