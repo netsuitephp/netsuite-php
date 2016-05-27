@@ -1,6 +1,6 @@
 <?php
 
-namespace spec\Fungku\NetSuite;
+namespace spec\NetSuite;
 
 use PhpSpec\ObjectBehavior;
 use Prophecy\Argument;
@@ -16,6 +16,6 @@ class NetSuiteServiceSpec extends ObjectBehavior
 
     function it_is_initializable()
     {
-        $this->shouldHaveType('Fungku\NetSuite\NetSuiteService');
+        $this->shouldHaveType('NetSuite\NetSuiteService');
     }
 }
