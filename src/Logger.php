@@ -20,7 +20,7 @@ class Logger
     public function logSoapCall($client, $operation)
     {
         if (file_exists($this->path)) {
-            $fileName = "fungku-netsuite-php-" . date("Ymd.His") . "-" . $operation;
+            $fileName = "ryanwinchester-netsuite-php-" . date("Ymd.His") . "-" . $operation;
             $logFile = $this->path ."/". $fileName;
 
             // REQUEST

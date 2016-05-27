@@ -168,4 +168,4 @@ $service->logRequests(false); // Turn logging off.
 
 [Original work](http://www.netsuite.com/portal/developers/resources/suitetalk-sample-applications.shtml) is Copyright &copy; 2010-2015 NetSuite Inc. and provided "as is." Refer to the [NetSuite Toolkit License Agreement](https://github.com/ryanwinchester/netsuite-php/blob/master/original/NetSuite%20Application%20Developer%20License%20Agreement.txt) file.
 
-All additional work is licensed under the **Apache 2.0** open source software license according to the included [LICENSE](https://github.com/fungku/netsuite-php/blob/master/LICENSE.txt) file.
+All additional work is licensed under the **Apache 2.0** open source software license according to the included [LICENSE](https://github.com/ryanwinchester/netsuite-php/blob/master/LICENSE.txt) file.
