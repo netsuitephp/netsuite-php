@@ -14,7 +14,7 @@
  * @license    https://raw.githubusercontent.com/ryanwinchester/netsuite-php/master/original/NetSuite%20Application%20Developer%20License%20Agreement.txt
  * @link       http://www.netsuite.com/portal/developers/resources/suitetalk-sample-applications.shtml
  *
- * generated:  2016-03-04 07:23:27 PM UTC
+ * generated:  2016-06-02 02:54:03 PM UTC
  */
 
 namespace NetSuite\Classes;
@@ -149,10 +149,12 @@ class Invoice extends Record {
     public $itemList;
     public $itemCostList;
     public $giftCertRedemptionList;
+    public $promotionsList;
     public $expCostList;
     public $timeList;
     public $shipGroupList;
     public $approvalStatus;
+    public $accountingBookDetailList;
     public $customFieldList;
     public $internalId;
     public $externalId;
@@ -286,13 +288,14 @@ class Invoice extends Record {
         "itemList" => "InvoiceItemList",
         "itemCostList" => "InvoiceItemCostList",
         "giftCertRedemptionList" => "GiftCertRedemptionList",
+        "promotionsList" => "PromotionsList",
         "expCostList" => "InvoiceExpCostList",
         "timeList" => "InvoiceTimeList",
         "shipGroupList" => "InvoiceShipGroupList",
         "approvalStatus" => "RecordRef",
+        "accountingBookDetailList" => "AccountingBookDetailList",
         "customFieldList" => "CustomFieldList",
         "internalId" => "string",
         "externalId" => "string",
     );
 }
-

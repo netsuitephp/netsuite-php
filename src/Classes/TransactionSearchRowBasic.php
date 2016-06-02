@@ -14,7 +14,7 @@
  * @license    https://raw.githubusercontent.com/ryanwinchester/netsuite-php/master/original/NetSuite%20Application%20Developer%20License%20Agreement.txt
  * @link       http://www.netsuite.com/portal/developers/resources/suitetalk-sample-applications.shtml
  *
- * generated:  2016-03-04 07:23:27 PM UTC
+ * generated:  2016-06-02 02:54:03 PM UTC
  */
 
 namespace NetSuite\Classes;
@@ -195,6 +195,7 @@ class TransactionSearchRowBasic extends SearchRowBasic {
     public $line;
     public $lineSequenceNumber;
     public $location;
+    public $locationAutoAssigned;
     public $mainLine;
     public $mainName;
     public $manufacturingRouting;
@@ -209,7 +210,9 @@ class TransactionSearchRowBasic extends SearchRowBasic {
     public $netAmountNoTax;
     public $nextApprover;
     public $nextBillDate;
+    public $noAutoAssignLocation;
     public $nonReimbursable;
+    public $oneTimeTotal;
     public $opportunity;
     public $options;
     public $orderPriority;
@@ -260,7 +263,11 @@ class TransactionSearchRowBasic extends SearchRowBasic {
     public $realizedGainPostingTransaction;
     public $recognizedRevenue;
     public $recordType;
+    public $recurAnnuallyTotal;
+    public $recurMonthlyTotal;
+    public $recurQuarterlyTotal;
     public $recurringBill;
+    public $recurWeeklyTotal;
     public $refNumber;
     public $revCommitStatus;
     public $revCommittingTransaction;
@@ -289,6 +296,7 @@ class TransactionSearchRowBasic extends SearchRowBasic {
     public $shipAddress3;
     public $shipAddressee;
     public $shipAttention;
+    public $shipCarrier;
     public $shipCity;
     public $shipComplete;
     public $shipCountry;
@@ -528,6 +536,7 @@ class TransactionSearchRowBasic extends SearchRowBasic {
         "line" => "SearchColumnLongField[]",
         "lineSequenceNumber" => "SearchColumnLongField[]",
         "location" => "SearchColumnSelectField[]",
+        "locationAutoAssigned" => "SearchColumnBooleanField[]",
         "mainLine" => "SearchColumnBooleanField[]",
         "mainName" => "SearchColumnStringField[]",
         "manufacturingRouting" => "SearchColumnSelectField[]",
@@ -542,7 +551,9 @@ class TransactionSearchRowBasic extends SearchRowBasic {
         "netAmountNoTax" => "SearchColumnDoubleField[]",
         "nextApprover" => "SearchColumnSelectField[]",
         "nextBillDate" => "SearchColumnDateField[]",
+        "noAutoAssignLocation" => "SearchColumnBooleanField[]",
         "nonReimbursable" => "SearchColumnBooleanField[]",
+        "oneTimeTotal" => "SearchColumnDoubleField[]",
         "opportunity" => "SearchColumnSelectField[]",
         "options" => "SearchColumnStringField[]",
         "orderPriority" => "SearchColumnDoubleField[]",
@@ -593,7 +604,11 @@ class TransactionSearchRowBasic extends SearchRowBasic {
         "realizedGainPostingTransaction" => "SearchColumnStringField[]",
         "recognizedRevenue" => "SearchColumnDoubleField[]",
         "recordType" => "SearchColumnStringField[]",
+        "recurAnnuallyTotal" => "SearchColumnDoubleField[]",
+        "recurMonthlyTotal" => "SearchColumnDoubleField[]",
+        "recurQuarterlyTotal" => "SearchColumnDoubleField[]",
         "recurringBill" => "SearchColumnBooleanField[]",
+        "recurWeeklyTotal" => "SearchColumnDoubleField[]",
         "refNumber" => "SearchColumnLongField[]",
         "revCommitStatus" => "SearchColumnEnumSelectField[]",
         "revCommittingTransaction" => "SearchColumnSelectField[]",
@@ -622,6 +637,7 @@ class TransactionSearchRowBasic extends SearchRowBasic {
         "shipAddress3" => "SearchColumnStringField[]",
         "shipAddressee" => "SearchColumnStringField[]",
         "shipAttention" => "SearchColumnStringField[]",
+        "shipCarrier" => "SearchColumnEnumSelectField[]",
         "shipCity" => "SearchColumnStringField[]",
         "shipComplete" => "SearchColumnBooleanField[]",
         "shipCountry" => "SearchColumnEnumSelectField[]",
@@ -687,4 +703,3 @@ class TransactionSearchRowBasic extends SearchRowBasic {
         "customFieldList" => "SearchColumnCustomFieldList",
     );
 }
-

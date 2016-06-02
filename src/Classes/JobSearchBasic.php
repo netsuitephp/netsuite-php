@@ -14,7 +14,7 @@
  * @license    https://raw.githubusercontent.com/ryanwinchester/netsuite-php/master/original/NetSuite%20Application%20Developer%20License%20Agreement.txt
  * @link       http://www.netsuite.com/portal/developers/resources/suitetalk-sample-applications.shtml
  *
- * generated:  2016-03-04 07:23:27 PM UTC
+ * generated:  2016-06-02 02:54:03 PM UTC
  */
 
 namespace NetSuite\Classes;
@@ -91,6 +91,7 @@ class JobSearchBasic extends SearchRecordBasic {
     public $phoneticName;
     public $projectedEndDateBaseline;
     public $projectExpenseType;
+    public $revRecForecastRule;
     public $startDate;
     public $startDateBaseline;
     public $state;
@@ -98,6 +99,7 @@ class JobSearchBasic extends SearchRecordBasic {
     public $subsidiary;
     public $timeRemaining;
     public $type;
+    public $usePercentCompleteOverride;
     public $zipCode;
     public $customFieldList;
     static $paramtypesmap = array(
@@ -172,6 +174,7 @@ class JobSearchBasic extends SearchRecordBasic {
         "phoneticName" => "SearchStringField",
         "projectedEndDateBaseline" => "SearchDateField",
         "projectExpenseType" => "SearchMultiSelectField",
+        "revRecForecastRule" => "SearchMultiSelectField",
         "startDate" => "SearchDateField",
         "startDateBaseline" => "SearchDateField",
         "state" => "SearchStringField",
@@ -179,8 +182,8 @@ class JobSearchBasic extends SearchRecordBasic {
         "subsidiary" => "SearchMultiSelectField",
         "timeRemaining" => "SearchDoubleField",
         "type" => "SearchMultiSelectField",
+        "usePercentCompleteOverride" => "SearchBooleanField",
         "zipCode" => "SearchStringField",
         "customFieldList" => "SearchCustomFieldList",
     );
 }
-

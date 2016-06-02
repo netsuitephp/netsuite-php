@@ -17,15 +17,15 @@ function base_path()
 
 function app_path()
 {
-    return __DIR__.'/../../src';
+    return base_path().'/src';
 }
 
 function includes_path()
 {
-    return __DIR__.'/../../src/includes';
+    return base_path().'/src/includes';
 }
 
 function utilities_path()
 {
-    return __DIR__.'/../../utilities';
+    return base_path().'/utilities';
 }

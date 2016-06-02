@@ -14,7 +14,7 @@
  * @license    https://raw.githubusercontent.com/ryanwinchester/netsuite-php/master/original/NetSuite%20Application%20Developer%20License%20Agreement.txt
  * @link       http://www.netsuite.com/portal/developers/resources/suitetalk-sample-applications.shtml
  *
- * generated:  2016-03-04 07:23:27 PM UTC
+ * generated:  2016-06-02 02:54:03 PM UTC
  */
 
 namespace NetSuite\Classes;
@@ -94,6 +94,11 @@ class Estimate extends Record {
     public $salesGroup;
     public $syncSalesTeams;
     public $altSalesTotal;
+    public $oneTime;
+    public $recurWeekly;
+    public $recurMonthly;
+    public $recurQuarterly;
+    public $recurAnnually;
     public $subTotal;
     public $discountTotal;
     public $taxTotal;
@@ -105,6 +110,7 @@ class Estimate extends Record {
     public $salesTeamList;
     public $syncPartnerTeams;
     public $partnersList;
+    public $promotionsList;
     public $shipGroupList;
     public $customFieldList;
     public $internalId;
@@ -184,6 +190,11 @@ class Estimate extends Record {
         "salesGroup" => "RecordRef",
         "syncSalesTeams" => "boolean",
         "altSalesTotal" => "float",
+        "oneTime" => "float",
+        "recurWeekly" => "float",
+        "recurMonthly" => "float",
+        "recurQuarterly" => "float",
+        "recurAnnually" => "float",
         "subTotal" => "float",
         "discountTotal" => "float",
         "taxTotal" => "float",
@@ -195,10 +206,10 @@ class Estimate extends Record {
         "salesTeamList" => "EstimateSalesTeamList",
         "syncPartnerTeams" => "boolean",
         "partnersList" => "EstimatePartnersList",
+        "promotionsList" => "PromotionsList",
         "shipGroupList" => "EstimateShipGroupList",
         "customFieldList" => "CustomFieldList",
         "internalId" => "string",
         "externalId" => "string",
     );
 }
-

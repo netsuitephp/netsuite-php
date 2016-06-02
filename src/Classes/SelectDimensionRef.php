@@ -14,25 +14,14 @@
  * @license    https://raw.githubusercontent.com/ryanwinchester/netsuite-php/master/original/NetSuite%20Application%20Developer%20License%20Agreement.txt
  * @link       http://www.netsuite.com/portal/developers/resources/suitetalk-sample-applications.shtml
  *
- * generated:  2016-03-04 07:23:27 PM UTC
+ * generated:  2016-06-02 02:54:03 PM UTC
  */
 
 namespace NetSuite\Classes;
 
-class AppDefinitionSearchBasic extends SearchRecordBasic {
-    public $description;
-    public $externalId;
-    public $externalIdString;
-    public $internalId;
-    public $internalIdNumber;
-    public $name;
+class SelectDimensionRef extends DimensionRef {
+    public $value;
     static $paramtypesmap = array(
-        "description" => "SearchStringField",
-        "externalId" => "SearchMultiSelectField",
-        "externalIdString" => "SearchStringField",
-        "internalId" => "SearchMultiSelectField",
-        "internalIdNumber" => "SearchLongField",
-        "name" => "SearchStringField",
+        "value" => "ListOrRecordRef",
     );
 }
-

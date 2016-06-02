@@ -14,7 +14,7 @@
  * @license    https://raw.githubusercontent.com/ryanwinchester/netsuite-php/master/original/NetSuite%20Application%20Developer%20License%20Agreement.txt
  * @link       http://www.netsuite.com/portal/developers/resources/suitetalk-sample-applications.shtml
  *
- * generated:  2016-03-04 07:23:27 PM UTC
+ * generated:  2016-06-02 02:54:03 PM UTC
  */
 
 namespace NetSuite\Classes;
@@ -35,6 +35,7 @@ class TransactionLinkType {
     const _dropShipment = "_dropShipment";
     const _endorseTegata = "_endorseTegata";
     const _estimateInvoicing = "_estimateInvoicing";
+    const _fulfillmentRequestFulfillment = "_fulfillmentRequestFulfillment";
     const _intercompanyAdjustment = "_intercompanyAdjustment";
     const _inventoryCountAdjustment = "_inventoryCountAdjustment";
     const _landedCost = "_landedCost";
@@ -42,6 +43,7 @@ class TransactionLinkType {
     const _opportunityClose = "_opportunityClose";
     const _opportunityEstimate = "_opportunityEstimate";
     const _orderBillInvoice = "_orderBillInvoice";
+    const _orderFulfillmentRequest = "_orderFulfillmentRequest";
     const _orderPickingPacking = "_orderPickingPacking";
     const _payment = "_payment";
     const _payTegata = "_payTegata";
@@ -68,4 +70,3 @@ class TransactionLinkType {
     const _wipBuild = "_wipBuild";
     const _workOrderBuild = "_workOrderBuild";
 }
-

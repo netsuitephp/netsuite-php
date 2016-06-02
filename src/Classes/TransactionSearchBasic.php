@@ -14,7 +14,7 @@
  * @license    https://raw.githubusercontent.com/ryanwinchester/netsuite-php/master/original/NetSuite%20Application%20Developer%20License%20Agreement.txt
  * @link       http://www.netsuite.com/portal/developers/resources/suitetalk-sample-applications.shtml
  *
- * generated:  2016-03-04 07:23:27 PM UTC
+ * generated:  2016-06-02 02:54:03 PM UTC
  */
 
 namespace NetSuite\Classes;
@@ -193,6 +193,7 @@ class TransactionSearchBasic extends SearchRecordBasic {
     public $lastModifiedDate;
     public $leadSource;
     public $location;
+    public $locationAutoAssigned;
     public $mainLine;
     public $mainName;
     public $manufacturingRouting;
@@ -207,8 +208,10 @@ class TransactionSearchBasic extends SearchRecordBasic {
     public $netAmount;
     public $nextApprover;
     public $nextBillDate;
+    public $noAutoAssignLocation;
     public $nonReimbursable;
     public $number;
+    public $oneTimeTotal;
     public $opportunity;
     public $orderPriority;
     public $otherRefNum;
@@ -254,7 +257,11 @@ class TransactionSearchBasic extends SearchRecordBasic {
     public $quantityShipRecv;
     public $recognizedRevenue;
     public $recordType;
+    public $recurAnnuallyTotal;
+    public $recurMonthlyTotal;
+    public $recurQuarterlyTotal;
     public $recurringBill;
+    public $recurWeeklyTotal;
     public $refNumber;
     public $revCommitStatus;
     public $revCommittingStatus;
@@ -280,6 +287,7 @@ class TransactionSearchBasic extends SearchRecordBasic {
     public $shipAddress;
     public $shipAddressee;
     public $shipAttention;
+    public $shipCarrier;
     public $shipCity;
     public $shipComplete;
     public $shipCountry;
@@ -519,6 +527,7 @@ class TransactionSearchBasic extends SearchRecordBasic {
         "lastModifiedDate" => "SearchDateField",
         "leadSource" => "SearchMultiSelectField",
         "location" => "SearchMultiSelectField",
+        "locationAutoAssigned" => "SearchBooleanField",
         "mainLine" => "SearchBooleanField",
         "mainName" => "SearchMultiSelectField",
         "manufacturingRouting" => "SearchMultiSelectField",
@@ -533,8 +542,10 @@ class TransactionSearchBasic extends SearchRecordBasic {
         "netAmount" => "SearchDoubleField",
         "nextApprover" => "SearchMultiSelectField",
         "nextBillDate" => "SearchDateField",
+        "noAutoAssignLocation" => "SearchBooleanField",
         "nonReimbursable" => "SearchBooleanField",
         "number" => "SearchLongField",
+        "oneTimeTotal" => "SearchDoubleField",
         "opportunity" => "SearchMultiSelectField",
         "orderPriority" => "SearchDoubleField",
         "otherRefNum" => "SearchTextNumberField",
@@ -580,7 +591,11 @@ class TransactionSearchBasic extends SearchRecordBasic {
         "quantityShipRecv" => "SearchDoubleField",
         "recognizedRevenue" => "SearchDoubleField",
         "recordType" => "SearchStringField",
+        "recurAnnuallyTotal" => "SearchDoubleField",
+        "recurMonthlyTotal" => "SearchDoubleField",
+        "recurQuarterlyTotal" => "SearchDoubleField",
         "recurringBill" => "SearchBooleanField",
+        "recurWeeklyTotal" => "SearchDoubleField",
         "refNumber" => "SearchLongField",
         "revCommitStatus" => "SearchEnumMultiSelectField",
         "revCommittingStatus" => "SearchBooleanField",
@@ -606,6 +621,7 @@ class TransactionSearchBasic extends SearchRecordBasic {
         "shipAddress" => "SearchStringField",
         "shipAddressee" => "SearchStringField",
         "shipAttention" => "SearchStringField",
+        "shipCarrier" => "SearchEnumMultiSelectField",
         "shipCity" => "SearchStringField",
         "shipComplete" => "SearchBooleanField",
         "shipCountry" => "SearchEnumMultiSelectField",
@@ -673,4 +689,3 @@ class TransactionSearchBasic extends SearchRecordBasic {
         "customFieldList" => "SearchCustomFieldList",
     );
 }
-

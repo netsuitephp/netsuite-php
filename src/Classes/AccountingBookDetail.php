@@ -14,21 +14,18 @@
  * @license    https://raw.githubusercontent.com/ryanwinchester/netsuite-php/master/original/NetSuite%20Application%20Developer%20License%20Agreement.txt
  * @link       http://www.netsuite.com/portal/developers/resources/suitetalk-sample-applications.shtml
  *
- * generated:  2016-03-04 07:23:27 PM UTC
+ * generated:  2016-06-02 02:54:03 PM UTC
  */
 
 namespace NetSuite\Classes;
 
-class AppDefinitionSearchRow extends SearchRow {
-    public $basic;
-    public $appPackageJoin;
-    public $creatorJoin;
-    public $userJoin;
+class AccountingBookDetail {
+    public $accountingBook;
+    public $currency;
+    public $exchangeRate;
     static $paramtypesmap = array(
-        "basic" => "AppDefinitionSearchRowBasic",
-        "appPackageJoin" => "AppPackageSearchRowBasic",
-        "creatorJoin" => "EmployeeSearchRowBasic",
-        "userJoin" => "EmployeeSearchRowBasic",
+        "accountingBook" => "RecordRef",
+        "currency" => "RecordRef",
+        "exchangeRate" => "float",
     );
 }
-

@@ -14,7 +14,7 @@
  * @license    https://raw.githubusercontent.com/ryanwinchester/netsuite-php/master/original/NetSuite%20Application%20Developer%20License%20Agreement.txt
  * @link       http://www.netsuite.com/portal/developers/resources/suitetalk-sample-applications.shtml
  *
- * generated:  2016-03-04 07:23:27 PM UTC
+ * generated:  2016-06-02 02:54:03 PM UTC
  */
 
 namespace NetSuite\Classes;
@@ -97,6 +97,7 @@ class Employee extends Record {
     public $billPay;
     public $eligibleForCommission;
     public $subscriptionsList;
+    public $ratesList;
     public $addressbookList;
     public $rolesList;
     public $hrEducationList;
@@ -187,6 +188,7 @@ class Employee extends Record {
         "billPay" => "boolean",
         "eligibleForCommission" => "boolean",
         "subscriptionsList" => "EmployeeSubscriptionsList",
+        "ratesList" => "EmployeeRatesList",
         "addressbookList" => "EmployeeAddressbookList",
         "rolesList" => "EmployeeRolesList",
         "hrEducationList" => "EmployeeHrEducationList",
@@ -201,4 +203,3 @@ class Employee extends Record {
         "externalId" => "string",
     );
 }
-
