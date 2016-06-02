@@ -35,6 +35,7 @@ class ClassSeparator
         $this->file = $this->replaceTabsWithSpaces($this->file);
 
         $classes = $this->classesToArray();
+
         return $this->writeClassesToFiles($classes);
     }
 
@@ -104,14 +105,16 @@ class ClassSeparator
     private function makeClassmapFile($classmap)
     {
         $date = $this->generated_at;
-        $template = include "includes/templates/classmap.template.php";
+        $template = include utilities_path() . "/includes/templates/classmap.template.php";
+
         return file_put_contents(includes_path() . '/classmap.php', $template);
     }
 
     private function makeServiceClassFile($serviceClass)
     {
         $date = $this->generated_at;
-        $template = include "includes/templates/netsuiteservice.template.php";
+        $template = include utilities_path() . "/includes/templates/netsuiteservice.template.php";
+
         return file_put_contents(app_path() . '/NetSuiteService.php', $template);
     }
 
@@ -124,6 +127,7 @@ class ClassSeparator
     {
         // Remove extra whitespace
         $string = preg_replace("/^\s{2,}$/m", "\n", $string);
+
         // Remove extra linebreaks
         return preg_replace("/[\r\n]+/", "\n", $string);
     }
@@ -145,9 +149,10 @@ class ClassSeparator
     private function writeClassesToFiles(array $classes)
     {
         $date = $this->generated_at;
-        return array_walk($classes, function($class) use ($date) {
+
+        return array_walk($classes, function ($class) use ($date) {
             preg_match('~([^ ]+)~', $class, $name);
-            $filename = '../src/Classes/' . $name[0] . '.php';
+            $filename = base_path() . '/src/Classes/' . $name[0] . '.php';
             $template = include utilities_path() . "/includes/templates/class.template.php";
             file_put_contents($filename, $template);
         });
