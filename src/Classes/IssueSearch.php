@@ -14,7 +14,7 @@
  * @license    https://raw.githubusercontent.com/ryanwinchester/netsuite-php/master/original/NetSuite%20Application%20Developer%20License%20Agreement.txt
  * @link       http://www.netsuite.com/portal/developers/resources/suitetalk-sample-applications.shtml
  *
- * generated:  2016-03-04 07:23:27 PM UTC
+ * generated:  2016-06-02 02:54:03 PM UTC
  */
 
 namespace NetSuite\Classes;
@@ -24,6 +24,7 @@ class IssueSearch extends SearchRecord {
     public $caseJoin;
     public $employeeJoin;
     public $fileJoin;
+    public $productTeamJoin;
     public $userJoin;
     public $userNotesJoin;
     public $customSearchJoin;
@@ -32,9 +33,9 @@ class IssueSearch extends SearchRecord {
         "caseJoin" => "SupportCaseSearchBasic",
         "employeeJoin" => "EmployeeSearchBasic",
         "fileJoin" => "FileSearchBasic",
+        "productTeamJoin" => "EntityGroupSearchBasic",
         "userJoin" => "EmployeeSearchBasic",
         "userNotesJoin" => "NoteSearchBasic",
         "customSearchJoin" => "CustomSearchJoin[]",
     );
 }
-

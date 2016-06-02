@@ -14,7 +14,7 @@
  * @license    https://raw.githubusercontent.com/ryanwinchester/netsuite-php/master/original/NetSuite%20Application%20Developer%20License%20Agreement.txt
  * @link       http://www.netsuite.com/portal/developers/resources/suitetalk-sample-applications.shtml
  *
- * generated:  2016-03-04 07:23:27 PM UTC
+ * generated:  2016-06-02 02:54:03 PM UTC
  */
 
 namespace NetSuite\Classes;
@@ -32,6 +32,9 @@ class CreditMemoItem {
     public $amount;
     public $isTaxable;
     public $options;
+    public $shipAddress;
+    public $shipCarrier;
+    public $shipMethod;
     public $taxCode;
     public $taxRate1;
     public $taxRate2;
@@ -81,6 +84,9 @@ class CreditMemoItem {
         "amount" => "float",
         "isTaxable" => "boolean",
         "options" => "CustomFieldList",
+        "shipAddress" => "RecordRef",
+        "shipCarrier" => "ShippingCarrier",
+        "shipMethod" => "RecordRef",
         "taxCode" => "RecordRef",
         "taxRate1" => "float",
         "taxRate2" => "float",
@@ -119,4 +125,3 @@ class CreditMemoItem {
         "customFieldList" => "CustomFieldList",
     );
 }
-

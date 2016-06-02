@@ -14,13 +14,14 @@
  * @license    https://raw.githubusercontent.com/ryanwinchester/netsuite-php/master/original/NetSuite%20Application%20Developer%20License%20Agreement.txt
  * @link       http://www.netsuite.com/portal/developers/resources/suitetalk-sample-applications.shtml
  *
- * generated:  2016-03-04 07:23:27 PM UTC
+ * generated:  2016-06-02 02:54:03 PM UTC
  */
 
 namespace NetSuite\Classes;
 
 class LocationSearchBasic extends SearchRecordBasic {
     public $address;
+    public $automaticLatLongSetup;
     public $city;
     public $country;
     public $county;
@@ -30,6 +31,8 @@ class LocationSearchBasic extends SearchRecordBasic {
     public $internalIdNumber;
     public $isInactive;
     public $isOffice;
+    public $latitude;
+    public $longitude;
     public $makeInventoryAvailable;
     public $makeInventoryAvailableStore;
     public $name;
@@ -37,11 +40,13 @@ class LocationSearchBasic extends SearchRecordBasic {
     public $phone;
     public $state;
     public $subsidiary;
+    public $timeZone;
     public $tranprefix;
     public $zip;
     public $customFieldList;
     static $paramtypesmap = array(
         "address" => "SearchStringField",
+        "automaticLatLongSetup" => "SearchBooleanField",
         "city" => "SearchStringField",
         "country" => "SearchEnumMultiSelectField",
         "county" => "SearchStringField",
@@ -51,6 +56,8 @@ class LocationSearchBasic extends SearchRecordBasic {
         "internalIdNumber" => "SearchLongField",
         "isInactive" => "SearchBooleanField",
         "isOffice" => "SearchBooleanField",
+        "latitude" => "SearchDoubleField",
+        "longitude" => "SearchDoubleField",
         "makeInventoryAvailable" => "SearchBooleanField",
         "makeInventoryAvailableStore" => "SearchBooleanField",
         "name" => "SearchStringField",
@@ -58,9 +65,9 @@ class LocationSearchBasic extends SearchRecordBasic {
         "phone" => "SearchStringField",
         "state" => "SearchStringField",
         "subsidiary" => "SearchMultiSelectField",
+        "timeZone" => "SearchEnumMultiSelectField",
         "tranprefix" => "SearchStringField",
         "zip" => "SearchStringField",
         "customFieldList" => "SearchCustomFieldList",
     );
 }
-

@@ -14,7 +14,7 @@
  * @license    https://raw.githubusercontent.com/ryanwinchester/netsuite-php/master/original/NetSuite%20Application%20Developer%20License%20Agreement.txt
  * @link       http://www.netsuite.com/portal/developers/resources/suitetalk-sample-applications.shtml
  *
- * generated:  2016-03-04 07:23:27 PM UTC
+ * generated:  2016-06-02 02:54:03 PM UTC
  */
 
 namespace NetSuite\Classes;
@@ -313,7 +313,7 @@ class SerializedInventoryItem extends Record {
         "manufacturerZip" => "string",
         "countryOfManufacture" => "Country",
         "defaultItemShipMethod" => "RecordRef",
-        "itemCarrier" => "ItemCarrier",
+        "itemCarrier" => "ShippingCarrier",
         "roundUpAsComponent" => "boolean",
         "purchaseOrderQuantity" => "float",
         "purchaseOrderAmount" => "float",
@@ -443,4 +443,3 @@ class SerializedInventoryItem extends Record {
         "externalId" => "string",
     );
 }
-

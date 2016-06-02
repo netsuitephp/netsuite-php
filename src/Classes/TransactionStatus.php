@@ -14,7 +14,7 @@
  * @license    https://raw.githubusercontent.com/ryanwinchester/netsuite-php/master/original/NetSuite%20Application%20Developer%20License%20Agreement.txt
  * @link       http://www.netsuite.com/portal/developers/resources/suitetalk-sample-applications.shtml
  *
- * generated:  2016-03-04 07:23:27 PM UTC
+ * generated:  2016-06-02 02:54:03 PM UTC
  */
 
 namespace NetSuite\Classes;
@@ -59,6 +59,7 @@ class TransactionStatus {
     const _expenseReportRejectedByAccounting = "_expenseReportRejectedByAccounting";
     const _expenseReportRejectedBySupervisor = "_expenseReportRejectedBySupervisor";
     const _expenseReportRejectedOverriddenByAccounting = "_expenseReportRejectedOverriddenByAccounting";
+    const _expenseReportVoided = "_expenseReportVoided";
     const _invoiceOpen = "_invoiceOpen";
     const _invoicePaidInFull = "_invoicePaidInFull";
     const _invoicePendingApproval = "_invoicePendingApproval";
@@ -152,4 +153,3 @@ class TransactionStatus {
     const _workOrderPendingBuild = "_workOrderPendingBuild";
     const _workOrderPlanned = "_workOrderPlanned";
 }
-

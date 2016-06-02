@@ -14,27 +14,14 @@
  * @license    https://raw.githubusercontent.com/ryanwinchester/netsuite-php/master/original/NetSuite%20Application%20Developer%20License%20Agreement.txt
  * @link       http://www.netsuite.com/portal/developers/resources/suitetalk-sample-applications.shtml
  *
- * generated:  2016-03-04 07:23:27 PM UTC
+ * generated:  2016-06-02 02:54:03 PM UTC
  */
 
 namespace NetSuite\Classes;
 
-class AppPackage extends Record {
-    public $appDefinition;
-    public $version;
-    public $packageFile;
-    public $bundle;
-    public $description;
-    public $internalId;
-    public $externalId;
+class StringDimensionRef extends DimensionRef {
+    public $value;
     static $paramtypesmap = array(
-        "appDefinition" => "RecordRef",
-        "version" => "string",
-        "packageFile" => "RecordRef",
-        "bundle" => "RecordRef",
-        "description" => "string",
-        "internalId" => "string",
-        "externalId" => "string",
+        "value" => "string",
     );
 }
-

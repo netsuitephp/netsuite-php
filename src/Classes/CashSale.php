@@ -14,7 +14,7 @@
  * @license    https://raw.githubusercontent.com/ryanwinchester/netsuite-php/master/original/NetSuite%20Application%20Developer%20License%20Agreement.txt
  * @link       http://www.netsuite.com/portal/developers/resources/suitetalk-sample-applications.shtml
  *
- * generated:  2016-03-04 07:23:27 PM UTC
+ * generated:  2016-06-02 02:54:03 PM UTC
  */
 
 namespace NetSuite\Classes;
@@ -168,6 +168,7 @@ class CashSale extends Record {
     public $itemList;
     public $itemCostList;
     public $giftCertRedemptionList;
+    public $promotionsList;
     public $expCostList;
     public $timeList;
     public $shipGroupList;
@@ -323,6 +324,7 @@ class CashSale extends Record {
         "itemList" => "CashSaleItemList",
         "itemCostList" => "CashSaleItemCostList",
         "giftCertRedemptionList" => "GiftCertRedemptionList",
+        "promotionsList" => "PromotionsList",
         "expCostList" => "CashSaleExpCostList",
         "timeList" => "CashSaleTimeList",
         "shipGroupList" => "CashSaleShipGroupList",
@@ -331,4 +333,3 @@ class CashSale extends Record {
         "externalId" => "string",
     );
 }
-

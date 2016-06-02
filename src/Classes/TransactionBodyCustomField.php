@@ -14,7 +14,7 @@
  * @license    https://raw.githubusercontent.com/ryanwinchester/netsuite-php/master/original/NetSuite%20Application%20Developer%20License%20Agreement.txt
  * @link       http://www.netsuite.com/portal/developers/resources/suitetalk-sample-applications.shtml
  *
- * generated:  2016-03-04 07:23:27 PM UTC
+ * generated:  2016-06-02 02:54:03 PM UTC
  */
 
 namespace NetSuite\Classes;
@@ -68,6 +68,7 @@ class TransactionBodyCustomField extends CustomFieldType {
     public $bodyAssemblyBuild;
     public $bodyPrintFlag;
     public $bodyPickingTicket;
+    public $bodyOtherTransaction;
     public $bodyPrintPackingSlip;
     public $bodyCustomerPayment;
     public $bodyVendorPayment;
@@ -131,6 +132,7 @@ class TransactionBodyCustomField extends CustomFieldType {
         "bodyAssemblyBuild" => "boolean",
         "bodyPrintFlag" => "boolean",
         "bodyPickingTicket" => "boolean",
+        "bodyOtherTransaction" => "boolean",
         "bodyPrintPackingSlip" => "boolean",
         "bodyCustomerPayment" => "boolean",
         "bodyVendorPayment" => "boolean",
@@ -147,4 +149,3 @@ class TransactionBodyCustomField extends CustomFieldType {
         "internalId" => "string",
     );
 }
-

@@ -14,7 +14,7 @@
  * @license    https://raw.githubusercontent.com/ryanwinchester/netsuite-php/master/original/NetSuite%20Application%20Developer%20License%20Agreement.txt
  * @link       http://www.netsuite.com/portal/developers/resources/suitetalk-sample-applications.shtml
  *
- * generated:  2016-03-04 07:23:27 PM UTC
+ * generated:  2016-06-02 02:54:03 PM UTC
  */
 
 namespace NetSuite\Classes;
@@ -108,6 +108,7 @@ class JobSearchRowBasic extends SearchRowBasic {
     public $projectedEndDate;
     public $projectedEndDateBaseline;
     public $projectExpenseType;
+    public $revRecForecastRule;
     public $shipAddress1;
     public $shipAddress2;
     public $shipAddress3;
@@ -127,6 +128,7 @@ class JobSearchRowBasic extends SearchRowBasic {
     public $subscriptionStatus;
     public $subsidiary;
     public $timeRemaining;
+    public $usePercentCompleteOverride;
     public $zipCode;
     public $customFieldList;
     static $paramtypesmap = array(
@@ -218,6 +220,7 @@ class JobSearchRowBasic extends SearchRowBasic {
         "projectedEndDate" => "SearchColumnDateField[]",
         "projectedEndDateBaseline" => "SearchColumnDateField[]",
         "projectExpenseType" => "SearchColumnSelectField[]",
+        "revRecForecastRule" => "SearchColumnSelectField[]",
         "shipAddress1" => "SearchColumnStringField[]",
         "shipAddress2" => "SearchColumnStringField[]",
         "shipAddress3" => "SearchColumnStringField[]",
@@ -237,8 +240,8 @@ class JobSearchRowBasic extends SearchRowBasic {
         "subscriptionStatus" => "SearchColumnBooleanField[]",
         "subsidiary" => "SearchColumnSelectField[]",
         "timeRemaining" => "SearchColumnDoubleField[]",
+        "usePercentCompleteOverride" => "SearchColumnBooleanField[]",
         "zipCode" => "SearchColumnStringField[]",
         "customFieldList" => "SearchColumnCustomFieldList",
     );
 }
-

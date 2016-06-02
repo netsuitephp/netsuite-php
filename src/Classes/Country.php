@@ -14,7 +14,7 @@
  * @license    https://raw.githubusercontent.com/ryanwinchester/netsuite-php/master/original/NetSuite%20Application%20Developer%20License%20Agreement.txt
  * @link       http://www.netsuite.com/portal/developers/resources/suitetalk-sample-applications.shtml
  *
- * generated:  2016-03-04 07:23:27 PM UTC
+ * generated:  2016-06-02 02:54:03 PM UTC
  */
 
 namespace NetSuite\Classes;
@@ -259,7 +259,7 @@ class Country {
     const _uganda = "_uganda";
     const _ukraine = "_ukraine";
     const _unitedArabEmirates = "_unitedArabEmirates";
-    const _unitedKingdomGB = "_unitedKingdomGB";
+    const _unitedKingdom = "_unitedKingdom";
     const _unitedStates = "_unitedStates";
     const _uruguay = "_uruguay";
     const _uSMinorOutlyingIslands = "_uSMinorOutlyingIslands";
@@ -275,4 +275,3 @@ class Country {
     const _zambia = "_zambia";
     const _zimbabwe = "_zimbabwe";
 }
-

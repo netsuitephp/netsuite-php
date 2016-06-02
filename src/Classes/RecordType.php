@@ -14,7 +14,7 @@
  * @license    https://raw.githubusercontent.com/ryanwinchester/netsuite-php/master/original/NetSuite%20Application%20Developer%20License%20Agreement.txt
  * @link       http://www.netsuite.com/portal/developers/resources/suitetalk-sample-applications.shtml
  *
- * generated:  2016-03-04 07:23:27 PM UTC
+ * generated:  2016-06-02 02:54:03 PM UTC
  */
 
 namespace NetSuite\Classes;
@@ -24,8 +24,6 @@ class RecordType {
     );
     const account = "account";
     const accountingPeriod = "accountingPeriod";
-    const appDefinition = "appDefinition";
-    const appPackage = "appPackage";
     const assemblyBuild = "assemblyBuild";
     const assemblyUnbuild = "assemblyUnbuild";
     const assemblyItem = "assemblyItem";
@@ -86,6 +84,7 @@ class RecordType {
     const estimate = "estimate";
     const expenseCategory = "expenseCategory";
     const expenseReport = "expenseReport";
+    const fairValuePrice = "fairValuePrice";
     const file = "file";
     const folder = "folder";
     const giftCertificate = "giftCertificate";
@@ -197,4 +196,3 @@ class RecordType {
     const workOrderCompletion = "workOrderCompletion";
     const workOrderClose = "workOrderClose";
 }
-
