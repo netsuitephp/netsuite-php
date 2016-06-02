@@ -13,7 +13,7 @@ Require with composer:
 **NOTE: package name change**
 
 ```
-composer require "ryanwinchester/netsuite-php: 2.0.*@dev"
+composer require "ryanwinchester/netsuite-php:2016.1.*"
 ```
 
 ## Changes in v2:
