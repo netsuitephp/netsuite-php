@@ -84,7 +84,7 @@ class NetSuiteClient
             return $response;
         } catch (\Exception $e) {
             $this->logSoapCall($operation);
-            throw new $e($e->getMessage(), $e->getCode(), $e);
+            throw $e;
         }
     }
 
