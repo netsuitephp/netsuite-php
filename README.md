@@ -48,7 +48,7 @@ $config = array(
    "log_path" => "/var/www/myapp/logs/netsuite"
 );
 
-$netsuite = new NetSuiteService($config);
+$service = new NetSuiteService($config);
 ```
 
 #### Retreiving a customer record:
