@@ -59,7 +59,7 @@ class NetSuiteClient
             'account' => getenv('NETSUITE_ACCOUNT'),
             'app_id' => getenv('NETSUITE_APP_ID') ?: '4AD027CA-88B3-46EC-9D3E-41C6E6A325E2',
             'logging' => getenv('NETSUITE_LOGGING'),
-            'log_path' => getenv('NETSUITE_LOG_PATH') ?: '',
+            'log_path' => getenv('NETSUITE_LOG_PATH'),
         );
 
         return new static($config, $options, $client);
@@ -262,8 +262,10 @@ class NetSuiteClient
      */
     private function logSoapCall($operation)
     {
-        if ($this->config['logging'] && file_exists($this->config['log_path'])) {
-            $logger = new Logger($this->config['log_path']);
+        if (isset($this->config['logging']) && $this->config['logging']) {
+            $logger = new Logger(
+                isset($this->config['log_path']) ? $this->config['log_path'] : null
+            );
             $logger->logSoapCall($this->client, $operation);
         }
     }

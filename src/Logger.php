@@ -6,9 +6,9 @@ class Logger
 {
     private $path;
 
-    public function __construct($path)
+    public function __construct($path = null)
     {
-        $this->path = $path;
+        $this->path = $path ?: __DIR__.'/../logs';
     }
 
     /**
