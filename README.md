@@ -155,6 +155,27 @@ $service->logRequests(true);  // Turn logging on.
 $service->logRequests(false); // Turn logging off.
 ```
 
+#### Token-Based Authentication
+
+Instead of instantiating `NetSuiteService` with the standard credentials method, you can pass a set of credentials of the form `consumerKey`/`consumerSecret`/`token`/`tokenSecret`.
+
+```php
+$config = array(
+   // required -------------------------------------
+   "endpoint"       => "2016_1",
+   "host"           => "https://webservices.netsuite.com",
+   "account"        => "MYACCT1",
+   "consumerKey"    => "0123456789ABCDEF",
+   "consumerSecret" => "0123456789ABCDEF",
+   "token"          => "0123456789ABCDEF",
+   "tokenSecret"    => "0123456789ABCDEF",
+   // optional -------------------------------------
+   "signatureAlgorithm" => 'sha256', // Defaults to 'sha256'
+);
+
+$service = new NetSuiteService($config);
+```
+
 ## Status
 
  - [x] Extract the ~1500 classes from their single file...

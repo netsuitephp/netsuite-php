@@ -17,6 +17,8 @@ use NetSuite\Classes\Passport;
 use NetSuite\Classes\Preferences;
 use NetSuite\Classes\RecordRef;
 use NetSuite\Classes\SearchPreferences;
+use NetSuite\Classes\TokenPassport;
+use NetSuite\Classes\TokenPassportSignature;
 use SoapClient;
 use SoapHeader;
 
@@ -75,8 +77,14 @@ class NetSuiteClient
     protected function makeSoapCall($operation, $parameter)
     {
         $this->fixWtfCookieBug();
-        $this->setApplicationInfo($this->config['app_id']);
-        $this->addHeader("passport", $this->createPassportFromConfig($this->config));
+
+        if (isset($this->config['token'])) {
+            $this->addHeader('tokenPassport', $this->createTokenPassportFromConfig($this->config));
+        } else {
+            $this->setApplicationInfo($this->config['app_id']);
+            $this->addHeader("passport", $this->createPassportFromConfig($this->config));
+        }
+
 
         try {
             $response = $this->client->__soapCall($operation, array($parameter), null, $this->soapHeaders);
@@ -136,6 +144,40 @@ class NetSuiteClient
         $passport->role->internalId = $config['role'];
 
         return $passport;
+    }
+
+    /**
+     * Create the TokenPassport.
+     *
+     * @param array $config
+     * @return TokenPassport
+     */
+    private function createTokenPassportFromConfig($config)
+    {
+        $tokenPassport = new TokenPassport();
+        $tokenPassport->account = $config['account'];
+        $tokenPassport->consumerKey = $config['consumerKey'];
+        $tokenPassport->token = $config['token'];
+        $tokenPassport->nonce = $this->generateTokenPassportNonce();
+        $tokenPassport->timestamp = time();
+
+        $signatureAlgorithm = isset($config['signatureAlgorithm']) ? $config['signatureAlgorithm'] : 'sha256';
+
+        $tokenSignature = new TokenPassportSignature();
+        $tokenSignature->_ = $this->computeTokenPassportSignature(
+            $config['account'],
+            $config['consumerKey'],
+            $config['consumerSecret'],
+            $config['token'],
+            $config['tokenSecret'],
+            $tokenPassport->nonce,
+            $tokenPassport->timestamp,
+            $signatureAlgorithm
+        );
+        $tokenSignature->algorithm = 'HMAC_' . strtoupper($signatureAlgorithm);
+        $tokenPassport->signature = $tokenSignature;
+
+        return $tokenPassport;
     }
 
     /**
@@ -268,5 +310,38 @@ class NetSuiteClient
             );
             $logger->logSoapCall($this->client, $operation);
         }
+    }
+
+    /**
+     * Compute TokenPassport signature
+     *
+     * @param int|string $account
+     * @param string $consumerKey
+     * @param string $consumerKey
+     * @param string $token
+     * @param string $tokenSecret
+     * @param string $nonce
+     * @param int|string $timestamp
+     * @param string $signatureAlgorithm
+     * @return string
+     */
+    private function computeTokenPassportSignature($account, $consumerKey, $consumerSecret, $token, $tokenSecret, $nonce, $timestamp, $signatureAlgorithm)
+    {
+        $baseString = implode('&', array($account, $consumerKey, $token, $nonce, $timestamp));
+        $key = $consumerSecret . '&' . $tokenSecret;
+        return base64_encode(hash_hmac($signatureAlgorithm, $baseString, $key, true));
+    }
+
+    /**
+     * Generate random (or sufficiently enough so) string of characters
+     */
+    private function generateTokenPassportNonce($length = 32)
+    {
+        $noncePool = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
+        $key = '';
+        for ($i = 0; $i < $length; $i++) {
+            $key .= $noncePool[mt_rand(0, 61)];
+        }
+        return $key;
     }
 }
