@@ -36,6 +36,10 @@ class NetSuiteClient
      * @var array
      */
     private $soapHeaders = array();
+    
+    private $wsdl;
+    
+    private $options;
 
     /**
      * @param array $config
@@ -45,9 +49,9 @@ class NetSuiteClient
     public function __construct($config, $options = array(), $client = null)
     {
         $this->config = $config;
-        $options = $this->createOptions($this->config, $options);
-        $wsdl = $this->createWsdl($this->config);
-        $this->client = $client ?: new SoapClient($wsdl, $options);
+        $this->options = $this->createOptions($this->config, $options);
+        $this->wsdl = $this->createWsdl($this->config);
+        $this->client = $client ?: new SoapClient($this->wsdl, $this->options);
     }
 
     public static function createFromEnv($options = array(), $client = null)
@@ -66,6 +70,21 @@ class NetSuiteClient
 
         return new static($config, $options, $client);
     }
+    
+    /**
+     * 
+     * @param type $operation
+     * @param type $parameter
+     * @return type
+     */
+    protected function makeSoapCall($operation, $parameter) {
+        while (1) {
+            $call = $this->__soapcall($operation, $parameter);
+            if($call) {
+                return $call;
+            }
+        }
+    }
 
     /**
      * Make the SOAP call!
@@ -74,7 +93,7 @@ class NetSuiteClient
      * @param mixed $parameter
      * @return mixed
      */
-    protected function makeSoapCall($operation, $parameter)
+    protected function __soapcall($operation, $parameter)
     {
         $this->fixWtfCookieBug();
 
@@ -85,15 +104,31 @@ class NetSuiteClient
             $this->addHeader("passport", $this->createPassportFromConfig($this->config));
         }
 
-
         try {
             $response = $this->client->__soapCall($operation, array($parameter), null, $this->soapHeaders);
             $this->logSoapCall($operation);
             return $response;
+        } catch (\SoapFault $fault) {
+            $this->logSoapCall($operation);
+            # Check for error fetching headers
+            $st = 'Error Fetching http headers';
+            $message = (string)$fault->getMessage();
+            # If the above error is received, reset the 
+            # client and headers and return nothing
+            if($fault->faultcode=='HTTP' && $fault->faultstring=='Error Fetching http headers') {
+                unset($this->client);
+                unset($this->soapHeaders);
+                $this->client = new SoapClient($this->wsdl, $this->options);
+                return;
+            }
+            throw $fault;
+            
         } catch (\Exception $e) {
             $this->logSoapCall($operation);
             throw $e;
-        }
+            return;
+        } 
+           
     }
 
     /**
