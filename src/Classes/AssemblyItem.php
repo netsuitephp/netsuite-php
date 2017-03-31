@@ -14,7 +14,7 @@
  * @license    https://raw.githubusercontent.com/ryanwinchester/netsuite-php/master/original/NetSuite%20Application%20Developer%20License%20Agreement.txt
  * @link       http://www.netsuite.com/portal/developers/resources/suitetalk-sample-applications.shtml
  *
- * generated:  2016-06-02 02:54:03 PM UTC
+ * generated:  2017-03-31 08:48:20 PM UTC
  */
 
 namespace NetSuite\Classes;
@@ -69,6 +69,7 @@ class AssemblyItem extends Record {
     public $purchaseUnit;
     public $saleUnit;
     public $trackLandedCost;
+    public $matrixItemNameTemplate;
     public $billingSchedule;
     public $deferredRevenueAccount;
     public $revRecSchedule;
@@ -91,6 +92,7 @@ class AssemblyItem extends Record {
     public $receiptQuantity;
     public $receiptAmount;
     public $receiptQuantityDiff;
+    public $isPhantom;
     public $defaultItemShipMethod;
     public $itemCarrier;
     public $itemShipMethodList;
@@ -273,6 +275,7 @@ class AssemblyItem extends Record {
         "purchaseUnit" => "RecordRef",
         "saleUnit" => "RecordRef",
         "trackLandedCost" => "boolean",
+        "matrixItemNameTemplate" => "string",
         "billingSchedule" => "RecordRef",
         "deferredRevenueAccount" => "RecordRef",
         "revRecSchedule" => "RecordRef",
@@ -295,6 +298,7 @@ class AssemblyItem extends Record {
         "receiptQuantity" => "float",
         "receiptAmount" => "float",
         "receiptQuantityDiff" => "float",
+        "isPhantom" => "boolean",
         "defaultItemShipMethod" => "RecordRef",
         "itemCarrier" => "ShippingCarrier",
         "itemShipMethodList" => "RecordRefList",

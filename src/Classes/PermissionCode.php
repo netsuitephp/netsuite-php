@@ -14,7 +14,7 @@
  * @license    https://raw.githubusercontent.com/ryanwinchester/netsuite-php/master/original/NetSuite%20Application%20Developer%20License%20Agreement.txt
  * @link       http://www.netsuite.com/portal/developers/resources/suitetalk-sample-applications.shtml
  *
- * generated:  2016-06-02 02:54:03 PM UTC
+ * generated:  2017-03-31 08:48:20 PM UTC
  */
 
 namespace NetSuite\Classes;
@@ -95,6 +95,7 @@ class PermissionCode {
     const _closeAccount = "_closeAccount";
     const _closeWorkOrders = "_closeWorkOrders";
     const _colorThemes = "_colorThemes";
+    const _commerceCategories = "_commerceCategories";
     const _commissionFeatureSetup = "_commissionFeatureSetup";
     const _commissionReports = "_commissionReports";
     const _commitOrders = "_commitOrders";
@@ -106,6 +107,8 @@ class PermissionCode {
     const _componentWhereUsed = "_componentWhereUsed";
     const _contactRoles = "_contactRoles";
     const _contacts = "_contacts";
+    const _controlSuitescriptAndWorkflowTriggersInWebServicesRequest = "_controlSuitescriptAndWorkflowTriggersInWebServicesRequest";
+    const _controlSuitescriptAndWorkflowTriggersPerCsvImport = "_controlSuitescriptAndWorkflowTriggersPerCsvImport";
     const _convertClassesToDepartments = "_convertClassesToDepartments";
     const _convertClassesToLocations = "_convertClassesToLocations";
     const _copyBudgets = "_copyBudgets";
@@ -142,6 +145,7 @@ class PermissionCode {
     const _customerCharge = "_customerCharge";
     const _customerDeposit = "_customerDeposit";
     const _customerPayment = "_customerPayment";
+    const _customerPaymentAuthorization = "_customerPaymentAuthorization";
     const _customerProfile = "_customerProfile";
     const _customerRefund = "_customerRefund";
     const _customers = "_customers";
@@ -247,6 +251,7 @@ class PermissionCode {
     const _governmentIssuedIdTypes = "_governmentIssuedIdTypes";
     const _grantingAccessToReports = "_grantingAccessToReports";
     const _gstSummaryReport = "_gstSummaryReport";
+    const _hideEmployeeInformationOnFinancialReports = "_hideEmployeeInformationOnFinancialReports";
     const _importCSVFile = "_importCSVFile";
     const _importOnlineBankingQIFFile = "_importOnlineBankingQIFFile";
     const _importQuickenQIFFile = "_importQuickenQIFFile";
@@ -321,6 +326,7 @@ class PermissionCode {
     const _nonPostingRegisters = "_nonPostingRegisters";
     const _noPermissionNecessary = "_noPermissionNecessary";
     const _notesTab = "_notesTab";
+    const _notifications = "_notifications";
     const _offlineClient = "_offlineClient";
     const _onlineBankingStatement = "_onlineBankingStatement";
     const _onlineCaseForm = "_onlineCaseForm";
@@ -348,7 +354,6 @@ class PermissionCode {
     const _partnerCommissionTransaction = "_partnerCommissionTransaction";
     const _partnerCommissionTransactionApproval = "_partnerCommissionTransactionApproval";
     const _partnerContribution = "_partnerContribution";
-    const _partnerMonitorResults = "_partnerMonitorResults";
     const _partners = "_partners";
     const _payBills = "_payBills";
     const _paycheckJournal = "_paycheckJournal";
@@ -367,6 +372,7 @@ class PermissionCode {
     const _pdfMessages = "_pdfMessages";
     const _pdfTemplate = "_pdfTemplate";
     const _performSearch = "_performSearch";
+    const _periodClosingManagement = "_periodClosingManagement";
     const _persistSearch = "_persistSearch";
     const _phasedProcesses = "_phasedProcesses";
     const _phoneCalls = "_phoneCalls";
@@ -382,7 +388,9 @@ class PermissionCode {
     const _printShipmentDocuments = "_printShipmentDocuments";
     const _processGSTRefund = "_processGSTRefund";
     const _processPayroll = "_processPayroll";
+    const _projectAccounting = "_projectAccounting";
     const _projectProjectTemplateConversion = "_projectProjectTemplateConversion";
+    const _projectRevenueRules = "_projectRevenueRules";
     const _projectTasks = "_projectTasks";
     const _projectTemplates = "_projectTemplates";
     const _promotionCode = "_promotionCode";
@@ -394,8 +402,6 @@ class PermissionCode {
     const _publicTemplateCategories = "_publicTemplateCategories";
     const _publishDashboards = "_publishDashboards";
     const _publishEmployeeList = "_publishEmployeeList";
-    const _publisherApplications = "_publisherApplications";
-    const _publisherId = "_publisherId";
     const _publishForms = "_publishForms";
     const _publishKnowledgeBase = "_publishKnowledgeBase";
     const _publishRSSFeeds = "_publishRSSFeeds";
@@ -471,7 +477,6 @@ class PermissionCode {
     const _setUpEbay = "_setUpEbay";
     const _setUpImageResizing = "_setUpImageResizing";
     const _setUpOpenidSingleSignOn = "_setUpOpenidSingleSignOn";
-    const _setUpPartnerMonitor = "_setUpPartnerMonitor";
     const _setUpPayroll = "_setUpPayroll";
     const _setUpReminders = "_setUpReminders";
     const _setUpSamlSingleSignOn = "_setUpSamlSingleSignOn";
@@ -497,7 +502,7 @@ class PermissionCode {
     const _subscriptionPlan = "_subscriptionPlan";
     const _subscriptions = "_subscriptions";
     const _subsidiaries = "_subsidiaries";
-    const _suiteAppInstallation = "_suiteAppInstallation";
+    const _suiteAppDeployment = "_suiteAppDeployment";
     const _suiteBundler = "_suiteBundler";
     const _suiteBundlerUpgrades = "_suiteBundlerUpgrades";
     const _suiteScript = "_suiteScript";
@@ -562,10 +567,12 @@ class PermissionCode {
     const _vendorReturnAuthorization = "_vendorReturnAuthorization";
     const _vendorReturns = "_vendorReturns";
     const _vendors = "_vendors";
+    const _viewGatewayAsynchronousNotifications = "_viewGatewayAsynchronousNotifications";
     const _viewLoginAuditTrail = "_viewLoginAuditTrail";
     const _viewOnlineBillPayStatus = "_viewOnlineBillPayStatus";
     const _viewPaymentEvents = "_viewPaymentEvents";
     const _viewUnencryptedCreditCards = "_viewUnencryptedCreditCards";
+    const _viewWebServicesLogs = "_viewWebServicesLogs";
     const _webServices = "_webServices";
     const _webSiteExternalPublisher = "_webSiteExternalPublisher";
     const _webSiteManagement = "_webSiteManagement";

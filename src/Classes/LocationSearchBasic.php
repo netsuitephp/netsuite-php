@@ -14,24 +14,28 @@
  * @license    https://raw.githubusercontent.com/ryanwinchester/netsuite-php/master/original/NetSuite%20Application%20Developer%20License%20Agreement.txt
  * @link       http://www.netsuite.com/portal/developers/resources/suitetalk-sample-applications.shtml
  *
- * generated:  2016-06-02 02:54:03 PM UTC
+ * generated:  2017-03-31 08:48:20 PM UTC
  */
 
 namespace NetSuite\Classes;
 
 class LocationSearchBasic extends SearchRecordBasic {
     public $address;
-    public $automaticLatLongSetup;
+    public $autoAssignmentRegionSetting;
+    public $bufferStock;
     public $city;
     public $country;
     public $county;
+    public $dailyShippingCapacity;
     public $externalId;
     public $externalIdString;
+    public $geolocationMethod;
     public $internalId;
     public $internalIdNumber;
     public $isInactive;
     public $isOffice;
     public $latitude;
+    public $locationType;
     public $longitude;
     public $makeInventoryAvailable;
     public $makeInventoryAvailableStore;
@@ -41,22 +45,28 @@ class LocationSearchBasic extends SearchRecordBasic {
     public $state;
     public $subsidiary;
     public $timeZone;
+    public $totalShippingCapacity;
     public $tranprefix;
+    public $usesBins;
     public $zip;
     public $customFieldList;
     static $paramtypesmap = array(
         "address" => "SearchStringField",
-        "automaticLatLongSetup" => "SearchBooleanField",
+        "autoAssignmentRegionSetting" => "SearchEnumMultiSelectField",
+        "bufferStock" => "SearchLongField",
         "city" => "SearchStringField",
         "country" => "SearchEnumMultiSelectField",
         "county" => "SearchStringField",
+        "dailyShippingCapacity" => "SearchLongField",
         "externalId" => "SearchMultiSelectField",
         "externalIdString" => "SearchStringField",
+        "geolocationMethod" => "SearchEnumMultiSelectField",
         "internalId" => "SearchMultiSelectField",
         "internalIdNumber" => "SearchLongField",
         "isInactive" => "SearchBooleanField",
         "isOffice" => "SearchBooleanField",
         "latitude" => "SearchDoubleField",
+        "locationType" => "SearchEnumMultiSelectField",
         "longitude" => "SearchDoubleField",
         "makeInventoryAvailable" => "SearchBooleanField",
         "makeInventoryAvailableStore" => "SearchBooleanField",
@@ -66,7 +76,9 @@ class LocationSearchBasic extends SearchRecordBasic {
         "state" => "SearchStringField",
         "subsidiary" => "SearchMultiSelectField",
         "timeZone" => "SearchEnumMultiSelectField",
+        "totalShippingCapacity" => "SearchLongField",
         "tranprefix" => "SearchStringField",
+        "usesBins" => "SearchBooleanField",
         "zip" => "SearchStringField",
         "customFieldList" => "SearchCustomFieldList",
     );

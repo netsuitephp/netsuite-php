@@ -14,7 +14,7 @@
  * @license    https://raw.githubusercontent.com/ryanwinchester/netsuite-php/master/original/NetSuite%20Application%20Developer%20License%20Agreement.txt
  * @link       http://www.netsuite.com/portal/developers/resources/suitetalk-sample-applications.shtml
  *
- * generated:  2016-06-02 02:54:03 PM UTC
+ * generated:  2017-03-31 08:48:20 PM UTC
  */
 
 namespace NetSuite\Classes;
@@ -188,6 +188,7 @@ class TransactionSearchRowBasic extends SearchRowBasic {
     public $isTransferPriceCosting;
     public $isWip;
     public $item;
+    public $itemFulfillmentChoice;
     public $itemRevision;
     public $landedCostPerLine;
     public $lastModifiedDate;
@@ -249,6 +250,7 @@ class TransactionSearchRowBasic extends SearchRowBasic {
     public $print;
     public $probability;
     public $projectedAmount;
+    public $projectTask;
     public $promoCode;
     public $purchaseOrder;
     public $quantity;
@@ -529,6 +531,7 @@ class TransactionSearchRowBasic extends SearchRowBasic {
         "isTransferPriceCosting" => "SearchColumnBooleanField[]",
         "isWip" => "SearchColumnBooleanField[]",
         "item" => "SearchColumnSelectField[]",
+        "itemFulfillmentChoice" => "SearchColumnEnumSelectField[]",
         "itemRevision" => "SearchColumnSelectField[]",
         "landedCostPerLine" => "SearchColumnBooleanField[]",
         "lastModifiedDate" => "SearchColumnDateField[]",
@@ -590,6 +593,7 @@ class TransactionSearchRowBasic extends SearchRowBasic {
         "print" => "SearchColumnStringField[]",
         "probability" => "SearchColumnDoubleField[]",
         "projectedAmount" => "SearchColumnDoubleField[]",
+        "projectTask" => "SearchColumnSelectField[]",
         "promoCode" => "SearchColumnSelectField[]",
         "purchaseOrder" => "SearchColumnSelectField[]",
         "quantity" => "SearchColumnDoubleField[]",

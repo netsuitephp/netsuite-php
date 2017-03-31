@@ -14,7 +14,7 @@
  * @license    https://raw.githubusercontent.com/ryanwinchester/netsuite-php/master/original/NetSuite%20Application%20Developer%20License%20Agreement.txt
  * @link       http://www.netsuite.com/portal/developers/resources/suitetalk-sample-applications.shtml
  *
- * generated:  2016-06-02 02:54:03 PM UTC
+ * generated:  2017-03-31 08:48:20 PM UTC
  */
 
 namespace NetSuite\Classes;
@@ -149,6 +149,7 @@ class NonInventoryResaleItem extends Record {
     public $isGcoCompliant;
     public $offerSupport;
     public $isInactive;
+    public $matrixItemNameTemplate;
     public $availableToPartners;
     public $department;
     public $class;
@@ -303,6 +304,7 @@ class NonInventoryResaleItem extends Record {
         "isGcoCompliant" => "boolean",
         "offerSupport" => "boolean",
         "isInactive" => "boolean",
+        "matrixItemNameTemplate" => "string",
         "availableToPartners" => "boolean",
         "department" => "RecordRef",
         "class" => "RecordRef",

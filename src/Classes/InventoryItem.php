@@ -14,7 +14,7 @@
  * @license    https://raw.githubusercontent.com/ryanwinchester/netsuite-php/master/original/NetSuite%20Application%20Developer%20License%20Agreement.txt
  * @link       http://www.netsuite.com/portal/developers/resources/suitetalk-sample-applications.shtml
  *
- * generated:  2016-06-02 02:54:03 PM UTC
+ * generated:  2017-03-31 08:48:20 PM UTC
  */
 
 namespace NetSuite\Classes;
@@ -64,6 +64,7 @@ class InventoryItem extends Record {
     public $issueProduct;
     public $billingSchedule;
     public $trackLandedCost;
+    public $matrixItemNameTemplate;
     public $isDropShipItem;
     public $isSpecialOrderItem;
     public $stockDescription;
@@ -284,6 +285,7 @@ class InventoryItem extends Record {
         "issueProduct" => "RecordRef",
         "billingSchedule" => "RecordRef",
         "trackLandedCost" => "boolean",
+        "matrixItemNameTemplate" => "string",
         "isDropShipItem" => "boolean",
         "isSpecialOrderItem" => "boolean",
         "stockDescription" => "string",
