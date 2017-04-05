@@ -7,6 +7,13 @@ A PHP API client package for NetSuite, pried from the [NetSuite PHP Toolkit](htt
 
 ## Adding it to your project:
 
+Required Extensions in php.ini:
+
+```
+extension=php_soap.dll
+extension=php_openss.dll
+```
+
 Require with composer:
 
 **V2 in Alpha**
