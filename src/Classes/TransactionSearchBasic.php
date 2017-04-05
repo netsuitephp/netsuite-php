@@ -14,7 +14,7 @@
  * @license    https://raw.githubusercontent.com/ryanwinchester/netsuite-php/master/original/NetSuite%20Application%20Developer%20License%20Agreement.txt
  * @link       http://www.netsuite.com/portal/developers/resources/suitetalk-sample-applications.shtml
  *
- * generated:  2016-06-02 02:54:03 PM UTC
+ * generated:  2017-03-31 08:48:20 PM UTC
  */
 
 namespace NetSuite\Classes;
@@ -187,6 +187,7 @@ class TransactionSearchBasic extends SearchRecordBasic {
     public $isVsoeAlloc;
     public $isWip;
     public $item;
+    public $itemFulfillmentChoice;
     public $itemRevision;
     public $itemSubOf;
     public $landedCostPerLine;
@@ -246,6 +247,7 @@ class TransactionSearchBasic extends SearchRecordBasic {
     public $printedPickingTicket;
     public $probability;
     public $projectedAmount;
+    public $projectTask;
     public $promoCode;
     public $purchaseOrder;
     public $quantity;
@@ -521,6 +523,7 @@ class TransactionSearchBasic extends SearchRecordBasic {
         "isVsoeAlloc" => "SearchBooleanField",
         "isWip" => "SearchBooleanField",
         "item" => "SearchMultiSelectField",
+        "itemFulfillmentChoice" => "SearchEnumMultiSelectField",
         "itemRevision" => "SearchMultiSelectField",
         "itemSubOf" => "SearchMultiSelectField",
         "landedCostPerLine" => "SearchBooleanField",
@@ -580,6 +583,7 @@ class TransactionSearchBasic extends SearchRecordBasic {
         "printedPickingTicket" => "SearchBooleanField",
         "probability" => "SearchLongField",
         "projectedAmount" => "SearchDoubleField",
+        "projectTask" => "SearchMultiSelectField",
         "promoCode" => "SearchMultiSelectField",
         "purchaseOrder" => "SearchMultiSelectField",
         "quantity" => "SearchDoubleField",

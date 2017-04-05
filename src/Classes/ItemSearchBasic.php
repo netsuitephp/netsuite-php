@@ -14,7 +14,7 @@
  * @license    https://raw.githubusercontent.com/ryanwinchester/netsuite-php/master/original/NetSuite%20Application%20Developer%20License%20Agreement.txt
  * @link       http://www.netsuite.com/portal/developers/resources/suitetalk-sample-applications.shtml
  *
- * generated:  2016-06-02 02:54:03 PM UTC
+ * generated:  2017-03-31 08:48:20 PM UTC
  */
 
 namespace NetSuite\Classes;
@@ -105,6 +105,7 @@ class ItemSearchBasic extends SearchRecordBasic {
     public $giftCertOrigAmt;
     public $giftCertRecipient;
     public $imageUrl;
+    public $includeChildren;
     public $internalId;
     public $internalIdNumber;
     public $inventoryLocation;
@@ -382,6 +383,7 @@ class ItemSearchBasic extends SearchRecordBasic {
         "giftCertOrigAmt" => "SearchStringField",
         "giftCertRecipient" => "SearchStringField",
         "imageUrl" => "SearchStringField",
+        "includeChildren" => "SearchBooleanField",
         "internalId" => "SearchMultiSelectField",
         "internalIdNumber" => "SearchLongField",
         "inventoryLocation" => "SearchMultiSelectField",

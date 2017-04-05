@@ -14,7 +14,7 @@
  * @license    https://raw.githubusercontent.com/ryanwinchester/netsuite-php/master/original/NetSuite%20Application%20Developer%20License%20Agreement.txt
  * @link       http://www.netsuite.com/portal/developers/resources/suitetalk-sample-applications.shtml
  *
- * generated:  2016-06-02 02:54:03 PM UTC
+ * generated:  2017-03-31 08:48:20 PM UTC
  */
 
 namespace NetSuite\Classes;
@@ -36,6 +36,7 @@ class TransferOrder extends Record {
     public $orderStatus;
     public $subsidiary;
     public $employee;
+    public $useItemCostAsTransferCost;
     public $firmed;
     public $department;
     public $class;
@@ -76,6 +77,7 @@ class TransferOrder extends Record {
         "orderStatus" => "TransferOrderOrderStatus",
         "subsidiary" => "RecordRef",
         "employee" => "RecordRef",
+        "useItemCostAsTransferCost" => "boolean",
         "firmed" => "boolean",
         "department" => "RecordRef",
         "class" => "RecordRef",

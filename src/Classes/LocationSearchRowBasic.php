@@ -14,7 +14,7 @@
  * @license    https://raw.githubusercontent.com/ryanwinchester/netsuite-php/master/original/NetSuite%20Application%20Developer%20License%20Agreement.txt
  * @link       http://www.netsuite.com/portal/developers/resources/suitetalk-sample-applications.shtml
  *
- * generated:  2016-06-02 02:54:03 PM UTC
+ * generated:  2017-03-31 08:48:20 PM UTC
  */
 
 namespace NetSuite\Classes;
@@ -23,14 +23,18 @@ class LocationSearchRowBasic extends SearchRowBasic {
     public $address1;
     public $address2;
     public $address3;
-    public $automaticLatLongSetup;
+    public $autoAssignmentRegionSetting;
+    public $bufferStock;
     public $city;
     public $country;
+    public $dailyShippingCapacity;
     public $externalId;
+    public $geolocationMethod;
     public $internalId;
     public $isInactive;
     public $isOffice;
     public $latitude;
+    public $locationType;
     public $longitude;
     public $makeInventoryAvailable;
     public $makeInventoryAvailableStore;
@@ -40,21 +44,27 @@ class LocationSearchRowBasic extends SearchRowBasic {
     public $state;
     public $subsidiary;
     public $timeZone;
+    public $totalShippingCapacity;
     public $tranPrefix;
+    public $usesBins;
     public $zip;
     public $customFieldList;
     static $paramtypesmap = array(
         "address1" => "SearchColumnStringField[]",
         "address2" => "SearchColumnStringField[]",
         "address3" => "SearchColumnStringField[]",
-        "automaticLatLongSetup" => "SearchColumnBooleanField[]",
+        "autoAssignmentRegionSetting" => "SearchColumnEnumSelectField[]",
+        "bufferStock" => "SearchColumnLongField[]",
         "city" => "SearchColumnStringField[]",
         "country" => "SearchColumnEnumSelectField[]",
+        "dailyShippingCapacity" => "SearchColumnLongField[]",
         "externalId" => "SearchColumnSelectField[]",
+        "geolocationMethod" => "SearchColumnEnumSelectField[]",
         "internalId" => "SearchColumnSelectField[]",
         "isInactive" => "SearchColumnBooleanField[]",
         "isOffice" => "SearchColumnBooleanField[]",
         "latitude" => "SearchColumnDoubleField[]",
+        "locationType" => "SearchColumnEnumSelectField[]",
         "longitude" => "SearchColumnDoubleField[]",
         "makeInventoryAvailable" => "SearchColumnBooleanField[]",
         "makeInventoryAvailableStore" => "SearchColumnBooleanField[]",
@@ -64,7 +74,9 @@ class LocationSearchRowBasic extends SearchRowBasic {
         "state" => "SearchColumnStringField[]",
         "subsidiary" => "SearchColumnSelectField[]",
         "timeZone" => "SearchColumnEnumSelectField[]",
+        "totalShippingCapacity" => "SearchColumnLongField[]",
         "tranPrefix" => "SearchColumnStringField[]",
+        "usesBins" => "SearchColumnBooleanField[]",
         "zip" => "SearchColumnStringField[]",
         "customFieldList" => "SearchColumnCustomFieldList",
     );
