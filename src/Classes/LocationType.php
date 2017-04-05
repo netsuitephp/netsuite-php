@@ -14,16 +14,14 @@
  * @license    https://raw.githubusercontent.com/ryanwinchester/netsuite-php/master/original/NetSuite%20Application%20Developer%20License%20Agreement.txt
  * @link       http://www.netsuite.com/portal/developers/resources/suitetalk-sample-applications.shtml
  *
- * generated:  2016-06-02 02:54:03 PM UTC
+ * generated:  2017-03-31 08:48:20 PM UTC
  */
 
 namespace NetSuite\Classes;
 
-class AccountTranslationList {
-    public $translation;
-    public $replaceAll;
+class LocationType {
     static $paramtypesmap = array(
-        "translation" => "ClassTranslation[]",
-        "replaceAll" => "boolean",
     );
+    const _store = "_store";
+    const _warehouse = "_warehouse";
 }

@@ -14,7 +14,7 @@
  * @license    https://raw.githubusercontent.com/ryanwinchester/netsuite-php/master/original/NetSuite%20Application%20Developer%20License%20Agreement.txt
  * @link       http://www.netsuite.com/portal/developers/resources/suitetalk-sample-applications.shtml
  *
- * generated:  2016-06-02 02:54:03 PM UTC
+ * generated:  2017-03-31 08:48:20 PM UTC
  */
 
 namespace NetSuite\Classes;
@@ -1198,6 +1198,7 @@ class StatusDetailCodeType {
     const SSS_REQUEST_LIMIT_EXCEEDED = "SSS_REQUEST_LIMIT_EXCEEDED";
     const SSS_REQUEST_TIME_EXCEEDED = "SSS_REQUEST_TIME_EXCEEDED";
     const SSS_SCRIPT_DESERIALIZATION_FAILURE = "SSS_SCRIPT_DESERIALIZATION_FAILURE";
+    const SSS_SCRIPT_SECURITY_VIOLATION = "SSS_SCRIPT_SECURITY_VIOLATION";
     const SSS_SSO_CONFIG_REQD = "SSS_SSO_CONFIG_REQD";
     const SSS_STACK_FRAME_DEPTH_EXCEEDED = "SSS_STACK_FRAME_DEPTH_EXCEEDED";
     const SSS_TIME_LIMIT_EXCEEDED = "SSS_TIME_LIMIT_EXCEEDED";
@@ -1218,7 +1219,6 @@ class StatusDetailCodeType {
     const SUBSIDIARY_MISMATCH = "SUBSIDIARY_MISMATCH";
     const SUB_MISMATCH = "SUB_MISMATCH";
     const SUB_RESTRICT_VIEW_REQD = "SUB_RESTRICT_VIEW_REQD";
-    const SUB_TAX_AGENCY_REQD = "SUB_TAX_AGENCY_REQD";
     const SUCCESS_TRANS = "SUCCESS_TRANS";
     const SUPRT_CNTR_LOGIN_ERROR = "SUPRT_CNTR_LOGIN_ERROR";
     const TAGATA_ALREADY_ENDORSED = "TAGATA_ALREADY_ENDORSED";

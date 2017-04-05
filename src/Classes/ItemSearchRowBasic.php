@@ -14,7 +14,7 @@
  * @license    https://raw.githubusercontent.com/ryanwinchester/netsuite-php/master/original/NetSuite%20Application%20Developer%20License%20Agreement.txt
  * @link       http://www.netsuite.com/portal/developers/resources/suitetalk-sample-applications.shtml
  *
- * generated:  2016-06-02 02:54:03 PM UTC
+ * generated:  2017-03-31 08:48:20 PM UTC
  */
 
 namespace NetSuite\Classes;
@@ -113,6 +113,7 @@ class ItemSearchRowBasic extends SearchRowBasic {
     public $giftCertRecipient;
     public $hits;
     public $imageUrl;
+    public $includeChildren;
     public $incomeAccount;
     public $intercoExpenseAccount;
     public $intercoIncomeAccount;
@@ -190,6 +191,7 @@ class ItemSearchRowBasic extends SearchRowBasic {
     public $matchBillToReceipt;
     public $memberItem;
     public $memberQuantity;
+    public $memberRatePlan;
     public $metaTagHtml;
     public $minimumQuantity;
     public $modified;
@@ -419,6 +421,7 @@ class ItemSearchRowBasic extends SearchRowBasic {
         "giftCertRecipient" => "SearchColumnStringField[]",
         "hits" => "SearchColumnLongField[]",
         "imageUrl" => "SearchColumnStringField[]",
+        "includeChildren" => "SearchColumnBooleanField[]",
         "incomeAccount" => "SearchColumnSelectField[]",
         "intercoExpenseAccount" => "SearchColumnSelectField[]",
         "intercoIncomeAccount" => "SearchColumnSelectField[]",
@@ -496,6 +499,7 @@ class ItemSearchRowBasic extends SearchRowBasic {
         "matchBillToReceipt" => "SearchColumnBooleanField[]",
         "memberItem" => "SearchColumnSelectField[]",
         "memberQuantity" => "SearchColumnDoubleField[]",
+        "memberRatePlan" => "SearchColumnSelectField[]",
         "metaTagHtml" => "SearchColumnStringField[]",
         "minimumQuantity" => "SearchColumnStringField[]",
         "modified" => "SearchColumnDateField[]",

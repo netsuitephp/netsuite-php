@@ -14,13 +14,14 @@
  * @license    https://raw.githubusercontent.com/ryanwinchester/netsuite-php/master/original/NetSuite%20Application%20Developer%20License%20Agreement.txt
  * @link       http://www.netsuite.com/portal/developers/resources/suitetalk-sample-applications.shtml
  *
- * generated:  2016-06-02 02:54:03 PM UTC
+ * generated:  2017-03-31 08:48:20 PM UTC
  */
 
 namespace NetSuite\Classes;
 
 class ConsolidatedExchangeRate {
     public $period;
+    public $book;
     public $fromSubsidiary;
     public $toSubsidiary;
     public $currentRate;
@@ -28,6 +29,7 @@ class ConsolidatedExchangeRate {
     public $historicalRate;
     static $paramtypesmap = array(
         "period" => "RecordRef",
+        "book" => "RecordRef",
         "fromSubsidiary" => "RecordRef",
         "toSubsidiary" => "RecordRef",
         "currentRate" => "float",
