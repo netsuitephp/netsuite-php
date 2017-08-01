@@ -14,7 +14,7 @@ Require with composer:
 **NOTE: package name change**
 
 ```
-composer require "ryanwinchester/netsuite-php:2016.2.*"
+composer require "ryanwinchester/netsuite-php:2017.1.*"
 ```
 
 ## Changes in v2:
