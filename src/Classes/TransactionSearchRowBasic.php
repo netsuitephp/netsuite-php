@@ -14,7 +14,7 @@
  * @license    https://raw.githubusercontent.com/ryanwinchester/netsuite-php/master/original/NetSuite%20Application%20Developer%20License%20Agreement.txt
  * @link       http://www.netsuite.com/portal/developers/resources/suitetalk-sample-applications.shtml
  *
- * generated:  2017-03-31 08:48:20 PM UTC
+ * generated:  2017-08-01 09:12:52 PM UTC
  */
 
 namespace NetSuite\Classes;
@@ -70,6 +70,7 @@ class TransactionSearchRowBasic extends SearchRowBasic {
     public $buildEntireAssembly;
     public $buildVariance;
     public $built;
+    public $canHaveStackablePromotions;
     public $catchUpPeriod;
     public $ccCustomerCode;
     public $ccExpDate;
@@ -169,6 +170,7 @@ class TransactionSearchRowBasic extends SearchRowBasic {
     public $giftCert;
     public $grossAmount;
     public $includeInForecast;
+    public $incoterm;
     public $intercoStatus;
     public $intercoTransaction;
     public $internalId;
@@ -179,6 +181,8 @@ class TransactionSearchRowBasic extends SearchRowBasic {
     public $isGcoChargeConfirmed;
     public $isGcoPaymentGuaranteed;
     public $isGcoRefundConfirmed;
+    public $isInsideDelivery;
+    public $isInsidePickup;
     public $isIntercompanyAdjustment;
     public $isMultiShipTo;
     public $isReversal;
@@ -195,6 +199,7 @@ class TransactionSearchRowBasic extends SearchRowBasic {
     public $leadSource;
     public $line;
     public $lineSequenceNumber;
+    public $lineUniqueKey;
     public $location;
     public $locationAutoAssigned;
     public $mainLine;
@@ -365,7 +370,7 @@ class TransactionSearchRowBasic extends SearchRowBasic {
     static $paramtypesmap = array(
         "abbrev" => "SearchColumnStringField[]",
         "account" => "SearchColumnSelectField[]",
-        "accountType" => "SearchColumnStringField[]",
+        "accountType" => "SearchColumnEnumSelectField[]",
         "actualShipDate" => "SearchColumnDateField[]",
         "altSalesAmount" => "SearchColumnDoubleField[]",
         "altSalesNetAmount" => "SearchColumnDoubleField[]",
@@ -413,6 +418,7 @@ class TransactionSearchRowBasic extends SearchRowBasic {
         "buildEntireAssembly" => "SearchColumnBooleanField[]",
         "buildVariance" => "SearchColumnDoubleField[]",
         "built" => "SearchColumnDoubleField[]",
+        "canHaveStackablePromotions" => "SearchColumnBooleanField[]",
         "catchUpPeriod" => "SearchColumnStringField[]",
         "ccCustomerCode" => "SearchColumnStringField[]",
         "ccExpDate" => "SearchColumnDateField[]",
@@ -512,6 +518,7 @@ class TransactionSearchRowBasic extends SearchRowBasic {
         "giftCert" => "SearchColumnStringField[]",
         "grossAmount" => "SearchColumnDoubleField[]",
         "includeInForecast" => "SearchColumnBooleanField[]",
+        "incoterm" => "SearchColumnSelectField[]",
         "intercoStatus" => "SearchColumnEnumSelectField[]",
         "intercoTransaction" => "SearchColumnStringField[]",
         "internalId" => "SearchColumnSelectField[]",
@@ -522,6 +529,8 @@ class TransactionSearchRowBasic extends SearchRowBasic {
         "isGcoChargeConfirmed" => "SearchColumnBooleanField[]",
         "isGcoPaymentGuaranteed" => "SearchColumnBooleanField[]",
         "isGcoRefundConfirmed" => "SearchColumnBooleanField[]",
+        "isInsideDelivery" => "SearchColumnBooleanField[]",
+        "isInsidePickup" => "SearchColumnBooleanField[]",
         "isIntercompanyAdjustment" => "SearchColumnBooleanField[]",
         "isMultiShipTo" => "SearchColumnBooleanField[]",
         "isReversal" => "SearchColumnBooleanField[]",
@@ -538,6 +547,7 @@ class TransactionSearchRowBasic extends SearchRowBasic {
         "leadSource" => "SearchColumnSelectField[]",
         "line" => "SearchColumnLongField[]",
         "lineSequenceNumber" => "SearchColumnLongField[]",
+        "lineUniqueKey" => "SearchColumnLongField[]",
         "location" => "SearchColumnSelectField[]",
         "locationAutoAssigned" => "SearchColumnBooleanField[]",
         "mainLine" => "SearchColumnBooleanField[]",
@@ -659,7 +669,7 @@ class TransactionSearchRowBasic extends SearchRowBasic {
         "source" => "SearchColumnStringField[]",
         "startDate" => "SearchColumnDateField[]",
         "status" => "SearchColumnEnumSelectField[]",
-        "subscription" => "SearchColumnStringField[]",
+        "subscription" => "SearchColumnSelectField[]",
         "subscriptionLine" => "SearchColumnSelectField[]",
         "subsidiary" => "SearchColumnSelectField[]",
         "taxAmount" => "SearchColumnDoubleField[]",

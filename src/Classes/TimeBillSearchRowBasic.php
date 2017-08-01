@@ -14,12 +14,13 @@
  * @license    https://raw.githubusercontent.com/ryanwinchester/netsuite-php/master/original/NetSuite%20Application%20Developer%20License%20Agreement.txt
  * @link       http://www.netsuite.com/portal/developers/resources/suitetalk-sample-applications.shtml
  *
- * generated:  2017-03-31 08:48:20 PM UTC
+ * generated:  2017-08-01 09:12:52 PM UTC
  */
 
 namespace NetSuite\Classes;
 
 class TimeBillSearchRowBasic extends SearchRowBasic {
+    public $approvalStatus;
     public $break;
     public $class;
     public $customer;
@@ -44,6 +45,7 @@ class TimeBillSearchRowBasic extends SearchRowBasic {
     public $payItem;
     public $payrollDate;
     public $rate;
+    public $rejectionNote;
     public $startTime;
     public $status;
     public $subsidiary;
@@ -54,6 +56,7 @@ class TimeBillSearchRowBasic extends SearchRowBasic {
     public $type;
     public $customFieldList;
     static $paramtypesmap = array(
+        "approvalStatus" => "SearchColumnSelectField[]",
         "break" => "SearchColumnStringField[]",
         "class" => "SearchColumnSelectField[]",
         "customer" => "SearchColumnSelectField[]",
@@ -78,6 +81,7 @@ class TimeBillSearchRowBasic extends SearchRowBasic {
         "payItem" => "SearchColumnSelectField[]",
         "payrollDate" => "SearchColumnDateField[]",
         "rate" => "SearchColumnDoubleField[]",
+        "rejectionNote" => "SearchColumnStringField[]",
         "startTime" => "SearchColumnDateField[]",
         "status" => "SearchColumnStringField[]",
         "subsidiary" => "SearchColumnStringField[]",

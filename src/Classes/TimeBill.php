@@ -14,7 +14,7 @@
  * @license    https://raw.githubusercontent.com/ryanwinchester/netsuite-php/master/original/NetSuite%20Application%20Developer%20License%20Agreement.txt
  * @link       http://www.netsuite.com/portal/developers/resources/suitetalk-sample-applications.shtml
  *
- * generated:  2017-03-31 08:48:20 PM UTC
+ * generated:  2017-08-01 09:12:52 PM UTC
  */
 
 namespace NetSuite\Classes;
@@ -23,6 +23,7 @@ class TimeBill extends Record {
     public $customForm;
     public $employee;
     public $tranDate;
+    public $approvalStatus;
     public $customer;
     public $caseTaskEvent;
     public $isBillable;
@@ -41,6 +42,7 @@ class TimeBill extends Record {
     public $temporaryLocalJurisdiction;
     public $temporaryStateJurisdiction;
     public $memo;
+    public $rejectionNote;
     public $subsidiary;
     public $supervisorApproval;
     public $createdDate;
@@ -54,6 +56,7 @@ class TimeBill extends Record {
         "customForm" => "RecordRef",
         "employee" => "RecordRef",
         "tranDate" => "dateTime",
+        "approvalStatus" => "RecordRef",
         "customer" => "RecordRef",
         "caseTaskEvent" => "RecordRef",
         "isBillable" => "boolean",
@@ -72,6 +75,7 @@ class TimeBill extends Record {
         "temporaryLocalJurisdiction" => "RecordRef",
         "temporaryStateJurisdiction" => "RecordRef",
         "memo" => "string",
+        "rejectionNote" => "string",
         "subsidiary" => "RecordRef",
         "supervisorApproval" => "boolean",
         "createdDate" => "dateTime",

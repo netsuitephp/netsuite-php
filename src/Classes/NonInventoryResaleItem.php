@@ -14,7 +14,7 @@
  * @license    https://raw.githubusercontent.com/ryanwinchester/netsuite-php/master/original/NetSuite%20Application%20Developer%20License%20Agreement.txt
  * @link       http://www.netsuite.com/portal/developers/resources/suitetalk-sample-applications.shtml
  *
- * generated:  2017-03-31 08:48:20 PM UTC
+ * generated:  2017-08-01 09:12:52 PM UTC
  */
 
 namespace NetSuite\Classes;
@@ -38,8 +38,10 @@ class NonInventoryResaleItem extends Record {
     public $dropshipExpenseAccount;
     public $deferRevRec;
     public $revenueRecognitionRule;
+    public $revRecForecastRule;
     public $revenueAllocationGroup;
     public $createRevenuePlansOn;
+    public $directRevenuePosting;
     public $isDropShipItem;
     public $isSpecialOrderItem;
     public $shippingCost;
@@ -193,8 +195,10 @@ class NonInventoryResaleItem extends Record {
         "dropshipExpenseAccount" => "RecordRef",
         "deferRevRec" => "boolean",
         "revenueRecognitionRule" => "RecordRef",
+        "revRecForecastRule" => "RecordRef",
         "revenueAllocationGroup" => "RecordRef",
         "createRevenuePlansOn" => "ItemCreateRevenuePlansOn",
+        "directRevenuePosting" => "boolean",
         "isDropShipItem" => "boolean",
         "isSpecialOrderItem" => "boolean",
         "shippingCost" => "float",

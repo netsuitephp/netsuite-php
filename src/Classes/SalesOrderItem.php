@@ -14,7 +14,7 @@
  * @license    https://raw.githubusercontent.com/ryanwinchester/netsuite-php/master/original/NetSuite%20Application%20Developer%20License%20Agreement.txt
  * @link       http://www.netsuite.com/portal/developers/resources/suitetalk-sample-applications.shtml
  *
- * generated:  2017-03-31 08:48:20 PM UTC
+ * generated:  2017-08-01 09:12:52 PM UTC
  */
 
 namespace NetSuite\Classes;
@@ -25,6 +25,7 @@ class SalesOrderItem {
     public $item;
     public $quantityAvailable;
     public $expandItemGroup;
+    public $lineUniqueKey;
     public $quantityOnHand;
     public $quantity;
     public $units;
@@ -60,6 +61,7 @@ class SalesOrderItem {
     public $billingSchedule;
     public $fromJob;
     public $grossAmt;
+    public $taxAmount;
     public $excludeFromRateRequest;
     public $isEstimate;
     public $line;
@@ -96,6 +98,7 @@ class SalesOrderItem {
     public $expectedShipDate;
     public $noAutoAssignLocation;
     public $locationAutoAssigned;
+    public $taxDetailsReference;
     public $chargeType;
     public $customFieldList;
     static $paramtypesmap = array(
@@ -104,6 +107,7 @@ class SalesOrderItem {
         "item" => "RecordRef",
         "quantityAvailable" => "float",
         "expandItemGroup" => "boolean",
+        "lineUniqueKey" => "integer",
         "quantityOnHand" => "float",
         "quantity" => "float",
         "units" => "RecordRef",
@@ -139,6 +143,7 @@ class SalesOrderItem {
         "billingSchedule" => "RecordRef",
         "fromJob" => "boolean",
         "grossAmt" => "float",
+        "taxAmount" => "float",
         "excludeFromRateRequest" => "boolean",
         "isEstimate" => "boolean",
         "line" => "integer",
@@ -175,6 +180,7 @@ class SalesOrderItem {
         "expectedShipDate" => "dateTime",
         "noAutoAssignLocation" => "boolean",
         "locationAutoAssigned" => "boolean",
+        "taxDetailsReference" => "string",
         "chargeType" => "RecordRef",
         "customFieldList" => "CustomFieldList",
     );

@@ -37,7 +37,7 @@ use NetSuite\NetSuiteService;
 
 $config = array(
    // required -------------------------------------
-   "endpoint" => "2016_2",
+   "endpoint" => "2017_1",
    "host"     => "https://webservices.netsuite.com",
    "email"    => "jDoe@netsuite.com",
    "password" => "mySecretPwd",
@@ -163,7 +163,7 @@ Instead of instantiating `NetSuiteService` with the standard credentials method,
 ```php
 $config = array(
    // required -------------------------------------
-   "endpoint"       => "2016_2",
+   "endpoint"       => "2017_1",
    "host"           => "https://webservices.netsuite.com",
    "account"        => "MYACCT1",
    "consumerKey"    => "0123456789ABCDEF",
