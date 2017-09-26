@@ -14,7 +14,7 @@
  * @license    https://raw.githubusercontent.com/ryanwinchester/netsuite-php/master/original/NetSuite%20Application%20Developer%20License%20Agreement.txt
  * @link       http://www.netsuite.com/portal/developers/resources/suitetalk-sample-applications.shtml
  *
- * generated:  2017-03-31 08:48:20 PM UTC
+ * generated:  2017-08-01 09:12:52 PM UTC
  */
 
 namespace NetSuite\Classes;
@@ -513,8 +513,6 @@ class StatusDetailCodeType {
     const GROUP_REQD = "GROUP_REQD";
     const GROUP_TYPE_REQD = "GROUP_TYPE_REQD";
     const GRTR_QTY_PRICE_LEVEL_REQD = "GRTR_QTY_PRICE_LEVEL_REQD";
-    const IGNORE = "IGNORE";
-    const ILLEGAL_ID = "ILLEGAL_ID";
     const ILLEGAL_PERIOD_STRUCTURE = "ILLEGAL_PERIOD_STRUCTURE";
     const INACTIVE_CC_PROFILE = "INACTIVE_CC_PROFILE";
     const INACTIVE_RCRD_FOR_ROLE = "INACTIVE_RCRD_FOR_ROLE";

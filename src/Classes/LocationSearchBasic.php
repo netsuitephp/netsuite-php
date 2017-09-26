@@ -14,7 +14,7 @@
  * @license    https://raw.githubusercontent.com/ryanwinchester/netsuite-php/master/original/NetSuite%20Application%20Developer%20License%20Agreement.txt
  * @link       http://www.netsuite.com/portal/developers/resources/suitetalk-sample-applications.shtml
  *
- * generated:  2017-03-31 08:48:20 PM UTC
+ * generated:  2017-08-01 09:12:52 PM UTC
  */
 
 namespace NetSuite\Classes;
@@ -27,13 +27,21 @@ class LocationSearchBasic extends SearchRecordBasic {
     public $country;
     public $county;
     public $dailyShippingCapacity;
+    public $endTime;
     public $externalId;
     public $externalIdString;
     public $geolocationMethod;
     public $internalId;
     public $internalIdNumber;
+    public $isFriday;
     public $isInactive;
+    public $isMonday;
     public $isOffice;
+    public $isSaturday;
+    public $isSunday;
+    public $isThursday;
+    public $isTuesday;
+    public $isWednesday;
     public $latitude;
     public $locationType;
     public $longitude;
@@ -41,7 +49,10 @@ class LocationSearchBasic extends SearchRecordBasic {
     public $makeInventoryAvailableStore;
     public $name;
     public $nameNoHierarchy;
+    public $nextPickupCutOffTime;
     public $phone;
+    public $sameDayPickupCutOffTime;
+    public $startTime;
     public $state;
     public $subsidiary;
     public $timeZone;
@@ -58,13 +69,21 @@ class LocationSearchBasic extends SearchRecordBasic {
         "country" => "SearchEnumMultiSelectField",
         "county" => "SearchStringField",
         "dailyShippingCapacity" => "SearchLongField",
+        "endTime" => "SearchDateField",
         "externalId" => "SearchMultiSelectField",
         "externalIdString" => "SearchStringField",
         "geolocationMethod" => "SearchEnumMultiSelectField",
         "internalId" => "SearchMultiSelectField",
         "internalIdNumber" => "SearchLongField",
+        "isFriday" => "SearchBooleanField",
         "isInactive" => "SearchBooleanField",
+        "isMonday" => "SearchBooleanField",
         "isOffice" => "SearchBooleanField",
+        "isSaturday" => "SearchBooleanField",
+        "isSunday" => "SearchBooleanField",
+        "isThursday" => "SearchBooleanField",
+        "isTuesday" => "SearchBooleanField",
+        "isWednesday" => "SearchBooleanField",
         "latitude" => "SearchDoubleField",
         "locationType" => "SearchEnumMultiSelectField",
         "longitude" => "SearchDoubleField",
@@ -72,7 +91,10 @@ class LocationSearchBasic extends SearchRecordBasic {
         "makeInventoryAvailableStore" => "SearchBooleanField",
         "name" => "SearchStringField",
         "nameNoHierarchy" => "SearchStringField",
+        "nextPickupCutOffTime" => "SearchDateField",
         "phone" => "SearchStringField",
+        "sameDayPickupCutOffTime" => "SearchDateField",
+        "startTime" => "SearchDateField",
         "state" => "SearchStringField",
         "subsidiary" => "SearchMultiSelectField",
         "timeZone" => "SearchEnumMultiSelectField",

@@ -14,7 +14,7 @@
  * @license    https://raw.githubusercontent.com/ryanwinchester/netsuite-php/master/original/NetSuite%20Application%20Developer%20License%20Agreement.txt
  * @link       http://www.netsuite.com/portal/developers/resources/suitetalk-sample-applications.shtml
  *
- * generated:  2017-03-31 08:48:20 PM UTC
+ * generated:  2017-08-01 09:12:52 PM UTC
  */
 
 namespace NetSuite\Classes;
@@ -68,6 +68,7 @@ class TransactionSearchBasic extends SearchRecordBasic {
     public $buildEntireAssembly;
     public $buildVariance;
     public $built;
+    public $canHaveStackablePromotions;
     public $catchUpPeriod;
     public $ccCustomerCode;
     public $ccExpireDate;
@@ -165,6 +166,7 @@ class TransactionSearchBasic extends SearchRecordBasic {
     public $giftCertificate;
     public $grossAmount;
     public $includeInForecast;
+    public $incoterm;
     public $intercoStatus;
     public $intercoTransaction;
     public $internalId;
@@ -176,6 +178,8 @@ class TransactionSearchBasic extends SearchRecordBasic {
     public $isGcoChargeConfirmed;
     public $isGcoPaymentGuaranteed;
     public $isGcoRefundConfirmed;
+    public $isInsideDelivery;
+    public $isInsidePickup;
     public $isIntercompanyAdjustment;
     public $isMultiShipTo;
     public $isPayPalMeth;
@@ -193,6 +197,7 @@ class TransactionSearchBasic extends SearchRecordBasic {
     public $landedCostPerLine;
     public $lastModifiedDate;
     public $leadSource;
+    public $lineUniqueKey;
     public $location;
     public $locationAutoAssigned;
     public $mainLine;
@@ -357,7 +362,7 @@ class TransactionSearchBasic extends SearchRecordBasic {
     public $customFieldList;
     static $paramtypesmap = array(
         "account" => "SearchMultiSelectField",
-        "accountType" => "SearchMultiSelectField",
+        "accountType" => "SearchEnumMultiSelectField",
         "actualShipDate" => "SearchDateField",
         "altSalesAmount" => "SearchDoubleField",
         "altSalesNetAmount" => "SearchDoubleField",
@@ -404,6 +409,7 @@ class TransactionSearchBasic extends SearchRecordBasic {
         "buildEntireAssembly" => "SearchBooleanField",
         "buildVariance" => "SearchDoubleField",
         "built" => "SearchDoubleField",
+        "canHaveStackablePromotions" => "SearchBooleanField",
         "catchUpPeriod" => "SearchMultiSelectField",
         "ccCustomerCode" => "SearchStringField",
         "ccExpireDate" => "SearchDateField",
@@ -501,6 +507,7 @@ class TransactionSearchBasic extends SearchRecordBasic {
         "giftCertificate" => "SearchStringField",
         "grossAmount" => "SearchDoubleField",
         "includeInForecast" => "SearchBooleanField",
+        "incoterm" => "SearchMultiSelectField",
         "intercoStatus" => "SearchEnumMultiSelectField",
         "intercoTransaction" => "SearchMultiSelectField",
         "internalId" => "SearchMultiSelectField",
@@ -512,6 +519,8 @@ class TransactionSearchBasic extends SearchRecordBasic {
         "isGcoChargeConfirmed" => "SearchBooleanField",
         "isGcoPaymentGuaranteed" => "SearchBooleanField",
         "isGcoRefundConfirmed" => "SearchBooleanField",
+        "isInsideDelivery" => "SearchBooleanField",
+        "isInsidePickup" => "SearchBooleanField",
         "isIntercompanyAdjustment" => "SearchBooleanField",
         "isMultiShipTo" => "SearchBooleanField",
         "isPayPalMeth" => "SearchBooleanField",
@@ -529,6 +538,7 @@ class TransactionSearchBasic extends SearchRecordBasic {
         "landedCostPerLine" => "SearchBooleanField",
         "lastModifiedDate" => "SearchDateField",
         "leadSource" => "SearchMultiSelectField",
+        "lineUniqueKey" => "SearchLongField",
         "location" => "SearchMultiSelectField",
         "locationAutoAssigned" => "SearchBooleanField",
         "mainLine" => "SearchBooleanField",

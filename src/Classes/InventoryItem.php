@@ -14,7 +14,7 @@
  * @license    https://raw.githubusercontent.com/ryanwinchester/netsuite-php/master/original/NetSuite%20Application%20Developer%20License%20Agreement.txt
  * @link       http://www.netsuite.com/portal/developers/resources/suitetalk-sample-applications.shtml
  *
- * generated:  2017-03-31 08:48:20 PM UTC
+ * generated:  2017-08-01 09:12:52 PM UTC
  */
 
 namespace NetSuite\Classes;
@@ -39,8 +39,10 @@ class InventoryItem extends Record {
     public $dropshipExpenseAccount;
     public $deferRevRec;
     public $revenueRecognitionRule;
+    public $revRecForecastRule;
     public $revenueAllocationGroup;
     public $createRevenuePlansOn;
+    public $directRevenuePosting;
     public $isTaxable;
     public $matrixType;
     public $assetAccount;
@@ -121,6 +123,7 @@ class InventoryItem extends Record {
     public $vsoeDelivered;
     public $itemRevenueCategory;
     public $preferredLocation;
+    public $isStorePickupAllowed;
     public $reorderMultiple;
     public $cost;
     public $lastInvtCountDate;
@@ -260,8 +263,10 @@ class InventoryItem extends Record {
         "dropshipExpenseAccount" => "RecordRef",
         "deferRevRec" => "boolean",
         "revenueRecognitionRule" => "RecordRef",
+        "revRecForecastRule" => "RecordRef",
         "revenueAllocationGroup" => "RecordRef",
         "createRevenuePlansOn" => "ItemCreateRevenuePlansOn",
+        "directRevenuePosting" => "boolean",
         "isTaxable" => "boolean",
         "matrixType" => "ItemMatrixType",
         "assetAccount" => "RecordRef",
@@ -342,6 +347,7 @@ class InventoryItem extends Record {
         "vsoeDelivered" => "boolean",
         "itemRevenueCategory" => "RecordRef",
         "preferredLocation" => "RecordRef",
+        "isStorePickupAllowed" => "boolean",
         "reorderMultiple" => "integer",
         "cost" => "float",
         "lastInvtCountDate" => "dateTime",

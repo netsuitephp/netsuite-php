@@ -14,7 +14,7 @@
  * @license    https://raw.githubusercontent.com/ryanwinchester/netsuite-php/master/original/NetSuite%20Application%20Developer%20License%20Agreement.txt
  * @link       http://www.netsuite.com/portal/developers/resources/suitetalk-sample-applications.shtml
  *
- * generated:  2017-03-31 08:48:20 PM UTC
+ * generated:  2017-08-01 09:12:52 PM UTC
  */
 
 namespace NetSuite\Classes;
@@ -24,6 +24,8 @@ class TaxType extends Record {
     public $description;
     public $doesNotAddToTotal;
     public $postToItemCost;
+    public $taxInNetAmount;
+    public $reverseCharge;
     public $isInactive;
     public $nexusAccountsList;
     public $nexusesTaxList;
@@ -35,6 +37,8 @@ class TaxType extends Record {
         "description" => "string",
         "doesNotAddToTotal" => "boolean",
         "postToItemCost" => "boolean",
+        "taxInNetAmount" => "boolean",
+        "reverseCharge" => "boolean",
         "isInactive" => "boolean",
         "nexusAccountsList" => "TaxTypeNexusAccountsList",
         "nexusesTaxList" => "TaxTypeNexusesTaxList",

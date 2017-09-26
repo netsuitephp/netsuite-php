@@ -14,7 +14,7 @@
  * @license    https://raw.githubusercontent.com/ryanwinchester/netsuite-php/master/original/NetSuite%20Application%20Developer%20License%20Agreement.txt
  * @link       http://www.netsuite.com/portal/developers/resources/suitetalk-sample-applications.shtml
  *
- * generated:  2017-03-31 08:48:20 PM UTC
+ * generated:  2017-08-01 09:12:52 PM UTC
  */
 
 namespace NetSuite\Classes;
@@ -33,7 +33,6 @@ class GetAllRecordType {
     const campaignVertical = "campaignVertical";
     const currency = "currency";
     const leadSource = "leadSource";
-    const salesTaxItem = "salesTaxItem";
     const state = "state";
     const supportCaseIssue = "supportCaseIssue";
     const supportCaseOrigin = "supportCaseOrigin";
@@ -41,6 +40,4 @@ class GetAllRecordType {
     const supportCaseStatus = "supportCaseStatus";
     const supportCaseType = "supportCaseType";
     const taxAcct = "taxAcct";
-    const taxGroup = "taxGroup";
-    const taxType = "taxType";
 }

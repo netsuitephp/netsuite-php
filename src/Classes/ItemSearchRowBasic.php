@@ -14,7 +14,7 @@
  * @license    https://raw.githubusercontent.com/ryanwinchester/netsuite-php/master/original/NetSuite%20Application%20Developer%20License%20Agreement.txt
  * @link       http://www.netsuite.com/portal/developers/resources/suitetalk-sample-applications.shtml
  *
- * generated:  2017-03-31 08:48:20 PM UTC
+ * generated:  2017-08-01 09:12:52 PM UTC
  */
 
 namespace NetSuite\Classes;
@@ -78,6 +78,7 @@ class ItemSearchRowBasic extends SearchRowBasic {
     public $demandTimeFence;
     public $department;
     public $departmentnohierarchy;
+    public $directRevenuePosting;
     public $displayIneBayStore;
     public $displayName;
     public $distributionCategory;
@@ -131,6 +132,7 @@ class ItemSearchRowBasic extends SearchRowBasic {
     public $isSerialItem;
     public $isSpecialOrderItem;
     public $isSpecialWorkOrderItem;
+    public $isStorePickupAllowed;
     public $issueProduct;
     public $isTaxable;
     public $isVsoeBundle;
@@ -145,6 +147,7 @@ class ItemSearchRowBasic extends SearchRowBasic {
     public $liabilityAccount;
     public $listingDuration;
     public $location;
+    public $locationAllowStorePickup;
     public $locationAtpLeadTime;
     public $locationAverageCost;
     public $locationBinQuantityAvailable;
@@ -164,6 +167,7 @@ class ItemSearchRowBasic extends SearchRowBasic {
     public $locationPeriodicLotSizeDays;
     public $locationPeriodicLotSizeType;
     public $locationPreferredStockLevel;
+    public $locationQtyAvailForStorePickup;
     public $locationQuantityAvailable;
     public $locationQuantityBackOrdered;
     public $locationQuantityCommitted;
@@ -191,7 +195,6 @@ class ItemSearchRowBasic extends SearchRowBasic {
     public $matchBillToReceipt;
     public $memberItem;
     public $memberQuantity;
-    public $memberRatePlan;
     public $metaTagHtml;
     public $minimumQuantity;
     public $modified;
@@ -253,6 +256,7 @@ class ItemSearchRowBasic extends SearchRowBasic {
     public $reservePrice;
     public $revenueAllocationGroup;
     public $revenueRecognitionRule;
+    public $revRecForecastRule;
     public $revRecSchedule;
     public $roundUpAsComponent;
     public $safetyStockLevel;
@@ -386,6 +390,7 @@ class ItemSearchRowBasic extends SearchRowBasic {
         "demandTimeFence" => "SearchColumnLongField[]",
         "department" => "SearchColumnSelectField[]",
         "departmentnohierarchy" => "SearchColumnSelectField[]",
+        "directRevenuePosting" => "SearchColumnBooleanField[]",
         "displayIneBayStore" => "SearchColumnBooleanField[]",
         "displayName" => "SearchColumnStringField[]",
         "distributionCategory" => "SearchColumnSelectField[]",
@@ -439,6 +444,7 @@ class ItemSearchRowBasic extends SearchRowBasic {
         "isSerialItem" => "SearchColumnBooleanField[]",
         "isSpecialOrderItem" => "SearchColumnBooleanField[]",
         "isSpecialWorkOrderItem" => "SearchColumnBooleanField[]",
+        "isStorePickupAllowed" => "SearchColumnBooleanField[]",
         "issueProduct" => "SearchColumnSelectField[]",
         "isTaxable" => "SearchColumnBooleanField[]",
         "isVsoeBundle" => "SearchColumnBooleanField[]",
@@ -453,6 +459,7 @@ class ItemSearchRowBasic extends SearchRowBasic {
         "liabilityAccount" => "SearchColumnSelectField[]",
         "listingDuration" => "SearchColumnEnumSelectField[]",
         "location" => "SearchColumnSelectField[]",
+        "locationAllowStorePickup" => "SearchColumnBooleanField[]",
         "locationAtpLeadTime" => "SearchColumnDoubleField[]",
         "locationAverageCost" => "SearchColumnDoubleField[]",
         "locationBinQuantityAvailable" => "SearchColumnStringField[]",
@@ -472,6 +479,7 @@ class ItemSearchRowBasic extends SearchRowBasic {
         "locationPeriodicLotSizeDays" => "SearchColumnLongField[]",
         "locationPeriodicLotSizeType" => "SearchColumnEnumSelectField[]",
         "locationPreferredStockLevel" => "SearchColumnDoubleField[]",
+        "locationQtyAvailForStorePickup" => "SearchColumnDoubleField[]",
         "locationQuantityAvailable" => "SearchColumnDoubleField[]",
         "locationQuantityBackOrdered" => "SearchColumnDoubleField[]",
         "locationQuantityCommitted" => "SearchColumnDoubleField[]",
@@ -499,7 +507,6 @@ class ItemSearchRowBasic extends SearchRowBasic {
         "matchBillToReceipt" => "SearchColumnBooleanField[]",
         "memberItem" => "SearchColumnSelectField[]",
         "memberQuantity" => "SearchColumnDoubleField[]",
-        "memberRatePlan" => "SearchColumnSelectField[]",
         "metaTagHtml" => "SearchColumnStringField[]",
         "minimumQuantity" => "SearchColumnStringField[]",
         "modified" => "SearchColumnDateField[]",
@@ -561,6 +568,7 @@ class ItemSearchRowBasic extends SearchRowBasic {
         "reservePrice" => "SearchColumnDoubleField[]",
         "revenueAllocationGroup" => "SearchColumnSelectField[]",
         "revenueRecognitionRule" => "SearchColumnSelectField[]",
+        "revRecForecastRule" => "SearchColumnSelectField[]",
         "revRecSchedule" => "SearchColumnSelectField[]",
         "roundUpAsComponent" => "SearchColumnBooleanField[]",
         "safetyStockLevel" => "SearchColumnDoubleField[]",

@@ -14,7 +14,7 @@
  * @license    https://raw.githubusercontent.com/ryanwinchester/netsuite-php/master/original/NetSuite%20Application%20Developer%20License%20Agreement.txt
  * @link       http://www.netsuite.com/portal/developers/resources/suitetalk-sample-applications.shtml
  *
- * generated:  2017-03-31 08:48:20 PM UTC
+ * generated:  2017-08-01 09:12:52 PM UTC
  */
 
 namespace NetSuite\Classes;
@@ -41,6 +41,7 @@ class TransactionStatus {
     const _commissionRejectedByAccounting = "_commissionRejectedByAccounting";
     const _creditMemoFullyApplied = "_creditMemoFullyApplied";
     const _creditMemoOpen = "_creditMemoOpen";
+    const _creditMemoVoided = "_creditMemoVoided";
     const _customerDepositDeposited = "_customerDepositDeposited";
     const _customerDepositFullyApplied = "_customerDepositFullyApplied";
     const _customerDepositNotDeposited = "_customerDepositNotDeposited";
@@ -64,6 +65,7 @@ class TransactionStatus {
     const _invoicePaidInFull = "_invoicePaidInFull";
     const _invoicePendingApproval = "_invoicePendingApproval";
     const _invoiceRejected = "_invoiceRejected";
+    const _invoiceVoided = "_invoiceVoided";
     const _itemFulfillmentPacked = "_itemFulfillmentPacked";
     const _itemFulfillmentPicked = "_itemFulfillmentPicked";
     const _itemFulfillmentShipped = "_itemFulfillmentShipped";

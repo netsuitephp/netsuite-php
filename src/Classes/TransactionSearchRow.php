@@ -14,7 +14,7 @@
  * @license    https://raw.githubusercontent.com/ryanwinchester/netsuite-php/master/original/NetSuite%20Application%20Developer%20License%20Agreement.txt
  * @link       http://www.netsuite.com/portal/developers/resources/suitetalk-sample-applications.shtml
  *
- * generated:  2017-03-31 08:48:20 PM UTC
+ * generated:  2017-08-01 09:12:52 PM UTC
  */
 
 namespace NetSuite\Classes;
@@ -74,6 +74,8 @@ class TransactionSearchRow extends SearchRow {
     public $shippingAddressJoin;
     public $subsidiaryJoin;
     public $taskJoin;
+    public $taxDetailJoin;
+    public $taxItemJoin;
     public $timeJoin;
     public $toLocationJoin;
     public $userJoin;
@@ -136,6 +138,8 @@ class TransactionSearchRow extends SearchRow {
         "shippingAddressJoin" => "AddressSearchRowBasic",
         "subsidiaryJoin" => "SubsidiarySearchRowBasic",
         "taskJoin" => "TaskSearchRowBasic",
+        "taxDetailJoin" => "TaxDetailSearchRowBasic",
+        "taxItemJoin" => "SalesTaxItemSearchRowBasic",
         "timeJoin" => "TimeBillSearchRowBasic",
         "toLocationJoin" => "LocationSearchRowBasic",
         "userJoin" => "EmployeeSearchRowBasic",

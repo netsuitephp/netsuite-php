@@ -14,26 +14,40 @@
  * @license    https://raw.githubusercontent.com/ryanwinchester/netsuite-php/master/original/NetSuite%20Application%20Developer%20License%20Agreement.txt
  * @link       http://www.netsuite.com/portal/developers/resources/suitetalk-sample-applications.shtml
  *
- * generated:  2017-03-31 08:48:20 PM UTC
+ * generated:  2017-08-01 09:12:52 PM UTC
  */
 
 namespace NetSuite\Classes;
 
-class ConsolidatedExchangeRate {
-    public $period;
-    public $book;
+class ConsolidatedExchangeRate extends Record {
+    public $postingPeriod;
     public $fromSubsidiary;
+    public $fromCurrency;
     public $toSubsidiary;
-    public $currentRate;
+    public $toCurrency;
     public $averageRate;
+    public $currentRate;
     public $historicalRate;
+    public $accountingBook;
+    public $isPeriodClosed;
+    public $isDerived;
+    public $isEliminationSubsidiary;
+    public $internalId;
+    public $externalId;
     static $paramtypesmap = array(
-        "period" => "RecordRef",
-        "book" => "RecordRef",
-        "fromSubsidiary" => "RecordRef",
-        "toSubsidiary" => "RecordRef",
-        "currentRate" => "float",
+        "postingPeriod" => "string",
+        "fromSubsidiary" => "string",
+        "fromCurrency" => "string",
+        "toSubsidiary" => "string",
+        "toCurrency" => "string",
         "averageRate" => "float",
+        "currentRate" => "float",
         "historicalRate" => "float",
+        "accountingBook" => "string",
+        "isPeriodClosed" => "boolean",
+        "isDerived" => "boolean",
+        "isEliminationSubsidiary" => "boolean",
+        "internalId" => "string",
+        "externalId" => "string",
     );
 }

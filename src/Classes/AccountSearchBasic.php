@@ -14,12 +14,13 @@
  * @license    https://raw.githubusercontent.com/ryanwinchester/netsuite-php/master/original/NetSuite%20Application%20Developer%20License%20Agreement.txt
  * @link       http://www.netsuite.com/portal/developers/resources/suitetalk-sample-applications.shtml
  *
- * generated:  2017-03-31 08:48:20 PM UTC
+ * generated:  2017-08-01 09:12:52 PM UTC
  */
 
 namespace NetSuite\Classes;
 
 class AccountSearchBasic extends SearchRecordBasic {
+    public $accountingContext;
     public $balance;
     public $cashFlowRateType;
     public $category1099Misc;
@@ -31,6 +32,10 @@ class AccountSearchBasic extends SearchRecordBasic {
     public $internalIdNumber;
     public $isInactive;
     public $legalName;
+    public $locale;
+    public $localizedLegalName;
+    public $localizedName;
+    public $localizedNumber;
     public $name;
     public $number;
     public $parent;
@@ -38,6 +43,7 @@ class AccountSearchBasic extends SearchRecordBasic {
     public $type;
     public $customFieldList;
     static $paramtypesmap = array(
+        "accountingContext" => "SearchMultiSelectField",
         "balance" => "SearchDoubleField",
         "cashFlowRateType" => "SearchEnumMultiSelectField",
         "category1099Misc" => "SearchMultiSelectField",
@@ -49,6 +55,10 @@ class AccountSearchBasic extends SearchRecordBasic {
         "internalIdNumber" => "SearchLongField",
         "isInactive" => "SearchBooleanField",
         "legalName" => "SearchStringField",
+        "locale" => "SearchEnumMultiSelectField",
+        "localizedLegalName" => "SearchStringField",
+        "localizedName" => "SearchStringField",
+        "localizedNumber" => "SearchStringField",
         "name" => "SearchStringField",
         "number" => "SearchStringField",
         "parent" => "SearchMultiSelectField",

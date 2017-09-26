@@ -14,7 +14,7 @@
  * @license    https://raw.githubusercontent.com/ryanwinchester/netsuite-php/master/original/NetSuite%20Application%20Developer%20License%20Agreement.txt
  * @link       http://www.netsuite.com/portal/developers/resources/suitetalk-sample-applications.shtml
  *
- * generated:  2017-03-31 08:48:20 PM UTC
+ * generated:  2017-08-01 09:12:52 PM UTC
  */
 
 namespace NetSuite\Classes;
@@ -29,6 +29,7 @@ class AssemblyItem extends Record {
     public $vendorName;
     public $parent;
     public $printItems;
+    public $vendor;
     public $isOnline;
     public $isGcoCompliant;
     public $offerSupport;
@@ -92,6 +93,7 @@ class AssemblyItem extends Record {
     public $receiptQuantity;
     public $receiptAmount;
     public $receiptQuantityDiff;
+    public $isDropShipItem;
     public $isPhantom;
     public $defaultItemShipMethod;
     public $itemCarrier;
@@ -142,10 +144,13 @@ class AssemblyItem extends Record {
     public $unbuildVarianceAccount;
     public $deferRevRec;
     public $revenueRecognitionRule;
+    public $revRecForecastRule;
     public $revenueAllocationGroup;
     public $createRevenuePlansOn;
+    public $directRevenuePosting;
     public $dropshipExpenseAccount;
     public $preferredLocation;
+    public $isStorePickupAllowed;
     public $totalValue;
     public $useBins;
     public $averageCost;
@@ -235,6 +240,7 @@ class AssemblyItem extends Record {
         "vendorName" => "string",
         "parent" => "RecordRef",
         "printItems" => "boolean",
+        "vendor" => "RecordRef",
         "isOnline" => "boolean",
         "isGcoCompliant" => "boolean",
         "offerSupport" => "boolean",
@@ -298,6 +304,7 @@ class AssemblyItem extends Record {
         "receiptQuantity" => "float",
         "receiptAmount" => "float",
         "receiptQuantityDiff" => "float",
+        "isDropShipItem" => "boolean",
         "isPhantom" => "boolean",
         "defaultItemShipMethod" => "RecordRef",
         "itemCarrier" => "ShippingCarrier",
@@ -348,10 +355,13 @@ class AssemblyItem extends Record {
         "unbuildVarianceAccount" => "RecordRef",
         "deferRevRec" => "boolean",
         "revenueRecognitionRule" => "RecordRef",
+        "revRecForecastRule" => "RecordRef",
         "revenueAllocationGroup" => "RecordRef",
         "createRevenuePlansOn" => "ItemCreateRevenuePlansOn",
+        "directRevenuePosting" => "boolean",
         "dropshipExpenseAccount" => "RecordRef",
         "preferredLocation" => "RecordRef",
+        "isStorePickupAllowed" => "boolean",
         "totalValue" => "float",
         "useBins" => "boolean",
         "averageCost" => "float",

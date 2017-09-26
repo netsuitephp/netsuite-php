@@ -14,7 +14,7 @@
  * @license    https://raw.githubusercontent.com/ryanwinchester/netsuite-php/master/original/NetSuite%20Application%20Developer%20License%20Agreement.txt
  * @link       http://www.netsuite.com/portal/developers/resources/suitetalk-sample-applications.shtml
  *
- * generated:  2017-03-31 08:48:20 PM UTC
+ * generated:  2017-08-01 09:12:52 PM UTC
  */
 
 namespace NetSuite\Classes;
@@ -38,11 +38,13 @@ class Location extends Record {
     public $makeInventoryAvailableStore;
     public $geolocationMethod;
     public $autoAssignmentRegionSetting;
+    public $nextPickupCutOffTime;
     public $bufferStock;
     public $dailyShippingCapacity;
     public $totalShippingCapacity;
     public $includeLocationRegionsList;
     public $excludeLocationRegionsList;
+    public $businessHoursList;
     public $classTranslationList;
     public $customFieldList;
     public $internalId;
@@ -66,11 +68,13 @@ class Location extends Record {
         "makeInventoryAvailableStore" => "boolean",
         "geolocationMethod" => "LocationGeolocationMethod",
         "autoAssignmentRegionSetting" => "LocationAutoAssignmentRegionSetting",
+        "nextPickupCutOffTime" => "dateTime",
         "bufferStock" => "integer",
         "dailyShippingCapacity" => "integer",
         "totalShippingCapacity" => "integer",
         "includeLocationRegionsList" => "LocationRegionsList",
         "excludeLocationRegionsList" => "LocationRegionsList",
+        "businessHoursList" => "LocationBusinessHoursList",
         "classTranslationList" => "ClassTranslationList",
         "customFieldList" => "CustomFieldList",
         "internalId" => "string",
