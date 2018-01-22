@@ -15,7 +15,7 @@
     "ext-soap": "*",
     "ext-SimpleXML": "*",
     "ext-openssl": "*",
-    "paragonie/random_compat": "^2.0"
+    "paragonie/random_compat": "^1|^2"
   },
   "require-dev": {
     "phpspec/phpspec": "^2.4"
