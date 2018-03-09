@@ -14,7 +14,7 @@
  * @license    https://raw.githubusercontent.com/ryanwinchester/netsuite-php/master/original/NetSuite%20Application%20Developer%20License%20Agreement.txt
  * @link       http://www.netsuite.com/portal/developers/resources/suitetalk-sample-applications.shtml
  *
- * generated:  2016-06-02 02:54:03 PM UTC
+ * generated:  2017-08-01 09:12:52 PM UTC
  */
 
 namespace NetSuite\Classes;
@@ -22,6 +22,7 @@ namespace NetSuite\Classes;
 class TransactionPaymentEventHoldReason {
     static $paramtypesmap = array(
     );
+    const _amountExceedsMaximumAllowedAmount = "_amountExceedsMaximumAllowedAmount";
     const _authorizationDecline = "_authorizationDecline";
     const _cardExpired = "_cardExpired";
     const _cardInvalid = "_cardInvalid";
@@ -31,13 +32,16 @@ class TransactionPaymentEventHoldReason {
     const _fatalError = "_fatalError";
     const _forwardedToPayerAuthentication = "_forwardedToPayerAuthentication";
     const _forwardRequested = "_forwardRequested";
+    const _gatewayAsynchronousNotification = "_gatewayAsynchronousNotification";
     const _gatewayError = "_gatewayError";
     const _generalHold = "_generalHold";
     const _generalReject = "_generalReject";
+    const _operationWasSuccessful = "_operationWasSuccessful";
     const _operationWasTerminated = "_operationWasTerminated";
     const _overridenBy = "_overridenBy";
     const _partnerDecline = "_partnerDecline";
     const _paymentDeviceWasPrimed = "_paymentDeviceWasPrimed";
+    const _paymentOperationWasCanceled = "_paymentOperationWasCanceled";
     const _systemError = "_systemError";
     const _verbalAuthorizationRequested = "_verbalAuthorizationRequested";
     const _verificationRejection = "_verificationRejection";

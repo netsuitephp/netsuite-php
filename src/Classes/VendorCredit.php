@@ -14,7 +14,7 @@
  * @license    https://raw.githubusercontent.com/ryanwinchester/netsuite-php/master/original/NetSuite%20Application%20Developer%20License%20Agreement.txt
  * @link       http://www.netsuite.com/portal/developers/resources/suitetalk-sample-applications.shtml
  *
- * generated:  2016-06-02 02:54:03 PM UTC
+ * generated:  2017-08-01 09:12:52 PM UTC
  */
 
 namespace NetSuite\Classes;
@@ -22,6 +22,10 @@ namespace NetSuite\Classes;
 class VendorCredit extends Record {
     public $createdDate;
     public $lastModifiedDate;
+    public $nexus;
+    public $subsidiaryTaxRegNum;
+    public $taxRegOverride;
+    public $taxDetailsOverride;
     public $customForm;
     public $account;
     public $unApplied;
@@ -39,6 +43,8 @@ class VendorCredit extends Record {
     public $billingAddress;
     public $tranDate;
     public $exchangeRate;
+    public $entityTaxRegNum;
+    public $userTaxTotal;
     public $postingPeriod;
     public $memo;
     public $department;
@@ -47,13 +53,19 @@ class VendorCredit extends Record {
     public $subsidiary;
     public $expenseList;
     public $itemList;
+    public $accountingBookDetailList;
     public $applyList;
+    public $taxDetailsList;
     public $customFieldList;
     public $internalId;
     public $externalId;
     static $paramtypesmap = array(
         "createdDate" => "dateTime",
         "lastModifiedDate" => "dateTime",
+        "nexus" => "RecordRef",
+        "subsidiaryTaxRegNum" => "RecordRef",
+        "taxRegOverride" => "boolean",
+        "taxDetailsOverride" => "boolean",
         "customForm" => "RecordRef",
         "account" => "RecordRef",
         "unApplied" => "float",
@@ -71,6 +83,8 @@ class VendorCredit extends Record {
         "billingAddress" => "Address",
         "tranDate" => "dateTime",
         "exchangeRate" => "float",
+        "entityTaxRegNum" => "RecordRef",
+        "userTaxTotal" => "float",
         "postingPeriod" => "RecordRef",
         "memo" => "string",
         "department" => "RecordRef",
@@ -79,7 +93,9 @@ class VendorCredit extends Record {
         "subsidiary" => "RecordRef",
         "expenseList" => "VendorCreditExpenseList",
         "itemList" => "VendorCreditItemList",
+        "accountingBookDetailList" => "AccountingBookDetailList",
         "applyList" => "VendorCreditApplyList",
+        "taxDetailsList" => "TaxDetailsList",
         "customFieldList" => "CustomFieldList",
         "internalId" => "string",
         "externalId" => "string",

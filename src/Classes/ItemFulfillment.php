@@ -14,7 +14,7 @@
  * @license    https://raw.githubusercontent.com/ryanwinchester/netsuite-php/master/original/NetSuite%20Application%20Developer%20License%20Agreement.txt
  * @link       http://www.netsuite.com/portal/developers/resources/suitetalk-sample-applications.shtml
  *
- * generated:  2016-06-02 02:54:03 PM UTC
+ * generated:  2017-08-01 09:12:52 PM UTC
  */
 
 namespace NetSuite\Classes;
@@ -26,6 +26,7 @@ class ItemFulfillment extends Record {
     public $postingPeriod;
     public $entity;
     public $createdFrom;
+    public $requestedBy;
     public $createdFromShipGroup;
     public $partner;
     public $shippingAddress;
@@ -110,7 +111,7 @@ class ItemFulfillment extends Record {
     public $packageUspsList;
     public $packageFedExList;
     public $itemList;
-    public $shipGroupList;
+    public $accountingBookDetailList;
     public $customFieldList;
     public $internalId;
     public $externalId;
@@ -121,6 +122,7 @@ class ItemFulfillment extends Record {
         "postingPeriod" => "RecordRef",
         "entity" => "RecordRef",
         "createdFrom" => "RecordRef",
+        "requestedBy" => "RecordRef",
         "createdFromShipGroup" => "integer",
         "partner" => "RecordRef",
         "shippingAddress" => "Address",
@@ -205,7 +207,7 @@ class ItemFulfillment extends Record {
         "packageUspsList" => "ItemFulfillmentPackageUspsList",
         "packageFedExList" => "ItemFulfillmentPackageFedExList",
         "itemList" => "ItemFulfillmentItemList",
-        "shipGroupList" => "ItemFulfillmentShipGroupList",
+        "accountingBookDetailList" => "AccountingBookDetailList",
         "customFieldList" => "CustomFieldList",
         "internalId" => "string",
         "externalId" => "string",

@@ -14,7 +14,7 @@
  * @license    https://raw.githubusercontent.com/ryanwinchester/netsuite-php/master/original/NetSuite%20Application%20Developer%20License%20Agreement.txt
  * @link       http://www.netsuite.com/portal/developers/resources/suitetalk-sample-applications.shtml
  *
- * generated:  2016-06-02 02:54:03 PM UTC
+ * generated:  2017-08-01 09:12:52 PM UTC
  */
 
 namespace NetSuite\Classes;
@@ -43,6 +43,7 @@ class ReturnAuthorizationItem {
     public $department;
     public $costEstimateType;
     public $costEstimate;
+    public $taxDetailsReference;
     public $class;
     public $location;
     public $revRecSchedule;
@@ -64,6 +65,7 @@ class ReturnAuthorizationItem {
     public $vsoePrice;
     public $vsoeAmount;
     public $altSalesAmt;
+    public $taxAmount;
     public $vsoeAllocation;
     public $vsoeDeferral;
     public $vsoePermitDiscount;
@@ -93,6 +95,7 @@ class ReturnAuthorizationItem {
         "department" => "RecordRef",
         "costEstimateType" => "ItemCostEstimateType",
         "costEstimate" => "float",
+        "taxDetailsReference" => "string",
         "class" => "RecordRef",
         "location" => "RecordRef",
         "revRecSchedule" => "RecordRef",
@@ -114,6 +117,7 @@ class ReturnAuthorizationItem {
         "vsoePrice" => "float",
         "vsoeAmount" => "float",
         "altSalesAmt" => "float",
+        "taxAmount" => "float",
         "vsoeAllocation" => "float",
         "vsoeDeferral" => "VsoeDeferral",
         "vsoePermitDiscount" => "VsoePermitDiscount",

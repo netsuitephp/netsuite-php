@@ -14,7 +14,7 @@
  * @license    https://raw.githubusercontent.com/ryanwinchester/netsuite-php/master/original/NetSuite%20Application%20Developer%20License%20Agreement.txt
  * @link       http://www.netsuite.com/portal/developers/resources/suitetalk-sample-applications.shtml
  *
- * generated:  2016-06-02 02:54:03 PM UTC
+ * generated:  2017-08-01 09:12:52 PM UTC
  */
 
 namespace NetSuite\Classes;
@@ -22,6 +22,10 @@ namespace NetSuite\Classes;
 class PurchaseOrder extends Record {
     public $createdDate;
     public $lastModifiedDate;
+    public $nexus;
+    public $subsidiaryTaxRegNum;
+    public $taxRegOverride;
+    public $taxDetailsOverride;
     public $customForm;
     public $entity;
     public $purchaseContract;
@@ -30,6 +34,7 @@ class PurchaseOrder extends Record {
     public $supervisorApproval;
     public $tranDate;
     public $tranId;
+    public $entityTaxRegNum;
     public $createdFrom;
     public $terms;
     public $dueDate;
@@ -72,13 +77,19 @@ class PurchaseOrder extends Record {
     public $status;
     public $orderStatus;
     public $itemList;
+    public $accountingBookDetailList;
     public $expenseList;
+    public $taxDetailsList;
     public $customFieldList;
     public $internalId;
     public $externalId;
     static $paramtypesmap = array(
         "createdDate" => "dateTime",
         "lastModifiedDate" => "dateTime",
+        "nexus" => "RecordRef",
+        "subsidiaryTaxRegNum" => "RecordRef",
+        "taxRegOverride" => "boolean",
+        "taxDetailsOverride" => "boolean",
         "customForm" => "RecordRef",
         "entity" => "RecordRef",
         "purchaseContract" => "RecordRef",
@@ -87,6 +98,7 @@ class PurchaseOrder extends Record {
         "supervisorApproval" => "boolean",
         "tranDate" => "dateTime",
         "tranId" => "string",
+        "entityTaxRegNum" => "RecordRef",
         "createdFrom" => "RecordRef",
         "terms" => "RecordRef",
         "dueDate" => "dateTime",
@@ -129,7 +141,9 @@ class PurchaseOrder extends Record {
         "status" => "string",
         "orderStatus" => "PurchaseOrderOrderStatus",
         "itemList" => "PurchaseOrderItemList",
+        "accountingBookDetailList" => "AccountingBookDetailList",
         "expenseList" => "PurchaseOrderExpenseList",
+        "taxDetailsList" => "TaxDetailsList",
         "customFieldList" => "CustomFieldList",
         "internalId" => "string",
         "externalId" => "string",

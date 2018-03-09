@@ -14,7 +14,7 @@
  * @license    https://raw.githubusercontent.com/ryanwinchester/netsuite-php/master/original/NetSuite%20Application%20Developer%20License%20Agreement.txt
  * @link       http://www.netsuite.com/portal/developers/resources/suitetalk-sample-applications.shtml
  *
- * generated:  2016-06-02 02:54:03 PM UTC
+ * generated:  2017-08-01 09:12:52 PM UTC
  */
 
 namespace NetSuite\Classes;
@@ -22,6 +22,8 @@ namespace NetSuite\Classes;
 class CouponCodeSearchBasic extends SearchRecordBasic {
     public $code;
     public $dateSent;
+    public $externalId;
+    public $externalIdString;
     public $id;
     public $internalId;
     public $internalIdNumber;
@@ -32,6 +34,8 @@ class CouponCodeSearchBasic extends SearchRecordBasic {
     static $paramtypesmap = array(
         "code" => "SearchStringField",
         "dateSent" => "SearchDateField",
+        "externalId" => "SearchMultiSelectField",
+        "externalIdString" => "SearchStringField",
         "id" => "SearchLongField",
         "internalId" => "SearchMultiSelectField",
         "internalIdNumber" => "SearchLongField",

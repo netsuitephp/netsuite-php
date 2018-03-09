@@ -14,12 +14,13 @@
  * @license    https://raw.githubusercontent.com/ryanwinchester/netsuite-php/master/original/NetSuite%20Application%20Developer%20License%20Agreement.txt
  * @link       http://www.netsuite.com/portal/developers/resources/suitetalk-sample-applications.shtml
  *
- * generated:  2016-06-02 02:54:03 PM UTC
+ * generated:  2017-08-01 09:12:52 PM UTC
  */
 
 namespace NetSuite\Classes;
 
 class TimeBillSearchRowBasic extends SearchRowBasic {
+    public $approvalStatus;
     public $break;
     public $class;
     public $customer;
@@ -44,15 +45,18 @@ class TimeBillSearchRowBasic extends SearchRowBasic {
     public $payItem;
     public $payrollDate;
     public $rate;
+    public $rejectionNote;
     public $startTime;
     public $status;
     public $subsidiary;
     public $supervisorApproval;
     public $temporaryLocalJurisdiction;
     public $temporaryStateJurisdiction;
+    public $timeSheet;
     public $type;
     public $customFieldList;
     static $paramtypesmap = array(
+        "approvalStatus" => "SearchColumnSelectField[]",
         "break" => "SearchColumnStringField[]",
         "class" => "SearchColumnSelectField[]",
         "customer" => "SearchColumnSelectField[]",
@@ -62,7 +66,7 @@ class TimeBillSearchRowBasic extends SearchRowBasic {
         "durationDecimal" => "SearchColumnDoubleField[]",
         "employee" => "SearchColumnSelectField[]",
         "endTime" => "SearchColumnDateField[]",
-        "externalId" => "SearchColumnStringField[]",
+        "externalId" => "SearchColumnSelectField[]",
         "hours" => "SearchColumnStringField[]",
         "internalId" => "SearchColumnSelectField[]",
         "isBillable" => "SearchColumnBooleanField[]",
@@ -77,12 +81,14 @@ class TimeBillSearchRowBasic extends SearchRowBasic {
         "payItem" => "SearchColumnSelectField[]",
         "payrollDate" => "SearchColumnDateField[]",
         "rate" => "SearchColumnDoubleField[]",
+        "rejectionNote" => "SearchColumnStringField[]",
         "startTime" => "SearchColumnDateField[]",
         "status" => "SearchColumnStringField[]",
         "subsidiary" => "SearchColumnStringField[]",
         "supervisorApproval" => "SearchColumnBooleanField[]",
         "temporaryLocalJurisdiction" => "SearchColumnStringField[]",
         "temporaryStateJurisdiction" => "SearchColumnStringField[]",
+        "timeSheet" => "SearchColumnSelectField[]",
         "type" => "SearchColumnEnumSelectField[]",
         "customFieldList" => "SearchColumnCustomFieldList",
     );

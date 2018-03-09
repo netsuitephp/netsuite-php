@@ -14,7 +14,7 @@
  * @license    https://raw.githubusercontent.com/ryanwinchester/netsuite-php/master/original/NetSuite%20Application%20Developer%20License%20Agreement.txt
  * @link       http://www.netsuite.com/portal/developers/resources/suitetalk-sample-applications.shtml
  *
- * generated:  2016-06-02 02:54:03 PM UTC
+ * generated:  2017-08-01 09:12:52 PM UTC
  */
 
 namespace NetSuite\Classes;
@@ -65,6 +65,7 @@ class PermissionCode {
     const _billingInformation = "_billingInformation";
     const _billingSchedules = "_billingSchedules";
     const _billOfDistribution = "_billOfDistribution";
+    const _billOfMaterials = "_billOfMaterials";
     const _billOfMaterialsInquiry = "_billOfMaterialsInquiry";
     const _billPurchaseOrders = "_billPurchaseOrders";
     const _bills = "_bills";
@@ -80,6 +81,7 @@ class PermissionCode {
     const _calculateTime = "_calculateTime";
     const _calendar = "_calendar";
     const _campaignHistory = "_campaignHistory";
+    const _caseAlerts = "_caseAlerts";
     const _cases = "_cases";
     const _cashFlowStatement = "_cashFlowStatement";
     const _cashSale = "_cashSale";
@@ -95,6 +97,7 @@ class PermissionCode {
     const _closeAccount = "_closeAccount";
     const _closeWorkOrders = "_closeWorkOrders";
     const _colorThemes = "_colorThemes";
+    const _commerceCategories = "_commerceCategories";
     const _commissionFeatureSetup = "_commissionFeatureSetup";
     const _commissionReports = "_commissionReports";
     const _commitOrders = "_commitOrders";
@@ -106,6 +109,8 @@ class PermissionCode {
     const _componentWhereUsed = "_componentWhereUsed";
     const _contactRoles = "_contactRoles";
     const _contacts = "_contacts";
+    const _controlSuitescriptAndWorkflowTriggersInWebServicesRequest = "_controlSuitescriptAndWorkflowTriggersInWebServicesRequest";
+    const _controlSuitescriptAndWorkflowTriggersPerCsvImport = "_controlSuitescriptAndWorkflowTriggersPerCsvImport";
     const _convertClassesToDepartments = "_convertClassesToDepartments";
     const _convertClassesToLocations = "_convertClassesToLocations";
     const _copyBudgets = "_copyBudgets";
@@ -142,6 +147,7 @@ class PermissionCode {
     const _customerCharge = "_customerCharge";
     const _customerDeposit = "_customerDeposit";
     const _customerPayment = "_customerPayment";
+    const _customerPaymentAuthorization = "_customerPaymentAuthorization";
     const _customerProfile = "_customerProfile";
     const _customerRefund = "_customerRefund";
     const _customers = "_customers";
@@ -188,11 +194,18 @@ class PermissionCode {
     const _eftStatus = "_eftStatus";
     const _emailReports = "_emailReports";
     const _emailTemplate = "_emailTemplate";
+    const _employeeAdministration = "_employeeAdministration";
+    const _employeeChangeReason = "_employeeChangeReason";
     const _employeeCommissionSchedulesPlans = "_employeeCommissionSchedulesPlans";
     const _employeeCommissionTransaction = "_employeeCommissionTransaction";
     const _employeeCommissionTransactionApproval = "_employeeCommissionTransactionApproval";
+    const _employeeConfidential = "_employeeConfidential";
+    const _employeeEffectiveDating = "_employeeEffectiveDating";
+    const _employeeNavigation = "_employeeNavigation";
+    const _employeePublic = "_employeePublic";
     const _employeeReminders = "_employeeReminders";
     const _employees = "_employees";
+    const _employeeSearch = "_employeeSearch";
     const _employeeSocialSecurityNumbers = "_employeeSocialSecurityNumbers";
     const _enableFeatures = "_enableFeatures";
     const _enterCompletions = "_enterCompletions";
@@ -228,6 +241,7 @@ class PermissionCode {
     const _findTransaction = "_findTransaction";
     const _fiscalCalendars = "_fiscalCalendars";
     const _fixedAssetRegisters = "_fixedAssetRegisters";
+    const _foreignCurrencyVarianceMapping = "_foreignCurrencyVarianceMapping";
     const _form1099FederalMiscellaneousIncome = "_form1099FederalMiscellaneousIncome";
     const _form940EmployersAnnualFederalUnemploymentTaxReturn = "_form940EmployersAnnualFederalUnemploymentTaxReturn";
     const _form941EmployersQuarterlyFederalTaxReturn = "_form941EmployersQuarterlyFederalTaxReturn";
@@ -247,10 +261,11 @@ class PermissionCode {
     const _governmentIssuedIdTypes = "_governmentIssuedIdTypes";
     const _grantingAccessToReports = "_grantingAccessToReports";
     const _gstSummaryReport = "_gstSummaryReport";
+    const _hideEmployeeInformationOnFinancialReports = "_hideEmployeeInformationOnFinancialReports";
     const _importCSVFile = "_importCSVFile";
     const _importOnlineBankingQIFFile = "_importOnlineBankingQIFFile";
-    const _importQuickenQIFFile = "_importQuickenQIFFile";
     const _importStateSalesTax = "_importStateSalesTax";
+    const _inboundShipment = "_inboundShipment";
     const _income = "_income";
     const _incomeRegisters = "_incomeRegisters";
     const _incomeStatement = "_incomeStatement";
@@ -262,6 +277,8 @@ class PermissionCode {
     const _internalPublisher = "_internalPublisher";
     const _inventory = "_inventory";
     const _inventoryCostTemplate = "_inventoryCostTemplate";
+    const _inventoryStatus = "_inventoryStatus";
+    const _inventoryStatusChange = "_inventoryStatusChange";
     const _invoice = "_invoice";
     const _invoiceApproval = "_invoiceApproval";
     const _issueComponents = "_issueComponents";
@@ -300,6 +317,7 @@ class PermissionCode {
     const _mailMerge = "_mailMerge";
     const _makeJournalEntry = "_makeJournalEntry";
     const _manageAccountingPeriods = "_manageAccountingPeriods";
+    const _manageCustomPermissions = "_manageCustomPermissions";
     const _managePayroll = "_managePayroll";
     const _manageRoles = "_manageRoles";
     const _manageTaxReportingPeriods = "_manageTaxReportingPeriods";
@@ -321,6 +339,7 @@ class PermissionCode {
     const _nonPostingRegisters = "_nonPostingRegisters";
     const _noPermissionNecessary = "_noPermissionNecessary";
     const _notesTab = "_notesTab";
+    const _notifications = "_notifications";
     const _offlineClient = "_offlineClient";
     const _onlineBankingStatement = "_onlineBankingStatement";
     const _onlineCaseForm = "_onlineCaseForm";
@@ -348,7 +367,6 @@ class PermissionCode {
     const _partnerCommissionTransaction = "_partnerCommissionTransaction";
     const _partnerCommissionTransactionApproval = "_partnerCommissionTransactionApproval";
     const _partnerContribution = "_partnerContribution";
-    const _partnerMonitorResults = "_partnerMonitorResults";
     const _partners = "_partners";
     const _payBills = "_payBills";
     const _paycheckJournal = "_paycheckJournal";
@@ -367,6 +385,7 @@ class PermissionCode {
     const _pdfMessages = "_pdfMessages";
     const _pdfTemplate = "_pdfTemplate";
     const _performSearch = "_performSearch";
+    const _periodClosingManagement = "_periodClosingManagement";
     const _persistSearch = "_persistSearch";
     const _phasedProcesses = "_phasedProcesses";
     const _phoneCalls = "_phoneCalls";
@@ -377,12 +396,16 @@ class PermissionCode {
     const _postTime = "_postTime";
     const _postVendorBillVariances = "_postVendorBillVariances";
     const _presentationCategories = "_presentationCategories";
+    const _pricePlan = "_pricePlan";
     const _printChecksAndForms = "_printChecksAndForms";
     const _printEmailFax = "_printEmailFax";
     const _printShipmentDocuments = "_printShipmentDocuments";
     const _processGSTRefund = "_processGSTRefund";
     const _processPayroll = "_processPayroll";
+    const _projectProfitability = "_projectProfitability";
+    const _projectProfitabilitySetup = "_projectProfitabilitySetup";
     const _projectProjectTemplateConversion = "_projectProjectTemplateConversion";
+    const _projectRevenueRules = "_projectRevenueRules";
     const _projectTasks = "_projectTasks";
     const _projectTemplates = "_projectTemplates";
     const _promotionCode = "_promotionCode";
@@ -394,8 +417,6 @@ class PermissionCode {
     const _publicTemplateCategories = "_publicTemplateCategories";
     const _publishDashboards = "_publishDashboards";
     const _publishEmployeeList = "_publishEmployeeList";
-    const _publisherApplications = "_publisherApplications";
-    const _publisherId = "_publisherId";
     const _publishForms = "_publishForms";
     const _publishKnowledgeBase = "_publishKnowledgeBase";
     const _publishRSSFeeds = "_publishRSSFeeds";
@@ -440,6 +461,7 @@ class PermissionCode {
     const _revenueRecognitionReports = "_revenueRecognitionReports";
     const _revenueRecognitionRule = "_revenueRecognitionRule";
     const _revenueRecognitionSchedules = "_revenueRecognitionSchedules";
+    const _reviewCustomGlPlugInExecutions = "_reviewCustomGlPlugInExecutions";
     const _roles = "_roles";
     const _runPayroll = "_runPayroll";
     const _sales = "_sales";
@@ -471,7 +493,6 @@ class PermissionCode {
     const _setUpEbay = "_setUpEbay";
     const _setUpImageResizing = "_setUpImageResizing";
     const _setUpOpenidSingleSignOn = "_setUpOpenidSingleSignOn";
-    const _setUpPartnerMonitor = "_setUpPartnerMonitor";
     const _setUpPayroll = "_setUpPayroll";
     const _setUpReminders = "_setUpReminders";
     const _setUpSamlSingleSignOn = "_setUpSamlSingleSignOn";
@@ -497,10 +518,14 @@ class PermissionCode {
     const _subscriptionPlan = "_subscriptionPlan";
     const _subscriptions = "_subscriptions";
     const _subsidiaries = "_subsidiaries";
-    const _suiteAppInstallation = "_suiteAppInstallation";
+    const _subsidiaryTaxEngineSelection = "_subsidiaryTaxEngineSelection";
+    const _suiteAppDeployment = "_suiteAppDeployment";
     const _suiteBundler = "_suiteBundler";
+    const _suiteBundlerAuditTrail = "_suiteBundlerAuditTrail";
     const _suiteBundlerUpgrades = "_suiteBundlerUpgrades";
     const _suiteScript = "_suiteScript";
+    const _suiteScriptNlCorpManagement = "_suiteScriptNlCorpManagement";
+    const _suiteScriptScheduling = "_suiteScriptScheduling";
     const _suiteSignon = "_suiteSignon";
     const _support = "_support";
     const _supportCaseIssue = "_supportCaseIssue";
@@ -518,7 +543,9 @@ class PermissionCode {
     const _tableauWorkbookExport = "_tableauWorkbookExport";
     const _tasks = "_tasks";
     const _tax = "_tax";
+    const _taxDetailsTab = "_taxDetailsTab";
     const _taxItems = "_taxItems";
+    const _taxReports = "_taxReports";
     const _taxSchedules = "_taxSchedules";
     const _teamSellingContribution = "_teamSellingContribution";
     const _tegataAccounts = "_tegataAccounts";
@@ -535,6 +562,7 @@ class PermissionCode {
     const _trackTime = "_trackTime";
     const _transactionDetail = "_transactionDetail";
     const _transactionNumberingAuditLog = "_transactionNumberingAuditLog";
+    const _transactionReceiveInboundShipment = "_transactionReceiveInboundShipment";
     const _transferFunds = "_transferFunds";
     const _transferInventory = "_transferInventory";
     const _transferOrder = "_transferOrder";
@@ -562,10 +590,12 @@ class PermissionCode {
     const _vendorReturnAuthorization = "_vendorReturnAuthorization";
     const _vendorReturns = "_vendorReturns";
     const _vendors = "_vendors";
+    const _viewGatewayAsynchronousNotifications = "_viewGatewayAsynchronousNotifications";
     const _viewLoginAuditTrail = "_viewLoginAuditTrail";
     const _viewOnlineBillPayStatus = "_viewOnlineBillPayStatus";
     const _viewPaymentEvents = "_viewPaymentEvents";
     const _viewUnencryptedCreditCards = "_viewUnencryptedCreditCards";
+    const _viewWebServicesLogs = "_viewWebServicesLogs";
     const _webServices = "_webServices";
     const _webSiteExternalPublisher = "_webSiteExternalPublisher";
     const _webSiteManagement = "_webSiteManagement";

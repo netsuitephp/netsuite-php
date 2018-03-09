@@ -14,7 +14,7 @@
  * @license    https://raw.githubusercontent.com/ryanwinchester/netsuite-php/master/original/NetSuite%20Application%20Developer%20License%20Agreement.txt
  * @link       http://www.netsuite.com/portal/developers/resources/suitetalk-sample-applications.shtml
  *
- * generated:  2016-06-02 02:54:03 PM UTC
+ * generated:  2017-08-01 09:12:52 PM UTC
  */
 
 namespace NetSuite\Classes;
@@ -22,6 +22,10 @@ namespace NetSuite\Classes;
 class VendorBill extends Record {
     public $createdDate;
     public $lastModifiedDate;
+    public $nexus;
+    public $subsidiaryTaxRegNum;
+    public $taxRegOverride;
+    public $taxDetailsOverride;
     public $customForm;
     public $billAddressList;
     public $account;
@@ -35,6 +39,7 @@ class VendorBill extends Record {
     public $currencyName;
     public $billingAddress;
     public $exchangeRate;
+    public $entityTaxRegNum;
     public $terms;
     public $dueDate;
     public $discountDate;
@@ -56,15 +61,21 @@ class VendorBill extends Record {
     public $landedCostPerLine;
     public $transactionNumber;
     public $expenseList;
+    public $accountingBookDetailList;
     public $itemList;
     public $landedCostsList;
-    public $customFieldList;
     public $purchaseOrderList;
+    public $taxDetailsList;
+    public $customFieldList;
     public $internalId;
     public $externalId;
     static $paramtypesmap = array(
         "createdDate" => "dateTime",
         "lastModifiedDate" => "dateTime",
+        "nexus" => "RecordRef",
+        "subsidiaryTaxRegNum" => "RecordRef",
+        "taxRegOverride" => "boolean",
+        "taxDetailsOverride" => "boolean",
         "customForm" => "RecordRef",
         "billAddressList" => "RecordRef",
         "account" => "RecordRef",
@@ -78,6 +89,7 @@ class VendorBill extends Record {
         "currencyName" => "string",
         "billingAddress" => "Address",
         "exchangeRate" => "float",
+        "entityTaxRegNum" => "RecordRef",
         "terms" => "RecordRef",
         "dueDate" => "dateTime",
         "discountDate" => "dateTime",
@@ -99,10 +111,12 @@ class VendorBill extends Record {
         "landedCostPerLine" => "boolean",
         "transactionNumber" => "string",
         "expenseList" => "VendorBillExpenseList",
+        "accountingBookDetailList" => "AccountingBookDetailList",
         "itemList" => "VendorBillItemList",
         "landedCostsList" => "PurchLandedCostList",
-        "customFieldList" => "CustomFieldList",
         "purchaseOrderList" => "RecordRefList",
+        "taxDetailsList" => "TaxDetailsList",
+        "customFieldList" => "CustomFieldList",
         "internalId" => "string",
         "externalId" => "string",
     );

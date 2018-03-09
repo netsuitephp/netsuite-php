@@ -14,7 +14,7 @@
  * @license    https://raw.githubusercontent.com/ryanwinchester/netsuite-php/master/original/NetSuite%20Application%20Developer%20License%20Agreement.txt
  * @link       http://www.netsuite.com/portal/developers/resources/suitetalk-sample-applications.shtml
  *
- * generated:  2016-06-02 02:54:03 PM UTC
+ * generated:  2017-08-01 09:12:52 PM UTC
  */
 
 namespace NetSuite\Classes;
@@ -23,6 +23,7 @@ class ItemMember {
     public $memberDescr;
     public $componentYield;
     public $bomQuantity;
+    public $itemSource;
     public $quantity;
     public $memberUnit;
     public $vsoeDeferral;
@@ -42,6 +43,7 @@ class ItemMember {
         "memberDescr" => "string",
         "componentYield" => "float",
         "bomQuantity" => "float",
+        "itemSource" => "ItemSource",
         "quantity" => "float",
         "memberUnit" => "string",
         "vsoeDeferral" => "VsoeDeferral",

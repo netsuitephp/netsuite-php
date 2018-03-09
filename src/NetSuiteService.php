@@ -15,7 +15,7 @@
  * @link       http://www.netsuite.com/portal/developers/resources/suitetalk-sample-applications.shtml
  *
  * created:    2015-01-22  1:04 PM
- * updated:    2016-06-02 02:54:03 PM UTC
+ * updated:    2017-08-01 09:12:52 PM UTC
  */
 
 namespace NetSuite;
@@ -24,7 +24,7 @@ use NetSuite\Classes;
 
 class NetSuiteService extends NetSuiteClient {
 
-    public $generated_from_endpoint = "2016_1";
+    public $generated_from_endpoint = "2017_1";
 
     /**
      * Service Call: login
@@ -332,17 +332,6 @@ class NetSuiteService extends NetSuiteClient {
      */
     public function getBudgetExchangeRate(Classes\GetBudgetExchangeRateRequest $arg) {
         return $this->makeSoapCall("getBudgetExchangeRate", $arg);
-    }
-
-    /**
-     * Service Call: getConsolidatedExchangeRate
-     * Parameter options:
-     * (GetConsolidatedExchangeRateRequest) parameters
-     * @return Classes\GetConsolidatedExchangeRateResponse $arg
-     * @throws Exception invalid function signature message
-     */
-    public function getConsolidatedExchangeRate(Classes\GetConsolidatedExchangeRateRequest $arg) {
-        return $this->makeSoapCall("getConsolidatedExchangeRate", $arg);
     }
 
     /**

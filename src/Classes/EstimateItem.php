@@ -14,7 +14,7 @@
  * @license    https://raw.githubusercontent.com/ryanwinchester/netsuite-php/master/original/NetSuite%20Application%20Developer%20License%20Agreement.txt
  * @link       http://www.netsuite.com/portal/developers/resources/suitetalk-sample-applications.shtml
  *
- * generated:  2016-06-02 02:54:03 PM UTC
+ * generated:  2017-08-01 09:12:52 PM UTC
  */
 
 namespace NetSuite\Classes;
@@ -40,6 +40,7 @@ class EstimateItem {
     public $location;
     public $isTaxable;
     public $altSalesAmt;
+    public $taxAmount;
     public $fromJob;
     public $grossAmt;
     public $isEstimate;
@@ -49,6 +50,7 @@ class EstimateItem {
     public $costEstimateType;
     public $costEstimate;
     public $excludeFromRateRequest;
+    public $taxDetailsReference;
     public $taxRate1;
     public $taxRate2;
     public $shipGroup;
@@ -79,6 +81,7 @@ class EstimateItem {
         "location" => "RecordRef",
         "isTaxable" => "boolean",
         "altSalesAmt" => "float",
+        "taxAmount" => "float",
         "fromJob" => "boolean",
         "grossAmt" => "float",
         "isEstimate" => "boolean",
@@ -88,6 +91,7 @@ class EstimateItem {
         "costEstimateType" => "ItemCostEstimateType",
         "costEstimate" => "float",
         "excludeFromRateRequest" => "boolean",
+        "taxDetailsReference" => "string",
         "taxRate1" => "float",
         "taxRate2" => "float",
         "shipGroup" => "integer",

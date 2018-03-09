@@ -14,7 +14,7 @@
  * @license    https://raw.githubusercontent.com/ryanwinchester/netsuite-php/master/original/NetSuite%20Application%20Developer%20License%20Agreement.txt
  * @link       http://www.netsuite.com/portal/developers/resources/suitetalk-sample-applications.shtml
  *
- * generated:  2016-06-02 02:54:03 PM UTC
+ * generated:  2017-08-01 09:12:52 PM UTC
  */
 
 namespace NetSuite\Classes;
@@ -26,9 +26,11 @@ class VendorBillExpense {
     public $category;
     public $account;
     public $amount;
+    public $taxAmount;
     public $tax1Amt;
     public $memo;
     public $grossAmt;
+    public $taxDetailsReference;
     public $department;
     public $class;
     public $location;
@@ -49,9 +51,11 @@ class VendorBillExpense {
         "category" => "RecordRef",
         "account" => "RecordRef",
         "amount" => "float",
+        "taxAmount" => "float",
         "tax1Amt" => "float",
         "memo" => "string",
         "grossAmt" => "float",
+        "taxDetailsReference" => "string",
         "department" => "RecordRef",
         "class" => "RecordRef",
         "location" => "RecordRef",

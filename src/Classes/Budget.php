@@ -14,7 +14,7 @@
  * @license    https://raw.githubusercontent.com/ryanwinchester/netsuite-php/master/original/NetSuite%20Application%20Developer%20License%20Agreement.txt
  * @link       http://www.netsuite.com/portal/developers/resources/suitetalk-sample-applications.shtml
  *
- * generated:  2016-06-02 02:54:03 PM UTC
+ * generated:  2017-08-01 09:12:52 PM UTC
  */
 
 namespace NetSuite\Classes;
@@ -43,7 +43,20 @@ class Budget extends Record {
     public $periodAmount10;
     public $periodAmount11;
     public $periodAmount12;
+    public $periodAmount13;
+    public $periodAmount14;
+    public $periodAmount15;
+    public $periodAmount16;
+    public $periodAmount17;
+    public $periodAmount18;
+    public $periodAmount19;
+    public $periodAmount20;
+    public $periodAmount21;
+    public $periodAmount22;
+    public $periodAmount23;
+    public $periodAmount24;
     public $amount;
+    public $customFieldList;
     public $internalId;
     static $paramtypesmap = array(
         "year" => "RecordRef",
@@ -69,7 +82,20 @@ class Budget extends Record {
         "periodAmount10" => "float",
         "periodAmount11" => "float",
         "periodAmount12" => "float",
+        "periodAmount13" => "float",
+        "periodAmount14" => "float",
+        "periodAmount15" => "float",
+        "periodAmount16" => "float",
+        "periodAmount17" => "float",
+        "periodAmount18" => "float",
+        "periodAmount19" => "float",
+        "periodAmount20" => "float",
+        "periodAmount21" => "float",
+        "periodAmount22" => "float",
+        "periodAmount23" => "float",
+        "periodAmount24" => "float",
         "amount" => "float",
+        "customFieldList" => "CustomFieldList",
         "internalId" => "string",
     );
 }

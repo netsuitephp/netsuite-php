@@ -14,7 +14,7 @@
  * @license    https://raw.githubusercontent.com/ryanwinchester/netsuite-php/master/original/NetSuite%20Application%20Developer%20License%20Agreement.txt
  * @link       http://www.netsuite.com/portal/developers/resources/suitetalk-sample-applications.shtml
  *
- * generated:  2016-06-02 02:54:03 PM UTC
+ * generated:  2017-08-01 09:12:52 PM UTC
  */
 
 namespace NetSuite\Classes;
@@ -189,7 +189,7 @@ class JobSearchRowBasic extends SearchRowBasic {
         "estimatedTime" => "SearchColumnDoubleField[]",
         "estimatedTimeOverride" => "SearchColumnDoubleField[]",
         "estimatedTimeOverrideBaseline" => "SearchColumnDoubleField[]",
-        "externalId" => "SearchColumnStringField[]",
+        "externalId" => "SearchColumnSelectField[]",
         "fax" => "SearchColumnStringField[]",
         "globalSubscriptionStatus" => "SearchColumnEnumSelectField[]",
         "image" => "SearchColumnSelectField[]",

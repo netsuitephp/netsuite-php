@@ -14,7 +14,7 @@
  * @license    https://raw.githubusercontent.com/ryanwinchester/netsuite-php/master/original/NetSuite%20Application%20Developer%20License%20Agreement.txt
  * @link       http://www.netsuite.com/portal/developers/resources/suitetalk-sample-applications.shtml
  *
- * generated:  2016-06-02 02:54:03 PM UTC
+ * generated:  2017-08-01 09:12:52 PM UTC
  */
 
 namespace NetSuite\Classes;
@@ -22,6 +22,10 @@ namespace NetSuite\Classes;
 class VendorReturnAuthorization extends Record {
     public $createdDate;
     public $lastModifiedDate;
+    public $nexus;
+    public $subsidiaryTaxRegNum;
+    public $taxRegOverride;
+    public $taxDetailsOverride;
     public $customForm;
     public $tranId;
     public $createdFrom;
@@ -35,6 +39,8 @@ class VendorReturnAuthorization extends Record {
     public $billAddressList;
     public $memo;
     public $exchangeRate;
+    public $entityTaxRegNum;
+    public $userTaxTotal;
     public $department;
     public $class;
     public $location;
@@ -43,12 +49,18 @@ class VendorReturnAuthorization extends Record {
     public $intercoStatus;
     public $expenseList;
     public $itemList;
+    public $accountingBookDetailList;
+    public $taxDetailsList;
     public $customFieldList;
     public $internalId;
     public $externalId;
     static $paramtypesmap = array(
         "createdDate" => "dateTime",
         "lastModifiedDate" => "dateTime",
+        "nexus" => "RecordRef",
+        "subsidiaryTaxRegNum" => "RecordRef",
+        "taxRegOverride" => "boolean",
+        "taxDetailsOverride" => "boolean",
         "customForm" => "RecordRef",
         "tranId" => "string",
         "createdFrom" => "RecordRef",
@@ -62,6 +74,8 @@ class VendorReturnAuthorization extends Record {
         "billAddressList" => "RecordRef",
         "memo" => "string",
         "exchangeRate" => "float",
+        "entityTaxRegNum" => "RecordRef",
+        "userTaxTotal" => "float",
         "department" => "RecordRef",
         "class" => "RecordRef",
         "location" => "RecordRef",
@@ -70,6 +84,8 @@ class VendorReturnAuthorization extends Record {
         "intercoStatus" => "IntercoStatus",
         "expenseList" => "VendorReturnAuthorizationExpenseList",
         "itemList" => "VendorReturnAuthorizationItemList",
+        "accountingBookDetailList" => "AccountingBookDetailList",
+        "taxDetailsList" => "TaxDetailsList",
         "customFieldList" => "CustomFieldList",
         "internalId" => "string",
         "externalId" => "string",

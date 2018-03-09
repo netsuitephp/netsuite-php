@@ -14,7 +14,7 @@
  * @license    https://raw.githubusercontent.com/ryanwinchester/netsuite-php/master/original/NetSuite%20Application%20Developer%20License%20Agreement.txt
  * @link       http://www.netsuite.com/portal/developers/resources/suitetalk-sample-applications.shtml
  *
- * generated:  2016-06-02 02:54:03 PM UTC
+ * generated:  2017-08-01 09:12:52 PM UTC
  */
 
 namespace NetSuite\Classes;
@@ -22,6 +22,7 @@ namespace NetSuite\Classes;
 class PurchaseOrderItem {
     public $item;
     public $line;
+    public $quantityOnShipments;
     public $vendorName;
     public $quantityReceived;
     public $quantityBilled;
@@ -41,6 +42,7 @@ class PurchaseOrderItem {
     public $rate;
     public $amount;
     public $options;
+    public $taxAmount;
     public $department;
     public $class;
     public $location;
@@ -51,12 +53,14 @@ class PurchaseOrderItem {
     public $matchBillToReceipt;
     public $expectedReceiptDate;
     public $isClosed;
+    public $taxDetailsReference;
     public $createdFrom;
     public $linkedOrderList;
     public $customFieldList;
     static $paramtypesmap = array(
         "item" => "RecordRef",
         "line" => "integer",
+        "quantityOnShipments" => "float",
         "vendorName" => "string",
         "quantityReceived" => "float",
         "quantityBilled" => "float",
@@ -76,6 +80,7 @@ class PurchaseOrderItem {
         "rate" => "string",
         "amount" => "float",
         "options" => "CustomFieldList",
+        "taxAmount" => "float",
         "department" => "RecordRef",
         "class" => "RecordRef",
         "location" => "RecordRef",
@@ -86,6 +91,7 @@ class PurchaseOrderItem {
         "matchBillToReceipt" => "boolean",
         "expectedReceiptDate" => "dateTime",
         "isClosed" => "boolean",
+        "taxDetailsReference" => "string",
         "createdFrom" => "RecordRef",
         "linkedOrderList" => "RecordRefList",
         "customFieldList" => "CustomFieldList",

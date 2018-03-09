@@ -14,7 +14,7 @@
  * @license    https://raw.githubusercontent.com/ryanwinchester/netsuite-php/master/original/NetSuite%20Application%20Developer%20License%20Agreement.txt
  * @link       http://www.netsuite.com/portal/developers/resources/suitetalk-sample-applications.shtml
  *
- * generated:  2016-06-02 02:54:03 PM UTC
+ * generated:  2017-08-01 09:12:52 PM UTC
  */
 
 namespace NetSuite\Classes;
@@ -22,10 +22,15 @@ namespace NetSuite\Classes;
 class Estimate extends Record {
     public $createdDate;
     public $lastModifiedDate;
+    public $nexus;
+    public $subsidiaryTaxRegNum;
+    public $taxRegOverride;
+    public $taxDetailsOverride;
     public $entity;
     public $job;
     public $tranDate;
     public $tranId;
+    public $entityTaxRegNum;
     public $source;
     public $customForm;
     public $currency;
@@ -94,6 +99,7 @@ class Estimate extends Record {
     public $salesGroup;
     public $syncSalesTeams;
     public $altSalesTotal;
+    public $canHaveStackable;
     public $oneTime;
     public $recurWeekly;
     public $recurMonthly;
@@ -107,21 +113,28 @@ class Estimate extends Record {
     public $total;
     public $tax2Total;
     public $itemList;
+    public $accountingBookDetailList;
     public $salesTeamList;
     public $syncPartnerTeams;
     public $partnersList;
     public $promotionsList;
     public $shipGroupList;
+    public $taxDetailsList;
     public $customFieldList;
     public $internalId;
     public $externalId;
     static $paramtypesmap = array(
         "createdDate" => "dateTime",
         "lastModifiedDate" => "dateTime",
+        "nexus" => "RecordRef",
+        "subsidiaryTaxRegNum" => "RecordRef",
+        "taxRegOverride" => "boolean",
+        "taxDetailsOverride" => "boolean",
         "entity" => "RecordRef",
         "job" => "RecordRef",
         "tranDate" => "dateTime",
         "tranId" => "string",
+        "entityTaxRegNum" => "RecordRef",
         "source" => "string",
         "customForm" => "RecordRef",
         "currency" => "RecordRef",
@@ -190,6 +203,7 @@ class Estimate extends Record {
         "salesGroup" => "RecordRef",
         "syncSalesTeams" => "boolean",
         "altSalesTotal" => "float",
+        "canHaveStackable" => "boolean",
         "oneTime" => "float",
         "recurWeekly" => "float",
         "recurMonthly" => "float",
@@ -203,11 +217,13 @@ class Estimate extends Record {
         "total" => "float",
         "tax2Total" => "float",
         "itemList" => "EstimateItemList",
+        "accountingBookDetailList" => "AccountingBookDetailList",
         "salesTeamList" => "EstimateSalesTeamList",
         "syncPartnerTeams" => "boolean",
         "partnersList" => "EstimatePartnersList",
         "promotionsList" => "PromotionsList",
         "shipGroupList" => "EstimateShipGroupList",
+        "taxDetailsList" => "TaxDetailsList",
         "customFieldList" => "CustomFieldList",
         "internalId" => "string",
         "externalId" => "string",

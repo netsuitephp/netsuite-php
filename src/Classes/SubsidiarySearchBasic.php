@@ -14,7 +14,7 @@
  * @license    https://raw.githubusercontent.com/ryanwinchester/netsuite-php/master/original/NetSuite%20Application%20Developer%20License%20Agreement.txt
  * @link       http://www.netsuite.com/portal/developers/resources/suitetalk-sample-applications.shtml
  *
- * generated:  2016-06-02 02:54:03 PM UTC
+ * generated:  2017-08-01 09:12:52 PM UTC
  */
 
 namespace NetSuite\Classes;
@@ -26,6 +26,7 @@ class SubsidiarySearchBasic extends SearchRecordBasic {
     public $city;
     public $country;
     public $currency;
+    public $effectiveFrom;
     public $email;
     public $externalId;
     public $externalIdString;
@@ -37,6 +38,7 @@ class SubsidiarySearchBasic extends SearchRecordBasic {
     public $legalName;
     public $name;
     public $nameNoHierarchy;
+    public $nexus;
     public $phone;
     public $purchaseOrderAmount;
     public $purchaseOrderQuantity;
@@ -45,9 +47,12 @@ class SubsidiarySearchBasic extends SearchRecordBasic {
     public $receiptQuantity;
     public $receiptQuantityDiff;
     public $state;
+    public $taxEngine;
     public $taxIdNum;
+    public $taxRegistrationNumber;
     public $tranPrefix;
     public $url;
+    public $validUntil;
     public $zip;
     public $customFieldList;
     static $paramtypesmap = array(
@@ -57,6 +62,7 @@ class SubsidiarySearchBasic extends SearchRecordBasic {
         "city" => "SearchStringField",
         "country" => "SearchEnumMultiSelectField",
         "currency" => "SearchMultiSelectField",
+        "effectiveFrom" => "SearchDateField",
         "email" => "SearchStringField",
         "externalId" => "SearchMultiSelectField",
         "externalIdString" => "SearchStringField",
@@ -68,6 +74,7 @@ class SubsidiarySearchBasic extends SearchRecordBasic {
         "legalName" => "SearchStringField",
         "name" => "SearchStringField",
         "nameNoHierarchy" => "SearchStringField",
+        "nexus" => "SearchMultiSelectField",
         "phone" => "SearchStringField",
         "purchaseOrderAmount" => "SearchDoubleField",
         "purchaseOrderQuantity" => "SearchDoubleField",
@@ -76,9 +83,12 @@ class SubsidiarySearchBasic extends SearchRecordBasic {
         "receiptQuantity" => "SearchDoubleField",
         "receiptQuantityDiff" => "SearchDoubleField",
         "state" => "SearchStringField",
+        "taxEngine" => "SearchMultiSelectField",
         "taxIdNum" => "SearchStringField",
+        "taxRegistrationNumber" => "SearchStringField",
         "tranPrefix" => "SearchStringField",
         "url" => "SearchStringField",
+        "validUntil" => "SearchDateField",
         "zip" => "SearchStringField",
         "customFieldList" => "SearchCustomFieldList",
     );

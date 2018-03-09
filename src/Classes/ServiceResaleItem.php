@@ -14,7 +14,7 @@
  * @license    https://raw.githubusercontent.com/ryanwinchester/netsuite-php/master/original/NetSuite%20Application%20Developer%20License%20Agreement.txt
  * @link       http://www.netsuite.com/portal/developers/resources/suitetalk-sample-applications.shtml
  *
- * generated:  2016-06-02 02:54:03 PM UTC
+ * generated:  2017-08-01 09:12:52 PM UTC
  */
 
 namespace NetSuite\Classes;
@@ -50,8 +50,10 @@ class ServiceResaleItem extends Record {
     public $residual;
     public $deferRevRec;
     public $revenueRecognitionRule;
+    public $revRecForecastRule;
     public $revenueAllocationGroup;
     public $createRevenuePlansOn;
+    public $directRevenuePosting;
     public $amortizationPeriod;
     public $minimumQuantity;
     public $enforceMinQtyInternally;
@@ -78,6 +80,7 @@ class ServiceResaleItem extends Record {
     public $vsoeDelivered;
     public $itemRevenueCategory;
     public $createJob;
+    public $matrixItemNameTemplate;
     public $storeDisplayName;
     public $storeDisplayThumbnail;
     public $storeDisplayImage;
@@ -165,8 +168,10 @@ class ServiceResaleItem extends Record {
         "residual" => "string",
         "deferRevRec" => "boolean",
         "revenueRecognitionRule" => "RecordRef",
+        "revRecForecastRule" => "RecordRef",
         "revenueAllocationGroup" => "RecordRef",
         "createRevenuePlansOn" => "ItemCreateRevenuePlansOn",
+        "directRevenuePosting" => "boolean",
         "amortizationPeriod" => "integer",
         "minimumQuantity" => "integer",
         "enforceMinQtyInternally" => "boolean",
@@ -193,6 +198,7 @@ class ServiceResaleItem extends Record {
         "vsoeDelivered" => "boolean",
         "itemRevenueCategory" => "RecordRef",
         "createJob" => "boolean",
+        "matrixItemNameTemplate" => "string",
         "storeDisplayName" => "string",
         "storeDisplayThumbnail" => "RecordRef",
         "storeDisplayImage" => "RecordRef",

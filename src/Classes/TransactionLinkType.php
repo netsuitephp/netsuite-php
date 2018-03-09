@@ -14,7 +14,7 @@
  * @license    https://raw.githubusercontent.com/ryanwinchester/netsuite-php/master/original/NetSuite%20Application%20Developer%20License%20Agreement.txt
  * @link       http://www.netsuite.com/portal/developers/resources/suitetalk-sample-applications.shtml
  *
- * generated:  2016-06-02 02:54:03 PM UTC
+ * generated:  2017-08-01 09:12:52 PM UTC
  */
 
 namespace NetSuite\Classes;
@@ -22,6 +22,9 @@ namespace NetSuite\Classes;
 class TransactionLinkType {
     static $paramtypesmap = array(
     );
+    const _advancedCostAmortization = "_advancedCostAmortization";
+    const _authorizationDeposit = "_authorizationDeposit";
+    const _blcgaJeFullfillment = "_blcgaJeFullfillment";
     const _closedPeriodFxVariance = "_closedPeriodFxVariance";
     const _closeWorkOrder = "_closeWorkOrder";
     const _cogsLink = "_cogsLink";
@@ -60,11 +63,13 @@ class TransactionLinkType {
     const _revenueCommitted = "_revenueCommitted";
     const _rfqToVendorRfq = "_rfqToVendorRfq";
     const _saleReturn = "_saleReturn";
+    const _salesOrderAuthorization = "_salesOrderAuthorization";
     const _salesOrderDegross = "_salesOrderDegross";
     const _salesOrderDeposit = "_salesOrderDeposit";
     const _salesOrderRevenueRevaluation = "_salesOrderRevenueRevaluation";
     const _sourceOfRevenueContract = "_sourceOfRevenueContract";
     const _specialOrder = "_specialOrder";
+    const _transferOrderFulfillmentReceipt = "_transferOrderFulfillmentReceipt";
     const _vendorBillVariance = "_vendorBillVariance";
     const _vendorRfqToPurchaseContract = "_vendorRfqToPurchaseContract";
     const _wipBuild = "_wipBuild";

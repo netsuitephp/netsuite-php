@@ -14,7 +14,7 @@
  * @license    https://raw.githubusercontent.com/ryanwinchester/netsuite-php/master/original/NetSuite%20Application%20Developer%20License%20Agreement.txt
  * @link       http://www.netsuite.com/portal/developers/resources/suitetalk-sample-applications.shtml
  *
- * generated:  2016-06-02 02:54:03 PM UTC
+ * generated:  2017-08-01 09:12:52 PM UTC
  */
 
 namespace NetSuite\Classes;
@@ -25,6 +25,7 @@ class EmployeeSearchBasic extends SearchRecordBasic {
     public $addressLabel;
     public $addressPhone;
     public $alienNumber;
+    public $allocation;
     public $anniversary;
     public $approvalLimit;
     public $approver;
@@ -73,6 +74,7 @@ class EmployeeSearchBasic extends SearchRecordBasic {
     public $isInactive;
     public $isJobResource;
     public $isTemplate;
+    public $job;
     public $jobDescription;
     public $laborCost;
     public $language;
@@ -92,6 +94,7 @@ class EmployeeSearchBasic extends SearchRecordBasic {
     public $permissionChange;
     public $phone;
     public $phoneticName;
+    public $positionTitle;
     public $primaryEarningAmount;
     public $primaryEarningItem;
     public $primaryEarningType;
@@ -107,11 +110,13 @@ class EmployeeSearchBasic extends SearchRecordBasic {
     public $salesRole;
     public $salutation;
     public $socialSecurityNumber;
+    public $startDateTimeOffCalc;
     public $state;
     public $subsidiary;
     public $supervisor;
     public $supportRep;
     public $timeApprover;
+    public $timeOffPlan;
     public $title;
     public $usePerquest;
     public $useTimeData;
@@ -128,6 +133,7 @@ class EmployeeSearchBasic extends SearchRecordBasic {
         "addressLabel" => "SearchStringField",
         "addressPhone" => "SearchStringField",
         "alienNumber" => "SearchStringField",
+        "allocation" => "SearchDoubleField",
         "anniversary" => "SearchDateField",
         "approvalLimit" => "SearchDoubleField",
         "approver" => "SearchMultiSelectField",
@@ -176,6 +182,7 @@ class EmployeeSearchBasic extends SearchRecordBasic {
         "isInactive" => "SearchBooleanField",
         "isJobResource" => "SearchBooleanField",
         "isTemplate" => "SearchBooleanField",
+        "job" => "SearchMultiSelectField",
         "jobDescription" => "SearchStringField",
         "laborCost" => "SearchDoubleField",
         "language" => "SearchEnumMultiSelectField",
@@ -195,6 +202,7 @@ class EmployeeSearchBasic extends SearchRecordBasic {
         "permissionChange" => "SearchEnumMultiSelectField",
         "phone" => "SearchStringField",
         "phoneticName" => "SearchStringField",
+        "positionTitle" => "SearchMultiSelectField",
         "primaryEarningAmount" => "SearchDoubleField",
         "primaryEarningItem" => "SearchStringField",
         "primaryEarningType" => "SearchStringField",
@@ -210,11 +218,13 @@ class EmployeeSearchBasic extends SearchRecordBasic {
         "salesRole" => "SearchMultiSelectField",
         "salutation" => "SearchStringField",
         "socialSecurityNumber" => "SearchStringField",
+        "startDateTimeOffCalc" => "SearchDateField",
         "state" => "SearchStringField",
         "subsidiary" => "SearchMultiSelectField",
         "supervisor" => "SearchMultiSelectField",
         "supportRep" => "SearchBooleanField",
         "timeApprover" => "SearchMultiSelectField",
+        "timeOffPlan" => "SearchMultiSelectField",
         "title" => "SearchStringField",
         "usePerquest" => "SearchBooleanField",
         "useTimeData" => "SearchBooleanField",

@@ -14,7 +14,7 @@
  * @license    https://raw.githubusercontent.com/ryanwinchester/netsuite-php/master/original/NetSuite%20Application%20Developer%20License%20Agreement.txt
  * @link       http://www.netsuite.com/portal/developers/resources/suitetalk-sample-applications.shtml
  *
- * generated:  2016-06-02 02:54:03 PM UTC
+ * generated:  2017-08-01 09:12:52 PM UTC
  */
 
 namespace NetSuite\Classes;
@@ -24,7 +24,7 @@ class FolderFolderType {
     );
     const _appPackages = "_appPackages";
     const _attachmentsReceived = "_attachmentsReceived";
-    const _attachmentsToSend = "_attachmentsToSend";
+    const _attachmentsSent = "_attachmentsSent";
     const _certificates = "_certificates";
     const _documentsAndFiles = "_documentsAndFiles";
     const _emailTemplates = "_emailTemplates";

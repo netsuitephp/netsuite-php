@@ -14,7 +14,7 @@
  * @license    https://raw.githubusercontent.com/ryanwinchester/netsuite-php/master/original/NetSuite%20Application%20Developer%20License%20Agreement.txt
  * @link       http://www.netsuite.com/portal/developers/resources/suitetalk-sample-applications.shtml
  *
- * generated:  2016-06-02 02:54:03 PM UTC
+ * generated:  2017-08-01 09:12:52 PM UTC
  */
 
 namespace NetSuite\Classes;
@@ -22,12 +22,17 @@ namespace NetSuite\Classes;
 class CashSale extends Record {
     public $createdDate;
     public $lastModifiedDate;
+    public $nexus;
+    public $subsidiaryTaxRegNum;
+    public $taxRegOverride;
+    public $taxDetailsOverride;
     public $customForm;
     public $entity;
     public $billingAccount;
     public $recurringBill;
     public $tranDate;
     public $tranId;
+    public $entityTaxRegNum;
     public $source;
     public $postingPeriod;
     public $createdFrom;
@@ -48,6 +53,7 @@ class CashSale extends Record {
     public $excludeCommission;
     public $revRecSchedule;
     public $undepFunds;
+    public $canHaveStackable;
     public $currency;
     public $account;
     public $revRecStartDate;
@@ -166,24 +172,31 @@ class CashSale extends Record {
     public $salesTeamList;
     public $partnersList;
     public $itemList;
+    public $accountingBookDetailList;
     public $itemCostList;
     public $giftCertRedemptionList;
     public $promotionsList;
     public $expCostList;
     public $timeList;
     public $shipGroupList;
+    public $taxDetailsList;
     public $customFieldList;
     public $internalId;
     public $externalId;
     static $paramtypesmap = array(
         "createdDate" => "dateTime",
         "lastModifiedDate" => "dateTime",
+        "nexus" => "RecordRef",
+        "subsidiaryTaxRegNum" => "RecordRef",
+        "taxRegOverride" => "boolean",
+        "taxDetailsOverride" => "boolean",
         "customForm" => "RecordRef",
         "entity" => "RecordRef",
         "billingAccount" => "RecordRef",
         "recurringBill" => "boolean",
         "tranDate" => "dateTime",
         "tranId" => "string",
+        "entityTaxRegNum" => "RecordRef",
         "source" => "string",
         "postingPeriod" => "RecordRef",
         "createdFrom" => "RecordRef",
@@ -204,6 +217,7 @@ class CashSale extends Record {
         "excludeCommission" => "boolean",
         "revRecSchedule" => "RecordRef",
         "undepFunds" => "boolean",
+        "canHaveStackable" => "boolean",
         "currency" => "RecordRef",
         "account" => "RecordRef",
         "revRecStartDate" => "dateTime",
@@ -322,12 +336,14 @@ class CashSale extends Record {
         "salesTeamList" => "CashSaleSalesTeamList",
         "partnersList" => "CashSalePartnersList",
         "itemList" => "CashSaleItemList",
+        "accountingBookDetailList" => "AccountingBookDetailList",
         "itemCostList" => "CashSaleItemCostList",
         "giftCertRedemptionList" => "GiftCertRedemptionList",
         "promotionsList" => "PromotionsList",
         "expCostList" => "CashSaleExpCostList",
         "timeList" => "CashSaleTimeList",
         "shipGroupList" => "CashSaleShipGroupList",
+        "taxDetailsList" => "TaxDetailsList",
         "customFieldList" => "CustomFieldList",
         "internalId" => "string",
         "externalId" => "string",

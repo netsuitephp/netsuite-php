@@ -14,7 +14,7 @@
  * @license    https://raw.githubusercontent.com/ryanwinchester/netsuite-php/master/original/NetSuite%20Application%20Developer%20License%20Agreement.txt
  * @link       http://www.netsuite.com/portal/developers/resources/suitetalk-sample-applications.shtml
  *
- * generated:  2016-06-02 02:54:03 PM UTC
+ * generated:  2017-08-01 09:12:52 PM UTC
  */
 
 namespace NetSuite\Classes;
@@ -22,12 +22,17 @@ namespace NetSuite\Classes;
 class CreditMemo extends Record {
     public $createdDate;
     public $lastModifiedDate;
+    public $nexus;
+    public $subsidiaryTaxRegNum;
+    public $taxRegOverride;
+    public $taxDetailsOverride;
     public $customForm;
     public $currency;
     public $entity;
     public $vatRegNum;
     public $tranDate;
     public $tranId;
+    public $entityTaxRegNum;
     public $createdFrom;
     public $postingPeriod;
     public $department;
@@ -105,20 +110,27 @@ class CreditMemo extends Record {
     public $syncPartnerTeams;
     public $salesTeamList;
     public $itemList;
+    public $accountingBookDetailList;
     public $partnersList;
     public $applyList;
+    public $taxDetailsList;
     public $customFieldList;
     public $internalId;
     public $externalId;
     static $paramtypesmap = array(
         "createdDate" => "dateTime",
         "lastModifiedDate" => "dateTime",
+        "nexus" => "RecordRef",
+        "subsidiaryTaxRegNum" => "RecordRef",
+        "taxRegOverride" => "boolean",
+        "taxDetailsOverride" => "boolean",
         "customForm" => "RecordRef",
         "currency" => "RecordRef",
         "entity" => "RecordRef",
         "vatRegNum" => "string",
         "tranDate" => "dateTime",
         "tranId" => "string",
+        "entityTaxRegNum" => "RecordRef",
         "createdFrom" => "RecordRef",
         "postingPeriod" => "RecordRef",
         "department" => "RecordRef",
@@ -196,8 +208,10 @@ class CreditMemo extends Record {
         "syncPartnerTeams" => "boolean",
         "salesTeamList" => "CreditMemoSalesTeamList",
         "itemList" => "CreditMemoItemList",
+        "accountingBookDetailList" => "AccountingBookDetailList",
         "partnersList" => "CreditMemoPartnersList",
         "applyList" => "CreditMemoApplyList",
+        "taxDetailsList" => "TaxDetailsList",
         "customFieldList" => "CustomFieldList",
         "internalId" => "string",
         "externalId" => "string",

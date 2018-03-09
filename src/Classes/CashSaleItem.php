@@ -14,7 +14,7 @@
  * @license    https://raw.githubusercontent.com/ryanwinchester/netsuite-php/master/original/NetSuite%20Application%20Developer%20License%20Agreement.txt
  * @link       http://www.netsuite.com/portal/developers/resources/suitetalk-sample-applications.shtml
  *
- * generated:  2016-06-02 02:54:03 PM UTC
+ * generated:  2017-08-01 09:12:52 PM UTC
  */
 
 namespace NetSuite\Classes;
@@ -54,6 +54,7 @@ class CashSaleItem {
     public $excludeFromRateRequest;
     public $catchUpPeriod;
     public $costEstimate;
+    public $taxDetailsReference;
     public $amountOrdered;
     public $tax1Amt;
     public $quantityOrdered;
@@ -65,6 +66,7 @@ class CashSaleItem {
     public $giftCertRecipientName;
     public $giftCertRecipientEmail;
     public $giftCertMessage;
+    public $taxAmount;
     public $giftCertNumber;
     public $shipGroup;
     public $itemIsFulfilled;
@@ -116,6 +118,7 @@ class CashSaleItem {
         "excludeFromRateRequest" => "boolean",
         "catchUpPeriod" => "RecordRef",
         "costEstimate" => "float",
+        "taxDetailsReference" => "string",
         "amountOrdered" => "float",
         "tax1Amt" => "float",
         "quantityOrdered" => "float",
@@ -127,6 +130,7 @@ class CashSaleItem {
         "giftCertRecipientName" => "string",
         "giftCertRecipientEmail" => "string",
         "giftCertMessage" => "string",
+        "taxAmount" => "float",
         "giftCertNumber" => "string",
         "shipGroup" => "integer",
         "itemIsFulfilled" => "boolean",

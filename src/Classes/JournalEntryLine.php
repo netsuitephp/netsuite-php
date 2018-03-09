@@ -14,7 +14,7 @@
  * @license    https://raw.githubusercontent.com/ryanwinchester/netsuite-php/master/original/NetSuite%20Application%20Developer%20License%20Agreement.txt
  * @link       http://www.netsuite.com/portal/developers/resources/suitetalk-sample-applications.shtml
  *
- * generated:  2016-06-02 02:54:03 PM UTC
+ * generated:  2017-08-01 09:12:52 PM UTC
  */
 
 namespace NetSuite\Classes;
@@ -24,6 +24,13 @@ class JournalEntryLine {
     public $line;
     public $debit;
     public $credit;
+    public $taxAccount;
+    public $lineTaxCode;
+    public $lineTaxRate;
+    public $debitTax;
+    public $creditTax;
+    public $taxBasis;
+    public $totalAmount;
     public $taxCode;
     public $memo;
     public $taxRate1;
@@ -47,6 +54,13 @@ class JournalEntryLine {
         "line" => "integer",
         "debit" => "float",
         "credit" => "float",
+        "taxAccount" => "RecordRef",
+        "lineTaxCode" => "RecordRef",
+        "lineTaxRate" => "float",
+        "debitTax" => "float",
+        "creditTax" => "float",
+        "taxBasis" => "float",
+        "totalAmount" => "float",
         "taxCode" => "RecordRef",
         "memo" => "string",
         "taxRate1" => "float",

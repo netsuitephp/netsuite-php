@@ -14,7 +14,7 @@
  * @license    https://raw.githubusercontent.com/ryanwinchester/netsuite-php/master/original/NetSuite%20Application%20Developer%20License%20Agreement.txt
  * @link       http://www.netsuite.com/portal/developers/resources/suitetalk-sample-applications.shtml
  *
- * generated:  2016-06-02 02:54:03 PM UTC
+ * generated:  2017-08-01 09:12:52 PM UTC
  */
 
 namespace NetSuite\Classes;
@@ -46,6 +46,7 @@ class SerializedAssemblyItem extends Record {
     public $location;
     public $description;
     public $cogsAccount;
+    public $vendor;
     public $incomeAccount;
     public $intercoIncomeAccount;
     public $assetAccount;
@@ -80,6 +81,7 @@ class SerializedAssemblyItem extends Record {
     public $purchaseUnit;
     public $saleUnit;
     public $trackLandedCost;
+    public $matrixItemNameTemplate;
     public $billingSchedule;
     public $deferredRevenueAccount;
     public $revRecSchedule;
@@ -105,6 +107,8 @@ class SerializedAssemblyItem extends Record {
     public $receiptQuantity;
     public $receiptAmount;
     public $receiptQuantityDiff;
+    public $isDropShipItem;
+    public $isPhantom;
     public $itemShipMethodList;
     public $manufacturerTaxId;
     public $scheduleBNumber;
@@ -146,10 +150,13 @@ class SerializedAssemblyItem extends Record {
     public $itemRevenueCategory;
     public $unbuildVarianceAccount;
     public $revenueRecognitionRule;
+    public $revRecForecastRule;
     public $revenueAllocationGroup;
     public $createRevenuePlansOn;
+    public $directRevenuePosting;
     public $dropshipExpenseAccount;
     public $preferredLocation;
+    public $isStorePickupAllowed;
     public $totalValue;
     public $useBins;
     public $averageCost;
@@ -257,6 +264,7 @@ class SerializedAssemblyItem extends Record {
         "location" => "RecordRef",
         "description" => "string",
         "cogsAccount" => "RecordRef",
+        "vendor" => "RecordRef",
         "incomeAccount" => "RecordRef",
         "intercoIncomeAccount" => "RecordRef",
         "assetAccount" => "RecordRef",
@@ -291,6 +299,7 @@ class SerializedAssemblyItem extends Record {
         "purchaseUnit" => "RecordRef",
         "saleUnit" => "RecordRef",
         "trackLandedCost" => "boolean",
+        "matrixItemNameTemplate" => "string",
         "billingSchedule" => "RecordRef",
         "deferredRevenueAccount" => "RecordRef",
         "revRecSchedule" => "RecordRef",
@@ -316,6 +325,8 @@ class SerializedAssemblyItem extends Record {
         "receiptQuantity" => "float",
         "receiptAmount" => "float",
         "receiptQuantityDiff" => "float",
+        "isDropShipItem" => "boolean",
+        "isPhantom" => "boolean",
         "itemShipMethodList" => "RecordRefList",
         "manufacturerTaxId" => "string",
         "scheduleBNumber" => "string",
@@ -357,10 +368,13 @@ class SerializedAssemblyItem extends Record {
         "itemRevenueCategory" => "RecordRef",
         "unbuildVarianceAccount" => "RecordRef",
         "revenueRecognitionRule" => "RecordRef",
+        "revRecForecastRule" => "RecordRef",
         "revenueAllocationGroup" => "RecordRef",
         "createRevenuePlansOn" => "ItemCreateRevenuePlansOn",
+        "directRevenuePosting" => "boolean",
         "dropshipExpenseAccount" => "RecordRef",
         "preferredLocation" => "RecordRef",
+        "isStorePickupAllowed" => "boolean",
         "totalValue" => "float",
         "useBins" => "boolean",
         "averageCost" => "float",

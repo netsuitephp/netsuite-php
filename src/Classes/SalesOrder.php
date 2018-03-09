@@ -14,7 +14,7 @@
  * @license    https://raw.githubusercontent.com/ryanwinchester/netsuite-php/master/original/NetSuite%20Application%20Developer%20License%20Agreement.txt
  * @link       http://www.netsuite.com/portal/developers/resources/suitetalk-sample-applications.shtml
  *
- * generated:  2016-06-02 02:54:03 PM UTC
+ * generated:  2017-08-01 09:12:52 PM UTC
  */
 
 namespace NetSuite\Classes;
@@ -29,9 +29,11 @@ class SalesOrder extends Record {
     public $fxAccount;
     public $tranDate;
     public $tranId;
+    public $entityTaxRegNum;
     public $source;
     public $createdFrom;
     public $orderStatus;
+    public $nextBill;
     public $opportunity;
     public $salesRep;
     public $contribPct;
@@ -87,6 +89,7 @@ class SalesOrder extends Record {
     public $paymentMethod;
     public $shopperIpAddress;
     public $saveOnAuthDecline;
+    public $canHaveStackable;
     public $creditCard;
     public $revenueStatus;
     public $recognizedRevenue;
@@ -137,6 +140,10 @@ class SalesOrder extends Record {
     public $intercoStatus;
     public $debitCardIssueNo;
     public $lastModifiedDate;
+    public $nexus;
+    public $subsidiaryTaxRegNum;
+    public $taxRegOverride;
+    public $taxDetailsOverride;
     public $location;
     public $pnRefNum;
     public $status;
@@ -160,6 +167,7 @@ class SalesOrder extends Record {
     public $itemList;
     public $shipGroupList;
     public $accountingBookDetailList;
+    public $taxDetailsList;
     public $customFieldList;
     public $internalId;
     public $externalId;
@@ -173,9 +181,11 @@ class SalesOrder extends Record {
         "fxAccount" => "RecordRef",
         "tranDate" => "dateTime",
         "tranId" => "string",
+        "entityTaxRegNum" => "RecordRef",
         "source" => "string",
         "createdFrom" => "RecordRef",
         "orderStatus" => "SalesOrderOrderStatus",
+        "nextBill" => "dateTime",
         "opportunity" => "RecordRef",
         "salesRep" => "RecordRef",
         "contribPct" => "string",
@@ -231,6 +241,7 @@ class SalesOrder extends Record {
         "paymentMethod" => "RecordRef",
         "shopperIpAddress" => "string",
         "saveOnAuthDecline" => "boolean",
+        "canHaveStackable" => "boolean",
         "creditCard" => "RecordRef",
         "revenueStatus" => "RevenueStatus",
         "recognizedRevenue" => "float",
@@ -281,6 +292,10 @@ class SalesOrder extends Record {
         "intercoStatus" => "IntercoStatus",
         "debitCardIssueNo" => "string",
         "lastModifiedDate" => "dateTime",
+        "nexus" => "RecordRef",
+        "subsidiaryTaxRegNum" => "RecordRef",
+        "taxRegOverride" => "boolean",
+        "taxDetailsOverride" => "boolean",
         "location" => "RecordRef",
         "pnRefNum" => "string",
         "status" => "string",
@@ -304,6 +319,7 @@ class SalesOrder extends Record {
         "itemList" => "SalesOrderItemList",
         "shipGroupList" => "SalesOrderShipGroupList",
         "accountingBookDetailList" => "AccountingBookDetailList",
+        "taxDetailsList" => "TaxDetailsList",
         "customFieldList" => "CustomFieldList",
         "internalId" => "string",
         "externalId" => "string",

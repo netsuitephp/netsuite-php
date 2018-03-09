@@ -14,7 +14,7 @@
  * @license    https://raw.githubusercontent.com/ryanwinchester/netsuite-php/master/original/NetSuite%20Application%20Developer%20License%20Agreement.txt
  * @link       http://www.netsuite.com/portal/developers/resources/suitetalk-sample-applications.shtml
  *
- * generated:  2016-06-02 02:54:03 PM UTC
+ * generated:  2017-08-01 09:12:52 PM UTC
  */
 
 namespace NetSuite\Classes;
@@ -37,6 +37,7 @@ class WorkOrderItem {
     public $serialNumbers;
     public $orderPriority;
     public $options;
+    public $itemSource;
     public $department;
     public $class;
     public $location;
@@ -45,9 +46,7 @@ class WorkOrderItem {
     public $percentComplete;
     public $contribution;
     public $description;
-    public $commit;
-    public $createPo;
-    public $createWo;
+    public $commitInventory;
     public $plannedIssueDate;
     public $customFieldList;
     static $paramtypesmap = array(
@@ -68,6 +67,7 @@ class WorkOrderItem {
         "serialNumbers" => "string",
         "orderPriority" => "float",
         "options" => "CustomFieldList",
+        "itemSource" => "ItemSource",
         "department" => "RecordRef",
         "class" => "RecordRef",
         "location" => "RecordRef",
@@ -76,9 +76,7 @@ class WorkOrderItem {
         "percentComplete" => "float",
         "contribution" => "float",
         "description" => "string",
-        "commit" => "WorkOrderItemItemCommitInventory",
-        "createPo" => "WorkOrderItemItemCreatePo",
-        "createWo" => "boolean",
+        "commitInventory" => "WorkOrderItemItemCommitInventory",
         "plannedIssueDate" => "dateTime",
         "customFieldList" => "CustomFieldList",
     );

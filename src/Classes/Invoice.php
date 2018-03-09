@@ -14,7 +14,7 @@
  * @license    https://raw.githubusercontent.com/ryanwinchester/netsuite-php/master/original/NetSuite%20Application%20Developer%20License%20Agreement.txt
  * @link       http://www.netsuite.com/portal/developers/resources/suitetalk-sample-applications.shtml
  *
- * generated:  2016-06-02 02:54:03 PM UTC
+ * generated:  2017-08-01 09:12:52 PM UTC
  */
 
 namespace NetSuite\Classes;
@@ -22,6 +22,10 @@ namespace NetSuite\Classes;
 class Invoice extends Record {
     public $createdDate;
     public $lastModifiedDate;
+    public $nexus;
+    public $subsidiaryTaxRegNum;
+    public $taxRegOverride;
+    public $taxDetailsOverride;
     public $customForm;
     public $nextApprover;
     public $entity;
@@ -29,6 +33,7 @@ class Invoice extends Record {
     public $recurringBill;
     public $tranDate;
     public $tranId;
+    public $entityTaxRegNum;
     public $source;
     public $createdFrom;
     public $postingPeriod;
@@ -97,6 +102,7 @@ class Invoice extends Record {
     public $linkedTrackingNumbers;
     public $salesGroup;
     public $subTotal;
+    public $canHaveStackable;
     public $revenueStatus;
     public $recognizedRevenue;
     public $deferredRevenue;
@@ -155,12 +161,17 @@ class Invoice extends Record {
     public $shipGroupList;
     public $approvalStatus;
     public $accountingBookDetailList;
+    public $taxDetailsList;
     public $customFieldList;
     public $internalId;
     public $externalId;
     static $paramtypesmap = array(
         "createdDate" => "dateTime",
         "lastModifiedDate" => "dateTime",
+        "nexus" => "RecordRef",
+        "subsidiaryTaxRegNum" => "RecordRef",
+        "taxRegOverride" => "boolean",
+        "taxDetailsOverride" => "boolean",
         "customForm" => "RecordRef",
         "nextApprover" => "RecordRef",
         "entity" => "RecordRef",
@@ -168,6 +179,7 @@ class Invoice extends Record {
         "recurringBill" => "boolean",
         "tranDate" => "dateTime",
         "tranId" => "string",
+        "entityTaxRegNum" => "RecordRef",
         "source" => "string",
         "createdFrom" => "RecordRef",
         "postingPeriod" => "RecordRef",
@@ -236,6 +248,7 @@ class Invoice extends Record {
         "linkedTrackingNumbers" => "string",
         "salesGroup" => "RecordRef",
         "subTotal" => "float",
+        "canHaveStackable" => "boolean",
         "revenueStatus" => "RevenueStatus",
         "recognizedRevenue" => "float",
         "deferredRevenue" => "float",
@@ -294,6 +307,7 @@ class Invoice extends Record {
         "shipGroupList" => "InvoiceShipGroupList",
         "approvalStatus" => "RecordRef",
         "accountingBookDetailList" => "AccountingBookDetailList",
+        "taxDetailsList" => "TaxDetailsList",
         "customFieldList" => "CustomFieldList",
         "internalId" => "string",
         "externalId" => "string",

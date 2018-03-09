@@ -14,7 +14,7 @@
  * @license    https://raw.githubusercontent.com/ryanwinchester/netsuite-php/master/original/NetSuite%20Application%20Developer%20License%20Agreement.txt
  * @link       http://www.netsuite.com/portal/developers/resources/suitetalk-sample-applications.shtml
  *
- * generated:  2016-06-02 02:54:03 PM UTC
+ * generated:  2017-08-01 09:12:52 PM UTC
  */
 
 namespace NetSuite\Classes;
@@ -62,6 +62,7 @@ class TransactionSearchRow extends SearchRow {
     public $partnerJoin;
     public $payingTransactionJoin;
     public $payrollItemJoin;
+    public $projectTaskJoin;
     public $purchaseOrderJoin;
     public $requestorJoin;
     public $revCommittingTransactionJoin;
@@ -73,6 +74,8 @@ class TransactionSearchRow extends SearchRow {
     public $shippingAddressJoin;
     public $subsidiaryJoin;
     public $taskJoin;
+    public $taxDetailJoin;
+    public $taxItemJoin;
     public $timeJoin;
     public $toLocationJoin;
     public $userJoin;
@@ -123,6 +126,7 @@ class TransactionSearchRow extends SearchRow {
         "partnerJoin" => "PartnerSearchRowBasic",
         "payingTransactionJoin" => "TransactionSearchRowBasic",
         "payrollItemJoin" => "PayrollItemSearchRowBasic",
+        "projectTaskJoin" => "ProjectTaskSearchRowBasic",
         "purchaseOrderJoin" => "TransactionSearchRowBasic",
         "requestorJoin" => "EmployeeSearchRowBasic",
         "revCommittingTransactionJoin" => "TransactionSearchRowBasic",
@@ -134,6 +138,8 @@ class TransactionSearchRow extends SearchRow {
         "shippingAddressJoin" => "AddressSearchRowBasic",
         "subsidiaryJoin" => "SubsidiarySearchRowBasic",
         "taskJoin" => "TaskSearchRowBasic",
+        "taxDetailJoin" => "TaxDetailSearchRowBasic",
+        "taxItemJoin" => "SalesTaxItemSearchRowBasic",
         "timeJoin" => "TimeBillSearchRowBasic",
         "toLocationJoin" => "LocationSearchRowBasic",
         "userJoin" => "EmployeeSearchRowBasic",

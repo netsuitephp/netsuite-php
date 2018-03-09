@@ -14,7 +14,7 @@
  * @license    https://raw.githubusercontent.com/ryanwinchester/netsuite-php/master/original/NetSuite%20Application%20Developer%20License%20Agreement.txt
  * @link       http://www.netsuite.com/portal/developers/resources/suitetalk-sample-applications.shtml
  *
- * generated:  2016-06-02 02:54:03 PM UTC
+ * generated:  2017-08-01 09:12:52 PM UTC
  */
 
 namespace NetSuite\Classes;
@@ -74,11 +74,14 @@ class Employee extends Record {
     public $birthDate;
     public $hireDate;
     public $releaseDate;
+    public $timeOffPlan;
     public $lastReviewDate;
     public $nextReviewDate;
     public $title;
     public $employeeStatus;
     public $jobDescription;
+    public $workAssignment;
+    public $job;
     public $maritalStatus;
     public $ethnicity;
     public $gender;
@@ -93,6 +96,7 @@ class Employee extends Record {
     public $requirePwdChange;
     public $inheritIPRules;
     public $IPAddressRule;
+    public $startDateTimeOffCalc;
     public $commissionPaymentPreference;
     public $billPay;
     public $eligibleForCommission;
@@ -106,6 +110,7 @@ class Employee extends Record {
     public $companyContributionList;
     public $earningList;
     public $emergencyContactList;
+    public $hcmPositionList;
     public $deductionList;
     public $customFieldList;
     public $internalId;
@@ -165,11 +170,14 @@ class Employee extends Record {
         "birthDate" => "dateTime",
         "hireDate" => "dateTime",
         "releaseDate" => "dateTime",
+        "timeOffPlan" => "RecordRef",
         "lastReviewDate" => "dateTime",
         "nextReviewDate" => "dateTime",
         "title" => "string",
         "employeeStatus" => "RecordRef",
         "jobDescription" => "string",
+        "workAssignment" => "EmployeeWorkAssignment",
+        "job" => "RecordRef",
         "maritalStatus" => "RecordRef",
         "ethnicity" => "RecordRef",
         "gender" => "Gender",
@@ -184,6 +192,7 @@ class Employee extends Record {
         "requirePwdChange" => "boolean",
         "inheritIPRules" => "boolean",
         "IPAddressRule" => "string",
+        "startDateTimeOffCalc" => "dateTime",
         "commissionPaymentPreference" => "EmployeeCommissionPaymentPreference",
         "billPay" => "boolean",
         "eligibleForCommission" => "boolean",
@@ -197,6 +206,7 @@ class Employee extends Record {
         "companyContributionList" => "EmployeeCompanyContributionList",
         "earningList" => "EmployeeEarningList",
         "emergencyContactList" => "EmployeeEmergencyContactList",
+        "hcmPositionList" => "EmployeeHcmPositionList",
         "deductionList" => "EmployeeDeductionList",
         "customFieldList" => "CustomFieldList",
         "internalId" => "string",

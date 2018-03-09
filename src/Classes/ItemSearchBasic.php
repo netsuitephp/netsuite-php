@@ -14,7 +14,7 @@
  * @license    https://raw.githubusercontent.com/ryanwinchester/netsuite-php/master/original/NetSuite%20Application%20Developer%20License%20Agreement.txt
  * @link       http://www.netsuite.com/portal/developers/resources/suitetalk-sample-applications.shtml
  *
- * generated:  2016-06-02 02:54:03 PM UTC
+ * generated:  2017-08-01 09:12:52 PM UTC
  */
 
 namespace NetSuite\Classes;
@@ -72,6 +72,7 @@ class ItemSearchBasic extends SearchRecordBasic {
     public $demandSource;
     public $demandTimeFence;
     public $department;
+    public $directRevenuePosting;
     public $displayIneBayStore;
     public $displayName;
     public $distributionCategory;
@@ -105,6 +106,7 @@ class ItemSearchBasic extends SearchRecordBasic {
     public $giftCertOrigAmt;
     public $giftCertRecipient;
     public $imageUrl;
+    public $includeChildren;
     public $internalId;
     public $internalIdNumber;
     public $inventoryLocation;
@@ -121,6 +123,7 @@ class ItemSearchBasic extends SearchRecordBasic {
     public $isSerialItem;
     public $isSpecialOrderItem;
     public $isSpecialWorkOrderItem;
+    public $isStorePickupAllowed;
     public $issueProduct;
     public $isTaxable;
     public $isVsoeBundle;
@@ -135,6 +138,7 @@ class ItemSearchBasic extends SearchRecordBasic {
     public $leadTime;
     public $listingDuration;
     public $location;
+    public $locationAllowStorePickup;
     public $locationAtpLeadTime;
     public $locationAverageCost;
     public $locationBuildTime;
@@ -153,6 +157,7 @@ class ItemSearchBasic extends SearchRecordBasic {
     public $locationPeriodicLotSizeDays;
     public $locationPeriodicLotSizeType;
     public $locationPreferredStockLevel;
+    public $locationQtyAvailForStorePickup;
     public $locationQuantityAvailable;
     public $locationQuantityBackOrdered;
     public $locationQuantityCommitted;
@@ -233,6 +238,7 @@ class ItemSearchBasic extends SearchRecordBasic {
     public $reservePrice;
     public $revenueAllocationGroup;
     public $revenueRecognitionRule;
+    public $revRecForecastRule;
     public $revRecSchedule;
     public $roundUpAsComponent;
     public $safetyStockLevel;
@@ -349,6 +355,7 @@ class ItemSearchBasic extends SearchRecordBasic {
         "demandSource" => "SearchEnumMultiSelectField",
         "demandTimeFence" => "SearchLongField",
         "department" => "SearchMultiSelectField",
+        "directRevenuePosting" => "SearchBooleanField",
         "displayIneBayStore" => "SearchBooleanField",
         "displayName" => "SearchStringField",
         "distributionCategory" => "SearchMultiSelectField",
@@ -382,6 +389,7 @@ class ItemSearchBasic extends SearchRecordBasic {
         "giftCertOrigAmt" => "SearchStringField",
         "giftCertRecipient" => "SearchStringField",
         "imageUrl" => "SearchStringField",
+        "includeChildren" => "SearchBooleanField",
         "internalId" => "SearchMultiSelectField",
         "internalIdNumber" => "SearchLongField",
         "inventoryLocation" => "SearchMultiSelectField",
@@ -398,6 +406,7 @@ class ItemSearchBasic extends SearchRecordBasic {
         "isSerialItem" => "SearchBooleanField",
         "isSpecialOrderItem" => "SearchBooleanField",
         "isSpecialWorkOrderItem" => "SearchBooleanField",
+        "isStorePickupAllowed" => "SearchBooleanField",
         "issueProduct" => "SearchMultiSelectField",
         "isTaxable" => "SearchBooleanField",
         "isVsoeBundle" => "SearchBooleanField",
@@ -412,6 +421,7 @@ class ItemSearchBasic extends SearchRecordBasic {
         "leadTime" => "SearchLongField",
         "listingDuration" => "SearchEnumMultiSelectField",
         "location" => "SearchMultiSelectField",
+        "locationAllowStorePickup" => "SearchBooleanField",
         "locationAtpLeadTime" => "SearchDoubleField",
         "locationAverageCost" => "SearchDoubleField",
         "locationBuildTime" => "SearchDoubleField",
@@ -430,6 +440,7 @@ class ItemSearchBasic extends SearchRecordBasic {
         "locationPeriodicLotSizeDays" => "SearchLongField",
         "locationPeriodicLotSizeType" => "SearchEnumMultiSelectField",
         "locationPreferredStockLevel" => "SearchDoubleField",
+        "locationQtyAvailForStorePickup" => "SearchDoubleField",
         "locationQuantityAvailable" => "SearchDoubleField",
         "locationQuantityBackOrdered" => "SearchDoubleField",
         "locationQuantityCommitted" => "SearchDoubleField",
@@ -510,6 +521,7 @@ class ItemSearchBasic extends SearchRecordBasic {
         "reservePrice" => "SearchDoubleField",
         "revenueAllocationGroup" => "SearchMultiSelectField",
         "revenueRecognitionRule" => "SearchMultiSelectField",
+        "revRecForecastRule" => "SearchMultiSelectField",
         "revRecSchedule" => "SearchMultiSelectField",
         "roundUpAsComponent" => "SearchBooleanField",
         "safetyStockLevel" => "SearchDoubleField",

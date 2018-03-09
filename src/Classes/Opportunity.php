@@ -14,7 +14,7 @@
  * @license    https://raw.githubusercontent.com/ryanwinchester/netsuite-php/master/original/NetSuite%20Application%20Developer%20License%20Agreement.txt
  * @link       http://www.netsuite.com/portal/developers/resources/suitetalk-sample-applications.shtml
  *
- * generated:  2016-06-02 02:54:03 PM UTC
+ * generated:  2017-08-01 09:12:52 PM UTC
  */
 
 namespace NetSuite\Classes;
@@ -27,6 +27,7 @@ class Opportunity extends Record {
     public $job;
     public $title;
     public $tranId;
+    public $entityTaxRegNum;
     public $oneTime;
     public $recurWeekly;
     public $recurMonthly;
@@ -75,6 +76,10 @@ class Opportunity extends Record {
     public $closeDate;
     public $createdDate;
     public $lastModifiedDate;
+    public $nexus;
+    public $subsidiaryTaxRegNum;
+    public $taxRegOverride;
+    public $taxDetailsOverride;
     public $department;
     public $location;
     public $subsidiary;
@@ -85,6 +90,8 @@ class Opportunity extends Record {
     public $partnersList;
     public $itemList;
     public $competitorsList;
+    public $accountingBookDetailList;
+    public $taxDetailsList;
     public $customFieldList;
     public $internalId;
     public $externalId;
@@ -96,6 +103,7 @@ class Opportunity extends Record {
         "job" => "RecordRef",
         "title" => "string",
         "tranId" => "string",
+        "entityTaxRegNum" => "RecordRef",
         "oneTime" => "float",
         "recurWeekly" => "float",
         "recurMonthly" => "float",
@@ -144,6 +152,10 @@ class Opportunity extends Record {
         "closeDate" => "dateTime",
         "createdDate" => "dateTime",
         "lastModifiedDate" => "dateTime",
+        "nexus" => "RecordRef",
+        "subsidiaryTaxRegNum" => "RecordRef",
+        "taxRegOverride" => "boolean",
+        "taxDetailsOverride" => "boolean",
         "department" => "RecordRef",
         "location" => "RecordRef",
         "subsidiary" => "RecordRef",
@@ -154,6 +166,8 @@ class Opportunity extends Record {
         "partnersList" => "OpportunityPartnersList",
         "itemList" => "OpportunityItemList",
         "competitorsList" => "OpportunityCompetitorsList",
+        "accountingBookDetailList" => "AccountingBookDetailList",
+        "taxDetailsList" => "TaxDetailsList",
         "customFieldList" => "CustomFieldList",
         "internalId" => "string",
         "externalId" => "string",

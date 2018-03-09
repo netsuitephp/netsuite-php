@@ -14,14 +14,30 @@
  * @license    https://raw.githubusercontent.com/ryanwinchester/netsuite-php/master/original/NetSuite%20Application%20Developer%20License%20Agreement.txt
  * @link       http://www.netsuite.com/portal/developers/resources/suitetalk-sample-applications.shtml
  *
- * generated:  2016-06-02 02:54:03 PM UTC
+ * generated:  2017-08-01 09:12:52 PM UTC
  */
 
 namespace NetSuite\Classes;
 
-class WorkOrderItemItemCreatePo {
+class TaxDetails {
+    public $taxDetailsReference;
+    public $netAmount;
+    public $grossAmount;
+    public $taxType;
+    public $taxCode;
+    public $taxBasis;
+    public $taxRate;
+    public $taxAmount;
+    public $calcDetail;
     static $paramtypesmap = array(
+        "taxDetailsReference" => "string",
+        "netAmount" => "float",
+        "grossAmount" => "float",
+        "taxType" => "RecordRef",
+        "taxCode" => "RecordRef",
+        "taxBasis" => "float",
+        "taxRate" => "float",
+        "taxAmount" => "float",
+        "calcDetail" => "string",
     );
-    const _dropShipment = "_dropShipment";
-    const _specialOrder = "_specialOrder";
 }

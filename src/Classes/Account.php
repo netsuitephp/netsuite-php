@@ -14,7 +14,7 @@
  * @license    https://raw.githubusercontent.com/ryanwinchester/netsuite-php/master/original/NetSuite%20Application%20Developer%20License%20Agreement.txt
  * @link       http://www.netsuite.com/portal/developers/resources/suitetalk-sample-applications.shtml
  *
- * generated:  2016-06-02 02:54:03 PM UTC
+ * generated:  2017-08-01 09:12:52 PM UTC
  */
 
 namespace NetSuite\Classes;
@@ -25,6 +25,7 @@ class Account extends Record {
     public $unit;
     public $acctNumber;
     public $acctName;
+    public $legalName;
     public $includeChildren;
     public $currency;
     public $exchangeRate;
@@ -39,14 +40,15 @@ class Account extends Record {
     public $department;
     public $class;
     public $location;
+    public $restrictToAccountingBookList;
     public $inventory;
     public $eliminate;
     public $subsidiaryList;
     public $category1099misc;
+    public $localizationsList;
     public $openingBalance;
     public $tranDate;
     public $revalue;
-    public $translationsList;
     public $customFieldList;
     public $internalId;
     public $externalId;
@@ -56,6 +58,7 @@ class Account extends Record {
         "unit" => "RecordRef",
         "acctNumber" => "string",
         "acctName" => "string",
+        "legalName" => "string",
         "includeChildren" => "boolean",
         "currency" => "RecordRef",
         "exchangeRate" => "string",
@@ -70,14 +73,15 @@ class Account extends Record {
         "department" => "RecordRef",
         "class" => "RecordRef",
         "location" => "RecordRef",
+        "restrictToAccountingBookList" => "RecordRefList",
         "inventory" => "boolean",
         "eliminate" => "boolean",
         "subsidiaryList" => "RecordRefList",
         "category1099misc" => "RecordRef",
+        "localizationsList" => "AccountLocalizationsList",
         "openingBalance" => "float",
         "tranDate" => "dateTime",
         "revalue" => "boolean",
-        "translationsList" => "AccountTranslationList",
         "customFieldList" => "CustomFieldList",
         "internalId" => "string",
         "externalId" => "string",

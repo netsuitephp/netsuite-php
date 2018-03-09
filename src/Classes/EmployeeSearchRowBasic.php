@@ -14,7 +14,7 @@
  * @license    https://raw.githubusercontent.com/ryanwinchester/netsuite-php/master/original/NetSuite%20Application%20Developer%20License%20Agreement.txt
  * @link       http://www.netsuite.com/portal/developers/resources/suitetalk-sample-applications.shtml
  *
- * generated:  2016-06-02 02:54:03 PM UTC
+ * generated:  2017-08-01 09:12:52 PM UTC
  */
 
 namespace NetSuite\Classes;
@@ -30,6 +30,7 @@ class EmployeeSearchRowBasic extends SearchRowBasic {
     public $addressLabel;
     public $addressPhone;
     public $alienNumber;
+    public $allocation;
     public $altEmail;
     public $altName;
     public $altPhone;
@@ -86,6 +87,7 @@ class EmployeeSearchRowBasic extends SearchRowBasic {
     public $isSalesRep;
     public $isSupportRep;
     public $isTemplate;
+    public $job;
     public $laborCost;
     public $language;
     public $lastModifiedDate;
@@ -106,6 +108,7 @@ class EmployeeSearchRowBasic extends SearchRowBasic {
     public $permissionChange;
     public $phone;
     public $phoneticName;
+    public $positionTitle;
     public $primaryEarningAmount;
     public $primaryEarningItem;
     public $primaryEarningType;
@@ -132,6 +135,7 @@ class EmployeeSearchRowBasic extends SearchRowBasic {
     public $shipState;
     public $shipZip;
     public $socialSecurityNumber;
+    public $startDateTimeOffCalc;
     public $state;
     public $subscription;
     public $subscriptionDate;
@@ -139,6 +143,7 @@ class EmployeeSearchRowBasic extends SearchRowBasic {
     public $subsidiary;
     public $supervisor;
     public $timeApprover;
+    public $timeOffPlan;
     public $title;
     public $usePerquest;
     public $useTimeData;
@@ -159,6 +164,7 @@ class EmployeeSearchRowBasic extends SearchRowBasic {
         "addressLabel" => "SearchColumnStringField[]",
         "addressPhone" => "SearchColumnStringField[]",
         "alienNumber" => "SearchColumnStringField[]",
+        "allocation" => "SearchColumnDoubleField[]",
         "altEmail" => "SearchColumnStringField[]",
         "altName" => "SearchColumnStringField[]",
         "altPhone" => "SearchColumnStringField[]",
@@ -215,6 +221,7 @@ class EmployeeSearchRowBasic extends SearchRowBasic {
         "isSalesRep" => "SearchColumnBooleanField[]",
         "isSupportRep" => "SearchColumnBooleanField[]",
         "isTemplate" => "SearchColumnBooleanField[]",
+        "job" => "SearchColumnSelectField[]",
         "laborCost" => "SearchColumnDoubleField[]",
         "language" => "SearchColumnEnumSelectField[]",
         "lastModifiedDate" => "SearchColumnDateField[]",
@@ -235,6 +242,7 @@ class EmployeeSearchRowBasic extends SearchRowBasic {
         "permissionChange" => "SearchColumnEnumSelectField[]",
         "phone" => "SearchColumnStringField[]",
         "phoneticName" => "SearchColumnStringField[]",
+        "positionTitle" => "SearchColumnStringField[]",
         "primaryEarningAmount" => "SearchColumnDoubleField[]",
         "primaryEarningItem" => "SearchColumnStringField[]",
         "primaryEarningType" => "SearchColumnStringField[]",
@@ -261,6 +269,7 @@ class EmployeeSearchRowBasic extends SearchRowBasic {
         "shipState" => "SearchColumnStringField[]",
         "shipZip" => "SearchColumnStringField[]",
         "socialSecurityNumber" => "SearchColumnStringField[]",
+        "startDateTimeOffCalc" => "SearchColumnDateField[]",
         "state" => "SearchColumnEnumSelectField[]",
         "subscription" => "SearchColumnSelectField[]",
         "subscriptionDate" => "SearchColumnDateField[]",
@@ -268,6 +277,7 @@ class EmployeeSearchRowBasic extends SearchRowBasic {
         "subsidiary" => "SearchColumnSelectField[]",
         "supervisor" => "SearchColumnSelectField[]",
         "timeApprover" => "SearchColumnSelectField[]",
+        "timeOffPlan" => "SearchColumnStringField[]",
         "title" => "SearchColumnStringField[]",
         "usePerquest" => "SearchColumnBooleanField[]",
         "useTimeData" => "SearchColumnBooleanField[]",

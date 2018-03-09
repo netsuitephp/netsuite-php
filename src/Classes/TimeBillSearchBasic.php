@@ -14,12 +14,13 @@
  * @license    https://raw.githubusercontent.com/ryanwinchester/netsuite-php/master/original/NetSuite%20Application%20Developer%20License%20Agreement.txt
  * @link       http://www.netsuite.com/portal/developers/resources/suitetalk-sample-applications.shtml
  *
- * generated:  2016-06-02 02:54:03 PM UTC
+ * generated:  2017-08-01 09:12:52 PM UTC
  */
 
 namespace NetSuite\Classes;
 
 class TimeBillSearchBasic extends SearchRecordBasic {
+    public $approvalStatus;
     public $approved;
     public $billable;
     public $class;
@@ -42,14 +43,17 @@ class TimeBillSearchBasic extends SearchRecordBasic {
     public $paidExternally;
     public $payItem;
     public $productive;
+    public $rejectionNote;
     public $status;
     public $subsidiary;
     public $temporaryLocalJurisdiction;
     public $temporaryStateJurisdiction;
+    public $timeSheet;
     public $type;
     public $utilized;
     public $customFieldList;
     static $paramtypesmap = array(
+        "approvalStatus" => "SearchMultiSelectField",
         "approved" => "SearchBooleanField",
         "billable" => "SearchBooleanField",
         "class" => "SearchMultiSelectField",
@@ -72,10 +76,12 @@ class TimeBillSearchBasic extends SearchRecordBasic {
         "paidExternally" => "SearchBooleanField",
         "payItem" => "SearchMultiSelectField",
         "productive" => "SearchBooleanField",
+        "rejectionNote" => "SearchStringField",
         "status" => "SearchBooleanField",
         "subsidiary" => "SearchMultiSelectField",
         "temporaryLocalJurisdiction" => "SearchMultiSelectField",
         "temporaryStateJurisdiction" => "SearchMultiSelectField",
+        "timeSheet" => "SearchMultiSelectField",
         "type" => "SearchEnumMultiSelectField",
         "utilized" => "SearchBooleanField",
         "customFieldList" => "SearchCustomFieldList",

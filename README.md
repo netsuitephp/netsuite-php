@@ -14,7 +14,7 @@ Require with composer:
 **NOTE: package name change**
 
 ```
-composer require "ryanwinchester/netsuite-php:2016.1.*"
+composer require "ryanwinchester/netsuite-php:2017.1.*"
 ```
 
 ## Changes in v2:
@@ -37,7 +37,7 @@ use NetSuite\NetSuiteService;
 
 $config = array(
    // required -------------------------------------
-   "endpoint" => "2016_1",
+   "endpoint" => "2017_1",
    "host"     => "https://webservices.netsuite.com",
    "email"    => "jDoe@netsuite.com",
    "password" => "mySecretPwd",
@@ -163,7 +163,7 @@ Instead of instantiating `NetSuiteService` with the standard credentials method,
 ```php
 $config = array(
    // required -------------------------------------
-   "endpoint"       => "2016_1",
+   "endpoint"       => "2017_1",
    "host"           => "https://webservices.netsuite.com",
    "account"        => "MYACCT1",
    "consumerKey"    => "0123456789ABCDEF",

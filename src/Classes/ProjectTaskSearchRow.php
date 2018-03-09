@@ -14,7 +14,7 @@
  * @license    https://raw.githubusercontent.com/ryanwinchester/netsuite-php/master/original/NetSuite%20Application%20Developer%20License%20Agreement.txt
  * @link       http://www.netsuite.com/portal/developers/resources/suitetalk-sample-applications.shtml
  *
- * generated:  2016-06-02 02:54:03 PM UTC
+ * generated:  2017-08-01 09:12:52 PM UTC
  */
 
 namespace NetSuite\Classes;
@@ -27,6 +27,7 @@ class ProjectTaskSearchRow extends SearchRow {
     public $resourceAllocationJoin;
     public $successorJoin;
     public $timeJoin;
+    public $transactionJoin;
     public $userJoin;
     public $userNotesJoin;
     public $customSearchJoin;
@@ -38,6 +39,7 @@ class ProjectTaskSearchRow extends SearchRow {
         "resourceAllocationJoin" => "ResourceAllocationSearchRowBasic",
         "successorJoin" => "ProjectTaskSearchRowBasic",
         "timeJoin" => "TimeBillSearchRowBasic",
+        "transactionJoin" => "TransactionSearchRowBasic",
         "userJoin" => "EmployeeSearchRowBasic",
         "userNotesJoin" => "NoteSearchRowBasic",
         "customSearchJoin" => "CustomSearchRowBasic[]",

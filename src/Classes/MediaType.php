@@ -14,7 +14,7 @@
  * @license    https://raw.githubusercontent.com/ryanwinchester/netsuite-php/master/original/NetSuite%20Application%20Developer%20License%20Agreement.txt
  * @link       http://www.netsuite.com/portal/developers/resources/suitetalk-sample-applications.shtml
  *
- * generated:  2016-06-02 02:54:03 PM UTC
+ * generated:  2017-08-01 09:12:52 PM UTC
  */
 
 namespace NetSuite\Classes;
@@ -22,8 +22,10 @@ namespace NetSuite\Classes;
 class MediaType {
     static $paramtypesmap = array(
     );
+    const _APPCACHE = "_APPCACHE";
     const _AUTOCAD = "_AUTOCAD";
     const _BMPIMAGE = "_BMPIMAGE";
+    const _CERTIFICATE = "_CERTIFICATE";
     const _CFF = "_CFF";
     const _CONFIG = "_CONFIG";
     const _CSV = "_CSV";
@@ -39,6 +41,7 @@ class MediaType {
     const _JAVASCRIPT = "_JAVASCRIPT";
     const _JPGIMAGE = "_JPGIMAGE";
     const _JSON = "_JSON";
+    const _LZH = "_LZH";
     const _MESSAGERFC = "_MESSAGERFC";
     const _MISCBINARY = "_MISCBINARY";
     const _MISCTEXT = "_MISCTEXT";

@@ -14,14 +14,16 @@
  * @license    https://raw.githubusercontent.com/ryanwinchester/netsuite-php/master/original/NetSuite%20Application%20Developer%20License%20Agreement.txt
  * @link       http://www.netsuite.com/portal/developers/resources/suitetalk-sample-applications.shtml
  *
- * generated:  2016-06-02 02:54:03 PM UTC
+ * generated:  2017-08-01 09:12:52 PM UTC
  */
 
 namespace NetSuite\Classes;
 
 class Message extends Record {
     public $author;
+    public $authorEmail;
     public $recipient;
+    public $recipientEmail;
     public $cc;
     public $bcc;
     public $messageDate;
@@ -41,7 +43,9 @@ class Message extends Record {
     public $externalId;
     static $paramtypesmap = array(
         "author" => "RecordRef",
+        "authorEmail" => "string",
         "recipient" => "RecordRef",
+        "recipientEmail" => "string",
         "cc" => "string",
         "bcc" => "string",
         "messageDate" => "dateTime",

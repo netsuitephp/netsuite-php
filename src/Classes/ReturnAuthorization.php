@@ -14,7 +14,7 @@
  * @license    https://raw.githubusercontent.com/ryanwinchester/netsuite-php/master/original/NetSuite%20Application%20Developer%20License%20Agreement.txt
  * @link       http://www.netsuite.com/portal/developers/resources/suitetalk-sample-applications.shtml
  *
- * generated:  2016-06-02 02:54:03 PM UTC
+ * generated:  2017-08-01 09:12:52 PM UTC
  */
 
 namespace NetSuite\Classes;
@@ -22,12 +22,17 @@ namespace NetSuite\Classes;
 class ReturnAuthorization extends Record {
     public $createdDate;
     public $lastModifiedDate;
+    public $nexus;
+    public $subsidiaryTaxRegNum;
+    public $taxRegOverride;
+    public $taxDetailsOverride;
     public $customForm;
     public $currency;
     public $entity;
     public $vatRegNum;
     public $tranDate;
     public $tranId;
+    public $entityTaxRegNum;
     public $source;
     public $department;
     public $class;
@@ -109,20 +114,27 @@ class ReturnAuthorization extends Record {
     public $vsoeAutoCalc;
     public $syncPartnerTeams;
     public $itemList;
+    public $accountingBookDetailList;
     public $salesTeamList;
     public $partnersList;
+    public $taxDetailsList;
     public $customFieldList;
     public $internalId;
     public $externalId;
     static $paramtypesmap = array(
         "createdDate" => "dateTime",
         "lastModifiedDate" => "dateTime",
+        "nexus" => "RecordRef",
+        "subsidiaryTaxRegNum" => "RecordRef",
+        "taxRegOverride" => "boolean",
+        "taxDetailsOverride" => "boolean",
         "customForm" => "RecordRef",
         "currency" => "RecordRef",
         "entity" => "RecordRef",
         "vatRegNum" => "string",
         "tranDate" => "dateTime",
         "tranId" => "string",
+        "entityTaxRegNum" => "RecordRef",
         "source" => "string",
         "department" => "RecordRef",
         "class" => "RecordRef",
@@ -204,8 +216,10 @@ class ReturnAuthorization extends Record {
         "vsoeAutoCalc" => "boolean",
         "syncPartnerTeams" => "boolean",
         "itemList" => "ReturnAuthorizationItemList",
+        "accountingBookDetailList" => "AccountingBookDetailList",
         "salesTeamList" => "ReturnAuthorizationSalesTeamList",
         "partnersList" => "ReturnAuthorizationPartnersList",
+        "taxDetailsList" => "TaxDetailsList",
         "customFieldList" => "CustomFieldList",
         "internalId" => "string",
         "externalId" => "string",

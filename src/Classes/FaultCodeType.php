@@ -14,7 +14,7 @@
  * @license    https://raw.githubusercontent.com/ryanwinchester/netsuite-php/master/original/NetSuite%20Application%20Developer%20License%20Agreement.txt
  * @link       http://www.netsuite.com/portal/developers/resources/suitetalk-sample-applications.shtml
  *
- * generated:  2016-06-02 02:54:03 PM UTC
+ * generated:  2017-08-01 09:12:52 PM UTC
  */
 
 namespace NetSuite\Classes;
@@ -24,6 +24,7 @@ class FaultCodeType {
     );
     const ACCT_TEMP_UNAVAILABLE = "ACCT_TEMP_UNAVAILABLE";
     const EMAIL_ADDRS_REQD = "EMAIL_ADDRS_REQD";
+    const INSUFFICIENT_PERMISSION = "INSUFFICIENT_PERMISSION";
     const INVALID_ACCT = "INVALID_ACCT";
     const INVALID_JOB_ID = "INVALID_JOB_ID";
     const INVALID_LOGIN_CREDENTIALS = "INVALID_LOGIN_CREDENTIALS";

@@ -14,7 +14,7 @@
  * @license    https://raw.githubusercontent.com/ryanwinchester/netsuite-php/master/original/NetSuite%20Application%20Developer%20License%20Agreement.txt
  * @link       http://www.netsuite.com/portal/developers/resources/suitetalk-sample-applications.shtml
  *
- * generated:  2016-06-02 02:54:03 PM UTC
+ * generated:  2017-08-01 09:12:52 PM UTC
  */
 
 namespace NetSuite\Classes;
@@ -45,6 +45,7 @@ class CreditMemoItem {
     public $location;
     public $costEstimateType;
     public $costEstimate;
+    public $taxDetailsReference;
     public $revRecSchedule;
     public $revRecStartDate;
     public $revRecTermInMonths;
@@ -57,6 +58,7 @@ class CreditMemoItem {
     public $giftCertRecipientName;
     public $giftCertRecipientEmail;
     public $giftCertMessage;
+    public $taxAmount;
     public $giftCertNumber;
     public $vsoeSopGroup;
     public $vsoeIsEstimate;
@@ -97,6 +99,7 @@ class CreditMemoItem {
         "location" => "RecordRef",
         "costEstimateType" => "ItemCostEstimateType",
         "costEstimate" => "float",
+        "taxDetailsReference" => "string",
         "revRecSchedule" => "RecordRef",
         "revRecStartDate" => "dateTime",
         "revRecTermInMonths" => "integer",
@@ -109,6 +112,7 @@ class CreditMemoItem {
         "giftCertRecipientName" => "string",
         "giftCertRecipientEmail" => "string",
         "giftCertMessage" => "string",
+        "taxAmount" => "float",
         "giftCertNumber" => "string",
         "vsoeSopGroup" => "VsoeSopGroup",
         "vsoeIsEstimate" => "boolean",

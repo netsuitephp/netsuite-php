@@ -14,7 +14,7 @@
  * @license    https://raw.githubusercontent.com/ryanwinchester/netsuite-php/master/original/NetSuite%20Application%20Developer%20License%20Agreement.txt
  * @link       http://www.netsuite.com/portal/developers/resources/suitetalk-sample-applications.shtml
  *
- * generated:  2016-06-02 02:54:03 PM UTC
+ * generated:  2017-08-01 09:12:52 PM UTC
  */
 
 namespace NetSuite\Classes;
@@ -23,6 +23,7 @@ class TimeBillSearchRow extends SearchRow {
     public $basic;
     public $callJoin;
     public $caseJoin;
+    public $chargeJoin;
     public $classJoin;
     public $customerJoin;
     public $departmentJoin;
@@ -37,11 +38,13 @@ class TimeBillSearchRow extends SearchRow {
     public $taskJoin;
     public $userJoin;
     public $vendorJoin;
+    public $timeSheetJoin;
     public $customSearchJoin;
     static $paramtypesmap = array(
         "basic" => "TimeBillSearchRowBasic",
         "callJoin" => "PhoneCallSearchRowBasic",
         "caseJoin" => "SupportCaseSearchRowBasic",
+        "chargeJoin" => "ChargeSearchRowBasic",
         "classJoin" => "ClassificationSearchRowBasic",
         "customerJoin" => "CustomerSearchRowBasic",
         "departmentJoin" => "DepartmentSearchRowBasic",
@@ -56,6 +59,7 @@ class TimeBillSearchRow extends SearchRow {
         "taskJoin" => "TaskSearchRowBasic",
         "userJoin" => "EmployeeSearchRowBasic",
         "vendorJoin" => "VendorSearchRowBasic",
+        "timeSheetJoin" => "TimeSheetSearchRowBasic",
         "customSearchJoin" => "CustomSearchRowBasic[]",
     );
 }

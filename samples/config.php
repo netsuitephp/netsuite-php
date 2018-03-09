@@ -2,7 +2,7 @@
 
 // An example of loading your config from environment variables with optional defaults.
 return array(
-    'endpoint' => getenv('NETSUITE_ENDPOINT') ?: '2016_1',
+    'endpoint' => getenv('NETSUITE_ENDPOINT') ?: '2017_1',
     'host'     => getenv('NETSUITE_HOST')     ?: 'https://webservices.netsuite.com',
     'email'    => getenv('NETSUITE_EMAIL')    ?: 'jDoe@netsuite.com',
     'password' => getenv('NETSUITE_PASSWORD') ?: 'mySecretPwd',

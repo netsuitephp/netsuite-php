@@ -14,7 +14,7 @@
  * @license    https://raw.githubusercontent.com/ryanwinchester/netsuite-php/master/original/NetSuite%20Application%20Developer%20License%20Agreement.txt
  * @link       http://www.netsuite.com/portal/developers/resources/suitetalk-sample-applications.shtml
  *
- * generated:  2016-06-02 02:54:03 PM UTC
+ * generated:  2017-08-01 09:12:52 PM UTC
  */
 
 namespace NetSuite\Classes;
@@ -31,9 +31,11 @@ class ItemAccountMappingItemAccount {
     const _dropShipExpense = "_dropShipExpense";
     const _exchangeRateVariance = "_exchangeRateVariance";
     const _expense = "_expense";
+    const _foreignCurrencyAdjustmentRevenueAccount = "_foreignCurrencyAdjustmentRevenueAccount";
     const _gainLoss = "_gainLoss";
     const _income = "_income";
     const _intercompanyCostOfGoods = "_intercompanyCostOfGoods";
+    const _intercompanyDeferredRevenue = "_intercompanyDeferredRevenue";
     const _intercompanyExpense = "_intercompanyExpense";
     const _intercompanyIncome = "_intercompanyIncome";
     const _liability = "_liability";

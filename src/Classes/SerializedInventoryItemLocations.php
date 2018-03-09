@@ -14,7 +14,7 @@
  * @license    https://raw.githubusercontent.com/ryanwinchester/netsuite-php/master/original/NetSuite%20Application%20Developer%20License%20Agreement.txt
  * @link       http://www.netsuite.com/portal/developers/resources/suitetalk-sample-applications.shtml
  *
- * generated:  2016-06-02 02:54:03 PM UTC
+ * generated:  2017-08-01 09:12:52 PM UTC
  */
 
 namespace NetSuite\Classes;
@@ -27,6 +27,8 @@ class SerializedInventoryItemLocations {
     public $averageCostMli;
     public $lastPurchasePriceMli;
     public $reorderPoint;
+    public $locationAllowStorePickup;
+    public $locationQtyAvailForStorePickup;
     public $preferredStockLevel;
     public $leadTime;
     public $defaultReturnCost;
@@ -67,6 +69,8 @@ class SerializedInventoryItemLocations {
         "averageCostMli" => "float",
         "lastPurchasePriceMli" => "float",
         "reorderPoint" => "float",
+        "locationAllowStorePickup" => "boolean",
+        "locationQtyAvailForStorePickup" => "float",
         "preferredStockLevel" => "float",
         "leadTime" => "integer",
         "defaultReturnCost" => "float",
