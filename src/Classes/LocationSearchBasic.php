@@ -14,13 +14,14 @@
  * @license    https://raw.githubusercontent.com/ryanwinchester/netsuite-php/master/original/NetSuite%20Application%20Developer%20License%20Agreement.txt
  * @link       http://www.netsuite.com/portal/developers/resources/suitetalk-sample-applications.shtml
  *
- * generated:  2017-08-01 09:12:52 PM UTC
+ * generated:  2019-02-27 03:26:43 PM PST
  */
 
 namespace NetSuite\Classes;
 
 class LocationSearchBasic extends SearchRecordBasic {
     public $address;
+    public $allowStorePickup;
     public $autoAssignmentRegionSetting;
     public $bufferStock;
     public $city;
@@ -54,6 +55,7 @@ class LocationSearchBasic extends SearchRecordBasic {
     public $sameDayPickupCutOffTime;
     public $startTime;
     public $state;
+    public $storePickupBufferStock;
     public $subsidiary;
     public $timeZone;
     public $totalShippingCapacity;
@@ -63,6 +65,7 @@ class LocationSearchBasic extends SearchRecordBasic {
     public $customFieldList;
     static $paramtypesmap = array(
         "address" => "SearchStringField",
+        "allowStorePickup" => "SearchBooleanField",
         "autoAssignmentRegionSetting" => "SearchEnumMultiSelectField",
         "bufferStock" => "SearchLongField",
         "city" => "SearchStringField",
@@ -96,6 +99,7 @@ class LocationSearchBasic extends SearchRecordBasic {
         "sameDayPickupCutOffTime" => "SearchDateField",
         "startTime" => "SearchDateField",
         "state" => "SearchStringField",
+        "storePickupBufferStock" => "SearchDoubleField",
         "subsidiary" => "SearchMultiSelectField",
         "timeZone" => "SearchEnumMultiSelectField",
         "totalShippingCapacity" => "SearchLongField",

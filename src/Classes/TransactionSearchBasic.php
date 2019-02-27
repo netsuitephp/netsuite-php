@@ -14,7 +14,7 @@
  * @license    https://raw.githubusercontent.com/ryanwinchester/netsuite-php/master/original/NetSuite%20Application%20Developer%20License%20Agreement.txt
  * @link       http://www.netsuite.com/portal/developers/resources/suitetalk-sample-applications.shtml
  *
- * generated:  2017-08-01 09:12:52 PM UTC
+ * generated:  2019-02-27 03:26:43 PM PST
  */
 
 namespace NetSuite\Classes;
@@ -22,6 +22,7 @@ namespace NetSuite\Classes;
 class TransactionSearchBasic extends SearchRecordBasic {
     public $account;
     public $accountType;
+    public $acctCorpCardExp;
     public $actualShipDate;
     public $altSalesAmount;
     public $altSalesNetAmount;
@@ -171,6 +172,8 @@ class TransactionSearchBasic extends SearchRecordBasic {
     public $intercoTransaction;
     public $internalId;
     public $internalIdNumber;
+    public $inventoryLocation;
+    public $inventorySubsidiary;
     public $inVsoeBundle;
     public $isAllocation;
     public $isBackflush;
@@ -181,6 +184,7 @@ class TransactionSearchBasic extends SearchRecordBasic {
     public $isInsideDelivery;
     public $isInsidePickup;
     public $isIntercompanyAdjustment;
+    public $isInTransitPayment;
     public $isMultiShipTo;
     public $isPayPalMeth;
     public $isReversal;
@@ -363,6 +367,7 @@ class TransactionSearchBasic extends SearchRecordBasic {
     static $paramtypesmap = array(
         "account" => "SearchMultiSelectField",
         "accountType" => "SearchEnumMultiSelectField",
+        "acctCorpCardExp" => "SearchMultiSelectField",
         "actualShipDate" => "SearchDateField",
         "altSalesAmount" => "SearchDoubleField",
         "altSalesNetAmount" => "SearchDoubleField",
@@ -512,6 +517,8 @@ class TransactionSearchBasic extends SearchRecordBasic {
         "intercoTransaction" => "SearchMultiSelectField",
         "internalId" => "SearchMultiSelectField",
         "internalIdNumber" => "SearchLongField",
+        "inventoryLocation" => "SearchMultiSelectField",
+        "inventorySubsidiary" => "SearchMultiSelectField",
         "inVsoeBundle" => "SearchBooleanField",
         "isAllocation" => "SearchBooleanField",
         "isBackflush" => "SearchBooleanField",
@@ -522,6 +529,7 @@ class TransactionSearchBasic extends SearchRecordBasic {
         "isInsideDelivery" => "SearchBooleanField",
         "isInsidePickup" => "SearchBooleanField",
         "isIntercompanyAdjustment" => "SearchBooleanField",
+        "isInTransitPayment" => "SearchBooleanField",
         "isMultiShipTo" => "SearchBooleanField",
         "isPayPalMeth" => "SearchBooleanField",
         "isReversal" => "SearchBooleanField",

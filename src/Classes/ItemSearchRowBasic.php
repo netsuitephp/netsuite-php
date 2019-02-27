@@ -14,14 +14,17 @@
  * @license    https://raw.githubusercontent.com/ryanwinchester/netsuite-php/master/original/NetSuite%20Application%20Developer%20License%20Agreement.txt
  * @link       http://www.netsuite.com/portal/developers/resources/suitetalk-sample-applications.shtml
  *
- * generated:  2017-08-01 09:12:52 PM UTC
+ * generated:  2019-02-27 03:26:43 PM PST
  */
 
 namespace NetSuite\Classes;
 
 class ItemSearchRowBasic extends SearchRowBasic {
+    public $accBookRevRecForecastRule;
     public $accountingBook;
     public $accountingBookAmortization;
+    public $accountingBookCreatePlansOn;
+    public $accountingBookRevRecRule;
     public $accountingBookRevRecSchedule;
     public $allowedShippingMethod;
     public $alternateDemandSourceItem;
@@ -49,6 +52,7 @@ class ItemSearchRowBasic extends SearchRowBasic {
     public $categoryPreferred;
     public $class;
     public $componentYield;
+    public $contingentRevenueHandling;
     public $copyDescription;
     public $correlatedItem;
     public $correlatedItemCorrelation;
@@ -112,10 +116,13 @@ class ItemSearchRowBasic extends SearchRowBasic {
     public $giftCertMessage;
     public $giftCertOriginalAmount;
     public $giftCertRecipient;
+    public $hierarchyNode;
+    public $hierarchyVersion;
     public $hits;
     public $imageUrl;
     public $includeChildren;
     public $incomeAccount;
+    public $intercoDefRevAccount;
     public $intercoExpenseAccount;
     public $intercoIncomeAccount;
     public $internalId;
@@ -178,6 +185,7 @@ class ItemSearchRowBasic extends SearchRowBasic {
     public $locationRescheduleInDays;
     public $locationRescheduleOutDays;
     public $locationSafetyStockLevel;
+    public $locationStorePickupBufferStock;
     public $locationSupplyLotSizingMethod;
     public $locationSupplyTimeFence;
     public $locationSupplyType;
@@ -193,6 +201,7 @@ class ItemSearchRowBasic extends SearchRowBasic {
     public $manufacturerZip;
     public $manufacturingChargeItem;
     public $matchBillToReceipt;
+    public $maximumQuantity;
     public $memberItem;
     public $memberQuantity;
     public $metaTagHtml;
@@ -257,6 +266,7 @@ class ItemSearchRowBasic extends SearchRowBasic {
     public $revenueAllocationGroup;
     public $revenueRecognitionRule;
     public $revRecForecastRule;
+    public $revReclassFXAccount;
     public $revRecSchedule;
     public $roundUpAsComponent;
     public $safetyStockLevel;
@@ -324,6 +334,7 @@ class ItemSearchRowBasic extends SearchRowBasic {
     public $vsoeDelivered;
     public $vsoePermitDiscount;
     public $vsoePrice;
+    public $vsoeSopGroup;
     public $webSite;
     public $weight;
     public $weightUnit;
@@ -332,8 +343,11 @@ class ItemSearchRowBasic extends SearchRowBasic {
     public $yahooProductFeed;
     public $customFieldList;
     static $paramtypesmap = array(
+        "accBookRevRecForecastRule" => "SearchColumnSelectField[]",
         "accountingBook" => "SearchColumnSelectField[]",
         "accountingBookAmortization" => "SearchColumnSelectField[]",
+        "accountingBookCreatePlansOn" => "SearchColumnSelectField[]",
+        "accountingBookRevRecRule" => "SearchColumnSelectField[]",
         "accountingBookRevRecSchedule" => "SearchColumnSelectField[]",
         "allowedShippingMethod" => "SearchColumnSelectField[]",
         "alternateDemandSourceItem" => "SearchColumnStringField[]",
@@ -361,6 +375,7 @@ class ItemSearchRowBasic extends SearchRowBasic {
         "categoryPreferred" => "SearchColumnStringField[]",
         "class" => "SearchColumnSelectField[]",
         "componentYield" => "SearchColumnDoubleField[]",
+        "contingentRevenueHandling" => "SearchColumnBooleanField[]",
         "copyDescription" => "SearchColumnBooleanField[]",
         "correlatedItem" => "SearchColumnSelectField[]",
         "correlatedItemCorrelation" => "SearchColumnDoubleField[]",
@@ -376,7 +391,7 @@ class ItemSearchRowBasic extends SearchRowBasic {
         "countryOfManufacture" => "SearchColumnEnumSelectField[]",
         "created" => "SearchColumnDateField[]",
         "createJob" => "SearchColumnBooleanField[]",
-        "createRevenuePlansOn" => "SearchColumnEnumSelectField[]",
+        "createRevenuePlansOn" => "SearchColumnSelectField[]",
         "custReturnVarianceAccount" => "SearchColumnSelectField[]",
         "dateViewed" => "SearchColumnDateField[]",
         "daysBeforeExpiration" => "SearchColumnStringField[]",
@@ -424,10 +439,13 @@ class ItemSearchRowBasic extends SearchRowBasic {
         "giftCertMessage" => "SearchColumnStringField[]",
         "giftCertOriginalAmount" => "SearchColumnStringField[]",
         "giftCertRecipient" => "SearchColumnStringField[]",
+        "hierarchyNode" => "SearchColumnStringField[]",
+        "hierarchyVersion" => "SearchColumnStringField[]",
         "hits" => "SearchColumnLongField[]",
         "imageUrl" => "SearchColumnStringField[]",
         "includeChildren" => "SearchColumnBooleanField[]",
         "incomeAccount" => "SearchColumnSelectField[]",
+        "intercoDefRevAccount" => "SearchColumnSelectField[]",
         "intercoExpenseAccount" => "SearchColumnSelectField[]",
         "intercoIncomeAccount" => "SearchColumnSelectField[]",
         "internalId" => "SearchColumnSelectField[]",
@@ -490,6 +508,7 @@ class ItemSearchRowBasic extends SearchRowBasic {
         "locationRescheduleInDays" => "SearchColumnLongField[]",
         "locationRescheduleOutDays" => "SearchColumnLongField[]",
         "locationSafetyStockLevel" => "SearchColumnDoubleField[]",
+        "locationStorePickupBufferStock" => "SearchColumnDoubleField[]",
         "locationSupplyLotSizingMethod" => "SearchColumnEnumSelectField[]",
         "locationSupplyTimeFence" => "SearchColumnLongField[]",
         "locationSupplyType" => "SearchColumnEnumSelectField[]",
@@ -505,6 +524,7 @@ class ItemSearchRowBasic extends SearchRowBasic {
         "manufacturerZip" => "SearchColumnStringField[]",
         "manufacturingChargeItem" => "SearchColumnBooleanField[]",
         "matchBillToReceipt" => "SearchColumnBooleanField[]",
+        "maximumQuantity" => "SearchColumnStringField[]",
         "memberItem" => "SearchColumnSelectField[]",
         "memberQuantity" => "SearchColumnDoubleField[]",
         "metaTagHtml" => "SearchColumnStringField[]",
@@ -569,6 +589,7 @@ class ItemSearchRowBasic extends SearchRowBasic {
         "revenueAllocationGroup" => "SearchColumnSelectField[]",
         "revenueRecognitionRule" => "SearchColumnSelectField[]",
         "revRecForecastRule" => "SearchColumnSelectField[]",
+        "revReclassFXAccount" => "SearchColumnSelectField[]",
         "revRecSchedule" => "SearchColumnSelectField[]",
         "roundUpAsComponent" => "SearchColumnBooleanField[]",
         "safetyStockLevel" => "SearchColumnDoubleField[]",
@@ -636,6 +657,7 @@ class ItemSearchRowBasic extends SearchRowBasic {
         "vsoeDelivered" => "SearchColumnBooleanField[]",
         "vsoePermitDiscount" => "SearchColumnEnumSelectField[]",
         "vsoePrice" => "SearchColumnDoubleField[]",
+        "vsoeSopGroup" => "SearchColumnEnumSelectField[]",
         "webSite" => "SearchColumnSelectField[]",
         "weight" => "SearchColumnDoubleField[]",
         "weightUnit" => "SearchColumnEnumSelectField[]",

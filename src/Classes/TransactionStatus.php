@@ -14,7 +14,7 @@
  * @license    https://raw.githubusercontent.com/ryanwinchester/netsuite-php/master/original/NetSuite%20Application%20Developer%20License%20Agreement.txt
  * @link       http://www.netsuite.com/portal/developers/resources/suitetalk-sample-applications.shtml
  *
- * generated:  2017-08-01 09:12:52 PM UTC
+ * generated:  2019-02-27 03:26:43 PM PST
  */
 
 namespace NetSuite\Classes;
@@ -25,7 +25,12 @@ class TransactionStatus {
     const _billCancelled = "_billCancelled";
     const _billOpen = "_billOpen";
     const _billPaidInFull = "_billPaidInFull";
+    const _billPaymentConfirmed = "_billPaymentConfirmed";
+    const _billPaymentDeclined = "_billPaymentDeclined";
+    const _billPaymentInTransit = "_billPaymentInTransit";
     const _billPaymentOnlineBillPayPendingAccountingApproval = "_billPaymentOnlineBillPayPendingAccountingApproval";
+    const _billPaymentPendingApproval = "_billPaymentPendingApproval";
+    const _billPaymentRejected = "_billPaymentRejected";
     const _billPaymentVoided = "_billPaymentVoided";
     const _billPendingApproval = "_billPendingApproval";
     const _billRejected = "_billRejected";
@@ -45,6 +50,7 @@ class TransactionStatus {
     const _customerDepositDeposited = "_customerDepositDeposited";
     const _customerDepositFullyApplied = "_customerDepositFullyApplied";
     const _customerDepositNotDeposited = "_customerDepositNotDeposited";
+    const _customerDepositUnapprovedPayment = "_customerDepositUnapprovedPayment";
     const _customerRefundVoided = "_customerRefundVoided";
     const _estimateClosed = "_estimateClosed";
     const _estimateExpired = "_estimateExpired";
@@ -55,6 +61,7 @@ class TransactionStatus {
     const _expenseReportApprovedOverriddenByAccounting = "_expenseReportApprovedOverriddenByAccounting";
     const _expenseReportInProgress = "_expenseReportInProgress";
     const _expenseReportPaidInFull = "_expenseReportPaidInFull";
+    const _expenseReportPaymentInTransit = "_expenseReportPaymentInTransit";
     const _expenseReportPendingAccountingApproval = "_expenseReportPendingAccountingApproval";
     const _expenseReportPendingSupervisorApproval = "_expenseReportPendingSupervisorApproval";
     const _expenseReportRejectedByAccounting = "_expenseReportRejectedByAccounting";

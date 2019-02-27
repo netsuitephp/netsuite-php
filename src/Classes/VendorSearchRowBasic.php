@@ -14,7 +14,7 @@
  * @license    https://raw.githubusercontent.com/ryanwinchester/netsuite-php/master/original/NetSuite%20Application%20Developer%20License%20Agreement.txt
  * @link       http://www.netsuite.com/portal/developers/resources/suitetalk-sample-applications.shtml
  *
- * generated:  2017-08-01 09:12:52 PM UTC
+ * generated:  2019-02-27 03:26:43 PM PST
  */
 
 namespace NetSuite\Classes;
@@ -58,6 +58,7 @@ class VendorSearchRowBasic extends SearchRowBasic {
     public $currency;
     public $currentExchangeRate;
     public $dateCreated;
+    public $defaultTaxReg;
     public $eligibleForCommission;
     public $email;
     public $emailPreference;
@@ -124,6 +125,7 @@ class VendorSearchRowBasic extends SearchRowBasic {
     public $subsidiary;
     public $taxIdNum;
     public $terms;
+    public $timeApprover;
     public $title;
     public $unbilledOrders;
     public $url;
@@ -170,6 +172,7 @@ class VendorSearchRowBasic extends SearchRowBasic {
         "currency" => "SearchColumnSelectField[]",
         "currentExchangeRate" => "SearchColumnDoubleField[]",
         "dateCreated" => "SearchColumnDateField[]",
+        "defaultTaxReg" => "SearchColumnStringField[]",
         "eligibleForCommission" => "SearchColumnBooleanField[]",
         "email" => "SearchColumnStringField[]",
         "emailPreference" => "SearchColumnEnumSelectField[]",
@@ -236,6 +239,7 @@ class VendorSearchRowBasic extends SearchRowBasic {
         "subsidiary" => "SearchColumnSelectField[]",
         "taxIdNum" => "SearchColumnStringField[]",
         "terms" => "SearchColumnSelectField[]",
+        "timeApprover" => "SearchColumnSelectField[]",
         "title" => "SearchColumnStringField[]",
         "unbilledOrders" => "SearchColumnDoubleField[]",
         "url" => "SearchColumnStringField[]",

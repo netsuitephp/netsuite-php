@@ -14,7 +14,7 @@
  * @license    https://raw.githubusercontent.com/ryanwinchester/netsuite-php/master/original/NetSuite%20Application%20Developer%20License%20Agreement.txt
  * @link       http://www.netsuite.com/portal/developers/resources/suitetalk-sample-applications.shtml
  *
- * generated:  2017-08-01 09:12:52 PM UTC
+ * generated:  2019-02-27 03:26:43 PM PST
  */
 
 namespace NetSuite\Classes;
@@ -48,6 +48,8 @@ class SalesTaxItem extends Record {
     public $state;
     public $zip;
     public $nexusCountry;
+    public $name;
+    public $customFieldList;
     public $internalId;
     public $externalId;
     static $paramtypesmap = array(
@@ -79,6 +81,8 @@ class SalesTaxItem extends Record {
         "state" => "string",
         "zip" => "string",
         "nexusCountry" => "RecordRef",
+        "name" => "string",
+        "customFieldList" => "CustomFieldList",
         "internalId" => "string",
         "externalId" => "string",
     );

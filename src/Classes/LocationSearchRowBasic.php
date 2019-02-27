@@ -14,7 +14,7 @@
  * @license    https://raw.githubusercontent.com/ryanwinchester/netsuite-php/master/original/NetSuite%20Application%20Developer%20License%20Agreement.txt
  * @link       http://www.netsuite.com/portal/developers/resources/suitetalk-sample-applications.shtml
  *
- * generated:  2017-08-01 09:12:52 PM UTC
+ * generated:  2019-02-27 03:26:43 PM PST
  */
 
 namespace NetSuite\Classes;
@@ -23,6 +23,7 @@ class LocationSearchRowBasic extends SearchRowBasic {
     public $address1;
     public $address2;
     public $address3;
+    public $allowStorePickup;
     public $autoAssignmentRegionSetting;
     public $bufferStock;
     public $city;
@@ -53,6 +54,7 @@ class LocationSearchRowBasic extends SearchRowBasic {
     public $sameDayPickupCutOffTime;
     public $startTime;
     public $state;
+    public $storePickupBufferStock;
     public $subsidiary;
     public $timeZone;
     public $totalShippingCapacity;
@@ -64,6 +66,7 @@ class LocationSearchRowBasic extends SearchRowBasic {
         "address1" => "SearchColumnStringField[]",
         "address2" => "SearchColumnStringField[]",
         "address3" => "SearchColumnStringField[]",
+        "allowStorePickup" => "SearchColumnBooleanField[]",
         "autoAssignmentRegionSetting" => "SearchColumnEnumSelectField[]",
         "bufferStock" => "SearchColumnLongField[]",
         "city" => "SearchColumnStringField[]",
@@ -94,6 +97,7 @@ class LocationSearchRowBasic extends SearchRowBasic {
         "sameDayPickupCutOffTime" => "SearchColumnDateField[]",
         "startTime" => "SearchColumnDateField[]",
         "state" => "SearchColumnStringField[]",
+        "storePickupBufferStock" => "SearchColumnDoubleField[]",
         "subsidiary" => "SearchColumnSelectField[]",
         "timeZone" => "SearchColumnEnumSelectField[]",
         "totalShippingCapacity" => "SearchColumnLongField[]",

@@ -14,7 +14,7 @@
  * @license    https://raw.githubusercontent.com/ryanwinchester/netsuite-php/master/original/NetSuite%20Application%20Developer%20License%20Agreement.txt
  * @link       http://www.netsuite.com/portal/developers/resources/suitetalk-sample-applications.shtml
  *
- * generated:  2017-08-01 09:12:52 PM UTC
+ * generated:  2019-02-27 03:26:43 PM PST
  */
 
 namespace NetSuite\Classes;
@@ -50,6 +50,8 @@ class KitItem extends Record {
     public $revenueAllocationGroup;
     public $createRevenuePlansOn;
     public $directRevenuePosting;
+    public $contingentRevenueHandling;
+    public $revReclassFXAccount;
     public $salesTaxCode;
     public $weight;
     public $weightUnit;
@@ -79,6 +81,7 @@ class KitItem extends Record {
     public $issueProduct;
     public $minimumQuantity;
     public $enforceMinQtyInternally;
+    public $maximumQuantity;
     public $softDescriptor;
     public $isFulfillable;
     public $pricesIncludeTax;
@@ -169,8 +172,10 @@ class KitItem extends Record {
         "revenueRecognitionRule" => "RecordRef",
         "revRecForecastRule" => "RecordRef",
         "revenueAllocationGroup" => "RecordRef",
-        "createRevenuePlansOn" => "ItemCreateRevenuePlansOn",
+        "createRevenuePlansOn" => "RecordRef",
         "directRevenuePosting" => "boolean",
+        "contingentRevenueHandling" => "boolean",
+        "revReclassFXAccount" => "RecordRef",
         "salesTaxCode" => "RecordRef",
         "weight" => "float",
         "weightUnit" => "RecordRef",
@@ -200,6 +205,7 @@ class KitItem extends Record {
         "issueProduct" => "RecordRef",
         "minimumQuantity" => "integer",
         "enforceMinQtyInternally" => "boolean",
+        "maximumQuantity" => "integer",
         "softDescriptor" => "RecordRef",
         "isFulfillable" => "boolean",
         "pricesIncludeTax" => "boolean",

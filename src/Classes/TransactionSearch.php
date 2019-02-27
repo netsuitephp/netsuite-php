@@ -14,7 +14,7 @@
  * @license    https://raw.githubusercontent.com/ryanwinchester/netsuite-php/master/original/NetSuite%20Application%20Developer%20License%20Agreement.txt
  * @link       http://www.netsuite.com/portal/developers/resources/suitetalk-sample-applications.shtml
  *
- * generated:  2017-08-01 09:12:52 PM UTC
+ * generated:  2019-02-27 03:26:43 PM PST
  */
 
 namespace NetSuite\Classes;
@@ -30,6 +30,8 @@ class TransactionSearch extends SearchRecord {
     public $billingAddressJoin;
     public $billingTransactionJoin;
     public $binNumberJoin;
+    public $bomJoin;
+    public $bomRevisionJoin;
     public $callJoin;
     public $caseJoin;
     public $classJoin;
@@ -47,12 +49,15 @@ class TransactionSearch extends SearchRecord {
     public $fileJoin;
     public $fromLocationJoin;
     public $fulfillingTransactionJoin;
+    public $headerBillingAccountJoin;
     public $inventoryDetailJoin;
     public $itemJoin;
     public $itemNumberJoin;
     public $jobJoin;
     public $jobMainJoin;
     public $leadSourceJoin;
+    public $lineBillingAccountJoin;
+    public $lineFileJoin;
     public $locationJoin;
     public $manufacturingOperationTaskJoin;
     public $messagesJoin;
@@ -74,6 +79,7 @@ class TransactionSearch extends SearchRecord {
     public $shippingAddressJoin;
     public $subsidiaryJoin;
     public $taskJoin;
+    public $taxCodeJoin;
     public $taxDetailJoin;
     public $taxItemJoin;
     public $timeJoin;
@@ -94,6 +100,8 @@ class TransactionSearch extends SearchRecord {
         "billingAddressJoin" => "AddressSearchBasic",
         "billingTransactionJoin" => "TransactionSearchBasic",
         "binNumberJoin" => "BinSearchBasic",
+        "bomJoin" => "BomSearchBasic",
+        "bomRevisionJoin" => "BomRevisionSearchBasic",
         "callJoin" => "PhoneCallSearchBasic",
         "caseJoin" => "SupportCaseSearchBasic",
         "classJoin" => "ClassificationSearchBasic",
@@ -111,12 +119,15 @@ class TransactionSearch extends SearchRecord {
         "fileJoin" => "FileSearchBasic",
         "fromLocationJoin" => "LocationSearchBasic",
         "fulfillingTransactionJoin" => "TransactionSearchBasic",
+        "headerBillingAccountJoin" => "BillingAccountSearchBasic",
         "inventoryDetailJoin" => "InventoryDetailSearchBasic",
         "itemJoin" => "ItemSearchBasic",
         "itemNumberJoin" => "InventoryNumberSearchBasic",
         "jobJoin" => "JobSearchBasic",
         "jobMainJoin" => "JobSearchBasic",
         "leadSourceJoin" => "CampaignSearchBasic",
+        "lineBillingAccountJoin" => "BillingAccountSearchBasic",
+        "lineFileJoin" => "FileSearchBasic",
         "locationJoin" => "LocationSearchBasic",
         "manufacturingOperationTaskJoin" => "ManufacturingOperationTaskSearchBasic",
         "messagesJoin" => "MessageSearchBasic",
@@ -138,6 +149,7 @@ class TransactionSearch extends SearchRecord {
         "shippingAddressJoin" => "AddressSearchBasic",
         "subsidiaryJoin" => "SubsidiarySearchBasic",
         "taskJoin" => "TaskSearchBasic",
+        "taxCodeJoin" => "SalesTaxItemSearchBasic",
         "taxDetailJoin" => "TaxDetailSearchBasic",
         "taxItemJoin" => "SalesTaxItemSearchBasic",
         "timeJoin" => "TimeBillSearchBasic",

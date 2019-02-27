@@ -14,7 +14,7 @@
  * @license    https://raw.githubusercontent.com/ryanwinchester/netsuite-php/master/original/NetSuite%20Application%20Developer%20License%20Agreement.txt
  * @link       http://www.netsuite.com/portal/developers/resources/suitetalk-sample-applications.shtml
  *
- * generated:  2017-08-01 09:12:52 PM UTC
+ * generated:  2019-02-27 03:26:43 PM PST
  */
 
 namespace NetSuite\Classes;
@@ -111,6 +111,7 @@ class AssemblyItem extends Record {
     public $invtCountInterval;
     public $invtClassification;
     public $enforceMinQtyInternally;
+    public $maximumQuantity;
     public $softDescriptor;
     public $isSpecialWorkOrderItem;
     public $costCategory;
@@ -222,6 +223,7 @@ class AssemblyItem extends Record {
     public $pricingMatrix;
     public $memberList;
     public $accountingBookDetailList;
+    public $billOfMaterialsList;
     public $locationsList;
     public $siteCategoryList;
     public $binNumberList;
@@ -322,6 +324,7 @@ class AssemblyItem extends Record {
         "invtCountInterval" => "integer",
         "invtClassification" => "ItemInvtClassification",
         "enforceMinQtyInternally" => "boolean",
+        "maximumQuantity" => "integer",
         "softDescriptor" => "RecordRef",
         "isSpecialWorkOrderItem" => "boolean",
         "costCategory" => "RecordRef",
@@ -357,7 +360,7 @@ class AssemblyItem extends Record {
         "revenueRecognitionRule" => "RecordRef",
         "revRecForecastRule" => "RecordRef",
         "revenueAllocationGroup" => "RecordRef",
-        "createRevenuePlansOn" => "ItemCreateRevenuePlansOn",
+        "createRevenuePlansOn" => "RecordRef",
         "directRevenuePosting" => "boolean",
         "dropshipExpenseAccount" => "RecordRef",
         "preferredLocation" => "RecordRef",
@@ -433,6 +436,7 @@ class AssemblyItem extends Record {
         "pricingMatrix" => "PricingMatrix",
         "memberList" => "ItemMemberList",
         "accountingBookDetailList" => "ItemAccountingBookDetailList",
+        "billOfMaterialsList" => "AssemblyItemBillOfMaterialsList",
         "locationsList" => "InventoryItemLocationsList",
         "siteCategoryList" => "SiteCategoryList",
         "binNumberList" => "InventoryItemBinNumberList",

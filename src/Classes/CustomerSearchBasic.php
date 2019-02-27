@@ -14,7 +14,7 @@
  * @license    https://raw.githubusercontent.com/ryanwinchester/netsuite-php/master/original/NetSuite%20Application%20Developer%20License%20Agreement.txt
  * @link       http://www.netsuite.com/portal/developers/resources/suitetalk-sample-applications.shtml
  *
- * generated:  2017-08-01 09:12:52 PM UTC
+ * generated:  2019-02-27 03:26:43 PM PST
  */
 
 namespace NetSuite\Classes;
@@ -25,6 +25,8 @@ class CustomerSearchBasic extends SearchRecordBasic {
     public $addressee;
     public $addressLabel;
     public $addressPhone;
+    public $assignedSite;
+    public $assignedSiteId;
     public $attention;
     public $availableOffline;
     public $balance;
@@ -66,6 +68,8 @@ class CustomerSearchBasic extends SearchRecordBasic {
     public $dateCreated;
     public $daysOverdue;
     public $defaultOrderPriority;
+    public $defaultTaxReg;
+    public $defaultTaxRegText;
     public $depositBalance;
     public $deptBought;
     public $drAccount;
@@ -155,6 +159,8 @@ class CustomerSearchBasic extends SearchRecordBasic {
     public $shipAddress;
     public $shipComplete;
     public $shippingItem;
+    public $sourceSite;
+    public $sourceSiteId;
     public $stage;
     public $startDate;
     public $state;
@@ -176,6 +182,8 @@ class CustomerSearchBasic extends SearchRecordBasic {
         "addressee" => "SearchStringField",
         "addressLabel" => "SearchStringField",
         "addressPhone" => "SearchStringField",
+        "assignedSite" => "SearchMultiSelectField",
+        "assignedSiteId" => "SearchMultiSelectField",
         "attention" => "SearchStringField",
         "availableOffline" => "SearchBooleanField",
         "balance" => "SearchDoubleField",
@@ -217,6 +225,8 @@ class CustomerSearchBasic extends SearchRecordBasic {
         "dateCreated" => "SearchDateField",
         "daysOverdue" => "SearchLongField",
         "defaultOrderPriority" => "SearchDoubleField",
+        "defaultTaxReg" => "SearchMultiSelectField",
+        "defaultTaxRegText" => "SearchStringField",
         "depositBalance" => "SearchDoubleField",
         "deptBought" => "SearchMultiSelectField",
         "drAccount" => "SearchMultiSelectField",
@@ -306,6 +316,8 @@ class CustomerSearchBasic extends SearchRecordBasic {
         "shipAddress" => "SearchStringField",
         "shipComplete" => "SearchBooleanField",
         "shippingItem" => "SearchMultiSelectField",
+        "sourceSite" => "SearchMultiSelectField",
+        "sourceSiteId" => "SearchMultiSelectField",
         "stage" => "SearchEnumMultiSelectField",
         "startDate" => "SearchDateField",
         "state" => "SearchStringField",

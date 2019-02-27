@@ -14,7 +14,7 @@
  * @license    https://raw.githubusercontent.com/ryanwinchester/netsuite-php/master/original/NetSuite%20Application%20Developer%20License%20Agreement.txt
  * @link       http://www.netsuite.com/portal/developers/resources/suitetalk-sample-applications.shtml
  *
- * generated:  2017-08-01 09:12:52 PM UTC
+ * generated:  2019-02-27 03:26:43 PM PST
  */
 
 namespace NetSuite\Classes;
@@ -36,6 +36,7 @@ class CustomerSearch extends SearchRecord {
     public $messagesJoin;
     public $messagesFromJoin;
     public $messagesToJoin;
+    public $mseSubsidiaryJoin;
     public $opportunityJoin;
     public $originatingLeadJoin;
     public $parentCustomerJoin;
@@ -46,6 +47,7 @@ class CustomerSearch extends SearchRecord {
     public $salesRepJoin;
     public $subCustomerJoin;
     public $taskJoin;
+    public $taxRegistrationJoin;
     public $timeJoin;
     public $topLevelParentJoin;
     public $transactionJoin;
@@ -72,6 +74,7 @@ class CustomerSearch extends SearchRecord {
         "messagesJoin" => "MessageSearchBasic",
         "messagesFromJoin" => "MessageSearchBasic",
         "messagesToJoin" => "MessageSearchBasic",
+        "mseSubsidiaryJoin" => "MseSubsidiarySearchBasic",
         "opportunityJoin" => "OpportunitySearchBasic",
         "originatingLeadJoin" => "OriginatingLeadSearchBasic",
         "parentCustomerJoin" => "CustomerSearchBasic",
@@ -82,6 +85,7 @@ class CustomerSearch extends SearchRecord {
         "salesRepJoin" => "EmployeeSearchBasic",
         "subCustomerJoin" => "CustomerSearchBasic",
         "taskJoin" => "TaskSearchBasic",
+        "taxRegistrationJoin" => "EntityTaxRegistrationSearchBasic",
         "timeJoin" => "TimeBillSearchBasic",
         "topLevelParentJoin" => "CustomerSearchBasic",
         "transactionJoin" => "TransactionSearchBasic",

@@ -14,7 +14,7 @@
  * @license    https://raw.githubusercontent.com/ryanwinchester/netsuite-php/master/original/NetSuite%20Application%20Developer%20License%20Agreement.txt
  * @link       http://www.netsuite.com/portal/developers/resources/suitetalk-sample-applications.shtml
  *
- * generated:  2017-08-01 09:12:52 PM UTC
+ * generated:  2019-02-27 03:26:43 PM PST
  */
 
 namespace NetSuite\Classes;
@@ -22,12 +22,12 @@ namespace NetSuite\Classes;
 class TransactionPaymentEventType {
     static $paramtypesmap = array(
     );
-    const _authorizationRequest = "_authorizationRequest";
-    const _captureRequest = "_captureRequest";
-    const _creditRequest = "_creditRequest";
+    const _authorization = "_authorization";
+    const _captureAuthorization = "_captureAuthorization";
+    const _credit = "_credit";
     const _overrideHold = "_overrideHold";
-    const _refreshRequest = "_refreshRequest";
-    const _refundRequest = "_refundRequest";
-    const _saleRequest = "_saleRequest";
-    const _voidRequest = "_voidRequest";
+    const _refreshAuthorization = "_refreshAuthorization";
+    const _refund = "_refund";
+    const _sale = "_sale";
+    const _voidAuthorization = "_voidAuthorization";
 }

@@ -14,15 +14,18 @@
  * @license    https://raw.githubusercontent.com/ryanwinchester/netsuite-php/master/original/NetSuite%20Application%20Developer%20License%20Agreement.txt
  * @link       http://www.netsuite.com/portal/developers/resources/suitetalk-sample-applications.shtml
  *
- * generated:  2017-08-01 09:12:52 PM UTC
+ * generated:  2019-02-27 03:26:43 PM PST
  */
 
 namespace NetSuite\Classes;
 
 class ItemSearchBasic extends SearchRecordBasic {
+    public $accBookRevRecForecastRule;
     public $account;
     public $accountingBook;
     public $accountingBookAmortization;
+    public $accountingBookCreatePlansOn;
+    public $accountingBookRevRecRule;
     public $accountingBookRevRecSchedule;
     public $allowedShippingMethod;
     public $alternateDemandSourceItem;
@@ -47,6 +50,7 @@ class ItemSearchBasic extends SearchRecordBasic {
     public $component;
     public $componentOf;
     public $componentYield;
+    public $contingentRevenueHandling;
     public $copyDescription;
     public $correlatedItem;
     public $correlatedItemCorrelation;
@@ -105,6 +109,8 @@ class ItemSearchBasic extends SearchRecordBasic {
     public $giftCertMsg;
     public $giftCertOrigAmt;
     public $giftCertRecipient;
+    public $hierarchyNode;
+    public $hierarchyVersion;
     public $imageUrl;
     public $includeChildren;
     public $internalId;
@@ -168,6 +174,7 @@ class ItemSearchBasic extends SearchRecordBasic {
     public $locationRescheduleInDays;
     public $locationRescheduleOutDays;
     public $locationSafetyStockLevel;
+    public $locationStorePickupBufferStock;
     public $locationSupplyLotSizingMethod;
     public $locationSupplyTimeFence;
     public $locationSupplyType;
@@ -185,6 +192,7 @@ class ItemSearchBasic extends SearchRecordBasic {
     public $matchBillToReceipt;
     public $matrix;
     public $matrixChild;
+    public $maximumQuantity;
     public $metaTagHtml;
     public $minimumQuantity;
     public $mossApplies;
@@ -298,14 +306,18 @@ class ItemSearchBasic extends SearchRecordBasic {
     public $vsoeDelivered;
     public $vsoePermitDiscount;
     public $vsoePrice;
+    public $vsoeSopGroup;
     public $webSite;
     public $weight;
     public $yahooProductFeed;
     public $customFieldList;
     static $paramtypesmap = array(
+        "accBookRevRecForecastRule" => "SearchMultiSelectField",
         "account" => "SearchMultiSelectField",
         "accountingBook" => "SearchMultiSelectField",
         "accountingBookAmortization" => "SearchMultiSelectField",
+        "accountingBookCreatePlansOn" => "SearchMultiSelectField",
+        "accountingBookRevRecRule" => "SearchMultiSelectField",
         "accountingBookRevRecSchedule" => "SearchMultiSelectField",
         "allowedShippingMethod" => "SearchMultiSelectField",
         "alternateDemandSourceItem" => "SearchMultiSelectField",
@@ -330,6 +342,7 @@ class ItemSearchBasic extends SearchRecordBasic {
         "component" => "SearchMultiSelectField",
         "componentOf" => "SearchMultiSelectField",
         "componentYield" => "SearchDoubleField",
+        "contingentRevenueHandling" => "SearchBooleanField",
         "copyDescription" => "SearchBooleanField",
         "correlatedItem" => "SearchMultiSelectField",
         "correlatedItemCorrelation" => "SearchDoubleField",
@@ -345,7 +358,7 @@ class ItemSearchBasic extends SearchRecordBasic {
         "countryOfManufacture" => "SearchEnumMultiSelectField",
         "created" => "SearchDateField",
         "createJob" => "SearchBooleanField",
-        "createRevenuePlansOn" => "SearchEnumMultiSelectField",
+        "createRevenuePlansOn" => "SearchMultiSelectField",
         "dateViewed" => "SearchDateField",
         "daysBeforeExpiration" => "SearchDoubleField",
         "defaultReturnCost" => "SearchDoubleField",
@@ -388,6 +401,8 @@ class ItemSearchBasic extends SearchRecordBasic {
         "giftCertMsg" => "SearchStringField",
         "giftCertOrigAmt" => "SearchStringField",
         "giftCertRecipient" => "SearchStringField",
+        "hierarchyNode" => "SearchMultiSelectField",
+        "hierarchyVersion" => "SearchMultiSelectField",
         "imageUrl" => "SearchStringField",
         "includeChildren" => "SearchBooleanField",
         "internalId" => "SearchMultiSelectField",
@@ -451,6 +466,7 @@ class ItemSearchBasic extends SearchRecordBasic {
         "locationRescheduleInDays" => "SearchLongField",
         "locationRescheduleOutDays" => "SearchLongField",
         "locationSafetyStockLevel" => "SearchDoubleField",
+        "locationStorePickupBufferStock" => "SearchDoubleField",
         "locationSupplyLotSizingMethod" => "SearchEnumMultiSelectField",
         "locationSupplyTimeFence" => "SearchLongField",
         "locationSupplyType" => "SearchEnumMultiSelectField",
@@ -468,6 +484,7 @@ class ItemSearchBasic extends SearchRecordBasic {
         "matchBillToReceipt" => "SearchBooleanField",
         "matrix" => "SearchBooleanField",
         "matrixChild" => "SearchBooleanField",
+        "maximumQuantity" => "SearchLongField",
         "metaTagHtml" => "SearchStringField",
         "minimumQuantity" => "SearchLongField",
         "mossApplies" => "SearchBooleanField",
@@ -581,6 +598,7 @@ class ItemSearchBasic extends SearchRecordBasic {
         "vsoeDelivered" => "SearchBooleanField",
         "vsoePermitDiscount" => "SearchEnumMultiSelectField",
         "vsoePrice" => "SearchDoubleField",
+        "vsoeSopGroup" => "SearchEnumMultiSelectField",
         "webSite" => "SearchMultiSelectField",
         "weight" => "SearchDoubleField",
         "yahooProductFeed" => "SearchBooleanField",

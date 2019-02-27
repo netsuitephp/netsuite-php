@@ -14,7 +14,7 @@
  * @license    https://raw.githubusercontent.com/ryanwinchester/netsuite-php/master/original/NetSuite%20Application%20Developer%20License%20Agreement.txt
  * @link       http://www.netsuite.com/portal/developers/resources/suitetalk-sample-applications.shtml
  *
- * generated:  2017-08-01 09:12:52 PM UTC
+ * generated:  2019-02-27 03:26:43 PM PST
  */
 
 namespace NetSuite\Classes;
@@ -40,6 +40,7 @@ class OtherChargeSaleItem extends Record {
     public $minimumQuantity;
     public $minimumQuantityUnits;
     public $enforceMinQtyInternally;
+    public $maximumQuantity;
     public $softDescriptor;
     public $isFulfillable;
     public $costCategory;
@@ -74,6 +75,8 @@ class OtherChargeSaleItem extends Record {
     public $revenueAllocationGroup;
     public $createRevenuePlansOn;
     public $directRevenuePosting;
+    public $contingentRevenueHandling;
+    public $revReclassFXAccount;
     public $subsidiaryList;
     public $itemOptionsList;
     public $matrixOptionList;
@@ -107,6 +110,7 @@ class OtherChargeSaleItem extends Record {
         "minimumQuantity" => "integer",
         "minimumQuantityUnits" => "string",
         "enforceMinQtyInternally" => "boolean",
+        "maximumQuantity" => "integer",
         "softDescriptor" => "string",
         "isFulfillable" => "boolean",
         "costCategory" => "RecordRef",
@@ -139,8 +143,10 @@ class OtherChargeSaleItem extends Record {
         "revenueRecognitionRule" => "RecordRef",
         "revRecForecastRule" => "RecordRef",
         "revenueAllocationGroup" => "RecordRef",
-        "createRevenuePlansOn" => "ItemCreateRevenuePlansOn",
+        "createRevenuePlansOn" => "RecordRef",
         "directRevenuePosting" => "boolean",
+        "contingentRevenueHandling" => "boolean",
+        "revReclassFXAccount" => "RecordRef",
         "subsidiaryList" => "RecordRefList",
         "itemOptionsList" => "ItemOptionsList",
         "matrixOptionList" => "MatrixOptionList",

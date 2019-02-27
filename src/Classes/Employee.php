@@ -14,7 +14,7 @@
  * @license    https://raw.githubusercontent.com/ryanwinchester/netsuite-php/master/original/NetSuite%20Application%20Developer%20License%20Agreement.txt
  * @link       http://www.netsuite.com/portal/developers/resources/suitetalk-sample-applications.shtml
  *
- * generated:  2017-08-01 09:12:52 PM UTC
+ * generated:  2019-02-27 03:26:43 PM PST
  */
 
 namespace NetSuite\Classes;
@@ -46,6 +46,9 @@ class Employee extends Record {
     public $subsidiary;
     public $billingClass;
     public $accountNumber;
+    public $compensationCurrency;
+    public $baseWageType;
+    public $baseWage;
     public $comments;
     public $globalSubscriptionStatus;
     public $image;
@@ -74,6 +77,10 @@ class Employee extends Record {
     public $birthDate;
     public $hireDate;
     public $releaseDate;
+    public $terminationDetails;
+    public $terminationReason;
+    public $terminationRegretted;
+    public $terminationCategory;
     public $timeOffPlan;
     public $lastReviewDate;
     public $nextReviewDate;
@@ -142,6 +149,9 @@ class Employee extends Record {
         "subsidiary" => "RecordRef",
         "billingClass" => "RecordRef",
         "accountNumber" => "string",
+        "compensationCurrency" => "EmployeeCompensationCurrency",
+        "baseWageType" => "EmployeeBaseWageType",
+        "baseWage" => "float",
         "comments" => "string",
         "globalSubscriptionStatus" => "GlobalSubscriptionStatus",
         "image" => "RecordRef",
@@ -170,6 +180,10 @@ class Employee extends Record {
         "birthDate" => "dateTime",
         "hireDate" => "dateTime",
         "releaseDate" => "dateTime",
+        "terminationDetails" => "string",
+        "terminationReason" => "RecordRef",
+        "terminationRegretted" => "EmployeeTerminationRegretted",
+        "terminationCategory" => "EmployeeTerminationCategory",
         "timeOffPlan" => "RecordRef",
         "lastReviewDate" => "dateTime",
         "nextReviewDate" => "dateTime",

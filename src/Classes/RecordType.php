@@ -14,7 +14,7 @@
  * @license    https://raw.githubusercontent.com/ryanwinchester/netsuite-php/master/original/NetSuite%20Application%20Developer%20License%20Agreement.txt
  * @link       http://www.netsuite.com/portal/developers/resources/suitetalk-sample-applications.shtml
  *
- * generated:  2017-08-01 09:12:52 PM UTC
+ * generated:  2019-02-27 03:26:43 PM PST
  */
 
 namespace NetSuite\Classes;
@@ -24,6 +24,7 @@ class RecordType {
     );
     const account = "account";
     const accountingPeriod = "accountingPeriod";
+    const advInterCompanyJournalEntry = "advInterCompanyJournalEntry";
     const assemblyBuild = "assemblyBuild";
     const assemblyUnbuild = "assemblyUnbuild";
     const assemblyItem = "assemblyItem";
@@ -32,6 +33,8 @@ class RecordType {
     const bin = "bin";
     const binTransfer = "binTransfer";
     const binWorksheet = "binWorksheet";
+    const bom = "bom";
+    const bomRevision = "bomRevision";
     const budget = "budget";
     const budgetCategory = "budgetCategory";
     const calendarEvent = "calendarEvent";
@@ -88,9 +91,12 @@ class RecordType {
     const fairValuePrice = "fairValuePrice";
     const file = "file";
     const folder = "folder";
+    const generalToken = "generalToken";
     const giftCertificate = "giftCertificate";
     const giftCertificateItem = "giftCertificateItem";
     const globalAccountMapping = "globalAccountMapping";
+    const hcmJob = "hcmJob";
+    const inboundShipment = "inboundShipment";
     const interCompanyJournalEntry = "interCompanyJournalEntry";
     const interCompanyTransferOrder = "interCompanyTransferOrder";
     const inventoryAdjustment = "inventoryAdjustment";
@@ -138,7 +144,10 @@ class RecordType {
     const otherNameCategory = "otherNameCategory";
     const partner = "partner";
     const partnerCategory = "partnerCategory";
+    const paycheck = "paycheck";
     const paycheckJournal = "paycheckJournal";
+    const paymentCard = "paymentCard";
+    const paymentCardToken = "paymentCardToken";
     const paymentItem = "paymentItem";
     const paymentMethod = "paymentMethod";
     const payrollItem = "payrollItem";
