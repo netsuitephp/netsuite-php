@@ -14,7 +14,7 @@
  * @license    https://raw.githubusercontent.com/ryanwinchester/netsuite-php/master/original/NetSuite%20Application%20Developer%20License%20Agreement.txt
  * @link       http://www.netsuite.com/portal/developers/resources/suitetalk-sample-applications.shtml
  *
- * generated:  2017-08-01 09:12:52 PM UTC
+ * generated:  2019-02-27 03:26:43 PM PST
  */
 
 namespace NetSuite\Classes;
@@ -44,6 +44,7 @@ class OtherChargeResaleItem extends Record {
     public $issueProduct;
     public $billingSchedule;
     public $deferredRevenueAccount;
+    public $intercoDefRevAccount;
     public $revRecSchedule;
     public $deferralAccount;
     public $amortizationTemplate;
@@ -54,10 +55,13 @@ class OtherChargeResaleItem extends Record {
     public $revenueAllocationGroup;
     public $createRevenuePlansOn;
     public $directRevenuePosting;
+    public $contingentRevenueHandling;
+    public $revReclassFXAccount;
     public $amortizationPeriod;
     public $minimumQuantity;
     public $minimumQuantityUnits;
     public $enforceMinQtyInternally;
+    public $maximumQuantity;
     public $softDescriptor;
     public $isFulfillable;
     public $generateAccruals;
@@ -134,6 +138,7 @@ class OtherChargeResaleItem extends Record {
         "issueProduct" => "RecordRef",
         "billingSchedule" => "RecordRef",
         "deferredRevenueAccount" => "RecordRef",
+        "intercoDefRevAccount" => "RecordRef",
         "revRecSchedule" => "RecordRef",
         "deferralAccount" => "RecordRef",
         "amortizationTemplate" => "RecordRef",
@@ -142,12 +147,15 @@ class OtherChargeResaleItem extends Record {
         "revenueRecognitionRule" => "RecordRef",
         "revRecForecastRule" => "RecordRef",
         "revenueAllocationGroup" => "RecordRef",
-        "createRevenuePlansOn" => "ItemCreateRevenuePlansOn",
+        "createRevenuePlansOn" => "RecordRef",
         "directRevenuePosting" => "boolean",
+        "contingentRevenueHandling" => "boolean",
+        "revReclassFXAccount" => "RecordRef",
         "amortizationPeriod" => "integer",
         "minimumQuantity" => "integer",
         "minimumQuantityUnits" => "string",
         "enforceMinQtyInternally" => "boolean",
+        "maximumQuantity" => "integer",
         "softDescriptor" => "string",
         "isFulfillable" => "boolean",
         "generateAccruals" => "boolean",

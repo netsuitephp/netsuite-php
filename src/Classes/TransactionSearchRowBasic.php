@@ -14,7 +14,7 @@
  * @license    https://raw.githubusercontent.com/ryanwinchester/netsuite-php/master/original/NetSuite%20Application%20Developer%20License%20Agreement.txt
  * @link       http://www.netsuite.com/portal/developers/resources/suitetalk-sample-applications.shtml
  *
- * generated:  2017-08-01 09:12:52 PM UTC
+ * generated:  2019-02-27 03:26:43 PM PST
  */
 
 namespace NetSuite\Classes;
@@ -23,6 +23,7 @@ class TransactionSearchRowBasic extends SearchRowBasic {
     public $abbrev;
     public $account;
     public $accountType;
+    public $acctCorpCardExp;
     public $actualShipDate;
     public $altSalesAmount;
     public $altSalesNetAmount;
@@ -174,6 +175,8 @@ class TransactionSearchRowBasic extends SearchRowBasic {
     public $intercoStatus;
     public $intercoTransaction;
     public $internalId;
+    public $inventoryLocation;
+    public $inventorySubsidiary;
     public $inVsoeBundle;
     public $isAllocation;
     public $isBackflush;
@@ -184,6 +187,7 @@ class TransactionSearchRowBasic extends SearchRowBasic {
     public $isInsideDelivery;
     public $isInsidePickup;
     public $isIntercompanyAdjustment;
+    public $isInTransitPayment;
     public $isMultiShipTo;
     public $isReversal;
     public $isRevRecTransaction;
@@ -371,6 +375,7 @@ class TransactionSearchRowBasic extends SearchRowBasic {
         "abbrev" => "SearchColumnStringField[]",
         "account" => "SearchColumnSelectField[]",
         "accountType" => "SearchColumnEnumSelectField[]",
+        "acctCorpCardExp" => "SearchColumnSelectField[]",
         "actualShipDate" => "SearchColumnDateField[]",
         "altSalesAmount" => "SearchColumnDoubleField[]",
         "altSalesNetAmount" => "SearchColumnDoubleField[]",
@@ -522,6 +527,8 @@ class TransactionSearchRowBasic extends SearchRowBasic {
         "intercoStatus" => "SearchColumnEnumSelectField[]",
         "intercoTransaction" => "SearchColumnStringField[]",
         "internalId" => "SearchColumnSelectField[]",
+        "inventoryLocation" => "SearchColumnSelectField[]",
+        "inventorySubsidiary" => "SearchColumnSelectField[]",
         "inVsoeBundle" => "SearchColumnBooleanField[]",
         "isAllocation" => "SearchColumnBooleanField[]",
         "isBackflush" => "SearchColumnBooleanField[]",
@@ -532,6 +539,7 @@ class TransactionSearchRowBasic extends SearchRowBasic {
         "isInsideDelivery" => "SearchColumnBooleanField[]",
         "isInsidePickup" => "SearchColumnBooleanField[]",
         "isIntercompanyAdjustment" => "SearchColumnBooleanField[]",
+        "isInTransitPayment" => "SearchColumnBooleanField[]",
         "isMultiShipTo" => "SearchColumnBooleanField[]",
         "isReversal" => "SearchColumnBooleanField[]",
         "isRevRecTransaction" => "SearchColumnBooleanField[]",

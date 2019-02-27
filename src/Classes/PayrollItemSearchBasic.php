@@ -14,17 +14,17 @@
  * @license    https://raw.githubusercontent.com/ryanwinchester/netsuite-php/master/original/NetSuite%20Application%20Developer%20License%20Agreement.txt
  * @link       http://www.netsuite.com/portal/developers/resources/suitetalk-sample-applications.shtml
  *
- * generated:  2017-08-01 09:12:52 PM UTC
+ * generated:  2019-02-27 03:26:43 PM PST
  */
 
 namespace NetSuite\Classes;
 
 class PayrollItemSearchBasic extends SearchRecordBasic {
+    public $expenseAccount;
     public $externalId;
     public $externalIdString;
     public $internalId;
     public $internalIdNumber;
-    public $expenseAccount;
     public $itemTypeNoHierarchy;
     public $liabilityAccount;
     public $name;
@@ -32,11 +32,11 @@ class PayrollItemSearchBasic extends SearchRecordBasic {
     public $vendor;
     public $customFieldList;
     static $paramtypesmap = array(
+        "expenseAccount" => "SearchMultiSelectField",
         "externalId" => "SearchMultiSelectField",
         "externalIdString" => "SearchStringField",
         "internalId" => "SearchMultiSelectField",
         "internalIdNumber" => "SearchLongField",
-        "expenseAccount" => "SearchMultiSelectField",
         "itemTypeNoHierarchy" => "SearchEnumMultiSelectField",
         "liabilityAccount" => "SearchMultiSelectField",
         "name" => "SearchStringField",

@@ -14,7 +14,7 @@
  * @license    https://raw.githubusercontent.com/ryanwinchester/netsuite-php/master/original/NetSuite%20Application%20Developer%20License%20Agreement.txt
  * @link       http://www.netsuite.com/portal/developers/resources/suitetalk-sample-applications.shtml
  *
- * generated:  2017-08-01 09:12:52 PM UTC
+ * generated:  2019-02-27 03:26:43 PM PST
  */
 
 namespace NetSuite\Classes;
@@ -23,6 +23,7 @@ class TransactionApprovalStatus {
     static $paramtypesmap = array(
     );
     const _approved = "_approved";
+    const _open = "_open";
     const _pendingApproval = "_pendingApproval";
     const _rejected = "_rejected";
 }

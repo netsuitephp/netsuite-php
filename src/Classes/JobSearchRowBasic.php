@@ -14,7 +14,7 @@
  * @license    https://raw.githubusercontent.com/ryanwinchester/netsuite-php/master/original/NetSuite%20Application%20Developer%20License%20Agreement.txt
  * @link       http://www.netsuite.com/portal/developers/resources/suitetalk-sample-applications.shtml
  *
- * generated:  2017-08-01 09:12:52 PM UTC
+ * generated:  2019-02-27 03:26:43 PM PST
  */
 
 namespace NetSuite\Classes;
@@ -62,6 +62,7 @@ class JobSearchRowBasic extends SearchRowBasic {
     public $countryCode;
     public $customer;
     public $dateCreated;
+    public $defaultTaxReg;
     public $email;
     public $endDate;
     public $entityId;
@@ -174,6 +175,7 @@ class JobSearchRowBasic extends SearchRowBasic {
         "countryCode" => "SearchColumnStringField[]",
         "customer" => "SearchColumnSelectField[]",
         "dateCreated" => "SearchColumnDateField[]",
+        "defaultTaxReg" => "SearchColumnStringField[]",
         "email" => "SearchColumnStringField[]",
         "endDate" => "SearchColumnDateField[]",
         "entityId" => "SearchColumnStringField[]",

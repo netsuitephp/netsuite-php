@@ -14,7 +14,7 @@
  * @license    https://raw.githubusercontent.com/ryanwinchester/netsuite-php/master/original/NetSuite%20Application%20Developer%20License%20Agreement.txt
  * @link       http://www.netsuite.com/portal/developers/resources/suitetalk-sample-applications.shtml
  *
- * generated:  2017-08-01 09:12:52 PM UTC
+ * generated:  2019-02-27 03:26:43 PM PST
  */
 
 namespace NetSuite\Classes;
@@ -25,8 +25,8 @@ class ChargeSearchBasic extends SearchRecordBasic {
     public $billingItem;
     public $billTo;
     public $chargeDate;
-    public $class;
     public $chargeType;
+    public $class;
     public $createdDate;
     public $currency;
     public $department;
@@ -53,8 +53,8 @@ class ChargeSearchBasic extends SearchRecordBasic {
         "billingItem" => "SearchMultiSelectField",
         "billTo" => "SearchMultiSelectField",
         "chargeDate" => "SearchDateField",
-        "class" => "SearchMultiSelectField",
         "chargeType" => "SearchMultiSelectField",
+        "class" => "SearchMultiSelectField",
         "createdDate" => "SearchDateField",
         "currency" => "SearchMultiSelectField",
         "department" => "SearchMultiSelectField",

@@ -14,7 +14,7 @@
  * @license    https://raw.githubusercontent.com/ryanwinchester/netsuite-php/master/original/NetSuite%20Application%20Developer%20License%20Agreement.txt
  * @link       http://www.netsuite.com/portal/developers/resources/suitetalk-sample-applications.shtml
  *
- * generated:  2017-08-01 09:12:52 PM UTC
+ * generated:  2019-02-27 03:26:43 PM PST
  */
 
 namespace NetSuite\Classes;
@@ -33,6 +33,7 @@ class AssemblyBuild extends Record {
     public $quantity;
     public $units;
     public $total;
+    public $billOfMaterials;
     public $inventoryDetail;
     public $serialNumbers;
     public $binNumbers;
@@ -41,6 +42,7 @@ class AssemblyBuild extends Record {
     public $class;
     public $location;
     public $revision;
+    public $billOfMaterialsRevision;
     public $memo;
     public $componentList;
     public $accountingBookDetailList;
@@ -61,6 +63,7 @@ class AssemblyBuild extends Record {
         "quantity" => "float",
         "units" => "RecordRef",
         "total" => "float",
+        "billOfMaterials" => "RecordRef",
         "inventoryDetail" => "InventoryDetail",
         "serialNumbers" => "string",
         "binNumbers" => "string",
@@ -69,6 +72,7 @@ class AssemblyBuild extends Record {
         "class" => "RecordRef",
         "location" => "RecordRef",
         "revision" => "RecordRef",
+        "billOfMaterialsRevision" => "RecordRef",
         "memo" => "string",
         "componentList" => "AssemblyComponentList",
         "accountingBookDetailList" => "AccountingBookDetailList",

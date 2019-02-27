@@ -14,18 +14,18 @@
  * @license    https://raw.githubusercontent.com/ryanwinchester/netsuite-php/master/original/NetSuite%20Application%20Developer%20License%20Agreement.txt
  * @link       http://www.netsuite.com/portal/developers/resources/suitetalk-sample-applications.shtml
  *
- * generated:  2017-08-01 09:12:52 PM UTC
+ * generated:  2019-02-27 03:26:43 PM PST
  */
 
 namespace NetSuite\Classes;
 
 class ManufacturingRoutingSearchRowBasic extends SearchRowBasic {
     public $autoCalculateLag;
+    public $billOfMaterials;
     public $externalId;
     public $internalId;
     public $isDefault;
     public $isInactive;
-    public $subsidiary;
     public $item;
     public $lagAmount;
     public $lagType;
@@ -40,14 +40,15 @@ class ManufacturingRoutingSearchRowBasic extends SearchRowBasic {
     public $runRate;
     public $sequence;
     public $setupTime;
+    public $subsidiary;
     public $customFieldList;
     static $paramtypesmap = array(
         "autoCalculateLag" => "SearchColumnBooleanField[]",
+        "billOfMaterials" => "SearchColumnSelectField[]",
         "externalId" => "SearchColumnSelectField[]",
         "internalId" => "SearchColumnSelectField[]",
         "isDefault" => "SearchColumnBooleanField[]",
         "isInactive" => "SearchColumnBooleanField[]",
-        "subsidiary" => "SearchColumnSelectField[]",
         "item" => "SearchColumnSelectField[]",
         "lagAmount" => "SearchColumnDoubleField[]",
         "lagType" => "SearchColumnEnumSelectField[]",
@@ -62,6 +63,7 @@ class ManufacturingRoutingSearchRowBasic extends SearchRowBasic {
         "runRate" => "SearchColumnDoubleField[]",
         "sequence" => "SearchColumnLongField[]",
         "setupTime" => "SearchColumnDoubleField[]",
+        "subsidiary" => "SearchColumnSelectField[]",
         "customFieldList" => "SearchColumnCustomFieldList",
     );
 }

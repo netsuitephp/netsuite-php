@@ -14,14 +14,20 @@
  * @license    https://raw.githubusercontent.com/ryanwinchester/netsuite-php/master/original/NetSuite%20Application%20Developer%20License%20Agreement.txt
  * @link       http://www.netsuite.com/portal/developers/resources/suitetalk-sample-applications.shtml
  *
- * generated:  2017-08-01 09:12:52 PM UTC
+ * generated:  2019-02-27 03:26:43 PM PST
  */
 
 namespace NetSuite\Classes;
 
 class UsageSearchRow extends SearchRow {
     public $basic;
+    public $customerJoin;
+    public $itemJoin;
+    public $subscriptionPlanJoin;
     static $paramtypesmap = array(
         "basic" => "UsageSearchRowBasic",
+        "customerJoin" => "CustomerSearchRowBasic",
+        "itemJoin" => "ItemSearchRowBasic",
+        "subscriptionPlanJoin" => "ItemSearchRowBasic",
     );
 }

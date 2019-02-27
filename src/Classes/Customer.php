@@ -14,7 +14,7 @@
  * @license    https://raw.githubusercontent.com/ryanwinchester/netsuite-php/master/original/NetSuite%20Application%20Developer%20License%20Agreement.txt
  * @link       http://www.netsuite.com/portal/developers/resources/suitetalk-sample-applications.shtml
  *
- * generated:  2017-08-01 09:12:52 PM UTC
+ * generated:  2019-02-27 03:26:43 PM PST
  */
 
 namespace NetSuite\Classes;
@@ -108,10 +108,12 @@ class Customer extends Record {
     public $estimatedBudget;
     public $accessRole;
     public $sendEmail;
+    public $assignedWebSite;
     public $password;
     public $password2;
     public $requirePwdChange;
     public $campaignCategory;
+    public $sourceWebSite;
     public $leadSource;
     public $receivablesAccount;
     public $drAccount;
@@ -134,6 +136,7 @@ class Customer extends Record {
     public $emailTransactions;
     public $printTransactions;
     public $faxTransactions;
+    public $defaultTaxReg;
     public $syncPartnerTeams;
     public $isBudgetApproved;
     public $globalSubscriptionStatus;
@@ -150,6 +153,7 @@ class Customer extends Record {
     public $partnersList;
     public $groupPricingList;
     public $itemPricingList;
+    public $taxRegistrationList;
     public $customFieldList;
     public $internalId;
     public $externalId;
@@ -242,10 +246,12 @@ class Customer extends Record {
         "estimatedBudget" => "float",
         "accessRole" => "RecordRef",
         "sendEmail" => "boolean",
+        "assignedWebSite" => "RecordRef",
         "password" => "string",
         "password2" => "string",
         "requirePwdChange" => "boolean",
         "campaignCategory" => "RecordRef",
+        "sourceWebSite" => "RecordRef",
         "leadSource" => "RecordRef",
         "receivablesAccount" => "RecordRef",
         "drAccount" => "RecordRef",
@@ -268,6 +274,7 @@ class Customer extends Record {
         "emailTransactions" => "boolean",
         "printTransactions" => "boolean",
         "faxTransactions" => "boolean",
+        "defaultTaxReg" => "RecordRef",
         "syncPartnerTeams" => "boolean",
         "isBudgetApproved" => "boolean",
         "globalSubscriptionStatus" => "GlobalSubscriptionStatus",
@@ -284,6 +291,7 @@ class Customer extends Record {
         "partnersList" => "CustomerPartnersList",
         "groupPricingList" => "CustomerGroupPricingList",
         "itemPricingList" => "CustomerItemPricingList",
+        "taxRegistrationList" => "CustomerTaxRegistrationList",
         "customFieldList" => "CustomFieldList",
         "internalId" => "string",
         "externalId" => "string",

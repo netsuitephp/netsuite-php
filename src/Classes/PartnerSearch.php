@@ -14,7 +14,7 @@
  * @license    https://raw.githubusercontent.com/ryanwinchester/netsuite-php/master/original/NetSuite%20Application%20Developer%20License%20Agreement.txt
  * @link       http://www.netsuite.com/portal/developers/resources/suitetalk-sample-applications.shtml
  *
- * generated:  2017-08-01 09:12:52 PM UTC
+ * generated:  2019-02-27 03:26:43 PM PST
  */
 
 namespace NetSuite\Classes;
@@ -30,6 +30,7 @@ class PartnerSearch extends SearchRecord {
     public $messagesFromJoin;
     public $messagesToJoin;
     public $opportunityJoin;
+    public $taxRegistrationJoin;
     public $transactionJoin;
     public $userJoin;
     public $userNotesJoin;
@@ -45,6 +46,7 @@ class PartnerSearch extends SearchRecord {
         "messagesFromJoin" => "MessageSearchBasic",
         "messagesToJoin" => "MessageSearchBasic",
         "opportunityJoin" => "OpportunitySearchBasic",
+        "taxRegistrationJoin" => "EntityTaxRegistrationSearchBasic",
         "transactionJoin" => "TransactionSearchBasic",
         "userJoin" => "EmployeeSearchBasic",
         "userNotesJoin" => "NoteSearchBasic",

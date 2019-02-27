@@ -14,7 +14,7 @@
  * @license    https://raw.githubusercontent.com/ryanwinchester/netsuite-php/master/original/NetSuite%20Application%20Developer%20License%20Agreement.txt
  * @link       http://www.netsuite.com/portal/developers/resources/suitetalk-sample-applications.shtml
  *
- * generated:  2017-08-01 09:12:52 PM UTC
+ * generated:  2019-02-27 03:26:43 PM PST
  */
 
 namespace NetSuite\Classes;
@@ -22,8 +22,11 @@ namespace NetSuite\Classes;
 class ChargeSearch extends SearchRecord {
     public $basic;
     public $billingAccountJoin;
+    public $billingScheduleJoin;
     public $chargeEmployeeJoin;
+    public $customerJoin;
     public $invoiceJoin;
+    public $itemJoin;
     public $jobJoin;
     public $salesOrderJoin;
     public $timeJoin;
@@ -33,8 +36,11 @@ class ChargeSearch extends SearchRecord {
     static $paramtypesmap = array(
         "basic" => "ChargeSearchBasic",
         "billingAccountJoin" => "BillingAccountSearchBasic",
+        "billingScheduleJoin" => "BillingScheduleSearchBasic",
         "chargeEmployeeJoin" => "EmployeeSearchBasic",
+        "customerJoin" => "CustomerSearchBasic",
         "invoiceJoin" => "TransactionSearchBasic",
+        "itemJoin" => "ItemSearchBasic",
         "jobJoin" => "JobSearchBasic",
         "salesOrderJoin" => "TransactionSearchBasic",
         "timeJoin" => "TimeBillSearchBasic",

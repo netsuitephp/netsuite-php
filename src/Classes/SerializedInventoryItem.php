@@ -14,7 +14,7 @@
  * @license    https://raw.githubusercontent.com/ryanwinchester/netsuite-php/master/original/NetSuite%20Application%20Developer%20License%20Agreement.txt
  * @link       http://www.netsuite.com/portal/developers/resources/suitetalk-sample-applications.shtml
  *
- * generated:  2017-08-01 09:12:52 PM UTC
+ * generated:  2019-02-27 03:26:43 PM PST
  */
 
 namespace NetSuite\Classes;
@@ -122,6 +122,7 @@ class SerializedInventoryItem extends Record {
     public $preferenceCriterion;
     public $minimumQuantity;
     public $enforceMinQtyInternally;
+    public $maximumQuantity;
     public $shipPackage;
     public $shipIndividually;
     public $softDescriptor;
@@ -223,6 +224,7 @@ class SerializedInventoryItem extends Record {
     public $matrixOptionList;
     public $itemVendorList;
     public $pricingMatrix;
+    public $hierarchyVersionsList;
     public $accountingBookDetailList;
     public $itemNumberOptionsList;
     public $numbersList;
@@ -282,7 +284,7 @@ class SerializedInventoryItem extends Record {
         "revenueRecognitionRule" => "RecordRef",
         "revRecForecastRule" => "RecordRef",
         "revenueAllocationGroup" => "RecordRef",
-        "createRevenuePlansOn" => "ItemCreateRevenuePlansOn",
+        "createRevenuePlansOn" => "RecordRef",
         "directRevenuePosting" => "boolean",
         "assetAccount" => "RecordRef",
         "matchBillToReceipt" => "boolean",
@@ -337,6 +339,7 @@ class SerializedInventoryItem extends Record {
         "preferenceCriterion" => "ItemPreferenceCriterion",
         "minimumQuantity" => "integer",
         "enforceMinQtyInternally" => "boolean",
+        "maximumQuantity" => "integer",
         "shipPackage" => "RecordRef",
         "shipIndividually" => "boolean",
         "softDescriptor" => "RecordRef",
@@ -438,6 +441,7 @@ class SerializedInventoryItem extends Record {
         "matrixOptionList" => "MatrixOptionList",
         "itemVendorList" => "ItemVendorList",
         "pricingMatrix" => "PricingMatrix",
+        "hierarchyVersionsList" => "SerializedInventoryItemHierarchyVersionsList",
         "accountingBookDetailList" => "ItemAccountingBookDetailList",
         "itemNumberOptionsList" => "RecordRefList",
         "numbersList" => "SerializedInventoryItemNumbersList",

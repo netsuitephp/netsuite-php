@@ -14,7 +14,7 @@
  * @license    https://raw.githubusercontent.com/ryanwinchester/netsuite-php/master/original/NetSuite%20Application%20Developer%20License%20Agreement.txt
  * @link       http://www.netsuite.com/portal/developers/resources/suitetalk-sample-applications.shtml
  *
- * generated:  2017-08-01 09:12:52 PM UTC
+ * generated:  2019-02-27 03:26:43 PM PST
  */
 
 namespace NetSuite\Classes;
@@ -28,6 +28,8 @@ class SearchRecordType {
     const billingAccount = "billingAccount";
     const billingSchedule = "billingSchedule";
     const bin = "bin";
+    const bom = "bom";
+    const bomRevision = "bomRevision";
     const budget = "budget";
     const calendarEvent = "calendarEvent";
     const campaign = "campaign";
@@ -55,6 +57,8 @@ class SearchRecordType {
     const folder = "folder";
     const giftCertificate = "giftCertificate";
     const globalAccountMapping = "globalAccountMapping";
+    const hcmJob = "hcmJob";
+    const inboundShipment = "inboundShipment";
     const inventoryNumber = "inventoryNumber";
     const item = "item";
     const itemAccountMapping = "itemAccountMapping";
@@ -77,6 +81,7 @@ class SearchRecordType {
     const otherNameCategory = "otherNameCategory";
     const partner = "partner";
     const partnerCategory = "partnerCategory";
+    const paycheck = "paycheck";
     const paymentMethod = "paymentMethod";
     const payrollItem = "payrollItem";
     const phoneCall = "phoneCall";

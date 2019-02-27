@@ -14,7 +14,7 @@
  * @license    https://raw.githubusercontent.com/ryanwinchester/netsuite-php/master/original/NetSuite%20Application%20Developer%20License%20Agreement.txt
  * @link       http://www.netsuite.com/portal/developers/resources/suitetalk-sample-applications.shtml
  *
- * generated:  2017-08-01 09:12:52 PM UTC
+ * generated:  2019-02-27 03:26:43 PM PST
  */
 
 namespace NetSuite\Classes;
@@ -22,6 +22,7 @@ namespace NetSuite\Classes;
 class DeletedRecordType {
     static $paramtypesmap = array(
     );
+    const advInterCompanyJournalEntry = "advInterCompanyJournalEntry";
     const assemblyBuild = "assemblyBuild";
     const assemblyItem = "assemblyItem";
     const assemblyUnbuild = "assemblyUnbuild";
@@ -29,6 +30,8 @@ class DeletedRecordType {
     const bin = "bin";
     const binTransfer = "binTransfer";
     const binWorksheet = "binWorksheet";
+    const bom = "bom";
+    const bomRevision = "bomRevision";
     const calendarEvent = "calendarEvent";
     const campaign = "campaign";
     const cashRefund = "cashRefund";
@@ -101,6 +104,7 @@ class DeletedRecordType {
     const otherChargeSaleItem = "otherChargeSaleItem";
     const otherNameCategory = "otherNameCategory";
     const partner = "partner";
+    const paycheck = "paycheck";
     const paymentItem = "paymentItem";
     const paymentMethod = "paymentMethod";
     const payrollItem = "payrollItem";
