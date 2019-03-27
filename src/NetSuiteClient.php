@@ -71,7 +71,7 @@ class NetSuiteClient
             'logging'        => getenv('NETSUITE_LOGGING'),
             'log_path'       => getenv('NETSUITE_LOG_PATH'),
             // optional -------------------------------------
-            "signatureAlgorithm" => getenv('NS_HASH_TYPE'), // Defaults to 'sha256'
+            "signatureAlgorithm" => getenv('NS_HASH_TYPE') ?: 'sha256', // Defaults to 'sha256'
         );
     }
 
