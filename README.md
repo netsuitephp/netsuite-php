@@ -14,7 +14,7 @@ Require with composer:
 **NOTE: package name change**
 
 ```
-composer require "ryanwinchester/netsuite-php:2017.1.*"
+composer require "ryanwinchester/netsuite-php:2018.2.*"
 ```
 
 ## Changes in v2:
@@ -37,7 +37,7 @@ use NetSuite\NetSuiteService;
 
 $config = array(
    // required -------------------------------------
-   "endpoint" => "2017_1",
+   "endpoint" => "2018_2",
    "host"     => "https://webservices.netsuite.com",
    "email"    => "jDoe@netsuite.com",
    "password" => "mySecretPwd",
@@ -50,6 +50,17 @@ $config = array(
 );
 
 $service = new NetSuiteService($config);
+```
+
+You can alternatively place your config in a .env file or environment variables.
+Clone .env.example as .env and fill out either credential based or token based auth details and instantiate as below.
+
+```php
+require 'vendor/autoload.php';
+
+use NetSuite\NetSuiteService;
+
+$service = new NetSuiteService();
 ```
 
 #### Retreiving a customer record:
