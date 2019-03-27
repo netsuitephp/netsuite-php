@@ -42,38 +42,40 @@ class NetSuiteClient
      * @param array $options
      * @param SoapClient $client
      */
-    public function __construct($config = null, $options = array(), $client = null)
-    {
-        if ($this->config) {
-            $this->config = $config;
-        } else {
-            self::createFromEnv();
-        }
-        $options = $this->createOptions($this->config, $options);
-        $wsdl = $this->createWsdl($this->config);
-        $this->client = $client ?: new SoapClient($wsdl, $options);
-    }
+     public function __construct($config = null, $options = array(), $client = null)
+     {
+         if ($this->config) {
+             $this->config = $config;
+         } else {
+             $this->config = self::createFromEnv();
+         }
+         $options = $this->createOptions($this->config, $options);
+         $wsdl = $this->createWsdl($this->config);
+         $this->client = $client ?: new SoapClient($wsdl, $options);
+     }
 
-    public static function createFromEnv($options = array(), $client = null)
-    {
-        $this->config = array(
-            "endpoint"       => getenv('NS_ENDPOINT') ?: '2018_2',
-            "host"           => getenv('NS_HOST') ?: 'https://webservices.sandbox.netsuite.com',
-            'email'          => getenv('NETSUITE_EMAIL'),
-            'password'       => getenv('NETSUITE_PASSWORD'),
-            'role'           => getenv('NETSUITE_ROLE') ?: '3',
-            "account"        => getenv('NS_ACCOUNT'),
-            "consumerKey"    => getenv('NS_CONSUMER_KEY'),
-            "consumerSecret" => getenv('NS_CONSUMER_SECRET'),
-            "token"          => getenv('NS_TOKEN_KEY'),
-            "tokenSecret"    => getenv('NS_TOKEN_SECRET'),
-            'app_id'         => getenv('NETSUITE_APP_ID') ?: '4AD027CA-88B3-46EC-9D3E-41C6E6A325E2',
-            'logging'        => getenv('NETSUITE_LOGGING'),
-            'log_path'       => getenv('NETSUITE_LOG_PATH'),
-            // optional -------------------------------------
-            "signatureAlgorithm" => getenv('NS_HASH_TYPE') ?: 'sha256', // Defaults to 'sha256'
-        );
-    }
+     public static function createFromEnv($options = array(), $client = null)
+     {
+         $config = array(
+             "endpoint"       => getenv('NS_ENDPOINT') ?: '2018_2',
+             "host"           => getenv('NS_HOST') ?: 'https://webservices.sandbox.netsuite.com',
+             'email'          => getenv('NETSUITE_EMAIL'),
+             'password'       => getenv('NETSUITE_PASSWORD'),
+             'role'           => getenv('NETSUITE_ROLE') ?: '3',
+             "account"        => getenv('NS_ACCOUNT'),
+             "consumerKey"    => getenv('NS_CONSUMER_KEY'),
+             "consumerSecret" => getenv('NS_CONSUMER_SECRET'),
+             "token"          => getenv('NS_TOKEN_KEY'),
+             "tokenSecret"    => getenv('NS_TOKEN_SECRET'),
+             'app_id'         => getenv('NETSUITE_APP_ID') ?: '4AD027CA-88B3-46EC-9D3E-41C6E6A325E2',
+             'logging'        => getenv('NETSUITE_LOGGING'),
+             'log_path'       => getenv('NETSUITE_LOG_PATH'),
+             // optional -------------------------------------
+             "signatureAlgorithm" => getenv('NS_HASH_TYPE') ?: 'sha256', // Defaults to 'sha256'
+         );
+
+         return $config;
+     }
 
     /**
      * Make the SOAP call!
