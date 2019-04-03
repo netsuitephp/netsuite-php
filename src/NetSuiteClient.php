@@ -57,21 +57,21 @@ class NetSuiteClient
      public static function createFromEnv($options = array(), $client = null)
      {
          $config = array(
-             "endpoint"       => getenv('NS_ENDPOINT') ?: '2018_2',
-             "host"           => getenv('NS_HOST') ?: 'https://webservices.sandbox.netsuite.com',
+             "endpoint"       => getenv('NETSUITE_ENDPOINT') ?: '2018_2',
+             "host"           => getenv('NETSUITE_HOST') ?: 'https://webservices.sandbox.netsuite.com',
              'email'          => getenv('NETSUITE_EMAIL'),
              'password'       => getenv('NETSUITE_PASSWORD'),
              'role'           => getenv('NETSUITE_ROLE') ?: '3',
-             "account"        => getenv('NS_ACCOUNT'),
-             "consumerKey"    => getenv('NS_CONSUMER_KEY'),
-             "consumerSecret" => getenv('NS_CONSUMER_SECRET'),
-             "token"          => getenv('NS_TOKEN_KEY'),
-             "tokenSecret"    => getenv('NS_TOKEN_SECRET'),
+             "account"        => getenv('NETSUITE_ACCOUNT'),
+             "consumerKey"    => getenv('NETSUITE_CONSUMER_KEY'),
+             "consumerSecret" => getenv('NETSUITE_CONSUMER_SECRET'),
+             "token"          => getenv('NETSUITE_TOKEN_KEY'),
+             "tokenSecret"    => getenv('NETSUITE_TOKEN_SECRET'),
              'app_id'         => getenv('NETSUITE_APP_ID') ?: '4AD027CA-88B3-46EC-9D3E-41C6E6A325E2',
              'logging'        => getenv('NETSUITE_LOGGING'),
              'log_path'       => getenv('NETSUITE_LOG_PATH'),
              // optional -------------------------------------
-             "signatureAlgorithm" => getenv('NS_HASH_TYPE') ?: 'sha256', // Defaults to 'sha256'
+             "signatureAlgorithm" => getenv('NETSUITE_HASH_TYPE') ?: 'sha256', // Defaults to 'sha256'
          );
 
          return $config;
