@@ -14,7 +14,7 @@
  * @license    https://raw.githubusercontent.com/ryanwinchester/netsuite-php/master/original/NetSuite%20Application%20Developer%20License%20Agreement.txt
  * @link       http://www.netsuite.com/portal/developers/resources/suitetalk-sample-applications.shtml
  *
- * generated:  2019-02-27 03:26:43 PM PST
+ * generated:  2019-06-12 10:27:00 AM PDT
  */
 
 namespace NetSuite\Classes;
@@ -67,6 +67,7 @@ class RecordType {
     const customRecord = "customRecord";
     const customRecordCustomField = "customRecordCustomField";
     const customRecordType = "customRecordType";
+    const customSegment = "customSegment";
     const customTransaction = "customTransaction";
     const customTransactionType = "customTransactionType";
     const customer = "customer";
@@ -76,6 +77,7 @@ class RecordType {
     const customerPayment = "customerPayment";
     const customerRefund = "customerRefund";
     const customerStatus = "customerStatus";
+    const customerSubsidiaryRelationship = "customerSubsidiaryRelationship";
     const deposit = "deposit";
     const depositApplication = "depositApplication";
     const department = "department";
@@ -126,6 +128,7 @@ class RecordType {
     const lotNumberedInventoryItem = "lotNumberedInventoryItem";
     const lotNumberedAssemblyItem = "lotNumberedAssemblyItem";
     const markupItem = "markupItem";
+    const merchandiseHierarchyNode = "merchandiseHierarchyNode";
     const message = "message";
     const manufacturingCostTemplate = "manufacturingCostTemplate";
     const manufacturingOperationTask = "manufacturingOperationTask";
@@ -151,6 +154,7 @@ class RecordType {
     const paymentItem = "paymentItem";
     const paymentMethod = "paymentMethod";
     const payrollItem = "payrollItem";
+    const periodEndJournal = "periodEndJournal";
     const phoneCall = "phoneCall";
     const priceLevel = "priceLevel";
     const pricingGroup = "pricingGroup";
@@ -201,6 +205,7 @@ class RecordType {
     const vendorCredit = "vendorCredit";
     const vendorPayment = "vendorPayment";
     const vendorReturnAuthorization = "vendorReturnAuthorization";
+    const vendorSubsidiaryRelationship = "vendorSubsidiaryRelationship";
     const winLossReason = "winLossReason";
     const workOrder = "workOrder";
     const workOrderIssue = "workOrderIssue";

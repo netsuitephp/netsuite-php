@@ -14,7 +14,7 @@
  * @license    https://raw.githubusercontent.com/ryanwinchester/netsuite-php/master/original/NetSuite%20Application%20Developer%20License%20Agreement.txt
  * @link       http://www.netsuite.com/portal/developers/resources/suitetalk-sample-applications.shtml
  *
- * generated:  2019-02-27 03:26:43 PM PST
+ * generated:  2019-06-12 10:27:00 AM PDT
  */
 
 namespace NetSuite\Classes;
@@ -63,6 +63,8 @@ class EmployeeSearchRowBasic extends SearchRowBasic {
     public $country;
     public $countryCode;
     public $dateCreated;
+    public $defaultAcctCorpCardExp;
+    public $defaultExpenseReportCurrency;
     public $defaultTaxReg;
     public $department;
     public $eligibleForCommission;
@@ -73,6 +75,7 @@ class EmployeeSearchRowBasic extends SearchRowBasic {
     public $entityNumber;
     public $ethnicity;
     public $expenseLimit;
+    public $expenseReportCurrency;
     public $externalId;
     public $fax;
     public $firstName;
@@ -205,6 +208,8 @@ class EmployeeSearchRowBasic extends SearchRowBasic {
         "country" => "SearchColumnEnumSelectField[]",
         "countryCode" => "SearchColumnStringField[]",
         "dateCreated" => "SearchColumnDateField[]",
+        "defaultAcctCorpCardExp" => "SearchColumnSelectField[]",
+        "defaultExpenseReportCurrency" => "SearchColumnSelectField[]",
         "defaultTaxReg" => "SearchColumnStringField[]",
         "department" => "SearchColumnSelectField[]",
         "eligibleForCommission" => "SearchColumnBooleanField[]",
@@ -215,6 +220,7 @@ class EmployeeSearchRowBasic extends SearchRowBasic {
         "entityNumber" => "SearchColumnLongField[]",
         "ethnicity" => "SearchColumnSelectField[]",
         "expenseLimit" => "SearchColumnDoubleField[]",
+        "expenseReportCurrency" => "SearchColumnSelectField[]",
         "externalId" => "SearchColumnSelectField[]",
         "fax" => "SearchColumnStringField[]",
         "firstName" => "SearchColumnStringField[]",

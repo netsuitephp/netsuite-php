@@ -14,7 +14,7 @@
  * @license    https://raw.githubusercontent.com/ryanwinchester/netsuite-php/master/original/NetSuite%20Application%20Developer%20License%20Agreement.txt
  * @link       http://www.netsuite.com/portal/developers/resources/suitetalk-sample-applications.shtml
  *
- * generated:  2019-02-27 03:26:43 PM PST
+ * generated:  2019-06-12 10:27:00 AM PDT
  */
 
 namespace NetSuite\Classes;
@@ -48,6 +48,8 @@ class EmployeeSearchBasic extends SearchRecordBasic {
     public $county;
     public $dateCreated;
     public $deduction;
+    public $defaultAcctCorpCardExp;
+    public $defaultExpenseReportCurrency;
     public $defaultTaxReg;
     public $defaultTaxRegText;
     public $department;
@@ -61,6 +63,7 @@ class EmployeeSearchBasic extends SearchRecordBasic {
     public $entityId;
     public $ethnicity;
     public $expenseLimit;
+    public $expenseReportCurrency;
     public $externalId;
     public $externalIdString;
     public $fax;
@@ -165,6 +168,8 @@ class EmployeeSearchBasic extends SearchRecordBasic {
         "county" => "SearchStringField",
         "dateCreated" => "SearchDateField",
         "deduction" => "SearchMultiSelectField",
+        "defaultAcctCorpCardExp" => "SearchMultiSelectField",
+        "defaultExpenseReportCurrency" => "SearchMultiSelectField",
         "defaultTaxReg" => "SearchMultiSelectField",
         "defaultTaxRegText" => "SearchStringField",
         "department" => "SearchMultiSelectField",
@@ -178,6 +183,7 @@ class EmployeeSearchBasic extends SearchRecordBasic {
         "entityId" => "SearchStringField",
         "ethnicity" => "SearchMultiSelectField",
         "expenseLimit" => "SearchDoubleField",
+        "expenseReportCurrency" => "SearchMultiSelectField",
         "externalId" => "SearchMultiSelectField",
         "externalIdString" => "SearchStringField",
         "fax" => "SearchStringField",

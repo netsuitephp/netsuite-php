@@ -14,7 +14,7 @@
  * @license    https://raw.githubusercontent.com/ryanwinchester/netsuite-php/master/original/NetSuite%20Application%20Developer%20License%20Agreement.txt
  * @link       http://www.netsuite.com/portal/developers/resources/suitetalk-sample-applications.shtml
  *
- * generated:  2019-02-27 03:26:43 PM PST
+ * generated:  2019-06-12 10:27:00 AM PDT
  */
 
 namespace NetSuite\Classes;
@@ -33,6 +33,7 @@ class ReturnAuthorization extends Record {
     public $tranDate;
     public $tranId;
     public $entityTaxRegNum;
+    public $taxPointDate;
     public $source;
     public $department;
     public $class;
@@ -135,6 +136,7 @@ class ReturnAuthorization extends Record {
         "tranDate" => "dateTime",
         "tranId" => "string",
         "entityTaxRegNum" => "RecordRef",
+        "taxPointDate" => "dateTime",
         "source" => "string",
         "department" => "RecordRef",
         "class" => "RecordRef",

@@ -14,7 +14,7 @@
  * @license    https://raw.githubusercontent.com/ryanwinchester/netsuite-php/master/original/NetSuite%20Application%20Developer%20License%20Agreement.txt
  * @link       http://www.netsuite.com/portal/developers/resources/suitetalk-sample-applications.shtml
  *
- * generated:  2019-02-27 03:26:43 PM PST
+ * generated:  2019-06-12 10:27:00 AM PDT
  */
 
 namespace NetSuite\Classes;
@@ -36,6 +36,9 @@ class TransactionLineType {
     const _nonReimbursuableExpenseOffset = "_nonReimbursuableExpenseOffset";
     const _nonReimbursuableExpenseOriginal = "_nonReimbursuableExpenseOriginal";
     const _ownershipTransfer = "_ownershipTransfer";
+    const _personalExpensesNettingLine = "_personalExpensesNettingLine";
+    const _personalExpensesTheExpenseLine = "_personalExpensesTheExpenseLine";
+    const _pickingLine = "_pickingLine";
     const _productionPriceVariance = "_productionPriceVariance";
     const _productionQuantityVariance = "_productionQuantityVariance";
     const _purchasePriceVariance = "_purchasePriceVariance";
@@ -45,6 +48,7 @@ class TransactionLineType {
     const _scrap = "_scrap";
     const _shipping = "_shipping";
     const _snapshotQuantity = "_snapshotQuantity";
+    const _stagingLine = "_stagingLine";
     const _totalBillVariance = "_totalBillVariance";
     const _unbuildVariance = "_unbuildVariance";
     const _workInProcess = "_workInProcess";

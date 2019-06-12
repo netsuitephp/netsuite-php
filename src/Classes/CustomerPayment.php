@@ -14,7 +14,7 @@
  * @license    https://raw.githubusercontent.com/ryanwinchester/netsuite-php/master/original/NetSuite%20Application%20Developer%20License%20Agreement.txt
  * @link       http://www.netsuite.com/portal/developers/resources/suitetalk-sample-applications.shtml
  *
- * generated:  2019-02-27 03:26:43 PM PST
+ * generated:  2019-06-12 10:27:00 AM PDT
  */
 
 namespace NetSuite\Classes;
@@ -69,6 +69,17 @@ class CustomerPayment extends Record {
     public $class;
     public $department;
     public $location;
+    public $paymentOption;
+    public $inputAuthCode;
+    public $inputReferenceCode;
+    public $checkNumber;
+    public $paymentCardCsc;
+    public $paymentProcessingProfile;
+    public $handlingMode;
+    public $outputAuthCode;
+    public $outputReferenceCode;
+    public $paymentOperation;
+    public $dynamicDescriptor;
     public $status;
     public $applyList;
     public $creditList;
@@ -127,6 +138,17 @@ class CustomerPayment extends Record {
         "class" => "RecordRef",
         "department" => "RecordRef",
         "location" => "RecordRef",
+        "paymentOption" => "RecordRef",
+        "inputAuthCode" => "string",
+        "inputReferenceCode" => "string",
+        "checkNumber" => "string",
+        "paymentCardCsc" => "string",
+        "paymentProcessingProfile" => "RecordRef",
+        "handlingMode" => "CustomerPaymentHandlingMode",
+        "outputAuthCode" => "string",
+        "outputReferenceCode" => "string",
+        "paymentOperation" => "CustomerPaymentPaymentOperation",
+        "dynamicDescriptor" => "string",
         "status" => "string",
         "applyList" => "CustomerPaymentApplyList",
         "creditList" => "CustomerPaymentCreditList",
