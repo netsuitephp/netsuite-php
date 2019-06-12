@@ -14,7 +14,7 @@
  * @license    https://raw.githubusercontent.com/ryanwinchester/netsuite-php/master/original/NetSuite%20Application%20Developer%20License%20Agreement.txt
  * @link       http://www.netsuite.com/portal/developers/resources/suitetalk-sample-applications.shtml
  *
- * generated:  2019-02-27 03:26:43 PM PST
+ * generated:  2019-06-12 10:27:00 AM PDT
  */
 
 namespace NetSuite\Classes;
@@ -247,6 +247,7 @@ class TransactionSearchRowBasic extends SearchRowBasic {
     public $paymentEventType;
     public $paymentHold;
     public $paymentMethod;
+    public $paymentOption;
     public $payPalPending;
     public $payPalStatus;
     public $payPalTranId;
@@ -332,6 +333,7 @@ class TransactionSearchRowBasic extends SearchRowBasic {
     public $taxCode;
     public $taxLine;
     public $taxPeriod;
+    public $taxPointDate;
     public $taxTotal;
     public $termInMonths;
     public $terms;
@@ -599,6 +601,7 @@ class TransactionSearchRowBasic extends SearchRowBasic {
         "paymentEventType" => "SearchColumnEnumSelectField[]",
         "paymentHold" => "SearchColumnBooleanField[]",
         "paymentMethod" => "SearchColumnSelectField[]",
+        "paymentOption" => "SearchColumnSelectField[]",
         "payPalPending" => "SearchColumnBooleanField[]",
         "payPalStatus" => "SearchColumnStringField[]",
         "payPalTranId" => "SearchColumnStringField[]",
@@ -684,6 +687,7 @@ class TransactionSearchRowBasic extends SearchRowBasic {
         "taxCode" => "SearchColumnSelectField[]",
         "taxLine" => "SearchColumnBooleanField[]",
         "taxPeriod" => "SearchColumnSelectField[]",
+        "taxPointDate" => "SearchColumnDateField[]",
         "taxTotal" => "SearchColumnDoubleField[]",
         "termInMonths" => "SearchColumnLongField[]",
         "terms" => "SearchColumnSelectField[]",

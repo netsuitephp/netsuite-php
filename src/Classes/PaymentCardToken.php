@@ -14,7 +14,7 @@
  * @license    https://raw.githubusercontent.com/ryanwinchester/netsuite-php/master/original/NetSuite%20Application%20Developer%20License%20Agreement.txt
  * @link       http://www.netsuite.com/portal/developers/resources/suitetalk-sample-applications.shtml
  *
- * generated:  2019-02-27 03:26:43 PM PST
+ * generated:  2019-06-12 10:27:00 AM PDT
  */
 
 namespace NetSuite\Classes;
@@ -35,6 +35,7 @@ class PaymentCardToken extends Record {
     public $cardIssuerIdNumber;
     public $cardBrand;
     public $cardType;
+    public $cardNameOnCard;
     public $cardLastFourDigits;
     public $cardExpirationDate;
     public $internalId;
@@ -55,6 +56,7 @@ class PaymentCardToken extends Record {
         "cardIssuerIdNumber" => "string",
         "cardBrand" => "PaymentCardBrand",
         "cardType" => "PaymentCardType",
+        "cardNameOnCard" => "string",
         "cardLastFourDigits" => "string",
         "cardExpirationDate" => "dateTime",
         "internalId" => "string",

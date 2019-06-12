@@ -14,7 +14,7 @@
  * @license    https://raw.githubusercontent.com/ryanwinchester/netsuite-php/master/original/NetSuite%20Application%20Developer%20License%20Agreement.txt
  * @link       http://www.netsuite.com/portal/developers/resources/suitetalk-sample-applications.shtml
  *
- * generated:  2019-02-27 03:26:43 PM PST
+ * generated:  2019-06-12 10:27:00 AM PDT
  */
 
 namespace NetSuite\Classes;
@@ -32,6 +32,7 @@ class CashRefund extends Record {
     public $tranDate;
     public $tranId;
     public $entityTaxRegNum;
+    public $taxPointDate;
     public $source;
     public $createdFrom;
     public $postingPeriod;
@@ -69,6 +70,17 @@ class CashRefund extends Record {
     public $fax;
     public $messageSel;
     public $message;
+    public $paymentOption;
+    public $inputAuthCode;
+    public $inputReferenceCode;
+    public $checkNumber;
+    public $paymentCardCsc;
+    public $paymentProcessingProfile;
+    public $handlingMode;
+    public $outputAuthCode;
+    public $outputReferenceCode;
+    public $paymentOperation;
+    public $dynamicDescriptor;
     public $billingAddress;
     public $billAddressList;
     public $shipMethod;
@@ -142,6 +154,7 @@ class CashRefund extends Record {
         "tranDate" => "dateTime",
         "tranId" => "string",
         "entityTaxRegNum" => "RecordRef",
+        "taxPointDate" => "dateTime",
         "source" => "string",
         "createdFrom" => "RecordRef",
         "postingPeriod" => "RecordRef",
@@ -179,6 +192,17 @@ class CashRefund extends Record {
         "fax" => "string",
         "messageSel" => "RecordRef",
         "message" => "string",
+        "paymentOption" => "RecordRef",
+        "inputAuthCode" => "string",
+        "inputReferenceCode" => "string",
+        "checkNumber" => "string",
+        "paymentCardCsc" => "string",
+        "paymentProcessingProfile" => "RecordRef",
+        "handlingMode" => "CashRefundHandlingMode",
+        "outputAuthCode" => "string",
+        "outputReferenceCode" => "string",
+        "paymentOperation" => "CashRefundPaymentOperation",
+        "dynamicDescriptor" => "string",
         "billingAddress" => "Address",
         "billAddressList" => "RecordRef",
         "shipMethod" => "RecordRef",

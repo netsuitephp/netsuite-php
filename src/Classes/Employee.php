@@ -14,7 +14,7 @@
  * @license    https://raw.githubusercontent.com/ryanwinchester/netsuite-php/master/original/NetSuite%20Application%20Developer%20License%20Agreement.txt
  * @link       http://www.netsuite.com/portal/developers/resources/suitetalk-sample-applications.shtml
  *
- * generated:  2019-02-27 03:26:43 PM PST
+ * generated:  2019-06-12 10:27:00 AM PDT
  */
 
 namespace NetSuite\Classes;
@@ -95,6 +95,7 @@ class Employee extends Record {
     public $purchaseOrderApprover;
     public $workCalendar;
     public $giveAccess;
+    public $defaultExpenseReportCurrency;
     public $concurrentWebServicesUser;
     public $sendEmail;
     public $hasOfflineAccess;
@@ -106,6 +107,7 @@ class Employee extends Record {
     public $startDateTimeOffCalc;
     public $commissionPaymentPreference;
     public $billPay;
+    public $defaultAcctCorpCardExp;
     public $eligibleForCommission;
     public $subscriptionsList;
     public $ratesList;
@@ -114,6 +116,7 @@ class Employee extends Record {
     public $hrEducationList;
     public $accruedTimeList;
     public $directDepositList;
+    public $currencyList;
     public $companyContributionList;
     public $earningList;
     public $emergencyContactList;
@@ -198,6 +201,7 @@ class Employee extends Record {
         "purchaseOrderApprover" => "RecordRef",
         "workCalendar" => "RecordRef",
         "giveAccess" => "boolean",
+        "defaultExpenseReportCurrency" => "RecordRef",
         "concurrentWebServicesUser" => "boolean",
         "sendEmail" => "boolean",
         "hasOfflineAccess" => "boolean",
@@ -209,6 +213,7 @@ class Employee extends Record {
         "startDateTimeOffCalc" => "dateTime",
         "commissionPaymentPreference" => "EmployeeCommissionPaymentPreference",
         "billPay" => "boolean",
+        "defaultAcctCorpCardExp" => "RecordRef",
         "eligibleForCommission" => "boolean",
         "subscriptionsList" => "EmployeeSubscriptionsList",
         "ratesList" => "EmployeeRatesList",
@@ -217,6 +222,7 @@ class Employee extends Record {
         "hrEducationList" => "EmployeeHrEducationList",
         "accruedTimeList" => "EmployeeAccruedTimeList",
         "directDepositList" => "EmployeeDirectDepositList",
+        "currencyList" => "EmployeeCurrencyList",
         "companyContributionList" => "EmployeeCompanyContributionList",
         "earningList" => "EmployeeEarningList",
         "emergencyContactList" => "EmployeeEmergencyContactList",
