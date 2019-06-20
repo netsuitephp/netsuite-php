@@ -14,7 +14,7 @@
  * @license    https://raw.githubusercontent.com/ryanwinchester/netsuite-php/master/original/NetSuite%20Application%20Developer%20License%20Agreement.txt
  * @link       http://www.netsuite.com/portal/developers/resources/suitetalk-sample-applications.shtml
  *
- * generated:  2019-02-27 03:26:43 PM PST
+ * generated:  2019-06-12 10:27:00 AM PDT
  */
 
 namespace NetSuite\Classes;
@@ -25,6 +25,7 @@ class TransactionStatus {
     const _billCancelled = "_billCancelled";
     const _billOpen = "_billOpen";
     const _billPaidInFull = "_billPaidInFull";
+    const _billPaymentApproved = "_billPaymentApproved";
     const _billPaymentConfirmed = "_billPaymentConfirmed";
     const _billPaymentDeclined = "_billPaymentDeclined";
     const _billPaymentInTransit = "_billPaymentInTransit";
@@ -94,6 +95,9 @@ class TransactionStatus {
     const _paymentNotDeposited = "_paymentNotDeposited";
     const _paymentUnapprovedPayment = "_paymentUnapprovedPayment";
     const _payrollLiabilityCheckVoided = "_payrollLiabilityCheckVoided";
+    const _periodEndJournalApprovedForPosting = "_periodEndJournalApprovedForPosting";
+    const _periodEndJournalPendingApproval = "_periodEndJournalPendingApproval";
+    const _periodEndJournalRejected = "_periodEndJournalRejected";
     const _purchaseOrderClosed = "_purchaseOrderClosed";
     const _purchaseOrderFullyBilled = "_purchaseOrderFullyBilled";
     const _purchaseOrderPartiallyReceived = "_purchaseOrderPartiallyReceived";
@@ -101,6 +105,7 @@ class TransactionStatus {
     const _purchaseOrderPendingBillingPartiallyReceived = "_purchaseOrderPendingBillingPartiallyReceived";
     const _purchaseOrderPendingReceipt = "_purchaseOrderPendingReceipt";
     const _purchaseOrderPendingSupervisorApproval = "_purchaseOrderPendingSupervisorApproval";
+    const _purchaseOrderPlanned = "_purchaseOrderPlanned";
     const _purchaseOrderRejectedBySupervisor = "_purchaseOrderRejectedBySupervisor";
     const _requisitionCancelled = "_requisitionCancelled";
     const _requisitionClosed = "_requisitionClosed";

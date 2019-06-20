@@ -14,7 +14,7 @@
  * @license    https://raw.githubusercontent.com/ryanwinchester/netsuite-php/master/original/NetSuite%20Application%20Developer%20License%20Agreement.txt
  * @link       http://www.netsuite.com/portal/developers/resources/suitetalk-sample-applications.shtml
  *
- * generated:  2019-02-27 03:26:43 PM PST
+ * generated:  2019-06-12 10:27:00 AM PDT
  */
 
 namespace NetSuite\Classes;
@@ -65,6 +65,17 @@ class SalesOrder extends Record {
     public $fax;
     public $messageSel;
     public $message;
+    public $paymentOption;
+    public $inputAuthCode;
+    public $inputReferenceCode;
+    public $checkNumber;
+    public $paymentCardCsc;
+    public $paymentProcessingProfile;
+    public $handlingMode;
+    public $outputAuthCode;
+    public $outputReferenceCode;
+    public $paymentOperation;
+    public $dynamicDescriptor;
     public $billingAddress;
     public $billAddressList;
     public $shippingAddress;
@@ -143,6 +154,7 @@ class SalesOrder extends Record {
     public $nexus;
     public $subsidiaryTaxRegNum;
     public $taxRegOverride;
+    public $taxPointDate;
     public $taxDetailsOverride;
     public $location;
     public $pnRefNum;
@@ -217,6 +229,17 @@ class SalesOrder extends Record {
         "fax" => "string",
         "messageSel" => "RecordRef",
         "message" => "string",
+        "paymentOption" => "RecordRef",
+        "inputAuthCode" => "string",
+        "inputReferenceCode" => "string",
+        "checkNumber" => "string",
+        "paymentCardCsc" => "string",
+        "paymentProcessingProfile" => "RecordRef",
+        "handlingMode" => "SalesOrderHandlingMode",
+        "outputAuthCode" => "string",
+        "outputReferenceCode" => "string",
+        "paymentOperation" => "SalesOrderPaymentOperation",
+        "dynamicDescriptor" => "string",
         "billingAddress" => "Address",
         "billAddressList" => "RecordRef",
         "shippingAddress" => "Address",
@@ -295,6 +318,7 @@ class SalesOrder extends Record {
         "nexus" => "RecordRef",
         "subsidiaryTaxRegNum" => "RecordRef",
         "taxRegOverride" => "boolean",
+        "taxPointDate" => "dateTime",
         "taxDetailsOverride" => "boolean",
         "location" => "RecordRef",
         "pnRefNum" => "string",

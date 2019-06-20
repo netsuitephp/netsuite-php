@@ -14,7 +14,7 @@
  * @license    https://raw.githubusercontent.com/ryanwinchester/netsuite-php/master/original/NetSuite%20Application%20Developer%20License%20Agreement.txt
  * @link       http://www.netsuite.com/portal/developers/resources/suitetalk-sample-applications.shtml
  *
- * generated:  2019-02-27 03:26:43 PM PST
+ * generated:  2019-06-12 10:27:00 AM PDT
  */
 
 namespace NetSuite\Classes;
@@ -36,6 +36,8 @@ class InboundShipmentSearchBasic extends SearchRecordBasic {
     public $internalId;
     public $internalIdNumber;
     public $item;
+    public $itemEffectiveDate;
+    public $itemExchangeRate;
     public $landedCostAllocationMethod;
     public $landedCostAmount;
     public $landedCostCostCategory;
@@ -54,7 +56,9 @@ class InboundShipmentSearchBasic extends SearchRecordBasic {
     public $shipmentBaseCurrency;
     public $shipmentNumber;
     public $status;
+    public $totalUnitCost;
     public $unit;
+    public $unitLandedCost;
     public $vendor;
     public $vesselNumber;
     public $customFieldList;
@@ -75,6 +79,8 @@ class InboundShipmentSearchBasic extends SearchRecordBasic {
         "internalId" => "SearchMultiSelectField",
         "internalIdNumber" => "SearchLongField",
         "item" => "SearchMultiSelectField",
+        "itemEffectiveDate" => "SearchDateField",
+        "itemExchangeRate" => "SearchDoubleField",
         "landedCostAllocationMethod" => "SearchEnumMultiSelectField",
         "landedCostAmount" => "SearchDoubleField",
         "landedCostCostCategory" => "SearchMultiSelectField",
@@ -93,7 +99,9 @@ class InboundShipmentSearchBasic extends SearchRecordBasic {
         "shipmentBaseCurrency" => "SearchMultiSelectField",
         "shipmentNumber" => "SearchMultiSelectField",
         "status" => "SearchEnumMultiSelectField",
+        "totalUnitCost" => "SearchDoubleField",
         "unit" => "SearchMultiSelectField",
+        "unitLandedCost" => "SearchDoubleField",
         "vendor" => "SearchMultiSelectField",
         "vesselNumber" => "SearchStringField",
         "customFieldList" => "SearchCustomFieldList",

@@ -15,7 +15,7 @@
  * @link       http://www.netsuite.com/portal/developers/resources/suitetalk-sample-applications.shtml
  *
  * created:    2015-01-22  1:04 PM
- * updated:    2019-02-27 03:26:43 PM PST
+ * updated:    2019-06-12 10:27:00 AM PDT
  */
 
 namespace NetSuite;
@@ -24,7 +24,7 @@ use NetSuite\Classes;
 
 class NetSuiteService extends NetSuiteClient {
 
-    public $generated_from_endpoint = "2018_2";
+    public $generated_from_endpoint = "2019_1";
 
     /**
      * Service Call: login

@@ -14,7 +14,7 @@
  * @license    https://raw.githubusercontent.com/ryanwinchester/netsuite-php/master/original/NetSuite%20Application%20Developer%20License%20Agreement.txt
  * @link       http://www.netsuite.com/portal/developers/resources/suitetalk-sample-applications.shtml
  *
- * generated:  2019-02-27 03:26:43 PM PST
+ * generated:  2019-06-12 10:27:00 AM PDT
  */
 
 namespace NetSuite\Classes;
@@ -48,6 +48,7 @@ class OtherCustomField extends CustomFieldType {
     public $sourceList;
     public $sourceFrom;
     public $sourceFilterBy;
+    public $customSegment;
     public $filterList;
     public $accessLevel;
     public $searchLevel;
@@ -85,6 +86,7 @@ class OtherCustomField extends CustomFieldType {
         "sourceList" => "RecordRef",
         "sourceFrom" => "RecordRef",
         "sourceFilterBy" => "RecordRef",
+        "customSegment" => "RecordRef",
         "filterList" => "OtherCustomFieldFilterList",
         "accessLevel" => "CustomizationAccessLevel",
         "searchLevel" => "CustomizationSearchLevel",
