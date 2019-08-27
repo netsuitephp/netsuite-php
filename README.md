@@ -52,6 +52,26 @@ $config = array(
 $service = new NetSuiteService($config);
 ```
 
+## Account-Specific Data Center URLs
+
+With 2019_1, this library provides support to utilize NetSuite's new
+account-specific data center URL with each request. In practice, this lookup
+does have a measurable overheard cost. As such, I'd suggest using this
+feature only if your manner of NetSuite integration is such that you make
+fewer connections, handling integration in batches. If your manner of
+integration is to instead make many frequent, brief requests from NetSuite,
+then you will probably prefer to provide your data center URL explicitly and
+remove the lookup from every session.
+
+```php
+// To use your own defined data center URL (or sandbox, for instance):
+$config['host'] = 'https://123456789.suitetalk.api.netsuite.com';
+
+// To allow the service to get the correct URL for your account on the fly,
+// use the legacy webservices url.
+$config['host'] = 'https://webservices.netsuite.com';
+```
+
 #### Retreiving a customer record:
 
 ```php
@@ -185,6 +205,8 @@ $service = new NetSuiteService($config);
  - [x] Optional environment variable config
  - [x] Namespacing
  - [x] Logging
+ - [x] Dynamic Data Center URLs
+ - [ ] Expanded user documentation
 
 ## License
 

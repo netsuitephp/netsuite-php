@@ -66,7 +66,10 @@ class NetSuiteClient
         $result = $this->getDataCenterUrls($params)->getDataCenterUrlsResult;
         $domain = $result->dataCenterUrls->webservicesDomain;
         $dataCenterUrl = $domain.'/services/NetSuitePort_'.$config['endpoint'];
-        $this->client->__setLocation($dataCenterUrl);
+        // Only lookup data center url if User didn't provide their own
+        if ($config['host'] == 'https://webservices.netsuite.com') {
+            $this->client->__setLocation($dataCenterUrl);
+        }
     }
 
     public static function createFromEnv($options = array(), $client = null)
