@@ -49,7 +49,11 @@ class NetSuiteClient
         $options = $this->createOptions($this->config, $options);
         $wsdl = $this->createWsdl($this->config);
         $this->client = $client ?: new SoapClient($wsdl, $options);
-        $this->setDataCenterUrl($config);
+        if ($config['host'] == 'https://webservices.netsuite.com') {
+            // Fetch the data center URL for this account because the user
+            // provided the legacy webservices URL.
+            $this->setDataCenterUrl($config);
+        }
     }
 
     /**
@@ -66,10 +70,7 @@ class NetSuiteClient
         $result = $this->getDataCenterUrls($params)->getDataCenterUrlsResult;
         $domain = $result->dataCenterUrls->webservicesDomain;
         $dataCenterUrl = $domain.'/services/NetSuitePort_'.$config['endpoint'];
-        // Only lookup data center url if User didn't provide their own
-        if ($config['host'] == 'https://webservices.netsuite.com') {
-            $this->client->__setLocation($dataCenterUrl);
-        }
+        $this->client->__setLocation($dataCenterUrl);
     }
 
     public static function createFromEnv($options = array(), $client = null)
