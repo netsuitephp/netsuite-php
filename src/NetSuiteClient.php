@@ -13,6 +13,7 @@
 namespace NetSuite;
 
 use NetSuite\Classes\ApplicationInfo;
+use NetSuite\Classes\GetDataCenterUrlsRequest;
 use NetSuite\Classes\Passport;
 use NetSuite\Classes\Preferences;
 use NetSuite\Classes\RecordRef;
@@ -48,6 +49,24 @@ class NetSuiteClient
         $options = $this->createOptions($this->config, $options);
         $wsdl = $this->createWsdl($this->config);
         $this->client = $client ?: new SoapClient($wsdl, $options);
+        $this->setDataCenterUrl($config);
+    }
+
+    /**
+     * Set the data center URL for the configured NetSuite account
+     *
+     * @param array $config
+     *
+     * @return void
+     */
+    public function setDataCenterUrl(array $config): void
+    {
+        $params = new GetDataCenterUrlsRequest();
+        $params->account = $config['account'];
+        $result = $this->getDataCenterUrls($params)->getDataCenterUrlsResult;
+        $domain = $result->dataCenterUrls->webservicesDomain;
+        $dataCenterUrl = $domain.'/services/NetSuitePort_'.$config['endpoint'];
+        $this->client->__setLocation($dataCenterUrl);
     }
 
     public static function createFromEnv($options = array(), $client = null)
