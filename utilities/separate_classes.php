@@ -1,16 +1,19 @@
 <?php
-
 /**
- * @author Ryan Winchester (fungku)
- * @license Apache 2.0
+ * This file is part of the SevenShores/NetSuite library.
+ *
+ * @package    ryanwinchester/netsuite-php
+ * @author     Ryan Winchester <fungku@gmail.com>
+ * @copyright  Copyright (c) Ryan Winchester
+ * @license    http://www.apache.org/licenses/LICENSE-2.0 Apache-2.0
+ * @link       https://github.com/ryanwinchester/netsuite-php
+ * created:    2015-01-22  1:04 PM
  */
 
 require_once "includes/functions.php";
 require "includes/ClassSeparator.php";
 
-$version = "2015_2";
-
-$file = base_path() . "/original/PHPToolkit_{$version}/PHPToolkit/NetSuiteService.php";
+$file = base_path() . "/original/PHPToolkit/NetSuiteService.php";
 
 $separator = new ClassSeparator($file);
 

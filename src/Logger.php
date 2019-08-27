@@ -1,14 +1,14 @@
 <?php
 
-namespace Fungku\NetSuite;
+namespace NetSuite;
 
 class Logger
 {
     private $path;
 
-    public function __construct($path)
+    public function __construct($path = null)
     {
-        $this->path = $path;
+        $this->path = $path ?: __DIR__.'/../logs';
     }
 
     /**
@@ -20,7 +20,7 @@ class Logger
     public function logSoapCall($client, $operation)
     {
         if (file_exists($this->path)) {
-            $fileName = "fungku-netsuite-php-" . date("Ymd.His") . "-" . $operation;
+            $fileName = "ryanwinchester-netsuite-php-" . date("Ymd.His") . "-" . $operation;
             $logFile = $this->path ."/". $fileName;
 
             // REQUEST

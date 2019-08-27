@@ -1,11 +1,24 @@
 <?php
+/**
+ * This file is part of the SevenShores/NetSuite library.
+ *
+ * @package    ryanwinchester/netsuite-php
+ * @author     Ryan Winchester <fungku@gmail.com>
+ * @copyright  Copyright (c) Ryan Winchester
+ * @license    http://www.apache.org/licenses/LICENSE-2.0 Apache-2.0
+ * @link       https://github.com/ryanwinchester/netsuite-php
+ * created:    2015-01-22  1:04 PM
+ */
 
-namespace Fungku\NetSuite;
+namespace NetSuite;
 
-use Fungku\NetSuite\Classes\Passport;
-use Fungku\NetSuite\Classes\Preferences;
-use Fungku\NetSuite\Classes\RecordRef;
-use Fungku\NetSuite\Classes\SearchPreferences;
+use NetSuite\Classes\ApplicationInfo;
+use NetSuite\Classes\Passport;
+use NetSuite\Classes\Preferences;
+use NetSuite\Classes\RecordRef;
+use NetSuite\Classes\SearchPreferences;
+use NetSuite\Classes\TokenPassport;
+use NetSuite\Classes\TokenPassportSignature;
 use SoapClient;
 use SoapHeader;
 
@@ -15,10 +28,6 @@ class NetSuiteClient
      * @var array
      */
     private $config;
-    /**
-     * @var array
-     */
-    private $options;
     /**
      * @var SoapClient
      */
@@ -36,8 +45,26 @@ class NetSuiteClient
     public function __construct($config, $options = array(), $client = null)
     {
         $this->config = $config;
-        $this->options = array_merge($this->createOptionsFromConfig($this->config), $options);
-        $this->client = $client ?: new SoapClient($this->config['host'], $this->options);
+        $options = $this->createOptions($this->config, $options);
+        $wsdl = $this->createWsdl($this->config);
+        $this->client = $client ?: new SoapClient($wsdl, $options);
+    }
+
+    public static function createFromEnv($options = array(), $client = null)
+    {
+        $config = array(
+            'endpoint' => getenv('NETSUITE_ENDPOINT') ?: '2017_1',
+            'host' => getenv('NETSUITE_HOST') ?: 'https://webservices.sandbox.netsuite.com',
+            'email' => getenv('NETSUITE_EMAIL'),
+            'password' => getenv('NETSUITE_PASSWORD'),
+            'role' => getenv('NETSUITE_ROLE') ?: '3',
+            'account' => getenv('NETSUITE_ACCOUNT'),
+            'app_id' => getenv('NETSUITE_APP_ID') ?: '4AD027CA-88B3-46EC-9D3E-41C6E6A325E2',
+            'logging' => getenv('NETSUITE_LOGGING'),
+            'log_path' => getenv('NETSUITE_LOG_PATH'),
+        );
+
+        return new static($config, $options, $client);
     }
 
     /**
@@ -50,33 +77,55 @@ class NetSuiteClient
     protected function makeSoapCall($operation, $parameter)
     {
         $this->fixWtfCookieBug();
-        $this->addHeader("passport", $this->createPassportFromConfig($this->config));
 
-        $response = $this->client->__soapCall($operation, array($parameter), null, $this->soapHeaders);
+        if (isset($this->config['token'])) {
+            $this->addHeader('tokenPassport', $this->createTokenPassportFromConfig($this->config));
+        } else {
+            $this->setApplicationInfo($this->config['app_id']);
+            $this->addHeader("passport", $this->createPassportFromConfig($this->config));
+        }
 
-        $this->logSoapCall($operation);
 
-        return $response;
+        try {
+            $response = $this->client->__soapCall($operation, array($parameter), null, $this->soapHeaders);
+            $this->logSoapCall($operation);
+            return $response;
+        } catch (\Exception $e) {
+            $this->logSoapCall($operation);
+            throw $e;
+        }
     }
 
     /**
      * Create the options array.
      *
      * @param array $config
+     * @param array $overrides
      * @return array
      */
-    private function createOptionsFromConfig($config)
+    private function createOptions($config, $overrides = array())
     {
-        return array(
+        return array_merge(array(
             'classmap' => require __DIR__."/includes/classmap.php",
             'trace' => 1,
             'connection_timeout' => 5,
             'cache_wsdl' => WSDL_CACHE_BOTH,
-            'location' => $config['host'] . "/services/NetSuitePort_" . $config['endpoint'],
+            'location' => $config['host']."/services/NetSuitePort_".$config['endpoint'],
             'keep_alive' => false,
             'features' => SOAP_SINGLE_ELEMENT_ARRAYS,
-            'user_agent' =>  "PHP-SOAP/" . phpversion() . " + ryanwinchester/netsuite-php",
-        );
+            'user_agent' => "PHP-SOAP/".phpversion()." + ryanwinchester/netsuite-php",
+        ), $overrides);
+    }
+
+    /**
+     * Build the WSDL address from the config.
+     *
+     * @param array $config
+     * @return string
+     */
+    private function createWsdl($config)
+    {
+        return $config['host'].'/wsdl/v'.$config['endpoint'].'_0/netsuite.wsdl';
     }
 
     /**
@@ -95,6 +144,40 @@ class NetSuiteClient
         $passport->role->internalId = $config['role'];
 
         return $passport;
+    }
+
+    /**
+     * Create the TokenPassport.
+     *
+     * @param array $config
+     * @return TokenPassport
+     */
+    private function createTokenPassportFromConfig($config)
+    {
+        $tokenPassport = new TokenPassport();
+        $tokenPassport->account = $config['account'];
+        $tokenPassport->consumerKey = $config['consumerKey'];
+        $tokenPassport->token = $config['token'];
+        $tokenPassport->nonce = $this->generateTokenPassportNonce();
+        $tokenPassport->timestamp = time();
+
+        $signatureAlgorithm = isset($config['signatureAlgorithm']) ? $config['signatureAlgorithm'] : 'sha256';
+
+        $tokenSignature = new TokenPassportSignature();
+        $tokenSignature->_ = $this->computeTokenPassportSignature(
+            $config['account'],
+            $config['consumerKey'],
+            $config['consumerSecret'],
+            $config['token'],
+            $config['tokenSecret'],
+            $tokenPassport->nonce,
+            $tokenPassport->timestamp,
+            $signatureAlgorithm
+        );
+        $tokenSignature->algorithm = 'HMAC_' . strtoupper($signatureAlgorithm);
+        $tokenPassport->signature = $tokenSignature;
+
+        return $tokenPassport;
     }
 
     /**
@@ -119,6 +202,18 @@ class NetSuiteClient
     }
 
     /**
+     * Set the application id.
+     *
+     * @param string $appId
+     */
+    public function setApplicationInfo($appId = null)
+    {
+        $applicationInfo = new ApplicationInfo();
+        $applicationInfo->applicationId = $appId;
+        $this->addHeader("applicationInfo", $applicationInfo);
+    }
+
+    /**
      * Set preferences header.
      *
      * @param bool $warningAsError
@@ -137,7 +232,6 @@ class NetSuiteClient
         $preferences->disableMandatoryCustomFieldValidation = $disableMandatoryCustomFieldValidation;
         $preferences->disableSystemNotesForCustomFields = $disableSystemNotesForCustomFields;
         $preferences->ignoreReadOnlyFields = $ignoreReadOnlyFields;
-
         $this->addHeader("preferences", $preferences);
     }
 
@@ -175,8 +269,8 @@ class NetSuiteClient
     }
 
     /**
-     * SoapClient, even with keep-alive set to false, keeps sending the JSESSIONID cookie back to
-     * the server on subsequent requests. Un-setting the cookie will prevent this.
+     * SoapClient apparently always sends the JSESSIONID cookie.
+     * So we'll just un-set it to prevent this.
      */
     private function fixWtfCookieBug()
     {
@@ -210,9 +304,44 @@ class NetSuiteClient
      */
     private function logSoapCall($operation)
     {
-        if ($this->config['logging'] && file_exists($this->config['log_path'])) {
-            $logger = new Logger($this->config['log_path']);
+        if (isset($this->config['logging']) && $this->config['logging']) {
+            $logger = new Logger(
+                isset($this->config['log_path']) ? $this->config['log_path'] : null
+            );
             $logger->logSoapCall($this->client, $operation);
         }
+    }
+
+    /**
+     * Compute TokenPassport signature
+     *
+     * @param int|string $account
+     * @param string $consumerKey
+     * @param string $consumerKey
+     * @param string $token
+     * @param string $tokenSecret
+     * @param string $nonce
+     * @param int|string $timestamp
+     * @param string $signatureAlgorithm
+     * @return string
+     */
+    private function computeTokenPassportSignature($account, $consumerKey, $consumerSecret, $token, $tokenSecret, $nonce, $timestamp, $signatureAlgorithm)
+    {
+        $baseString = implode('&', array($account, $consumerKey, $token, $nonce, $timestamp));
+        $key = $consumerSecret . '&' . $tokenSecret;
+        return base64_encode(hash_hmac($signatureAlgorithm, $baseString, $key, true));
+    }
+
+    /**
+     * Generate random (or sufficiently enough so) string of characters
+     */
+    private function generateTokenPassportNonce($length = 32)
+    {
+        $noncePool = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
+        $key = '';
+        for ($i = 0; $i < $length; $i++) {
+            $key .= $noncePool[mt_rand(0, 61)];
+        }
+        return $key;
     }
 }
