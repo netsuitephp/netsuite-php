@@ -56,7 +56,7 @@ $service = new NetSuiteService($config);
 
 With 2019_1, this library provides support to utilize NetSuite's new
 account-specific data center URL with each request. In practice, this lookup
-does have a measurable overheard cost. As such, I'd suggest using this
+does have a measurable overhead cost. As such, I'd suggest using this
 feature only if your manner of NetSuite integration is such that you make
 fewer connections, handling integration in batches. If your manner of
 integration is to instead make many frequent, brief requests from NetSuite,
