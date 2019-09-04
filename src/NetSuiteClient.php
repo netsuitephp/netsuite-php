@@ -63,7 +63,7 @@ class NetSuiteClient
      *
      * @return void
      */
-    public function setDataCenterUrl(array $config): void
+    public function setDataCenterUrl(array $config)
     {
         $params = new GetDataCenterUrlsRequest();
         $params->account = $config['account'];
