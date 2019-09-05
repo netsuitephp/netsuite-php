@@ -11,10 +11,8 @@ Require with composer:
 
 **V2 in Alpha**
 
-**NOTE: package name change**
-
 ```
-composer require "ryanwinchester/netsuite-php:2018.2.*"
+composer require ryanwinchester/netsuite-php
 ```
 
 ## Changes in v2:
@@ -52,15 +50,24 @@ $config = array(
 $service = new NetSuiteService($config);
 ```
 
-You can alternatively place your config in a .env file or environment variables.
-Clone .env.example as .env and fill out either credential based or token based auth details and instantiate as below.
+## Account-Specific Data Center URLs
+
+With 2019_1, this library provides support to utilize NetSuite's new
+account-specific data center URL with each request. In practice, this lookup
+does have a measurable overhead cost. As such, I'd suggest using this
+feature only if your manner of NetSuite integration is such that you make
+fewer connections, handling integration in batches. If your manner of
+integration is to instead make many frequent, brief requests from NetSuite,
+then you will probably prefer to provide your data center URL explicitly and
+remove the lookup from every session.
 
 ```php
-require 'vendor/autoload.php';
+// To use your own defined data center URL (or sandbox, for instance):
+$config['host'] = 'https://123456789.suitetalk.api.netsuite.com';
 
-use NetSuite\NetSuiteService;
-
-$service = new NetSuiteService();
+// To allow the service to get the correct URL for your account on the fly,
+// use the legacy webservices url.
+$config['host'] = 'https://webservices.netsuite.com';
 ```
 
 #### Retreiving a customer record:
@@ -144,6 +151,117 @@ if (!$addResponse->writeResponse->status->isSuccess) {
 }
 ```
 
+#### Adding a salesOrder with a custom field:
+
+This example of an order creation is not a complete example but shows how
+you set up and add the object generally as well as how you would add custom
+fields to the sale on insert.
+
+```php
+use NetSuite\Classes\AddRequest;
+use NetSuite\Classes\CustomFieldList;
+use NetSuite\Classes\RecordRef;
+use NetSuite\Classes\SalesOrder;
+use NetSuite\Classes\StringCustomField;
+
+$sale = new SalesOrder();
+
+// Associate a customer record with this order
+$sale->entity = new RecordRef();
+$sale->entity->type = 'customer';
+$sale->entity->internalId = $myCustomerInternalId;
+
+// Set the date of the order
+$sale->tranDate = $myOrderDate;
+
+// Set the shipping method and price for the order
+$sale->shipMethod = new RecordRef();
+$sale->shipMethod->internalId = $myShipMethodId;
+$sale->shippingCost = $myShippingTotal;
+
+// Look at the SalesOrder class definition for a list of all the available
+// properties and their types that you can use on a sales order in NetSuite.
+// You'll need to add items, addresses, status, etc.
+
+// Create a sample string-type custom field to the order which represents
+// the ID of the order in our source platform:
+$cfOrderNum = new StringCustomFieldRef();
+$cfOrderNum->scriptId = 'custbody_order_num';
+$cfOrderNum->value = $myOrderNumber;
+
+// Collect all custom fields into an array and add the list of fields to the
+// order add request:
+$customFields[] = $cfOrderNum;
+$sale->customFieldList = new CustomFieldList();
+$sale->customFieldList->customField = $customFields;
+
+// Submit the sales order create request
+$request = new AddRequest();
+$request->record = $sale;
+$response = $service->add($request);
+
+if (!$addResponse->writeResponse->status->isSuccess) {
+    echo "ADD ERROR";
+} else {
+    echo "ADD SUCCESS, id " . $addResponse->writeResponse->baseRef->internalId;
+}
+```
+
+#### Creating an Item Fulfillment:
+
+Creating an item fulfillment against a Sales Order requires initializing the
+new record based on the target record (the sales order). Then you can set
+the properties on the new record accordingly and add it to NetSuite. The
+same method is used for creating CashSale records.
+
+```php
+use NetSuite\Classes\AddRequest;
+use NetSuite\Classes\InitializeRecord;
+use NetSuite\Classes\InitializeRef;
+use NetSuite\Classes\InitializeRequest;
+use NetSuite\Classes\ItemFulfillmentPackage;
+use NetSuite\Classes\ItemFulfillmentPackageList;
+
+// Initialize an item fulfillment from an existing Sales Order
+$reference = new InitializeRef();
+$reference->type = InitializeRefType::salesOrder;
+$reference->internalId = $mySalesOrderInternalId;
+
+$record = new InitializeRecord();
+$record->type = InitializeType::itemFulfillment;
+$record->reference = $reference;
+
+$request = new InitializeRequest();
+$request->initializeRecord = $record;
+
+$response = $service->initialize($request);
+
+if (!$response->readResponse->status->isSuccess) {
+    echo "INIT ERROR";
+}
+
+$itemFulfillment = $response->readResponse->record;
+
+$package = new ItemFulfillmentPackage();
+$package->packageWeight = 1;
+$package->packageTrackingNumber = $myTrackingNumber;
+
+$packageList = new ItemFulfillmentPackageList();
+$packageList->package = $package;
+$itemFulfillment->packageList = $packageList;
+
+$request = new AddRequest();
+$request->record = $itemFulfillment;
+
+$response = $service->add($request);
+
+if (!$response->writeResponse->status->isSuccess) {
+    echo "ADD ERROR";
+} else {
+    echo "ADD SUCCESS, id " . $addResponse->writeResponse->baseRef->internalId;
+}
+```
+
 ### Logging
 
 You can set logging on or off on the fly, or override the configuration setting passed in.
@@ -196,6 +314,8 @@ $service = new NetSuiteService($config);
  - [x] Optional environment variable config
  - [x] Namespacing
  - [x] Logging
+ - [x] Dynamic Data Center URLs
+ - [x] Expanded user documentation
 
 ## License
 

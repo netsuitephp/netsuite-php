@@ -13,6 +13,7 @@
 namespace NetSuite;
 
 use NetSuite\Classes\ApplicationInfo;
+use NetSuite\Classes\GetDataCenterUrlsRequest;
 use NetSuite\Classes\Passport;
 use NetSuite\Classes\Preferences;
 use NetSuite\Classes\RecordRef;
@@ -42,37 +43,49 @@ class NetSuiteClient
      * @param array $options
      * @param SoapClient $client
      */
-     public function __construct($config = null, $options = array(), $client = null)
-     {
-         if ($this->config) {
-             $this->config = $config;
-         } else {
-             $this->config = self::createFromEnv();
-         }
-         $options = $this->createOptions($this->config, $options);
-         $wsdl = $this->createWsdl($this->config);
-         $this->client = $client ?: new SoapClient($wsdl, $options);
-     }
+    public function __construct($config, $options = array(), $client = null)
+    {
+        $this->config = $config;
+        $options = $this->createOptions($this->config, $options);
+        $wsdl = $this->createWsdl($this->config);
+        $this->client = $client ?: new SoapClient($wsdl, $options);
+        if ($config['host'] == 'https://webservices.netsuite.com') {
+            // Fetch the data center URL for this account because the user
+            // provided the legacy webservices URL.
+            $this->setDataCenterUrl($config);
+        }
+    }
 
-     public static function createFromEnv($options = array(), $client = null)
-     {
-         $config = array(
-             "endpoint"       => getenv('NETSUITE_ENDPOINT') ?: '2018_2',
-             "host"           => getenv('NETSUITE_HOST') ?: 'https://webservices.sandbox.netsuite.com',
-             'email'          => getenv('NETSUITE_EMAIL'),
-             'password'       => getenv('NETSUITE_PASSWORD'),
-             'role'           => getenv('NETSUITE_ROLE') ?: '3',
-             "account"        => getenv('NETSUITE_ACCOUNT'),
-             "consumerKey"    => getenv('NETSUITE_CONSUMER_KEY'),
-             "consumerSecret" => getenv('NETSUITE_CONSUMER_SECRET'),
-             "token"          => getenv('NETSUITE_TOKEN_KEY'),
-             "tokenSecret"    => getenv('NETSUITE_TOKEN_SECRET'),
-             'app_id'         => getenv('NETSUITE_APP_ID') ?: '4AD027CA-88B3-46EC-9D3E-41C6E6A325E2',
-             'logging'        => getenv('NETSUITE_LOGGING'),
-             'log_path'       => getenv('NETSUITE_LOG_PATH'),
-             // optional -------------------------------------
-             "signatureAlgorithm" => getenv('NETSUITE_HASH_TYPE') ?: 'sha256', // Defaults to 'sha256'
-         );
+    /**
+     * Set the data center URL for the configured NetSuite account
+     *
+     * @param array $config
+     *
+     * @return void
+     */
+    public function setDataCenterUrl(array $config)
+    {
+        $params = new GetDataCenterUrlsRequest();
+        $params->account = $config['account'];
+        $result = $this->getDataCenterUrls($params)->getDataCenterUrlsResult;
+        $domain = $result->dataCenterUrls->webservicesDomain;
+        $dataCenterUrl = $domain.'/services/NetSuitePort_'.$config['endpoint'];
+        $this->client->__setLocation($dataCenterUrl);
+    }
+
+    public static function createFromEnv($options = array(), $client = null)
+    {
+        $config = array(
+            'endpoint' => getenv('NETSUITE_ENDPOINT') ?: '2017_1',
+            'host' => getenv('NETSUITE_HOST') ?: 'https://webservices.sandbox.netsuite.com',
+            'email' => getenv('NETSUITE_EMAIL'),
+            'password' => getenv('NETSUITE_PASSWORD'),
+            'role' => getenv('NETSUITE_ROLE') ?: '3',
+            'account' => getenv('NETSUITE_ACCOUNT'),
+            'app_id' => getenv('NETSUITE_APP_ID') ?: '4AD027CA-88B3-46EC-9D3E-41C6E6A325E2',
+            'logging' => getenv('NETSUITE_LOGGING'),
+            'log_path' => getenv('NETSUITE_LOG_PATH'),
+        );
 
          return $config;
      }
