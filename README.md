@@ -50,6 +50,18 @@ $config = array(
 $service = new NetSuiteService($config);
 ```
 
+You can alternatively place your config in environment variables.
+This is helpful in hosted environments where deployment of config files is either not desired or practical.
+You can find the required key/value pairs in the included .env.example file.
+
+```php
+require 'vendor/autoload.php';
+
+use NetSuite\NetSuiteService;
+
+$service = new NetSuiteService();
+```
+
 ## Account-Specific Data Center URLs
 
 With 2019_1, this library provides support to utilize NetSuite's new
