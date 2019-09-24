@@ -43,9 +43,15 @@ class NetSuiteClient
      * @param array $options
      * @param SoapClient $client
      */
-    public function __construct($config, $options = array(), $client = null)
+    public function __construct($config = null, $options = array(), $client = null)
     {
-        $this->config = $config;
+        // If config is not provided assume it is stored in the environment.
+        if (!$config) {
+            $this->config = $config;
+        } else {
+            $this->config = self::createFromEnv();
+        }
+
         $options = $this->createOptions($this->config, $options);
         $wsdl = $this->createWsdl($this->config);
         $this->client = $client ?: new SoapClient($wsdl, $options);
@@ -75,20 +81,35 @@ class NetSuiteClient
 
     public static function createFromEnv($options = array(), $client = null)
     {
+        if (!isset($_SERVER['APP_ENV'])) {
+            // Handle use of symfony Dotenv compared to vlucas Dotenv
+            if (class_exists(Dotenv::class)) {
+                (new Symfony\Component\Dotenv\Dotenv())->load(__DIR__.'/../.env');
+            } else {
+                // No provided config, no detected env vars and no Dotenv library
+                throw new \RuntimeException('APP_ENV environment variable is not defined. You need to define environment variables for configuration or add either "vlucas/phpdotenv" "symfony/dotenv" as a Composer dependency to load variables from a .env file.');
+            }
+        }
+
         $config = array(
-            'endpoint' => getenv('NETSUITE_ENDPOINT') ?: '2017_1',
-            'host' => getenv('NETSUITE_HOST') ?: 'https://webservices.sandbox.netsuite.com',
-            'email' => getenv('NETSUITE_EMAIL'),
-            'password' => getenv('NETSUITE_PASSWORD'),
-            'role' => getenv('NETSUITE_ROLE') ?: '3',
-            'account' => getenv('NETSUITE_ACCOUNT'),
-            'app_id' => getenv('NETSUITE_APP_ID') ?: '4AD027CA-88B3-46EC-9D3E-41C6E6A325E2',
-            'logging' => getenv('NETSUITE_LOGGING'),
-            'log_path' => getenv('NETSUITE_LOG_PATH'),
+            'endpoint'          => getenv('NETSUITE_ENDPOINT') ?: '2019_1',
+            'host'              => getenv('NETSUITE_HOST') ?: 'https://webservices.sandbox.netsuite.com',
+            'email'             => getenv('NETSUITE_EMAIL'),
+            'password'          => getenv('NETSUITE_PASSWORD'),
+            'role'              => getenv('NETSUITE_ROLE') ?: '3',
+            'account'           => getenv('NETSUITE_ACCOUNT'),
+            'app_id'            => getenv('NETSUITE_APP_ID') ?: '4AD027CA-88B3-46EC-9D3E-41C6E6A325E2',
+            'logging'           => getenv('NETSUITE_LOGGING'),
+            'log_path'          => getenv('NETSUITE_LOG_PATH'),
+            'consumerKey'       => getenv('NETSUITE_CONSUMER_KEY'),
+            'consumerSecret'    => getenv('NETSUITE_CONSUMER_SECRET'),
+            'token'             => getenv('NETSUITE_TOKEN_KEY'),
+            'tokenSecret'       => getenv('NETSUITE_TOKEN_SECRET'),
+            'signatureAlgorithm'=> getenv('NETSUITE_HASHTYPE') ?: 'sha256',
         );
 
-        return new static($config, $options, $client);
-    }
+        return $config;
+     }
 
     /**
      * Make the SOAP call!

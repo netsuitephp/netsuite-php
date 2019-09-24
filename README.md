@@ -35,7 +35,7 @@ use NetSuite\NetSuiteService;
 
 $config = array(
    // required -------------------------------------
-   "endpoint" => "2017_1",
+   "endpoint" => "2019_1",
    "host"     => "https://webservices.netsuite.com",
    "email"    => "jDoe@netsuite.com",
    "password" => "mySecretPwd",
@@ -48,6 +48,18 @@ $config = array(
 );
 
 $service = new NetSuiteService($config);
+```
+
+You can alternatively place your config in environment variables.
+This is helpful in hosted environments where deployment of config files is either not desired or practical.
+You can find the required key/value pairs in the included .env.example file.
+
+```php
+require 'vendor/autoload.php';
+
+use NetSuite\NetSuiteService;
+
+$service = new NetSuiteService();
 ```
 
 ## Account-Specific Data Center URLs
