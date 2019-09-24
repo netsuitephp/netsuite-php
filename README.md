@@ -310,7 +310,7 @@ Instead of instantiating `NetSuiteService` with the standard credentials method,
 ```php
 $config = array(
    // required -------------------------------------
-   "endpoint"       => "2017_1",
+   "endpoint"       => "2019_1",
    "host"           => "https://webservices.netsuite.com",
    "account"        => "MYACCT1",
    "consumerKey"    => "0123456789ABCDEF",
