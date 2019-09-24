@@ -22,7 +22,7 @@
   },
   "suggest": {
         "vlucas/phpdotenv": "Provides loading a .env file for obtaining config variables",
-        "symfony/dotenv": "Provides loading a .env file for obtaining config variables",
+        "symfony/dotenv": "Provides loading a .env file for obtaining config variables"
   },
   "autoload": {
     "psr-4": {
