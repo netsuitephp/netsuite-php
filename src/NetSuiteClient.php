@@ -43,15 +43,10 @@ class NetSuiteClient
      * @param array $options
      * @param SoapClient $client
      */
-    public function __construct($config = null, $options = array(), $client = null)
+    public function __construct($config = null, $options = [], $client = null)
     {
-        // If config is not provided assume it is stored in the environment.
-        if (!$config) {
-            $this->config = $config;
-        } else {
-            $this->config = self::createFromEnv();
-        }
-
+        $this->config = $config ?? self::getEnvConfig();
+        $this->validateConfig($this->config);
         $options = $this->createOptions($this->config, $options);
         $wsdl = $this->createWsdl($this->config);
         $this->client = $client ?: new SoapClient($wsdl, $options);
@@ -79,37 +74,83 @@ class NetSuiteClient
         $this->client->__setLocation($dataCenterUrl);
     }
 
-    public static function createFromEnv($options = array(), $client = null)
+    /**
+     * Create a configuration array by inspecting the $_ENV superglobal.
+     *
+     * @return array
+     */
+    public static function getEnvConfig()
     {
-        if (!isset($_SERVER['APP_ENV'])) {
-            // Handle use of symfony Dotenv compared to vlucas Dotenv
-            if (class_exists(Dotenv::class)) {
-                (new Symfony\Component\Dotenv\Dotenv())->load(__DIR__.'/../.env');
-            } else {
-                // No provided config, no detected env vars and no Dotenv library
-                throw new \RuntimeException('APP_ENV environment variable is not defined. You need to define environment variables for configuration or add either "vlucas/phpdotenv" "symfony/dotenv" as a Composer dependency to load variables from a .env file.');
-            }
-        }
-
-        $config = array(
-            'endpoint'          => getenv('NETSUITE_ENDPOINT') ?: '2019_1',
-            'host'              => getenv('NETSUITE_HOST') ?: 'https://webservices.sandbox.netsuite.com',
-            'email'             => getenv('NETSUITE_EMAIL'),
-            'password'          => getenv('NETSUITE_PASSWORD'),
-            'role'              => getenv('NETSUITE_ROLE') ?: '3',
-            'account'           => getenv('NETSUITE_ACCOUNT'),
-            'app_id'            => getenv('NETSUITE_APP_ID') ?: '4AD027CA-88B3-46EC-9D3E-41C6E6A325E2',
-            'logging'           => getenv('NETSUITE_LOGGING'),
-            'log_path'          => getenv('NETSUITE_LOG_PATH'),
-            'consumerKey'       => getenv('NETSUITE_CONSUMER_KEY'),
-            'consumerSecret'    => getenv('NETSUITE_CONSUMER_SECRET'),
-            'token'             => getenv('NETSUITE_TOKEN_KEY'),
-            'tokenSecret'       => getenv('NETSUITE_TOKEN_SECRET'),
-            'signatureAlgorithm'=> getenv('NETSUITE_HASHTYPE') ?: 'sha256',
-        );
+        $config = [
+            'endpoint'           => getenv('NETSUITE_ENDPOINT') ?: '2019_1',
+            'host'               => getenv('NETSUITE_HOST') ?: 'https://webservices.sandbox.netsuite.com',
+            'email'              => getenv('NETSUITE_EMAIL'),
+            'password'           => getenv('NETSUITE_PASSWORD'),
+            'role'               => getenv('NETSUITE_ROLE') ?: '3',
+            'account'            => getenv('NETSUITE_ACCOUNT'),
+            'app_id'             => getenv('NETSUITE_APP_ID') ?: '4AD027CA-88B3-46EC-9D3E-41C6E6A325E2',
+            'logging'            => getenv('NETSUITE_LOGGING'),
+            'log_path'           => getenv('NETSUITE_LOG_PATH'),
+            'consumerKey'        => getenv('NETSUITE_CONSUMER_KEY'),
+            'consumerSecret'     => getenv('NETSUITE_CONSUMER_SECRET'),
+            'token'              => getenv('NETSUITE_TOKEN_KEY'),
+            'tokenSecret'        => getenv('NETSUITE_TOKEN_SECRET'),
+            'signatureAlgorithm' => getenv('NETSUITE_HASHTYPE') ?: 'sha256',
+        ];
 
         return $config;
-     }
+    }
+
+    /**
+     * Make sure that this client object has at least the basic required
+     * configuration values defined or else throw a runtime exception.
+     *
+     * @param array $config
+     *
+     * @return void
+     */
+    public function validateConfig(array $config)
+    {
+        $requiredParams = [
+            'endpoint',
+            'host',
+            'email',
+            'password',
+            'role',
+            'account',
+            'app_id',
+        ];
+        foreach ($requiredParams as $key) {
+            if (!isset($config[$key]) || empty($config[$key])) {
+                throw new \RuntimeException('Config key missing: '.$key);
+            }
+        }
+    }
+
+    /**
+     * Alternate way to instantiate the NetSuiteClient. This method is
+     * superfluous now that the constructor will intelligently look for ENV
+     * configuration when it isn't given explicit configuration. This static
+     * method is retained for compatibility with those users who might
+     * currently be using this method.
+     *
+     * This method will be removed in some future version.
+     *
+     * @deprecated
+     *
+     * @param array $options
+     * @param \SoapClient $client
+     *
+     * @return \NetSuite\NetSuiteClient
+     */
+    public static function createFromEnv(
+        array $options = [],
+        \SoapClient $client = null
+    ) {
+        $config = self::getEnvConfig();
+
+        return new static($config, $options, $client);
+    }
 
     /**
      * Make the SOAP call!

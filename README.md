@@ -50,9 +50,15 @@ $config = array(
 $service = new NetSuiteService($config);
 ```
 
-You can alternatively place your config in environment variables.
-This is helpful in hosted environments where deployment of config files is either not desired or practical.
-You can find the required key/value pairs in the included .env.example file.
+You can alternatively place your config in environment variables. This is
+helpful in hosted environments where deployment of config files is either
+not desired or practical. You can find the valid keys in the included
+.env.example file with sample values.
+
+Previously, instantiating the NetSuiteClient with ENV data entailed using the
+static method `createFromEnv`. This method is now marked as `deprecated` and
+if you are using it, please change your code to use the standard constructor
+which will extract your configuration out of the $_ENV superglobal for you.
 
 ```php
 require 'vendor/autoload.php';
@@ -328,6 +334,7 @@ $service = new NetSuiteService($config);
  - [x] Logging
  - [x] Dynamic Data Center URLs
  - [x] Expanded user documentation
+ - [x] Support automagic configuration via ENV variables
 
 ## License
 
