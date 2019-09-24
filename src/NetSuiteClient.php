@@ -43,9 +43,10 @@ class NetSuiteClient
      * @param array $options
      * @param SoapClient $client
      */
-    public function __construct($config, $options = array(), $client = null)
+    public function __construct($config = null, $options = [], $client = null)
     {
-        $this->config = $config;
+        $this->config = $config ?? self::getEnvConfig();
+        $this->validateConfig($this->config);
         $options = $this->createOptions($this->config, $options);
         $wsdl = $this->createWsdl($this->config);
         $this->client = $client ?: new SoapClient($wsdl, $options);
@@ -73,19 +74,91 @@ class NetSuiteClient
         $this->client->__setLocation($dataCenterUrl);
     }
 
-    public static function createFromEnv($options = array(), $client = null)
+    /**
+     * Create a configuration array by inspecting the $_ENV superglobal.
+     *
+     * @return array
+     */
+    public static function getEnvConfig()
     {
-        $config = array(
-            'endpoint' => getenv('NETSUITE_ENDPOINT') ?: '2017_1',
-            'host' => getenv('NETSUITE_HOST') ?: 'https://webservices.sandbox.netsuite.com',
-            'email' => getenv('NETSUITE_EMAIL'),
-            'password' => getenv('NETSUITE_PASSWORD'),
-            'role' => getenv('NETSUITE_ROLE') ?: '3',
-            'account' => getenv('NETSUITE_ACCOUNT'),
-            'app_id' => getenv('NETSUITE_APP_ID') ?: '4AD027CA-88B3-46EC-9D3E-41C6E6A325E2',
-            'logging' => getenv('NETSUITE_LOGGING'),
-            'log_path' => getenv('NETSUITE_LOG_PATH'),
-        );
+        $config = [
+            'endpoint'           => getenv('NETSUITE_ENDPOINT') ?: '2019_1',
+            'host'               => getenv('NETSUITE_HOST') ?: 'https://webservices.sandbox.netsuite.com',
+            'email'              => getenv('NETSUITE_EMAIL'),
+            'password'           => getenv('NETSUITE_PASSWORD'),
+            'role'               => getenv('NETSUITE_ROLE') ?: '3',
+            'account'            => getenv('NETSUITE_ACCOUNT'),
+            'app_id'             => getenv('NETSUITE_APP_ID') ?: '4AD027CA-88B3-46EC-9D3E-41C6E6A325E2',
+            'logging'            => getenv('NETSUITE_LOGGING'),
+            'log_path'           => getenv('NETSUITE_LOG_PATH'),
+        ];
+
+        // These config keys aren't required by all users, but if they are
+        // defined in the config array, then they must be correct, thus we
+        // will omit ones that have been left empty in the .env file.
+        $optKeys = [
+            'NETSUITE_CONSUMER_KEY'    => 'consumerKey',
+            'NETSUITE_CONSUMER_SECRET' => 'consumerSecret',
+            'NETSUITE_TOKEN_KEY'       => 'token',
+            'NETSUITE_TOKEN_SECRET'    => 'tokenSecret',
+            'NETSUITE_HASH_TYPE'       => 'signatureAlgorithm'
+        ];
+        foreach ($optKeys as $optKey => $cfgKey) {
+            if ($optVal = getenv($optKey)) {
+                $config[$cfgKey] = $optVal;
+            }
+        }
+
+        return $config;
+    }
+
+    /**
+     * Make sure that this client object has at least the basic required
+     * configuration values defined or else throw a runtime exception.
+     *
+     * @param array $config
+     *
+     * @return void
+     */
+    public function validateConfig(array $config)
+    {
+        $requiredParams = [
+            'endpoint',
+            'host',
+            'email',
+            'password',
+            'role',
+            'account',
+            'app_id',
+        ];
+        foreach ($requiredParams as $key) {
+            if (!isset($config[$key]) || empty($config[$key])) {
+                throw new \RuntimeException('Config key missing: '.$key);
+            }
+        }
+    }
+
+    /**
+     * Alternate way to instantiate the NetSuiteClient. This method is
+     * superfluous now that the constructor will intelligently look for ENV
+     * configuration when it isn't given explicit configuration. This static
+     * method is retained for compatibility with those users who might
+     * currently be using this method.
+     *
+     * This method will be removed in some future version.
+     *
+     * @deprecated
+     *
+     * @param array $options
+     * @param \SoapClient $client
+     *
+     * @return \NetSuite\NetSuiteClient
+     */
+    public static function createFromEnv(
+        array $options = [],
+        \SoapClient $client = null
+    ) {
+        $config = self::getEnvConfig();
 
         return new static($config, $options, $client);
     }
