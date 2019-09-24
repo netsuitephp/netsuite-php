@@ -91,12 +91,23 @@ class NetSuiteClient
             'app_id'             => getenv('NETSUITE_APP_ID') ?: '4AD027CA-88B3-46EC-9D3E-41C6E6A325E2',
             'logging'            => getenv('NETSUITE_LOGGING'),
             'log_path'           => getenv('NETSUITE_LOG_PATH'),
-            'consumerKey'        => getenv('NETSUITE_CONSUMER_KEY'),
-            'consumerSecret'     => getenv('NETSUITE_CONSUMER_SECRET'),
-            'token'              => getenv('NETSUITE_TOKEN_KEY'),
-            'tokenSecret'        => getenv('NETSUITE_TOKEN_SECRET'),
-            'signatureAlgorithm' => getenv('NETSUITE_HASHTYPE') ?: 'sha256',
         ];
+
+        // These config keys aren't required by all users, but if they are
+        // defined in the config array, then they must be correct, thus we
+        // will omit ones that have been left empty in the .env file.
+        $optKeys = [
+            'NETSUITE_CONSUMER_KEY'    => 'consumerKey',
+            'NETSUITE_CONSUMER_SECRET' => 'consumerSecret',
+            'NETSUITE_TOKEN_KEY'       => 'token',
+            'NETSUITE_TOKEN_SECRET'    => 'tokenSecret',
+            'NETSUITE_HASH_TYPE'       => 'signatureAlgorithm'
+        ];
+        foreach ($optKeys as $optKey => $cfgKey) {
+            if ($optVal = getenv($optKey)) {
+                $config[$cfgKey] = $optVal;
+            }
+        }
 
         return $config;
     }
