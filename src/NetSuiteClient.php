@@ -45,7 +45,11 @@ class NetSuiteClient
      */
     public function __construct($config = null, $options = [], $client = null)
     {
-        $this->config = $config ?? self::getEnvConfig();
+        if ($config) {
+            $this->config = $config;
+        } else {
+            $this->config = self::getEnvConfig();
+        }
         $this->validateConfig($this->config);
         $options = $this->createOptions($this->config, $options);
         $wsdl = $this->createWsdl($this->config);
