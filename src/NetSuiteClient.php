@@ -129,11 +129,7 @@ class NetSuiteClient
         $requiredParams = [
             'endpoint',
             'host',
-            'email',
-            'password',
-            'role',
             'account',
-            'app_id',
         ];
         foreach ($requiredParams as $key) {
             if (!isset($config[$key]) || empty($config[$key])) {
