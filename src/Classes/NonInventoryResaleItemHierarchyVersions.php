@@ -14,14 +14,22 @@
  * @license    https://raw.githubusercontent.com/ryanwinchester/netsuite-php/master/original/NetSuite%20Application%20Developer%20License%20Agreement.txt
  * @link       http://www.netsuite.com/portal/developers/resources/suitetalk-sample-applications.shtml
  *
- * generated:  2017-03-31 08:48:20 PM UTC
+ * generated:  2019-10-18 12:11:30 PM UTC
  */
 
 namespace NetSuite\Classes;
 
-class ConsolidatedExchangeRateList {
-    public $consolidatedExchangeRate;
+class NonInventoryResaleItemHierarchyVersions {
+    public $isIncluded;
+    public $hierarchyVersion;
+    public $startDate;
+    public $endDate;
+    public $hierarchyNode;
     static $paramtypesmap = array(
-        "consolidatedExchangeRate" => "ConsolidatedExchangeRate[]",
+        "isIncluded" => "boolean",
+        "hierarchyVersion" => "RecordRef",
+        "startDate" => "dateTime",
+        "endDate" => "dateTime",
+        "hierarchyNode" => "RecordRef",
     );
 }

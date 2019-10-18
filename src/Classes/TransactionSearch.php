@@ -14,7 +14,7 @@
  * @license    https://raw.githubusercontent.com/ryanwinchester/netsuite-php/master/original/NetSuite%20Application%20Developer%20License%20Agreement.txt
  * @link       http://www.netsuite.com/portal/developers/resources/suitetalk-sample-applications.shtml
  *
- * generated:  2019-06-12 10:27:00 AM PDT
+ * generated:  2019-10-18 12:11:30 PM UTC
  */
 
 namespace NetSuite\Classes;
@@ -50,6 +50,7 @@ class TransactionSearch extends SearchRecord {
     public $fromLocationJoin;
     public $fulfillingTransactionJoin;
     public $headerBillingAccountJoin;
+    public $installmentJoin;
     public $inventoryDetailJoin;
     public $itemJoin;
     public $itemNumberJoin;
@@ -120,6 +121,7 @@ class TransactionSearch extends SearchRecord {
         "fromLocationJoin" => "LocationSearchBasic",
         "fulfillingTransactionJoin" => "TransactionSearchBasic",
         "headerBillingAccountJoin" => "BillingAccountSearchBasic",
+        "installmentJoin" => "InstallmentSearchBasic",
         "inventoryDetailJoin" => "InventoryDetailSearchBasic",
         "itemJoin" => "ItemSearchBasic",
         "itemNumberJoin" => "InventoryNumberSearchBasic",

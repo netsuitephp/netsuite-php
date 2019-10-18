@@ -14,7 +14,7 @@
  * @license    https://raw.githubusercontent.com/ryanwinchester/netsuite-php/master/original/NetSuite%20Application%20Developer%20License%20Agreement.txt
  * @link       http://www.netsuite.com/portal/developers/resources/suitetalk-sample-applications.shtml
  *
- * generated:  2019-06-12 10:27:00 AM PDT
+ * generated:  2019-10-18 12:11:30 PM UTC
  */
 
 namespace NetSuite\Classes;
@@ -23,9 +23,11 @@ class InitializeAuxRef extends BaseRef {
     public $type;
     public $internalId;
     public $externalId;
+    public $scriptId;
     static $paramtypesmap = array(
         "type" => "InitializeAuxRefType",
         "internalId" => "string",
         "externalId" => "string",
+        "scriptId" => "string",
     );
 }

@@ -14,7 +14,7 @@
  * @license    https://raw.githubusercontent.com/ryanwinchester/netsuite-php/master/original/NetSuite%20Application%20Developer%20License%20Agreement.txt
  * @link       http://www.netsuite.com/portal/developers/resources/suitetalk-sample-applications.shtml
  *
- * generated:  2019-06-12 10:27:00 AM PDT
+ * generated:  2019-10-18 12:11:30 PM UTC
  */
 
 namespace NetSuite\Classes;
@@ -52,6 +52,9 @@ class ExpenseReport extends Record {
     public $location;
     public $expenseList;
     public $accountingBookDetailList;
+    public $taxDetailsList;
+    public $nexus;
+    public $subsidiaryTaxRegNum;
     public $customFieldList;
     public $internalId;
     public $externalId;
@@ -88,6 +91,9 @@ class ExpenseReport extends Record {
         "location" => "RecordRef",
         "expenseList" => "ExpenseReportExpenseList",
         "accountingBookDetailList" => "AccountingBookDetailList",
+        "taxDetailsList" => "TaxDetailsList",
+        "nexus" => "RecordRef",
+        "subsidiaryTaxRegNum" => "RecordRef",
         "customFieldList" => "CustomFieldList",
         "internalId" => "string",
         "externalId" => "string",

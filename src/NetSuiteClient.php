@@ -76,7 +76,7 @@ class NetSuiteClient
     public static function createFromEnv($options = array(), $client = null)
     {
         $config = array(
-            'endpoint' => getenv('NETSUITE_ENDPOINT') ?: '2019_1',
+            'endpoint' => getenv('NETSUITE_ENDPOINT') ?: '2019_2',
             'host' => getenv('NETSUITE_HOST') ?: 'https://webservices.sandbox.netsuite.com',
             'email' => getenv('NETSUITE_EMAIL'),
             'password' => getenv('NETSUITE_PASSWORD'),
