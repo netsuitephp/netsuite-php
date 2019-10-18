@@ -13,6 +13,14 @@
  * @copyright  Copyright (c) NetSuite Inc.
  * @license    https://raw.githubusercontent.com/netsuitephp/netsuite-php/master/original/NetSuite%20Application%20Developer%20License%20Agreement.txt
  * @link       http://www.netsuite.com/portal/developers/resources/suitetalk-sample-applications.shtml
+<<<<<<<< HEAD:src/Classes/TermRecurrenceFrequency.php
+|||||||| parent of 9a61a656 (Generated 2019_2 classes):src/Classes/LoginResponse.php
+ *
+ * generated:  2019-06-12 10:27:00 AM PDT
+========
+ *
+ * generated:  2019-10-18 12:11:30 PM UTC
+>>>>>>>> 9a61a656 (Generated 2019_2 classes):src/Classes/LoginResponse.php
  */
 
 namespace NetSuite\Classes;
