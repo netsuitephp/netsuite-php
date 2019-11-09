@@ -50,6 +50,24 @@ $config = array(
 $service = new NetSuiteService($config);
 ```
 
+You can alternatively place your config in environment variables. This is
+helpful in hosted environments where deployment of config files is either
+not desired or practical. You can find the valid keys in the included
+.env.example file with sample values.
+
+Previously, instantiating the NetSuiteClient with ENV data entailed using the
+static method `createFromEnv`. This method is now marked as `deprecated` and
+if you are using it, please change your code to use the standard constructor
+which will extract your configuration out of the $_ENV superglobal for you.
+
+```php
+require 'vendor/autoload.php';
+
+use NetSuite\NetSuiteService;
+
+$service = new NetSuiteService();
+```
+
 ## Account-Specific Data Center URLs
 
 With 2019_2, this library provides support to utilize NetSuite's new
@@ -308,7 +326,7 @@ $service = new NetSuiteService($config);
 
 ## Status
 
- - [x] Extract the ~1500 classes from their single file...
+ - [x] Extract the ~1700 classes from their single file...
  - [x] Composer package with autoloading
  - [x] Pass config through constructor
  - [x] Optional environment variable config
@@ -316,6 +334,7 @@ $service = new NetSuiteService($config);
  - [x] Logging
  - [x] Dynamic Data Center URLs
  - [x] Expanded user documentation
+ - [x] Support automagic configuration via ENV variables
 
 ## License
 

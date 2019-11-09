@@ -6,4 +6,4 @@
 # Files
 .DS_Store
 composer.lock
-git-sync.bat
+*.bat
