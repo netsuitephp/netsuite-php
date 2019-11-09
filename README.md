@@ -12,7 +12,8 @@ Require with composer:
 **V2 in Alpha**
 
 In side composer.json add the following lines:
-***Repositories sectiom:***
+
+***Repositories section:***
 ```json
 "repositories": [
     {
