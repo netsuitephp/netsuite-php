@@ -85,21 +85,8 @@ class NetSuiteClient
      */
     public static function getEnvConfig()
     {
-<<<<<<< HEAD
-        $config = array(
-            'endpoint'           => getenv('NETSUITE_ENDPOINT') ?: '2019_2',
-            'host'               => getenv('NETSUITE_HOST') ?: 'https://webservices.sandbox.netsuite.com',
-            'email'              => getenv('NETSUITE_EMAIL'),
-            'password'           => getenv('NETSUITE_PASSWORD'),
-            'role'               => getenv('NETSUITE_ROLE') ?: '3',
-            'account'            => getenv('NETSUITE_ACCOUNT'),
-            'app_id'             => getenv('NETSUITE_APP_ID') ?: '4AD027CA-88B3-46EC-9D3E-41C6E6A325E2',
-            'logging'            => getenv('NETSUITE_LOGGING'),
-            'log_path'           => getenv('NETSUITE_LOG_PATH'),
-        );
-=======
         $config = [
-            'endpoint'           => getenv('NETSUITE_ENDPOINT') ?: '2019_1',
+            'endpoint'           => getenv('NETSUITE_ENDPOINT') ?: '2019_2',
             'host'               => getenv('NETSUITE_HOST') ?: 'https://webservices.sandbox.netsuite.com',
             'email'              => getenv('NETSUITE_EMAIL'),
             'password'           => getenv('NETSUITE_PASSWORD'),
@@ -172,7 +159,6 @@ class NetSuiteClient
         \SoapClient $client = null
     ) {
         $config = self::getEnvConfig();
->>>>>>> eb0866d78cb17e3896309f21554f49d1af139c02
 
         return new static($config, $options, $client);
     }
