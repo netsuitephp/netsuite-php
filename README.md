@@ -11,8 +11,27 @@ Require with composer:
 
 **V2 in Alpha**
 
+In side composer.json add the following lines:
+***Repositories sectiom:***
+```json
+"repositories": [
+    {
+        "type": "vcs",
+        "url": "https://github.com/FSElias/netsuite-php"
+    }
+],
 ```
-composer require FSElias/netsuite-php
+
+***Require section:***
+```json
+"require": {
+    "ryanwinchester/netsuite-php": "dev-master"
+}
+```
+
+Then run:
+```
+composer update
 ```
 
 ## Changes in v2:
