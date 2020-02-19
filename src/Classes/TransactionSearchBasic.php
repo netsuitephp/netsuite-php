@@ -14,7 +14,7 @@
  * @license    https://raw.githubusercontent.com/ryanwinchester/netsuite-php/master/original/NetSuite%20Application%20Developer%20License%20Agreement.txt
  * @link       http://www.netsuite.com/portal/developers/resources/suitetalk-sample-applications.shtml
  *
- * generated:  2019-06-12 10:27:00 AM PDT
+ * generated:  2020-02-19 09:58:55 AM CST
  */
 
 namespace NetSuite\Classes;
@@ -218,6 +218,7 @@ class TransactionSearchBasic extends SearchRecordBasic {
     public $netAmount;
     public $nextApprover;
     public $nextBillDate;
+    public $nexus;
     public $noAutoAssignLocation;
     public $nonReimbursable;
     public $number;
@@ -227,6 +228,7 @@ class TransactionSearchBasic extends SearchRecordBasic {
     public $otherRefNum;
     public $otherRefNumNonDeposit;
     public $overheadParentItem;
+    public $overrideInstallments;
     public $packageCount;
     public $paidTransaction;
     public $parent;
@@ -319,6 +321,7 @@ class TransactionSearchBasic extends SearchRecordBasic {
     public $statistical;
     public $status;
     public $subscription;
+    public $subsidiaryTaxRegNum;
     public $subscriptionLine;
     public $subsidiary;
     public $taxItem;
@@ -565,6 +568,7 @@ class TransactionSearchBasic extends SearchRecordBasic {
         "netAmount" => "SearchDoubleField",
         "nextApprover" => "SearchMultiSelectField",
         "nextBillDate" => "SearchDateField",
+        "nexus" => "SearchMultiSelectField",
         "noAutoAssignLocation" => "SearchBooleanField",
         "nonReimbursable" => "SearchBooleanField",
         "number" => "SearchLongField",
@@ -574,6 +578,7 @@ class TransactionSearchBasic extends SearchRecordBasic {
         "otherRefNum" => "SearchTextNumberField",
         "otherRefNumNonDeposit" => "SearchTextNumberField",
         "overheadParentItem" => "SearchMultiSelectField",
+        "overrideInstallments" => "SearchBooleanField",
         "packageCount" => "SearchLongField",
         "paidTransaction" => "SearchMultiSelectField",
         "parent" => "SearchLongField",
@@ -666,6 +671,7 @@ class TransactionSearchBasic extends SearchRecordBasic {
         "statistical" => "SearchBooleanField",
         "status" => "SearchEnumMultiSelectField",
         "subscription" => "SearchMultiSelectField",
+        "subsidiaryTaxRegNum" => "SearchMultiSelectField",
         "subscriptionLine" => "SearchMultiSelectField",
         "subsidiary" => "SearchMultiSelectField",
         "taxItem" => "SearchMultiSelectField",

@@ -14,7 +14,7 @@
  * @license    https://raw.githubusercontent.com/ryanwinchester/netsuite-php/master/original/NetSuite%20Application%20Developer%20License%20Agreement.txt
  * @link       http://www.netsuite.com/portal/developers/resources/suitetalk-sample-applications.shtml
  *
- * generated:  2019-06-12 10:27:00 AM PDT
+ * generated:  2020-02-19 09:58:55 AM CST
  */
 
 namespace NetSuite\Classes;
@@ -79,6 +79,8 @@ class VendorSearchBasic extends SearchRecordBasic {
     public $permission;
     public $phone;
     public $phoneticName;
+    public $predConfidence;
+    public $predictedDays;
     public $printTransactions;
     public $purchaseOrderAmount;
     public $purchaseOrderQuantity;
@@ -159,6 +161,8 @@ class VendorSearchBasic extends SearchRecordBasic {
         "permission" => "SearchEnumMultiSelectField",
         "phone" => "SearchStringField",
         "phoneticName" => "SearchStringField",
+        "predConfidence" => "SearchDoubleField",
+        "predictedDays" => "SearchDoubleField",
         "printTransactions" => "SearchBooleanField",
         "purchaseOrderAmount" => "SearchDoubleField",
         "purchaseOrderQuantity" => "SearchDoubleField",

@@ -14,7 +14,7 @@
  * @license    https://raw.githubusercontent.com/ryanwinchester/netsuite-php/master/original/NetSuite%20Application%20Developer%20License%20Agreement.txt
  * @link       http://www.netsuite.com/portal/developers/resources/suitetalk-sample-applications.shtml
  *
- * generated:  2019-06-12 10:27:00 AM PDT
+ * generated:  2020-02-19 09:58:55 AM CST
  */
 
 namespace NetSuite\Classes;
@@ -52,6 +52,7 @@ class ItemSearchRowBasic extends SearchRowBasic {
     public $categoryPreferred;
     public $class;
     public $componentYield;
+    public $consumptionUnit;
     public $contingentRevenueHandling;
     public $copyDescription;
     public $correlatedItem;
@@ -106,6 +107,7 @@ class ItemSearchRowBasic extends SearchRowBasic {
     public $forwardConsumptionDays;
     public $fraudRisk;
     public $froogleProductFeed;
+    public $futureHorizon;
     public $fxCost;
     public $gainLossAccount;
     public $generateAccruals;
@@ -375,6 +377,7 @@ class ItemSearchRowBasic extends SearchRowBasic {
         "categoryPreferred" => "SearchColumnStringField[]",
         "class" => "SearchColumnSelectField[]",
         "componentYield" => "SearchColumnDoubleField[]",
+        "consumptionUnit" => "SearchColumnSelectField[]",
         "contingentRevenueHandling" => "SearchColumnBooleanField[]",
         "copyDescription" => "SearchColumnBooleanField[]",
         "correlatedItem" => "SearchColumnSelectField[]",
@@ -429,6 +432,7 @@ class ItemSearchRowBasic extends SearchRowBasic {
         "forwardConsumptionDays" => "SearchColumnLongField[]",
         "fraudRisk" => "SearchColumnEnumSelectField[]",
         "froogleProductFeed" => "SearchColumnBooleanField[]",
+        "futureHorizon" => "SearchColumnLongField[]",
         "fxCost" => "SearchColumnDoubleField[]",
         "gainLossAccount" => "SearchColumnSelectField[]",
         "generateAccruals" => "SearchColumnBooleanField[]",

@@ -14,7 +14,7 @@
  * @license    https://raw.githubusercontent.com/ryanwinchester/netsuite-php/master/original/NetSuite%20Application%20Developer%20License%20Agreement.txt
  * @link       http://www.netsuite.com/portal/developers/resources/suitetalk-sample-applications.shtml
  *
- * generated:  2019-06-12 10:27:00 AM PDT
+ * generated:  2020-02-19 09:58:55 AM CST
  */
 
 namespace NetSuite\Classes;
@@ -36,6 +36,7 @@ class LocationSearchBasic extends SearchRecordBasic {
     public $internalIdNumber;
     public $isFriday;
     public $isInactive;
+    public $isIncludeInCt;
     public $isMonday;
     public $isOffice;
     public $isSaturday;
@@ -80,6 +81,7 @@ class LocationSearchBasic extends SearchRecordBasic {
         "internalIdNumber" => "SearchLongField",
         "isFriday" => "SearchBooleanField",
         "isInactive" => "SearchBooleanField",
+        "isIncludeInCt" => "SearchBooleanField",
         "isMonday" => "SearchBooleanField",
         "isOffice" => "SearchBooleanField",
         "isSaturday" => "SearchBooleanField",
