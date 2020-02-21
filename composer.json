@@ -18,7 +18,9 @@
     "paragonie/random_compat": ">=1"
   },
   "require-dev": {
-    "phpspec/phpspec": "^2.4"
+    "phpspec/phpspec": "^2.4",
+    "illuminate/config": "^7|^8",
+    "illuminate/support": "^7|^8"
   },
   "suggest": {
         "vlucas/phpdotenv": "Provides loading a .env file for obtaining config variables",
