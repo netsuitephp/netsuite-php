@@ -14,7 +14,7 @@
  * @license    https://raw.githubusercontent.com/ryanwinchester/netsuite-php/master/original/NetSuite%20Application%20Developer%20License%20Agreement.txt
  * @link       http://www.netsuite.com/portal/developers/resources/suitetalk-sample-applications.shtml
  *
- * generated:  2019-06-12 10:27:00 AM PDT
+ * generated:  2020-02-19 09:58:55 AM CST
  */
 
 namespace NetSuite\Classes;
@@ -30,6 +30,8 @@ class InitializeType {
     const creditMemo = "creditMemo";
     const customerPayment = "customerPayment";
     const customerRefund = "customerRefund";
+    const customPurchase = "customPurchase";
+    const customSale = "customSale";
     const depositApplication = "depositApplication";
     const estimate = "estimate";
     const invoice = "invoice";

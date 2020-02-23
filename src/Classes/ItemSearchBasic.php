@@ -14,7 +14,7 @@
  * @license    https://raw.githubusercontent.com/ryanwinchester/netsuite-php/master/original/NetSuite%20Application%20Developer%20License%20Agreement.txt
  * @link       http://www.netsuite.com/portal/developers/resources/suitetalk-sample-applications.shtml
  *
- * generated:  2019-06-12 10:27:00 AM PDT
+ * generated:  2020-02-19 09:58:55 AM CST
  */
 
 namespace NetSuite\Classes;
@@ -50,6 +50,7 @@ class ItemSearchBasic extends SearchRecordBasic {
     public $component;
     public $componentOf;
     public $componentYield;
+    public $consumptionUnit;
     public $contingentRevenueHandling;
     public $copyDescription;
     public $correlatedItem;
@@ -100,6 +101,7 @@ class ItemSearchBasic extends SearchRecordBasic {
     public $forwardConsumptionDays;
     public $fraudRisk;
     public $froogleProductFeed;
+    public $futureHorizon;
     public $fxCost;
     public $generateAccruals;
     public $giftCertAuthCode;
@@ -342,6 +344,7 @@ class ItemSearchBasic extends SearchRecordBasic {
         "component" => "SearchMultiSelectField",
         "componentOf" => "SearchMultiSelectField",
         "componentYield" => "SearchDoubleField",
+        "consumptionUnit" => "SearchMultiSelectField",
         "contingentRevenueHandling" => "SearchBooleanField",
         "copyDescription" => "SearchBooleanField",
         "correlatedItem" => "SearchMultiSelectField",
@@ -392,6 +395,7 @@ class ItemSearchBasic extends SearchRecordBasic {
         "forwardConsumptionDays" => "SearchLongField",
         "fraudRisk" => "SearchEnumMultiSelectField",
         "froogleProductFeed" => "SearchBooleanField",
+        "futureHorizon" => "SearchLongField",
         "fxCost" => "SearchDoubleField",
         "generateAccruals" => "SearchBooleanField",
         "giftCertAuthCode" => "SearchStringField",

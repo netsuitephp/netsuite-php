@@ -14,7 +14,7 @@
  * @license    https://raw.githubusercontent.com/ryanwinchester/netsuite-php/master/original/NetSuite%20Application%20Developer%20License%20Agreement.txt
  * @link       http://www.netsuite.com/portal/developers/resources/suitetalk-sample-applications.shtml
  *
- * generated:  2019-06-12 10:27:00 AM PDT
+ * generated:  2020-02-19 09:58:55 AM CST
  */
 
 namespace NetSuite\Classes;
@@ -97,6 +97,8 @@ class VendorSearchRowBasic extends SearchRowBasic {
     public $permission;
     public $phone;
     public $phoneticName;
+    public $predConfidence;
+    public $predictedDays;
     public $printOnCheckAs;
     public $printTransactions;
     public $purchaseOrderAmount;
@@ -211,6 +213,8 @@ class VendorSearchRowBasic extends SearchRowBasic {
         "permission" => "SearchColumnEnumSelectField[]",
         "phone" => "SearchColumnStringField[]",
         "phoneticName" => "SearchColumnStringField[]",
+        "predConfidence" => "SearchColumnDoubleField[]",
+        "predictedDays" => "SearchColumnDoubleField[]",
         "printOnCheckAs" => "SearchColumnStringField[]",
         "printTransactions" => "SearchColumnBooleanField[]",
         "purchaseOrderAmount" => "SearchColumnDoubleField[]",

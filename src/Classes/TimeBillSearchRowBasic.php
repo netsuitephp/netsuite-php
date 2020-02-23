@@ -14,7 +14,7 @@
  * @license    https://raw.githubusercontent.com/ryanwinchester/netsuite-php/master/original/NetSuite%20Application%20Developer%20License%20Agreement.txt
  * @link       http://www.netsuite.com/portal/developers/resources/suitetalk-sample-applications.shtml
  *
- * generated:  2019-06-12 10:27:00 AM PDT
+ * generated:  2020-02-19 09:58:55 AM CST
  */
 
 namespace NetSuite\Classes;
@@ -52,6 +52,7 @@ class TimeBillSearchRowBasic extends SearchRowBasic {
     public $supervisorApproval;
     public $temporaryLocalJurisdiction;
     public $temporaryStateJurisdiction;
+    public $timeModified;
     public $timeSheet;
     public $type;
     public $customFieldList;
@@ -88,6 +89,7 @@ class TimeBillSearchRowBasic extends SearchRowBasic {
         "supervisorApproval" => "SearchColumnBooleanField[]",
         "temporaryLocalJurisdiction" => "SearchColumnStringField[]",
         "temporaryStateJurisdiction" => "SearchColumnStringField[]",
+        "timeModified" => "SearchColumnBooleanField[]",
         "timeSheet" => "SearchColumnSelectField[]",
         "type" => "SearchColumnEnumSelectField[]",
         "customFieldList" => "SearchColumnCustomFieldList",
