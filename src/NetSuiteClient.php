@@ -37,6 +37,10 @@ class NetSuiteClient
      * @var array
      */
     private $soapHeaders = array();
+    /**
+     * @var \NetSuite\Logger
+     */
+    private $logger;
 
     /**
      * @param array $config
@@ -59,6 +63,10 @@ class NetSuiteClient
             // provided the legacy webservices URL.
             $this->setDataCenterUrl($config);
         }
+        $this->logger = new Logger(
+            isset($this->config['log_path']) ? $this->config['log_path'] : NULL
+        );
+
     }
 
     /**
@@ -391,6 +399,7 @@ class NetSuiteClient
     public function setLogPath($logPath)
     {
         $this->config['log_path'] = $logPath;
+        $this->logger = new Logger($logPath);
     }
 
     /**
@@ -401,10 +410,7 @@ class NetSuiteClient
     private function logSoapCall($operation)
     {
         if (isset($this->config['logging']) && $this->config['logging']) {
-            $logger = new Logger(
-                isset($this->config['log_path']) ? $this->config['log_path'] : null
-            );
-            $logger->logSoapCall($this->client, $operation);
+            $this->logger->logSoapCall($this->client, $operation);
         }
     }
 
