@@ -207,7 +207,7 @@ class ClassSeparator
             }
             // Add a doc comment for each property.
             foreach ($types as $variable_name => $property_type) {
-                $class = preg_replace('/public \$' . $variable_name . '/', "/**\n     * @var $property_type\n     */\n    public \$$variable_name", $class);
+                $class = preg_replace('/public \$' . $variable_name . ';/', "/**\n     * @var $property_type\n     */\n    public \$$variable_name;", $class);
             }
             // Template write the class.
             $filename = base_path() . '/src/Classes/' . $name . '.php';
