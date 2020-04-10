@@ -14,25 +14,67 @@
  * @license    https://raw.githubusercontent.com/ryanwinchester/netsuite-php/master/original/NetSuite%20Application%20Developer%20License%20Agreement.txt
  * @link       http://www.netsuite.com/portal/developers/resources/suitetalk-sample-applications.shtml
  *
- * generated:  2020-02-19 09:58:55 AM CST
+ * generated:  2020-04-10 09:56:55 PM UTC
  */
 
 namespace NetSuite\Classes;
 
 class BomRevisionComponentSearchBasic extends SearchRecordBasic {
+    /**
+     * @var \NetSuite\Classes\SearchDoubleField
+     */
     public $bomQuantity;
+    /**
+     * @var \NetSuite\Classes\SearchMultiSelectField
+     */
     public $bomRevision;
+    /**
+     * @var \NetSuite\Classes\SearchDoubleField
+     */
     public $componentYield;
+    /**
+     * @var \NetSuite\Classes\SearchStringField
+     */
     public $description;
+    /**
+     * @var \NetSuite\Classes\SearchMultiSelectField
+     */
     public $internalId;
+    /**
+     * @var \NetSuite\Classes\SearchLongField
+     */
     public $internalIdNumber;
+    /**
+     * @var \NetSuite\Classes\SearchMultiSelectField
+     */
     public $item;
+    /**
+     * @var \NetSuite\Classes\SearchEnumMultiSelectField
+     */
     public $itemSource;
+    /**
+     * @var \NetSuite\Classes\SearchStringField
+     */
     public $itemSubtype;
+    /**
+     * @var \NetSuite\Classes\SearchMultiSelectField
+     */
     public $itemType;
+    /**
+     * @var \NetSuite\Classes\SearchLongField
+     */
     public $lineId;
+    /**
+     * @var \NetSuite\Classes\SearchDoubleField
+     */
     public $quantity;
+    /**
+     * @var \NetSuite\Classes\SearchStringField
+     */
     public $units;
+    /**
+     * @var \NetSuite\Classes\SearchDoubleField
+     */
     public $weight;
     static $paramtypesmap = array(
         "bomQuantity" => "SearchDoubleField",

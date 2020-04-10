@@ -14,22 +14,55 @@
  * @license    https://raw.githubusercontent.com/ryanwinchester/netsuite-php/master/original/NetSuite%20Application%20Developer%20License%20Agreement.txt
  * @link       http://www.netsuite.com/portal/developers/resources/suitetalk-sample-applications.shtml
  *
- * generated:  2020-02-19 09:58:55 AM CST
+ * generated:  2020-04-10 09:56:55 PM UTC
  */
 
 namespace NetSuite\Classes;
 
 class InstallmentSearchRowBasic extends SearchRowBasic {
+    /**
+     * @var \NetSuite\Classes\SearchColumnDoubleField[]
+     */
     public $amount;
+    /**
+     * @var \NetSuite\Classes\SearchColumnDoubleField[]
+     */
     public $amountPaid;
+    /**
+     * @var \NetSuite\Classes\SearchColumnDoubleField[]
+     */
     public $amountRemaining;
+    /**
+     * @var \NetSuite\Classes\SearchColumnLongField[]
+     */
     public $daysOverdue;
+    /**
+     * @var \NetSuite\Classes\SearchColumnDateField[]
+     */
     public $dueDate;
+    /**
+     * @var \NetSuite\Classes\SearchColumnDoubleField[]
+     */
     public $fxAmount;
+    /**
+     * @var \NetSuite\Classes\SearchColumnDoubleField[]
+     */
     public $fxAmountPaid;
+    /**
+     * @var \NetSuite\Classes\SearchColumnDoubleField[]
+     */
     public $fxAmountRemaining;
+    /**
+     * @var \NetSuite\Classes\SearchColumnLongField[]
+     */
     public $installmentNumber;
+    /**
+     * @var \NetSuite\Classes\SearchColumnStringField[]
+     */
     public $status;
+    /**
+     * @var \NetSuite\Classes\SearchColumnCustomFieldList
+     */
     public $customFieldList;
     static $paramtypesmap = array(
         "amount" => "SearchColumnDoubleField[]",

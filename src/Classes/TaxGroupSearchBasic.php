@@ -14,33 +14,99 @@
  * @license    https://raw.githubusercontent.com/ryanwinchester/netsuite-php/master/original/NetSuite%20Application%20Developer%20License%20Agreement.txt
  * @link       http://www.netsuite.com/portal/developers/resources/suitetalk-sample-applications.shtml
  *
- * generated:  2020-02-19 09:58:55 AM CST
+ * generated:  2020-04-10 09:56:55 PM UTC
  */
 
 namespace NetSuite\Classes;
 
 class TaxGroupSearchBasic extends SearchRecordBasic {
+    /**
+     * @var \NetSuite\Classes\SearchStringField
+     */
     public $city;
+    /**
+     * @var \NetSuite\Classes\SearchEnumMultiSelectField
+     */
     public $country;
+    /**
+     * @var \NetSuite\Classes\SearchStringField
+     */
     public $county;
+    /**
+     * @var \NetSuite\Classes\SearchStringField
+     */
     public $description;
+    /**
+     * @var \NetSuite\Classes\SearchMultiSelectField
+     */
     public $externalId;
+    /**
+     * @var \NetSuite\Classes\SearchStringField
+     */
     public $externalIdString;
+    /**
+     * @var \NetSuite\Classes\SearchBooleanField
+     */
     public $includeChildren;
+    /**
+     * @var \NetSuite\Classes\SearchMultiSelectField
+     */
     public $internalId;
+    /**
+     * @var \NetSuite\Classes\SearchLongField
+     */
     public $internalIdNumber;
+    /**
+     * @var \NetSuite\Classes\SearchBooleanField
+     */
     public $isDefault;
+    /**
+     * @var \NetSuite\Classes\SearchBooleanField
+     */
     public $isInactive;
+    /**
+     * @var \NetSuite\Classes\SearchStringField
+     */
     public $itemId;
+    /**
+     * @var \NetSuite\Classes\SearchBooleanField
+     */
     public $piggyBack;
+    /**
+     * @var \NetSuite\Classes\SearchDoubleField
+     */
     public $rate;
+    /**
+     * @var \NetSuite\Classes\SearchMultiSelectField
+     */
     public $state;
+    /**
+     * @var \NetSuite\Classes\SearchMultiSelectField
+     */
     public $subsidiary;
+    /**
+     * @var \NetSuite\Classes\SearchMultiSelectField
+     */
     public $taxItem1;
+    /**
+     * @var \NetSuite\Classes\SearchMultiSelectField
+     */
     public $taxItem2;
+    /**
+     * @var \NetSuite\Classes\SearchMultiSelectField
+     */
     public $taxType;
+    /**
+     * @var \NetSuite\Classes\SearchDoubleField
+     */
     public $unitPrice1;
+    /**
+     * @var \NetSuite\Classes\SearchDoubleField
+     */
     public $unitPrice2;
+    /**
+     * @var \NetSuite\Classes\SearchStringField
+     */
     public $zip;
     static $paramtypesmap = array(
         "city" => "SearchStringField",

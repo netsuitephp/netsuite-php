@@ -14,19 +14,43 @@
  * @license    https://raw.githubusercontent.com/ryanwinchester/netsuite-php/master/original/NetSuite%20Application%20Developer%20License%20Agreement.txt
  * @link       http://www.netsuite.com/portal/developers/resources/suitetalk-sample-applications.shtml
  *
- * generated:  2020-02-19 09:58:55 AM CST
+ * generated:  2020-04-10 09:56:55 PM UTC
  */
 
 namespace NetSuite\Classes;
 
 class ItemAccountMappingSearch extends SearchRecord {
+    /**
+     * @var \NetSuite\Classes\ItemAccountMappingSearchBasic
+     */
     public $basic;
+    /**
+     * @var \NetSuite\Classes\ClassificationSearchBasic
+     */
     public $classJoin;
+    /**
+     * @var \NetSuite\Classes\DepartmentSearchBasic
+     */
     public $departmentJoin;
+    /**
+     * @var \NetSuite\Classes\AccountSearchBasic
+     */
     public $destinationAccountJoin;
+    /**
+     * @var \NetSuite\Classes\LocationSearchBasic
+     */
     public $locationJoin;
+    /**
+     * @var \NetSuite\Classes\AccountSearchBasic
+     */
     public $sourceAccountJoin;
+    /**
+     * @var \NetSuite\Classes\SubsidiarySearchBasic
+     */
     public $subsidiaryJoin;
+    /**
+     * @var \NetSuite\Classes\CustomSearchJoin[]
+     */
     public $customSearchJoin;
     static $paramtypesmap = array(
         "basic" => "ItemAccountMappingSearchBasic",

@@ -14,87 +14,315 @@
  * @license    https://raw.githubusercontent.com/ryanwinchester/netsuite-php/master/original/NetSuite%20Application%20Developer%20License%20Agreement.txt
  * @link       http://www.netsuite.com/portal/developers/resources/suitetalk-sample-applications.shtml
  *
- * generated:  2020-02-19 09:58:55 AM CST
+ * generated:  2020-04-10 09:56:55 PM UTC
  */
 
 namespace NetSuite\Classes;
 
 class Opportunity extends Record {
+    /**
+     * @var \NetSuite\Classes\RecordRef
+     */
     public $customForm;
+    /**
+     * @var \NetSuite\Classes\RecordRef
+     */
     public $currency;
+    /**
+     * @var float
+     */
     public $estimatedBudget;
+    /**
+     * @var \NetSuite\Classes\RecordRef
+     */
     public $entity;
+    /**
+     * @var \NetSuite\Classes\RecordRef
+     */
     public $job;
+    /**
+     * @var string
+     */
     public $title;
+    /**
+     * @var string
+     */
     public $tranId;
+    /**
+     * @var \NetSuite\Classes\RecordRef
+     */
     public $entityTaxRegNum;
+    /**
+     * @var string
+     */
     public $taxPointDate;
+    /**
+     * @var float
+     */
     public $oneTime;
+    /**
+     * @var float
+     */
     public $recurWeekly;
+    /**
+     * @var float
+     */
     public $recurMonthly;
+    /**
+     * @var float
+     */
     public $recurQuarterly;
+    /**
+     * @var float
+     */
     public $recurAnnually;
+    /**
+     * @var string
+     */
     public $source;
+    /**
+     * @var \NetSuite\Classes\RecordRef
+     */
     public $salesRep;
+    /**
+     * @var string
+     */
     public $contribPct;
+    /**
+     * @var \NetSuite\Classes\RecordRef
+     */
     public $partner;
+    /**
+     * @var \NetSuite\Classes\RecordRef
+     */
     public $salesGroup;
+    /**
+     * @var boolean
+     */
     public $syncSalesTeams;
+    /**
+     * @var \NetSuite\Classes\RecordRef
+     */
     public $leadSource;
+    /**
+     * @var \NetSuite\Classes\RecordRef
+     */
     public $entityStatus;
+    /**
+     * @var float
+     */
     public $probability;
+    /**
+     * @var string
+     */
     public $tranDate;
+    /**
+     * @var string
+     */
     public $expectedCloseDate;
+    /**
+     * @var integer
+     */
     public $daysOpen;
+    /**
+     * @var \NetSuite\Classes\RecordRef
+     */
     public $forecastType;
+    /**
+     * @var string
+     */
     public $currencyName;
+    /**
+     * @var float
+     */
     public $exchangeRate;
+    /**
+     * @var float
+     */
     public $projectedTotal;
+    /**
+     * @var float
+     */
     public $rangeLow;
+    /**
+     * @var float
+     */
     public $rangeHigh;
+    /**
+     * @var float
+     */
     public $projAltSalesAmt;
+    /**
+     * @var float
+     */
     public $altSalesRangeLow;
+    /**
+     * @var float
+     */
     public $altSalesRangeHigh;
+    /**
+     * @var float
+     */
     public $weightedTotal;
+    /**
+     * @var string
+     */
     public $actionItem;
+    /**
+     * @var \NetSuite\Classes\RecordRef
+     */
     public $winLossReason;
+    /**
+     * @var string
+     */
     public $memo;
+    /**
+     * @var float
+     */
     public $taxTotal;
+    /**
+     * @var boolean
+     */
     public $isBudgetApproved;
+    /**
+     * @var float
+     */
     public $tax2Total;
+    /**
+     * @var \NetSuite\Classes\RecordRef
+     */
     public $salesReadiness;
+    /**
+     * @var float
+     */
     public $totalCostEstimate;
+    /**
+     * @var \NetSuite\Classes\RecordRef
+     */
     public $buyingTimeFrame;
+    /**
+     * @var float
+     */
     public $estGrossProfit;
+    /**
+     * @var \NetSuite\Classes\RecordRef
+     */
     public $buyingReason;
+    /**
+     * @var float
+     */
     public $estGrossProfitPercent;
+    /**
+     * @var \NetSuite\Classes\Address
+     */
     public $billingAddress;
+    /**
+     * @var \NetSuite\Classes\RecordRef
+     */
     public $billAddressList;
+    /**
+     * @var \NetSuite\Classes\Address
+     */
     public $shippingAddress;
+    /**
+     * @var boolean
+     */
     public $shipIsResidential;
+    /**
+     * @var \NetSuite\Classes\RecordRef
+     */
     public $shipAddressList;
+    /**
+     * @var \NetSuite\Classes\RecordRef
+     */
     public $class;
+    /**
+     * @var string
+     */
     public $closeDate;
+    /**
+     * @var string
+     */
     public $createdDate;
+    /**
+     * @var string
+     */
     public $lastModifiedDate;
+    /**
+     * @var \NetSuite\Classes\RecordRef
+     */
     public $nexus;
+    /**
+     * @var \NetSuite\Classes\RecordRef
+     */
     public $subsidiaryTaxRegNum;
+    /**
+     * @var boolean
+     */
     public $taxRegOverride;
+    /**
+     * @var boolean
+     */
     public $taxDetailsOverride;
+    /**
+     * @var \NetSuite\Classes\RecordRef
+     */
     public $department;
+    /**
+     * @var \NetSuite\Classes\RecordRef
+     */
     public $location;
+    /**
+     * @var \NetSuite\Classes\RecordRef
+     */
     public $subsidiary;
+    /**
+     * @var string
+     */
     public $status;
+    /**
+     * @var string
+     */
     public $vatRegNum;
+    /**
+     * @var boolean
+     */
     public $syncPartnerTeams;
+    /**
+     * @var \NetSuite\Classes\OpportunitySalesTeamList
+     */
     public $salesTeamList;
+    /**
+     * @var \NetSuite\Classes\OpportunityPartnersList
+     */
     public $partnersList;
+    /**
+     * @var \NetSuite\Classes\OpportunityItemList
+     */
     public $itemList;
+    /**
+     * @var \NetSuite\Classes\OpportunityCompetitorsList
+     */
     public $competitorsList;
+    /**
+     * @var \NetSuite\Classes\AccountingBookDetailList
+     */
     public $accountingBookDetailList;
+    /**
+     * @var \NetSuite\Classes\TaxDetailsList
+     */
     public $taxDetailsList;
+    /**
+     * @var \NetSuite\Classes\CustomFieldList
+     */
     public $customFieldList;
+    /**
+     * @var string
+     */
     public $internalId;
+    /**
+     * @var string
+     */
     public $externalId;
     static $paramtypesmap = array(
         "customForm" => "RecordRef",

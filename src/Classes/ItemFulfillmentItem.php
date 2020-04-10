@@ -14,35 +14,107 @@
  * @license    https://raw.githubusercontent.com/ryanwinchester/netsuite-php/master/original/NetSuite%20Application%20Developer%20License%20Agreement.txt
  * @link       http://www.netsuite.com/portal/developers/resources/suitetalk-sample-applications.shtml
  *
- * generated:  2020-02-19 09:58:55 AM CST
+ * generated:  2020-04-10 09:56:55 PM UTC
  */
 
 namespace NetSuite\Classes;
 
 class ItemFulfillmentItem {
+    /**
+     * @var string
+     */
     public $jobName;
+    /**
+     * @var boolean
+     */
     public $itemReceive;
+    /**
+     * @var string
+     */
     public $itemName;
+    /**
+     * @var string
+     */
     public $description;
+    /**
+     * @var \NetSuite\Classes\RecordRef
+     */
     public $department;
+    /**
+     * @var \NetSuite\Classes\RecordRef
+     */
     public $class;
+    /**
+     * @var \NetSuite\Classes\RecordRef
+     */
     public $location;
+    /**
+     * @var float
+     */
     public $onHand;
+    /**
+     * @var float
+     */
     public $quantity;
+    /**
+     * @var string
+     */
     public $unitsDisplay;
+    /**
+     * @var string
+     */
     public $createPo;
+    /**
+     * @var \NetSuite\Classes\InventoryDetail
+     */
     public $inventoryDetail;
+    /**
+     * @var string
+     */
     public $binNumbers;
+    /**
+     * @var string
+     */
     public $serialNumbers;
+    /**
+     * @var string
+     */
     public $poNum;
+    /**
+     * @var \NetSuite\Classes\RecordRef
+     */
     public $item;
+    /**
+     * @var integer
+     */
     public $orderLine;
+    /**
+     * @var float
+     */
     public $quantityRemaining;
+    /**
+     * @var \NetSuite\Classes\CustomFieldList
+     */
     public $options;
+    /**
+     * @var integer
+     */
     public $shipGroup;
+    /**
+     * @var boolean
+     */
     public $itemIsFulfilled;
+    /**
+     * @var \NetSuite\Classes\RecordRef
+     */
     public $shipAddress;
+    /**
+     * @var \NetSuite\Classes\RecordRef
+     */
     public $shipMethod;
+    /**
+     * @var \NetSuite\Classes\CustomFieldList
+     */
     public $customFieldList;
     static $paramtypesmap = array(
         "jobName" => "string",

@@ -14,26 +14,71 @@
  * @license    https://raw.githubusercontent.com/ryanwinchester/netsuite-php/master/original/NetSuite%20Application%20Developer%20License%20Agreement.txt
  * @link       http://www.netsuite.com/portal/developers/resources/suitetalk-sample-applications.shtml
  *
- * generated:  2020-02-19 09:58:55 AM CST
+ * generated:  2020-04-10 09:56:55 PM UTC
  */
 
 namespace NetSuite\Classes;
 
 class PurchaseRequisitionExpense {
+    /**
+     * @var integer
+     */
     public $line;
+    /**
+     * @var \NetSuite\Classes\RecordRef
+     */
     public $category;
+    /**
+     * @var \NetSuite\Classes\RecordRef
+     */
     public $location;
+    /**
+     * @var boolean
+     */
     public $isClosed;
+    /**
+     * @var \NetSuite\Classes\RecordRef
+     */
     public $account;
+    /**
+     * @var \NetSuite\Classes\RecordRef
+     */
     public $poVendor;
+    /**
+     * @var float
+     */
     public $estimatedAmount;
+    /**
+     * @var float
+     */
     public $amount;
+    /**
+     * @var string
+     */
     public $memo;
+    /**
+     * @var \NetSuite\Classes\RecordRef
+     */
     public $department;
+    /**
+     * @var \NetSuite\Classes\RecordRef
+     */
     public $class;
+    /**
+     * @var \NetSuite\Classes\RecordRef
+     */
     public $customer;
+    /**
+     * @var \NetSuite\Classes\RecordRefList
+     */
     public $linkedOrderList;
+    /**
+     * @var string
+     */
     public $linkedOrderStatus;
+    /**
+     * @var boolean
+     */
     public $isBillable;
     static $paramtypesmap = array(
         "line" => "integer",

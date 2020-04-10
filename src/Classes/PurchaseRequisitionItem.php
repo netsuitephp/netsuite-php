@@ -14,38 +14,119 @@
  * @license    https://raw.githubusercontent.com/ryanwinchester/netsuite-php/master/original/NetSuite%20Application%20Developer%20License%20Agreement.txt
  * @link       http://www.netsuite.com/portal/developers/resources/suitetalk-sample-applications.shtml
  *
- * generated:  2020-02-19 09:58:55 AM CST
+ * generated:  2020-04-10 09:56:55 PM UTC
  */
 
 namespace NetSuite\Classes;
 
 class PurchaseRequisitionItem {
+    /**
+     * @var integer
+     */
     public $line;
+    /**
+     * @var \NetSuite\Classes\RecordRef
+     */
     public $item;
+    /**
+     * @var string
+     */
     public $vendorName;
+    /**
+     * @var \NetSuite\Classes\RecordRef
+     */
     public $poVendor;
+    /**
+     * @var float
+     */
     public $quantity;
+    /**
+     * @var \NetSuite\Classes\RecordRef
+     */
     public $units;
+    /**
+     * @var string
+     */
     public $serialNumbers;
+    /**
+     * @var \NetSuite\Classes\InventoryDetail
+     */
     public $inventoryDetail;
+    /**
+     * @var string
+     */
     public $description;
+    /**
+     * @var float
+     */
     public $estimatedRate;
+    /**
+     * @var float
+     */
     public $estimatedAmount;
+    /**
+     * @var string
+     */
     public $rate;
+    /**
+     * @var float
+     */
     public $amount;
+    /**
+     * @var \NetSuite\Classes\RecordRef
+     */
     public $taxCode;
+    /**
+     * @var float
+     */
     public $taxRate1;
+    /**
+     * @var float
+     */
     public $taxRate2;
+    /**
+     * @var float
+     */
     public $grossAmt;
+    /**
+     * @var \NetSuite\Classes\CustomFieldList
+     */
     public $options;
+    /**
+     * @var \NetSuite\Classes\RecordRef
+     */
     public $department;
+    /**
+     * @var \NetSuite\Classes\RecordRef
+     */
     public $class;
+    /**
+     * @var \NetSuite\Classes\RecordRef
+     */
     public $customer;
+    /**
+     * @var boolean
+     */
     public $isBillable;
+    /**
+     * @var \NetSuite\Classes\RecordRefList
+     */
     public $linkedOrderList;
+    /**
+     * @var string
+     */
     public $linkedOrderStatus;
+    /**
+     * @var string
+     */
     public $expectedReceiptDate;
+    /**
+     * @var boolean
+     */
     public $isClosed;
+    /**
+     * @var boolean
+     */
     public $expandItemGroup;
     static $paramtypesmap = array(
         "line" => "integer",

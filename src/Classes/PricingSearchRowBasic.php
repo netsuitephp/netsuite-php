@@ -14,21 +14,51 @@
  * @license    https://raw.githubusercontent.com/ryanwinchester/netsuite-php/master/original/NetSuite%20Application%20Developer%20License%20Agreement.txt
  * @link       http://www.netsuite.com/portal/developers/resources/suitetalk-sample-applications.shtml
  *
- * generated:  2020-02-19 09:58:55 AM CST
+ * generated:  2020-04-10 09:56:55 PM UTC
  */
 
 namespace NetSuite\Classes;
 
 class PricingSearchRowBasic extends SearchRowBasic {
+    /**
+     * @var \NetSuite\Classes\SearchColumnSelectField[]
+     */
     public $currency;
+    /**
+     * @var \NetSuite\Classes\SearchColumnSelectField[]
+     */
     public $customer;
+    /**
+     * @var \NetSuite\Classes\SearchColumnSelectField[]
+     */
     public $internalId;
+    /**
+     * @var \NetSuite\Classes\SearchColumnSelectField[]
+     */
     public $item;
+    /**
+     * @var \NetSuite\Classes\SearchColumnDoubleField[]
+     */
     public $maximumQuantity;
+    /**
+     * @var \NetSuite\Classes\SearchColumnDoubleField[]
+     */
     public $minimumQuantity;
+    /**
+     * @var \NetSuite\Classes\SearchColumnSelectField[]
+     */
     public $priceLevel;
+    /**
+     * @var \NetSuite\Classes\SearchColumnStringField[]
+     */
     public $quantityRange;
+    /**
+     * @var \NetSuite\Classes\SearchColumnSelectField[]
+     */
     public $saleUnit;
+    /**
+     * @var \NetSuite\Classes\SearchColumnDoubleField[]
+     */
     public $unitPrice;
     static $paramtypesmap = array(
         "currency" => "SearchColumnSelectField[]",

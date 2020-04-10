@@ -14,19 +14,43 @@
  * @license    https://raw.githubusercontent.com/ryanwinchester/netsuite-php/master/original/NetSuite%20Application%20Developer%20License%20Agreement.txt
  * @link       http://www.netsuite.com/portal/developers/resources/suitetalk-sample-applications.shtml
  *
- * generated:  2020-02-19 09:58:55 AM CST
+ * generated:  2020-04-10 09:56:55 PM UTC
  */
 
 namespace NetSuite\Classes;
 
 class GetSelectValueFieldDescription {
+    /**
+     * @var \NetSuite\Classes\RecordType
+     */
     public $recordType;
+    /**
+     * @var \NetSuite\Classes\RecordRef
+     */
     public $customRecordType;
+    /**
+     * @var \NetSuite\Classes\RecordRef
+     */
     public $customTransactionType;
+    /**
+     * @var string
+     */
     public $sublist;
+    /**
+     * @var string
+     */
     public $field;
+    /**
+     * @var \NetSuite\Classes\RecordRef
+     */
     public $customForm;
+    /**
+     * @var \NetSuite\Classes\GetSelectValueFilter
+     */
     public $filter;
+    /**
+     * @var \NetSuite\Classes\GetSelectFilterByFieldValueList
+     */
     public $filterByValueList;
     static $paramtypesmap = array(
         "recordType" => "RecordType",

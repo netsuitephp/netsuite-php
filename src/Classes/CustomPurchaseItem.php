@@ -14,37 +14,115 @@
  * @license    https://raw.githubusercontent.com/ryanwinchester/netsuite-php/master/original/NetSuite%20Application%20Developer%20License%20Agreement.txt
  * @link       http://www.netsuite.com/portal/developers/resources/suitetalk-sample-applications.shtml
  *
- * generated:  2020-02-19 09:58:55 AM CST
+ * generated:  2020-04-10 09:56:55 PM UTC
  */
 
 namespace NetSuite\Classes;
 
 class CustomPurchaseItem {
+    /**
+     * @var \NetSuite\Classes\RecordRef
+     */
     public $item;
+    /**
+     * @var string
+     */
     public $vendorName;
+    /**
+     * @var integer
+     */
     public $line;
+    /**
+     * @var float
+     */
     public $quantity;
+    /**
+     * @var \NetSuite\Classes\RecordRef
+     */
     public $units;
+    /**
+     * @var \NetSuite\Classes\InventoryDetail
+     */
     public $inventoryDetail;
+    /**
+     * @var string
+     */
     public $description;
+    /**
+     * @var string
+     */
     public $serialNumbers;
+    /**
+     * @var string
+     */
     public $binNumbers;
+    /**
+     * @var float
+     */
     public $grossAmt;
+    /**
+     * @var string
+     */
     public $rate;
+    /**
+     * @var float
+     */
     public $amount;
+    /**
+     * @var \NetSuite\Classes\CustomFieldList
+     */
     public $options;
+    /**
+     * @var \NetSuite\Classes\RecordRef
+     */
     public $department;
+    /**
+     * @var \NetSuite\Classes\RecordRef
+     */
     public $class;
+    /**
+     * @var \NetSuite\Classes\RecordRef
+     */
     public $location;
+    /**
+     * @var \NetSuite\Classes\RecordRef
+     */
     public $customer;
+    /**
+     * @var boolean
+     */
     public $isBillable;
+    /**
+     * @var \NetSuite\Classes\TransactionBillVarianceStatus
+     */
     public $billVarianceStatus;
+    /**
+     * @var \NetSuite\Classes\RecordRef
+     */
     public $amortizationSched;
+    /**
+     * @var string
+     */
     public $amortizStartDate;
+    /**
+     * @var string
+     */
     public $amortizationEndDate;
+    /**
+     * @var string
+     */
     public $amortizationResidual;
+    /**
+     * @var float
+     */
     public $taxAmount;
+    /**
+     * @var string
+     */
     public $taxDetailsReference;
+    /**
+     * @var \NetSuite\Classes\CustomFieldList
+     */
     public $customFieldList;
     static $paramtypesmap = array(
         "item" => "RecordRef",

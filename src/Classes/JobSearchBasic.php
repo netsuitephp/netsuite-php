@@ -14,96 +14,351 @@
  * @license    https://raw.githubusercontent.com/ryanwinchester/netsuite-php/master/original/NetSuite%20Application%20Developer%20License%20Agreement.txt
  * @link       http://www.netsuite.com/portal/developers/resources/suitetalk-sample-applications.shtml
  *
- * generated:  2020-02-19 09:58:55 AM CST
+ * generated:  2020-04-10 09:56:55 PM UTC
  */
 
 namespace NetSuite\Classes;
 
 class JobSearchBasic extends SearchRecordBasic {
+    /**
+     * @var \NetSuite\Classes\SearchStringField
+     */
     public $accountNumber;
+    /**
+     * @var \NetSuite\Classes\SearchDoubleField
+     */
     public $actualTime;
+    /**
+     * @var \NetSuite\Classes\SearchStringField
+     */
     public $address;
+    /**
+     * @var \NetSuite\Classes\SearchStringField
+     */
     public $addressee;
+    /**
+     * @var \NetSuite\Classes\SearchStringField
+     */
     public $addressLabel;
+    /**
+     * @var \NetSuite\Classes\SearchStringField
+     */
     public $addressPhone;
+    /**
+     * @var \NetSuite\Classes\SearchBooleanField
+     */
     public $allocatePayrollExpenses;
+    /**
+     * @var \NetSuite\Classes\SearchBooleanField
+     */
     public $allowAllResourcesForTasks;
+    /**
+     * @var \NetSuite\Classes\SearchBooleanField
+     */
     public $allowExpenses;
+    /**
+     * @var \NetSuite\Classes\SearchBooleanField
+     */
     public $allowTime;
+    /**
+     * @var \NetSuite\Classes\SearchBooleanField
+     */
     public $applyProjectExpenseTypeToAll;
+    /**
+     * @var \NetSuite\Classes\SearchStringField
+     */
     public $attention;
+    /**
+     * @var \NetSuite\Classes\SearchMultiSelectField
+     */
     public $billingSchedule;
+    /**
+     * @var \NetSuite\Classes\SearchDateField
+     */
     public $calculatedEndDate;
+    /**
+     * @var \NetSuite\Classes\SearchDateField
+     */
     public $calculatedEndDateBaseline;
+    /**
+     * @var \NetSuite\Classes\SearchMultiSelectField
+     */
     public $category;
+    /**
+     * @var \NetSuite\Classes\SearchStringField
+     */
     public $city;
+    /**
+     * @var \NetSuite\Classes\SearchStringField
+     */
     public $comments;
+    /**
+     * @var \NetSuite\Classes\SearchStringField
+     */
     public $contact;
+    /**
+     * @var \NetSuite\Classes\SearchEnumMultiSelectField
+     */
     public $country;
+    /**
+     * @var \NetSuite\Classes\SearchStringField
+     */
     public $county;
+    /**
+     * @var \NetSuite\Classes\SearchMultiSelectField
+     */
     public $customer;
+    /**
+     * @var \NetSuite\Classes\SearchDateField
+     */
     public $dateCreated;
+    /**
+     * @var \NetSuite\Classes\SearchMultiSelectField
+     */
     public $defaultTaxReg;
+    /**
+     * @var \NetSuite\Classes\SearchStringField
+     */
     public $defaultTaxRegText;
+    /**
+     * @var \NetSuite\Classes\SearchStringField
+     */
     public $email;
+    /**
+     * @var \NetSuite\Classes\SearchDateField
+     */
     public $endDate;
+    /**
+     * @var \NetSuite\Classes\SearchStringField
+     */
     public $entityId;
+    /**
+     * @var \NetSuite\Classes\SearchDoubleField
+     */
     public $estCost;
+    /**
+     * @var \NetSuite\Classes\SearchDateField
+     */
     public $estEndDate;
+    /**
+     * @var \NetSuite\Classes\SearchDoubleField
+     */
     public $estimatedGrossProfit;
+    /**
+     * @var \NetSuite\Classes\SearchDoubleField
+     */
     public $estimatedGrossProfitPercent;
+    /**
+     * @var \NetSuite\Classes\SearchDoubleField
+     */
     public $estimatedLaborCost;
+    /**
+     * @var \NetSuite\Classes\SearchDoubleField
+     */
     public $estimatedLaborCostBaseline;
+    /**
+     * @var \NetSuite\Classes\SearchDoubleField
+     */
     public $estimatedLaborRevenue;
+    /**
+     * @var \NetSuite\Classes\SearchDoubleField
+     */
     public $estimatedTime;
+    /**
+     * @var \NetSuite\Classes\SearchDoubleField
+     */
     public $estimatedTimeOverride;
+    /**
+     * @var \NetSuite\Classes\SearchDoubleField
+     */
     public $estimatedTimeOverrideBaseline;
+    /**
+     * @var \NetSuite\Classes\SearchDoubleField
+     */
     public $estRevenue;
+    /**
+     * @var \NetSuite\Classes\SearchMultiSelectField
+     */
     public $externalId;
+    /**
+     * @var \NetSuite\Classes\SearchStringField
+     */
     public $externalIdString;
+    /**
+     * @var \NetSuite\Classes\SearchStringField
+     */
     public $fax;
+    /**
+     * @var \NetSuite\Classes\SearchBooleanField
+     */
     public $giveAccess;
+    /**
+     * @var \NetSuite\Classes\SearchEnumMultiSelectField
+     */
     public $globalSubscriptionStatus;
+    /**
+     * @var \NetSuite\Classes\SearchStringField
+     */
     public $image;
+    /**
+     * @var \NetSuite\Classes\SearchBooleanField
+     */
     public $includeCrmTasksInTotals;
+    /**
+     * @var \NetSuite\Classes\SearchMultiSelectField
+     */
     public $internalId;
+    /**
+     * @var \NetSuite\Classes\SearchLongField
+     */
     public $internalIdNumber;
+    /**
+     * @var \NetSuite\Classes\SearchBooleanField
+     */
     public $isDefaultBilling;
+    /**
+     * @var \NetSuite\Classes\SearchBooleanField
+     */
     public $isDefaultShipping;
+    /**
+     * @var \NetSuite\Classes\SearchBooleanField
+     */
     public $isExemptTime;
+    /**
+     * @var \NetSuite\Classes\SearchBooleanField
+     */
     public $isInactive;
+    /**
+     * @var \NetSuite\Classes\SearchBooleanField
+     */
     public $isProductiveTime;
+    /**
+     * @var \NetSuite\Classes\SearchBooleanField
+     */
     public $isUtilizedTime;
+    /**
+     * @var \NetSuite\Classes\SearchEnumMultiSelectField
+     */
     public $jobBillingType;
+    /**
+     * @var \NetSuite\Classes\SearchMultiSelectField
+     */
     public $jobItem;
+    /**
+     * @var \NetSuite\Classes\SearchDoubleField
+     */
     public $jobPrice;
+    /**
+     * @var \NetSuite\Classes\SearchMultiSelectField
+     */
     public $jobResource;
+    /**
+     * @var \NetSuite\Classes\SearchMultiSelectField
+     */
     public $jobResourceRole;
+    /**
+     * @var \NetSuite\Classes\SearchEnumMultiSelectField
+     */
     public $language;
+    /**
+     * @var \NetSuite\Classes\SearchDateField
+     */
     public $lastBaselineDate;
+    /**
+     * @var \NetSuite\Classes\SearchDateField
+     */
     public $lastModifiedDate;
+    /**
+     * @var \NetSuite\Classes\SearchEnumMultiSelectField
+     */
     public $level;
+    /**
+     * @var \NetSuite\Classes\SearchBooleanField
+     */
     public $limitTimeToAssignees;
+    /**
+     * @var \NetSuite\Classes\SearchBooleanField
+     */
     public $materializeTime;
+    /**
+     * @var \NetSuite\Classes\SearchMultiSelectField
+     */
     public $parent;
+    /**
+     * @var \NetSuite\Classes\SearchLongField
+     */
     public $pctComplete;
+    /**
+     * @var \NetSuite\Classes\SearchLongField
+     */
     public $percentTimeComplete;
+    /**
+     * @var \NetSuite\Classes\SearchEnumMultiSelectField
+     */
     public $permission;
+    /**
+     * @var \NetSuite\Classes\SearchStringField
+     */
     public $phone;
+    /**
+     * @var \NetSuite\Classes\SearchStringField
+     */
     public $phoneticName;
+    /**
+     * @var \NetSuite\Classes\SearchDateField
+     */
     public $projectedEndDateBaseline;
+    /**
+     * @var \NetSuite\Classes\SearchMultiSelectField
+     */
     public $projectExpenseType;
+    /**
+     * @var \NetSuite\Classes\SearchMultiSelectField
+     */
     public $revRecForecastRule;
+    /**
+     * @var \NetSuite\Classes\SearchDateField
+     */
     public $startDate;
+    /**
+     * @var \NetSuite\Classes\SearchDateField
+     */
     public $startDateBaseline;
+    /**
+     * @var \NetSuite\Classes\SearchStringField
+     */
     public $state;
+    /**
+     * @var \NetSuite\Classes\SearchMultiSelectField
+     */
     public $status;
+    /**
+     * @var \NetSuite\Classes\SearchMultiSelectField
+     */
     public $subsidiary;
+    /**
+     * @var \NetSuite\Classes\SearchMultiSelectField
+     */
     public $timeApproval;
+    /**
+     * @var \NetSuite\Classes\SearchDoubleField
+     */
     public $timeRemaining;
+    /**
+     * @var \NetSuite\Classes\SearchMultiSelectField
+     */
     public $type;
+    /**
+     * @var \NetSuite\Classes\SearchBooleanField
+     */
     public $usePercentCompleteOverride;
+    /**
+     * @var \NetSuite\Classes\SearchStringField
+     */
     public $zipCode;
+    /**
+     * @var \NetSuite\Classes\SearchCustomFieldList
+     */
     public $customFieldList;
     static $paramtypesmap = array(
         "accountNumber" => "SearchStringField",

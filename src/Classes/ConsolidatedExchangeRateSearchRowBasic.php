@@ -14,25 +14,67 @@
  * @license    https://raw.githubusercontent.com/ryanwinchester/netsuite-php/master/original/NetSuite%20Application%20Developer%20License%20Agreement.txt
  * @link       http://www.netsuite.com/portal/developers/resources/suitetalk-sample-applications.shtml
  *
- * generated:  2020-02-19 09:58:55 AM CST
+ * generated:  2020-04-10 09:56:55 PM UTC
  */
 
 namespace NetSuite\Classes;
 
 class ConsolidatedExchangeRateSearchRowBasic extends SearchRowBasic {
+    /**
+     * @var \NetSuite\Classes\SearchColumnStringField[]
+     */
     public $accountingBook;
+    /**
+     * @var \NetSuite\Classes\SearchColumnStringField[]
+     */
     public $averageRate;
+    /**
+     * @var \NetSuite\Classes\SearchColumnBooleanField[]
+     */
     public $closed;
+    /**
+     * @var \NetSuite\Classes\SearchColumnStringField[]
+     */
     public $currentRate;
+    /**
+     * @var \NetSuite\Classes\SearchColumnSelectField[]
+     */
     public $externalId;
+    /**
+     * @var \NetSuite\Classes\SearchColumnStringField[]
+     */
     public $fromCurrency;
+    /**
+     * @var \NetSuite\Classes\SearchColumnStringField[]
+     */
     public $fromSubsidiary;
+    /**
+     * @var \NetSuite\Classes\SearchColumnStringField[]
+     */
     public $historicalRate;
+    /**
+     * @var \NetSuite\Classes\SearchColumnSelectField[]
+     */
     public $internalId;
+    /**
+     * @var \NetSuite\Classes\SearchColumnDateField[]
+     */
     public $periodEndDate;
+    /**
+     * @var \NetSuite\Classes\SearchColumnStringField[]
+     */
     public $periodName;
+    /**
+     * @var \NetSuite\Classes\SearchColumnDateField[]
+     */
     public $periodStartDate;
+    /**
+     * @var \NetSuite\Classes\SearchColumnStringField[]
+     */
     public $toCurrency;
+    /**
+     * @var \NetSuite\Classes\SearchColumnStringField[]
+     */
     public $toSubsidiary;
     static $paramtypesmap = array(
         "accountingBook" => "SearchColumnStringField[]",

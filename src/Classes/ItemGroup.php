@@ -14,40 +14,127 @@
  * @license    https://raw.githubusercontent.com/ryanwinchester/netsuite-php/master/original/NetSuite%20Application%20Developer%20License%20Agreement.txt
  * @link       http://www.netsuite.com/portal/developers/resources/suitetalk-sample-applications.shtml
  *
- * generated:  2020-02-19 09:58:55 AM CST
+ * generated:  2020-04-10 09:56:55 PM UTC
  */
 
 namespace NetSuite\Classes;
 
 class ItemGroup extends Record {
+    /**
+     * @var string
+     */
     public $createdDate;
+    /**
+     * @var string
+     */
     public $lastModifiedDate;
+    /**
+     * @var \NetSuite\Classes\RecordRef
+     */
     public $customForm;
+    /**
+     * @var boolean
+     */
     public $includeStartEndLines;
+    /**
+     * @var boolean
+     */
     public $isVsoeBundle;
+    /**
+     * @var \NetSuite\Classes\RecordRef
+     */
     public $defaultItemShipMethod;
+    /**
+     * @var boolean
+     */
     public $availableToPartners;
+    /**
+     * @var boolean
+     */
     public $isInactive;
+    /**
+     * @var string
+     */
     public $itemId;
+    /**
+     * @var string
+     */
     public $upcCode;
+    /**
+     * @var string
+     */
     public $displayName;
+    /**
+     * @var string
+     */
     public $vendorName;
+    /**
+     * @var \NetSuite\Classes\RecordRef
+     */
     public $issueProduct;
+    /**
+     * @var \NetSuite\Classes\RecordRef
+     */
     public $parent;
+    /**
+     * @var string
+     */
     public $description;
+    /**
+     * @var \NetSuite\Classes\RecordRefList
+     */
     public $subsidiaryList;
+    /**
+     * @var boolean
+     */
     public $includeChildren;
+    /**
+     * @var \NetSuite\Classes\RecordRef
+     */
     public $department;
+    /**
+     * @var \NetSuite\Classes\RecordRef
+     */
     public $class;
+    /**
+     * @var \NetSuite\Classes\RecordRef
+     */
     public $location;
+    /**
+     * @var \NetSuite\Classes\ShippingCarrier
+     */
     public $itemCarrier;
+    /**
+     * @var \NetSuite\Classes\RecordRefList
+     */
     public $itemShipMethodList;
+    /**
+     * @var boolean
+     */
     public $printItems;
+    /**
+     * @var \NetSuite\Classes\ItemMemberList
+     */
     public $memberList;
+    /**
+     * @var \NetSuite\Classes\TranslationList
+     */
     public $translationsList;
+    /**
+     * @var \NetSuite\Classes\ItemGroupHierarchyVersionsList
+     */
     public $hierarchyVersionsList;
+    /**
+     * @var \NetSuite\Classes\CustomFieldList
+     */
     public $customFieldList;
+    /**
+     * @var string
+     */
     public $internalId;
+    /**
+     * @var string
+     */
     public $externalId;
     static $paramtypesmap = array(
         "createdDate" => "dateTime",

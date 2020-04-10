@@ -14,113 +14,419 @@
  * @license    https://raw.githubusercontent.com/ryanwinchester/netsuite-php/master/original/NetSuite%20Application%20Developer%20License%20Agreement.txt
  * @link       http://www.netsuite.com/portal/developers/resources/suitetalk-sample-applications.shtml
  *
- * generated:  2020-02-19 09:58:55 AM CST
+ * generated:  2020-04-10 09:56:55 PM UTC
  */
 
 namespace NetSuite\Classes;
 
 class ReturnAuthorization extends Record {
+    /**
+     * @var string
+     */
     public $createdDate;
+    /**
+     * @var string
+     */
     public $lastModifiedDate;
+    /**
+     * @var \NetSuite\Classes\RecordRef
+     */
     public $nexus;
+    /**
+     * @var \NetSuite\Classes\RecordRef
+     */
     public $subsidiaryTaxRegNum;
+    /**
+     * @var boolean
+     */
     public $taxRegOverride;
+    /**
+     * @var boolean
+     */
     public $taxDetailsOverride;
+    /**
+     * @var \NetSuite\Classes\RecordRef
+     */
     public $customForm;
+    /**
+     * @var \NetSuite\Classes\RecordRef
+     */
     public $currency;
+    /**
+     * @var \NetSuite\Classes\RecordRef
+     */
     public $entity;
+    /**
+     * @var string
+     */
     public $vatRegNum;
+    /**
+     * @var string
+     */
     public $tranDate;
+    /**
+     * @var string
+     */
     public $tranId;
+    /**
+     * @var \NetSuite\Classes\RecordRef
+     */
     public $entityTaxRegNum;
+    /**
+     * @var string
+     */
     public $taxPointDate;
+    /**
+     * @var string
+     */
     public $source;
+    /**
+     * @var \NetSuite\Classes\RecordRef
+     */
     public $department;
+    /**
+     * @var \NetSuite\Classes\RecordRef
+     */
     public $class;
+    /**
+     * @var \NetSuite\Classes\RecordRef
+     */
     public $location;
+    /**
+     * @var \NetSuite\Classes\RecordRef
+     */
     public $subsidiary;
+    /**
+     * @var \NetSuite\Classes\RecordRef
+     */
     public $intercoTransaction;
+    /**
+     * @var \NetSuite\Classes\IntercoStatus
+     */
     public $intercoStatus;
+    /**
+     * @var \NetSuite\Classes\RecordRef
+     */
     public $job;
+    /**
+     * @var \NetSuite\Classes\RecordRef
+     */
     public $partner;
+    /**
+     * @var string
+     */
     public $otherRefNum;
+    /**
+     * @var \NetSuite\Classes\RecordRef
+     */
     public $leadSource;
+    /**
+     * @var string
+     */
     public $memo;
+    /**
+     * @var \NetSuite\Classes\RecordRef
+     */
     public $drAccount;
+    /**
+     * @var \NetSuite\Classes\RecordRef
+     */
     public $fxAccount;
+    /**
+     * @var string
+     */
     public $salesEffectiveDate;
+    /**
+     * @var \NetSuite\Classes\RecordRef
+     */
     public $createdFrom;
+    /**
+     * @var \NetSuite\Classes\RecordRef
+     */
     public $revRecSchedule;
+    /**
+     * @var float
+     */
     public $totalCostEstimate;
+    /**
+     * @var float
+     */
     public $estGrossProfit;
+    /**
+     * @var float
+     */
     public $estGrossProfitPercent;
+    /**
+     * @var string
+     */
     public $revRecStartDate;
+    /**
+     * @var string
+     */
     public $revRecEndDate;
+    /**
+     * @var boolean
+     */
     public $excludeCommission;
+    /**
+     * @var float
+     */
     public $exchangeRate;
+    /**
+     * @var string
+     */
     public $currencyName;
+    /**
+     * @var \NetSuite\Classes\RecordRef
+     */
     public $discountItem;
+    /**
+     * @var string
+     */
     public $discountRate;
+    /**
+     * @var \NetSuite\Classes\RecordRef
+     */
     public $taxItem;
+    /**
+     * @var float
+     */
     public $taxRate;
+    /**
+     * @var boolean
+     */
     public $toBePrinted;
+    /**
+     * @var boolean
+     */
     public $toBeEmailed;
+    /**
+     * @var boolean
+     */
     public $toBeFaxed;
+    /**
+     * @var \NetSuite\Classes\RecordRef
+     */
     public $messageSel;
+    /**
+     * @var string
+     */
     public $message;
+    /**
+     * @var \NetSuite\Classes\Address
+     */
     public $billingAddress;
+    /**
+     * @var \NetSuite\Classes\RecordRef
+     */
     public $billAddressList;
+    /**
+     * @var \NetSuite\Classes\RecordRef
+     */
     public $shipAddressList;
+    /**
+     * @var string
+     */
     public $shipAddress;
+    /**
+     * @var \NetSuite\Classes\RecordRef
+     */
     public $salesGroup;
+    /**
+     * @var boolean
+     */
     public $syncSalesTeams;
+    /**
+     * @var \NetSuite\Classes\RevenueStatus
+     */
     public $revenueStatus;
+    /**
+     * @var float
+     */
     public $recognizedRevenue;
+    /**
+     * @var float
+     */
     public $deferredRevenue;
+    /**
+     * @var boolean
+     */
     public $revRecOnRevCommitment;
+    /**
+     * @var \NetSuite\Classes\RevenueCommitStatus
+     */
     public $revCommitStatus;
+    /**
+     * @var \NetSuite\Classes\RecordRef
+     */
     public $paymentMethod;
+    /**
+     * @var \NetSuite\Classes\RecordRef
+     */
     public $creditCard;
+    /**
+     * @var string
+     */
     public $ccNumber;
+    /**
+     * @var float
+     */
     public $altSalesTotal;
+    /**
+     * @var string
+     */
     public $ccExpireDate;
+    /**
+     * @var string
+     */
     public $ccName;
+    /**
+     * @var string
+     */
     public $ccStreet;
+    /**
+     * @var string
+     */
     public $ccZipCode;
+    /**
+     * @var boolean
+     */
     public $ccApproved;
+    /**
+     * @var string
+     */
     public $pnRefNum;
+    /**
+     * @var float
+     */
     public $subTotal;
+    /**
+     * @var float
+     */
     public $discountTotal;
+    /**
+     * @var float
+     */
     public $total;
+    /**
+     * @var \NetSuite\Classes\RecordRef
+     */
     public $creditCardProcessor;
+    /**
+     * @var string
+     */
     public $payPalAuthId;
+    /**
+     * @var boolean
+     */
     public $payPalProcess;
+    /**
+     * @var string
+     */
     public $email;
+    /**
+     * @var string
+     */
     public $fax;
+    /**
+     * @var string
+     */
     public $debitCardIssueNo;
+    /**
+     * @var boolean
+     */
     public $isTaxable;
+    /**
+     * @var \NetSuite\Classes\RecordRef
+     */
     public $promoCode;
+    /**
+     * @var string
+     */
     public $status;
+    /**
+     * @var float
+     */
     public $taxTotal;
+    /**
+     * @var float
+     */
     public $tax2Total;
+    /**
+     * @var string
+     */
     public $validFrom;
+    /**
+     * @var \NetSuite\Classes\ReturnAuthorizationOrderStatus
+     */
     public $orderStatus;
+    /**
+     * @var \NetSuite\Classes\RecordRef
+     */
     public $salesRep;
+    /**
+     * @var \NetSuite\Classes\RecordRef
+     */
     public $giftCert;
+    /**
+     * @var string
+     */
     public $contribPct;
+    /**
+     * @var float
+     */
     public $giftCertTotal;
+    /**
+     * @var float
+     */
     public $giftCertApplied;
+    /**
+     * @var float
+     */
     public $giftCertAvailable;
+    /**
+     * @var boolean
+     */
     public $tranIsVsoeBundle;
+    /**
+     * @var boolean
+     */
     public $vsoeAutoCalc;
+    /**
+     * @var boolean
+     */
     public $syncPartnerTeams;
+    /**
+     * @var \NetSuite\Classes\ReturnAuthorizationItemList
+     */
     public $itemList;
+    /**
+     * @var \NetSuite\Classes\AccountingBookDetailList
+     */
     public $accountingBookDetailList;
+    /**
+     * @var \NetSuite\Classes\ReturnAuthorizationSalesTeamList
+     */
     public $salesTeamList;
+    /**
+     * @var \NetSuite\Classes\ReturnAuthorizationPartnersList
+     */
     public $partnersList;
+    /**
+     * @var \NetSuite\Classes\TaxDetailsList
+     */
     public $taxDetailsList;
+    /**
+     * @var \NetSuite\Classes\CustomFieldList
+     */
     public $customFieldList;
+    /**
+     * @var string
+     */
     public $internalId;
+    /**
+     * @var string
+     */
     public $externalId;
     static $paramtypesmap = array(
         "createdDate" => "dateTime",

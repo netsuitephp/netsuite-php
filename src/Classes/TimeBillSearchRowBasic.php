@@ -14,47 +14,155 @@
  * @license    https://raw.githubusercontent.com/ryanwinchester/netsuite-php/master/original/NetSuite%20Application%20Developer%20License%20Agreement.txt
  * @link       http://www.netsuite.com/portal/developers/resources/suitetalk-sample-applications.shtml
  *
- * generated:  2020-02-19 09:58:55 AM CST
+ * generated:  2020-04-10 09:56:55 PM UTC
  */
 
 namespace NetSuite\Classes;
 
 class TimeBillSearchRowBasic extends SearchRowBasic {
+    /**
+     * @var \NetSuite\Classes\SearchColumnSelectField[]
+     */
     public $approvalStatus;
+    /**
+     * @var \NetSuite\Classes\SearchColumnStringField[]
+     */
     public $break;
+    /**
+     * @var \NetSuite\Classes\SearchColumnSelectField[]
+     */
     public $class;
+    /**
+     * @var \NetSuite\Classes\SearchColumnSelectField[]
+     */
     public $customer;
+    /**
+     * @var \NetSuite\Classes\SearchColumnDateField[]
+     */
     public $date;
+    /**
+     * @var \NetSuite\Classes\SearchColumnDateField[]
+     */
     public $dateCreated;
+    /**
+     * @var \NetSuite\Classes\SearchColumnSelectField[]
+     */
     public $department;
+    /**
+     * @var \NetSuite\Classes\SearchColumnDoubleField[]
+     */
     public $durationDecimal;
+    /**
+     * @var \NetSuite\Classes\SearchColumnSelectField[]
+     */
     public $employee;
+    /**
+     * @var \NetSuite\Classes\SearchColumnDateField[]
+     */
     public $endTime;
+    /**
+     * @var \NetSuite\Classes\SearchColumnSelectField[]
+     */
     public $externalId;
+    /**
+     * @var \NetSuite\Classes\SearchColumnStringField[]
+     */
     public $hours;
+    /**
+     * @var \NetSuite\Classes\SearchColumnSelectField[]
+     */
     public $internalId;
+    /**
+     * @var \NetSuite\Classes\SearchColumnBooleanField[]
+     */
     public $isBillable;
+    /**
+     * @var \NetSuite\Classes\SearchColumnBooleanField[]
+     */
     public $isExempt;
+    /**
+     * @var \NetSuite\Classes\SearchColumnBooleanField[]
+     */
     public $isProductive;
+    /**
+     * @var \NetSuite\Classes\SearchColumnBooleanField[]
+     */
     public $isUtilized;
+    /**
+     * @var \NetSuite\Classes\SearchColumnStringField[]
+     */
     public $item;
+    /**
+     * @var \NetSuite\Classes\SearchColumnDateField[]
+     */
     public $lastModified;
+    /**
+     * @var \NetSuite\Classes\SearchColumnSelectField[]
+     */
     public $location;
+    /**
+     * @var \NetSuite\Classes\SearchColumnStringField[]
+     */
     public $memo;
+    /**
+     * @var \NetSuite\Classes\SearchColumnBooleanField[]
+     */
     public $paidExternally;
+    /**
+     * @var \NetSuite\Classes\SearchColumnSelectField[]
+     */
     public $payItem;
+    /**
+     * @var \NetSuite\Classes\SearchColumnDateField[]
+     */
     public $payrollDate;
+    /**
+     * @var \NetSuite\Classes\SearchColumnDoubleField[]
+     */
     public $rate;
+    /**
+     * @var \NetSuite\Classes\SearchColumnStringField[]
+     */
     public $rejectionNote;
+    /**
+     * @var \NetSuite\Classes\SearchColumnDateField[]
+     */
     public $startTime;
+    /**
+     * @var \NetSuite\Classes\SearchColumnStringField[]
+     */
     public $status;
+    /**
+     * @var \NetSuite\Classes\SearchColumnStringField[]
+     */
     public $subsidiary;
+    /**
+     * @var \NetSuite\Classes\SearchColumnBooleanField[]
+     */
     public $supervisorApproval;
+    /**
+     * @var \NetSuite\Classes\SearchColumnStringField[]
+     */
     public $temporaryLocalJurisdiction;
+    /**
+     * @var \NetSuite\Classes\SearchColumnStringField[]
+     */
     public $temporaryStateJurisdiction;
+    /**
+     * @var \NetSuite\Classes\SearchColumnBooleanField[]
+     */
     public $timeModified;
+    /**
+     * @var \NetSuite\Classes\SearchColumnSelectField[]
+     */
     public $timeSheet;
+    /**
+     * @var \NetSuite\Classes\SearchColumnEnumSelectField[]
+     */
     public $type;
+    /**
+     * @var \NetSuite\Classes\SearchColumnCustomFieldList
+     */
     public $customFieldList;
     static $paramtypesmap = array(
         "approvalStatus" => "SearchColumnSelectField[]",

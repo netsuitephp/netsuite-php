@@ -14,25 +14,67 @@
  * @license    https://raw.githubusercontent.com/ryanwinchester/netsuite-php/master/original/NetSuite%20Application%20Developer%20License%20Agreement.txt
  * @link       http://www.netsuite.com/portal/developers/resources/suitetalk-sample-applications.shtml
  *
- * generated:  2020-02-19 09:58:55 AM CST
+ * generated:  2020-04-10 09:56:55 PM UTC
  */
 
 namespace NetSuite\Classes;
 
 class PaymentMethod extends Record {
+    /**
+     * @var string
+     */
     public $name;
+    /**
+     * @var boolean
+     */
     public $creditCard;
+    /**
+     * @var boolean
+     */
     public $undepFunds;
+    /**
+     * @var \NetSuite\Classes\RecordRef
+     */
     public $account;
+    /**
+     * @var boolean
+     */
     public $isInactive;
+    /**
+     * @var boolean
+     */
     public $isOnline;
+    /**
+     * @var \NetSuite\Classes\PaymentMethodVisualsList
+     */
     public $visualsList;
+    /**
+     * @var boolean
+     */
     public $isDebitCard;
+    /**
+     * @var \NetSuite\Classes\RecordRefList
+     */
     public $merchantAccountsList;
+    /**
+     * @var string
+     */
     public $payPalEmailAddress;
+    /**
+     * @var string
+     */
     public $expressCheckoutArrangement;
+    /**
+     * @var boolean
+     */
     public $useExpressCheckout;
+    /**
+     * @var string
+     */
     public $internalId;
+    /**
+     * @var string
+     */
     public $externalId;
     static $paramtypesmap = array(
         "name" => "string",

@@ -14,48 +14,159 @@
  * @license    https://raw.githubusercontent.com/ryanwinchester/netsuite-php/master/original/NetSuite%20Application%20Developer%20License%20Agreement.txt
  * @link       http://www.netsuite.com/portal/developers/resources/suitetalk-sample-applications.shtml
  *
- * generated:  2020-02-19 09:58:55 AM CST
+ * generated:  2020-04-10 09:56:55 PM UTC
  */
 
 namespace NetSuite\Classes;
 
 class CustomerSearchRow extends SearchRow {
+    /**
+     * @var \NetSuite\Classes\CustomerSearchRowBasic
+     */
     public $basic;
+    /**
+     * @var \NetSuite\Classes\BillingAccountSearchRowBasic
+     */
     public $billingAccountJoin;
+    /**
+     * @var \NetSuite\Classes\BillingScheduleSearchRowBasic
+     */
     public $billingScheduleJoin;
+    /**
+     * @var \NetSuite\Classes\PhoneCallSearchRowBasic
+     */
     public $callJoin;
+    /**
+     * @var \NetSuite\Classes\CampaignSearchRowBasic
+     */
     public $campaignResponseJoin;
+    /**
+     * @var \NetSuite\Classes\SupportCaseSearchRowBasic
+     */
     public $caseJoin;
+    /**
+     * @var \NetSuite\Classes\ContactSearchRowBasic
+     */
     public $contactJoin;
+    /**
+     * @var \NetSuite\Classes\ContactSearchRowBasic
+     */
     public $contactPrimaryJoin;
+    /**
+     * @var \NetSuite\Classes\CalendarEventSearchRowBasic
+     */
     public $eventJoin;
+    /**
+     * @var \NetSuite\Classes\FileSearchRowBasic
+     */
     public $fileJoin;
+    /**
+     * @var \NetSuite\Classes\FileSearchRowBasic
+     */
     public $hostedPageJoin;
+    /**
+     * @var \NetSuite\Classes\JobSearchRowBasic
+     */
     public $jobJoin;
+    /**
+     * @var \NetSuite\Classes\CampaignSearchRowBasic
+     */
     public $leadSourceJoin;
+    /**
+     * @var \NetSuite\Classes\MessageSearchRowBasic
+     */
     public $messagesJoin;
+    /**
+     * @var \NetSuite\Classes\MessageSearchRowBasic
+     */
     public $messagesFromJoin;
+    /**
+     * @var \NetSuite\Classes\MessageSearchRowBasic
+     */
     public $messagesToJoin;
+    /**
+     * @var \NetSuite\Classes\MseSubsidiarySearchRowBasic
+     */
     public $mseSubsidiaryJoin;
+    /**
+     * @var \NetSuite\Classes\OpportunitySearchRowBasic
+     */
     public $opportunityJoin;
+    /**
+     * @var \NetSuite\Classes\OriginatingLeadSearchRowBasic
+     */
     public $originatingLeadJoin;
+    /**
+     * @var \NetSuite\Classes\CustomerSearchRowBasic
+     */
     public $parentCustomerJoin;
+    /**
+     * @var \NetSuite\Classes\PartnerSearchRowBasic
+     */
     public $partnerJoin;
+    /**
+     * @var \NetSuite\Classes\PricingSearchRowBasic
+     */
     public $pricingJoin;
+    /**
+     * @var \NetSuite\Classes\ItemSearchRowBasic
+     */
     public $purchasedItemJoin;
+    /**
+     * @var \NetSuite\Classes\ResourceAllocationSearchRowBasic
+     */
     public $resourceAllocationJoin;
+    /**
+     * @var \NetSuite\Classes\EmployeeSearchRowBasic
+     */
     public $salesRepJoin;
+    /**
+     * @var \NetSuite\Classes\CustomerSearchRowBasic
+     */
     public $subCustomerJoin;
+    /**
+     * @var \NetSuite\Classes\TaskSearchRowBasic
+     */
     public $taskJoin;
+    /**
+     * @var \NetSuite\Classes\EntityTaxRegistrationSearchRowBasic
+     */
     public $taxRegistrationJoin;
+    /**
+     * @var \NetSuite\Classes\TimeBillSearchRowBasic
+     */
     public $timeJoin;
+    /**
+     * @var \NetSuite\Classes\CustomerSearchRowBasic
+     */
     public $topLevelParentJoin;
+    /**
+     * @var \NetSuite\Classes\TransactionSearchRowBasic
+     */
     public $transactionJoin;
+    /**
+     * @var \NetSuite\Classes\ItemSearchRowBasic
+     */
     public $upsellItemJoin;
+    /**
+     * @var \NetSuite\Classes\EmployeeSearchRowBasic
+     */
     public $userJoin;
+    /**
+     * @var \NetSuite\Classes\NoteSearchRowBasic
+     */
     public $userNotesJoin;
+    /**
+     * @var \NetSuite\Classes\SiteCategorySearchRowBasic
+     */
     public $webSiteCategoryJoin;
+    /**
+     * @var \NetSuite\Classes\ItemSearchRowBasic
+     */
     public $webSiteItemJoin;
+    /**
+     * @var \NetSuite\Classes\CustomSearchRowBasic[]
+     */
     public $customSearchJoin;
     static $paramtypesmap = array(
         "basic" => "CustomerSearchRowBasic",

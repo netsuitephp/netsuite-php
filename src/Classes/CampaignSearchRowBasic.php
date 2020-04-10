@@ -14,52 +14,175 @@
  * @license    https://raw.githubusercontent.com/ryanwinchester/netsuite-php/master/original/NetSuite%20Application%20Developer%20License%20Agreement.txt
  * @link       http://www.netsuite.com/portal/developers/resources/suitetalk-sample-applications.shtml
  *
- * generated:  2020-02-19 09:58:55 AM CST
+ * generated:  2020-04-10 09:56:55 PM UTC
  */
 
 namespace NetSuite\Classes;
 
 class CampaignSearchRowBasic extends SearchRowBasic {
+    /**
+     * @var \NetSuite\Classes\SearchColumnSelectField[]
+     */
     public $audience;
+    /**
+     * @var \NetSuite\Classes\SearchColumnDoubleField[]
+     */
     public $baseCost;
+    /**
+     * @var \NetSuite\Classes\SearchColumnStringField[]
+     */
     public $campaignId;
+    /**
+     * @var \NetSuite\Classes\SearchColumnSelectField[]
+     */
     public $category;
+    /**
+     * @var \NetSuite\Classes\SearchColumnSelectField[]
+     */
     public $channel;
+    /**
+     * @var \NetSuite\Classes\SearchColumnDoubleField[]
+     */
     public $cost;
+    /**
+     * @var \NetSuite\Classes\SearchColumnDateField[]
+     */
     public $createdDate;
+    /**
+     * @var \NetSuite\Classes\SearchColumnDateField[]
+     */
     public $endDate;
+    /**
+     * @var \NetSuite\Classes\SearchColumnStringField[]
+     */
     public $event;
+    /**
+     * @var \NetSuite\Classes\SearchColumnDateField[]
+     */
     public $executedDate;
+    /**
+     * @var \NetSuite\Classes\SearchColumnDoubleField[]
+     */
     public $expectedRevenue;
+    /**
+     * @var \NetSuite\Classes\SearchColumnSelectField[]
+     */
     public $externalId;
+    /**
+     * @var \NetSuite\Classes\SearchColumnSelectField[]
+     */
     public $family;
+    /**
+     * @var \NetSuite\Classes\SearchColumnSelectField[]
+     */
     public $internalId;
+    /**
+     * @var \NetSuite\Classes\SearchColumnBooleanField[]
+     */
     public $isInactive;
+    /**
+     * @var \NetSuite\Classes\SearchColumnBooleanField[]
+     */
     public $isSalesCampaign;
+    /**
+     * @var \NetSuite\Classes\SearchColumnSelectField[]
+     */
     public $item;
+    /**
+     * @var \NetSuite\Classes\SearchColumnStringField[]
+     */
     public $keyword;
+    /**
+     * @var \NetSuite\Classes\SearchColumnDateField[]
+     */
     public $lastModifiedDate;
+    /**
+     * @var \NetSuite\Classes\SearchColumnSelectField[]
+     */
     public $managerRole;
+    /**
+     * @var \NetSuite\Classes\SearchColumnStringField[]
+     */
     public $message;
+    /**
+     * @var \NetSuite\Classes\SearchColumnSelectField[]
+     */
     public $offer;
+    /**
+     * @var \NetSuite\Classes\SearchColumnSelectField[]
+     */
     public $owner;
+    /**
+     * @var \NetSuite\Classes\SearchColumnStringField[]
+     */
     public $promoCode;
+    /**
+     * @var \NetSuite\Classes\SearchColumnSelectField[]
+     */
     public $recipient;
+    /**
+     * @var \NetSuite\Classes\SearchColumnEnumSelectField[]
+     */
     public $response;
+    /**
+     * @var \NetSuite\Classes\SearchColumnEnumSelectField[]
+     */
     public $responseCategory;
+    /**
+     * @var \NetSuite\Classes\SearchColumnLongField[]
+     */
     public $responseCode;
+    /**
+     * @var \NetSuite\Classes\SearchColumnDateField[]
+     */
     public $responseDate;
+    /**
+     * @var \NetSuite\Classes\SearchColumnStringField[]
+     */
     public $responseNotes;
+    /**
+     * @var \NetSuite\Classes\SearchColumnDoubleField[]
+     */
     public $revenue;
+    /**
+     * @var \NetSuite\Classes\SearchColumnDoubleField[]
+     */
     public $roi;
+    /**
+     * @var \NetSuite\Classes\SearchColumnDateField[]
+     */
     public $scheduledDate;
+    /**
+     * @var \NetSuite\Classes\SearchColumnSelectField[]
+     */
     public $searchEngine;
+    /**
+     * @var \NetSuite\Classes\SearchColumnDateField[]
+     */
     public $startDate;
+    /**
+     * @var \NetSuite\Classes\SearchColumnEnumSelectField[]
+     */
     public $status;
+    /**
+     * @var \NetSuite\Classes\SearchColumnSelectField[]
+     */
     public $subscription;
+    /**
+     * @var \NetSuite\Classes\SearchColumnStringField[]
+     */
     public $title;
+    /**
+     * @var \NetSuite\Classes\SearchColumnStringField[]
+     */
     public $url;
+    /**
+     * @var \NetSuite\Classes\SearchColumnSelectField[]
+     */
     public $vertical;
+    /**
+     * @var \NetSuite\Classes\SearchColumnCustomFieldList
+     */
     public $customFieldList;
     static $paramtypesmap = array(
         "audience" => "SearchColumnSelectField[]",

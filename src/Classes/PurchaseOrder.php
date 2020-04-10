@@ -14,76 +14,271 @@
  * @license    https://raw.githubusercontent.com/ryanwinchester/netsuite-php/master/original/NetSuite%20Application%20Developer%20License%20Agreement.txt
  * @link       http://www.netsuite.com/portal/developers/resources/suitetalk-sample-applications.shtml
  *
- * generated:  2020-02-19 09:58:55 AM CST
+ * generated:  2020-04-10 09:56:55 PM UTC
  */
 
 namespace NetSuite\Classes;
 
 class PurchaseOrder extends Record {
+    /**
+     * @var string
+     */
     public $createdDate;
+    /**
+     * @var string
+     */
     public $lastModifiedDate;
+    /**
+     * @var \NetSuite\Classes\RecordRef
+     */
     public $nexus;
+    /**
+     * @var \NetSuite\Classes\RecordRef
+     */
     public $subsidiaryTaxRegNum;
+    /**
+     * @var boolean
+     */
     public $taxRegOverride;
+    /**
+     * @var boolean
+     */
     public $taxDetailsOverride;
+    /**
+     * @var \NetSuite\Classes\RecordRef
+     */
     public $customForm;
+    /**
+     * @var \NetSuite\Classes\RecordRef
+     */
     public $entity;
+    /**
+     * @var \NetSuite\Classes\RecordRef
+     */
     public $purchaseContract;
+    /**
+     * @var string
+     */
     public $vatRegNum;
+    /**
+     * @var \NetSuite\Classes\RecordRef
+     */
     public $employee;
+    /**
+     * @var boolean
+     */
     public $supervisorApproval;
+    /**
+     * @var string
+     */
     public $tranDate;
+    /**
+     * @var string
+     */
     public $tranId;
+    /**
+     * @var \NetSuite\Classes\RecordRef
+     */
     public $entityTaxRegNum;
+    /**
+     * @var string
+     */
     public $taxPointDate;
+    /**
+     * @var \NetSuite\Classes\RecordRef
+     */
     public $createdFrom;
+    /**
+     * @var \NetSuite\Classes\RecordRef
+     */
     public $terms;
+    /**
+     * @var string
+     */
     public $dueDate;
+    /**
+     * @var string
+     */
     public $otherRefNum;
+    /**
+     * @var float
+     */
     public $availableVendorCredit;
+    /**
+     * @var string
+     */
     public $memo;
+    /**
+     * @var \NetSuite\Classes\RecordRef
+     */
     public $approvalStatus;
+    /**
+     * @var float
+     */
     public $exchangeRate;
+    /**
+     * @var \NetSuite\Classes\RecordRef
+     */
     public $nextApprover;
+    /**
+     * @var string
+     */
     public $source;
+    /**
+     * @var string
+     */
     public $currencyName;
+    /**
+     * @var boolean
+     */
     public $toBePrinted;
+    /**
+     * @var boolean
+     */
     public $toBeEmailed;
+    /**
+     * @var string
+     */
     public $email;
+    /**
+     * @var boolean
+     */
     public $toBeFaxed;
+    /**
+     * @var string
+     */
     public $fax;
+    /**
+     * @var string
+     */
     public $message;
+    /**
+     * @var \NetSuite\Classes\Address
+     */
     public $billingAddress;
+    /**
+     * @var \NetSuite\Classes\RecordRef
+     */
     public $billAddressList;
+    /**
+     * @var \NetSuite\Classes\RecordRef
+     */
     public $currency;
+    /**
+     * @var \NetSuite\Classes\RecordRef
+     */
     public $shipTo;
+    /**
+     * @var float
+     */
     public $subTotal;
+    /**
+     * @var float
+     */
     public $taxTotal;
+    /**
+     * @var float
+     */
     public $tax2Total;
+    /**
+     * @var \NetSuite\Classes\Address
+     */
     public $shippingAddress;
+    /**
+     * @var boolean
+     */
     public $shipIsResidential;
+    /**
+     * @var \NetSuite\Classes\RecordRef
+     */
     public $shipAddressList;
+    /**
+     * @var string
+     */
     public $fob;
+    /**
+     * @var string
+     */
     public $shipDate;
+    /**
+     * @var \NetSuite\Classes\RecordRef
+     */
     public $shipMethod;
+    /**
+     * @var \NetSuite\Classes\RecordRef
+     */
     public $incoterm;
+    /**
+     * @var string
+     */
     public $trackingNumbers;
+    /**
+     * @var string
+     */
     public $linkedTrackingNumbers;
+    /**
+     * @var float
+     */
     public $total;
+    /**
+     * @var \NetSuite\Classes\RecordRef
+     */
     public $class;
+    /**
+     * @var \NetSuite\Classes\RecordRef
+     */
     public $department;
+    /**
+     * @var \NetSuite\Classes\RecordRef
+     */
     public $location;
+    /**
+     * @var \NetSuite\Classes\RecordRef
+     */
     public $subsidiary;
+    /**
+     * @var \NetSuite\Classes\RecordRef
+     */
     public $intercoTransaction;
+    /**
+     * @var \NetSuite\Classes\IntercoStatus
+     */
     public $intercoStatus;
+    /**
+     * @var string
+     */
     public $status;
+    /**
+     * @var \NetSuite\Classes\PurchaseOrderOrderStatus
+     */
     public $orderStatus;
+    /**
+     * @var \NetSuite\Classes\PurchaseOrderItemList
+     */
     public $itemList;
+    /**
+     * @var \NetSuite\Classes\AccountingBookDetailList
+     */
     public $accountingBookDetailList;
+    /**
+     * @var \NetSuite\Classes\PurchaseOrderExpenseList
+     */
     public $expenseList;
+    /**
+     * @var \NetSuite\Classes\TaxDetailsList
+     */
     public $taxDetailsList;
+    /**
+     * @var \NetSuite\Classes\CustomFieldList
+     */
     public $customFieldList;
+    /**
+     * @var string
+     */
     public $internalId;
+    /**
+     * @var string
+     */
     public $externalId;
     static $paramtypesmap = array(
         "createdDate" => "dateTime",

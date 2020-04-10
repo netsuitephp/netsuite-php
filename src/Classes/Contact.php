@@ -14,48 +14,159 @@
  * @license    https://raw.githubusercontent.com/ryanwinchester/netsuite-php/master/original/NetSuite%20Application%20Developer%20License%20Agreement.txt
  * @link       http://www.netsuite.com/portal/developers/resources/suitetalk-sample-applications.shtml
  *
- * generated:  2020-02-19 09:58:55 AM CST
+ * generated:  2020-04-10 09:56:55 PM UTC
  */
 
 namespace NetSuite\Classes;
 
 class Contact extends Record {
+    /**
+     * @var \NetSuite\Classes\RecordRef
+     */
     public $customForm;
+    /**
+     * @var string
+     */
     public $entityId;
+    /**
+     * @var \NetSuite\Classes\RecordRef
+     */
     public $contactSource;
+    /**
+     * @var \NetSuite\Classes\RecordRef
+     */
     public $company;
+    /**
+     * @var string
+     */
     public $salutation;
+    /**
+     * @var string
+     */
     public $firstName;
+    /**
+     * @var string
+     */
     public $middleName;
+    /**
+     * @var string
+     */
     public $lastName;
+    /**
+     * @var string
+     */
     public $title;
+    /**
+     * @var string
+     */
     public $phone;
+    /**
+     * @var string
+     */
     public $fax;
+    /**
+     * @var string
+     */
     public $email;
+    /**
+     * @var string
+     */
     public $defaultAddress;
+    /**
+     * @var boolean
+     */
     public $isPrivate;
+    /**
+     * @var boolean
+     */
     public $isInactive;
+    /**
+     * @var \NetSuite\Classes\RecordRef
+     */
     public $subsidiary;
+    /**
+     * @var string
+     */
     public $phoneticName;
+    /**
+     * @var \NetSuite\Classes\CategoryList
+     */
     public $categoryList;
+    /**
+     * @var string
+     */
     public $altEmail;
+    /**
+     * @var string
+     */
     public $officePhone;
+    /**
+     * @var string
+     */
     public $homePhone;
+    /**
+     * @var string
+     */
     public $mobilePhone;
+    /**
+     * @var \NetSuite\Classes\RecordRef
+     */
     public $supervisor;
+    /**
+     * @var string
+     */
     public $supervisorPhone;
+    /**
+     * @var \NetSuite\Classes\RecordRef
+     */
     public $assistant;
+    /**
+     * @var string
+     */
     public $assistantPhone;
+    /**
+     * @var string
+     */
     public $comments;
+    /**
+     * @var \NetSuite\Classes\GlobalSubscriptionStatus
+     */
     public $globalSubscriptionStatus;
+    /**
+     * @var \NetSuite\Classes\RecordRef
+     */
     public $image;
+    /**
+     * @var boolean
+     */
     public $billPay;
+    /**
+     * @var string
+     */
     public $dateCreated;
+    /**
+     * @var string
+     */
     public $lastModifiedDate;
+    /**
+     * @var \NetSuite\Classes\ContactAddressbookList
+     */
     public $addressbookList;
+    /**
+     * @var \NetSuite\Classes\SubscriptionsList
+     */
     public $subscriptionsList;
+    /**
+     * @var \NetSuite\Classes\CustomFieldList
+     */
     public $customFieldList;
+    /**
+     * @var string
+     */
     public $internalId;
+    /**
+     * @var string
+     */
     public $externalId;
     static $paramtypesmap = array(
         "customForm" => "RecordRef",

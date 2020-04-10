@@ -14,36 +14,111 @@
  * @license    https://raw.githubusercontent.com/ryanwinchester/netsuite-php/master/original/NetSuite%20Application%20Developer%20License%20Agreement.txt
  * @link       http://www.netsuite.com/portal/developers/resources/suitetalk-sample-applications.shtml
  *
- * generated:  2020-02-19 09:58:55 AM CST
+ * generated:  2020-04-10 09:56:55 PM UTC
  */
 
 namespace NetSuite\Classes;
 
 class ItemFulfillmentPackageFedEx {
+    /**
+     * @var float
+     */
     public $packageWeightFedEx;
+    /**
+     * @var float
+     */
     public $dryIceWeightFedEx;
+    /**
+     * @var string
+     */
     public $packageTrackingNumberFedEx;
+    /**
+     * @var \NetSuite\Classes\ItemFulfillmentPackageFedExPackagingFedEx
+     */
     public $packagingFedEx;
+    /**
+     * @var \NetSuite\Classes\ItemFulfillmentPackageFedExAdmPackageTypeFedEx
+     */
     public $admPackageTypeFedEx;
+    /**
+     * @var boolean
+     */
     public $isNonStandardContainerFedEx;
+    /**
+     * @var boolean
+     */
     public $isAlcoholFedEx;
+    /**
+     * @var \NetSuite\Classes\AlcoholRecipientType
+     */
     public $alcoholRecipientTypeFedEx;
+    /**
+     * @var boolean
+     */
     public $isNonHazLithiumFedEx;
+    /**
+     * @var float
+     */
     public $insuredValueFedEx;
+    /**
+     * @var boolean
+     */
     public $useInsuredValueFedEx;
+    /**
+     * @var string
+     */
     public $reference1FedEx;
+    /**
+     * @var \NetSuite\Classes\ItemFulfillmentPackageFedExPriorityAlertTypeFedEx
+     */
     public $priorityAlertTypeFedEx;
+    /**
+     * @var string
+     */
     public $priorityAlertContentFedEx;
+    /**
+     * @var integer
+     */
     public $packageLengthFedEx;
+    /**
+     * @var integer
+     */
     public $packageWidthFedEx;
+    /**
+     * @var integer
+     */
     public $packageHeightFedEx;
+    /**
+     * @var boolean
+     */
     public $useCodFedEx;
+    /**
+     * @var float
+     */
     public $codAmountFedEx;
+    /**
+     * @var \NetSuite\Classes\ItemFulfillmentPackageFedExCodMethodFedEx
+     */
     public $codMethodFedEx;
+    /**
+     * @var \NetSuite\Classes\ItemFulfillmentPackageFedExCodFreightTypeFedEx
+     */
     public $codFreightTypeFedEx;
+    /**
+     * @var \NetSuite\Classes\ItemFulfillmentPackageFedExDeliveryConfFedEx
+     */
     public $deliveryConfFedEx;
+    /**
+     * @var \NetSuite\Classes\ItemFulfillmentPackageFedExSignatureOptionsFedEx
+     */
     public $signatureOptionsFedEx;
+    /**
+     * @var string
+     */
     public $signatureReleaseFedEx;
+    /**
+     * @var string
+     */
     public $authorizationNumberFedEx;
     static $paramtypesmap = array(
         "packageWeightFedEx" => "float",

@@ -14,15 +14,27 @@
  * @license    https://raw.githubusercontent.com/ryanwinchester/netsuite-php/master/original/NetSuite%20Application%20Developer%20License%20Agreement.txt
  * @link       http://www.netsuite.com/portal/developers/resources/suitetalk-sample-applications.shtml
  *
- * generated:  2020-02-19 09:58:55 AM CST
+ * generated:  2020-04-10 09:56:55 PM UTC
  */
 
 namespace NetSuite\Classes;
 
 class AccountingTransactionSearchRow extends SearchRow {
+    /**
+     * @var \NetSuite\Classes\AccountingTransactionSearchRowBasic
+     */
     public $basic;
+    /**
+     * @var \NetSuite\Classes\AccountSearchRowBasic
+     */
     public $accountJoin;
+    /**
+     * @var \NetSuite\Classes\RevRecScheduleSearchRowBasic
+     */
     public $revRecScheduleJoin;
+    /**
+     * @var \NetSuite\Classes\TransactionSearchRowBasic
+     */
     public $transactionJoin;
     static $paramtypesmap = array(
         "basic" => "AccountingTransactionSearchRowBasic",

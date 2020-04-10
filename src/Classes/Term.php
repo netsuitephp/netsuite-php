@@ -14,30 +14,87 @@
  * @license    https://raw.githubusercontent.com/ryanwinchester/netsuite-php/master/original/NetSuite%20Application%20Developer%20License%20Agreement.txt
  * @link       http://www.netsuite.com/portal/developers/resources/suitetalk-sample-applications.shtml
  *
- * generated:  2020-02-19 09:58:55 AM CST
+ * generated:  2020-04-10 09:56:55 PM UTC
  */
 
 namespace NetSuite\Classes;
 
 class Term extends Record {
+    /**
+     * @var string
+     */
     public $name;
+    /**
+     * @var boolean
+     */
     public $dateDriven;
+    /**
+     * @var integer
+     */
     public $daysUntilNetDue;
+    /**
+     * @var float
+     */
     public $discountPercent;
+    /**
+     * @var integer
+     */
     public $daysUntilExpiry;
+    /**
+     * @var integer
+     */
     public $dayOfMonthNetDue;
+    /**
+     * @var integer
+     */
     public $dueNextMonthIfWithinDays;
+    /**
+     * @var float
+     */
     public $discountPercentDateDriven;
+    /**
+     * @var integer
+     */
     public $dayDiscountExpires;
+    /**
+     * @var boolean
+     */
     public $preferred;
+    /**
+     * @var boolean
+     */
     public $isInactive;
+    /**
+     * @var boolean
+     */
     public $installment;
+    /**
+     * @var \NetSuite\Classes\TermRecurrenceFrequency
+     */
     public $recurrenceFrequency;
+    /**
+     * @var integer
+     */
     public $recurrenceCount;
+    /**
+     * @var integer
+     */
     public $repeatEvery;
+    /**
+     * @var boolean
+     */
     public $splitEvenly;
+    /**
+     * @var \NetSuite\Classes\TermPercentagesList
+     */
     public $percentagesList;
+    /**
+     * @var string
+     */
     public $internalId;
+    /**
+     * @var string
+     */
     public $externalId;
     static $paramtypesmap = array(
         "name" => "string",

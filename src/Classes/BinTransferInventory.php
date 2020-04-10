@@ -14,20 +14,47 @@
  * @license    https://raw.githubusercontent.com/ryanwinchester/netsuite-php/master/original/NetSuite%20Application%20Developer%20License%20Agreement.txt
  * @link       http://www.netsuite.com/portal/developers/resources/suitetalk-sample-applications.shtml
  *
- * generated:  2020-02-19 09:58:55 AM CST
+ * generated:  2020-04-10 09:56:55 PM UTC
  */
 
 namespace NetSuite\Classes;
 
 class BinTransferInventory {
+    /**
+     * @var integer
+     */
     public $line;
+    /**
+     * @var \NetSuite\Classes\RecordRef
+     */
     public $item;
+    /**
+     * @var string
+     */
     public $description;
+    /**
+     * @var string
+     */
     public $preferredBin;
+    /**
+     * @var float
+     */
     public $quantity;
+    /**
+     * @var string
+     */
     public $itemUnitsLabel;
+    /**
+     * @var \NetSuite\Classes\InventoryDetail
+     */
     public $inventoryDetail;
+    /**
+     * @var string
+     */
     public $fromBins;
+    /**
+     * @var string
+     */
     public $toBins;
     static $paramtypesmap = array(
         "line" => "integer",

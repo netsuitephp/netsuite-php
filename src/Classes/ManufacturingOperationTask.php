@@ -14,37 +14,115 @@
  * @license    https://raw.githubusercontent.com/ryanwinchester/netsuite-php/master/original/NetSuite%20Application%20Developer%20License%20Agreement.txt
  * @link       http://www.netsuite.com/portal/developers/resources/suitetalk-sample-applications.shtml
  *
- * generated:  2020-02-19 09:58:55 AM CST
+ * generated:  2020-04-10 09:56:55 PM UTC
  */
 
 namespace NetSuite\Classes;
 
 class ManufacturingOperationTask extends Record {
+    /**
+     * @var \NetSuite\Classes\RecordRef
+     */
     public $customForm;
+    /**
+     * @var \NetSuite\Classes\RecordRef
+     */
     public $manufacturingWorkCenter;
+    /**
+     * @var \NetSuite\Classes\RecordRef
+     */
     public $manufacturingCostTemplate;
+    /**
+     * @var string
+     */
     public $title;
+    /**
+     * @var integer
+     */
     public $operationSequence;
+    /**
+     * @var \NetSuite\Classes\RecordRef
+     */
     public $workOrder;
+    /**
+     * @var \NetSuite\Classes\RecordRef
+     */
     public $order;
+    /**
+     * @var \NetSuite\Classes\ManufacturingOperationTaskStatus
+     */
     public $status;
+    /**
+     * @var string
+     */
     public $message;
+    /**
+     * @var float
+     */
     public $estimatedWork;
+    /**
+     * @var float
+     */
     public $actualWork;
+    /**
+     * @var float
+     */
     public $remainingWork;
+    /**
+     * @var float
+     */
     public $inputQuantity;
+    /**
+     * @var float
+     */
     public $completedQuantity;
+    /**
+     * @var float
+     */
     public $setupTime;
+    /**
+     * @var float
+     */
     public $runRate;
+    /**
+     * @var string
+     */
     public $startDate;
+    /**
+     * @var string
+     */
     public $endDate;
+    /**
+     * @var boolean
+     */
     public $autoCalculateLag;
+    /**
+     * @var float
+     */
     public $machineResources;
+    /**
+     * @var float
+     */
     public $laborResources;
+    /**
+     * @var \NetSuite\Classes\ManufacturingCostDetailList
+     */
     public $costDetailList;
+    /**
+     * @var \NetSuite\Classes\ManufacturingOperationTaskPredecessorList
+     */
     public $predecessorList;
+    /**
+     * @var \NetSuite\Classes\CustomFieldList
+     */
     public $customFieldList;
+    /**
+     * @var string
+     */
     public $internalId;
+    /**
+     * @var string
+     */
     public $externalId;
     static $paramtypesmap = array(
         "customForm" => "RecordRef",

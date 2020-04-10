@@ -14,13 +14,19 @@
  * @license    https://raw.githubusercontent.com/ryanwinchester/netsuite-php/master/original/NetSuite%20Application%20Developer%20License%20Agreement.txt
  * @link       http://www.netsuite.com/portal/developers/resources/suitetalk-sample-applications.shtml
  *
- * generated:  2020-02-19 09:58:55 AM CST
+ * generated:  2020-04-10 09:56:55 PM UTC
  */
 
 namespace NetSuite\Classes;
 
 class CustomSearchRowBasic {
+    /**
+     * @var \NetSuite\Classes\CustomizationRef
+     */
     public $customizationRef;
+    /**
+     * @var \NetSuite\Classes\SearchRowBasic
+     */
     public $searchRowBasic;
     static $paramtypesmap = array(
         "customizationRef" => "CustomizationRef",

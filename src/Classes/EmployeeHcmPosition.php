@@ -14,20 +14,47 @@
  * @license    https://raw.githubusercontent.com/ryanwinchester/netsuite-php/master/original/NetSuite%20Application%20Developer%20License%20Agreement.txt
  * @link       http://www.netsuite.com/portal/developers/resources/suitetalk-sample-applications.shtml
  *
- * generated:  2020-02-19 09:58:55 AM CST
+ * generated:  2020-04-10 09:56:55 PM UTC
  */
 
 namespace NetSuite\Classes;
 
 class EmployeeHcmPosition {
+    /**
+     * @var \NetSuite\Classes\RecordRef
+     */
     public $position;
+    /**
+     * @var boolean
+     */
     public $primaryPosition;
+    /**
+     * @var string
+     */
     public $positionId;
+    /**
+     * @var float
+     */
     public $positionAllocation;
+    /**
+     * @var float
+     */
     public $fullTimeEquivalent;
+    /**
+     * @var \NetSuite\Classes\RecordRef
+     */
     public $employmentCategory;
+    /**
+     * @var \NetSuite\Classes\RecordRef
+     */
     public $reportsTo;
+    /**
+     * @var \NetSuite\Classes\RecordRef
+     */
     public $subsidiary;
+    /**
+     * @var \NetSuite\Classes\RecordRef
+     */
     public $location;
     static $paramtypesmap = array(
         "position" => "RecordRef",

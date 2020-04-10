@@ -14,34 +14,103 @@
  * @license    https://raw.githubusercontent.com/ryanwinchester/netsuite-php/master/original/NetSuite%20Application%20Developer%20License%20Agreement.txt
  * @link       http://www.netsuite.com/portal/developers/resources/suitetalk-sample-applications.shtml
  *
- * generated:  2020-02-19 09:58:55 AM CST
+ * generated:  2020-04-10 09:56:55 PM UTC
  */
 
 namespace NetSuite\Classes;
 
 class TimeItem {
+    /**
+     * @var integer
+     */
     public $id;
+    /**
+     * @var \NetSuite\Classes\RecordRef
+     */
     public $employee;
+    /**
+     * @var \NetSuite\Classes\TimeItemTimeType
+     */
     public $timeType;
+    /**
+     * @var string
+     */
     public $tranDate;
+    /**
+     * @var \NetSuite\Classes\RecordRef
+     */
     public $customer;
+    /**
+     * @var boolean
+     */
     public $isBillable;
+    /**
+     * @var \NetSuite\Classes\RecordRef
+     */
     public $payrollItem;
+    /**
+     * @var \NetSuite\Classes\RecordRef
+     */
     public $item;
+    /**
+     * @var \NetSuite\Classes\RecordRef
+     */
     public $temporaryLocalJurisdiction;
+    /**
+     * @var \NetSuite\Classes\RecordRef
+     */
     public $temporaryStateJurisdiction;
+    /**
+     * @var \NetSuite\Classes\RecordRef
+     */
     public $department;
+    /**
+     * @var \NetSuite\Classes\RecordRef
+     */
     public $class;
+    /**
+     * @var \NetSuite\Classes\RecordRef
+     */
     public $location;
+    /**
+     * @var \NetSuite\Classes\Duration
+     */
     public $hours;
+    /**
+     * @var \NetSuite\Classes\RecordRef
+     */
     public $price;
+    /**
+     * @var float
+     */
     public $rate;
+    /**
+     * @var boolean
+     */
     public $overrideRate;
+    /**
+     * @var \NetSuite\Classes\Duration
+     */
     public $hoursTotal;
+    /**
+     * @var \NetSuite\Classes\RecordRef
+     */
     public $caseTaskEvent;
+    /**
+     * @var string
+     */
     public $memo;
+    /**
+     * @var boolean
+     */
     public $isUtilized;
+    /**
+     * @var boolean
+     */
     public $isProductive;
+    /**
+     * @var boolean
+     */
     public $isExempt;
     static $paramtypesmap = array(
         "id" => "integer",

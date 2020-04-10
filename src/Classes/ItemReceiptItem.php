@@ -14,36 +14,111 @@
  * @license    https://raw.githubusercontent.com/ryanwinchester/netsuite-php/master/original/NetSuite%20Application%20Developer%20License%20Agreement.txt
  * @link       http://www.netsuite.com/portal/developers/resources/suitetalk-sample-applications.shtml
  *
- * generated:  2020-02-19 09:58:55 AM CST
+ * generated:  2020-04-10 09:56:55 PM UTC
  */
 
 namespace NetSuite\Classes;
 
 class ItemReceiptItem {
+    /**
+     * @var boolean
+     */
     public $itemReceive;
+    /**
+     * @var string
+     */
     public $jobName;
+    /**
+     * @var \NetSuite\Classes\RecordRef
+     */
     public $item;
+    /**
+     * @var integer
+     */
     public $orderLine;
+    /**
+     * @var integer
+     */
     public $line;
+    /**
+     * @var string
+     */
     public $itemName;
+    /**
+     * @var string
+     */
     public $description;
+    /**
+     * @var \NetSuite\Classes\RecordRef
+     */
     public $location;
+    /**
+     * @var float
+     */
     public $onHand;
+    /**
+     * @var float
+     */
     public $quantityRemaining;
+    /**
+     * @var float
+     */
     public $quantity;
+    /**
+     * @var string
+     */
     public $unitsDisplay;
+    /**
+     * @var float
+     */
     public $unitCostOverride;
+    /**
+     * @var \NetSuite\Classes\InventoryDetail
+     */
     public $inventoryDetail;
+    /**
+     * @var string
+     */
     public $serialNumbers;
+    /**
+     * @var string
+     */
     public $binNumbers;
+    /**
+     * @var string
+     */
     public $expirationDate;
+    /**
+     * @var string
+     */
     public $rate;
+    /**
+     * @var string
+     */
     public $currency;
+    /**
+     * @var boolean
+     */
     public $restock;
+    /**
+     * @var \NetSuite\Classes\TransactionBillVarianceStatus
+     */
     public $billVarianceStatus;
+    /**
+     * @var boolean
+     */
     public $isDropShipment;
+    /**
+     * @var \NetSuite\Classes\CustomFieldList
+     */
     public $options;
+    /**
+     * @var \NetSuite\Classes\LandedCost
+     */
     public $landedCost;
+    /**
+     * @var \NetSuite\Classes\CustomFieldList
+     */
     public $customFieldList;
     static $paramtypesmap = array(
         "itemReceive" => "boolean",

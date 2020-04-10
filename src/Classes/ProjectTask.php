@@ -14,45 +14,147 @@
  * @license    https://raw.githubusercontent.com/ryanwinchester/netsuite-php/master/original/NetSuite%20Application%20Developer%20License%20Agreement.txt
  * @link       http://www.netsuite.com/portal/developers/resources/suitetalk-sample-applications.shtml
  *
- * generated:  2020-02-19 09:58:55 AM CST
+ * generated:  2020-04-10 09:56:55 PM UTC
  */
 
 namespace NetSuite\Classes;
 
 class ProjectTask extends Record {
+    /**
+     * @var \NetSuite\Classes\RecordRef
+     */
     public $customForm;
+    /**
+     * @var \NetSuite\Classes\RecordRef
+     */
     public $eventId;
+    /**
+     * @var float
+     */
     public $percentTimeComplete;
+    /**
+     * @var string
+     */
     public $title;
+    /**
+     * @var \NetSuite\Classes\RecordRef
+     */
     public $company;
+    /**
+     * @var \NetSuite\Classes\RecordRef
+     */
     public $contact;
+    /**
+     * @var \NetSuite\Classes\RecordRef
+     */
     public $order;
+    /**
+     * @var \NetSuite\Classes\RecordRef
+     */
     public $owner;
+    /**
+     * @var \NetSuite\Classes\RecordRef
+     */
     public $parent;
+    /**
+     * @var \NetSuite\Classes\RecordRef
+     */
     public $priority;
+    /**
+     * @var float
+     */
     public $estimatedWork;
+    /**
+     * @var float
+     */
     public $estimatedWorkBaseline;
+    /**
+     * @var \NetSuite\Classes\ProjectTaskConstraintType
+     */
     public $constraintType;
+    /**
+     * @var string
+     */
     public $startDate;
+    /**
+     * @var string
+     */
     public $startDateBaseline;
+    /**
+     * @var string
+     */
     public $endDate;
+    /**
+     * @var string
+     */
     public $finishByDate;
+    /**
+     * @var string
+     */
     public $endDateBaseline;
+    /**
+     * @var float
+     */
     public $actualWork;
+    /**
+     * @var float
+     */
     public $remainingWork;
+    /**
+     * @var string
+     */
     public $message;
+    /**
+     * @var boolean
+     */
     public $isMilestone;
+    /**
+     * @var string
+     */
     public $isOnCriticalPath;
+    /**
+     * @var float
+     */
     public $slackMinutes;
+    /**
+     * @var string
+     */
     public $lateEnd;
+    /**
+     * @var string
+     */
     public $lateStart;
+    /**
+     * @var \NetSuite\Classes\ProjectTaskStatus
+     */
     public $status;
+    /**
+     * @var boolean
+     */
     public $nonBillableTask;
+    /**
+     * @var \NetSuite\Classes\ProjectTaskAssigneeList
+     */
     public $assigneeList;
+    /**
+     * @var \NetSuite\Classes\ProjectTaskPredecessorList
+     */
     public $predecessorList;
+    /**
+     * @var \NetSuite\Classes\ProjectTaskTimeItemList
+     */
     public $timeItemList;
+    /**
+     * @var \NetSuite\Classes\CustomFieldList
+     */
     public $customFieldList;
+    /**
+     * @var string
+     */
     public $internalId;
+    /**
+     * @var string
+     */
     public $externalId;
     static $paramtypesmap = array(
         "customForm" => "RecordRef",

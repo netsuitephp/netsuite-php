@@ -14,48 +14,159 @@
  * @license    https://raw.githubusercontent.com/ryanwinchester/netsuite-php/master/original/NetSuite%20Application%20Developer%20License%20Agreement.txt
  * @link       http://www.netsuite.com/portal/developers/resources/suitetalk-sample-applications.shtml
  *
- * generated:  2020-02-19 09:58:55 AM CST
+ * generated:  2020-04-10 09:56:55 PM UTC
  */
 
 namespace NetSuite\Classes;
 
 class MseSubsidiarySearchBasic extends SearchRecordBasic {
+    /**
+     * @var \NetSuite\Classes\SearchMultiSelectField
+     */
     public $accountingBook;
+    /**
+     * @var \NetSuite\Classes\SearchMultiSelectField
+     */
     public $accountingBookCurrency;
+    /**
+     * @var \NetSuite\Classes\SearchStringField
+     */
     public $address;
+    /**
+     * @var \NetSuite\Classes\SearchStringField
+     */
     public $city;
+    /**
+     * @var \NetSuite\Classes\SearchEnumMultiSelectField
+     */
     public $country;
+    /**
+     * @var \NetSuite\Classes\SearchMultiSelectField
+     */
     public $currency;
+    /**
+     * @var \NetSuite\Classes\SearchDateField
+     */
     public $effectiveFrom;
+    /**
+     * @var \NetSuite\Classes\SearchStringField
+     */
     public $email;
+    /**
+     * @var \NetSuite\Classes\SearchMultiSelectField
+     */
     public $externalId;
+    /**
+     * @var \NetSuite\Classes\SearchStringField
+     */
     public $externalIdString;
+    /**
+     * @var \NetSuite\Classes\SearchStringField
+     */
     public $fax;
+    /**
+     * @var \NetSuite\Classes\SearchMultiSelectField
+     */
     public $internalId;
+    /**
+     * @var \NetSuite\Classes\SearchLongField
+     */
     public $internalIdNumber;
+    /**
+     * @var \NetSuite\Classes\SearchBooleanField
+     */
     public $isElimination;
+    /**
+     * @var \NetSuite\Classes\SearchBooleanField
+     */
     public $isInactive;
+    /**
+     * @var \NetSuite\Classes\SearchStringField
+     */
     public $legalName;
+    /**
+     * @var \NetSuite\Classes\SearchStringField
+     */
     public $name;
+    /**
+     * @var \NetSuite\Classes\SearchStringField
+     */
     public $nameNoHierarchy;
+    /**
+     * @var \NetSuite\Classes\SearchMultiSelectField
+     */
     public $nexus;
+    /**
+     * @var \NetSuite\Classes\SearchStringField
+     */
     public $phone;
+    /**
+     * @var \NetSuite\Classes\SearchBooleanField
+     */
     public $primary;
+    /**
+     * @var \NetSuite\Classes\SearchDoubleField
+     */
     public $purchaseOrderAmount;
+    /**
+     * @var \NetSuite\Classes\SearchDoubleField
+     */
     public $purchaseOrderQuantity;
+    /**
+     * @var \NetSuite\Classes\SearchDoubleField
+     */
     public $purchaseOrderQuantityDiff;
+    /**
+     * @var \NetSuite\Classes\SearchDoubleField
+     */
     public $receiptAmount;
+    /**
+     * @var \NetSuite\Classes\SearchDoubleField
+     */
     public $receiptQuantity;
+    /**
+     * @var \NetSuite\Classes\SearchDoubleField
+     */
     public $receiptQuantityDiff;
+    /**
+     * @var \NetSuite\Classes\SearchStringField
+     */
     public $state;
+    /**
+     * @var \NetSuite\Classes\SearchMultiSelectField
+     */
     public $subsidiary;
+    /**
+     * @var \NetSuite\Classes\SearchMultiSelectField
+     */
     public $taxEngine;
+    /**
+     * @var \NetSuite\Classes\SearchStringField
+     */
     public $taxIdNum;
+    /**
+     * @var \NetSuite\Classes\SearchStringField
+     */
     public $taxRegistrationNumber;
+    /**
+     * @var \NetSuite\Classes\SearchStringField
+     */
     public $tranPrefix;
+    /**
+     * @var \NetSuite\Classes\SearchStringField
+     */
     public $url;
+    /**
+     * @var \NetSuite\Classes\SearchDateField
+     */
     public $validUntil;
+    /**
+     * @var \NetSuite\Classes\SearchStringField
+     */
     public $zip;
+    /**
+     * @var \NetSuite\Classes\SearchCustomFieldList
+     */
     public $customFieldList;
     static $paramtypesmap = array(
         "accountingBook" => "SearchMultiSelectField",

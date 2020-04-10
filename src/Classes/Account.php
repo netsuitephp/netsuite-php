@@ -14,43 +14,139 @@
  * @license    https://raw.githubusercontent.com/ryanwinchester/netsuite-php/master/original/NetSuite%20Application%20Developer%20License%20Agreement.txt
  * @link       http://www.netsuite.com/portal/developers/resources/suitetalk-sample-applications.shtml
  *
- * generated:  2020-02-19 09:58:55 AM CST
+ * generated:  2020-04-10 09:56:55 PM UTC
  */
 
 namespace NetSuite\Classes;
 
 class Account extends Record {
+    /**
+     * @var \NetSuite\Classes\AccountType
+     */
     public $acctType;
+    /**
+     * @var \NetSuite\Classes\RecordRef
+     */
     public $unitsType;
+    /**
+     * @var \NetSuite\Classes\RecordRef
+     */
     public $unit;
+    /**
+     * @var string
+     */
     public $acctNumber;
+    /**
+     * @var string
+     */
     public $acctName;
+    /**
+     * @var string
+     */
     public $legalName;
+    /**
+     * @var boolean
+     */
     public $includeChildren;
+    /**
+     * @var \NetSuite\Classes\RecordRef
+     */
     public $currency;
+    /**
+     * @var string
+     */
     public $exchangeRate;
+    /**
+     * @var \NetSuite\Classes\ConsolidatedRate
+     */
     public $generalRate;
+    /**
+     * @var \NetSuite\Classes\RecordRef
+     */
     public $parent;
+    /**
+     * @var \NetSuite\Classes\ConsolidatedRate
+     */
     public $cashFlowRate;
+    /**
+     * @var \NetSuite\Classes\RecordRef
+     */
     public $billableExpensesAcct;
+    /**
+     * @var \NetSuite\Classes\RecordRef
+     */
     public $deferralAcct;
+    /**
+     * @var string
+     */
     public $description;
+    /**
+     * @var integer
+     */
     public $curDocNum;
+    /**
+     * @var boolean
+     */
     public $isInactive;
+    /**
+     * @var \NetSuite\Classes\RecordRef
+     */
     public $department;
+    /**
+     * @var \NetSuite\Classes\RecordRef
+     */
     public $class;
+    /**
+     * @var \NetSuite\Classes\RecordRef
+     */
     public $location;
+    /**
+     * @var \NetSuite\Classes\RecordRefList
+     */
     public $restrictToAccountingBookList;
+    /**
+     * @var boolean
+     */
     public $inventory;
+    /**
+     * @var boolean
+     */
     public $eliminate;
+    /**
+     * @var \NetSuite\Classes\RecordRefList
+     */
     public $subsidiaryList;
+    /**
+     * @var \NetSuite\Classes\RecordRef
+     */
     public $category1099misc;
+    /**
+     * @var \NetSuite\Classes\AccountLocalizationsList
+     */
     public $localizationsList;
+    /**
+     * @var float
+     */
     public $openingBalance;
+    /**
+     * @var string
+     */
     public $tranDate;
+    /**
+     * @var boolean
+     */
     public $revalue;
+    /**
+     * @var \NetSuite\Classes\CustomFieldList
+     */
     public $customFieldList;
+    /**
+     * @var string
+     */
     public $internalId;
+    /**
+     * @var string
+     */
     public $externalId;
     static $paramtypesmap = array(
         "acctType" => "AccountType",

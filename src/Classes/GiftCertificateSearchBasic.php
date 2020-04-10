@@ -14,29 +14,83 @@
  * @license    https://raw.githubusercontent.com/ryanwinchester/netsuite-php/master/original/NetSuite%20Application%20Developer%20License%20Agreement.txt
  * @link       http://www.netsuite.com/portal/developers/resources/suitetalk-sample-applications.shtml
  *
- * generated:  2020-02-19 09:58:55 AM CST
+ * generated:  2020-04-10 09:56:55 PM UTC
  */
 
 namespace NetSuite\Classes;
 
 class GiftCertificateSearchBasic extends SearchRecordBasic {
+    /**
+     * @var \NetSuite\Classes\SearchDoubleField
+     */
     public $amountAvailableBilled;
+    /**
+     * @var \NetSuite\Classes\SearchDoubleField
+     */
     public $amountRemaining;
+    /**
+     * @var \NetSuite\Classes\SearchDateField
+     */
     public $createdDate;
+    /**
+     * @var \NetSuite\Classes\SearchStringField
+     */
     public $email;
+    /**
+     * @var \NetSuite\Classes\SearchDateField
+     */
     public $expirationDate;
+    /**
+     * @var \NetSuite\Classes\SearchStringField
+     */
     public $giftCertCode;
+    /**
+     * @var \NetSuite\Classes\SearchMultiSelectField
+     */
     public $incomeAccount;
+    /**
+     * @var \NetSuite\Classes\SearchMultiSelectField
+     */
     public $internalId;
+    /**
+     * @var \NetSuite\Classes\SearchLongField
+     */
     public $internalIdNumber;
+    /**
+     * @var \NetSuite\Classes\SearchBooleanField
+     */
     public $isActive;
+    /**
+     * @var \NetSuite\Classes\SearchMultiSelectField
+     */
     public $item;
+    /**
+     * @var \NetSuite\Classes\SearchMultiSelectField
+     */
     public $liabilityAccount;
+    /**
+     * @var \NetSuite\Classes\SearchStringField
+     */
     public $message;
+    /**
+     * @var \NetSuite\Classes\SearchStringField
+     */
     public $name;
+    /**
+     * @var \NetSuite\Classes\SearchDoubleField
+     */
     public $originalAmount;
+    /**
+     * @var \NetSuite\Classes\SearchDateField
+     */
     public $purchaseDate;
+    /**
+     * @var \NetSuite\Classes\SearchStringField
+     */
     public $sender;
+    /**
+     * @var \NetSuite\Classes\SearchCustomFieldList
+     */
     public $customFieldList;
     static $paramtypesmap = array(
         "amountAvailableBilled" => "SearchDoubleField",

@@ -14,189 +14,723 @@
  * @license    https://raw.githubusercontent.com/ryanwinchester/netsuite-php/master/original/NetSuite%20Application%20Developer%20License%20Agreement.txt
  * @link       http://www.netsuite.com/portal/developers/resources/suitetalk-sample-applications.shtml
  *
- * generated:  2020-02-19 09:58:55 AM CST
+ * generated:  2020-04-10 09:56:55 PM UTC
  */
 
 namespace NetSuite\Classes;
 
 class OriginatingLeadSearchRowBasic extends SearchRowBasic {
+    /**
+     * @var \NetSuite\Classes\SearchColumnStringField[]
+     */
     public $accountNumber;
+    /**
+     * @var \NetSuite\Classes\SearchColumnStringField[]
+     */
     public $address;
+    /**
+     * @var \NetSuite\Classes\SearchColumnStringField[]
+     */
     public $address1;
+    /**
+     * @var \NetSuite\Classes\SearchColumnStringField[]
+     */
     public $address2;
+    /**
+     * @var \NetSuite\Classes\SearchColumnStringField[]
+     */
     public $address3;
+    /**
+     * @var \NetSuite\Classes\SearchColumnStringField[]
+     */
     public $addressee;
+    /**
+     * @var \NetSuite\Classes\SearchColumnStringField[]
+     */
     public $addressInternalId;
+    /**
+     * @var \NetSuite\Classes\SearchColumnStringField[]
+     */
     public $addressLabel;
+    /**
+     * @var \NetSuite\Classes\SearchColumnStringField[]
+     */
     public $addressPhone;
+    /**
+     * @var \NetSuite\Classes\SearchColumnStringField[]
+     */
     public $altContact;
+    /**
+     * @var \NetSuite\Classes\SearchColumnStringField[]
+     */
     public $altEmail;
+    /**
+     * @var \NetSuite\Classes\SearchColumnStringField[]
+     */
     public $altName;
+    /**
+     * @var \NetSuite\Classes\SearchColumnStringField[]
+     */
     public $altPhone;
+    /**
+     * @var \NetSuite\Classes\SearchColumnSelectField[]
+     */
     public $assignedSite;
+    /**
+     * @var \NetSuite\Classes\SearchColumnLongField[]
+     */
     public $assignedSiteId;
+    /**
+     * @var \NetSuite\Classes\SearchColumnStringField[]
+     */
     public $attention;
+    /**
+     * @var \NetSuite\Classes\SearchColumnBooleanField[]
+     */
     public $availableOffline;
+    /**
+     * @var \NetSuite\Classes\SearchColumnDoubleField[]
+     */
     public $balance;
+    /**
+     * @var \NetSuite\Classes\SearchColumnStringField[]
+     */
     public $billAddress;
+    /**
+     * @var \NetSuite\Classes\SearchColumnStringField[]
+     */
     public $billAddress1;
+    /**
+     * @var \NetSuite\Classes\SearchColumnStringField[]
+     */
     public $billAddress2;
+    /**
+     * @var \NetSuite\Classes\SearchColumnStringField[]
+     */
     public $billAddress3;
+    /**
+     * @var \NetSuite\Classes\SearchColumnStringField[]
+     */
     public $billAddressee;
+    /**
+     * @var \NetSuite\Classes\SearchColumnStringField[]
+     */
     public $billAttention;
+    /**
+     * @var \NetSuite\Classes\SearchColumnStringField[]
+     */
     public $billCity;
+    /**
+     * @var \NetSuite\Classes\SearchColumnEnumSelectField[]
+     */
     public $billCountry;
+    /**
+     * @var \NetSuite\Classes\SearchColumnStringField[]
+     */
     public $billCountryCode;
+    /**
+     * @var \NetSuite\Classes\SearchColumnStringField[]
+     */
     public $billPhone;
+    /**
+     * @var \NetSuite\Classes\SearchColumnStringField[]
+     */
     public $billState;
+    /**
+     * @var \NetSuite\Classes\SearchColumnStringField[]
+     */
     public $billZipCode;
+    /**
+     * @var \NetSuite\Classes\SearchColumnStringField[]
+     */
     public $buyingReason;
+    /**
+     * @var \NetSuite\Classes\SearchColumnStringField[]
+     */
     public $buyingTimeFrame;
+    /**
+     * @var \NetSuite\Classes\SearchColumnSelectField[]
+     */
     public $category;
+    /**
+     * @var \NetSuite\Classes\SearchColumnStringField[]
+     */
     public $ccCustomerCode;
+    /**
+     * @var \NetSuite\Classes\SearchColumnBooleanField[]
+     */
     public $ccDefault;
+    /**
+     * @var \NetSuite\Classes\SearchColumnDateField[]
+     */
     public $ccExpDate;
+    /**
+     * @var \NetSuite\Classes\SearchColumnStringField[]
+     */
     public $ccHolderName;
+    /**
+     * @var \NetSuite\Classes\SearchColumnStringField[]
+     */
     public $ccInternalId;
+    /**
+     * @var \NetSuite\Classes\SearchColumnStringField[]
+     */
     public $ccNumber;
+    /**
+     * @var \NetSuite\Classes\SearchColumnSelectField[]
+     */
     public $ccState;
+    /**
+     * @var \NetSuite\Classes\SearchColumnDateField[]
+     */
     public $ccStateFrom;
+    /**
+     * @var \NetSuite\Classes\SearchColumnSelectField[]
+     */
     public $ccType;
+    /**
+     * @var \NetSuite\Classes\SearchColumnStringField[]
+     */
     public $city;
+    /**
+     * @var \NetSuite\Classes\SearchColumnStringField[]
+     */
     public $comments;
+    /**
+     * @var \NetSuite\Classes\SearchColumnStringField[]
+     */
     public $companyName;
+    /**
+     * @var \NetSuite\Classes\SearchColumnDoubleField[]
+     */
     public $consolBalance;
+    /**
+     * @var \NetSuite\Classes\SearchColumnLongField[]
+     */
     public $consolDaysOverdue;
+    /**
+     * @var \NetSuite\Classes\SearchColumnDoubleField[]
+     */
     public $consolDepositBalance;
+    /**
+     * @var \NetSuite\Classes\SearchColumnDoubleField[]
+     */
     public $consolOverdueBalance;
+    /**
+     * @var \NetSuite\Classes\SearchColumnDoubleField[]
+     */
     public $consolUnbilledOrders;
+    /**
+     * @var \NetSuite\Classes\SearchColumnStringField[]
+     */
     public $contact;
+    /**
+     * @var \NetSuite\Classes\SearchColumnDoubleField[]
+     */
     public $contribution;
+    /**
+     * @var \NetSuite\Classes\SearchColumnDoubleField[]
+     */
     public $contributionPrimary;
+    /**
+     * @var \NetSuite\Classes\SearchColumnDateField[]
+     */
     public $conversionDate;
+    /**
+     * @var \NetSuite\Classes\SearchColumnEnumSelectField[]
+     */
     public $country;
+    /**
+     * @var \NetSuite\Classes\SearchColumnStringField[]
+     */
     public $countryCode;
+    /**
+     * @var \NetSuite\Classes\SearchColumnEnumSelectField[]
+     */
     public $creditHold;
+    /**
+     * @var \NetSuite\Classes\SearchColumnBooleanField[]
+     */
     public $creditHoldOverride;
+    /**
+     * @var \NetSuite\Classes\SearchColumnDoubleField[]
+     */
     public $creditLimit;
+    /**
+     * @var \NetSuite\Classes\SearchColumnSelectField[]
+     */
     public $currency;
+    /**
+     * @var \NetSuite\Classes\SearchColumnDateField[]
+     */
     public $dateClosed;
+    /**
+     * @var \NetSuite\Classes\SearchColumnDateField[]
+     */
     public $dateCreated;
+    /**
+     * @var \NetSuite\Classes\SearchColumnLongField[]
+     */
     public $daysOverdue;
+    /**
+     * @var \NetSuite\Classes\SearchColumnDoubleField[]
+     */
     public $defaultOrderPriority;
+    /**
+     * @var \NetSuite\Classes\SearchColumnStringField[]
+     */
     public $defaultTaxReg;
+    /**
+     * @var \NetSuite\Classes\SearchColumnDoubleField[]
+     */
     public $depositBalance;
+    /**
+     * @var \NetSuite\Classes\SearchColumnStringField[]
+     */
     public $drAccount;
+    /**
+     * @var \NetSuite\Classes\SearchColumnStringField[]
+     */
     public $email;
+    /**
+     * @var \NetSuite\Classes\SearchColumnEnumSelectField[]
+     */
     public $emailPreference;
+    /**
+     * @var \NetSuite\Classes\SearchColumnBooleanField[]
+     */
     public $emailTransactions;
+    /**
+     * @var \NetSuite\Classes\SearchColumnDateField[]
+     */
     public $endDate;
+    /**
+     * @var \NetSuite\Classes\SearchColumnStringField[]
+     */
     public $entityId;
+    /**
+     * @var \NetSuite\Classes\SearchColumnLongField[]
+     */
     public $entityNumber;
+    /**
+     * @var \NetSuite\Classes\SearchColumnSelectField[]
+     */
     public $entityStatus;
+    /**
+     * @var \NetSuite\Classes\SearchColumnDoubleField[]
+     */
     public $estimatedBudget;
+    /**
+     * @var \NetSuite\Classes\SearchColumnBooleanField[]
+     */
     public $explicitConversion;
+    /**
+     * @var \NetSuite\Classes\SearchColumnSelectField[]
+     */
     public $externalId;
+    /**
+     * @var \NetSuite\Classes\SearchColumnStringField[]
+     */
     public $fax;
+    /**
+     * @var \NetSuite\Classes\SearchColumnBooleanField[]
+     */
     public $faxTransactions;
+    /**
+     * @var \NetSuite\Classes\SearchColumnStringField[]
+     */
     public $firstName;
+    /**
+     * @var \NetSuite\Classes\SearchColumnDateField[]
+     */
     public $firstOrderDate;
+    /**
+     * @var \NetSuite\Classes\SearchColumnDateField[]
+     */
     public $firstSaleDate;
+    /**
+     * @var \NetSuite\Classes\SearchColumnStringField[]
+     */
     public $fxAccount;
+    /**
+     * @var \NetSuite\Classes\SearchColumnDoubleField[]
+     */
     public $fxBalance;
+    /**
+     * @var \NetSuite\Classes\SearchColumnDoubleField[]
+     */
     public $fxConsolBalance;
+    /**
+     * @var \NetSuite\Classes\SearchColumnDoubleField[]
+     */
     public $fxConsolUnbilledOrders;
+    /**
+     * @var \NetSuite\Classes\SearchColumnDoubleField[]
+     */
     public $fxUnbilledOrders;
+    /**
+     * @var \NetSuite\Classes\SearchColumnBooleanField[]
+     */
     public $giveAccess;
+    /**
+     * @var \NetSuite\Classes\SearchColumnEnumSelectField[]
+     */
     public $globalSubscriptionStatus;
+    /**
+     * @var \NetSuite\Classes\SearchColumnStringField[]
+     */
     public $groupPricingLevel;
+    /**
+     * @var \NetSuite\Classes\SearchColumnBooleanField[]
+     */
     public $hasDuplicates;
+    /**
+     * @var \NetSuite\Classes\SearchColumnStringField[]
+     */
     public $homePhone;
+    /**
+     * @var \NetSuite\Classes\SearchColumnSelectField[]
+     */
     public $image;
+    /**
+     * @var \NetSuite\Classes\SearchColumnSelectField[]
+     */
     public $internalId;
+    /**
+     * @var \NetSuite\Classes\SearchColumnBooleanField[]
+     */
     public $isBudgetApproved;
+    /**
+     * @var \NetSuite\Classes\SearchColumnBooleanField[]
+     */
     public $isDefaultBilling;
+    /**
+     * @var \NetSuite\Classes\SearchColumnBooleanField[]
+     */
     public $isDefaultShipping;
+    /**
+     * @var \NetSuite\Classes\SearchColumnBooleanField[]
+     */
     public $isInactive;
+    /**
+     * @var \NetSuite\Classes\SearchColumnBooleanField[]
+     */
     public $isPerson;
+    /**
+     * @var \NetSuite\Classes\SearchColumnBooleanField[]
+     */
     public $isShipAddress;
+    /**
+     * @var \NetSuite\Classes\SearchColumnStringField[]
+     */
     public $itemPricingLevel;
+    /**
+     * @var \NetSuite\Classes\SearchColumnDoubleField[]
+     */
     public $itemPricingUnitPrice;
+    /**
+     * @var \NetSuite\Classes\SearchColumnDateField[]
+     */
     public $jobEndDate;
+    /**
+     * @var \NetSuite\Classes\SearchColumnDateField[]
+     */
     public $jobProjectedEnd;
+    /**
+     * @var \NetSuite\Classes\SearchColumnDateField[]
+     */
     public $jobStartDate;
+    /**
+     * @var \NetSuite\Classes\SearchColumnSelectField[]
+     */
     public $jobType;
+    /**
+     * @var \NetSuite\Classes\SearchColumnEnumSelectField[]
+     */
     public $language;
+    /**
+     * @var \NetSuite\Classes\SearchColumnDateField[]
+     */
     public $lastModifiedDate;
+    /**
+     * @var \NetSuite\Classes\SearchColumnStringField[]
+     */
     public $lastName;
+    /**
+     * @var \NetSuite\Classes\SearchColumnDateField[]
+     */
     public $lastOrderDate;
+    /**
+     * @var \NetSuite\Classes\SearchColumnDateField[]
+     */
     public $lastSaleDate;
+    /**
+     * @var \NetSuite\Classes\SearchColumnDateField[]
+     */
     public $leadDate;
+    /**
+     * @var \NetSuite\Classes\SearchColumnSelectField[]
+     */
     public $leadSource;
+    /**
+     * @var \NetSuite\Classes\SearchColumnEnumSelectField[]
+     */
     public $level;
+    /**
+     * @var \NetSuite\Classes\SearchColumnBooleanField[]
+     */
     public $manualCreditHold;
+    /**
+     * @var \NetSuite\Classes\SearchColumnStringField[]
+     */
     public $middleName;
+    /**
+     * @var \NetSuite\Classes\SearchColumnStringField[]
+     */
     public $mobilePhone;
+    /**
+     * @var \NetSuite\Classes\SearchColumnEnumSelectField[]
+     */
     public $monthlyClosing;
+    /**
+     * @var \NetSuite\Classes\SearchColumnBooleanField[]
+     */
     public $onCreditHold;
+    /**
+     * @var \NetSuite\Classes\SearchColumnDoubleField[]
+     */
     public $overdueBalance;
+    /**
+     * @var \NetSuite\Classes\SearchColumnSelectField[]
+     */
     public $parent;
+    /**
+     * @var \NetSuite\Classes\SearchColumnSelectField[]
+     */
     public $partner;
+    /**
+     * @var \NetSuite\Classes\SearchColumnDoubleField[]
+     */
     public $partnerContribution;
+    /**
+     * @var \NetSuite\Classes\SearchColumnStringField[]
+     */
     public $partnerRole;
+    /**
+     * @var \NetSuite\Classes\SearchColumnSelectField[]
+     */
     public $partnerTeamMember;
+    /**
+     * @var \NetSuite\Classes\SearchColumnStringField[]
+     */
     public $pec;
+    /**
+     * @var \NetSuite\Classes\SearchColumnEnumSelectField[]
+     */
     public $permission;
+    /**
+     * @var \NetSuite\Classes\SearchColumnStringField[]
+     */
     public $phone;
+    /**
+     * @var \NetSuite\Classes\SearchColumnStringField[]
+     */
     public $phoneticName;
+    /**
+     * @var \NetSuite\Classes\SearchColumnSelectField[]
+     */
     public $prefCCProcessor;
+    /**
+     * @var \NetSuite\Classes\SearchColumnSelectField[]
+     */
     public $priceLevel;
+    /**
+     * @var \NetSuite\Classes\SearchColumnStringField[]
+     */
     public $pricingGroup;
+    /**
+     * @var \NetSuite\Classes\SearchColumnStringField[]
+     */
     public $pricingItem;
+    /**
+     * @var \NetSuite\Classes\SearchColumnBooleanField[]
+     */
     public $printTransactions;
+    /**
+     * @var \NetSuite\Classes\SearchColumnDateField[]
+     */
     public $prospectDate;
+    /**
+     * @var \NetSuite\Classes\SearchColumnStringField[]
+     */
     public $receivablesAccount;
+    /**
+     * @var \NetSuite\Classes\SearchColumnLongField[]
+     */
     public $reminderDays;
+    /**
+     * @var \NetSuite\Classes\SearchColumnStringField[]
+     */
     public $resaleNumber;
+    /**
+     * @var \NetSuite\Classes\SearchColumnStringField[]
+     */
     public $role;
+    /**
+     * @var \NetSuite\Classes\SearchColumnStringField[]
+     */
     public $salesReadiness;
+    /**
+     * @var \NetSuite\Classes\SearchColumnSelectField[]
+     */
     public $salesRep;
+    /**
+     * @var \NetSuite\Classes\SearchColumnSelectField[]
+     */
     public $salesTeamMember;
+    /**
+     * @var \NetSuite\Classes\SearchColumnSelectField[]
+     */
     public $salesTeamRole;
+    /**
+     * @var \NetSuite\Classes\SearchColumnStringField[]
+     */
     public $salutation;
+    /**
+     * @var \NetSuite\Classes\SearchColumnStringField[]
+     */
     public $shipAddress;
+    /**
+     * @var \NetSuite\Classes\SearchColumnStringField[]
+     */
     public $shipAddress1;
+    /**
+     * @var \NetSuite\Classes\SearchColumnStringField[]
+     */
     public $shipAddress2;
+    /**
+     * @var \NetSuite\Classes\SearchColumnStringField[]
+     */
     public $shipAddress3;
+    /**
+     * @var \NetSuite\Classes\SearchColumnStringField[]
+     */
     public $shipAddressee;
+    /**
+     * @var \NetSuite\Classes\SearchColumnStringField[]
+     */
     public $shipAttention;
+    /**
+     * @var \NetSuite\Classes\SearchColumnStringField[]
+     */
     public $shipCity;
+    /**
+     * @var \NetSuite\Classes\SearchColumnBooleanField[]
+     */
     public $shipComplete;
+    /**
+     * @var \NetSuite\Classes\SearchColumnEnumSelectField[]
+     */
     public $shipCountry;
+    /**
+     * @var \NetSuite\Classes\SearchColumnStringField[]
+     */
     public $shipCountryCode;
+    /**
+     * @var \NetSuite\Classes\SearchColumnStringField[]
+     */
     public $shipPhone;
+    /**
+     * @var \NetSuite\Classes\SearchColumnSelectField[]
+     */
     public $shippingItem;
+    /**
+     * @var \NetSuite\Classes\SearchColumnStringField[]
+     */
     public $shipState;
+    /**
+     * @var \NetSuite\Classes\SearchColumnStringField[]
+     */
     public $shipZip;
+    /**
+     * @var \NetSuite\Classes\SearchColumnSelectField[]
+     */
     public $sourceSite;
+    /**
+     * @var \NetSuite\Classes\SearchColumnLongField[]
+     */
     public $sourceSiteId;
+    /**
+     * @var \NetSuite\Classes\SearchColumnStringField[]
+     */
     public $stage;
+    /**
+     * @var \NetSuite\Classes\SearchColumnDateField[]
+     */
     public $startDate;
+    /**
+     * @var \NetSuite\Classes\SearchColumnEnumSelectField[]
+     */
     public $state;
+    /**
+     * @var \NetSuite\Classes\SearchColumnSelectField[]
+     */
     public $subscription;
+    /**
+     * @var \NetSuite\Classes\SearchColumnDateField[]
+     */
     public $subscriptionDate;
+    /**
+     * @var \NetSuite\Classes\SearchColumnBooleanField[]
+     */
     public $subscriptionStatus;
+    /**
+     * @var \NetSuite\Classes\SearchColumnSelectField[]
+     */
     public $subsidiary;
+    /**
+     * @var \NetSuite\Classes\SearchColumnBooleanField[]
+     */
     public $taxable;
+    /**
+     * @var \NetSuite\Classes\SearchColumnSelectField[]
+     */
     public $taxItem;
+    /**
+     * @var \NetSuite\Classes\SearchColumnSelectField[]
+     */
     public $terms;
+    /**
+     * @var \NetSuite\Classes\SearchColumnSelectField[]
+     */
     public $territory;
+    /**
+     * @var \NetSuite\Classes\SearchColumnStringField[]
+     */
     public $title;
+    /**
+     * @var \NetSuite\Classes\SearchColumnDoubleField[]
+     */
     public $unbilledOrders;
+    /**
+     * @var \NetSuite\Classes\SearchColumnStringField[]
+     */
     public $url;
+    /**
+     * @var \NetSuite\Classes\SearchColumnStringField[]
+     */
     public $vatRegNumber;
+    /**
+     * @var \NetSuite\Classes\SearchColumnBooleanField[]
+     */
     public $webLead;
+    /**
+     * @var \NetSuite\Classes\SearchColumnStringField[]
+     */
     public $zipCode;
+    /**
+     * @var \NetSuite\Classes\SearchColumnCustomFieldList
+     */
     public $customFieldList;
     static $paramtypesmap = array(
         "accountNumber" => "SearchColumnStringField[]",

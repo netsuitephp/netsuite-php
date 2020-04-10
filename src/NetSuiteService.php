@@ -15,7 +15,7 @@
  * @link       http://www.netsuite.com/portal/developers/resources/suitetalk-sample-applications.shtml
  *
  * created:    2015-01-22  1:04 PM
- * updated:    2020-02-19 09:58:55 AM CST
+ * updated:    2020-04-10 09:56:55 PM UTC
  */
 
 namespace NetSuite;

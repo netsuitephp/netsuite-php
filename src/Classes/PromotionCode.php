@@ -14,38 +14,119 @@
  * @license    https://raw.githubusercontent.com/ryanwinchester/netsuite-php/master/original/NetSuite%20Application%20Developer%20License%20Agreement.txt
  * @link       http://www.netsuite.com/portal/developers/resources/suitetalk-sample-applications.shtml
  *
- * generated:  2020-02-19 09:58:55 AM CST
+ * generated:  2020-04-10 09:56:55 PM UTC
  */
 
 namespace NetSuite\Classes;
 
 class PromotionCode extends Record {
+    /**
+     * @var \NetSuite\Classes\RecordRef
+     */
     public $implementation;
+    /**
+     * @var \NetSuite\Classes\RecordRef
+     */
     public $customForm;
+    /**
+     * @var \NetSuite\Classes\PromotionCodeUseType
+     */
     public $useType;
+    /**
+     * @var boolean
+     */
     public $displayLineDiscounts;
+    /**
+     * @var string
+     */
     public $code;
+    /**
+     * @var string
+     */
     public $codePattern;
+    /**
+     * @var integer
+     */
     public $numberToGenerate;
+    /**
+     * @var string
+     */
     public $description;
+    /**
+     * @var \NetSuite\Classes\RecordRefList
+     */
     public $locationList;
+    /**
+     * @var boolean
+     */
     public $isInactive;
+    /**
+     * @var \NetSuite\Classes\RecordRef
+     */
     public $discount;
+    /**
+     * @var string
+     */
     public $rate;
+    /**
+     * @var boolean
+     */
     public $discountType;
+    /**
+     * @var \NetSuite\Classes\PromotionCodeApplyDiscountTo
+     */
     public $applyDiscountTo;
+    /**
+     * @var \NetSuite\Classes\RecordRef
+     */
     public $freeShipMethod;
+    /**
+     * @var float
+     */
     public $minimumOrderAmount;
+    /**
+     * @var string
+     */
     public $startDate;
+    /**
+     * @var string
+     */
     public $endDate;
+    /**
+     * @var boolean
+     */
     public $isPublic;
+    /**
+     * @var \NetSuite\Classes\PromotionCodeCurrencyList
+     */
     public $currencyList;
+    /**
+     * @var boolean
+     */
     public $excludeItems;
+    /**
+     * @var string
+     */
     public $name;
+    /**
+     * @var \NetSuite\Classes\PromotionCodeItemsList
+     */
     public $itemsList;
+    /**
+     * @var \NetSuite\Classes\PromotionCodePartnersList
+     */
     public $partnersList;
+    /**
+     * @var \NetSuite\Classes\CustomFieldList
+     */
     public $customFieldList;
+    /**
+     * @var string
+     */
     public $internalId;
+    /**
+     * @var string
+     */
     public $externalId;
     static $paramtypesmap = array(
         "implementation" => "RecordRef",

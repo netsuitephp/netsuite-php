@@ -14,46 +14,151 @@
  * @license    https://raw.githubusercontent.com/ryanwinchester/netsuite-php/master/original/NetSuite%20Application%20Developer%20License%20Agreement.txt
  * @link       http://www.netsuite.com/portal/developers/resources/suitetalk-sample-applications.shtml
  *
- * generated:  2020-02-19 09:58:55 AM CST
+ * generated:  2020-04-10 09:56:55 PM UTC
  */
 
 namespace NetSuite\Classes;
 
 class VendorReturnAuthorization extends Record {
+    /**
+     * @var string
+     */
     public $createdDate;
+    /**
+     * @var string
+     */
     public $lastModifiedDate;
+    /**
+     * @var \NetSuite\Classes\RecordRef
+     */
     public $nexus;
+    /**
+     * @var \NetSuite\Classes\RecordRef
+     */
     public $subsidiaryTaxRegNum;
+    /**
+     * @var boolean
+     */
     public $taxRegOverride;
+    /**
+     * @var boolean
+     */
     public $taxDetailsOverride;
+    /**
+     * @var \NetSuite\Classes\RecordRef
+     */
     public $customForm;
+    /**
+     * @var string
+     */
     public $tranId;
+    /**
+     * @var \NetSuite\Classes\RecordRef
+     */
     public $createdFrom;
+    /**
+     * @var \NetSuite\Classes\RecordRef
+     */
     public $entity;
+    /**
+     * @var \NetSuite\Classes\VendorReturnAuthorizationOrderStatus
+     */
     public $orderStatus;
+    /**
+     * @var string
+     */
     public $tranDate;
+    /**
+     * @var float
+     */
     public $userTotal;
+    /**
+     * @var \NetSuite\Classes\RecordRef
+     */
     public $currency;
+    /**
+     * @var string
+     */
     public $currencyName;
+    /**
+     * @var \NetSuite\Classes\Address
+     */
     public $billingAddress;
+    /**
+     * @var \NetSuite\Classes\RecordRef
+     */
     public $billAddressList;
+    /**
+     * @var string
+     */
     public $memo;
+    /**
+     * @var float
+     */
     public $exchangeRate;
+    /**
+     * @var \NetSuite\Classes\RecordRef
+     */
     public $entityTaxRegNum;
+    /**
+     * @var string
+     */
     public $taxPointDate;
+    /**
+     * @var float
+     */
     public $userTaxTotal;
+    /**
+     * @var \NetSuite\Classes\RecordRef
+     */
     public $department;
+    /**
+     * @var \NetSuite\Classes\RecordRef
+     */
     public $class;
+    /**
+     * @var \NetSuite\Classes\RecordRef
+     */
     public $location;
+    /**
+     * @var \NetSuite\Classes\RecordRef
+     */
     public $subsidiary;
+    /**
+     * @var \NetSuite\Classes\RecordRef
+     */
     public $intercoTransaction;
+    /**
+     * @var \NetSuite\Classes\IntercoStatus
+     */
     public $intercoStatus;
+    /**
+     * @var \NetSuite\Classes\VendorReturnAuthorizationExpenseList
+     */
     public $expenseList;
+    /**
+     * @var \NetSuite\Classes\VendorReturnAuthorizationItemList
+     */
     public $itemList;
+    /**
+     * @var \NetSuite\Classes\AccountingBookDetailList
+     */
     public $accountingBookDetailList;
+    /**
+     * @var \NetSuite\Classes\TaxDetailsList
+     */
     public $taxDetailsList;
+    /**
+     * @var \NetSuite\Classes\CustomFieldList
+     */
     public $customFieldList;
+    /**
+     * @var string
+     */
     public $internalId;
+    /**
+     * @var string
+     */
     public $externalId;
     static $paramtypesmap = array(
         "createdDate" => "dateTime",

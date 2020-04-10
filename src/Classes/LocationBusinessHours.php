@@ -14,21 +14,51 @@
  * @license    https://raw.githubusercontent.com/ryanwinchester/netsuite-php/master/original/NetSuite%20Application%20Developer%20License%20Agreement.txt
  * @link       http://www.netsuite.com/portal/developers/resources/suitetalk-sample-applications.shtml
  *
- * generated:  2020-02-19 09:58:55 AM CST
+ * generated:  2020-04-10 09:56:55 PM UTC
  */
 
 namespace NetSuite\Classes;
 
 class LocationBusinessHours {
+    /**
+     * @var string
+     */
     public $startTime;
+    /**
+     * @var string
+     */
     public $endTime;
+    /**
+     * @var boolean
+     */
     public $isSunday;
+    /**
+     * @var boolean
+     */
     public $isMonday;
+    /**
+     * @var boolean
+     */
     public $isTuesday;
+    /**
+     * @var boolean
+     */
     public $isWednesday;
+    /**
+     * @var boolean
+     */
     public $isThursday;
+    /**
+     * @var boolean
+     */
     public $isFriday;
+    /**
+     * @var boolean
+     */
     public $isSaturday;
+    /**
+     * @var string
+     */
     public $sameDayPickupCutOffTime;
     static $paramtypesmap = array(
         "startTime" => "dateTime",
