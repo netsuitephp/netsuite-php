@@ -14,31 +14,91 @@
  * @license    https://raw.githubusercontent.com/ryanwinchester/netsuite-php/master/original/NetSuite%20Application%20Developer%20License%20Agreement.txt
  * @link       http://www.netsuite.com/portal/developers/resources/suitetalk-sample-applications.shtml
  *
- * generated:  2020-02-19 09:58:55 AM CST
+ * generated:  2020-04-10 09:56:55 PM UTC
  */
 
 namespace NetSuite\Classes;
 
 class FairValuePrice extends Record {
+    /**
+     * @var \NetSuite\Classes\RecordRef
+     */
     public $customForm;
+    /**
+     * @var \NetSuite\Classes\RecordRef
+     */
     public $item;
+    /**
+     * @var \NetSuite\Classes\RecordRef
+     */
     public $itemRevenueCategory;
+    /**
+     * @var float
+     */
     public $fairValue;
+    /**
+     * @var \NetSuite\Classes\RecordRef
+     */
     public $fairValueFormula;
+    /**
+     * @var \NetSuite\Classes\RecordRef
+     */
     public $currency;
+    /**
+     * @var \NetSuite\Classes\RecordRef
+     */
     public $unitsType;
+    /**
+     * @var \NetSuite\Classes\RecordRef
+     */
     public $units;
+    /**
+     * @var \NetSuite\Classes\FairValuePriceFairValueRangePolicy
+     */
     public $fairValueRangePolicy;
+    /**
+     * @var float
+     */
     public $lowValue;
+    /**
+     * @var float
+     */
     public $lowValuePercent;
+    /**
+     * @var float
+     */
     public $highValue;
+    /**
+     * @var float
+     */
     public $highValuePercent;
+    /**
+     * @var boolean
+     */
     public $isVsoePrice;
+    /**
+     * @var string
+     */
     public $startDate;
+    /**
+     * @var string
+     */
     public $endDate;
+    /**
+     * @var \NetSuite\Classes\CustomFieldList
+     */
     public $customFieldList;
+    /**
+     * @var \NetSuite\Classes\DimensionList
+     */
     public $dimensionList;
+    /**
+     * @var string
+     */
     public $internalId;
+    /**
+     * @var string
+     */
     public $externalId;
     static $paramtypesmap = array(
         "customForm" => "RecordRef",

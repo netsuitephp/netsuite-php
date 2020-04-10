@@ -14,16 +14,31 @@
  * @license    https://raw.githubusercontent.com/ryanwinchester/netsuite-php/master/original/NetSuite%20Application%20Developer%20License%20Agreement.txt
  * @link       http://www.netsuite.com/portal/developers/resources/suitetalk-sample-applications.shtml
  *
- * generated:  2020-02-19 09:58:55 AM CST
+ * generated:  2020-04-10 09:56:55 PM UTC
  */
 
 namespace NetSuite\Classes;
 
 class InventoryNumberBinSearchBasic extends SearchRecordBasic {
+    /**
+     * @var \NetSuite\Classes\SearchMultiSelectField
+     */
     public $binNumber;
+    /**
+     * @var \NetSuite\Classes\SearchStringField
+     */
     public $inventoryNumber;
+    /**
+     * @var \NetSuite\Classes\SearchMultiSelectField
+     */
     public $location;
+    /**
+     * @var \NetSuite\Classes\SearchDoubleField
+     */
     public $quantityAvailable;
+    /**
+     * @var \NetSuite\Classes\SearchDoubleField
+     */
     public $quantityOnHand;
     static $paramtypesmap = array(
         "binNumber" => "SearchMultiSelectField",

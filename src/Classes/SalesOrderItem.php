@@ -14,94 +14,343 @@
  * @license    https://raw.githubusercontent.com/ryanwinchester/netsuite-php/master/original/NetSuite%20Application%20Developer%20License%20Agreement.txt
  * @link       http://www.netsuite.com/portal/developers/resources/suitetalk-sample-applications.shtml
  *
- * generated:  2020-02-19 09:58:55 AM CST
+ * generated:  2020-04-10 09:56:55 PM UTC
  */
 
 namespace NetSuite\Classes;
 
 class SalesOrderItem {
+    /**
+     * @var \NetSuite\Classes\RecordRef
+     */
     public $job;
+    /**
+     * @var \NetSuite\Classes\RecordRef
+     */
     public $subscription;
+    /**
+     * @var \NetSuite\Classes\RecordRef
+     */
     public $item;
+    /**
+     * @var float
+     */
     public $quantityAvailable;
+    /**
+     * @var boolean
+     */
     public $expandItemGroup;
+    /**
+     * @var integer
+     */
     public $lineUniqueKey;
+    /**
+     * @var float
+     */
     public $quantityOnHand;
+    /**
+     * @var float
+     */
     public $quantity;
+    /**
+     * @var \NetSuite\Classes\RecordRef
+     */
     public $units;
+    /**
+     * @var \NetSuite\Classes\InventoryDetail
+     */
     public $inventoryDetail;
+    /**
+     * @var string
+     */
     public $description;
+    /**
+     * @var \NetSuite\Classes\RecordRef
+     */
     public $price;
+    /**
+     * @var string
+     */
     public $rate;
+    /**
+     * @var string
+     */
     public $serialNumbers;
+    /**
+     * @var float
+     */
     public $amount;
+    /**
+     * @var boolean
+     */
     public $isTaxable;
+    /**
+     * @var \NetSuite\Classes\SalesOrderItemCommitInventory
+     */
     public $commitInventory;
+    /**
+     * @var float
+     */
     public $orderPriority;
+    /**
+     * @var string
+     */
     public $licenseCode;
+    /**
+     * @var \NetSuite\Classes\CustomFieldList
+     */
     public $options;
+    /**
+     * @var \NetSuite\Classes\RecordRef
+     */
     public $department;
+    /**
+     * @var \NetSuite\Classes\RecordRef
+     */
     public $class;
+    /**
+     * @var \NetSuite\Classes\RecordRef
+     */
     public $location;
+    /**
+     * @var \NetSuite\Classes\SalesOrderItemCreatePo
+     */
     public $createPo;
+    /**
+     * @var \NetSuite\Classes\RecordRef
+     */
     public $createdPo;
+    /**
+     * @var float
+     */
     public $altSalesAmt;
+    /**
+     * @var boolean
+     */
     public $createWo;
+    /**
+     * @var \NetSuite\Classes\RecordRef
+     */
     public $poVendor;
+    /**
+     * @var string
+     */
     public $poCurrency;
+    /**
+     * @var float
+     */
     public $poRate;
+    /**
+     * @var \NetSuite\Classes\RecordRef
+     */
     public $revRecSchedule;
+    /**
+     * @var string
+     */
     public $revRecStartDate;
+    /**
+     * @var integer
+     */
     public $revRecTermInMonths;
+    /**
+     * @var string
+     */
     public $revRecEndDate;
+    /**
+     * @var boolean
+     */
     public $deferRevRec;
+    /**
+     * @var boolean
+     */
     public $isClosed;
+    /**
+     * @var \NetSuite\Classes\SalesOrderItemFulfillmentChoice
+     */
     public $itemFulfillmentChoice;
+    /**
+     * @var \NetSuite\Classes\RecordRef
+     */
     public $catchUpPeriod;
+    /**
+     * @var \NetSuite\Classes\RecordRef
+     */
     public $billingSchedule;
+    /**
+     * @var boolean
+     */
     public $fromJob;
+    /**
+     * @var float
+     */
     public $grossAmt;
+    /**
+     * @var float
+     */
     public $taxAmount;
+    /**
+     * @var boolean
+     */
     public $excludeFromRateRequest;
+    /**
+     * @var boolean
+     */
     public $isEstimate;
+    /**
+     * @var \NetSuite\Classes\RecordRef
+     */
     public $inventoryLocation;
+    /**
+     * @var \NetSuite\Classes\RecordRef
+     */
     public $inventorySubsidiary;
+    /**
+     * @var integer
+     */
     public $line;
+    /**
+     * @var float
+     */
     public $percentComplete;
+    /**
+     * @var \NetSuite\Classes\ItemCostEstimateType
+     */
     public $costEstimateType;
+    /**
+     * @var float
+     */
     public $costEstimate;
+    /**
+     * @var float
+     */
     public $quantityBackOrdered;
+    /**
+     * @var float
+     */
     public $quantityBilled;
+    /**
+     * @var float
+     */
     public $quantityCommitted;
+    /**
+     * @var float
+     */
     public $quantityFulfilled;
+    /**
+     * @var float
+     */
     public $quantityPacked;
+    /**
+     * @var float
+     */
     public $quantityPicked;
+    /**
+     * @var float
+     */
     public $tax1Amt;
+    /**
+     * @var \NetSuite\Classes\RecordRef
+     */
     public $taxCode;
+    /**
+     * @var float
+     */
     public $taxRate1;
+    /**
+     * @var float
+     */
     public $taxRate2;
+    /**
+     * @var string
+     */
     public $giftCertFrom;
+    /**
+     * @var string
+     */
     public $giftCertRecipientName;
+    /**
+     * @var string
+     */
     public $giftCertRecipientEmail;
+    /**
+     * @var string
+     */
     public $giftCertMessage;
+    /**
+     * @var string
+     */
     public $giftCertNumber;
+    /**
+     * @var integer
+     */
     public $shipGroup;
+    /**
+     * @var boolean
+     */
     public $itemIsFulfilled;
+    /**
+     * @var \NetSuite\Classes\RecordRef
+     */
     public $shipAddress;
+    /**
+     * @var \NetSuite\Classes\RecordRef
+     */
     public $shipMethod;
+    /**
+     * @var \NetSuite\Classes\VsoeSopGroup
+     */
     public $vsoeSopGroup;
+    /**
+     * @var boolean
+     */
     public $vsoeIsEstimate;
+    /**
+     * @var float
+     */
     public $vsoePrice;
+    /**
+     * @var float
+     */
     public $vsoeAmount;
+    /**
+     * @var float
+     */
     public $vsoeAllocation;
+    /**
+     * @var \NetSuite\Classes\VsoeDeferral
+     */
     public $vsoeDeferral;
+    /**
+     * @var \NetSuite\Classes\VsoePermitDiscount
+     */
     public $vsoePermitDiscount;
+    /**
+     * @var boolean
+     */
     public $vsoeDelivered;
+    /**
+     * @var string
+     */
     public $expectedShipDate;
+    /**
+     * @var boolean
+     */
     public $noAutoAssignLocation;
+    /**
+     * @var boolean
+     */
     public $locationAutoAssigned;
+    /**
+     * @var string
+     */
     public $taxDetailsReference;
+    /**
+     * @var \NetSuite\Classes\RecordRef
+     */
     public $chargeType;
+    /**
+     * @var \NetSuite\Classes\CustomFieldList
+     */
     public $customFieldList;
     static $paramtypesmap = array(
         "job" => "RecordRef",

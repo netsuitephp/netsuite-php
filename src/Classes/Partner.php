@@ -14,70 +14,247 @@
  * @license    https://raw.githubusercontent.com/ryanwinchester/netsuite-php/master/original/NetSuite%20Application%20Developer%20License%20Agreement.txt
  * @link       http://www.netsuite.com/portal/developers/resources/suitetalk-sample-applications.shtml
  *
- * generated:  2020-02-19 09:58:55 AM CST
+ * generated:  2020-04-10 09:56:55 PM UTC
  */
 
 namespace NetSuite\Classes;
 
 class Partner extends Record {
+    /**
+     * @var \NetSuite\Classes\RecordRef
+     */
     public $customForm;
+    /**
+     * @var string
+     */
     public $entityId;
+    /**
+     * @var string
+     */
     public $altName;
+    /**
+     * @var string
+     */
     public $partnerCode;
+    /**
+     * @var boolean
+     */
     public $isPerson;
+    /**
+     * @var string
+     */
     public $phoneticName;
+    /**
+     * @var string
+     */
     public $salutation;
+    /**
+     * @var string
+     */
     public $firstName;
+    /**
+     * @var string
+     */
     public $middleName;
+    /**
+     * @var string
+     */
     public $lastName;
+    /**
+     * @var string
+     */
     public $companyName;
+    /**
+     * @var \NetSuite\Classes\RecordRef
+     */
     public $parent;
+    /**
+     * @var string
+     */
     public $phone;
+    /**
+     * @var string
+     */
     public $fax;
+    /**
+     * @var string
+     */
     public $email;
+    /**
+     * @var string
+     */
     public $url;
+    /**
+     * @var string
+     */
     public $defaultAddress;
+    /**
+     * @var boolean
+     */
     public $isInactive;
+    /**
+     * @var string
+     */
     public $lastModifiedDate;
+    /**
+     * @var string
+     */
     public $dateCreated;
+    /**
+     * @var \NetSuite\Classes\PartnerTaxRegistrationList
+     */
     public $taxRegistrationList;
+    /**
+     * @var \NetSuite\Classes\GlobalSubscriptionStatus
+     */
     public $globalSubscriptionStatus;
+    /**
+     * @var string
+     */
     public $referringUrl;
+    /**
+     * @var \NetSuite\Classes\RecordRefList
+     */
     public $roleList;
+    /**
+     * @var \NetSuite\Classes\CategoryList
+     */
     public $categoryList;
+    /**
+     * @var string
+     */
     public $title;
+    /**
+     * @var string
+     */
     public $printOnCheckAs;
+    /**
+     * @var string
+     */
     public $taxIdNum;
+    /**
+     * @var string
+     */
     public $vatRegNumber;
+    /**
+     * @var string
+     */
     public $comments;
+    /**
+     * @var string
+     */
     public $bcn;
+    /**
+     * @var \NetSuite\Classes\RecordRef
+     */
     public $image;
+    /**
+     * @var \NetSuite\Classes\TaxFractionUnit
+     */
     public $taxFractionUnit;
+    /**
+     * @var \NetSuite\Classes\EmailPreference
+     */
     public $emailPreference;
+    /**
+     * @var \NetSuite\Classes\RecordRef
+     */
     public $defaultTaxReg;
+    /**
+     * @var \NetSuite\Classes\TaxRounding
+     */
     public $taxRounding;
+    /**
+     * @var \NetSuite\Classes\RecordRef
+     */
     public $department;
+    /**
+     * @var \NetSuite\Classes\RecordRef
+     */
     public $location;
+    /**
+     * @var \NetSuite\Classes\RecordRef
+     */
     public $class;
+    /**
+     * @var \NetSuite\Classes\RecordRef
+     */
     public $subsidiary;
+    /**
+     * @var string
+     */
     public $homePhone;
+    /**
+     * @var string
+     */
     public $mobilePhone;
+    /**
+     * @var string
+     */
     public $altEmail;
+    /**
+     * @var boolean
+     */
     public $giveAccess;
+    /**
+     * @var \NetSuite\Classes\RecordRef
+     */
     public $accessRole;
+    /**
+     * @var boolean
+     */
     public $sendEmail;
+    /**
+     * @var string
+     */
     public $password;
+    /**
+     * @var string
+     */
     public $password2;
+    /**
+     * @var boolean
+     */
     public $requirePwdChange;
+    /**
+     * @var boolean
+     */
     public $subPartnerLogin;
+    /**
+     * @var string
+     */
     public $loginAs;
+    /**
+     * @var boolean
+     */
     public $eligibleForCommission;
+    /**
+     * @var \NetSuite\Classes\ContactAccessRolesList
+     */
     public $contactRolesList;
+    /**
+     * @var \NetSuite\Classes\PartnerPromoCodeList
+     */
     public $promoCodeList;
+    /**
+     * @var \NetSuite\Classes\PartnerAddressbookList
+     */
     public $addressbookList;
+    /**
+     * @var \NetSuite\Classes\SubscriptionsList
+     */
     public $subscriptionsList;
+    /**
+     * @var \NetSuite\Classes\CustomFieldList
+     */
     public $customFieldList;
+    /**
+     * @var string
+     */
     public $internalId;
+    /**
+     * @var string
+     */
     public $externalId;
     static $paramtypesmap = array(
         "customForm" => "RecordRef",

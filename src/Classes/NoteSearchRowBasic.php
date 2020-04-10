@@ -14,20 +14,47 @@
  * @license    https://raw.githubusercontent.com/ryanwinchester/netsuite-php/master/original/NetSuite%20Application%20Developer%20License%20Agreement.txt
  * @link       http://www.netsuite.com/portal/developers/resources/suitetalk-sample-applications.shtml
  *
- * generated:  2020-02-19 09:58:55 AM CST
+ * generated:  2020-04-10 09:56:55 PM UTC
  */
 
 namespace NetSuite\Classes;
 
 class NoteSearchRowBasic extends SearchRowBasic {
+    /**
+     * @var \NetSuite\Classes\SearchColumnSelectField[]
+     */
     public $author;
+    /**
+     * @var \NetSuite\Classes\SearchColumnStringField[]
+     */
     public $direction;
+    /**
+     * @var \NetSuite\Classes\SearchColumnSelectField[]
+     */
     public $externalId;
+    /**
+     * @var \NetSuite\Classes\SearchColumnSelectField[]
+     */
     public $internalId;
+    /**
+     * @var \NetSuite\Classes\SearchColumnStringField[]
+     */
     public $note;
+    /**
+     * @var \NetSuite\Classes\SearchColumnDateField[]
+     */
     public $noteDate;
+    /**
+     * @var \NetSuite\Classes\SearchColumnStringField[]
+     */
     public $noteType;
+    /**
+     * @var \NetSuite\Classes\SearchColumnStringField[]
+     */
     public $title;
+    /**
+     * @var \NetSuite\Classes\SearchColumnCustomFieldList
+     */
     public $customFieldList;
     static $paramtypesmap = array(
         "author" => "SearchColumnSelectField[]",

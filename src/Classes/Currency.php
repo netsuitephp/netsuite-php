@@ -14,26 +14,71 @@
  * @license    https://raw.githubusercontent.com/ryanwinchester/netsuite-php/master/original/NetSuite%20Application%20Developer%20License%20Agreement.txt
  * @link       http://www.netsuite.com/portal/developers/resources/suitetalk-sample-applications.shtml
  *
- * generated:  2020-02-19 09:58:55 AM CST
+ * generated:  2020-04-10 09:56:55 PM UTC
  */
 
 namespace NetSuite\Classes;
 
 class Currency extends Record {
+    /**
+     * @var string
+     */
     public $name;
+    /**
+     * @var string
+     */
     public $symbol;
+    /**
+     * @var boolean
+     */
     public $isBaseCurrency;
+    /**
+     * @var boolean
+     */
     public $isInactive;
+    /**
+     * @var boolean
+     */
     public $overrideCurrencyFormat;
+    /**
+     * @var string
+     */
     public $displaySymbol;
+    /**
+     * @var \NetSuite\Classes\CurrencySymbolPlacement
+     */
     public $symbolPlacement;
+    /**
+     * @var \NetSuite\Classes\CurrencyLocale
+     */
     public $locale;
+    /**
+     * @var string
+     */
     public $formatSample;
+    /**
+     * @var float
+     */
     public $exchangeRate;
+    /**
+     * @var \NetSuite\Classes\CurrencyFxRateUpdateTimezone
+     */
     public $fxRateUpdateTimezone;
+    /**
+     * @var boolean
+     */
     public $inclInFxRateUpdates;
+    /**
+     * @var \NetSuite\Classes\CurrencyCurrencyPrecision
+     */
     public $currencyPrecision;
+    /**
+     * @var string
+     */
     public $internalId;
+    /**
+     * @var string
+     */
     public $externalId;
     static $paramtypesmap = array(
         "name" => "string",

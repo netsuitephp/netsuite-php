@@ -14,26 +14,71 @@
  * @license    https://raw.githubusercontent.com/ryanwinchester/netsuite-php/master/original/NetSuite%20Application%20Developer%20License%20Agreement.txt
  * @link       http://www.netsuite.com/portal/developers/resources/suitetalk-sample-applications.shtml
  *
- * generated:  2020-02-19 09:58:55 AM CST
+ * generated:  2020-04-10 09:56:55 PM UTC
  */
 
 namespace NetSuite\Classes;
 
 class BillingScheduleSearchRowBasic extends SearchRowBasic {
+    /**
+     * @var \NetSuite\Classes\SearchColumnBooleanField[]
+     */
     public $applyToSubtotal;
+    /**
+     * @var \NetSuite\Classes\SearchColumnSelectField[]
+     */
     public $externalId;
+    /**
+     * @var \NetSuite\Classes\SearchColumnEnumSelectField[]
+     */
     public $frequency;
+    /**
+     * @var \NetSuite\Classes\SearchColumnBooleanField[]
+     */
     public $inArrears;
+    /**
+     * @var \NetSuite\Classes\SearchColumnStringField[]
+     */
     public $initialAmount;
+    /**
+     * @var \NetSuite\Classes\SearchColumnStringField[]
+     */
     public $initialTerms;
+    /**
+     * @var \NetSuite\Classes\SearchColumnSelectField[]
+     */
     public $internalId;
+    /**
+     * @var \NetSuite\Classes\SearchColumnBooleanField[]
+     */
     public $isInactive;
+    /**
+     * @var \NetSuite\Classes\SearchColumnBooleanField[]
+     */
     public $isPublic;
+    /**
+     * @var \NetSuite\Classes\SearchColumnStringField[]
+     */
     public $name;
+    /**
+     * @var \NetSuite\Classes\SearchColumnLongField[]
+     */
     public $recurrenceCount;
+    /**
+     * @var \NetSuite\Classes\SearchColumnEnumSelectField[]
+     */
     public $recurrencePattern;
+    /**
+     * @var \NetSuite\Classes\SearchColumnStringField[]
+     */
     public $recurrenceTerms;
+    /**
+     * @var \NetSuite\Classes\SearchColumnLongField[]
+     */
     public $repeatEvery;
+    /**
+     * @var \NetSuite\Classes\SearchColumnEnumSelectField[]
+     */
     public $type;
     static $paramtypesmap = array(
         "applyToSubtotal" => "SearchColumnBooleanField[]",

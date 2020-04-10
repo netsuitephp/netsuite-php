@@ -14,21 +14,51 @@
  * @license    https://raw.githubusercontent.com/ryanwinchester/netsuite-php/master/original/NetSuite%20Application%20Developer%20License%20Agreement.txt
  * @link       http://www.netsuite.com/portal/developers/resources/suitetalk-sample-applications.shtml
  *
- * generated:  2020-02-19 09:58:55 AM CST
+ * generated:  2020-04-10 09:56:55 PM UTC
  */
 
 namespace NetSuite\Classes;
 
 class JobSearch extends SearchRecord {
+    /**
+     * @var \NetSuite\Classes\JobSearchBasic
+     */
     public $basic;
+    /**
+     * @var \NetSuite\Classes\BillingAccountSearchBasic
+     */
     public $billingAccountJoin;
+    /**
+     * @var \NetSuite\Classes\BillingScheduleSearchBasic
+     */
     public $billingScheduleJoin;
+    /**
+     * @var \NetSuite\Classes\ContactSearchBasic
+     */
     public $contactPrimaryJoin;
+    /**
+     * @var \NetSuite\Classes\CustomerSearchBasic
+     */
     public $customerJoin;
+    /**
+     * @var \NetSuite\Classes\ProjectTaskSearchBasic
+     */
     public $projectTaskJoin;
+    /**
+     * @var \NetSuite\Classes\ResourceAllocationSearchBasic
+     */
     public $resourceAllocationJoin;
+    /**
+     * @var \NetSuite\Classes\TaskSearchBasic
+     */
     public $taskJoin;
+    /**
+     * @var \NetSuite\Classes\TimeBillSearchBasic
+     */
     public $timeJoin;
+    /**
+     * @var \NetSuite\Classes\CustomSearchJoin[]
+     */
     public $customSearchJoin;
     static $paramtypesmap = array(
         "basic" => "JobSearchBasic",

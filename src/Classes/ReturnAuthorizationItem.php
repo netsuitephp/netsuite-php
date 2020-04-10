@@ -14,64 +14,223 @@
  * @license    https://raw.githubusercontent.com/ryanwinchester/netsuite-php/master/original/NetSuite%20Application%20Developer%20License%20Agreement.txt
  * @link       http://www.netsuite.com/portal/developers/resources/suitetalk-sample-applications.shtml
  *
- * generated:  2020-02-19 09:58:55 AM CST
+ * generated:  2020-04-10 09:56:55 PM UTC
  */
 
 namespace NetSuite\Classes;
 
 class ReturnAuthorizationItem {
+    /**
+     * @var \NetSuite\Classes\RecordRef
+     */
     public $job;
+    /**
+     * @var \NetSuite\Classes\RecordRef
+     */
     public $item;
+    /**
+     * @var integer
+     */
     public $orderLine;
+    /**
+     * @var integer
+     */
     public $line;
+    /**
+     * @var float
+     */
     public $quantity;
+    /**
+     * @var float
+     */
     public $quantityReceived;
+    /**
+     * @var float
+     */
     public $quantityBilled;
+    /**
+     * @var \NetSuite\Classes\RecordRef
+     */
     public $units;
+    /**
+     * @var \NetSuite\Classes\InventoryDetail
+     */
     public $inventoryDetail;
+    /**
+     * @var string
+     */
     public $description;
+    /**
+     * @var string
+     */
     public $serialNumbers;
+    /**
+     * @var \NetSuite\Classes\RecordRef
+     */
     public $price;
+    /**
+     * @var string
+     */
     public $rate;
+    /**
+     * @var float
+     */
     public $amount;
+    /**
+     * @var \NetSuite\Classes\CustomFieldList
+     */
     public $options;
+    /**
+     * @var integer
+     */
     public $revRecTermInMonths;
+    /**
+     * @var boolean
+     */
     public $deferRevRec;
+    /**
+     * @var boolean
+     */
     public $isClosed;
+    /**
+     * @var boolean
+     */
     public $isDropShipment;
+    /**
+     * @var \NetSuite\Classes\RecordRef
+     */
     public $inventoryLocation;
+    /**
+     * @var \NetSuite\Classes\RecordRef
+     */
     public $inventorySubsidiary;
+    /**
+     * @var \NetSuite\Classes\RecordRef
+     */
     public $catchUpPeriod;
+    /**
+     * @var \NetSuite\Classes\RecordRef
+     */
     public $department;
+    /**
+     * @var \NetSuite\Classes\ItemCostEstimateType
+     */
     public $costEstimateType;
+    /**
+     * @var float
+     */
     public $costEstimate;
+    /**
+     * @var string
+     */
     public $taxDetailsReference;
+    /**
+     * @var \NetSuite\Classes\RecordRef
+     */
     public $class;
+    /**
+     * @var \NetSuite\Classes\RecordRef
+     */
     public $location;
+    /**
+     * @var \NetSuite\Classes\RecordRef
+     */
     public $revRecSchedule;
+    /**
+     * @var string
+     */
     public $revRecStartDate;
+    /**
+     * @var string
+     */
     public $revRecEndDate;
+    /**
+     * @var \NetSuite\Classes\RecordRef
+     */
     public $taxCode;
+    /**
+     * @var float
+     */
     public $taxRate1;
+    /**
+     * @var float
+     */
     public $taxRate2;
+    /**
+     * @var float
+     */
     public $tax1Amt;
+    /**
+     * @var float
+     */
     public $grossAmt;
+    /**
+     * @var boolean
+     */
     public $isTaxable;
+    /**
+     * @var string
+     */
     public $giftCertFrom;
+    /**
+     * @var string
+     */
     public $giftCertRecipientName;
+    /**
+     * @var string
+     */
     public $giftCertRecipientEmail;
+    /**
+     * @var string
+     */
     public $giftCertMessage;
+    /**
+     * @var string
+     */
     public $giftCertNumber;
+    /**
+     * @var \NetSuite\Classes\VsoeSopGroup
+     */
     public $vsoeSopGroup;
+    /**
+     * @var boolean
+     */
     public $vsoeIsEstimate;
+    /**
+     * @var float
+     */
     public $vsoePrice;
+    /**
+     * @var float
+     */
     public $vsoeAmount;
+    /**
+     * @var float
+     */
     public $altSalesAmt;
+    /**
+     * @var float
+     */
     public $taxAmount;
+    /**
+     * @var float
+     */
     public $vsoeAllocation;
+    /**
+     * @var \NetSuite\Classes\VsoeDeferral
+     */
     public $vsoeDeferral;
+    /**
+     * @var \NetSuite\Classes\VsoePermitDiscount
+     */
     public $vsoePermitDiscount;
+    /**
+     * @var boolean
+     */
     public $vsoeDelivered;
+    /**
+     * @var \NetSuite\Classes\CustomFieldList
+     */
     public $customFieldList;
     static $paramtypesmap = array(
         "job" => "RecordRef",

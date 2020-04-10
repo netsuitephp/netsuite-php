@@ -14,44 +14,143 @@
  * @license    https://raw.githubusercontent.com/ryanwinchester/netsuite-php/master/original/NetSuite%20Application%20Developer%20License%20Agreement.txt
  * @link       http://www.netsuite.com/portal/developers/resources/suitetalk-sample-applications.shtml
  *
- * generated:  2020-02-19 09:58:55 AM CST
+ * generated:  2020-04-10 09:56:55 PM UTC
  */
 
 namespace NetSuite\Classes;
 
 class BillingSchedule extends Record {
+    /**
+     * @var \NetSuite\Classes\BillingScheduleType
+     */
     public $scheduleType;
+    /**
+     * @var string
+     */
     public $name;
+    /**
+     * @var \NetSuite\Classes\BillingScheduleRecurrencePattern
+     */
     public $recurrencePattern;
+    /**
+     * @var \NetSuite\Classes\RecordRef
+     */
     public $project;
+    /**
+     * @var string
+     */
     public $initialAmount;
+    /**
+     * @var \NetSuite\Classes\RecordRef
+     */
     public $initialTerms;
+    /**
+     * @var \NetSuite\Classes\BillingScheduleFrequency
+     */
     public $frequency;
+    /**
+     * @var \NetSuite\Classes\RecurrenceDowMaskList
+     */
     public $recurrenceDowMaskList;
+    /**
+     * @var \NetSuite\Classes\BillingScheduleRecurrenceMode
+     */
     public $yearMode;
+    /**
+     * @var \NetSuite\Classes\BillingScheduleYearDowim
+     */
     public $yearDowim;
+    /**
+     * @var \NetSuite\Classes\BillingScheduleYearDow
+     */
     public $yearDow;
+    /**
+     * @var \NetSuite\Classes\BillingScheduleYearDowimMonth
+     */
     public $yearDowimMonth;
+    /**
+     * @var \NetSuite\Classes\BillingScheduleYearMonth
+     */
     public $yearMonth;
+    /**
+     * @var integer
+     */
     public $yearDom;
+    /**
+     * @var \NetSuite\Classes\BillingScheduleRecurrenceMode
+     */
     public $monthMode;
+    /**
+     * @var \NetSuite\Classes\BillingScheduleMonthDowim
+     */
     public $monthDowim;
+    /**
+     * @var \NetSuite\Classes\BillingScheduleMonthDow
+     */
     public $monthDow;
+    /**
+     * @var integer
+     */
     public $monthDom;
+    /**
+     * @var integer
+     */
     public $dayPeriod;
+    /**
+     * @var \NetSuite\Classes\BillingScheduleRepeatEvery
+     */
     public $repeatEvery;
+    /**
+     * @var boolean
+     */
     public $billForActuals;
+    /**
+     * @var integer
+     */
     public $numberRemaining;
+    /**
+     * @var boolean
+     */
     public $inArrears;
+    /**
+     * @var \NetSuite\Classes\RecordRef
+     */
     public $recurrenceTerms;
+    /**
+     * @var boolean
+     */
     public $isPublic;
+    /**
+     * @var boolean
+     */
     public $applyToSubtotal;
+    /**
+     * @var \NetSuite\Classes\RecordRef
+     */
     public $transaction;
+    /**
+     * @var boolean
+     */
     public $isInactive;
+    /**
+     * @var string
+     */
     public $seriesStartDate;
+    /**
+     * @var \NetSuite\Classes\BillingScheduleRecurrenceList
+     */
     public $recurrenceList;
+    /**
+     * @var \NetSuite\Classes\BillingScheduleMilestoneList
+     */
     public $milestoneList;
+    /**
+     * @var string
+     */
     public $internalId;
+    /**
+     * @var string
+     */
     public $externalId;
     static $paramtypesmap = array(
         "scheduleType" => "BillingScheduleType",

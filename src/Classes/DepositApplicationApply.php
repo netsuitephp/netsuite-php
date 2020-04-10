@@ -14,22 +14,55 @@
  * @license    https://raw.githubusercontent.com/ryanwinchester/netsuite-php/master/original/NetSuite%20Application%20Developer%20License%20Agreement.txt
  * @link       http://www.netsuite.com/portal/developers/resources/suitetalk-sample-applications.shtml
  *
- * generated:  2020-02-19 09:58:55 AM CST
+ * generated:  2020-04-10 09:56:55 PM UTC
  */
 
 namespace NetSuite\Classes;
 
 class DepositApplicationApply {
+    /**
+     * @var integer
+     */
     public $doc;
+    /**
+     * @var integer
+     */
     public $line;
+    /**
+     * @var boolean
+     */
     public $apply;
+    /**
+     * @var string
+     */
     public $applyDate;
+    /**
+     * @var string
+     */
     public $job;
+    /**
+     * @var string
+     */
     public $type;
+    /**
+     * @var string
+     */
     public $refNum;
+    /**
+     * @var float
+     */
     public $total;
+    /**
+     * @var float
+     */
     public $due;
+    /**
+     * @var string
+     */
     public $currency;
+    /**
+     * @var float
+     */
     public $amount;
     static $paramtypesmap = array(
         "doc" => "integer",

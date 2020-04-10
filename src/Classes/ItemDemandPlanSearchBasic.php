@@ -14,30 +14,87 @@
  * @license    https://raw.githubusercontent.com/ryanwinchester/netsuite-php/master/original/NetSuite%20Application%20Developer%20License%20Agreement.txt
  * @link       http://www.netsuite.com/portal/developers/resources/suitetalk-sample-applications.shtml
  *
- * generated:  2020-02-19 09:58:55 AM CST
+ * generated:  2020-04-10 09:56:55 PM UTC
  */
 
 namespace NetSuite\Classes;
 
 class ItemDemandPlanSearchBasic extends SearchRecordBasic {
+    /**
+     * @var \NetSuite\Classes\SearchMultiSelectField
+     */
     public $alternateSourceItem;
+    /**
+     * @var \NetSuite\Classes\SearchLongField
+     */
     public $analysisDuration;
+    /**
+     * @var \NetSuite\Classes\SearchDateField
+     */
     public $demandDate;
+    /**
+     * @var \NetSuite\Classes\SearchMultiSelectField
+     */
     public $externalId;
+    /**
+     * @var \NetSuite\Classes\SearchStringField
+     */
     public $externalIdString;
+    /**
+     * @var \NetSuite\Classes\SearchMultiSelectField
+     */
     public $internalId;
+    /**
+     * @var \NetSuite\Classes\SearchLongField
+     */
     public $internalIdNumber;
+    /**
+     * @var \NetSuite\Classes\SearchMultiSelectField
+     */
     public $item;
+    /**
+     * @var \NetSuite\Classes\SearchDateField
+     */
     public $lastModifiedDate;
+    /**
+     * @var \NetSuite\Classes\SearchMultiSelectField
+     */
     public $location;
+    /**
+     * @var \NetSuite\Classes\SearchStringField
+     */
     public $memo;
+    /**
+     * @var \NetSuite\Classes\SearchLongField
+     */
     public $projectionDuration;
+    /**
+     * @var \NetSuite\Classes\SearchMultiSelectField
+     */
     public $projectionInterval;
+    /**
+     * @var \NetSuite\Classes\SearchEnumMultiSelectField
+     */
     public $projectionMethod;
+    /**
+     * @var \NetSuite\Classes\SearchDateField
+     */
     public $projectionStartDate;
+    /**
+     * @var \NetSuite\Classes\SearchDoubleField
+     */
     public $quantity;
+    /**
+     * @var \NetSuite\Classes\SearchMultiSelectField
+     */
     public $subsidiary;
+    /**
+     * @var \NetSuite\Classes\SearchMultiSelectField
+     */
     public $units;
+    /**
+     * @var \NetSuite\Classes\SearchCustomFieldList
+     */
     public $customFieldList;
     static $paramtypesmap = array(
         "alternateSourceItem" => "SearchMultiSelectField",

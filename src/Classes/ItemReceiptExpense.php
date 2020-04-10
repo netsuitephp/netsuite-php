@@ -14,18 +14,39 @@
  * @license    https://raw.githubusercontent.com/ryanwinchester/netsuite-php/master/original/NetSuite%20Application%20Developer%20License%20Agreement.txt
  * @link       http://www.netsuite.com/portal/developers/resources/suitetalk-sample-applications.shtml
  *
- * generated:  2020-02-19 09:58:55 AM CST
+ * generated:  2020-04-10 09:56:55 PM UTC
  */
 
 namespace NetSuite\Classes;
 
 class ItemReceiptExpense {
+    /**
+     * @var boolean
+     */
     public $markReceived;
+    /**
+     * @var integer
+     */
     public $orderLine;
+    /**
+     * @var integer
+     */
     public $line;
+    /**
+     * @var string
+     */
     public $account;
+    /**
+     * @var string
+     */
     public $memo;
+    /**
+     * @var float
+     */
     public $amount;
+    /**
+     * @var \NetSuite\Classes\CustomFieldList
+     */
     public $customFieldList;
     static $paramtypesmap = array(
         "markReceived" => "boolean",

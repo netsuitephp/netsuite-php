@@ -14,33 +14,99 @@
  * @license    https://raw.githubusercontent.com/ryanwinchester/netsuite-php/master/original/NetSuite%20Application%20Developer%20License%20Agreement.txt
  * @link       http://www.netsuite.com/portal/developers/resources/suitetalk-sample-applications.shtml
  *
- * generated:  2020-02-19 09:58:55 AM CST
+ * generated:  2020-04-10 09:56:55 PM UTC
  */
 
 namespace NetSuite\Classes;
 
 class CalendarEventSearchBasic extends SearchRecordBasic {
+    /**
+     * @var \NetSuite\Classes\SearchEnumMultiSelectField
+     */
     public $accessLevel;
+    /**
+     * @var \NetSuite\Classes\SearchMultiSelectField
+     */
     public $attendee;
+    /**
+     * @var \NetSuite\Classes\SearchMultiSelectField
+     */
     public $calendar;
+    /**
+     * @var \NetSuite\Classes\SearchDateField
+     */
     public $completedDate;
+    /**
+     * @var \NetSuite\Classes\SearchDateField
+     */
     public $createdDate;
+    /**
+     * @var \NetSuite\Classes\SearchMultiSelectField
+     */
     public $externalId;
+    /**
+     * @var \NetSuite\Classes\SearchStringField
+     */
     public $externalIdString;
+    /**
+     * @var \NetSuite\Classes\SearchDateField
+     */
     public $instanceStart;
+    /**
+     * @var \NetSuite\Classes\SearchMultiSelectField
+     */
     public $internalId;
+    /**
+     * @var \NetSuite\Classes\SearchLongField
+     */
     public $internalIdNumber;
+    /**
+     * @var \NetSuite\Classes\SearchBooleanField
+     */
     public $isUpcomingEvent;
+    /**
+     * @var \NetSuite\Classes\SearchDateField
+     */
     public $lastModifiedDate;
+    /**
+     * @var \NetSuite\Classes\SearchStringField
+     */
     public $location;
+    /**
+     * @var \NetSuite\Classes\SearchStringField
+     */
     public $message;
+    /**
+     * @var \NetSuite\Classes\SearchMultiSelectField
+     */
     public $organizer;
+    /**
+     * @var \NetSuite\Classes\SearchMultiSelectField
+     */
     public $owner;
+    /**
+     * @var \NetSuite\Classes\SearchMultiSelectField
+     */
     public $resource;
+    /**
+     * @var \NetSuite\Classes\SearchEnumMultiSelectField
+     */
     public $response;
+    /**
+     * @var \NetSuite\Classes\SearchDateField
+     */
     public $startDate;
+    /**
+     * @var \NetSuite\Classes\SearchEnumMultiSelectField
+     */
     public $status;
+    /**
+     * @var \NetSuite\Classes\SearchStringField
+     */
     public $title;
+    /**
+     * @var \NetSuite\Classes\SearchCustomFieldList
+     */
     public $customFieldList;
     static $paramtypesmap = array(
         "accessLevel" => "SearchEnumMultiSelectField",

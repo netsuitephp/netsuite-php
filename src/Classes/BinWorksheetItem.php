@@ -14,23 +14,59 @@
  * @license    https://raw.githubusercontent.com/ryanwinchester/netsuite-php/master/original/NetSuite%20Application%20Developer%20License%20Agreement.txt
  * @link       http://www.netsuite.com/portal/developers/resources/suitetalk-sample-applications.shtml
  *
- * generated:  2020-02-19 09:58:55 AM CST
+ * generated:  2020-04-10 09:56:55 PM UTC
  */
 
 namespace NetSuite\Classes;
 
 class BinWorksheetItem {
+    /**
+     * @var \NetSuite\Classes\RecordRef
+     */
     public $item;
+    /**
+     * @var string
+     */
     public $itemName;
+    /**
+     * @var string
+     */
     public $description;
+    /**
+     * @var float
+     */
     public $quantity;
+    /**
+     * @var string
+     */
     public $itemOnHand;
+    /**
+     * @var string
+     */
     public $itemUnitsLabel;
+    /**
+     * @var \NetSuite\Classes\InventoryDetail
+     */
     public $inventoryDetail;
+    /**
+     * @var string
+     */
     public $itemBins;
+    /**
+     * @var string
+     */
     public $itemBinNumbers;
+    /**
+     * @var string
+     */
     public $itemBinList;
+    /**
+     * @var string
+     */
     public $itemPreferBin;
+    /**
+     * @var string
+     */
     public $itemBlank;
     static $paramtypesmap = array(
         "item" => "RecordRef",

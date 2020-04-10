@@ -14,36 +14,111 @@
  * @license    https://raw.githubusercontent.com/ryanwinchester/netsuite-php/master/original/NetSuite%20Application%20Developer%20License%20Agreement.txt
  * @link       http://www.netsuite.com/portal/developers/resources/suitetalk-sample-applications.shtml
  *
- * generated:  2020-02-19 09:58:55 AM CST
+ * generated:  2020-04-10 09:56:55 PM UTC
  */
 
 namespace NetSuite\Classes;
 
 class BillingAccountSearchBasic extends SearchRecordBasic {
+    /**
+     * @var \NetSuite\Classes\SearchMultiSelectField
+     */
     public $billingSchedule;
+    /**
+     * @var \NetSuite\Classes\SearchMultiSelectField
+     */
     public $cashSaleForm;
+    /**
+     * @var \NetSuite\Classes\SearchMultiSelectField
+     */
     public $class;
+    /**
+     * @var \NetSuite\Classes\SearchMultiSelectField
+     */
     public $currency;
+    /**
+     * @var \NetSuite\Classes\SearchMultiSelectField
+     */
     public $customer;
+    /**
+     * @var \NetSuite\Classes\SearchBooleanField
+     */
     public $customerDefault;
+    /**
+     * @var \NetSuite\Classes\SearchDateField
+     */
     public $dateCreated;
+    /**
+     * @var \NetSuite\Classes\SearchMultiSelectField
+     */
     public $department;
+    /**
+     * @var \NetSuite\Classes\SearchMultiSelectField
+     */
     public $externalId;
+    /**
+     * @var \NetSuite\Classes\SearchStringField
+     */
     public $externalIdString;
+    /**
+     * @var \NetSuite\Classes\SearchEnumMultiSelectField
+     */
     public $frequency;
+    /**
+     * @var \NetSuite\Classes\SearchStringField
+     */
     public $idNumber;
+    /**
+     * @var \NetSuite\Classes\SearchBooleanField
+     */
     public $inactive;
+    /**
+     * @var \NetSuite\Classes\SearchMultiSelectField
+     */
     public $internalId;
+    /**
+     * @var \NetSuite\Classes\SearchLongField
+     */
     public $internalIdNumber;
+    /**
+     * @var \NetSuite\Classes\SearchMultiSelectField
+     */
     public $invoiceForm;
+    /**
+     * @var \NetSuite\Classes\SearchDateField
+     */
     public $lastBillCycleDate;
+    /**
+     * @var \NetSuite\Classes\SearchDateField
+     */
     public $lastBillDate;
+    /**
+     * @var \NetSuite\Classes\SearchMultiSelectField
+     */
     public $location;
+    /**
+     * @var \NetSuite\Classes\SearchStringField
+     */
     public $memo;
+    /**
+     * @var \NetSuite\Classes\SearchStringField
+     */
     public $name;
+    /**
+     * @var \NetSuite\Classes\SearchDateField
+     */
     public $nextBillCycleDate;
+    /**
+     * @var \NetSuite\Classes\SearchDateField
+     */
     public $startDate;
+    /**
+     * @var \NetSuite\Classes\SearchMultiSelectField
+     */
     public $subsidiary;
+    /**
+     * @var \NetSuite\Classes\SearchCustomFieldList
+     */
     public $customFieldList;
     static $paramtypesmap = array(
         "billingSchedule" => "SearchMultiSelectField",

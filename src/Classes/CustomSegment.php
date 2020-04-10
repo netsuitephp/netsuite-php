@@ -14,25 +14,67 @@
  * @license    https://raw.githubusercontent.com/ryanwinchester/netsuite-php/master/original/NetSuite%20Application%20Developer%20License%20Agreement.txt
  * @link       http://www.netsuite.com/portal/developers/resources/suitetalk-sample-applications.shtml
  *
- * generated:  2020-02-19 09:58:55 AM CST
+ * generated:  2020-04-10 09:56:55 PM UTC
  */
 
 namespace NetSuite\Classes;
 
 class CustomSegment extends Record {
+    /**
+     * @var string
+     */
     public $label;
+    /**
+     * @var string
+     */
     public $scriptId;
+    /**
+     * @var string
+     */
     public $recordScriptId;
+    /**
+     * @var \NetSuite\Classes\RecordRef
+     */
     public $recordType;
+    /**
+     * @var \NetSuite\Classes\CustomizationFieldType
+     */
     public $fieldType;
+    /**
+     * @var boolean
+     */
     public $isInactive;
+    /**
+     * @var boolean
+     */
     public $showInList;
+    /**
+     * @var \NetSuite\Classes\RecordRefList
+     */
     public $filteredByList;
+    /**
+     * @var boolean
+     */
     public $hasGLImpact;
+    /**
+     * @var string
+     */
     public $help;
+    /**
+     * @var string
+     */
     public $description;
+    /**
+     * @var boolean
+     */
     public $isMandatory;
+    /**
+     * @var \NetSuite\Classes\RecordRef
+     */
     public $defaultSelection;
+    /**
+     * @var string
+     */
     public $internalId;
     static $paramtypesmap = array(
         "label" => "string",

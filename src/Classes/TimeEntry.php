@@ -14,34 +14,103 @@
  * @license    https://raw.githubusercontent.com/ryanwinchester/netsuite-php/master/original/NetSuite%20Application%20Developer%20License%20Agreement.txt
  * @link       http://www.netsuite.com/portal/developers/resources/suitetalk-sample-applications.shtml
  *
- * generated:  2020-02-19 09:58:55 AM CST
+ * generated:  2020-04-10 09:56:55 PM UTC
  */
 
 namespace NetSuite\Classes;
 
 class TimeEntry extends Record {
+    /**
+     * @var \NetSuite\Classes\Duration
+     */
     public $hours;
+    /**
+     * @var string
+     */
     public $createdDate;
+    /**
+     * @var string
+     */
     public $lastModifiedDate;
+    /**
+     * @var \NetSuite\Classes\RecordRef
+     */
     public $customer;
+    /**
+     * @var \NetSuite\Classes\RecordRef
+     */
     public $caseTaskEvent;
+    /**
+     * @var \NetSuite\Classes\RecordRef
+     */
     public $item;
+    /**
+     * @var boolean
+     */
     public $isBillable;
+    /**
+     * @var \NetSuite\Classes\RecordRef
+     */
     public $payrollItem;
+    /**
+     * @var boolean
+     */
     public $paidExternally;
+    /**
+     * @var \NetSuite\Classes\RecordRef
+     */
     public $price;
+    /**
+     * @var float
+     */
     public $rate;
+    /**
+     * @var boolean
+     */
     public $overrideRate;
+    /**
+     * @var string
+     */
     public $memo;
+    /**
+     * @var \NetSuite\Classes\RecordRef
+     */
     public $department;
+    /**
+     * @var \NetSuite\Classes\RecordRef
+     */
     public $class;
+    /**
+     * @var \NetSuite\Classes\RecordRef
+     */
     public $location;
+    /**
+     * @var string
+     */
     public $billingClass;
+    /**
+     * @var \NetSuite\Classes\RecordRef
+     */
     public $subsidiary;
+    /**
+     * @var \NetSuite\Classes\RecordRef
+     */
     public $approvalStatus;
+    /**
+     * @var \NetSuite\Classes\TimeBillTimeType
+     */
     public $timeType;
+    /**
+     * @var \NetSuite\Classes\CustomFieldList
+     */
     public $customFieldList;
+    /**
+     * @var string
+     */
     public $internalId;
+    /**
+     * @var string
+     */
     public $externalId;
     static $paramtypesmap = array(
         "hours" => "Duration",

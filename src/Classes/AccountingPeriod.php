@@ -14,28 +14,79 @@
  * @license    https://raw.githubusercontent.com/ryanwinchester/netsuite-php/master/original/NetSuite%20Application%20Developer%20License%20Agreement.txt
  * @link       http://www.netsuite.com/portal/developers/resources/suitetalk-sample-applications.shtml
  *
- * generated:  2020-02-19 09:58:55 AM CST
+ * generated:  2020-04-10 09:56:55 PM UTC
  */
 
 namespace NetSuite\Classes;
 
 class AccountingPeriod extends Record {
+    /**
+     * @var string
+     */
     public $periodName;
+    /**
+     * @var \NetSuite\Classes\RecordRef
+     */
     public $parent;
+    /**
+     * @var string
+     */
     public $startDate;
+    /**
+     * @var string
+     */
     public $endDate;
+    /**
+     * @var \NetSuite\Classes\RecordRef
+     */
     public $fiscalCalendar;
+    /**
+     * @var string
+     */
     public $closedOnDate;
+    /**
+     * @var boolean
+     */
     public $isAdjust;
+    /**
+     * @var \NetSuite\Classes\AccountingPeriodFiscalCalendarsList
+     */
     public $fiscalCalendarsList;
+    /**
+     * @var boolean
+     */
     public $isQuarter;
+    /**
+     * @var boolean
+     */
     public $isYear;
+    /**
+     * @var boolean
+     */
     public $closed;
+    /**
+     * @var boolean
+     */
     public $apLocked;
+    /**
+     * @var boolean
+     */
     public $arLocked;
+    /**
+     * @var boolean
+     */
     public $payrollLocked;
+    /**
+     * @var boolean
+     */
     public $allLocked;
+    /**
+     * @var boolean
+     */
     public $allowNonGLChanges;
+    /**
+     * @var string
+     */
     public $internalId;
     static $paramtypesmap = array(
         "periodName" => "string",

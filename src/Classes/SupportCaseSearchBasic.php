@@ -14,51 +14,171 @@
  * @license    https://raw.githubusercontent.com/ryanwinchester/netsuite-php/master/original/NetSuite%20Application%20Developer%20License%20Agreement.txt
  * @link       http://www.netsuite.com/portal/developers/resources/suitetalk-sample-applications.shtml
  *
- * generated:  2020-02-19 09:58:55 AM CST
+ * generated:  2020-04-10 09:56:55 PM UTC
  */
 
 namespace NetSuite\Classes;
 
 class SupportCaseSearchBasic extends SearchRecordBasic {
+    /**
+     * @var \NetSuite\Classes\SearchMultiSelectField
+     */
     public $assigned;
+    /**
+     * @var \NetSuite\Classes\SearchBooleanField
+     */
     public $awaitingReply;
+    /**
+     * @var \NetSuite\Classes\SearchStringField
+     */
     public $caseNumber;
+    /**
+     * @var \NetSuite\Classes\SearchMultiSelectField
+     */
     public $category;
+    /**
+     * @var \NetSuite\Classes\SearchDateField
+     */
     public $closedDate;
+    /**
+     * @var \NetSuite\Classes\SearchStringField
+     */
     public $company;
+    /**
+     * @var \NetSuite\Classes\SearchStringField
+     */
     public $contact;
+    /**
+     * @var \NetSuite\Classes\SearchDateField
+     */
     public $createdDate;
+    /**
+     * @var \NetSuite\Classes\SearchStringField
+     */
     public $email;
+    /**
+     * @var \NetSuite\Classes\SearchMultiSelectField
+     */
     public $escalateTo;
+    /**
+     * @var \NetSuite\Classes\SearchMultiSelectField
+     */
     public $externalId;
+    /**
+     * @var \NetSuite\Classes\SearchStringField
+     */
     public $externalIdString;
+    /**
+     * @var \NetSuite\Classes\SearchBooleanField
+     */
     public $helpDesk;
+    /**
+     * @var \NetSuite\Classes\SearchStringField
+     */
     public $inboundEmail;
+    /**
+     * @var \NetSuite\Classes\SearchMultiSelectField
+     */
     public $internalId;
+    /**
+     * @var \NetSuite\Classes\SearchLongField
+     */
     public $internalIdNumber;
+    /**
+     * @var \NetSuite\Classes\SearchBooleanField
+     */
     public $isInactive;
+    /**
+     * @var \NetSuite\Classes\SearchMultiSelectField
+     */
     public $issue;
+    /**
+     * @var \NetSuite\Classes\SearchMultiSelectField
+     */
     public $item;
+    /**
+     * @var \NetSuite\Classes\SearchBooleanField
+     */
     public $lastMessage;
+    /**
+     * @var \NetSuite\Classes\SearchDateField
+     */
     public $lastModifiedDate;
+    /**
+     * @var \NetSuite\Classes\SearchDateField
+     */
     public $lastReopenedDate;
+    /**
+     * @var \NetSuite\Classes\SearchBooleanField
+     */
     public $locked;
+    /**
+     * @var \NetSuite\Classes\SearchStringField
+     */
     public $message;
+    /**
+     * @var \NetSuite\Classes\SearchMultiSelectField
+     */
     public $messageAuthor;
+    /**
+     * @var \NetSuite\Classes\SearchDateField
+     */
     public $messageDate;
+    /**
+     * @var \NetSuite\Classes\SearchBooleanField
+     */
     public $messageType;
+    /**
+     * @var \NetSuite\Classes\SearchMultiSelectField
+     */
     public $module;
+    /**
+     * @var \NetSuite\Classes\SearchLongField
+     */
     public $number;
+    /**
+     * @var \NetSuite\Classes\SearchMultiSelectField
+     */
     public $origin;
+    /**
+     * @var \NetSuite\Classes\SearchMultiSelectField
+     */
     public $priority;
+    /**
+     * @var \NetSuite\Classes\SearchMultiSelectField
+     */
     public $product;
+    /**
+     * @var \NetSuite\Classes\SearchMultiSelectField
+     */
     public $profile;
+    /**
+     * @var \NetSuite\Classes\SearchStringField
+     */
     public $serialNumber;
+    /**
+     * @var \NetSuite\Classes\SearchEnumMultiSelectField
+     */
     public $stage;
+    /**
+     * @var \NetSuite\Classes\SearchDateField
+     */
     public $startDate;
+    /**
+     * @var \NetSuite\Classes\SearchMultiSelectField
+     */
     public $status;
+    /**
+     * @var \NetSuite\Classes\SearchMultiSelectField
+     */
     public $subsidiary;
+    /**
+     * @var \NetSuite\Classes\SearchStringField
+     */
     public $title;
+    /**
+     * @var \NetSuite\Classes\SearchCustomFieldList
+     */
     public $customFieldList;
     static $paramtypesmap = array(
         "assigned" => "SearchMultiSelectField",

@@ -14,41 +14,131 @@
  * @license    https://raw.githubusercontent.com/ryanwinchester/netsuite-php/master/original/NetSuite%20Application%20Developer%20License%20Agreement.txt
  * @link       http://www.netsuite.com/portal/developers/resources/suitetalk-sample-applications.shtml
  *
- * generated:  2020-02-19 09:58:55 AM CST
+ * generated:  2020-04-10 09:56:55 PM UTC
  */
 
 namespace NetSuite\Classes;
 
 class ManufacturingOperationTaskSearchRowBasic extends SearchRowBasic {
+    /**
+     * @var \NetSuite\Classes\SearchColumnDoubleField[]
+     */
     public $actualRunTime;
+    /**
+     * @var \NetSuite\Classes\SearchColumnDoubleField[]
+     */
     public $actualSetupTime;
+    /**
+     * @var \NetSuite\Classes\SearchColumnDoubleField[]
+     */
     public $completedQuantity;
+    /**
+     * @var \NetSuite\Classes\SearchColumnDateField[]
+     */
     public $endDate;
+    /**
+     * @var \NetSuite\Classes\SearchColumnDoubleField[]
+     */
     public $estimatedWork;
+    /**
+     * @var \NetSuite\Classes\SearchColumnSelectField[]
+     */
     public $externalId;
+    /**
+     * @var \NetSuite\Classes\SearchColumnLongField[]
+     */
     public $id;
+    /**
+     * @var \NetSuite\Classes\SearchColumnDoubleField[]
+     */
     public $inputQuantity;
+    /**
+     * @var \NetSuite\Classes\SearchColumnSelectField[]
+     */
     public $internalId;
+    /**
+     * @var \NetSuite\Classes\SearchColumnDoubleField[]
+     */
     public $laborResources;
+    /**
+     * @var \NetSuite\Classes\SearchColumnDoubleField[]
+     */
     public $lagAmount;
+    /**
+     * @var \NetSuite\Classes\SearchColumnEnumSelectField[]
+     */
     public $lagType;
+    /**
+     * @var \NetSuite\Classes\SearchColumnStringField[]
+     */
     public $lagUnits;
+    /**
+     * @var \NetSuite\Classes\SearchColumnDoubleField[]
+     */
     public $machineResources;
+    /**
+     * @var \NetSuite\Classes\SearchColumnSelectField[]
+     */
     public $manufacturingCostTemplate;
+    /**
+     * @var \NetSuite\Classes\SearchColumnSelectField[]
+     */
     public $manufacturingWorkCenter;
+    /**
+     * @var \NetSuite\Classes\SearchColumnStringField[]
+     */
     public $message;
+    /**
+     * @var \NetSuite\Classes\SearchColumnStringField[]
+     */
     public $name;
+    /**
+     * @var \NetSuite\Classes\SearchColumnDoubleField[]
+     */
     public $order;
+    /**
+     * @var \NetSuite\Classes\SearchColumnSelectField[]
+     */
     public $predecessor;
+    /**
+     * @var \NetSuite\Classes\SearchColumnStringField[]
+     */
     public $predecessorType;
+    /**
+     * @var \NetSuite\Classes\SearchColumnDoubleField[]
+     */
     public $remainingQuantity;
+    /**
+     * @var \NetSuite\Classes\SearchColumnDoubleField[]
+     */
     public $runRate;
+    /**
+     * @var \NetSuite\Classes\SearchColumnDoubleField[]
+     */
     public $runTime;
+    /**
+     * @var \NetSuite\Classes\SearchColumnLongField[]
+     */
     public $sequence;
+    /**
+     * @var \NetSuite\Classes\SearchColumnDoubleField[]
+     */
     public $setupTime;
+    /**
+     * @var \NetSuite\Classes\SearchColumnDateField[]
+     */
     public $startDate;
+    /**
+     * @var \NetSuite\Classes\SearchColumnSelectField[]
+     */
     public $status;
+    /**
+     * @var \NetSuite\Classes\SearchColumnStringField[]
+     */
     public $workOrder;
+    /**
+     * @var \NetSuite\Classes\SearchColumnCustomFieldList
+     */
     public $customFieldList;
     static $paramtypesmap = array(
         "actualRunTime" => "SearchColumnDoubleField[]",

@@ -14,22 +14,55 @@
  * @license    https://raw.githubusercontent.com/ryanwinchester/netsuite-php/master/original/NetSuite%20Application%20Developer%20License%20Agreement.txt
  * @link       http://www.netsuite.com/portal/developers/resources/suitetalk-sample-applications.shtml
  *
- * generated:  2020-02-19 09:58:55 AM CST
+ * generated:  2020-04-10 09:56:55 PM UTC
  */
 
 namespace NetSuite\Classes;
 
 class CustomerCreditCards {
+    /**
+     * @var string
+     */
     public $internalId;
+    /**
+     * @var string
+     */
     public $ccNumber;
+    /**
+     * @var string
+     */
     public $ccExpireDate;
+    /**
+     * @var string
+     */
     public $ccName;
+    /**
+     * @var \NetSuite\Classes\RecordRef
+     */
     public $paymentMethod;
+    /**
+     * @var \NetSuite\Classes\RecordRef
+     */
     public $cardState;
+    /**
+     * @var string
+     */
     public $stateFrom;
+    /**
+     * @var string
+     */
     public $debitcardIssueNo;
+    /**
+     * @var string
+     */
     public $ccMemo;
+    /**
+     * @var string
+     */
     public $validfrom;
+    /**
+     * @var boolean
+     */
     public $ccDefault;
     static $paramtypesmap = array(
         "internalId" => "string",

@@ -14,31 +14,91 @@
  * @license    https://raw.githubusercontent.com/ryanwinchester/netsuite-php/master/original/NetSuite%20Application%20Developer%20License%20Agreement.txt
  * @link       http://www.netsuite.com/portal/developers/resources/suitetalk-sample-applications.shtml
  *
- * generated:  2020-02-19 09:58:55 AM CST
+ * generated:  2020-04-10 09:56:55 PM UTC
  */
 
 namespace NetSuite\Classes;
 
 class BudgetSearchRowBasic extends SearchRowBasic {
+    /**
+     * @var \NetSuite\Classes\SearchColumnStringField[]
+     */
     public $account;
+    /**
+     * @var \NetSuite\Classes\SearchColumnStringField[]
+     */
     public $accountingBook;
+    /**
+     * @var \NetSuite\Classes\SearchColumnDoubleField[]
+     */
     public $amount;
+    /**
+     * @var \NetSuite\Classes\SearchColumnStringField[]
+     */
     public $category;
+    /**
+     * @var \NetSuite\Classes\SearchColumnStringField[]
+     */
     public $class;
+    /**
+     * @var \NetSuite\Classes\SearchColumnStringField[]
+     */
     public $classnohierarchy;
+    /**
+     * @var \NetSuite\Classes\SearchColumnStringField[]
+     */
     public $currency;
+    /**
+     * @var \NetSuite\Classes\SearchColumnStringField[]
+     */
     public $customer;
+    /**
+     * @var \NetSuite\Classes\SearchColumnStringField[]
+     */
     public $department;
+    /**
+     * @var \NetSuite\Classes\SearchColumnStringField[]
+     */
     public $departmentnohierarchy;
+    /**
+     * @var \NetSuite\Classes\SearchColumnBooleanField[]
+     */
     public $global;
+    /**
+     * @var \NetSuite\Classes\SearchColumnSelectField[]
+     */
     public $internalId;
+    /**
+     * @var \NetSuite\Classes\SearchColumnStringField[]
+     */
     public $item;
+    /**
+     * @var \NetSuite\Classes\SearchColumnStringField[]
+     */
     public $location;
+    /**
+     * @var \NetSuite\Classes\SearchColumnStringField[]
+     */
     public $locationnohierarchy;
+    /**
+     * @var \NetSuite\Classes\SearchColumnStringField[]
+     */
     public $subsidiary;
+    /**
+     * @var \NetSuite\Classes\SearchColumnStringField[]
+     */
     public $subsidiarynohierarchy;
+    /**
+     * @var \NetSuite\Classes\SearchColumnStringField[]
+     */
     public $year;
+    /**
+     * @var \NetSuite\Classes\SearchColumnStringField[]
+     */
     public $year2;
+    /**
+     * @var \NetSuite\Classes\SearchColumnCustomFieldList
+     */
     public $customFieldList;
     static $paramtypesmap = array(
         "account" => "SearchColumnStringField[]",

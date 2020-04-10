@@ -14,33 +14,99 @@
  * @license    https://raw.githubusercontent.com/ryanwinchester/netsuite-php/master/original/NetSuite%20Application%20Developer%20License%20Agreement.txt
  * @link       http://www.netsuite.com/portal/developers/resources/suitetalk-sample-applications.shtml
  *
- * generated:  2020-02-19 09:58:55 AM CST
+ * generated:  2020-04-10 09:56:55 PM UTC
  */
 
 namespace NetSuite\Classes;
 
 class AccountSearchBasic extends SearchRecordBasic {
+    /**
+     * @var \NetSuite\Classes\SearchMultiSelectField
+     */
     public $accountingContext;
+    /**
+     * @var \NetSuite\Classes\SearchDoubleField
+     */
     public $balance;
+    /**
+     * @var \NetSuite\Classes\SearchEnumMultiSelectField
+     */
     public $cashFlowRateType;
+    /**
+     * @var \NetSuite\Classes\SearchMultiSelectField
+     */
     public $category1099Misc;
+    /**
+     * @var \NetSuite\Classes\SearchStringField
+     */
     public $description;
+    /**
+     * @var \NetSuite\Classes\SearchMultiSelectField
+     */
     public $externalId;
+    /**
+     * @var \NetSuite\Classes\SearchStringField
+     */
     public $externalIdString;
+    /**
+     * @var \NetSuite\Classes\SearchEnumMultiSelectField
+     */
     public $generalRateType;
+    /**
+     * @var \NetSuite\Classes\SearchMultiSelectField
+     */
     public $internalId;
+    /**
+     * @var \NetSuite\Classes\SearchLongField
+     */
     public $internalIdNumber;
+    /**
+     * @var \NetSuite\Classes\SearchBooleanField
+     */
     public $isInactive;
+    /**
+     * @var \NetSuite\Classes\SearchStringField
+     */
     public $legalName;
+    /**
+     * @var \NetSuite\Classes\SearchEnumMultiSelectField
+     */
     public $locale;
+    /**
+     * @var \NetSuite\Classes\SearchStringField
+     */
     public $localizedLegalName;
+    /**
+     * @var \NetSuite\Classes\SearchStringField
+     */
     public $localizedName;
+    /**
+     * @var \NetSuite\Classes\SearchStringField
+     */
     public $localizedNumber;
+    /**
+     * @var \NetSuite\Classes\SearchStringField
+     */
     public $name;
+    /**
+     * @var \NetSuite\Classes\SearchStringField
+     */
     public $number;
+    /**
+     * @var \NetSuite\Classes\SearchMultiSelectField
+     */
     public $parent;
+    /**
+     * @var \NetSuite\Classes\SearchMultiSelectField
+     */
     public $subsidiary;
+    /**
+     * @var \NetSuite\Classes\SearchEnumMultiSelectField
+     */
     public $type;
+    /**
+     * @var \NetSuite\Classes\SearchCustomFieldList
+     */
     public $customFieldList;
     static $paramtypesmap = array(
         "accountingContext" => "SearchMultiSelectField",

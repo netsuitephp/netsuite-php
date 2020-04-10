@@ -14,79 +14,283 @@
  * @license    https://raw.githubusercontent.com/ryanwinchester/netsuite-php/master/original/NetSuite%20Application%20Developer%20License%20Agreement.txt
  * @link       http://www.netsuite.com/portal/developers/resources/suitetalk-sample-applications.shtml
  *
- * generated:  2020-02-19 09:58:55 AM CST
+ * generated:  2020-04-10 09:56:55 PM UTC
  */
 
 namespace NetSuite\Classes;
 
 class CustomerPayment extends Record {
+    /**
+     * @var string
+     */
     public $createdDate;
+    /**
+     * @var string
+     */
     public $lastModifiedDate;
+    /**
+     * @var \NetSuite\Classes\RecordRef
+     */
     public $customForm;
+    /**
+     * @var \NetSuite\Classes\RecordRef
+     */
     public $arAcct;
+    /**
+     * @var \NetSuite\Classes\RecordRef
+     */
     public $customer;
+    /**
+     * @var float
+     */
     public $balance;
+    /**
+     * @var float
+     */
     public $pending;
+    /**
+     * @var \NetSuite\Classes\RecordRef
+     */
     public $currency;
+    /**
+     * @var float
+     */
     public $payment;
+    /**
+     * @var boolean
+     */
     public $autoApply;
+    /**
+     * @var string
+     */
     public $tranDate;
+    /**
+     * @var string
+     */
     public $tranId;
+    /**
+     * @var \NetSuite\Classes\RecordRef
+     */
     public $postingPeriod;
+    /**
+     * @var \NetSuite\Classes\RecordRef
+     */
     public $paymentMethod;
+    /**
+     * @var boolean
+     */
     public $ccIsPurchaseCardBin;
+    /**
+     * @var string
+     */
     public $memo;
+    /**
+     * @var boolean
+     */
     public $ccProcessAsPurchaseCard;
+    /**
+     * @var string
+     */
     public $checkNum;
+    /**
+     * @var string
+     */
     public $currencyName;
+    /**
+     * @var float
+     */
     public $exchangeRate;
+    /**
+     * @var \NetSuite\Classes\RecordRef
+     */
     public $creditCard;
+    /**
+     * @var boolean
+     */
     public $chargeIt;
+    /**
+     * @var string
+     */
     public $ccNumber;
+    /**
+     * @var string
+     */
     public $ccExpireDate;
+    /**
+     * @var string
+     */
     public $ccName;
+    /**
+     * @var string
+     */
     public $ccStreet;
+    /**
+     * @var string
+     */
     public $ccZipCode;
+    /**
+     * @var boolean
+     */
     public $ccApproved;
+    /**
+     * @var string
+     */
     public $authCode;
+    /**
+     * @var \NetSuite\Classes\AvsMatchCode
+     */
     public $ccAvsStreetMatch;
+    /**
+     * @var \NetSuite\Classes\AvsMatchCode
+     */
     public $ccAvsZipMatch;
+    /**
+     * @var boolean
+     */
     public $isRecurringPayment;
+    /**
+     * @var string
+     */
     public $ccSecurityCode;
+    /**
+     * @var boolean
+     */
     public $ignoreAvs;
+    /**
+     * @var \NetSuite\Classes\AvsMatchCode
+     */
     public $ccSecurityCodeMatch;
+    /**
+     * @var string
+     */
     public $threeDStatusCode;
+    /**
+     * @var string
+     */
     public $pnRefNum;
+    /**
+     * @var \NetSuite\Classes\RecordRef
+     */
     public $creditCardProcessor;
+    /**
+     * @var string
+     */
     public $debitCardIssueNo;
+    /**
+     * @var string
+     */
     public $validFrom;
+    /**
+     * @var boolean
+     */
     public $undepFunds;
+    /**
+     * @var \NetSuite\Classes\RecordRef
+     */
     public $account;
+    /**
+     * @var float
+     */
     public $total;
+    /**
+     * @var \NetSuite\Classes\RecordRef
+     */
     public $subsidiary;
+    /**
+     * @var float
+     */
     public $applied;
+    /**
+     * @var float
+     */
     public $unapplied;
+    /**
+     * @var \NetSuite\Classes\RecordRef
+     */
     public $class;
+    /**
+     * @var \NetSuite\Classes\RecordRef
+     */
     public $department;
+    /**
+     * @var \NetSuite\Classes\RecordRef
+     */
     public $location;
+    /**
+     * @var \NetSuite\Classes\RecordRef
+     */
     public $paymentOption;
+    /**
+     * @var string
+     */
     public $inputAuthCode;
+    /**
+     * @var string
+     */
     public $inputReferenceCode;
+    /**
+     * @var string
+     */
     public $checkNumber;
+    /**
+     * @var string
+     */
     public $paymentCardCsc;
+    /**
+     * @var \NetSuite\Classes\RecordRef
+     */
     public $paymentProcessingProfile;
+    /**
+     * @var \NetSuite\Classes\CustomerPaymentHandlingMode
+     */
     public $handlingMode;
+    /**
+     * @var string
+     */
     public $outputAuthCode;
+    /**
+     * @var string
+     */
     public $outputReferenceCode;
+    /**
+     * @var \NetSuite\Classes\CustomerPaymentPaymentOperation
+     */
     public $paymentOperation;
+    /**
+     * @var string
+     */
     public $dynamicDescriptor;
+    /**
+     * @var string
+     */
     public $status;
+    /**
+     * @var \NetSuite\Classes\CustomerPaymentApplyList
+     */
     public $applyList;
+    /**
+     * @var \NetSuite\Classes\CustomerPaymentCreditList
+     */
     public $creditList;
+    /**
+     * @var \NetSuite\Classes\CustomerPaymentDepositList
+     */
     public $depositList;
+    /**
+     * @var \NetSuite\Classes\AccountingBookDetailList
+     */
     public $accountingBookDetailList;
+    /**
+     * @var \NetSuite\Classes\CustomFieldList
+     */
     public $customFieldList;
+    /**
+     * @var string
+     */
     public $internalId;
+    /**
+     * @var string
+     */
     public $externalId;
     static $paramtypesmap = array(
         "createdDate" => "dateTime",

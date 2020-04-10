@@ -14,24 +14,63 @@
  * @license    https://raw.githubusercontent.com/ryanwinchester/netsuite-php/master/original/NetSuite%20Application%20Developer%20License%20Agreement.txt
  * @link       http://www.netsuite.com/portal/developers/resources/suitetalk-sample-applications.shtml
  *
- * generated:  2020-02-19 09:58:55 AM CST
+ * generated:  2020-04-10 09:56:55 PM UTC
  */
 
 namespace NetSuite\Classes;
 
 class DepositPayment {
+    /**
+     * @var boolean
+     */
     public $deposit;
+    /**
+     * @var integer
+     */
     public $id;
+    /**
+     * @var string
+     */
     public $docDate;
+    /**
+     * @var string
+     */
     public $type;
+    /**
+     * @var string
+     */
     public $docNumber;
+    /**
+     * @var string
+     */
     public $memo;
+    /**
+     * @var \NetSuite\Classes\RecordRef
+     */
     public $paymentMethod;
+    /**
+     * @var string
+     */
     public $refNum;
+    /**
+     * @var \NetSuite\Classes\RecordRef
+     */
     public $entity;
+    /**
+     * @var \NetSuite\Classes\RecordRef
+     */
     public $currency;
+    /**
+     * @var float
+     */
     public $transactionAmount;
+    /**
+     * @var float
+     */
     public $paymentAmount;
+    /**
+     * @var integer
+     */
     public $lineId;
     static $paramtypesmap = array(
         "deposit" => "boolean",

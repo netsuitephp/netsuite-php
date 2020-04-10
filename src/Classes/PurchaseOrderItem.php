@@ -14,48 +14,159 @@
  * @license    https://raw.githubusercontent.com/ryanwinchester/netsuite-php/master/original/NetSuite%20Application%20Developer%20License%20Agreement.txt
  * @link       http://www.netsuite.com/portal/developers/resources/suitetalk-sample-applications.shtml
  *
- * generated:  2020-02-19 09:58:55 AM CST
+ * generated:  2020-04-10 09:56:55 PM UTC
  */
 
 namespace NetSuite\Classes;
 
 class PurchaseOrderItem {
+    /**
+     * @var \NetSuite\Classes\RecordRef
+     */
     public $item;
+    /**
+     * @var integer
+     */
     public $line;
+    /**
+     * @var float
+     */
     public $quantityOnShipments;
+    /**
+     * @var string
+     */
     public $vendorName;
+    /**
+     * @var float
+     */
     public $quantityReceived;
+    /**
+     * @var float
+     */
     public $quantityBilled;
+    /**
+     * @var float
+     */
     public $quantityAvailable;
+    /**
+     * @var float
+     */
     public $quantityOnHand;
+    /**
+     * @var \NetSuite\Classes\RecordRef
+     */
     public $taxCode;
+    /**
+     * @var float
+     */
     public $taxRate1;
+    /**
+     * @var float
+     */
     public $taxRate2;
+    /**
+     * @var float
+     */
     public $quantity;
+    /**
+     * @var float
+     */
     public $tax1Amt;
+    /**
+     * @var float
+     */
     public $grossAmt;
+    /**
+     * @var \NetSuite\Classes\RecordRef
+     */
     public $units;
+    /**
+     * @var \NetSuite\Classes\InventoryDetail
+     */
     public $inventoryDetail;
+    /**
+     * @var string
+     */
     public $serialNumbers;
+    /**
+     * @var string
+     */
     public $description;
+    /**
+     * @var \NetSuite\Classes\RecordRef
+     */
     public $purchaseContract;
+    /**
+     * @var string
+     */
     public $rate;
+    /**
+     * @var float
+     */
     public $amount;
+    /**
+     * @var \NetSuite\Classes\CustomFieldList
+     */
     public $options;
+    /**
+     * @var float
+     */
     public $taxAmount;
+    /**
+     * @var \NetSuite\Classes\RecordRef
+     */
     public $department;
+    /**
+     * @var \NetSuite\Classes\RecordRef
+     */
     public $class;
+    /**
+     * @var \NetSuite\Classes\RecordRef
+     */
     public $location;
+    /**
+     * @var \NetSuite\Classes\RecordRef
+     */
     public $landedCostCategory;
+    /**
+     * @var \NetSuite\Classes\RecordRef
+     */
     public $customer;
+    /**
+     * @var boolean
+     */
     public $isBillable;
+    /**
+     * @var \NetSuite\Classes\TransactionBillVarianceStatus
+     */
     public $billVarianceStatus;
+    /**
+     * @var boolean
+     */
     public $matchBillToReceipt;
+    /**
+     * @var string
+     */
     public $expectedReceiptDate;
+    /**
+     * @var boolean
+     */
     public $isClosed;
+    /**
+     * @var string
+     */
     public $taxDetailsReference;
+    /**
+     * @var \NetSuite\Classes\RecordRef
+     */
     public $createdFrom;
+    /**
+     * @var \NetSuite\Classes\RecordRefList
+     */
     public $linkedOrderList;
+    /**
+     * @var \NetSuite\Classes\CustomFieldList
+     */
     public $customFieldList;
     static $paramtypesmap = array(
         "item" => "RecordRef",

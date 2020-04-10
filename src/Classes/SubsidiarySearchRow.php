@@ -14,18 +14,39 @@
  * @license    https://raw.githubusercontent.com/ryanwinchester/netsuite-php/master/original/NetSuite%20Application%20Developer%20License%20Agreement.txt
  * @link       http://www.netsuite.com/portal/developers/resources/suitetalk-sample-applications.shtml
  *
- * generated:  2020-02-19 09:58:55 AM CST
+ * generated:  2020-04-10 09:56:55 PM UTC
  */
 
 namespace NetSuite\Classes;
 
 class SubsidiarySearchRow extends SearchRow {
+    /**
+     * @var \NetSuite\Classes\SubsidiarySearchRowBasic
+     */
     public $basic;
+    /**
+     * @var \NetSuite\Classes\AddressSearchRowBasic
+     */
     public $addressJoin;
+    /**
+     * @var \NetSuite\Classes\AccountSearchRowBasic
+     */
     public $defaultAdvanceToApplyAccountJoin;
+    /**
+     * @var \NetSuite\Classes\AddressSearchRowBasic
+     */
     public $returnAddressJoin;
+    /**
+     * @var \NetSuite\Classes\AddressSearchRowBasic
+     */
     public $shippingAddressJoin;
+    /**
+     * @var \NetSuite\Classes\EmployeeSearchRowBasic
+     */
     public $userJoin;
+    /**
+     * @var \NetSuite\Classes\CustomSearchRowBasic[]
+     */
     public $customSearchJoin;
     static $paramtypesmap = array(
         "basic" => "SubsidiarySearchRowBasic",

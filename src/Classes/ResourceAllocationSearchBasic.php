@@ -14,29 +14,83 @@
  * @license    https://raw.githubusercontent.com/ryanwinchester/netsuite-php/master/original/NetSuite%20Application%20Developer%20License%20Agreement.txt
  * @link       http://www.netsuite.com/portal/developers/resources/suitetalk-sample-applications.shtml
  *
- * generated:  2020-02-19 09:58:55 AM CST
+ * generated:  2020-04-10 09:56:55 PM UTC
  */
 
 namespace NetSuite\Classes;
 
 class ResourceAllocationSearchBasic extends SearchRecordBasic {
+    /**
+     * @var \NetSuite\Classes\SearchMultiSelectField
+     */
     public $allocationType;
+    /**
+     * @var \NetSuite\Classes\SearchEnumMultiSelectField
+     */
     public $allocationUnit;
+    /**
+     * @var \NetSuite\Classes\SearchEnumMultiSelectField
+     */
     public $approvalStatus;
+    /**
+     * @var \NetSuite\Classes\SearchMultiSelectField
+     */
     public $customer;
+    /**
+     * @var \NetSuite\Classes\SearchDateField
+     */
     public $endDate;
+    /**
+     * @var \NetSuite\Classes\SearchMultiSelectField
+     */
     public $externalId;
+    /**
+     * @var \NetSuite\Classes\SearchStringField
+     */
     public $externalIdString;
+    /**
+     * @var \NetSuite\Classes\SearchMultiSelectField
+     */
     public $internalId;
+    /**
+     * @var \NetSuite\Classes\SearchLongField
+     */
     public $internalIdNumber;
+    /**
+     * @var \NetSuite\Classes\SearchMultiSelectField
+     */
     public $nextApprover;
+    /**
+     * @var \NetSuite\Classes\SearchStringField
+     */
     public $notes;
+    /**
+     * @var \NetSuite\Classes\SearchDoubleField
+     */
     public $numberHours;
+    /**
+     * @var \NetSuite\Classes\SearchDoubleField
+     */
     public $percentOfTime;
+    /**
+     * @var \NetSuite\Classes\SearchMultiSelectField
+     */
     public $project;
+    /**
+     * @var \NetSuite\Classes\SearchMultiSelectField
+     */
     public $requestedBy;
+    /**
+     * @var \NetSuite\Classes\SearchMultiSelectField
+     */
     public $resource;
+    /**
+     * @var \NetSuite\Classes\SearchDateField
+     */
     public $startDate;
+    /**
+     * @var \NetSuite\Classes\SearchCustomFieldList
+     */
     public $customFieldList;
     static $paramtypesmap = array(
         "allocationType" => "SearchMultiSelectField",

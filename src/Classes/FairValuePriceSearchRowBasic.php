@@ -14,28 +14,79 @@
  * @license    https://raw.githubusercontent.com/ryanwinchester/netsuite-php/master/original/NetSuite%20Application%20Developer%20License%20Agreement.txt
  * @link       http://www.netsuite.com/portal/developers/resources/suitetalk-sample-applications.shtml
  *
- * generated:  2020-02-19 09:58:55 AM CST
+ * generated:  2020-04-10 09:56:55 PM UTC
  */
 
 namespace NetSuite\Classes;
 
 class FairValuePriceSearchRowBasic extends SearchRowBasic {
+    /**
+     * @var \NetSuite\Classes\SearchColumnSelectField[]
+     */
     public $currency;
+    /**
+     * @var \NetSuite\Classes\SearchColumnDateField[]
+     */
     public $endDate;
+    /**
+     * @var \NetSuite\Classes\SearchColumnSelectField[]
+     */
     public $externalId;
+    /**
+     * @var \NetSuite\Classes\SearchColumnDoubleField[]
+     */
     public $fairValue;
+    /**
+     * @var \NetSuite\Classes\SearchColumnSelectField[]
+     */
     public $fairValueFormula;
+    /**
+     * @var \NetSuite\Classes\SearchColumnEnumSelectField[]
+     */
     public $fairValueRangePolicy;
+    /**
+     * @var \NetSuite\Classes\SearchColumnDoubleField[]
+     */
     public $highValue;
+    /**
+     * @var \NetSuite\Classes\SearchColumnDoubleField[]
+     */
     public $highValuePercent;
+    /**
+     * @var \NetSuite\Classes\SearchColumnSelectField[]
+     */
     public $internalId;
+    /**
+     * @var \NetSuite\Classes\SearchColumnBooleanField[]
+     */
     public $isVsoePrice;
+    /**
+     * @var \NetSuite\Classes\SearchColumnSelectField[]
+     */
     public $item;
+    /**
+     * @var \NetSuite\Classes\SearchColumnSelectField[]
+     */
     public $itemRevenueCategory;
+    /**
+     * @var \NetSuite\Classes\SearchColumnDoubleField[]
+     */
     public $lowValue;
+    /**
+     * @var \NetSuite\Classes\SearchColumnDoubleField[]
+     */
     public $lowValuePercent;
+    /**
+     * @var \NetSuite\Classes\SearchColumnDateField[]
+     */
     public $startDate;
+    /**
+     * @var \NetSuite\Classes\SearchColumnSelectField[]
+     */
     public $units;
+    /**
+     * @var \NetSuite\Classes\SearchColumnSelectField[]
+     */
     public $unitsType;
     static $paramtypesmap = array(
         "currency" => "SearchColumnSelectField[]",

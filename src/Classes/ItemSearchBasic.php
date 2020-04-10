@@ -14,304 +14,1183 @@
  * @license    https://raw.githubusercontent.com/ryanwinchester/netsuite-php/master/original/NetSuite%20Application%20Developer%20License%20Agreement.txt
  * @link       http://www.netsuite.com/portal/developers/resources/suitetalk-sample-applications.shtml
  *
- * generated:  2020-02-19 09:58:55 AM CST
+ * generated:  2020-04-10 09:56:55 PM UTC
  */
 
 namespace NetSuite\Classes;
 
 class ItemSearchBasic extends SearchRecordBasic {
+    /**
+     * @var \NetSuite\Classes\SearchMultiSelectField
+     */
     public $accBookRevRecForecastRule;
+    /**
+     * @var \NetSuite\Classes\SearchMultiSelectField
+     */
     public $account;
+    /**
+     * @var \NetSuite\Classes\SearchMultiSelectField
+     */
     public $accountingBook;
+    /**
+     * @var \NetSuite\Classes\SearchMultiSelectField
+     */
     public $accountingBookAmortization;
+    /**
+     * @var \NetSuite\Classes\SearchMultiSelectField
+     */
     public $accountingBookCreatePlansOn;
+    /**
+     * @var \NetSuite\Classes\SearchMultiSelectField
+     */
     public $accountingBookRevRecRule;
+    /**
+     * @var \NetSuite\Classes\SearchMultiSelectField
+     */
     public $accountingBookRevRecSchedule;
+    /**
+     * @var \NetSuite\Classes\SearchMultiSelectField
+     */
     public $allowedShippingMethod;
+    /**
+     * @var \NetSuite\Classes\SearchMultiSelectField
+     */
     public $alternateDemandSourceItem;
+    /**
+     * @var \NetSuite\Classes\SearchDoubleField
+     */
     public $atpLeadTime;
+    /**
+     * @var \NetSuite\Classes\SearchEnumMultiSelectField
+     */
     public $atpMethod;
+    /**
+     * @var \NetSuite\Classes\SearchBooleanField
+     */
     public $autoLeadTime;
+    /**
+     * @var \NetSuite\Classes\SearchBooleanField
+     */
     public $autoPreferredStockLevel;
+    /**
+     * @var \NetSuite\Classes\SearchBooleanField
+     */
     public $autoReorderPoint;
+    /**
+     * @var \NetSuite\Classes\SearchBooleanField
+     */
     public $availableToPartners;
+    /**
+     * @var \NetSuite\Classes\SearchDoubleField
+     */
     public $averageCost;
+    /**
+     * @var \NetSuite\Classes\SearchLongField
+     */
     public $backwardConsumptionDays;
+    /**
+     * @var \NetSuite\Classes\SearchStringField
+     */
     public $binNumber;
+    /**
+     * @var \NetSuite\Classes\SearchDoubleField
+     */
     public $binOnHandAvail;
+    /**
+     * @var \NetSuite\Classes\SearchDoubleField
+     */
     public $binOnHandCount;
+    /**
+     * @var \NetSuite\Classes\SearchDoubleField
+     */
     public $bomQuantity;
+    /**
+     * @var \NetSuite\Classes\SearchBooleanField
+     */
     public $buildEntireAssembly;
+    /**
+     * @var \NetSuite\Classes\SearchDoubleField
+     */
     public $buildTime;
+    /**
+     * @var \NetSuite\Classes\SearchDoubleField
+     */
     public $buyItNowPrice;
+    /**
+     * @var \NetSuite\Classes\SearchStringField
+     */
     public $caption;
+    /**
+     * @var \NetSuite\Classes\SearchMultiSelectField
+     */
     public $category;
+    /**
+     * @var \NetSuite\Classes\SearchMultiSelectField
+     */
     public $class;
+    /**
+     * @var \NetSuite\Classes\SearchMultiSelectField
+     */
     public $component;
+    /**
+     * @var \NetSuite\Classes\SearchMultiSelectField
+     */
     public $componentOf;
+    /**
+     * @var \NetSuite\Classes\SearchDoubleField
+     */
     public $componentYield;
+    /**
+     * @var \NetSuite\Classes\SearchMultiSelectField
+     */
     public $consumptionUnit;
+    /**
+     * @var \NetSuite\Classes\SearchBooleanField
+     */
     public $contingentRevenueHandling;
+    /**
+     * @var \NetSuite\Classes\SearchBooleanField
+     */
     public $copyDescription;
+    /**
+     * @var \NetSuite\Classes\SearchMultiSelectField
+     */
     public $correlatedItem;
+    /**
+     * @var \NetSuite\Classes\SearchDoubleField
+     */
     public $correlatedItemCorrelation;
+    /**
+     * @var \NetSuite\Classes\SearchLongField
+     */
     public $correlatedItemCount;
+    /**
+     * @var \NetSuite\Classes\SearchDoubleField
+     */
     public $correlatedItemLift;
+    /**
+     * @var \NetSuite\Classes\SearchDoubleField
+     */
     public $correlatedItemPurchaseRate;
+    /**
+     * @var \NetSuite\Classes\SearchDoubleField
+     */
     public $cost;
+    /**
+     * @var \NetSuite\Classes\SearchEnumMultiSelectField
+     */
     public $costAccountingStatus;
+    /**
+     * @var \NetSuite\Classes\SearchMultiSelectField
+     */
     public $costCategory;
+    /**
+     * @var \NetSuite\Classes\SearchDoubleField
+     */
     public $costEstimate;
+    /**
+     * @var \NetSuite\Classes\SearchEnumMultiSelectField
+     */
     public $costEstimateType;
+    /**
+     * @var \NetSuite\Classes\SearchEnumMultiSelectField
+     */
     public $costingMethod;
+    /**
+     * @var \NetSuite\Classes\SearchEnumMultiSelectField
+     */
     public $countryOfManufacture;
+    /**
+     * @var \NetSuite\Classes\SearchDateField
+     */
     public $created;
+    /**
+     * @var \NetSuite\Classes\SearchBooleanField
+     */
     public $createJob;
+    /**
+     * @var \NetSuite\Classes\SearchMultiSelectField
+     */
     public $createRevenuePlansOn;
+    /**
+     * @var \NetSuite\Classes\SearchDateField
+     */
     public $dateViewed;
+    /**
+     * @var \NetSuite\Classes\SearchDoubleField
+     */
     public $daysBeforeExpiration;
+    /**
+     * @var \NetSuite\Classes\SearchDoubleField
+     */
     public $defaultReturnCost;
+    /**
+     * @var \NetSuite\Classes\SearchMultiSelectField
+     */
     public $defaultShippingMethod;
+    /**
+     * @var \NetSuite\Classes\SearchBooleanField
+     */
     public $deferRevRec;
+    /**
+     * @var \NetSuite\Classes\SearchDoubleField
+     */
     public $demandModifier;
+    /**
+     * @var \NetSuite\Classes\SearchEnumMultiSelectField
+     */
     public $demandSource;
+    /**
+     * @var \NetSuite\Classes\SearchLongField
+     */
     public $demandTimeFence;
+    /**
+     * @var \NetSuite\Classes\SearchMultiSelectField
+     */
     public $department;
+    /**
+     * @var \NetSuite\Classes\SearchBooleanField
+     */
     public $directRevenuePosting;
+    /**
+     * @var \NetSuite\Classes\SearchBooleanField
+     */
     public $displayIneBayStore;
+    /**
+     * @var \NetSuite\Classes\SearchStringField
+     */
     public $displayName;
+    /**
+     * @var \NetSuite\Classes\SearchMultiSelectField
+     */
     public $distributionCategory;
+    /**
+     * @var \NetSuite\Classes\SearchMultiSelectField
+     */
     public $distributionNetwork;
+    /**
+     * @var \NetSuite\Classes\SearchBooleanField
+     */
     public $dontShowPrice;
+    /**
+     * @var \NetSuite\Classes\SearchStringField
+     */
     public $eBayItemDescription;
+    /**
+     * @var \NetSuite\Classes\SearchStringField
+     */
     public $eBayItemSubtitle;
+    /**
+     * @var \NetSuite\Classes\SearchStringField
+     */
     public $eBayItemTitle;
+    /**
+     * @var \NetSuite\Classes\SearchEnumMultiSelectField
+     */
     public $ebayRelistingOption;
+    /**
+     * @var \NetSuite\Classes\SearchEnumMultiSelectField
+     */
     public $effectiveBomControl;
+    /**
+     * @var \NetSuite\Classes\SearchDateField
+     */
     public $effectiveDate;
+    /**
+     * @var \NetSuite\Classes\SearchMultiSelectField
+     */
     public $effectiveRevision;
+    /**
+     * @var \NetSuite\Classes\SearchBooleanField
+     */
     public $endAuctionsWhenOutOfStock;
+    /**
+     * @var \NetSuite\Classes\SearchBooleanField
+     */
     public $excludeFromSitemap;
+    /**
+     * @var \NetSuite\Classes\SearchMultiSelectField
+     */
     public $externalId;
+    /**
+     * @var \NetSuite\Classes\SearchStringField
+     */
     public $externalIdString;
+    /**
+     * @var \NetSuite\Classes\SearchStringField
+     */
     public $featuredDescription;
+    /**
+     * @var \NetSuite\Classes\SearchStringField
+     */
     public $feedDescription;
+    /**
+     * @var \NetSuite\Classes\SearchStringField
+     */
     public $feedName;
+    /**
+     * @var \NetSuite\Classes\SearchDoubleField
+     */
     public $fixedLotSize;
+    /**
+     * @var \NetSuite\Classes\SearchLongField
+     */
     public $forwardConsumptionDays;
+    /**
+     * @var \NetSuite\Classes\SearchEnumMultiSelectField
+     */
     public $fraudRisk;
+    /**
+     * @var \NetSuite\Classes\SearchBooleanField
+     */
     public $froogleProductFeed;
+    /**
+     * @var \NetSuite\Classes\SearchLongField
+     */
     public $futureHorizon;
+    /**
+     * @var \NetSuite\Classes\SearchDoubleField
+     */
     public $fxCost;
+    /**
+     * @var \NetSuite\Classes\SearchBooleanField
+     */
     public $generateAccruals;
+    /**
+     * @var \NetSuite\Classes\SearchStringField
+     */
     public $giftCertAuthCode;
+    /**
+     * @var \NetSuite\Classes\SearchStringField
+     */
     public $giftCertEmail;
+    /**
+     * @var \NetSuite\Classes\SearchDateField
+     */
     public $giftCertExpDate;
+    /**
+     * @var \NetSuite\Classes\SearchStringField
+     */
     public $giftCertFrom;
+    /**
+     * @var \NetSuite\Classes\SearchStringField
+     */
     public $giftCertMsg;
+    /**
+     * @var \NetSuite\Classes\SearchStringField
+     */
     public $giftCertOrigAmt;
+    /**
+     * @var \NetSuite\Classes\SearchStringField
+     */
     public $giftCertRecipient;
+    /**
+     * @var \NetSuite\Classes\SearchMultiSelectField
+     */
     public $hierarchyNode;
+    /**
+     * @var \NetSuite\Classes\SearchMultiSelectField
+     */
     public $hierarchyVersion;
+    /**
+     * @var \NetSuite\Classes\SearchStringField
+     */
     public $imageUrl;
+    /**
+     * @var \NetSuite\Classes\SearchBooleanField
+     */
     public $includeChildren;
+    /**
+     * @var \NetSuite\Classes\SearchMultiSelectField
+     */
     public $internalId;
+    /**
+     * @var \NetSuite\Classes\SearchLongField
+     */
     public $internalIdNumber;
+    /**
+     * @var \NetSuite\Classes\SearchMultiSelectField
+     */
     public $inventoryLocation;
+    /**
+     * @var \NetSuite\Classes\SearchEnumMultiSelectField
+     */
     public $invtClassification;
+    /**
+     * @var \NetSuite\Classes\SearchLongField
+     */
     public $invtCountInterval;
+    /**
+     * @var \NetSuite\Classes\SearchBooleanField
+     */
     public $isAvailable;
+    /**
+     * @var \NetSuite\Classes\SearchBooleanField
+     */
     public $isDropShipItem;
+    /**
+     * @var \NetSuite\Classes\SearchBooleanField
+     */
     public $isFulfillable;
+    /**
+     * @var \NetSuite\Classes\SearchBooleanField
+     */
     public $isGcoCompliant;
+    /**
+     * @var \NetSuite\Classes\SearchBooleanField
+     */
     public $isInactive;
+    /**
+     * @var \NetSuite\Classes\SearchBooleanField
+     */
     public $isLotItem;
+    /**
+     * @var \NetSuite\Classes\SearchBooleanField
+     */
     public $isOnline;
+    /**
+     * @var \NetSuite\Classes\SearchBooleanField
+     */
     public $isPreferredVendor;
+    /**
+     * @var \NetSuite\Classes\SearchBooleanField
+     */
     public $isSerialItem;
+    /**
+     * @var \NetSuite\Classes\SearchBooleanField
+     */
     public $isSpecialOrderItem;
+    /**
+     * @var \NetSuite\Classes\SearchBooleanField
+     */
     public $isSpecialWorkOrderItem;
+    /**
+     * @var \NetSuite\Classes\SearchBooleanField
+     */
     public $isStorePickupAllowed;
+    /**
+     * @var \NetSuite\Classes\SearchMultiSelectField
+     */
     public $issueProduct;
+    /**
+     * @var \NetSuite\Classes\SearchBooleanField
+     */
     public $isTaxable;
+    /**
+     * @var \NetSuite\Classes\SearchBooleanField
+     */
     public $isVsoeBundle;
+    /**
+     * @var \NetSuite\Classes\SearchBooleanField
+     */
     public $isWip;
+    /**
+     * @var \NetSuite\Classes\SearchStringField
+     */
     public $itemId;
+    /**
+     * @var \NetSuite\Classes\SearchMultiSelectField
+     */
     public $itemRevenueCategory;
+    /**
+     * @var \NetSuite\Classes\SearchStringField
+     */
     public $itemUrl;
+    /**
+     * @var \NetSuite\Classes\SearchDateField
+     */
     public $lastInvtCountDate;
+    /**
+     * @var \NetSuite\Classes\SearchDateField
+     */
     public $lastModifiedDate;
+    /**
+     * @var \NetSuite\Classes\SearchDoubleField
+     */
     public $lastPurchasePrice;
+    /**
+     * @var \NetSuite\Classes\SearchDateField
+     */
     public $lastQuantityAvailableChange;
+    /**
+     * @var \NetSuite\Classes\SearchLongField
+     */
     public $leadTime;
+    /**
+     * @var \NetSuite\Classes\SearchEnumMultiSelectField
+     */
     public $listingDuration;
+    /**
+     * @var \NetSuite\Classes\SearchMultiSelectField
+     */
     public $location;
+    /**
+     * @var \NetSuite\Classes\SearchBooleanField
+     */
     public $locationAllowStorePickup;
+    /**
+     * @var \NetSuite\Classes\SearchDoubleField
+     */
     public $locationAtpLeadTime;
+    /**
+     * @var \NetSuite\Classes\SearchDoubleField
+     */
     public $locationAverageCost;
+    /**
+     * @var \NetSuite\Classes\SearchDoubleField
+     */
     public $locationBuildTime;
+    /**
+     * @var \NetSuite\Classes\SearchDoubleField
+     */
     public $locationCost;
+    /**
+     * @var \NetSuite\Classes\SearchEnumMultiSelectField
+     */
     public $locationCostAccountingStatus;
+    /**
+     * @var \NetSuite\Classes\SearchDoubleField
+     */
     public $locationDefaultReturnCost;
+    /**
+     * @var \NetSuite\Classes\SearchEnumMultiSelectField
+     */
     public $locationDemandSource;
+    /**
+     * @var \NetSuite\Classes\SearchLongField
+     */
     public $locationDemandTimeFence;
+    /**
+     * @var \NetSuite\Classes\SearchDoubleField
+     */
     public $locationFixedLotSize;
+    /**
+     * @var \NetSuite\Classes\SearchMultiSelectField
+     */
     public $locationInventoryCostTemplate;
+    /**
+     * @var \NetSuite\Classes\SearchEnumMultiSelectField
+     */
     public $locationInvtClassification;
+    /**
+     * @var \NetSuite\Classes\SearchLongField
+     */
     public $locationInvtCountInterval;
+    /**
+     * @var \NetSuite\Classes\SearchDateField
+     */
     public $locationLastInvtCountDate;
+    /**
+     * @var \NetSuite\Classes\SearchLongField
+     */
     public $locationLeadTime;
+    /**
+     * @var \NetSuite\Classes\SearchDateField
+     */
     public $locationNextInvtCountDate;
+    /**
+     * @var \NetSuite\Classes\SearchLongField
+     */
     public $locationPeriodicLotSizeDays;
+    /**
+     * @var \NetSuite\Classes\SearchEnumMultiSelectField
+     */
     public $locationPeriodicLotSizeType;
+    /**
+     * @var \NetSuite\Classes\SearchDoubleField
+     */
     public $locationPreferredStockLevel;
+    /**
+     * @var \NetSuite\Classes\SearchDoubleField
+     */
     public $locationQtyAvailForStorePickup;
+    /**
+     * @var \NetSuite\Classes\SearchDoubleField
+     */
     public $locationQuantityAvailable;
+    /**
+     * @var \NetSuite\Classes\SearchDoubleField
+     */
     public $locationQuantityBackOrdered;
+    /**
+     * @var \NetSuite\Classes\SearchDoubleField
+     */
     public $locationQuantityCommitted;
+    /**
+     * @var \NetSuite\Classes\SearchDoubleField
+     */
     public $locationQuantityInTransit;
+    /**
+     * @var \NetSuite\Classes\SearchDoubleField
+     */
     public $locationQuantityOnHand;
+    /**
+     * @var \NetSuite\Classes\SearchDoubleField
+     */
     public $locationQuantityOnOrder;
+    /**
+     * @var \NetSuite\Classes\SearchDoubleField
+     */
     public $locationReorderPoint;
+    /**
+     * @var \NetSuite\Classes\SearchLongField
+     */
     public $locationRescheduleInDays;
+    /**
+     * @var \NetSuite\Classes\SearchLongField
+     */
     public $locationRescheduleOutDays;
+    /**
+     * @var \NetSuite\Classes\SearchDoubleField
+     */
     public $locationSafetyStockLevel;
+    /**
+     * @var \NetSuite\Classes\SearchDoubleField
+     */
     public $locationStorePickupBufferStock;
+    /**
+     * @var \NetSuite\Classes\SearchEnumMultiSelectField
+     */
     public $locationSupplyLotSizingMethod;
+    /**
+     * @var \NetSuite\Classes\SearchLongField
+     */
     public $locationSupplyTimeFence;
+    /**
+     * @var \NetSuite\Classes\SearchEnumMultiSelectField
+     */
     public $locationSupplyType;
+    /**
+     * @var \NetSuite\Classes\SearchDoubleField
+     */
     public $locationTotalValue;
+    /**
+     * @var \NetSuite\Classes\SearchLongField
+     */
     public $locBackwardConsumptionDays;
+    /**
+     * @var \NetSuite\Classes\SearchLongField
+     */
     public $locForwardConsumptionDays;
+    /**
+     * @var \NetSuite\Classes\SearchStringField
+     */
     public $manufacturer;
+    /**
+     * @var \NetSuite\Classes\SearchStringField
+     */
     public $manufactureraddr1;
+    /**
+     * @var \NetSuite\Classes\SearchStringField
+     */
     public $manufacturerCity;
+    /**
+     * @var \NetSuite\Classes\SearchStringField
+     */
     public $manufacturerState;
+    /**
+     * @var \NetSuite\Classes\SearchStringField
+     */
     public $manufacturerTariff;
+    /**
+     * @var \NetSuite\Classes\SearchStringField
+     */
     public $manufacturerTaxId;
+    /**
+     * @var \NetSuite\Classes\SearchStringField
+     */
     public $manufacturerZip;
+    /**
+     * @var \NetSuite\Classes\SearchBooleanField
+     */
     public $manufacturingChargeItem;
+    /**
+     * @var \NetSuite\Classes\SearchBooleanField
+     */
     public $matchBillToReceipt;
+    /**
+     * @var \NetSuite\Classes\SearchBooleanField
+     */
     public $matrix;
+    /**
+     * @var \NetSuite\Classes\SearchBooleanField
+     */
     public $matrixChild;
+    /**
+     * @var \NetSuite\Classes\SearchLongField
+     */
     public $maximumQuantity;
+    /**
+     * @var \NetSuite\Classes\SearchStringField
+     */
     public $metaTagHtml;
+    /**
+     * @var \NetSuite\Classes\SearchLongField
+     */
     public $minimumQuantity;
+    /**
+     * @var \NetSuite\Classes\SearchBooleanField
+     */
     public $mossApplies;
+    /**
+     * @var \NetSuite\Classes\SearchStringField
+     */
     public $mpn;
+    /**
+     * @var \NetSuite\Classes\SearchBooleanField
+     */
     public $multManufactureAddr;
+    /**
+     * @var \NetSuite\Classes\SearchStringField
+     */
     public $nexTagCategory;
+    /**
+     * @var \NetSuite\Classes\SearchBooleanField
+     */
     public $nexTagProductFeed;
+    /**
+     * @var \NetSuite\Classes\SearchDateField
+     */
     public $nextInvtCountDate;
+    /**
+     * @var \NetSuite\Classes\SearchLongField
+     */
     public $numActiveListings;
+    /**
+     * @var \NetSuite\Classes\SearchDoubleField
+     */
     public $numberAllowedDownloads;
+    /**
+     * @var \NetSuite\Classes\SearchLongField
+     */
     public $numCurrentlyListed;
+    /**
+     * @var \NetSuite\Classes\SearchDateField
+     */
     public $obsoleteDate;
+    /**
+     * @var \NetSuite\Classes\SearchMultiSelectField
+     */
     public $obsoleteRevision;
+    /**
+     * @var \NetSuite\Classes\SearchBooleanField
+     */
     public $offerSupport;
+    /**
+     * @var \NetSuite\Classes\SearchDoubleField
+     */
     public $onlineCustomerPrice;
+    /**
+     * @var \NetSuite\Classes\SearchBooleanField
+     */
     public $onSpecial;
+    /**
+     * @var \NetSuite\Classes\SearchMultiSelectField
+     */
     public $otherVendor;
+    /**
+     * @var \NetSuite\Classes\SearchMultiSelectField
+     */
     public $outOfStockBehavior;
+    /**
+     * @var \NetSuite\Classes\SearchEnumMultiSelectField
+     */
     public $overallQuantityPricingType;
+    /**
+     * @var \NetSuite\Classes\SearchEnumMultiSelectField
+     */
     public $overheadType;
+    /**
+     * @var \NetSuite\Classes\SearchStringField
+     */
     public $pageTitle;
+    /**
+     * @var \NetSuite\Classes\SearchMultiSelectField
+     */
     public $parent;
+    /**
+     * @var \NetSuite\Classes\SearchLongField
+     */
     public $periodicLotSizeDays;
+    /**
+     * @var \NetSuite\Classes\SearchEnumMultiSelectField
+     */
     public $periodicLotSizeType;
+    /**
+     * @var \NetSuite\Classes\SearchStringField
+     */
     public $preferenceCriterion;
+    /**
+     * @var \NetSuite\Classes\SearchBooleanField
+     */
     public $preferredBin;
+    /**
+     * @var \NetSuite\Classes\SearchMultiSelectField
+     */
     public $preferredLocation;
+    /**
+     * @var \NetSuite\Classes\SearchDoubleField
+     */
     public $preferredStockLevel;
+    /**
+     * @var \NetSuite\Classes\SearchLongField
+     */
     public $preferredStockLevelDays;
+    /**
+     * @var \NetSuite\Classes\SearchDoubleField
+     */
     public $price;
+    /**
+     * @var \NetSuite\Classes\SearchBooleanField
+     */
     public $pricesIncludeTax;
+    /**
+     * @var \NetSuite\Classes\SearchMultiSelectField
+     */
     public $pricingGroup;
+    /**
+     * @var \NetSuite\Classes\SearchLongField
+     */
     public $primaryCategory;
+    /**
+     * @var \NetSuite\Classes\SearchDoubleField
+     */
     public $purchaseOrderAmount;
+    /**
+     * @var \NetSuite\Classes\SearchDoubleField
+     */
     public $purchaseOrderQuantity;
+    /**
+     * @var \NetSuite\Classes\SearchDoubleField
+     */
     public $purchaseOrderQuantityDiff;
+    /**
+     * @var \NetSuite\Classes\SearchMultiSelectField
+     */
     public $purchaseUnit;
+    /**
+     * @var \NetSuite\Classes\SearchDoubleField
+     */
     public $quantityAvailable;
+    /**
+     * @var \NetSuite\Classes\SearchDoubleField
+     */
     public $quantityBackOrdered;
+    /**
+     * @var \NetSuite\Classes\SearchDoubleField
+     */
     public $quantityCommitted;
+    /**
+     * @var \NetSuite\Classes\SearchDoubleField
+     */
     public $quantityOnHand;
+    /**
+     * @var \NetSuite\Classes\SearchDoubleField
+     */
     public $quantityOnOrder;
+    /**
+     * @var \NetSuite\Classes\SearchMultiSelectField
+     */
     public $quantityPricingSchedule;
+    /**
+     * @var \NetSuite\Classes\SearchDoubleField
+     */
     public $receiptAmount;
+    /**
+     * @var \NetSuite\Classes\SearchDoubleField
+     */
     public $receiptQuantity;
+    /**
+     * @var \NetSuite\Classes\SearchDoubleField
+     */
     public $receiptQuantityDiff;
+    /**
+     * @var \NetSuite\Classes\SearchLongField
+     */
     public $reorderMultiple;
+    /**
+     * @var \NetSuite\Classes\SearchDoubleField
+     */
     public $reorderPoint;
+    /**
+     * @var \NetSuite\Classes\SearchLongField
+     */
     public $rescheduleInDays;
+    /**
+     * @var \NetSuite\Classes\SearchLongField
+     */
     public $rescheduleOutDays;
+    /**
+     * @var \NetSuite\Classes\SearchDoubleField
+     */
     public $reservePrice;
+    /**
+     * @var \NetSuite\Classes\SearchMultiSelectField
+     */
     public $revenueAllocationGroup;
+    /**
+     * @var \NetSuite\Classes\SearchMultiSelectField
+     */
     public $revenueRecognitionRule;
+    /**
+     * @var \NetSuite\Classes\SearchMultiSelectField
+     */
     public $revRecForecastRule;
+    /**
+     * @var \NetSuite\Classes\SearchMultiSelectField
+     */
     public $revRecSchedule;
+    /**
+     * @var \NetSuite\Classes\SearchBooleanField
+     */
     public $roundUpAsComponent;
+    /**
+     * @var \NetSuite\Classes\SearchDoubleField
+     */
     public $safetyStockLevel;
+    /**
+     * @var \NetSuite\Classes\SearchLongField
+     */
     public $safetyStockLevelDays;
+    /**
+     * @var \NetSuite\Classes\SearchStringField
+     */
     public $salesDescription;
+    /**
+     * @var \NetSuite\Classes\SearchMultiSelectField
+     */
     public $saleUnit;
+    /**
+     * @var \NetSuite\Classes\SearchBooleanField
+     */
     public $sameAsPrimaryBookAmortization;
+    /**
+     * @var \NetSuite\Classes\SearchBooleanField
+     */
     public $sameAsPrimaryBookRevRec;
+    /**
+     * @var \NetSuite\Classes\SearchEnumMultiSelectField
+     */
     public $scheduleBCode;
+    /**
+     * @var \NetSuite\Classes\SearchStringField
+     */
     public $scheduleBNumber;
+    /**
+     * @var \NetSuite\Classes\SearchStringField
+     */
     public $scheduleBQuantity;
+    /**
+     * @var \NetSuite\Classes\SearchStringField
+     */
     public $searchKeywords;
+    /**
+     * @var \NetSuite\Classes\SearchBooleanField
+     */
     public $seasonalDemand;
+    /**
+     * @var \NetSuite\Classes\SearchBooleanField
+     */
     public $sellOnEBay;
+    /**
+     * @var \NetSuite\Classes\SearchStringField
+     */
     public $serialNumber;
+    /**
+     * @var \NetSuite\Classes\SearchMultiSelectField
+     */
     public $serialNumberLocation;
+    /**
+     * @var \NetSuite\Classes\SearchBooleanField
+     */
     public $shipIndividually;
+    /**
+     * @var \NetSuite\Classes\SearchMultiSelectField
+     */
     public $shipPackage;
+    /**
+     * @var \NetSuite\Classes\SearchEnumMultiSelectField
+     */
     public $shippingCarrier;
+    /**
+     * @var \NetSuite\Classes\SearchDoubleField
+     */
     public $shippingRate;
+    /**
+     * @var \NetSuite\Classes\SearchStringField
+     */
     public $shoppingDotComCategory;
+    /**
+     * @var \NetSuite\Classes\SearchBooleanField
+     */
     public $shoppingProductFeed;
+    /**
+     * @var \NetSuite\Classes\SearchLongField
+     */
     public $shopzillaCategoryId;
+    /**
+     * @var \NetSuite\Classes\SearchBooleanField
+     */
     public $shopzillaProductFeed;
+    /**
+     * @var \NetSuite\Classes\SearchEnumMultiSelectField
+     */
     public $sitemapPriority;
+    /**
+     * @var \NetSuite\Classes\SearchMultiSelectField
+     */
     public $softDescriptor;
+    /**
+     * @var \NetSuite\Classes\SearchDoubleField
+     */
     public $startingPrice;
+    /**
+     * @var \NetSuite\Classes\SearchStringField
+     */
     public $stockDescription;
+    /**
+     * @var \NetSuite\Classes\SearchMultiSelectField
+     */
     public $stockUnit;
+    /**
+     * @var \NetSuite\Classes\SearchStringField
+     */
     public $storeDescription;
+    /**
+     * @var \NetSuite\Classes\SearchMultiSelectField
+     */
     public $subsidiary;
+    /**
+     * @var \NetSuite\Classes\SearchEnumMultiSelectField
+     */
     public $subType;
+    /**
+     * @var \NetSuite\Classes\SearchEnumMultiSelectField
+     */
     public $supplyLotSizingMethod;
+    /**
+     * @var \NetSuite\Classes\SearchEnumMultiSelectField
+     */
     public $supplyReplenishmentMethod;
+    /**
+     * @var \NetSuite\Classes\SearchLongField
+     */
     public $supplyTimeFence;
+    /**
+     * @var \NetSuite\Classes\SearchEnumMultiSelectField
+     */
     public $supplyType;
+    /**
+     * @var \NetSuite\Classes\SearchMultiSelectField
+     */
     public $taxCode;
+    /**
+     * @var \NetSuite\Classes\SearchMultiSelectField
+     */
     public $taxSchedule;
+    /**
+     * @var \NetSuite\Classes\SearchStringField
+     */
     public $thumbnailUrl;
+    /**
+     * @var \NetSuite\Classes\SearchDoubleField
+     */
     public $totalValue;
+    /**
+     * @var \NetSuite\Classes\SearchBooleanField
+     */
     public $trackLandedCost;
+    /**
+     * @var \NetSuite\Classes\SearchDoubleField
+     */
     public $transferPrice;
+    /**
+     * @var \NetSuite\Classes\SearchEnumMultiSelectField
+     */
     public $type;
+    /**
+     * @var \NetSuite\Classes\SearchMultiSelectField
+     */
     public $unitsType;
+    /**
+     * @var \NetSuite\Classes\SearchStringField
+     */
     public $upcCode;
+    /**
+     * @var \NetSuite\Classes\SearchStringField
+     */
     public $urlComponent;
+    /**
+     * @var \NetSuite\Classes\SearchBooleanField
+     */
     public $useBins;
+    /**
+     * @var \NetSuite\Classes\SearchBooleanField
+     */
     public $useComponentYield;
+    /**
+     * @var \NetSuite\Classes\SearchBooleanField
+     */
     public $useMarginalRates;
+    /**
+     * @var \NetSuite\Classes\SearchMultiSelectField
+     */
     public $vendor;
+    /**
+     * @var \NetSuite\Classes\SearchStringField
+     */
     public $vendorCode;
+    /**
+     * @var \NetSuite\Classes\SearchDoubleField
+     */
     public $vendorCost;
+    /**
+     * @var \NetSuite\Classes\SearchDoubleField
+     */
     public $vendorCostEntered;
+    /**
+     * @var \NetSuite\Classes\SearchStringField
+     */
     public $vendorName;
+    /**
+     * @var \NetSuite\Classes\SearchMultiSelectField
+     */
     public $vendorPriceCurrency;
+    /**
+     * @var \NetSuite\Classes\SearchEnumMultiSelectField
+     */
     public $vsoeDeferral;
+    /**
+     * @var \NetSuite\Classes\SearchBooleanField
+     */
     public $vsoeDelivered;
+    /**
+     * @var \NetSuite\Classes\SearchEnumMultiSelectField
+     */
     public $vsoePermitDiscount;
+    /**
+     * @var \NetSuite\Classes\SearchDoubleField
+     */
     public $vsoePrice;
+    /**
+     * @var \NetSuite\Classes\SearchEnumMultiSelectField
+     */
     public $vsoeSopGroup;
+    /**
+     * @var \NetSuite\Classes\SearchMultiSelectField
+     */
     public $webSite;
+    /**
+     * @var \NetSuite\Classes\SearchDoubleField
+     */
     public $weight;
+    /**
+     * @var \NetSuite\Classes\SearchBooleanField
+     */
     public $yahooProductFeed;
+    /**
+     * @var \NetSuite\Classes\SearchCustomFieldList
+     */
     public $customFieldList;
     static $paramtypesmap = array(
         "accBookRevRecForecastRule" => "SearchMultiSelectField",

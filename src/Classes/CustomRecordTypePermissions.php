@@ -14,24 +14,63 @@
  * @license    https://raw.githubusercontent.com/ryanwinchester/netsuite-php/master/original/NetSuite%20Application%20Developer%20License%20Agreement.txt
  * @link       http://www.netsuite.com/portal/developers/resources/suitetalk-sample-applications.shtml
  *
- * generated:  2020-02-19 09:58:55 AM CST
+ * generated:  2020-04-10 09:56:55 PM UTC
  */
 
 namespace NetSuite\Classes;
 
 class CustomRecordTypePermissions {
+    /**
+     * @var \NetSuite\Classes\RecordRef
+     */
     public $permittedRole;
+    /**
+     * @var \NetSuite\Classes\CustomRecordTypePermissionsPermittedLevel
+     */
     public $permittedLevel;
+    /**
+     * @var \NetSuite\Classes\CustomRecordTypePermissionsRestriction
+     */
     public $restriction;
+    /**
+     * @var \NetSuite\Classes\RecordRef
+     */
     public $defaultForm;
+    /**
+     * @var boolean
+     */
     public $restrictForm;
+    /**
+     * @var \NetSuite\Classes\RecordRef
+     */
     public $searchForm;
+    /**
+     * @var \NetSuite\Classes\RecordRef
+     */
     public $searchResults;
+    /**
+     * @var \NetSuite\Classes\RecordRef
+     */
     public $listView;
+    /**
+     * @var boolean
+     */
     public $listViewRestricted;
+    /**
+     * @var \NetSuite\Classes\RecordRef
+     */
     public $dashboardView;
+    /**
+     * @var boolean
+     */
     public $restrictDashboardView;
+    /**
+     * @var \NetSuite\Classes\RecordRef
+     */
     public $sublistView;
+    /**
+     * @var boolean
+     */
     public $restrictSublistView;
     static $paramtypesmap = array(
         "permittedRole" => "RecordRef",

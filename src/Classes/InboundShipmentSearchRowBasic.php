@@ -14,51 +14,171 @@
  * @license    https://raw.githubusercontent.com/ryanwinchester/netsuite-php/master/original/NetSuite%20Application%20Developer%20License%20Agreement.txt
  * @link       http://www.netsuite.com/portal/developers/resources/suitetalk-sample-applications.shtml
  *
- * generated:  2020-02-19 09:58:55 AM CST
+ * generated:  2020-04-10 09:56:55 PM UTC
  */
 
 namespace NetSuite\Classes;
 
 class InboundShipmentSearchRowBasic extends SearchRowBasic {
+    /**
+     * @var \NetSuite\Classes\SearchColumnDateField[]
+     */
     public $actualDeliveryDate;
+    /**
+     * @var \NetSuite\Classes\SearchColumnDateField[]
+     */
     public $actualShippingDate;
+    /**
+     * @var \NetSuite\Classes\SearchColumnStringField[]
+     */
     public $billOfLading;
+    /**
+     * @var \NetSuite\Classes\SearchColumnDateField[]
+     */
     public $createdDate;
+    /**
+     * @var \NetSuite\Classes\SearchColumnSelectField[]
+     */
     public $currency;
+    /**
+     * @var \NetSuite\Classes\SearchColumnStringField[]
+     */
     public $description;
+    /**
+     * @var \NetSuite\Classes\SearchColumnDateField[]
+     */
     public $expectedDeliveryDate;
+    /**
+     * @var \NetSuite\Classes\SearchColumnDoubleField[]
+     */
     public $expectedRate;
+    /**
+     * @var \NetSuite\Classes\SearchColumnDateField[]
+     */
     public $expectedShippingDate;
+    /**
+     * @var \NetSuite\Classes\SearchColumnStringField[]
+     */
     public $externalDocumentNumber;
+    /**
+     * @var \NetSuite\Classes\SearchColumnSelectField[]
+     */
     public $externalId;
+    /**
+     * @var \NetSuite\Classes\SearchColumnSelectField[]
+     */
     public $incoterm;
+    /**
+     * @var \NetSuite\Classes\SearchColumnSelectField[]
+     */
     public $internalId;
+    /**
+     * @var \NetSuite\Classes\SearchColumnSelectField[]
+     */
     public $item;
+    /**
+     * @var \NetSuite\Classes\SearchColumnDateField[]
+     */
     public $itemEffectiveDate;
+    /**
+     * @var \NetSuite\Classes\SearchColumnDoubleField[]
+     */
     public $itemExchangeRate;
+    /**
+     * @var \NetSuite\Classes\SearchColumnEnumSelectField[]
+     */
     public $landedCostAllocationMethod;
+    /**
+     * @var \NetSuite\Classes\SearchColumnDoubleField[]
+     */
     public $landedCostAmount;
+    /**
+     * @var \NetSuite\Classes\SearchColumnSelectField[]
+     */
     public $landedCostCostCategory;
+    /**
+     * @var \NetSuite\Classes\SearchColumnSelectField[]
+     */
     public $landedCostCurrency;
+    /**
+     * @var \NetSuite\Classes\SearchColumnDateField[]
+     */
     public $landedCostEffectiveDate;
+    /**
+     * @var \NetSuite\Classes\SearchColumnDoubleField[]
+     */
     public $landedCostExchangeRate;
+    /**
+     * @var \NetSuite\Classes\SearchColumnStringField[]
+     */
     public $memo;
+    /**
+     * @var \NetSuite\Classes\SearchColumnDoubleField[]
+     */
     public $poAmount;
+    /**
+     * @var \NetSuite\Classes\SearchColumnDoubleField[]
+     */
     public $poRate;
+    /**
+     * @var \NetSuite\Classes\SearchColumnSelectField[]
+     */
     public $purchaseOrder;
+    /**
+     * @var \NetSuite\Classes\SearchColumnDoubleField[]
+     */
     public $quantityBilled;
+    /**
+     * @var \NetSuite\Classes\SearchColumnDoubleField[]
+     */
     public $quantityExpected;
+    /**
+     * @var \NetSuite\Classes\SearchColumnDoubleField[]
+     */
     public $quantityReceived;
+    /**
+     * @var \NetSuite\Classes\SearchColumnDoubleField[]
+     */
     public $quantityRemaining;
+    /**
+     * @var \NetSuite\Classes\SearchColumnSelectField[]
+     */
     public $receivingLocation;
+    /**
+     * @var \NetSuite\Classes\SearchColumnSelectField[]
+     */
     public $shipmentBaseCurrency;
+    /**
+     * @var \NetSuite\Classes\SearchColumnStringField[]
+     */
     public $shipmentNumber;
+    /**
+     * @var \NetSuite\Classes\SearchColumnStringField[]
+     */
     public $status;
+    /**
+     * @var \NetSuite\Classes\SearchColumnDoubleField[]
+     */
     public $totalUnitCost;
+    /**
+     * @var \NetSuite\Classes\SearchColumnSelectField[]
+     */
     public $unit;
+    /**
+     * @var \NetSuite\Classes\SearchColumnDoubleField[]
+     */
     public $unitLandedCost;
+    /**
+     * @var \NetSuite\Classes\SearchColumnSelectField[]
+     */
     public $vendor;
+    /**
+     * @var \NetSuite\Classes\SearchColumnStringField[]
+     */
     public $vesselNumber;
+    /**
+     * @var \NetSuite\Classes\SearchColumnCustomFieldList
+     */
     public $customFieldList;
     static $paramtypesmap = array(
         "actualDeliveryDate" => "SearchColumnDateField[]",

@@ -14,22 +14,55 @@
  * @license    https://raw.githubusercontent.com/ryanwinchester/netsuite-php/master/original/NetSuite%20Application%20Developer%20License%20Agreement.txt
  * @link       http://www.netsuite.com/portal/developers/resources/suitetalk-sample-applications.shtml
  *
- * generated:  2020-02-19 09:58:55 AM CST
+ * generated:  2020-04-10 09:56:55 PM UTC
  */
 
 namespace NetSuite\Classes;
 
 class Usage extends Record {
+    /**
+     * @var \NetSuite\Classes\RecordRef
+     */
     public $customForm;
+    /**
+     * @var string
+     */
     public $memo;
+    /**
+     * @var \NetSuite\Classes\RecordRef
+     */
     public $item;
+    /**
+     * @var \NetSuite\Classes\RecordRef
+     */
     public $subscriptionPlan;
+    /**
+     * @var \NetSuite\Classes\RecordRef
+     */
     public $customer;
+    /**
+     * @var \NetSuite\Classes\RecordRef
+     */
     public $usageSubscription;
+    /**
+     * @var \NetSuite\Classes\RecordRef
+     */
     public $usageSubscriptionLine;
+    /**
+     * @var float
+     */
     public $usageQuantity;
+    /**
+     * @var string
+     */
     public $usageDate;
+    /**
+     * @var string
+     */
     public $internalId;
+    /**
+     * @var string
+     */
     public $externalId;
     static $paramtypesmap = array(
         "customForm" => "RecordRef",

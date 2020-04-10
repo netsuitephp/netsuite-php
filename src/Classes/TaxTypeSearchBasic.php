@@ -14,26 +14,71 @@
  * @license    https://raw.githubusercontent.com/ryanwinchester/netsuite-php/master/original/NetSuite%20Application%20Developer%20License%20Agreement.txt
  * @link       http://www.netsuite.com/portal/developers/resources/suitetalk-sample-applications.shtml
  *
- * generated:  2020-02-19 09:58:55 AM CST
+ * generated:  2020-04-10 09:56:55 PM UTC
  */
 
 namespace NetSuite\Classes;
 
 class TaxTypeSearchBasic extends SearchRecordBasic {
+    /**
+     * @var \NetSuite\Classes\SearchEnumMultiSelectField
+     */
     public $country;
+    /**
+     * @var \NetSuite\Classes\SearchStringField
+     */
     public $description;
+    /**
+     * @var \NetSuite\Classes\SearchBooleanField
+     */
     public $doesNotAddToTotal;
+    /**
+     * @var \NetSuite\Classes\SearchMultiSelectField
+     */
     public $externalId;
+    /**
+     * @var \NetSuite\Classes\SearchStringField
+     */
     public $externalIdString;
+    /**
+     * @var \NetSuite\Classes\SearchMultiSelectField
+     */
     public $internalId;
+    /**
+     * @var \NetSuite\Classes\SearchLongField
+     */
     public $internalIdNumber;
+    /**
+     * @var \NetSuite\Classes\SearchBooleanField
+     */
     public $isInactive;
+    /**
+     * @var \NetSuite\Classes\SearchStringField
+     */
     public $name;
+    /**
+     * @var \NetSuite\Classes\SearchMultiSelectField
+     */
     public $nexus;
+    /**
+     * @var \NetSuite\Classes\SearchMultiSelectField
+     */
     public $payablesAccount;
+    /**
+     * @var \NetSuite\Classes\SearchBooleanField
+     */
     public $postToItemCost;
+    /**
+     * @var \NetSuite\Classes\SearchMultiSelectField
+     */
     public $receivablesAccount;
+    /**
+     * @var \NetSuite\Classes\SearchBooleanField
+     */
     public $reverseCharge;
+    /**
+     * @var \NetSuite\Classes\SearchBooleanField
+     */
     public $taxInNetAmount;
     static $paramtypesmap = array(
         "country" => "SearchEnumMultiSelectField",

@@ -14,106 +14,391 @@
  * @license    https://raw.githubusercontent.com/ryanwinchester/netsuite-php/master/original/NetSuite%20Application%20Developer%20License%20Agreement.txt
  * @link       http://www.netsuite.com/portal/developers/resources/suitetalk-sample-applications.shtml
  *
- * generated:  2020-02-19 09:58:55 AM CST
+ * generated:  2020-04-10 09:56:55 PM UTC
  */
 
 namespace NetSuite\Classes;
 
 class ItemFulfillment extends Record {
+    /**
+     * @var string
+     */
     public $createdDate;
+    /**
+     * @var string
+     */
     public $lastModifiedDate;
+    /**
+     * @var \NetSuite\Classes\RecordRef
+     */
     public $customForm;
+    /**
+     * @var \NetSuite\Classes\RecordRef
+     */
     public $postingPeriod;
+    /**
+     * @var \NetSuite\Classes\RecordRef
+     */
     public $entity;
+    /**
+     * @var \NetSuite\Classes\RecordRef
+     */
     public $createdFrom;
+    /**
+     * @var \NetSuite\Classes\RecordRef
+     */
     public $requestedBy;
+    /**
+     * @var integer
+     */
     public $createdFromShipGroup;
+    /**
+     * @var \NetSuite\Classes\RecordRef
+     */
     public $partner;
+    /**
+     * @var \NetSuite\Classes\Address
+     */
     public $shippingAddress;
+    /**
+     * @var string
+     */
     public $pickedDate;
+    /**
+     * @var string
+     */
     public $packedDate;
+    /**
+     * @var string
+     */
     public $shippedDate;
+    /**
+     * @var boolean
+     */
     public $shipIsResidential;
+    /**
+     * @var \NetSuite\Classes\RecordRef
+     */
     public $shipAddressList;
+    /**
+     * @var \NetSuite\Classes\ItemFulfillmentShipStatus
+     */
     public $shipStatus;
+    /**
+     * @var boolean
+     */
     public $saturdayDeliveryUps;
+    /**
+     * @var boolean
+     */
     public $sendShipNotifyEmailUps;
+    /**
+     * @var boolean
+     */
     public $sendBackupEmailUps;
+    /**
+     * @var string
+     */
     public $shipNotifyEmailAddressUps;
+    /**
+     * @var string
+     */
     public $shipNotifyEmailAddress2Ups;
+    /**
+     * @var string
+     */
     public $backupEmailAddressUps;
+    /**
+     * @var string
+     */
     public $shipNotifyEmailMessageUps;
+    /**
+     * @var string
+     */
     public $thirdPartyAcctUps;
+    /**
+     * @var string
+     */
     public $thirdPartyZipcodeUps;
+    /**
+     * @var \NetSuite\Classes\Country
+     */
     public $thirdPartyCountryUps;
+    /**
+     * @var \NetSuite\Classes\ItemFulfillmentThirdPartyTypeUps
+     */
     public $thirdPartyTypeUps;
+    /**
+     * @var boolean
+     */
     public $partiesToTransactionUps;
+    /**
+     * @var \NetSuite\Classes\ItemFulfillmentExportTypeUps
+     */
     public $exportTypeUps;
+    /**
+     * @var \NetSuite\Classes\ItemFulfillmentMethodOfTransportUps
+     */
     public $methodOfTransportUps;
+    /**
+     * @var string
+     */
     public $carrierIdUps;
+    /**
+     * @var string
+     */
     public $entryNumberUps;
+    /**
+     * @var string
+     */
     public $inbondCodeUps;
+    /**
+     * @var boolean
+     */
     public $isRoutedExportTransactionUps;
+    /**
+     * @var string
+     */
     public $licenseNumberUps;
+    /**
+     * @var string
+     */
     public $licenseDateUps;
+    /**
+     * @var \NetSuite\Classes\ItemFulfillmentLicenseExceptionUps
+     */
     public $licenseExceptionUps;
+    /**
+     * @var string
+     */
     public $eccNumberUps;
+    /**
+     * @var string
+     */
     public $recipientTaxIdUps;
+    /**
+     * @var string
+     */
     public $blanketStartDateUps;
+    /**
+     * @var string
+     */
     public $blanketEndDateUps;
+    /**
+     * @var float
+     */
     public $shipmentWeightUps;
+    /**
+     * @var boolean
+     */
     public $saturdayDeliveryFedEx;
+    /**
+     * @var boolean
+     */
     public $saturdayPickupFedex;
+    /**
+     * @var boolean
+     */
     public $sendShipNotifyEmailFedEx;
+    /**
+     * @var boolean
+     */
     public $sendBackupEmailFedEx;
+    /**
+     * @var boolean
+     */
     public $signatureHomeDeliveryFedEx;
+    /**
+     * @var string
+     */
     public $shipNotifyEmailAddressFedEx;
+    /**
+     * @var string
+     */
     public $backupEmailAddressFedEx;
+    /**
+     * @var string
+     */
     public $shipDateFedEx;
+    /**
+     * @var \NetSuite\Classes\ItemFulfillmentHomeDeliveryTypeFedEx
+     */
     public $homeDeliveryTypeFedEx;
+    /**
+     * @var string
+     */
     public $homeDeliveryDateFedEx;
+    /**
+     * @var string
+     */
     public $bookingConfirmationNumFedEx;
+    /**
+     * @var string
+     */
     public $intlExemptionNumFedEx;
+    /**
+     * @var \NetSuite\Classes\ItemFulfillmentB13AFilingOptionFedEx
+     */
     public $b13aFilingOptionFedEx;
+    /**
+     * @var string
+     */
     public $b13aStatementDataFedEx;
+    /**
+     * @var string
+     */
     public $thirdPartyAcctFedEx;
+    /**
+     * @var \NetSuite\Classes\Country
+     */
     public $thirdPartyCountryFedEx;
+    /**
+     * @var \NetSuite\Classes\ItemFulfillmentThirdPartyTypeFedEx
+     */
     public $thirdPartyTypeFedEx;
+    /**
+     * @var float
+     */
     public $shipmentWeightFedEx;
+    /**
+     * @var \NetSuite\Classes\ItemFulfillmentTermsOfSaleFedEx
+     */
     public $termsOfSaleFedEx;
+    /**
+     * @var float
+     */
     public $termsFreightChargeFedEx;
+    /**
+     * @var float
+     */
     public $termsInsuranceChargeFedEx;
+    /**
+     * @var boolean
+     */
     public $insideDeliveryFedEx;
+    /**
+     * @var boolean
+     */
     public $insidePickupFedEx;
+    /**
+     * @var \NetSuite\Classes\ItemFulfillmentAncillaryEndorsementFedEx
+     */
     public $ancillaryEndorsementFedEx;
+    /**
+     * @var boolean
+     */
     public $holdAtLocationFedEx;
+    /**
+     * @var string
+     */
     public $halPhoneFedEx;
+    /**
+     * @var string
+     */
     public $halAddr1FedEx;
+    /**
+     * @var string
+     */
     public $halAddr2FedEx;
+    /**
+     * @var string
+     */
     public $halAddr3FedEx;
+    /**
+     * @var string
+     */
     public $halCityFedEx;
+    /**
+     * @var string
+     */
     public $halZipFedEx;
+    /**
+     * @var string
+     */
     public $halStateFedEx;
+    /**
+     * @var string
+     */
     public $halCountryFedEx;
+    /**
+     * @var \NetSuite\Classes\ItemFulfillmentHazmatTypeFedEx
+     */
     public $hazmatTypeFedEx;
+    /**
+     * @var \NetSuite\Classes\ItemFulfillmentAccessibilityTypeFedEx
+     */
     public $accessibilityTypeFedEx;
+    /**
+     * @var boolean
+     */
     public $isCargoAircraftOnlyFedEx;
+    /**
+     * @var string
+     */
     public $tranDate;
+    /**
+     * @var string
+     */
     public $tranId;
+    /**
+     * @var \NetSuite\Classes\RecordRef
+     */
     public $shipMethod;
+    /**
+     * @var boolean
+     */
     public $generateIntegratedShipperLabel;
+    /**
+     * @var float
+     */
     public $shippingCost;
+    /**
+     * @var float
+     */
     public $handlingCost;
+    /**
+     * @var string
+     */
     public $memo;
+    /**
+     * @var \NetSuite\Classes\RecordRef
+     */
     public $transferLocation;
+    /**
+     * @var \NetSuite\Classes\ItemFulfillmentPackageList
+     */
     public $packageList;
+    /**
+     * @var \NetSuite\Classes\ItemFulfillmentPackageUpsList
+     */
     public $packageUpsList;
+    /**
+     * @var \NetSuite\Classes\ItemFulfillmentPackageUspsList
+     */
     public $packageUspsList;
+    /**
+     * @var \NetSuite\Classes\ItemFulfillmentPackageFedExList
+     */
     public $packageFedExList;
+    /**
+     * @var \NetSuite\Classes\ItemFulfillmentItemList
+     */
     public $itemList;
+    /**
+     * @var \NetSuite\Classes\AccountingBookDetailList
+     */
     public $accountingBookDetailList;
+    /**
+     * @var \NetSuite\Classes\CustomFieldList
+     */
     public $customFieldList;
+    /**
+     * @var string
+     */
     public $internalId;
+    /**
+     * @var string
+     */
     public $externalId;
     static $paramtypesmap = array(
         "createdDate" => "dateTime",

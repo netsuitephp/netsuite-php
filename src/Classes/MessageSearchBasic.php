@@ -14,27 +14,75 @@
  * @license    https://raw.githubusercontent.com/ryanwinchester/netsuite-php/master/original/NetSuite%20Application%20Developer%20License%20Agreement.txt
  * @link       http://www.netsuite.com/portal/developers/resources/suitetalk-sample-applications.shtml
  *
- * generated:  2020-02-19 09:58:55 AM CST
+ * generated:  2020-04-10 09:56:55 PM UTC
  */
 
 namespace NetSuite\Classes;
 
 class MessageSearchBasic extends SearchRecordBasic {
+    /**
+     * @var \NetSuite\Classes\SearchMultiSelectField
+     */
     public $author;
+    /**
+     * @var \NetSuite\Classes\SearchStringField
+     */
     public $authorEmail;
+    /**
+     * @var \NetSuite\Classes\SearchStringField
+     */
     public $bcc;
+    /**
+     * @var \NetSuite\Classes\SearchStringField
+     */
     public $cc;
+    /**
+     * @var \NetSuite\Classes\SearchMultiSelectField
+     */
     public $externalId;
+    /**
+     * @var \NetSuite\Classes\SearchStringField
+     */
     public $externalIdString;
+    /**
+     * @var \NetSuite\Classes\SearchBooleanField
+     */
     public $hasAttachment;
+    /**
+     * @var \NetSuite\Classes\SearchMultiSelectField
+     */
     public $internalId;
+    /**
+     * @var \NetSuite\Classes\SearchLongField
+     */
     public $internalIdNumber;
+    /**
+     * @var \NetSuite\Classes\SearchBooleanField
+     */
     public $internalOnly;
+    /**
+     * @var \NetSuite\Classes\SearchStringField
+     */
     public $message;
+    /**
+     * @var \NetSuite\Classes\SearchDateField
+     */
     public $messageDate;
+    /**
+     * @var \NetSuite\Classes\SearchEnumMultiSelectField
+     */
     public $messageType;
+    /**
+     * @var \NetSuite\Classes\SearchMultiSelectField
+     */
     public $recipient;
+    /**
+     * @var \NetSuite\Classes\SearchStringField
+     */
     public $recipientEmail;
+    /**
+     * @var \NetSuite\Classes\SearchStringField
+     */
     public $subject;
     static $paramtypesmap = array(
         "author" => "SearchMultiSelectField",

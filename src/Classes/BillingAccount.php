@@ -14,36 +14,111 @@
  * @license    https://raw.githubusercontent.com/ryanwinchester/netsuite-php/master/original/NetSuite%20Application%20Developer%20License%20Agreement.txt
  * @link       http://www.netsuite.com/portal/developers/resources/suitetalk-sample-applications.shtml
  *
- * generated:  2020-02-19 09:58:55 AM CST
+ * generated:  2020-04-10 09:56:55 PM UTC
  */
 
 namespace NetSuite\Classes;
 
 class BillingAccount extends Record {
+    /**
+     * @var \NetSuite\Classes\RecordRef
+     */
     public $customForm;
+    /**
+     * @var string
+     */
     public $idNumber;
+    /**
+     * @var boolean
+     */
     public $customerDefault;
+    /**
+     * @var \NetSuite\Classes\RecordRef
+     */
     public $customer;
+    /**
+     * @var \NetSuite\Classes\RecordRef
+     */
     public $subsidiary;
+    /**
+     * @var string
+     */
     public $name;
+    /**
+     * @var boolean
+     */
     public $inactive;
+    /**
+     * @var string
+     */
     public $memo;
+    /**
+     * @var string
+     */
     public $createdDate;
+    /**
+     * @var string
+     */
     public $createdBy;
+    /**
+     * @var \NetSuite\Classes\RecordRef
+     */
     public $currency;
+    /**
+     * @var \NetSuite\Classes\RecordRef
+     */
     public $class;
+    /**
+     * @var \NetSuite\Classes\RecordRef
+     */
     public $department;
+    /**
+     * @var \NetSuite\Classes\RecordRef
+     */
     public $location;
+    /**
+     * @var \NetSuite\Classes\RecordRef
+     */
     public $billingSchedule;
+    /**
+     * @var \NetSuite\Classes\BillingAccountFrequency
+     */
     public $frequency;
+    /**
+     * @var string
+     */
     public $startDate;
+    /**
+     * @var string
+     */
     public $lastBillDate;
+    /**
+     * @var string
+     */
     public $lastBillCycleDate;
+    /**
+     * @var string
+     */
     public $nextBillCycleDate;
+    /**
+     * @var \NetSuite\Classes\RecordRef
+     */
     public $invoiceForm;
+    /**
+     * @var \NetSuite\Classes\RecordRef
+     */
     public $cashSaleForm;
+    /**
+     * @var \NetSuite\Classes\CustomFieldList
+     */
     public $customFieldList;
+    /**
+     * @var string
+     */
     public $internalId;
+    /**
+     * @var string
+     */
     public $externalId;
     static $paramtypesmap = array(
         "customForm" => "RecordRef",

@@ -14,38 +14,119 @@
  * @license    https://raw.githubusercontent.com/ryanwinchester/netsuite-php/master/original/NetSuite%20Application%20Developer%20License%20Agreement.txt
  * @link       http://www.netsuite.com/portal/developers/resources/suitetalk-sample-applications.shtml
  *
- * generated:  2020-02-19 09:58:55 AM CST
+ * generated:  2020-04-10 09:56:55 PM UTC
  */
 
 namespace NetSuite\Classes;
 
 class ExpenseReportExpense {
+    /**
+     * @var integer
+     */
     public $line;
+    /**
+     * @var string
+     */
     public $expenseDate;
+    /**
+     * @var \NetSuite\Classes\RecordRef
+     */
     public $category;
+    /**
+     * @var float
+     */
     public $quantity;
+    /**
+     * @var float
+     */
     public $rate;
+    /**
+     * @var float
+     */
     public $foreignAmount;
+    /**
+     * @var \NetSuite\Classes\RecordRef
+     */
     public $currency;
+    /**
+     * @var float
+     */
     public $exchangeRate;
+    /**
+     * @var float
+     */
     public $amount;
+    /**
+     * @var \NetSuite\Classes\RecordRef
+     */
     public $taxCode;
+    /**
+     * @var string
+     */
     public $memo;
+    /**
+     * @var float
+     */
     public $taxRate1;
+    /**
+     * @var float
+     */
     public $tax1Amt;
+    /**
+     * @var \NetSuite\Classes\RecordRef
+     */
     public $department;
+    /**
+     * @var float
+     */
     public $grossAmt;
+    /**
+     * @var float
+     */
     public $taxRate2;
+    /**
+     * @var \NetSuite\Classes\RecordRef
+     */
     public $class;
+    /**
+     * @var \NetSuite\Classes\RecordRef
+     */
     public $customer;
+    /**
+     * @var \NetSuite\Classes\RecordRef
+     */
     public $location;
+    /**
+     * @var boolean
+     */
     public $isBillable;
+    /**
+     * @var \NetSuite\Classes\RecordRef
+     */
     public $expMediaItem;
+    /**
+     * @var boolean
+     */
     public $isNonReimbursable;
+    /**
+     * @var boolean
+     */
     public $corporateCreditCard;
+    /**
+     * @var boolean
+     */
     public $receipt;
+    /**
+     * @var integer
+     */
     public $refNumber;
+    /**
+     * @var string
+     */
     public $taxDetailsReference;
+    /**
+     * @var \NetSuite\Classes\CustomFieldList
+     */
     public $customFieldList;
     static $paramtypesmap = array(
         "line" => "integer",

@@ -14,50 +14,167 @@
  * @license    https://raw.githubusercontent.com/ryanwinchester/netsuite-php/master/original/NetSuite%20Application%20Developer%20License%20Agreement.txt
  * @link       http://www.netsuite.com/portal/developers/resources/suitetalk-sample-applications.shtml
  *
- * generated:  2020-02-19 09:58:55 AM CST
+ * generated:  2020-04-10 09:56:55 PM UTC
  */
 
 namespace NetSuite\Classes;
 
 class Budget extends Record {
+    /**
+     * @var \NetSuite\Classes\RecordRef
+     */
     public $year;
+    /**
+     * @var \NetSuite\Classes\RecordRef
+     */
     public $customer;
+    /**
+     * @var \NetSuite\Classes\RecordRef
+     */
     public $item;
+    /**
+     * @var \NetSuite\Classes\RecordRef
+     */
     public $class;
+    /**
+     * @var \NetSuite\Classes\RecordRef
+     */
     public $department;
+    /**
+     * @var \NetSuite\Classes\RecordRef
+     */
     public $location;
+    /**
+     * @var \NetSuite\Classes\RecordRef
+     */
     public $account;
+    /**
+     * @var \NetSuite\Classes\RecordRef
+     */
     public $subsidiary;
+    /**
+     * @var \NetSuite\Classes\RecordRef
+     */
     public $category;
+    /**
+     * @var \NetSuite\Classes\BudgetBudgetType
+     */
     public $budgetType;
+    /**
+     * @var \NetSuite\Classes\RecordRef
+     */
     public $currency;
+    /**
+     * @var float
+     */
     public $periodAmount1;
+    /**
+     * @var float
+     */
     public $periodAmount2;
+    /**
+     * @var float
+     */
     public $periodAmount3;
+    /**
+     * @var float
+     */
     public $periodAmount4;
+    /**
+     * @var float
+     */
     public $periodAmount5;
+    /**
+     * @var float
+     */
     public $periodAmount6;
+    /**
+     * @var float
+     */
     public $periodAmount7;
+    /**
+     * @var float
+     */
     public $periodAmount8;
+    /**
+     * @var float
+     */
     public $periodAmount9;
+    /**
+     * @var float
+     */
     public $periodAmount10;
+    /**
+     * @var float
+     */
     public $periodAmount11;
+    /**
+     * @var float
+     */
     public $periodAmount12;
+    /**
+     * @var float
+     */
     public $periodAmount13;
+    /**
+     * @var float
+     */
     public $periodAmount14;
+    /**
+     * @var float
+     */
     public $periodAmount15;
+    /**
+     * @var float
+     */
     public $periodAmount16;
+    /**
+     * @var float
+     */
     public $periodAmount17;
+    /**
+     * @var float
+     */
     public $periodAmount18;
+    /**
+     * @var float
+     */
     public $periodAmount19;
+    /**
+     * @var float
+     */
     public $periodAmount20;
+    /**
+     * @var float
+     */
     public $periodAmount21;
+    /**
+     * @var float
+     */
     public $periodAmount22;
+    /**
+     * @var float
+     */
     public $periodAmount23;
+    /**
+     * @var float
+     */
     public $periodAmount24;
+    /**
+     * @var float
+     */
     public $amount;
+    /**
+     * @var \NetSuite\Classes\RecordRef
+     */
     public $accountingBook;
+    /**
+     * @var \NetSuite\Classes\CustomFieldList
+     */
     public $customFieldList;
+    /**
+     * @var string
+     */
     public $internalId;
     static $paramtypesmap = array(
         "year" => "RecordRef",

@@ -14,35 +14,107 @@
  * @license    https://raw.githubusercontent.com/ryanwinchester/netsuite-php/master/original/NetSuite%20Application%20Developer%20License%20Agreement.txt
  * @link       http://www.netsuite.com/portal/developers/resources/suitetalk-sample-applications.shtml
  *
- * generated:  2020-02-19 09:58:55 AM CST
+ * generated:  2020-04-10 09:56:55 PM UTC
  */
 
 namespace NetSuite\Classes;
 
 class ItemSearch extends SearchRecord {
+    /**
+     * @var \NetSuite\Classes\ItemSearchBasic
+     */
     public $basic;
+    /**
+     * @var \NetSuite\Classes\RevRecTemplateSearchBasic
+     */
     public $accountingBookRevRecScheduleJoin;
+    /**
+     * @var \NetSuite\Classes\AssemblyItemBomSearchBasic
+     */
     public $assemblyItemBillOfMaterialsJoin;
+    /**
+     * @var \NetSuite\Classes\BinSearchBasic
+     */
     public $binNumberJoin;
+    /**
+     * @var \NetSuite\Classes\ItemBinNumberSearchBasic
+     */
     public $binOnHandJoin;
+    /**
+     * @var \NetSuite\Classes\ItemSearchBasic
+     */
     public $correlatedItemJoin;
+    /**
+     * @var \NetSuite\Classes\ItemRevisionSearchBasic
+     */
     public $effectiveRevisionJoin;
+    /**
+     * @var \NetSuite\Classes\FileSearchBasic
+     */
     public $fileJoin;
+    /**
+     * @var \NetSuite\Classes\InventoryDetailSearchBasic
+     */
     public $inventoryDetailJoin;
+    /**
+     * @var \NetSuite\Classes\LocationSearchBasic
+     */
     public $inventoryLocationJoin;
+    /**
+     * @var \NetSuite\Classes\InventoryNumberSearchBasic
+     */
     public $inventoryNumberJoin;
+    /**
+     * @var \NetSuite\Classes\InventoryNumberBinSearchBasic
+     */
     public $inventoryNumberBinOnHandJoin;
+    /**
+     * @var \NetSuite\Classes\ItemSearchBasic
+     */
     public $memberItemJoin;
+    /**
+     * @var \NetSuite\Classes\ItemRevisionSearchBasic
+     */
     public $obsoleteRevisionJoin;
+    /**
+     * @var \NetSuite\Classes\ItemSearchBasic
+     */
     public $parentJoin;
+    /**
+     * @var \NetSuite\Classes\LocationSearchBasic
+     */
     public $preferredLocationJoin;
+    /**
+     * @var \NetSuite\Classes\VendorSearchBasic
+     */
     public $preferredVendorJoin;
+    /**
+     * @var \NetSuite\Classes\PricingSearchBasic
+     */
     public $pricingJoin;
+    /**
+     * @var \NetSuite\Classes\CustomerSearchBasic
+     */
     public $shopperJoin;
+    /**
+     * @var \NetSuite\Classes\TransactionSearchBasic
+     */
     public $transactionJoin;
+    /**
+     * @var \NetSuite\Classes\EmployeeSearchBasic
+     */
     public $userJoin;
+    /**
+     * @var \NetSuite\Classes\NoteSearchBasic
+     */
     public $userNotesJoin;
+    /**
+     * @var \NetSuite\Classes\VendorSearchBasic
+     */
     public $vendorJoin;
+    /**
+     * @var \NetSuite\Classes\CustomSearchJoin[]
+     */
     public $customSearchJoin;
     static $paramtypesmap = array(
         "basic" => "ItemSearchBasic",

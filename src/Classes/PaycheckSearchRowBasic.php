@@ -14,25 +14,67 @@
  * @license    https://raw.githubusercontent.com/ryanwinchester/netsuite-php/master/original/NetSuite%20Application%20Developer%20License%20Agreement.txt
  * @link       http://www.netsuite.com/portal/developers/resources/suitetalk-sample-applications.shtml
  *
- * generated:  2020-02-19 09:58:55 AM CST
+ * generated:  2020-04-10 09:56:55 PM UTC
  */
 
 namespace NetSuite\Classes;
 
 class PaycheckSearchRowBasic extends SearchRowBasic {
+    /**
+     * @var \NetSuite\Classes\SearchColumnSelectField[]
+     */
     public $account;
+    /**
+     * @var \NetSuite\Classes\SearchColumnDateField[]
+     */
     public $amendedDate;
+    /**
+     * @var \NetSuite\Classes\SearchColumnDoubleField[]
+     */
     public $amount;
+    /**
+     * @var \NetSuite\Classes\SearchColumnLongField[]
+     */
     public $batchNumber;
+    /**
+     * @var \NetSuite\Classes\SearchColumnDateField[]
+     */
     public $checkDate;
+    /**
+     * @var \NetSuite\Classes\SearchColumnSelectField[]
+     */
     public $employee;
+    /**
+     * @var \NetSuite\Classes\SearchColumnSelectField[]
+     */
     public $externalId;
+    /**
+     * @var \NetSuite\Classes\SearchColumnBooleanField[]
+     */
     public $hasGLImpact;
+    /**
+     * @var \NetSuite\Classes\SearchColumnDoubleField[]
+     */
     public $hours;
+    /**
+     * @var \NetSuite\Classes\SearchColumnSelectField[]
+     */
     public $internalId;
+    /**
+     * @var \NetSuite\Classes\SearchColumnSelectField[]
+     */
     public $payrollItem;
+    /**
+     * @var \NetSuite\Classes\SearchColumnSelectField[]
+     */
     public $payrollItemType;
+    /**
+     * @var \NetSuite\Classes\SearchColumnDoubleField[]
+     */
     public $subjectWages;
+    /**
+     * @var \NetSuite\Classes\SearchColumnDoubleField[]
+     */
     public $taxableWages;
     static $paramtypesmap = array(
         "account" => "SearchColumnSelectField[]",

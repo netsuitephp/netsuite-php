@@ -14,36 +14,111 @@
  * @license    https://raw.githubusercontent.com/ryanwinchester/netsuite-php/master/original/NetSuite%20Application%20Developer%20License%20Agreement.txt
  * @link       http://www.netsuite.com/portal/developers/resources/suitetalk-sample-applications.shtml
  *
- * generated:  2020-02-19 09:58:55 AM CST
+ * generated:  2020-04-10 09:56:55 PM UTC
  */
 
 namespace NetSuite\Classes;
 
 class EntityGroup extends Record {
+    /**
+     * @var string
+     */
     public $groupName;
+    /**
+     * @var \NetSuite\Classes\EntityGroupType
+     */
     public $groupType;
+    /**
+     * @var string
+     */
     public $email;
+    /**
+     * @var \NetSuite\Classes\RecordRef
+     */
     public $groupOwner;
+    /**
+     * @var boolean
+     */
     public $isSavedSearch;
+    /**
+     * @var \NetSuite\Classes\EntityGroupType
+     */
     public $parentGroupType;
+    /**
+     * @var \NetSuite\Classes\RecordRef
+     */
     public $savedSearch;
+    /**
+     * @var boolean
+     */
     public $isSalesTeam;
+    /**
+     * @var string
+     */
     public $comments;
+    /**
+     * @var boolean
+     */
     public $isPrivate;
+    /**
+     * @var \NetSuite\Classes\RecordRef
+     */
     public $restrictionGroup;
+    /**
+     * @var boolean
+     */
     public $isInactive;
+    /**
+     * @var boolean
+     */
     public $isSalesRep;
+    /**
+     * @var boolean
+     */
     public $isSupportRep;
+    /**
+     * @var boolean
+     */
     public $isProductTeam;
+    /**
+     * @var boolean
+     */
     public $isFunctionalTeam;
+    /**
+     * @var \NetSuite\Classes\RecordRef
+     */
     public $issueRole;
+    /**
+     * @var boolean
+     */
     public $isManufacturingWorkCenter;
+    /**
+     * @var \NetSuite\Classes\RecordRef
+     */
     public $subsidiary;
+    /**
+     * @var float
+     */
     public $machineResources;
+    /**
+     * @var float
+     */
     public $laborResources;
+    /**
+     * @var \NetSuite\Classes\RecordRef
+     */
     public $workCalendar;
+    /**
+     * @var \NetSuite\Classes\CustomFieldList
+     */
     public $customFieldList;
+    /**
+     * @var string
+     */
     public $internalId;
+    /**
+     * @var string
+     */
     public $externalId;
     static $paramtypesmap = array(
         "groupName" => "string",

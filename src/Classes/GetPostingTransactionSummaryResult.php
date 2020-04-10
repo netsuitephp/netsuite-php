@@ -14,18 +14,39 @@
  * @license    https://raw.githubusercontent.com/ryanwinchester/netsuite-php/master/original/NetSuite%20Application%20Developer%20License%20Agreement.txt
  * @link       http://www.netsuite.com/portal/developers/resources/suitetalk-sample-applications.shtml
  *
- * generated:  2020-02-19 09:58:55 AM CST
+ * generated:  2020-04-10 09:56:55 PM UTC
  */
 
 namespace NetSuite\Classes;
 
 class GetPostingTransactionSummaryResult {
+    /**
+     * @var \NetSuite\Classes\Status
+     */
     public $status;
+    /**
+     * @var integer
+     */
     public $totalRecords;
+    /**
+     * @var integer
+     */
     public $pageSize;
+    /**
+     * @var integer
+     */
     public $totalPages;
+    /**
+     * @var integer
+     */
     public $pageIndex;
+    /**
+     * @var string
+     */
     public $operationId;
+    /**
+     * @var \NetSuite\Classes\PostingTransactionSummaryList
+     */
     public $postingTransactionSummaryList;
     static $paramtypesmap = array(
         "status" => "Status",

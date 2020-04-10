@@ -14,29 +14,83 @@
  * @license    https://raw.githubusercontent.com/ryanwinchester/netsuite-php/master/original/NetSuite%20Application%20Developer%20License%20Agreement.txt
  * @link       http://www.netsuite.com/portal/developers/resources/suitetalk-sample-applications.shtml
  *
- * generated:  2020-02-19 09:58:55 AM CST
+ * generated:  2020-04-10 09:56:55 PM UTC
  */
 
 namespace NetSuite\Classes;
 
 class TermSearchRowBasic extends SearchRowBasic {
+    /**
+     * @var \NetSuite\Classes\SearchColumnBooleanField[]
+     */
     public $dateDriven;
+    /**
+     * @var \NetSuite\Classes\SearchColumnLongField[]
+     */
     public $dayDiscountExpires;
+    /**
+     * @var \NetSuite\Classes\SearchColumnLongField[]
+     */
     public $dayOfMonthNetDue;
+    /**
+     * @var \NetSuite\Classes\SearchColumnLongField[]
+     */
     public $daysUntilExpiry;
+    /**
+     * @var \NetSuite\Classes\SearchColumnLongField[]
+     */
     public $daysUntilNetDue;
+    /**
+     * @var \NetSuite\Classes\SearchColumnDoubleField[]
+     */
     public $discountPercent;
+    /**
+     * @var \NetSuite\Classes\SearchColumnDoubleField[]
+     */
     public $discountPercentDateDriven;
+    /**
+     * @var \NetSuite\Classes\SearchColumnLongField[]
+     */
     public $dueNextMonthIfWithinDays;
+    /**
+     * @var \NetSuite\Classes\SearchColumnSelectField[]
+     */
     public $externalId;
+    /**
+     * @var \NetSuite\Classes\SearchColumnBooleanField[]
+     */
     public $installment;
+    /**
+     * @var \NetSuite\Classes\SearchColumnSelectField[]
+     */
     public $internalId;
+    /**
+     * @var \NetSuite\Classes\SearchColumnBooleanField[]
+     */
     public $isInactive;
+    /**
+     * @var \NetSuite\Classes\SearchColumnStringField[]
+     */
     public $name;
+    /**
+     * @var \NetSuite\Classes\SearchColumnBooleanField[]
+     */
     public $preferred;
+    /**
+     * @var \NetSuite\Classes\SearchColumnLongField[]
+     */
     public $recurrenceCount;
+    /**
+     * @var \NetSuite\Classes\SearchColumnStringField[]
+     */
     public $recurrenceFrequency;
+    /**
+     * @var \NetSuite\Classes\SearchColumnLongField[]
+     */
     public $repeatEvery;
+    /**
+     * @var \NetSuite\Classes\SearchColumnBooleanField[]
+     */
     public $splitEvenly;
     static $paramtypesmap = array(
         "dateDriven" => "SearchColumnBooleanField[]",

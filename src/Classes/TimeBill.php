@@ -14,44 +14,143 @@
  * @license    https://raw.githubusercontent.com/ryanwinchester/netsuite-php/master/original/NetSuite%20Application%20Developer%20License%20Agreement.txt
  * @link       http://www.netsuite.com/portal/developers/resources/suitetalk-sample-applications.shtml
  *
- * generated:  2020-02-19 09:58:55 AM CST
+ * generated:  2020-04-10 09:56:55 PM UTC
  */
 
 namespace NetSuite\Classes;
 
 class TimeBill extends Record {
+    /**
+     * @var \NetSuite\Classes\RecordRef
+     */
     public $customForm;
+    /**
+     * @var \NetSuite\Classes\RecordRef
+     */
     public $employee;
+    /**
+     * @var string
+     */
     public $tranDate;
+    /**
+     * @var \NetSuite\Classes\RecordRef
+     */
     public $approvalStatus;
+    /**
+     * @var \NetSuite\Classes\RecordRef
+     */
     public $customer;
+    /**
+     * @var \NetSuite\Classes\RecordRef
+     */
     public $caseTaskEvent;
+    /**
+     * @var boolean
+     */
     public $isBillable;
+    /**
+     * @var \NetSuite\Classes\RecordRef
+     */
     public $payrollItem;
+    /**
+     * @var boolean
+     */
     public $paidExternally;
+    /**
+     * @var \NetSuite\Classes\RecordRef
+     */
     public $workplace;
+    /**
+     * @var \NetSuite\Classes\RecordRef
+     */
     public $item;
+    /**
+     * @var \NetSuite\Classes\RecordRef
+     */
     public $department;
+    /**
+     * @var \NetSuite\Classes\RecordRef
+     */
     public $class;
+    /**
+     * @var \NetSuite\Classes\RecordRef
+     */
     public $location;
+    /**
+     * @var \NetSuite\Classes\Duration
+     */
     public $hours;
+    /**
+     * @var \NetSuite\Classes\RecordRef
+     */
     public $price;
+    /**
+     * @var \NetSuite\Classes\TimeBillTimeType
+     */
     public $timeType;
+    /**
+     * @var float
+     */
     public $rate;
+    /**
+     * @var boolean
+     */
     public $overrideRate;
+    /**
+     * @var \NetSuite\Classes\RecordRef
+     */
     public $temporaryLocalJurisdiction;
+    /**
+     * @var \NetSuite\Classes\RecordRef
+     */
     public $temporaryStateJurisdiction;
+    /**
+     * @var string
+     */
     public $memo;
+    /**
+     * @var string
+     */
     public $rejectionNote;
+    /**
+     * @var \NetSuite\Classes\RecordRef
+     */
     public $subsidiary;
+    /**
+     * @var boolean
+     */
     public $supervisorApproval;
+    /**
+     * @var string
+     */
     public $createdDate;
+    /**
+     * @var string
+     */
     public $lastModifiedDate;
+    /**
+     * @var \NetSuite\Classes\RecordRef
+     */
     public $timeSheet;
+    /**
+     * @var string
+     */
     public $status;
+    /**
+     * @var boolean
+     */
     public $timeModified;
+    /**
+     * @var \NetSuite\Classes\CustomFieldList
+     */
     public $customFieldList;
+    /**
+     * @var string
+     */
     public $internalId;
+    /**
+     * @var string
+     */
     public $externalId;
     static $paramtypesmap = array(
         "customForm" => "RecordRef",

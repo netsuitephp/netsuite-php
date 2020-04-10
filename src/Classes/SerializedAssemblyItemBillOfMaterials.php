@@ -14,17 +14,35 @@
  * @license    https://raw.githubusercontent.com/ryanwinchester/netsuite-php/master/original/NetSuite%20Application%20Developer%20License%20Agreement.txt
  * @link       http://www.netsuite.com/portal/developers/resources/suitetalk-sample-applications.shtml
  *
- * generated:  2020-02-19 09:58:55 AM CST
+ * generated:  2020-04-10 09:56:55 PM UTC
  */
 
 namespace NetSuite\Classes;
 
 class SerializedAssemblyItemBillOfMaterials {
+    /**
+     * @var \NetSuite\Classes\RecordRef
+     */
     public $billOfMaterials;
+    /**
+     * @var string
+     */
     public $currentRevision;
+    /**
+     * @var boolean
+     */
     public $masterDefault;
+    /**
+     * @var \NetSuite\Classes\RecordRefList
+     */
     public $defaultForLocationList;
+    /**
+     * @var string
+     */
     public $inactive;
+    /**
+     * @var string
+     */
     public $memo;
     static $paramtypesmap = array(
         "billOfMaterials" => "RecordRef",

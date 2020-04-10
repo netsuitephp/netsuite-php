@@ -14,26 +14,71 @@
  * @license    https://raw.githubusercontent.com/ryanwinchester/netsuite-php/master/original/NetSuite%20Application%20Developer%20License%20Agreement.txt
  * @link       http://www.netsuite.com/portal/developers/resources/suitetalk-sample-applications.shtml
  *
- * generated:  2020-02-19 09:58:55 AM CST
+ * generated:  2020-04-10 09:56:55 PM UTC
  */
 
 namespace NetSuite\Classes;
 
 class ItemSupplyPlanSearchRowBasic extends SearchRowBasic {
+    /**
+     * @var \NetSuite\Classes\SearchColumnSelectField[]
+     */
     public $externalId;
+    /**
+     * @var \NetSuite\Classes\SearchColumnSelectField[]
+     */
     public $internalId;
+    /**
+     * @var \NetSuite\Classes\SearchColumnSelectField[]
+     */
     public $item;
+    /**
+     * @var \NetSuite\Classes\SearchColumnDateField[]
+     */
     public $lastModifiedDate;
+    /**
+     * @var \NetSuite\Classes\SearchColumnSelectField[]
+     */
     public $location;
+    /**
+     * @var \NetSuite\Classes\SearchColumnStringField[]
+     */
     public $memo;
+    /**
+     * @var \NetSuite\Classes\SearchColumnBooleanField[]
+     */
     public $orderCreated;
+    /**
+     * @var \NetSuite\Classes\SearchColumnDateField[]
+     */
     public $orderDate;
+    /**
+     * @var \NetSuite\Classes\SearchColumnSelectField[]
+     */
     public $orderType;
+    /**
+     * @var \NetSuite\Classes\SearchColumnDoubleField[]
+     */
     public $quantity;
+    /**
+     * @var \NetSuite\Classes\SearchColumnDoubleField[]
+     */
     public $quantityUom;
+    /**
+     * @var \NetSuite\Classes\SearchColumnDateField[]
+     */
     public $receiptDate;
+    /**
+     * @var \NetSuite\Classes\SearchColumnSelectField[]
+     */
     public $subsidiary;
+    /**
+     * @var \NetSuite\Classes\SearchColumnSelectField[]
+     */
     public $units;
+    /**
+     * @var \NetSuite\Classes\SearchColumnCustomFieldList
+     */
     public $customFieldList;
     static $paramtypesmap = array(
         "externalId" => "SearchColumnSelectField[]",

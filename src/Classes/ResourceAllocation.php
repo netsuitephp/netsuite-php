@@ -14,28 +14,79 @@
  * @license    https://raw.githubusercontent.com/ryanwinchester/netsuite-php/master/original/NetSuite%20Application%20Developer%20License%20Agreement.txt
  * @link       http://www.netsuite.com/portal/developers/resources/suitetalk-sample-applications.shtml
  *
- * generated:  2020-02-19 09:58:55 AM CST
+ * generated:  2020-04-10 09:56:55 PM UTC
  */
 
 namespace NetSuite\Classes;
 
 class ResourceAllocation extends Record {
+    /**
+     * @var \NetSuite\Classes\RecordRef
+     */
     public $requestedby;
+    /**
+     * @var \NetSuite\Classes\ResourceAllocationApprovalStatus
+     */
     public $approvalStatus;
+    /**
+     * @var \NetSuite\Classes\RecordRef
+     */
     public $nextApprover;
+    /**
+     * @var \NetSuite\Classes\RecordRef
+     */
     public $allocationResource;
+    /**
+     * @var \NetSuite\Classes\RecordRef
+     */
     public $project;
+    /**
+     * @var string
+     */
     public $notes;
+    /**
+     * @var string
+     */
     public $startDate;
+    /**
+     * @var string
+     */
     public $endDate;
+    /**
+     * @var float
+     */
     public $allocationAmount;
+    /**
+     * @var \NetSuite\Classes\ResourceAllocationAllocationUnit
+     */
     public $allocationUnit;
+    /**
+     * @var float
+     */
     public $numberHours;
+    /**
+     * @var float
+     */
     public $percentOfTime;
+    /**
+     * @var \NetSuite\Classes\RecordRef
+     */
     public $allocationType;
+    /**
+     * @var \NetSuite\Classes\RecordRef
+     */
     public $customForm;
+    /**
+     * @var \NetSuite\Classes\CustomFieldList
+     */
     public $customFieldList;
+    /**
+     * @var string
+     */
     public $internalId;
+    /**
+     * @var string
+     */
     public $externalId;
     static $paramtypesmap = array(
         "requestedby" => "RecordRef",

@@ -14,53 +14,179 @@
  * @license    https://raw.githubusercontent.com/ryanwinchester/netsuite-php/master/original/NetSuite%20Application%20Developer%20License%20Agreement.txt
  * @link       http://www.netsuite.com/portal/developers/resources/suitetalk-sample-applications.shtml
  *
- * generated:  2020-02-19 09:58:55 AM CST
+ * generated:  2020-04-10 09:56:55 PM UTC
  */
 
 namespace NetSuite\Classes;
 
 class InboundShipmentSearchBasic extends SearchRecordBasic {
+    /**
+     * @var \NetSuite\Classes\SearchDateField
+     */
     public $actualDeliveryDate;
+    /**
+     * @var \NetSuite\Classes\SearchDateField
+     */
     public $actualShippingDate;
+    /**
+     * @var \NetSuite\Classes\SearchStringField
+     */
     public $billOfLading;
+    /**
+     * @var \NetSuite\Classes\SearchDateField
+     */
     public $createdDate;
+    /**
+     * @var \NetSuite\Classes\SearchMultiSelectField
+     */
     public $currency;
+    /**
+     * @var \NetSuite\Classes\SearchStringField
+     */
     public $description;
+    /**
+     * @var \NetSuite\Classes\SearchDateField
+     */
     public $expectedDeliveryDate;
+    /**
+     * @var \NetSuite\Classes\SearchDoubleField
+     */
     public $expectedRate;
+    /**
+     * @var \NetSuite\Classes\SearchDateField
+     */
     public $expectedShippingDate;
+    /**
+     * @var \NetSuite\Classes\SearchMultiSelectField
+     */
     public $externalDocumentNumber;
+    /**
+     * @var \NetSuite\Classes\SearchMultiSelectField
+     */
     public $externalId;
+    /**
+     * @var \NetSuite\Classes\SearchStringField
+     */
     public $externalIdString;
+    /**
+     * @var \NetSuite\Classes\SearchMultiSelectField
+     */
     public $incoterm;
+    /**
+     * @var \NetSuite\Classes\SearchMultiSelectField
+     */
     public $internalId;
+    /**
+     * @var \NetSuite\Classes\SearchLongField
+     */
     public $internalIdNumber;
+    /**
+     * @var \NetSuite\Classes\SearchMultiSelectField
+     */
     public $item;
+    /**
+     * @var \NetSuite\Classes\SearchDateField
+     */
     public $itemEffectiveDate;
+    /**
+     * @var \NetSuite\Classes\SearchDoubleField
+     */
     public $itemExchangeRate;
+    /**
+     * @var \NetSuite\Classes\SearchEnumMultiSelectField
+     */
     public $landedCostAllocationMethod;
+    /**
+     * @var \NetSuite\Classes\SearchDoubleField
+     */
     public $landedCostAmount;
+    /**
+     * @var \NetSuite\Classes\SearchMultiSelectField
+     */
     public $landedCostCostCategory;
+    /**
+     * @var \NetSuite\Classes\SearchMultiSelectField
+     */
     public $landedCostCurrency;
+    /**
+     * @var \NetSuite\Classes\SearchDateField
+     */
     public $landedCostEffectiveDate;
+    /**
+     * @var \NetSuite\Classes\SearchDoubleField
+     */
     public $landedCostExchangeRate;
+    /**
+     * @var \NetSuite\Classes\SearchStringField
+     */
     public $memo;
+    /**
+     * @var \NetSuite\Classes\SearchDoubleField
+     */
     public $poAmount;
+    /**
+     * @var \NetSuite\Classes\SearchDoubleField
+     */
     public $poRate;
+    /**
+     * @var \NetSuite\Classes\SearchMultiSelectField
+     */
     public $purchaseOrder;
+    /**
+     * @var \NetSuite\Classes\SearchDoubleField
+     */
     public $quantityBilled;
+    /**
+     * @var \NetSuite\Classes\SearchDoubleField
+     */
     public $quantityExpected;
+    /**
+     * @var \NetSuite\Classes\SearchDoubleField
+     */
     public $quantityReceived;
+    /**
+     * @var \NetSuite\Classes\SearchDoubleField
+     */
     public $quantityRemaining;
+    /**
+     * @var \NetSuite\Classes\SearchMultiSelectField
+     */
     public $receivingLocation;
+    /**
+     * @var \NetSuite\Classes\SearchMultiSelectField
+     */
     public $shipmentBaseCurrency;
+    /**
+     * @var \NetSuite\Classes\SearchMultiSelectField
+     */
     public $shipmentNumber;
+    /**
+     * @var \NetSuite\Classes\SearchEnumMultiSelectField
+     */
     public $status;
+    /**
+     * @var \NetSuite\Classes\SearchDoubleField
+     */
     public $totalUnitCost;
+    /**
+     * @var \NetSuite\Classes\SearchMultiSelectField
+     */
     public $unit;
+    /**
+     * @var \NetSuite\Classes\SearchDoubleField
+     */
     public $unitLandedCost;
+    /**
+     * @var \NetSuite\Classes\SearchMultiSelectField
+     */
     public $vendor;
+    /**
+     * @var \NetSuite\Classes\SearchStringField
+     */
     public $vesselNumber;
+    /**
+     * @var \NetSuite\Classes\SearchCustomFieldList
+     */
     public $customFieldList;
     static $paramtypesmap = array(
         "actualDeliveryDate" => "SearchDateField",

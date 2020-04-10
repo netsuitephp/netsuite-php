@@ -14,32 +14,95 @@
  * @license    https://raw.githubusercontent.com/ryanwinchester/netsuite-php/master/original/NetSuite%20Application%20Developer%20License%20Agreement.txt
  * @link       http://www.netsuite.com/portal/developers/resources/suitetalk-sample-applications.shtml
  *
- * generated:  2020-02-19 09:58:55 AM CST
+ * generated:  2020-04-10 09:56:55 PM UTC
  */
 
 namespace NetSuite\Classes;
 
 class InterCompanyTransferOrderItem {
+    /**
+     * @var \NetSuite\Classes\RecordRef
+     */
     public $item;
+    /**
+     * @var integer
+     */
     public $line;
+    /**
+     * @var float
+     */
     public $quantityAvailable;
+    /**
+     * @var float
+     */
     public $quantityOnHand;
+    /**
+     * @var float
+     */
     public $quantityBackOrdered;
+    /**
+     * @var float
+     */
     public $quantityCommitted;
+    /**
+     * @var float
+     */
     public $quantityFulfilled;
+    /**
+     * @var float
+     */
     public $quantityReceived;
+    /**
+     * @var float
+     */
     public $quantity;
+    /**
+     * @var float
+     */
     public $rate;
+    /**
+     * @var \NetSuite\Classes\RecordRef
+     */
     public $units;
+    /**
+     * @var float
+     */
     public $amount;
+    /**
+     * @var string
+     */
     public $description;
+    /**
+     * @var \NetSuite\Classes\InventoryDetail
+     */
     public $inventoryDetail;
+    /**
+     * @var \NetSuite\Classes\TransferOrderItemCommitInventory
+     */
     public $commitInventory;
+    /**
+     * @var \NetSuite\Classes\CustomFieldList
+     */
     public $options;
+    /**
+     * @var \NetSuite\Classes\RecordRef
+     */
     public $department;
+    /**
+     * @var \NetSuite\Classes\RecordRef
+     */
     public $class;
+    /**
+     * @var float
+     */
     public $lastPurchasePrice;
+    /**
+     * @var float
+     */
     public $averageCost;
+    /**
+     * @var \NetSuite\Classes\CustomFieldList
+     */
     public $customFieldList;
     static $paramtypesmap = array(
         "item" => "RecordRef",

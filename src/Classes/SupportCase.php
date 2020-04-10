@@ -14,54 +14,183 @@
  * @license    https://raw.githubusercontent.com/ryanwinchester/netsuite-php/master/original/NetSuite%20Application%20Developer%20License%20Agreement.txt
  * @link       http://www.netsuite.com/portal/developers/resources/suitetalk-sample-applications.shtml
  *
- * generated:  2020-02-19 09:58:55 AM CST
+ * generated:  2020-04-10 09:56:55 PM UTC
  */
 
 namespace NetSuite\Classes;
 
 class SupportCase extends Record {
+    /**
+     * @var string
+     */
     public $escalationMessage;
+    /**
+     * @var string
+     */
     public $lastReopenedDate;
+    /**
+     * @var string
+     */
     public $endDate;
+    /**
+     * @var string
+     */
     public $incomingMessage;
+    /**
+     * @var \NetSuite\Classes\RecordRef
+     */
     public $insertSolution;
+    /**
+     * @var string
+     */
     public $outgoingMessage;
+    /**
+     * @var string
+     */
     public $searchSolution;
+    /**
+     * @var boolean
+     */
     public $emailForm;
+    /**
+     * @var string
+     */
     public $newSolutionFromMsg;
+    /**
+     * @var boolean
+     */
     public $internalOnly;
+    /**
+     * @var \NetSuite\Classes\RecordRef
+     */
     public $customForm;
+    /**
+     * @var string
+     */
     public $title;
+    /**
+     * @var string
+     */
     public $caseNumber;
+    /**
+     * @var string
+     */
     public $startDate;
+    /**
+     * @var string
+     */
     public $createdDate;
+    /**
+     * @var string
+     */
     public $lastModifiedDate;
+    /**
+     * @var string
+     */
     public $lastMessageDate;
+    /**
+     * @var \NetSuite\Classes\RecordRef
+     */
     public $company;
+    /**
+     * @var \NetSuite\Classes\RecordRef
+     */
     public $profile;
+    /**
+     * @var \NetSuite\Classes\RecordRef
+     */
     public $subsidiary;
+    /**
+     * @var \NetSuite\Classes\RecordRef
+     */
     public $contact;
+    /**
+     * @var string
+     */
     public $email;
+    /**
+     * @var string
+     */
     public $phone;
+    /**
+     * @var \NetSuite\Classes\RecordRef
+     */
     public $product;
+    /**
+     * @var \NetSuite\Classes\RecordRef
+     */
     public $module;
+    /**
+     * @var \NetSuite\Classes\RecordRef
+     */
     public $item;
+    /**
+     * @var \NetSuite\Classes\RecordRef
+     */
     public $serialNumber;
+    /**
+     * @var string
+     */
     public $inboundEmail;
+    /**
+     * @var \NetSuite\Classes\RecordRef
+     */
     public $issue;
+    /**
+     * @var \NetSuite\Classes\RecordRef
+     */
     public $status;
+    /**
+     * @var boolean
+     */
     public $isInactive;
+    /**
+     * @var \NetSuite\Classes\RecordRef
+     */
     public $priority;
+    /**
+     * @var \NetSuite\Classes\RecordRef
+     */
     public $origin;
+    /**
+     * @var \NetSuite\Classes\RecordRef
+     */
     public $category;
+    /**
+     * @var \NetSuite\Classes\RecordRef
+     */
     public $assigned;
+    /**
+     * @var boolean
+     */
     public $helpDesk;
+    /**
+     * @var \NetSuite\Classes\EmailEmployeesList
+     */
     public $emailEmployeesList;
+    /**
+     * @var \NetSuite\Classes\SupportCaseEscalateToList
+     */
     public $escalateToList;
+    /**
+     * @var \NetSuite\Classes\SupportCaseTimeItemList
+     */
     public $timeItemList;
+    /**
+     * @var \NetSuite\Classes\SupportCaseSolutionsList
+     */
     public $solutionsList;
+    /**
+     * @var \NetSuite\Classes\CustomFieldList
+     */
     public $customFieldList;
+    /**
+     * @var string
+     */
     public $internalId;
+    /**
+     * @var string
+     */
     public $externalId;
     static $paramtypesmap = array(
         "escalationMessage" => "string",

@@ -14,42 +14,135 @@
  * @license    https://raw.githubusercontent.com/ryanwinchester/netsuite-php/master/original/NetSuite%20Application%20Developer%20License%20Agreement.txt
  * @link       http://www.netsuite.com/portal/developers/resources/suitetalk-sample-applications.shtml
  *
- * generated:  2020-02-19 09:58:55 AM CST
+ * generated:  2020-04-10 09:56:55 PM UTC
  */
 
 namespace NetSuite\Classes;
 
 class File extends Record {
+    /**
+     * @var string
+     */
     public $name;
+    /**
+     * @var \NetSuite\Classes\FileAttachFrom
+     */
     public $attachFrom;
+    /**
+     * @var string
+     */
     public $mediaTypeName;
+    /**
+     * @var \NetSuite\Classes\MediaType
+     */
     public $fileType;
+    /**
+     * @var \NetSuite\Classes\base64Binary
+     */
     public $content;
+    /**
+     * @var \NetSuite\Classes\RecordRef
+     */
     public $folder;
+    /**
+     * @var float
+     */
     public $fileSize;
+    /**
+     * @var string
+     */
     public $url;
+    /**
+     * @var string
+     */
     public $urlComponent;
+    /**
+     * @var \NetSuite\Classes\RecordRef
+     */
     public $mediaFile;
+    /**
+     * @var \NetSuite\Classes\TextFileEncoding
+     */
     public $textFileEncoding;
+    /**
+     * @var string
+     */
     public $description;
+    /**
+     * @var \NetSuite\Classes\FileEncoding
+     */
     public $encoding;
+    /**
+     * @var string
+     */
     public $altTagCaption;
+    /**
+     * @var boolean
+     */
     public $isOnline;
+    /**
+     * @var boolean
+     */
     public $isInactive;
+    /**
+     * @var string
+     */
     public $class;
+    /**
+     * @var boolean
+     */
     public $bundleable;
+    /**
+     * @var string
+     */
     public $department;
+    /**
+     * @var boolean
+     */
     public $hideInBundle;
+    /**
+     * @var boolean
+     */
     public $isPrivate;
+    /**
+     * @var \NetSuite\Classes\RecordRef
+     */
     public $owner;
+    /**
+     * @var string
+     */
     public $caption;
+    /**
+     * @var \NetSuite\Classes\RecordRef
+     */
     public $storeDisplayThumbnail;
+    /**
+     * @var string
+     */
     public $siteDescription;
+    /**
+     * @var string
+     */
     public $featuredDescription;
+    /**
+     * @var string
+     */
     public $lastModifiedDate;
+    /**
+     * @var string
+     */
     public $createdDate;
+    /**
+     * @var \NetSuite\Classes\FileSiteCategoryList
+     */
     public $siteCategoryList;
+    /**
+     * @var string
+     */
     public $internalId;
+    /**
+     * @var string
+     */
     public $externalId;
     static $paramtypesmap = array(
         "name" => "string",

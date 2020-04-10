@@ -14,20 +14,47 @@
  * @license    https://raw.githubusercontent.com/ryanwinchester/netsuite-php/master/original/NetSuite%20Application%20Developer%20License%20Agreement.txt
  * @link       http://www.netsuite.com/portal/developers/resources/suitetalk-sample-applications.shtml
  *
- * generated:  2020-02-19 09:58:55 AM CST
+ * generated:  2020-04-10 09:56:55 PM UTC
  */
 
 namespace NetSuite\Classes;
 
 class TaxDetailSearchRowBasic extends SearchRowBasic {
+    /**
+     * @var \NetSuite\Classes\SearchColumnStringField[]
+     */
     public $account;
+    /**
+     * @var \NetSuite\Classes\SearchColumnStringField[]
+     */
     public $details;
+    /**
+     * @var \NetSuite\Classes\SearchColumnLongField[]
+     */
     public $lineNumber;
+    /**
+     * @var \NetSuite\Classes\SearchColumnDoubleField[]
+     */
     public $taxAmount;
+    /**
+     * @var \NetSuite\Classes\SearchColumnDoubleField[]
+     */
     public $taxBasis;
+    /**
+     * @var \NetSuite\Classes\SearchColumnSelectField[]
+     */
     public $taxCode;
+    /**
+     * @var \NetSuite\Classes\SearchColumnDoubleField[]
+     */
     public $taxRate;
+    /**
+     * @var \NetSuite\Classes\SearchColumnSelectField[]
+     */
     public $taxType;
+    /**
+     * @var \NetSuite\Classes\SearchColumnLongField[]
+     */
     public $tranId;
     static $paramtypesmap = array(
         "account" => "SearchColumnStringField[]",

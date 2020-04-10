@@ -14,28 +14,79 @@
  * @license    https://raw.githubusercontent.com/ryanwinchester/netsuite-php/master/original/NetSuite%20Application%20Developer%20License%20Agreement.txt
  * @link       http://www.netsuite.com/portal/developers/resources/suitetalk-sample-applications.shtml
  *
- * generated:  2020-02-19 09:58:55 AM CST
+ * generated:  2020-04-10 09:56:55 PM UTC
  */
 
 namespace NetSuite\Classes;
 
 class GiftCertificateSearchRowBasic extends SearchRowBasic {
+    /**
+     * @var \NetSuite\Classes\SearchColumnDoubleField[]
+     */
     public $amountRemaining;
+    /**
+     * @var \NetSuite\Classes\SearchColumnDoubleField[]
+     */
     public $amtAvailBilled;
+    /**
+     * @var \NetSuite\Classes\SearchColumnDateField[]
+     */
     public $createdDate;
+    /**
+     * @var \NetSuite\Classes\SearchColumnStringField[]
+     */
     public $email;
+    /**
+     * @var \NetSuite\Classes\SearchColumnDateField[]
+     */
     public $expirationDate;
+    /**
+     * @var \NetSuite\Classes\SearchColumnBooleanField[]
+     */
     public $gcActive;
+    /**
+     * @var \NetSuite\Classes\SearchColumnStringField[]
+     */
     public $giftCertCode;
+    /**
+     * @var \NetSuite\Classes\SearchColumnStringField[]
+     */
     public $incomeAcct;
+    /**
+     * @var \NetSuite\Classes\SearchColumnSelectField[]
+     */
     public $internalId;
+    /**
+     * @var \NetSuite\Classes\SearchColumnSelectField[]
+     */
     public $item;
+    /**
+     * @var \NetSuite\Classes\SearchColumnStringField[]
+     */
     public $liabilityAcct;
+    /**
+     * @var \NetSuite\Classes\SearchColumnStringField[]
+     */
     public $message;
+    /**
+     * @var \NetSuite\Classes\SearchColumnStringField[]
+     */
     public $name;
+    /**
+     * @var \NetSuite\Classes\SearchColumnDoubleField[]
+     */
     public $originalAmount;
+    /**
+     * @var \NetSuite\Classes\SearchColumnDateField[]
+     */
     public $purchaseDate;
+    /**
+     * @var \NetSuite\Classes\SearchColumnStringField[]
+     */
     public $sender;
+    /**
+     * @var \NetSuite\Classes\SearchColumnCustomFieldList
+     */
     public $customFieldList;
     static $paramtypesmap = array(
         "amountRemaining" => "SearchColumnDoubleField[]",

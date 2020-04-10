@@ -14,29 +14,83 @@
  * @license    https://raw.githubusercontent.com/ryanwinchester/netsuite-php/master/original/NetSuite%20Application%20Developer%20License%20Agreement.txt
  * @link       http://www.netsuite.com/portal/developers/resources/suitetalk-sample-applications.shtml
  *
- * generated:  2020-02-19 09:58:55 AM CST
+ * generated:  2020-04-10 09:56:55 PM UTC
  */
 
 namespace NetSuite\Classes;
 
 class EntityGroupSearchBasic extends SearchRecordBasic {
+    /**
+     * @var \NetSuite\Classes\SearchStringField
+     */
     public $email;
+    /**
+     * @var \NetSuite\Classes\SearchMultiSelectField
+     */
     public $externalId;
+    /**
+     * @var \NetSuite\Classes\SearchStringField
+     */
     public $externalIdString;
+    /**
+     * @var \NetSuite\Classes\SearchStringField
+     */
     public $groupName;
+    /**
+     * @var \NetSuite\Classes\SearchMultiSelectField
+     */
     public $groupOwner;
+    /**
+     * @var \NetSuite\Classes\SearchMultiSelectField
+     */
     public $groupType;
+    /**
+     * @var \NetSuite\Classes\SearchMultiSelectField
+     */
     public $internalId;
+    /**
+     * @var \NetSuite\Classes\SearchLongField
+     */
     public $internalIdNumber;
+    /**
+     * @var \NetSuite\Classes\SearchBooleanField
+     */
     public $isDynamic;
+    /**
+     * @var \NetSuite\Classes\SearchBooleanField
+     */
     public $isInactive;
+    /**
+     * @var \NetSuite\Classes\SearchBooleanField
+     */
     public $isManufacturingWorkCenter;
+    /**
+     * @var \NetSuite\Classes\SearchBooleanField
+     */
     public $isPrivate;
+    /**
+     * @var \NetSuite\Classes\SearchDoubleField
+     */
     public $laborResources;
+    /**
+     * @var \NetSuite\Classes\SearchDateField
+     */
     public $lastModifiedDate;
+    /**
+     * @var \NetSuite\Classes\SearchDoubleField
+     */
     public $machineResources;
+    /**
+     * @var \NetSuite\Classes\SearchMultiSelectField
+     */
     public $subsidiary;
+    /**
+     * @var \NetSuite\Classes\SearchMultiSelectField
+     */
     public $workCalendar;
+    /**
+     * @var \NetSuite\Classes\SearchCustomFieldList
+     */
     public $customFieldList;
     static $paramtypesmap = array(
         "email" => "SearchStringField",
