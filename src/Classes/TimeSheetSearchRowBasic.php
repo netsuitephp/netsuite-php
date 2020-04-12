@@ -14,20 +14,47 @@
  * @license    https://raw.githubusercontent.com/ryanwinchester/netsuite-php/master/original/NetSuite%20Application%20Developer%20License%20Agreement.txt
  * @link       http://www.netsuite.com/portal/developers/resources/suitetalk-sample-applications.shtml
  *
- * generated:  2019-10-18 12:11:30 PM UTC
+ * generated:  2020-04-10 09:56:55 PM UTC
  */
 
 namespace NetSuite\Classes;
 
 class TimeSheetSearchRowBasic extends SearchRowBasic {
+    /**
+     * @var \NetSuite\Classes\SearchColumnSelectField[]
+     */
     public $approvalStatus;
+    /**
+     * @var \NetSuite\Classes\SearchColumnSelectField[]
+     */
     public $employee;
+    /**
+     * @var \NetSuite\Classes\SearchColumnDateField[]
+     */
     public $endDate;
+    /**
+     * @var \NetSuite\Classes\SearchColumnSelectField[]
+     */
     public $externalId;
+    /**
+     * @var \NetSuite\Classes\SearchColumnLongField[]
+     */
     public $id;
+    /**
+     * @var \NetSuite\Classes\SearchColumnSelectField[]
+     */
     public $internalId;
+    /**
+     * @var \NetSuite\Classes\SearchColumnDateField[]
+     */
     public $startDate;
+    /**
+     * @var \NetSuite\Classes\SearchColumnStringField[]
+     */
     public $totalHours;
+    /**
+     * @var \NetSuite\Classes\SearchColumnCustomFieldList
+     */
     public $customFieldList;
     static $paramtypesmap = array(
         "approvalStatus" => "SearchColumnSelectField[]",

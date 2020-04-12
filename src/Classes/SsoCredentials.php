@@ -14,17 +14,35 @@
  * @license    https://raw.githubusercontent.com/ryanwinchester/netsuite-php/master/original/NetSuite%20Application%20Developer%20License%20Agreement.txt
  * @link       http://www.netsuite.com/portal/developers/resources/suitetalk-sample-applications.shtml
  *
- * generated:  2019-10-18 12:11:30 PM UTC
+ * generated:  2020-04-10 09:56:55 PM UTC
  */
 
 namespace NetSuite\Classes;
 
 class SsoCredentials {
+    /**
+     * @var string
+     */
     public $email;
+    /**
+     * @var string
+     */
     public $password;
+    /**
+     * @var string
+     */
     public $account;
+    /**
+     * @var \NetSuite\Classes\RecordRef
+     */
     public $role;
+    /**
+     * @var string
+     */
     public $authenticationToken;
+    /**
+     * @var string
+     */
     public $partnerId;
     static $paramtypesmap = array(
         "email" => "string",

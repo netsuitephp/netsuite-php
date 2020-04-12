@@ -14,19 +14,43 @@
  * @license    https://raw.githubusercontent.com/ryanwinchester/netsuite-php/master/original/NetSuite%20Application%20Developer%20License%20Agreement.txt
  * @link       http://www.netsuite.com/portal/developers/resources/suitetalk-sample-applications.shtml
  *
- * generated:  2019-10-18 12:11:30 PM UTC
+ * generated:  2020-04-10 09:56:55 PM UTC
  */
 
 namespace NetSuite\Classes;
 
 class SearchResult {
+    /**
+     * @var \NetSuite\Classes\Status
+     */
     public $status;
+    /**
+     * @var integer
+     */
     public $totalRecords;
+    /**
+     * @var integer
+     */
     public $pageSize;
+    /**
+     * @var integer
+     */
     public $totalPages;
+    /**
+     * @var integer
+     */
     public $pageIndex;
+    /**
+     * @var string
+     */
     public $searchId;
+    /**
+     * @var \NetSuite\Classes\RecordList
+     */
     public $recordList;
+    /**
+     * @var \NetSuite\Classes\SearchRowList
+     */
     public $searchRowList;
     static $paramtypesmap = array(
         "status" => "Status",

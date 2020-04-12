@@ -14,21 +14,51 @@
  * @license    https://raw.githubusercontent.com/ryanwinchester/netsuite-php/master/original/NetSuite%20Application%20Developer%20License%20Agreement.txt
  * @link       http://www.netsuite.com/portal/developers/resources/suitetalk-sample-applications.shtml
  *
- * generated:  2019-10-18 12:11:30 PM UTC
+ * generated:  2020-04-10 09:56:55 PM UTC
  */
 
 namespace NetSuite\Classes;
 
 class InstallmentSearchBasic extends SearchRecordBasic {
+    /**
+     * @var \NetSuite\Classes\SearchDoubleField
+     */
     public $amount;
+    /**
+     * @var \NetSuite\Classes\SearchDoubleField
+     */
     public $amountPaid;
+    /**
+     * @var \NetSuite\Classes\SearchDoubleField
+     */
     public $amountRemaining;
+    /**
+     * @var \NetSuite\Classes\SearchLongField
+     */
     public $daysOverdue;
+    /**
+     * @var \NetSuite\Classes\SearchDateField
+     */
     public $dueDate;
+    /**
+     * @var \NetSuite\Classes\SearchDoubleField
+     */
     public $fxAmount;
+    /**
+     * @var \NetSuite\Classes\SearchDoubleField
+     */
     public $fxAmountPaid;
+    /**
+     * @var \NetSuite\Classes\SearchDoubleField
+     */
     public $fxAmountRemaining;
+    /**
+     * @var \NetSuite\Classes\SearchLongField
+     */
     public $installmentNumber;
+    /**
+     * @var \NetSuite\Classes\SearchCustomFieldList
+     */
     public $customFieldList;
     static $paramtypesmap = array(
         "amount" => "SearchDoubleField",
