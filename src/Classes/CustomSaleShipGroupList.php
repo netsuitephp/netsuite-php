@@ -13,6 +13,14 @@
  * @copyright  Copyright (c) NetSuite Inc.
  * @license    https://raw.githubusercontent.com/netsuitephp/netsuite-php/master/original/NetSuite%20Application%20Developer%20License%20Agreement.txt
  * @link       http://www.netsuite.com/portal/developers/resources/suitetalk-sample-applications.shtml
+<<<<<<<< HEAD:src/Classes/CustomSaleShipGroupList.php
+|||||||| parent of c2251ebe (Generated 2020_1 classes):src/Classes/CustomSalePartnersList.php
+ *
+ * generated:  2020-04-10 09:56:55 PM UTC
+========
+ *
+ * generated:  2020-05-19 05:16:33 PM UTC
+>>>>>>>> c2251ebe (Generated 2020_1 classes):src/Classes/CustomSalePartnersList.php
  */
 
 namespace NetSuite\Classes;
