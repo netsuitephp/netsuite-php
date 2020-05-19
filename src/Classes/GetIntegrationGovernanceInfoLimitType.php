@@ -14,12 +14,15 @@
  * @license    https://raw.githubusercontent.com/ryanwinchester/netsuite-php/master/original/NetSuite%20Application%20Developer%20License%20Agreement.txt
  * @link       http://www.netsuite.com/portal/developers/resources/suitetalk-sample-applications.shtml
  *
- * generated:  2020-04-10 09:56:55 PM UTC
+ * generated:  2020-05-19 05:16:33 PM UTC
  */
 
 namespace NetSuite\Classes;
 
-class SearchNextRequest {
+class GetIntegrationGovernanceInfoLimitType {
     static $paramtypesmap = array(
     );
+    const _account = "_account";
+    const _integrationSpecific = "_integrationSpecific";
+    const _internal = "_internal";
 }

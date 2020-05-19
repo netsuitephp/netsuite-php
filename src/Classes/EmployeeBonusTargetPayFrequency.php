@@ -14,17 +14,16 @@
  * @license    https://raw.githubusercontent.com/ryanwinchester/netsuite-php/master/original/NetSuite%20Application%20Developer%20License%20Agreement.txt
  * @link       http://www.netsuite.com/portal/developers/resources/suitetalk-sample-applications.shtml
  *
- * generated:  2020-04-10 09:56:55 PM UTC
+ * generated:  2020-05-19 05:16:33 PM UTC
  */
 
 namespace NetSuite\Classes;
 
-class LoginResponse {
-    /**
-     * @var \NetSuite\Classes\SessionResponse
-     */
-    public $sessionResponse;
+class EmployeeBonusTargetPayFrequency {
     static $paramtypesmap = array(
-        "sessionResponse" => "SessionResponse",
     );
+    const _annually = "_annually";
+    const _monthly = "_monthly";
+    const _oneTime = "_oneTime";
+    const _quarterly = "_quarterly";
 }

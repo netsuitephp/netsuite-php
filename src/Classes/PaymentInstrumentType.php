@@ -14,17 +14,24 @@
  * @license    https://raw.githubusercontent.com/ryanwinchester/netsuite-php/master/original/NetSuite%20Application%20Developer%20License%20Agreement.txt
  * @link       http://www.netsuite.com/portal/developers/resources/suitetalk-sample-applications.shtml
  *
- * generated:  2020-04-10 09:56:55 PM UTC
+ * generated:  2020-05-19 05:16:33 PM UTC
  */
 
 namespace NetSuite\Classes;
 
-class SsoLoginRequest {
-    /**
-     * @var \NetSuite\Classes\SsoPassport
-     */
-    public $ssoPassport;
+class PaymentInstrumentType {
     static $paramtypesmap = array(
-        "ssoPassport" => "SsoPassport",
     );
+    const _paymentCard = "_paymentCard";
+    const _generalToken = "_generalToken";
+    const _paymentCardToken = "_paymentCardToken";
+    const _paymentCardSwipe = "_paymentCardSwipe";
+    const _emv = "_emv";
+    const _externalCheckout = "_externalCheckout";
+    const _cash = "_cash";
+    const _check = "_check";
+    const _offline = "_offline";
+    const _payByReference = "_payByReference";
+    const _ach = "_ach";
+    const _payPal = "_payPal";
 }

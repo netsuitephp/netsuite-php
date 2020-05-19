@@ -55,7 +55,7 @@ use NetSuite\NetSuiteService;
 
 $config = array(
    // required -------------------------------------
-   "endpoint" => "2019_2",
+   "endpoint" => "2020_1",
    "host"     => "https://webservices.netsuite.com",
    "email"    => "jDoe@netsuite.com",
    "password" => "mySecretPwd",
@@ -90,7 +90,7 @@ $service = new NetSuiteService();
 
 ## Account-Specific Data Center URLs
 
-With 2019_2, this library provides support to utilize NetSuite's new
+With 2020_1, this library provides support to utilize NetSuite's new
 account-specific data center URL with each request. In practice, this lookup
 does have a measurable overhead cost. As such, I'd suggest using this
 feature only if your manner of NetSuite integration is such that you make
@@ -330,7 +330,7 @@ Instead of instantiating `NetSuiteService` with the standard credentials method,
 ```php
 $config = array(
    // required -------------------------------------
-   "endpoint"       => "2019_2",
+   "endpoint"       => "2020_1",
    "host"           => "https://webservices.netsuite.com",
    "account"        => "MYACCT1",
    "consumerKey"    => "0123456789ABCDEF",

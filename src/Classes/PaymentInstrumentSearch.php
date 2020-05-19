@@ -14,42 +14,27 @@
  * @license    https://raw.githubusercontent.com/ryanwinchester/netsuite-php/master/original/NetSuite%20Application%20Developer%20License%20Agreement.txt
  * @link       http://www.netsuite.com/portal/developers/resources/suitetalk-sample-applications.shtml
  *
- * generated:  2020-04-10 09:56:55 PM UTC
+ * generated:  2020-05-19 05:16:33 PM UTC
  */
 
 namespace NetSuite\Classes;
 
-class SsoCredentials {
+class PaymentInstrumentSearch extends SearchRecord {
     /**
-     * @var string
+     * @var \NetSuite\Classes\PaymentInstrumentSearchBasic
      */
-    public $email;
+    public $basic;
     /**
-     * @var string
+     * @var \NetSuite\Classes\CustomerSearchBasic
      */
-    public $password;
+    public $customerJoin;
     /**
-     * @var string
+     * @var \NetSuite\Classes\TransactionSearchBasic
      */
-    public $account;
-    /**
-     * @var \NetSuite\Classes\RecordRef
-     */
-    public $role;
-    /**
-     * @var string
-     */
-    public $authenticationToken;
-    /**
-     * @var string
-     */
-    public $partnerId;
+    public $transactionJoin;
     static $paramtypesmap = array(
-        "email" => "string",
-        "password" => "string",
-        "account" => "string",
-        "role" => "RecordRef",
-        "authenticationToken" => "string",
-        "partnerId" => "string",
+        "basic" => "PaymentInstrumentSearchBasic",
+        "customerJoin" => "CustomerSearchBasic",
+        "transactionJoin" => "TransactionSearchBasic",
     );
 }
