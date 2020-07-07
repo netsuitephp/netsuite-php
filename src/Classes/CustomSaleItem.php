@@ -14,7 +14,7 @@
  * @license    https://raw.githubusercontent.com/ryanwinchester/netsuite-php/master/original/NetSuite%20Application%20Developer%20License%20Agreement.txt
  * @link       http://www.netsuite.com/portal/developers/resources/suitetalk-sample-applications.shtml
  *
- * generated:  2020-04-10 09:56:55 PM UTC
+ * generated:  2020-07-07 11:24:43 AM CDT
  */
 
 namespace NetSuite\Classes;
@@ -121,6 +121,10 @@ class CustomSaleItem {
      */
     public $revRecStartDate;
     /**
+     * @var integer
+     */
+    public $revRecTermInMonths;
+    /**
      * @var string
      */
     public $revRecEndDate;
@@ -164,6 +168,30 @@ class CustomSaleItem {
      * @var string
      */
     public $giftCertMessage;
+    /**
+     * @var \NetSuite\Classes\RecordRef
+     */
+    public $shipAddress;
+    /**
+     * @var \NetSuite\Classes\Address
+     */
+    public $shippingAddress;
+    /**
+     * @var \NetSuite\Classes\RecordRef
+     */
+    public $shipMethod;
+    /**
+     * @var integer
+     */
+    public $shipGroup;
+    /**
+     * @var string
+     */
+    public $itemIsFulfilled;
+    /**
+     * @var string
+     */
+    public $giftCertNumber;
     /**
      * @var float
      */
@@ -230,6 +258,7 @@ class CustomSaleItem {
         "location" => "RecordRef",
         "revRecSchedule" => "RecordRef",
         "revRecStartDate" => "dateTime",
+        "revRecTermInMonths" => "integer",
         "revRecEndDate" => "dateTime",
         "grossAmt" => "float",
         "costEstimateType" => "ItemCostEstimateType",
@@ -241,6 +270,12 @@ class CustomSaleItem {
         "giftCertRecipientName" => "string",
         "giftCertRecipientEmail" => "string",
         "giftCertMessage" => "string",
+        "shipAddress" => "RecordRef",
+        "shippingAddress" => "Address",
+        "shipMethod" => "RecordRef",
+        "shipGroup" => "integer",
+        "itemIsFulfilled" => "string",
+        "giftCertNumber" => "string",
         "taxAmount" => "float",
         "vsoeSopGroup" => "VsoeSopGroup",
         "vsoeIsEstimate" => "boolean",

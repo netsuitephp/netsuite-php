@@ -14,7 +14,7 @@
  * @license    https://raw.githubusercontent.com/ryanwinchester/netsuite-php/master/original/NetSuite%20Application%20Developer%20License%20Agreement.txt
  * @link       http://www.netsuite.com/portal/developers/resources/suitetalk-sample-applications.shtml
  *
- * generated:  2020-04-10 09:56:55 PM UTC
+ * generated:  2020-07-07 11:24:43 AM CDT
  */
 
 namespace NetSuite\Classes;
@@ -329,6 +329,30 @@ class Job extends Record {
      */
     public $timeApproval;
     /**
+     * @var \NetSuite\Classes\Duration
+     */
+    public $plannedWork;
+    /**
+     * @var \NetSuite\Classes\Duration
+     */
+    public $plannedWorkBaseline;
+    /**
+     * @var \NetSuite\Classes\RecordRef
+     */
+    public $billingRateCard;
+    /**
+     * @var boolean
+     */
+    public $createChargeRule;
+    /**
+     * @var boolean
+     */
+    public $sourceServiceItemFromRateCard;
+    /**
+     * @var \NetSuite\Classes\RecordRef
+     */
+    public $projectManager;
+    /**
      * @var \NetSuite\Classes\CustomFieldList
      */
     public $customFieldList;
@@ -418,6 +442,12 @@ class Job extends Record {
         "milestonesList" => "JobMilestonesList",
         "creditCardsList" => "JobCreditCardsList",
         "timeApproval" => "RecordRef",
+        "plannedWork" => "Duration",
+        "plannedWorkBaseline" => "Duration",
+        "billingRateCard" => "RecordRef",
+        "createChargeRule" => "boolean",
+        "sourceServiceItemFromRateCard" => "boolean",
+        "projectManager" => "RecordRef",
         "customFieldList" => "CustomFieldList",
         "internalId" => "string",
         "externalId" => "string",

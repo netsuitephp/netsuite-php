@@ -14,7 +14,7 @@
  * @license    https://raw.githubusercontent.com/ryanwinchester/netsuite-php/master/original/NetSuite%20Application%20Developer%20License%20Agreement.txt
  * @link       http://www.netsuite.com/portal/developers/resources/suitetalk-sample-applications.shtml
  *
- * generated:  2020-04-10 09:56:55 PM UTC
+ * generated:  2020-07-07 11:24:43 AM CDT
  */
 
 namespace NetSuite\Classes;
@@ -54,6 +54,7 @@ class TransactionLinkType {
     const _orderBillInvoice = "_orderBillInvoice";
     const _orderFulfillmentRequest = "_orderFulfillmentRequest";
     const _orderPickingPacking = "_orderPickingPacking";
+    const _outsourcedManufacturing = "_outsourcedManufacturing";
     const _ownershipTransferItemReceipt = "_ownershipTransferItemReceipt";
     const _payment = "_payment";
     const _paymentRefund = "_paymentRefund";

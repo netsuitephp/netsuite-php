@@ -14,7 +14,7 @@
  * @license    https://raw.githubusercontent.com/ryanwinchester/netsuite-php/master/original/NetSuite%20Application%20Developer%20License%20Agreement.txt
  * @link       http://www.netsuite.com/portal/developers/resources/suitetalk-sample-applications.shtml
  *
- * generated:  2020-04-10 09:56:55 PM UTC
+ * generated:  2020-07-07 11:24:43 AM CDT
  */
 
 namespace NetSuite\Classes;
@@ -68,6 +68,10 @@ class JobSearchBasic extends SearchRecordBasic {
      * @var \NetSuite\Classes\SearchStringField
      */
     public $attention;
+    /**
+     * @var \NetSuite\Classes\SearchMultiSelectField
+     */
+    public $billingRateCard;
     /**
      * @var \NetSuite\Classes\SearchMultiSelectField
      */
@@ -305,6 +309,14 @@ class JobSearchBasic extends SearchRecordBasic {
      */
     public $phoneticName;
     /**
+     * @var \NetSuite\Classes\SearchDoubleField
+     */
+    public $plannedWork;
+    /**
+     * @var \NetSuite\Classes\SearchDoubleField
+     */
+    public $plannedWorkBaseline;
+    /**
      * @var \NetSuite\Classes\SearchDateField
      */
     public $projectedEndDateBaseline;
@@ -315,7 +327,15 @@ class JobSearchBasic extends SearchRecordBasic {
     /**
      * @var \NetSuite\Classes\SearchMultiSelectField
      */
+    public $projectManager;
+    /**
+     * @var \NetSuite\Classes\SearchMultiSelectField
+     */
     public $revRecForecastRule;
+    /**
+     * @var \NetSuite\Classes\SearchBooleanField
+     */
+    public $sourceServiceItemFromRateCard;
     /**
      * @var \NetSuite\Classes\SearchDateField
      */
@@ -373,6 +393,7 @@ class JobSearchBasic extends SearchRecordBasic {
         "allowTime" => "SearchBooleanField",
         "applyProjectExpenseTypeToAll" => "SearchBooleanField",
         "attention" => "SearchStringField",
+        "billingRateCard" => "SearchMultiSelectField",
         "billingSchedule" => "SearchMultiSelectField",
         "calculatedEndDate" => "SearchDateField",
         "calculatedEndDateBaseline" => "SearchDateField",
@@ -432,9 +453,13 @@ class JobSearchBasic extends SearchRecordBasic {
         "permission" => "SearchEnumMultiSelectField",
         "phone" => "SearchStringField",
         "phoneticName" => "SearchStringField",
+        "plannedWork" => "SearchDoubleField",
+        "plannedWorkBaseline" => "SearchDoubleField",
         "projectedEndDateBaseline" => "SearchDateField",
         "projectExpenseType" => "SearchMultiSelectField",
+        "projectManager" => "SearchMultiSelectField",
         "revRecForecastRule" => "SearchMultiSelectField",
+        "sourceServiceItemFromRateCard" => "SearchBooleanField",
         "startDate" => "SearchDateField",
         "startDateBaseline" => "SearchDateField",
         "state" => "SearchStringField",

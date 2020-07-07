@@ -14,7 +14,7 @@
  * @license    https://raw.githubusercontent.com/ryanwinchester/netsuite-php/master/original/NetSuite%20Application%20Developer%20License%20Agreement.txt
  * @link       http://www.netsuite.com/portal/developers/resources/suitetalk-sample-applications.shtml
  *
- * generated:  2020-04-10 09:56:55 PM UTC
+ * generated:  2020-07-07 11:24:43 AM CDT
  */
 
 namespace NetSuite\Classes;
@@ -429,6 +429,30 @@ class Employee extends Record {
      */
     public $deductionList;
     /**
+     * @var boolean
+     */
+    public $isJobManager;
+    /**
+     * @var float
+     */
+    public $targetUtilization;
+    /**
+     * @var float
+     */
+    public $bonusTarget;
+    /**
+     * @var string
+     */
+    public $bonusTargetComment;
+    /**
+     * @var \NetSuite\Classes\EmployeeBonusTargetType
+     */
+    public $bonusTargetType;
+    /**
+     * @var \NetSuite\Classes\EmployeeBonusTargetPayFrequency
+     */
+    public $bonusTargetPayFrequency;
+    /**
      * @var \NetSuite\Classes\CustomFieldList
      */
     public $customFieldList;
@@ -543,6 +567,12 @@ class Employee extends Record {
         "emergencyContactList" => "EmployeeEmergencyContactList",
         "hcmPositionList" => "EmployeeHcmPositionList",
         "deductionList" => "EmployeeDeductionList",
+        "isJobManager" => "boolean",
+        "targetUtilization" => "float",
+        "bonusTarget" => "float",
+        "bonusTargetComment" => "string",
+        "bonusTargetType" => "EmployeeBonusTargetType",
+        "bonusTargetPayFrequency" => "EmployeeBonusTargetPayFrequency",
         "customFieldList" => "CustomFieldList",
         "internalId" => "string",
         "externalId" => "string",

@@ -14,7 +14,7 @@
  * @license    https://raw.githubusercontent.com/ryanwinchester/netsuite-php/master/original/NetSuite%20Application%20Developer%20License%20Agreement.txt
  * @link       http://www.netsuite.com/portal/developers/resources/suitetalk-sample-applications.shtml
  *
- * generated:  2020-04-10 09:56:55 PM UTC
+ * generated:  2020-07-07 11:24:43 AM CDT
  */
 
 namespace NetSuite\Classes;
@@ -88,6 +88,22 @@ class EmployeeSearchBasic extends SearchRecordBasic {
      * @var \NetSuite\Classes\SearchDateField
      */
     public $birthDay;
+    /**
+     * @var \NetSuite\Classes\SearchDoubleField
+     */
+    public $bonusTarget;
+    /**
+     * @var \NetSuite\Classes\SearchStringField
+     */
+    public $bonusTargetComment;
+    /**
+     * @var \NetSuite\Classes\SearchEnumMultiSelectField
+     */
+    public $bonusTargetPayFrequency;
+    /**
+     * @var \NetSuite\Classes\SearchEnumMultiSelectField
+     */
+    public $bonusTargetType;
     /**
      * @var \NetSuite\Classes\SearchMultiSelectField
      */
@@ -263,6 +279,10 @@ class EmployeeSearchBasic extends SearchRecordBasic {
     /**
      * @var \NetSuite\Classes\SearchBooleanField
      */
+    public $isJobManager;
+    /**
+     * @var \NetSuite\Classes\SearchBooleanField
+     */
     public $isJobResource;
     /**
      * @var \NetSuite\Classes\SearchBooleanField
@@ -433,6 +453,10 @@ class EmployeeSearchBasic extends SearchRecordBasic {
      */
     public $supportRep;
     /**
+     * @var \NetSuite\Classes\SearchDoubleField
+     */
+    public $targetUtilization;
+    /**
      * @var \NetSuite\Classes\SearchEnumMultiSelectField
      */
     public $terminationCategory;
@@ -514,6 +538,10 @@ class EmployeeSearchBasic extends SearchRecordBasic {
         "billingClass" => "SearchMultiSelectField",
         "birthDate" => "SearchDateField",
         "birthDay" => "SearchDateField",
+        "bonusTarget" => "SearchDoubleField",
+        "bonusTargetComment" => "SearchStringField",
+        "bonusTargetPayFrequency" => "SearchEnumMultiSelectField",
+        "bonusTargetType" => "SearchEnumMultiSelectField",
         "cContribution" => "SearchMultiSelectField",
         "city" => "SearchStringField",
         "class" => "SearchMultiSelectField",
@@ -557,6 +585,7 @@ class EmployeeSearchBasic extends SearchRecordBasic {
         "isDefaultBilling" => "SearchBooleanField",
         "isDefaultShipping" => "SearchBooleanField",
         "isInactive" => "SearchBooleanField",
+        "isJobManager" => "SearchBooleanField",
         "isJobResource" => "SearchBooleanField",
         "isTemplate" => "SearchBooleanField",
         "job" => "SearchMultiSelectField",
@@ -600,6 +629,7 @@ class EmployeeSearchBasic extends SearchRecordBasic {
         "subsidiary" => "SearchMultiSelectField",
         "supervisor" => "SearchMultiSelectField",
         "supportRep" => "SearchBooleanField",
+        "targetUtilization" => "SearchDoubleField",
         "terminationCategory" => "SearchEnumMultiSelectField",
         "terminationDetails" => "SearchStringField",
         "terminationReason" => "SearchMultiSelectField",

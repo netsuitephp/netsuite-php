@@ -14,7 +14,7 @@
  * @license    https://raw.githubusercontent.com/ryanwinchester/netsuite-php/master/original/NetSuite%20Application%20Developer%20License%20Agreement.txt
  * @link       http://www.netsuite.com/portal/developers/resources/suitetalk-sample-applications.shtml
  *
- * generated:  2020-04-10 09:56:55 PM UTC
+ * generated:  2020-07-07 11:24:43 AM CDT
  */
 
 namespace NetSuite\Classes;
@@ -141,6 +141,14 @@ class CustomPurchase extends Record {
      */
     public $availableVendorCredit;
     /**
+     * @var \NetSuite\Classes\LandedCostMethod
+     */
+    public $landedCostMethod;
+    /**
+     * @var boolean
+     */
+    public $landedCostPerLine;
+    /**
      * @var \NetSuite\Classes\RecordRef
      */
     public $currency;
@@ -169,6 +177,14 @@ class CustomPurchase extends Record {
      */
     public $transactionNumber;
     /**
+     * @var boolean
+     */
+    public $overrideInstallments;
+    /**
+     * @var \NetSuite\Classes\InstallmentList
+     */
+    public $installmentList;
+    /**
      * @var \NetSuite\Classes\CustomPurchaseExpenseList
      */
     public $expenseList;
@@ -180,6 +196,10 @@ class CustomPurchase extends Record {
      * @var \NetSuite\Classes\CustomPurchaseItemList
      */
     public $itemList;
+    /**
+     * @var \NetSuite\Classes\PurchLandedCostList
+     */
+    public $landedCostsList;
     /**
      * @var \NetSuite\Classes\RecordRefList
      */
@@ -231,6 +251,8 @@ class CustomPurchase extends Record {
         "memo" => "string",
         "tranStatus" => "RecordRef",
         "availableVendorCredit" => "float",
+        "landedCostMethod" => "LandedCostMethod",
+        "landedCostPerLine" => "boolean",
         "currency" => "RecordRef",
         "incoterm" => "RecordRef",
         "class" => "RecordRef",
@@ -238,9 +260,12 @@ class CustomPurchase extends Record {
         "location" => "RecordRef",
         "status" => "string",
         "transactionNumber" => "string",
+        "overrideInstallments" => "boolean",
+        "installmentList" => "InstallmentList",
         "expenseList" => "CustomPurchaseExpenseList",
         "accountingBookDetailList" => "AccountingBookDetailList",
         "itemList" => "CustomPurchaseItemList",
+        "landedCostsList" => "PurchLandedCostList",
         "purchaseOrderList" => "RecordRefList",
         "taxDetailsList" => "TaxDetailsList",
         "customFieldList" => "CustomFieldList",

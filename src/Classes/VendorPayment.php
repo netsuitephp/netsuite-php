@@ -14,7 +14,7 @@
  * @license    https://raw.githubusercontent.com/ryanwinchester/netsuite-php/master/original/NetSuite%20Application%20Developer%20License%20Agreement.txt
  * @link       http://www.netsuite.com/portal/developers/resources/suitetalk-sample-applications.shtml
  *
- * generated:  2020-04-10 09:56:55 PM UTC
+ * generated:  2020-07-07 11:24:43 AM CDT
  */
 
 namespace NetSuite\Classes;
@@ -48,10 +48,6 @@ class VendorPayment extends Record {
      * @var \NetSuite\Classes\RecordRef
      */
     public $entity;
-    /**
-     * @var string
-     */
-    public $address;
     /**
      * @var string
      */
@@ -157,6 +153,14 @@ class VendorPayment extends Record {
      */
     public $nextApprover;
     /**
+     * @var \NetSuite\Classes\RecordRef
+     */
+    public $payeeAddressList;
+    /**
+     * @var \NetSuite\Classes\Address
+     */
+    public $payeeAddress;
+    /**
      * @var \NetSuite\Classes\CustomFieldList
      */
     public $customFieldList;
@@ -176,7 +180,6 @@ class VendorPayment extends Record {
         "balance" => "float",
         "apAcct" => "RecordRef",
         "entity" => "RecordRef",
-        "address" => "string",
         "tranDate" => "dateTime",
         "voidJournal" => "RecordRef",
         "postingPeriod" => "RecordRef",
@@ -203,6 +206,8 @@ class VendorPayment extends Record {
         "isInTransitPayment" => "boolean",
         "approvalStatus" => "RecordRef",
         "nextApprover" => "RecordRef",
+        "payeeAddressList" => "RecordRef",
+        "payeeAddress" => "Address",
         "customFieldList" => "CustomFieldList",
         "internalId" => "string",
         "externalId" => "string",

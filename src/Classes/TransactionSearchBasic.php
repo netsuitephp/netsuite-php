@@ -14,7 +14,7 @@
  * @license    https://raw.githubusercontent.com/ryanwinchester/netsuite-php/master/original/NetSuite%20Application%20Developer%20License%20Agreement.txt
  * @link       http://www.netsuite.com/portal/developers/resources/suitetalk-sample-applications.shtml
  *
- * generated:  2020-04-10 09:56:55 PM UTC
+ * generated:  2020-07-07 11:24:43 AM CDT
  */
 
 namespace NetSuite\Classes;
@@ -837,6 +837,10 @@ class TransactionSearchBasic extends SearchRecordBasic {
      */
     public $opportunity;
     /**
+     * @var \NetSuite\Classes\SearchMultiSelectField
+     */
+    public $orderAllocationStrategy;
+    /**
      * @var \NetSuite\Classes\SearchDoubleField
      */
     public $orderPriority;
@@ -1048,6 +1052,10 @@ class TransactionSearchBasic extends SearchRecordBasic {
      * @var \NetSuite\Classes\SearchLongField
      */
     public $refNumber;
+    /**
+     * @var \NetSuite\Classes\SearchDateField
+     */
+    public $requestedDate;
     /**
      * @var \NetSuite\Classes\SearchEnumMultiSelectField
      */
@@ -1621,6 +1629,7 @@ class TransactionSearchBasic extends SearchRecordBasic {
         "number" => "SearchLongField",
         "oneTimeTotal" => "SearchDoubleField",
         "opportunity" => "SearchMultiSelectField",
+        "orderAllocationStrategy" => "SearchMultiSelectField",
         "orderPriority" => "SearchDoubleField",
         "otherRefNum" => "SearchTextNumberField",
         "otherRefNumNonDeposit" => "SearchTextNumberField",
@@ -1674,6 +1683,7 @@ class TransactionSearchBasic extends SearchRecordBasic {
         "recurringBill" => "SearchBooleanField",
         "recurWeeklyTotal" => "SearchDoubleField",
         "refNumber" => "SearchLongField",
+        "requestedDate" => "SearchDateField",
         "revCommitStatus" => "SearchEnumMultiSelectField",
         "revCommittingStatus" => "SearchBooleanField",
         "revCommittingTransaction" => "SearchMultiSelectField",
