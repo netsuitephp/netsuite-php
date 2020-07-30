@@ -14,7 +14,7 @@
  * @license    https://raw.githubusercontent.com/ryanwinchester/netsuite-php/master/original/NetSuite%20Application%20Developer%20License%20Agreement.txt
  * @link       http://www.netsuite.com/portal/developers/resources/suitetalk-sample-applications.shtml
  *
- * generated:  2020-04-10 09:56:55 PM UTC
+ * generated:  2020-07-07 11:24:43 AM CDT
  */
 
 namespace NetSuite\Classes;
@@ -573,7 +573,6 @@ class StatusDetailCodeType {
     const INVALID_CERT = "INVALID_CERT";
     const INVALID_CERTIFICATE_TYPE = "INVALID_CERTIFICATE_TYPE";
     const INVALID_CERT_AUTH = "INVALID_CERT_AUTH";
-    const INVALID_CHANGE_LIST = "INVALID_CHANGE_LIST";
     const INVALID_CHARS_IN_EMAIL = "INVALID_CHARS_IN_EMAIL";
     const INVALID_CHARS_IN_NAME = "INVALID_CHARS_IN_NAME";
     const INVALID_CHARS_IN_PARAM_FIELD = "INVALID_CHARS_IN_PARAM_FIELD";

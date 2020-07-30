@@ -14,7 +14,7 @@
  * @license    https://raw.githubusercontent.com/ryanwinchester/netsuite-php/master/original/NetSuite%20Application%20Developer%20License%20Agreement.txt
  * @link       http://www.netsuite.com/portal/developers/resources/suitetalk-sample-applications.shtml
  *
- * generated:  2020-04-10 09:56:55 PM UTC
+ * generated:  2020-07-07 11:24:43 AM CDT
  */
 
 namespace NetSuite\Classes;
@@ -845,6 +845,10 @@ class TransactionSearchRowBasic extends SearchRowBasic {
      */
     public $options;
     /**
+     * @var \NetSuite\Classes\SearchColumnSelectField[]
+     */
+    public $orderAllocationStrategy;
+    /**
      * @var \NetSuite\Classes\SearchColumnDoubleField[]
      */
     public $orderPriority;
@@ -1072,6 +1076,10 @@ class TransactionSearchRowBasic extends SearchRowBasic {
      * @var \NetSuite\Classes\SearchColumnLongField[]
      */
     public $refNumber;
+    /**
+     * @var \NetSuite\Classes\SearchColumnDateField[]
+     */
+    public $requestedDate;
     /**
      * @var \NetSuite\Classes\SearchColumnEnumSelectField[]
      */
@@ -1651,6 +1659,7 @@ class TransactionSearchRowBasic extends SearchRowBasic {
         "oneTimeTotal" => "SearchColumnDoubleField[]",
         "opportunity" => "SearchColumnSelectField[]",
         "options" => "SearchColumnStringField[]",
+        "orderAllocationStrategy" => "SearchColumnSelectField[]",
         "orderPriority" => "SearchColumnDoubleField[]",
         "originator" => "SearchColumnEnumSelectField[]",
         "otherRefNum" => "SearchColumnTextNumberField[]",
@@ -1708,6 +1717,7 @@ class TransactionSearchRowBasic extends SearchRowBasic {
         "recurringBill" => "SearchColumnBooleanField[]",
         "recurWeeklyTotal" => "SearchColumnDoubleField[]",
         "refNumber" => "SearchColumnLongField[]",
+        "requestedDate" => "SearchColumnDateField[]",
         "revCommitStatus" => "SearchColumnEnumSelectField[]",
         "revCommittingTransaction" => "SearchColumnSelectField[]",
         "revenueStatus" => "SearchColumnEnumSelectField[]",

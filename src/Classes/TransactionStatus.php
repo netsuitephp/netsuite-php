@@ -14,7 +14,7 @@
  * @license    https://raw.githubusercontent.com/ryanwinchester/netsuite-php/master/original/NetSuite%20Application%20Developer%20License%20Agreement.txt
  * @link       http://www.netsuite.com/portal/developers/resources/suitetalk-sample-applications.shtml
  *
- * generated:  2020-04-10 09:56:55 PM UTC
+ * generated:  2020-07-07 11:24:43 AM CDT
  */
 
 namespace NetSuite\Classes;
@@ -48,10 +48,12 @@ class TransactionStatus {
     const _creditMemoFullyApplied = "_creditMemoFullyApplied";
     const _creditMemoOpen = "_creditMemoOpen";
     const _creditMemoVoided = "_creditMemoVoided";
+    const _customerDepositCancelled = "_customerDepositCancelled";
     const _customerDepositDeposited = "_customerDepositDeposited";
     const _customerDepositFullyApplied = "_customerDepositFullyApplied";
     const _customerDepositNotDeposited = "_customerDepositNotDeposited";
     const _customerDepositUnapprovedPayment = "_customerDepositUnapprovedPayment";
+    const _customerRefundCancelled = "_customerRefundCancelled";
     const _customerRefundVoided = "_customerRefundVoided";
     const _estimateClosed = "_estimateClosed";
     const _estimateExpired = "_estimateExpired";
@@ -91,6 +93,7 @@ class TransactionStatus {
     const _paycheckPendingTaxCalculation = "_paycheckPendingTaxCalculation";
     const _paycheckPreview = "_paycheckPreview";
     const _paycheckReversed = "_paycheckReversed";
+    const _paymentCancelled = "_paymentCancelled";
     const _paymentDeposited = "_paymentDeposited";
     const _paymentNotDeposited = "_paymentNotDeposited";
     const _paymentUnapprovedPayment = "_paymentUnapprovedPayment";

@@ -14,7 +14,7 @@
  * @license    https://raw.githubusercontent.com/ryanwinchester/netsuite-php/master/original/NetSuite%20Application%20Developer%20License%20Agreement.txt
  * @link       http://www.netsuite.com/portal/developers/resources/suitetalk-sample-applications.shtml
  *
- * generated:  2020-04-10 09:56:55 PM UTC
+ * generated:  2020-07-07 11:24:43 AM CDT
  */
 
 namespace NetSuite\Classes;
@@ -128,6 +128,10 @@ class JobSearchRowBasic extends SearchRowBasic {
      * @var \NetSuite\Classes\SearchColumnStringField[]
      */
     public $billCountryCode;
+    /**
+     * @var \NetSuite\Classes\SearchColumnSelectField[]
+     */
+    public $billingRateCard;
     /**
      * @var \NetSuite\Classes\SearchColumnSelectField[]
      */
@@ -365,6 +369,14 @@ class JobSearchRowBasic extends SearchRowBasic {
      */
     public $phoneticName;
     /**
+     * @var \NetSuite\Classes\SearchColumnDoubleField[]
+     */
+    public $plannedWork;
+    /**
+     * @var \NetSuite\Classes\SearchColumnDoubleField[]
+     */
+    public $plannedWorkBaseline;
+    /**
      * @var \NetSuite\Classes\SearchColumnDateField[]
      */
     public $projectedEndDate;
@@ -376,6 +388,10 @@ class JobSearchRowBasic extends SearchRowBasic {
      * @var \NetSuite\Classes\SearchColumnSelectField[]
      */
     public $projectExpenseType;
+    /**
+     * @var \NetSuite\Classes\SearchColumnSelectField[]
+     */
+    public $projectManager;
     /**
      * @var \NetSuite\Classes\SearchColumnSelectField[]
      */
@@ -424,6 +440,10 @@ class JobSearchRowBasic extends SearchRowBasic {
      * @var \NetSuite\Classes\SearchColumnStringField[]
      */
     public $shipZip;
+    /**
+     * @var \NetSuite\Classes\SearchColumnBooleanField[]
+     */
+    public $sourceServiceItemFromRateCard;
     /**
      * @var \NetSuite\Classes\SearchColumnDateField[]
      */
@@ -500,6 +520,7 @@ class JobSearchRowBasic extends SearchRowBasic {
         "billCity" => "SearchColumnStringField[]",
         "billCountry" => "SearchColumnEnumSelectField[]",
         "billCountryCode" => "SearchColumnStringField[]",
+        "billingRateCard" => "SearchColumnSelectField[]",
         "billingSchedule" => "SearchColumnSelectField[]",
         "billPhone" => "SearchColumnStringField[]",
         "billState" => "SearchColumnStringField[]",
@@ -559,9 +580,12 @@ class JobSearchRowBasic extends SearchRowBasic {
         "permission" => "SearchColumnEnumSelectField[]",
         "phone" => "SearchColumnStringField[]",
         "phoneticName" => "SearchColumnStringField[]",
+        "plannedWork" => "SearchColumnDoubleField[]",
+        "plannedWorkBaseline" => "SearchColumnDoubleField[]",
         "projectedEndDate" => "SearchColumnDateField[]",
         "projectedEndDateBaseline" => "SearchColumnDateField[]",
         "projectExpenseType" => "SearchColumnSelectField[]",
+        "projectManager" => "SearchColumnSelectField[]",
         "revRecForecastRule" => "SearchColumnSelectField[]",
         "shipAddress1" => "SearchColumnStringField[]",
         "shipAddress2" => "SearchColumnStringField[]",
@@ -574,6 +598,7 @@ class JobSearchRowBasic extends SearchRowBasic {
         "shipPhone" => "SearchColumnStringField[]",
         "shipState" => "SearchColumnStringField[]",
         "shipZip" => "SearchColumnStringField[]",
+        "sourceServiceItemFromRateCard" => "SearchColumnBooleanField[]",
         "startDate" => "SearchColumnDateField[]",
         "startDateBaseline" => "SearchColumnDateField[]",
         "state" => "SearchColumnStringField[]",

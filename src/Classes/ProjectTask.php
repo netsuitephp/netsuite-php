@@ -14,7 +14,7 @@
  * @license    https://raw.githubusercontent.com/ryanwinchester/netsuite-php/master/original/NetSuite%20Application%20Developer%20License%20Agreement.txt
  * @link       http://www.netsuite.com/portal/developers/resources/suitetalk-sample-applications.shtml
  *
- * generated:  2020-04-10 09:56:55 PM UTC
+ * generated:  2020-07-07 11:24:43 AM CDT
  */
 
 namespace NetSuite\Classes;
@@ -93,11 +93,11 @@ class ProjectTask extends Record {
      */
     public $endDateBaseline;
     /**
-     * @var float
+     * @var \NetSuite\Classes\Duration
      */
     public $actualWork;
     /**
-     * @var float
+     * @var \NetSuite\Classes\Duration
      */
     public $remainingWork;
     /**
@@ -145,6 +145,14 @@ class ProjectTask extends Record {
      */
     public $timeItemList;
     /**
+     * @var float
+     */
+    public $plannedWork;
+    /**
+     * @var float
+     */
+    public $plannedWorkBaseline;
+    /**
      * @var \NetSuite\Classes\CustomFieldList
      */
     public $customFieldList;
@@ -175,8 +183,8 @@ class ProjectTask extends Record {
         "endDate" => "dateTime",
         "finishByDate" => "dateTime",
         "endDateBaseline" => "dateTime",
-        "actualWork" => "float",
-        "remainingWork" => "float",
+        "actualWork" => "Duration",
+        "remainingWork" => "Duration",
         "message" => "string",
         "isMilestone" => "boolean",
         "isOnCriticalPath" => "string",
@@ -188,6 +196,8 @@ class ProjectTask extends Record {
         "assigneeList" => "ProjectTaskAssigneeList",
         "predecessorList" => "ProjectTaskPredecessorList",
         "timeItemList" => "ProjectTaskTimeItemList",
+        "plannedWork" => "float",
+        "plannedWorkBaseline" => "float",
         "customFieldList" => "CustomFieldList",
         "internalId" => "string",
         "externalId" => "string",

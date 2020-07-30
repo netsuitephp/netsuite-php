@@ -14,7 +14,7 @@
  * @license    https://raw.githubusercontent.com/ryanwinchester/netsuite-php/master/original/NetSuite%20Application%20Developer%20License%20Agreement.txt
  * @link       http://www.netsuite.com/portal/developers/resources/suitetalk-sample-applications.shtml
  *
- * generated:  2020-04-10 09:56:55 PM UTC
+ * generated:  2020-07-07 11:24:43 AM CDT
  */
 
 namespace NetSuite\Classes;
@@ -161,6 +161,22 @@ class EmployeeSearchRowBasic extends SearchRowBasic {
      */
     public $birthDay;
     /**
+     * @var \NetSuite\Classes\SearchColumnDoubleField[]
+     */
+    public $bonusTarget;
+    /**
+     * @var \NetSuite\Classes\SearchColumnStringField[]
+     */
+    public $bonusTargetComment;
+    /**
+     * @var \NetSuite\Classes\SearchColumnEnumSelectField[]
+     */
+    public $bonusTargetPayFrequency;
+    /**
+     * @var \NetSuite\Classes\SearchColumnEnumSelectField[]
+     */
+    public $bonusTargetType;
+    /**
      * @var \NetSuite\Classes\SearchColumnStringField[]
      */
     public $city;
@@ -304,6 +320,10 @@ class EmployeeSearchRowBasic extends SearchRowBasic {
      * @var \NetSuite\Classes\SearchColumnBooleanField[]
      */
     public $isJobResource;
+    /**
+     * @var \NetSuite\Classes\SearchColumnBooleanField[]
+     */
+    public $isJobManager;
     /**
      * @var \NetSuite\Classes\SearchColumnBooleanField[]
      */
@@ -537,6 +557,10 @@ class EmployeeSearchRowBasic extends SearchRowBasic {
      */
     public $supervisor;
     /**
+     * @var \NetSuite\Classes\SearchColumnDoubleField[]
+     */
+    public $targetUtilization;
+    /**
      * @var \NetSuite\Classes\SearchColumnEnumSelectField[]
      */
     public $terminationCategory;
@@ -632,6 +656,10 @@ class EmployeeSearchRowBasic extends SearchRowBasic {
         "billZipCode" => "SearchColumnStringField[]",
         "birthDate" => "SearchColumnDateField[]",
         "birthDay" => "SearchColumnDateField[]",
+        "bonusTarget" => "SearchColumnDoubleField[]",
+        "bonusTargetComment" => "SearchColumnStringField[]",
+        "bonusTargetPayFrequency" => "SearchColumnEnumSelectField[]",
+        "bonusTargetType" => "SearchColumnEnumSelectField[]",
         "city" => "SearchColumnStringField[]",
         "class" => "SearchColumnSelectField[]",
         "comments" => "SearchColumnStringField[]",
@@ -668,6 +696,7 @@ class EmployeeSearchRowBasic extends SearchRowBasic {
         "isDefaultShipping" => "SearchColumnBooleanField[]",
         "isInactive" => "SearchColumnBooleanField[]",
         "isJobResource" => "SearchColumnBooleanField[]",
+        "isJobManager" => "SearchColumnBooleanField[]",
         "isSalesRep" => "SearchColumnBooleanField[]",
         "isSupportRep" => "SearchColumnBooleanField[]",
         "isTemplate" => "SearchColumnBooleanField[]",
@@ -726,6 +755,7 @@ class EmployeeSearchRowBasic extends SearchRowBasic {
         "subscriptionStatus" => "SearchColumnBooleanField[]",
         "subsidiary" => "SearchColumnSelectField[]",
         "supervisor" => "SearchColumnSelectField[]",
+        "targetUtilization" => "SearchColumnDoubleField[]",
         "terminationCategory" => "SearchColumnEnumSelectField[]",
         "terminationDetails" => "SearchColumnStringField[]",
         "terminationReason" => "SearchColumnSelectField[]",

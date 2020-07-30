@@ -14,7 +14,7 @@
  * @license    https://raw.githubusercontent.com/ryanwinchester/netsuite-php/master/original/NetSuite%20Application%20Developer%20License%20Agreement.txt
  * @link       http://www.netsuite.com/portal/developers/resources/suitetalk-sample-applications.shtml
  *
- * generated:  2020-04-10 09:56:55 PM UTC
+ * generated:  2020-07-07 11:24:43 AM CDT
  */
 
 namespace NetSuite\Classes;
@@ -48,10 +48,6 @@ class Check extends Record {
      * @var \NetSuite\Classes\RecordRef
      */
     public $entity;
-    /**
-     * @var string
-     */
-    public $address;
     /**
      * @var \NetSuite\Classes\RecordRef
      */
@@ -145,6 +141,14 @@ class Check extends Record {
      */
     public $billPay;
     /**
+     * @var \NetSuite\Classes\RecordRef
+     */
+    public $payeeAddressList;
+    /**
+     * @var \NetSuite\Classes\Address
+     */
+    public $payeeAddress;
+    /**
      * @var \NetSuite\Classes\CustomFieldList
      */
     public $customFieldList;
@@ -164,7 +168,6 @@ class Check extends Record {
         "account" => "RecordRef",
         "balance" => "float",
         "entity" => "RecordRef",
-        "address" => "string",
         "subsidiary" => "RecordRef",
         "postingPeriod" => "RecordRef",
         "tranDate" => "dateTime",
@@ -188,6 +191,8 @@ class Check extends Record {
         "accountingBookDetailList" => "AccountingBookDetailList",
         "landedCostsList" => "CheckLandedCostList",
         "billPay" => "boolean",
+        "payeeAddressList" => "RecordRef",
+        "payeeAddress" => "Address",
         "customFieldList" => "CustomFieldList",
         "internalId" => "string",
         "externalId" => "string",

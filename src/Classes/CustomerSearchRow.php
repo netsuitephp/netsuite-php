@@ -14,7 +14,7 @@
  * @license    https://raw.githubusercontent.com/ryanwinchester/netsuite-php/master/original/NetSuite%20Application%20Developer%20License%20Agreement.txt
  * @link       http://www.netsuite.com/portal/developers/resources/suitetalk-sample-applications.shtml
  *
- * generated:  2020-04-10 09:56:55 PM UTC
+ * generated:  2020-07-07 11:24:43 AM CDT
  */
 
 namespace NetSuite\Classes;
@@ -105,6 +105,10 @@ class CustomerSearchRow extends SearchRow {
      */
     public $partnerJoin;
     /**
+     * @var \NetSuite\Classes\PaymentInstrumentSearchRowBasic
+     */
+    public $paymentInstrumentJoin;
+    /**
      * @var \NetSuite\Classes\PricingSearchRowBasic
      */
     public $pricingJoin;
@@ -190,6 +194,7 @@ class CustomerSearchRow extends SearchRow {
         "originatingLeadJoin" => "OriginatingLeadSearchRowBasic",
         "parentCustomerJoin" => "CustomerSearchRowBasic",
         "partnerJoin" => "PartnerSearchRowBasic",
+        "paymentInstrumentJoin" => "PaymentInstrumentSearchRowBasic",
         "pricingJoin" => "PricingSearchRowBasic",
         "purchasedItemJoin" => "ItemSearchRowBasic",
         "resourceAllocationJoin" => "ResourceAllocationSearchRowBasic",

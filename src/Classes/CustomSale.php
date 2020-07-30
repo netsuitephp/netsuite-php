@@ -14,7 +14,7 @@
  * @license    https://raw.githubusercontent.com/ryanwinchester/netsuite-php/master/original/NetSuite%20Application%20Developer%20License%20Agreement.txt
  * @link       http://www.netsuite.com/portal/developers/resources/suitetalk-sample-applications.shtml
  *
- * generated:  2020-04-10 09:56:55 PM UTC
+ * generated:  2020-07-07 11:24:43 AM CDT
  */
 
 namespace NetSuite\Classes;
@@ -215,6 +215,10 @@ class CustomSale extends Record {
     /**
      * @var boolean
      */
+    public $isMultiShipTo;
+    /**
+     * @var boolean
+     */
     public $isTaxable;
     /**
      * @var boolean
@@ -365,9 +369,25 @@ class CustomSale extends Record {
      */
     public $syncPartnerTeams;
     /**
+     * @var \NetSuite\Classes\CustomSaleShipGroupList
+     */
+    public $shipGroupList;
+    /**
+     * @var boolean
+     */
+    public $overrideInstallments;
+    /**
+     * @var \NetSuite\Classes\InstallmentList
+     */
+    public $installmentList;
+    /**
      * @var \NetSuite\Classes\CustomSalePartnersList
      */
     public $partnersList;
+    /**
+     * @var \NetSuite\Classes\PromotionsList
+     */
+    public $promotionsList;
     /**
      * @var \NetSuite\Classes\CustomSaleItemList
      */
@@ -449,6 +469,7 @@ class CustomSale extends Record {
         "promoCode" => "RecordRef",
         "discountItem" => "RecordRef",
         "discountRate" => "string",
+        "isMultiShipTo" => "boolean",
         "isTaxable" => "boolean",
         "toBePrinted" => "boolean",
         "toBeEmailed" => "boolean",
@@ -487,7 +508,11 @@ class CustomSale extends Record {
         "tranIsVsoeBundle" => "boolean",
         "vsoeAutoCalc" => "boolean",
         "syncPartnerTeams" => "boolean",
+        "shipGroupList" => "CustomSaleShipGroupList",
+        "overrideInstallments" => "boolean",
+        "installmentList" => "InstallmentList",
         "partnersList" => "CustomSalePartnersList",
+        "promotionsList" => "PromotionsList",
         "itemList" => "CustomSaleItemList",
         "giftCertRedemptionList" => "GiftCertRedemptionList",
         "accountingBookDetailList" => "AccountingBookDetailList",

@@ -14,7 +14,7 @@
  * @license    https://raw.githubusercontent.com/ryanwinchester/netsuite-php/master/original/NetSuite%20Application%20Developer%20License%20Agreement.txt
  * @link       http://www.netsuite.com/portal/developers/resources/suitetalk-sample-applications.shtml
  *
- * generated:  2020-04-10 09:56:55 PM UTC
+ * generated:  2020-07-07 11:24:43 AM CDT
  */
 
 namespace NetSuite\Classes;
@@ -87,6 +87,10 @@ class CustomPurchaseItem {
     /**
      * @var \NetSuite\Classes\RecordRef
      */
+    public $landedCostCategory;
+    /**
+     * @var \NetSuite\Classes\RecordRef
+     */
     public $customer;
     /**
      * @var boolean
@@ -121,6 +125,10 @@ class CustomPurchaseItem {
      */
     public $taxDetailsReference;
     /**
+     * @var \NetSuite\Classes\LandedCost
+     */
+    public $landedCost;
+    /**
      * @var \NetSuite\Classes\CustomFieldList
      */
     public $customFieldList;
@@ -141,6 +149,7 @@ class CustomPurchaseItem {
         "department" => "RecordRef",
         "class" => "RecordRef",
         "location" => "RecordRef",
+        "landedCostCategory" => "RecordRef",
         "customer" => "RecordRef",
         "isBillable" => "boolean",
         "billVarianceStatus" => "TransactionBillVarianceStatus",
@@ -150,6 +159,7 @@ class CustomPurchaseItem {
         "amortizationResidual" => "string",
         "taxAmount" => "float",
         "taxDetailsReference" => "string",
+        "landedCost" => "LandedCost",
         "customFieldList" => "CustomFieldList",
     );
 }
