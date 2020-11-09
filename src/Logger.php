@@ -6,9 +6,25 @@ class Logger
 {
     private $path;
 
-    public function __construct($path = null)
+    /**
+     * @var string
+     */
+    private $format;
+
+    /**
+     * @var string
+     */
+    private $dateFormat;
+
+    const DEFAULT_LOG_FORMAT = 'ryanwinchester-netsuite-php-%date-%operation';
+
+    const DEFAULT_DATE_FORMAT = 'Ymd.His';
+
+    public function __construct($path = null, $format = self::DEFAULT_LOG_FORMAT, $dateFormat = self::DEFAULT_DATE_FORMAT)
     {
         $this->path = $path ?: __DIR__ . '/../logs';
+        $this->format = $format;
+        $this->dateFormat = $dateFormat;
     }
 
     /**
@@ -20,7 +36,10 @@ class Logger
     public function logSoapCall($client, $operation)
     {
         if (file_exists($this->path)) {
-            $fileName = 'ryanwinchester-netsuite-php-' . date('Ymd.His') . '-' . $operation;
+            $fileName = strtr($this->format, [
+                '%date' => date($this->dateFormat),
+                '%operation' => $operation,
+            ]);
             $logFile = $this->path . '/' . $fileName;
 
             // REQUEST
