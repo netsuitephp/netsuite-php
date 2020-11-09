@@ -8,7 +8,7 @@ class Logger
 
     public function __construct($path = null)
     {
-        $this->path = $path ?: __DIR__.'/../logs';
+        $this->path = $path ?: __DIR__ . '/../logs';
     }
 
     /**
@@ -20,11 +20,11 @@ class Logger
     public function logSoapCall($client, $operation)
     {
         if (file_exists($this->path)) {
-            $fileName = "ryanwinchester-netsuite-php-" . date("Ymd.His") . "-" . $operation;
-            $logFile = $this->path ."/". $fileName;
+            $fileName = 'ryanwinchester-netsuite-php-' . date('Ymd.His') . '-' . $operation;
+            $logFile = $this->path . '/' . $fileName;
 
             // REQUEST
-            $request = $logFile . "-request.xml";
+            $request = $logFile . '-request.xml';
             $Handle = fopen($request, 'w');
             $Data = $client->__getLastRequest();
             $Data = cleanUpNamespaces($Data);
@@ -42,16 +42,16 @@ class Logger
                 '//socialSecurityNumber',
             ];
 
-            $privateFields = $xml->xpath(implode(" | ", $privateFieldXpaths));
+            $privateFields = $xml->xpath(implode(' | ', $privateFieldXpaths));
 
             foreach ($privateFields as &$field) {
-                $field[0] = "[Content Removed for Security Reasons]";
+                $field[0] = '[Content Removed for Security Reasons]';
             }
 
             $stringCustomFields = $xml->xpath("//customField[@xsitype='StringCustomFieldRef']");
 
             foreach ($stringCustomFields as $field) {
-                $field->value = "[Content Removed for Security Reasons]";
+                $field->value = '[Content Removed for Security Reasons]';
             }
 
             $xml_string = str_replace('xsitype', 'xsi:type', $xml->asXML());
@@ -60,7 +60,7 @@ class Logger
             fclose($Handle);
 
             // RESPONSE
-            $response = $logFile . "-response.xml";
+            $response = $logFile . '-response.xml';
             $Handle = fopen($response, 'w');
             $Data = $client->__getLastResponse();
 
