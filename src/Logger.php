@@ -18,7 +18,7 @@ class Logger
 
     const DEFAULT_LOG_FORMAT = 'ryanwinchester-netsuite-php-%date-%operation';
 
-    const DEFAULT_DATE_FORMAT = 'Ymd.His';
+    const DEFAULT_DATE_FORMAT = 'Ymd.His.u';
 
     public function __construct($path = null, $format = self::DEFAULT_LOG_FORMAT, $dateFormat = self::DEFAULT_DATE_FORMAT)
     {
@@ -37,7 +37,7 @@ class Logger
     {
         if (file_exists($this->path)) {
             $fileName = strtr($this->format, [
-                '%date' => date($this->dateFormat),
+                '%date' => (new \DateTime())->format($this->dateFormat),
                 '%operation' => $operation,
             ]);
             $logFile = $this->path . '/' . $fileName;
