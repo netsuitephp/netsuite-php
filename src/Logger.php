@@ -16,7 +16,7 @@ class Logger
      */
     private $dateFormat;
 
-    const DEFAULT_LOG_FORMAT = 'ryanwinchester-netsuite-php-%date-%operation';
+    const DEFAULT_LOG_FORMAT = 'netsuite-php-%date-%operation';
 
     const DEFAULT_DATE_FORMAT = 'Ymd.His.u';
 
