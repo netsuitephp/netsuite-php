@@ -28,6 +28,17 @@ class Logger
     }
 
     /**
+     * Update the logging path in the Logger object
+     *
+     * @param string $path
+     * @return void
+     */
+    public function setPath($path)
+    {
+        $this->path = $path;
+    }
+
+    /**
      * Log the last soap call as request and response XML files.
      *
      * @param \SoapClient $client

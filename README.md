@@ -63,7 +63,9 @@ $config = [
     // optional -------------------------------------
     "signatureAlgorithm" => 'sha256', // Defaults to 'sha256'
     "logging"  => true,
-    "log_path" => "/var/www/myapp/logs/netsuite"
+    "log_path" => "/var/www/myapp/logs/netsuite",
+    "log_format"     => "netsuite-php-%date-%operation",
+    "log_dateformat" => "Ymd.His.u",
 ];
 $service = new NetSuiteService($config);
 ```
@@ -89,7 +91,7 @@ $config = [
     "app_id"   => "4AD027CA-88B3-46EC-9D3E-41C6E6A325E2",
     // optional -------------------------------------
     "logging"  => true,
-    "log_path" => "/var/www/myapp/logs/netsuite"
+    "log_path" => "/var/www/myapp/logs/netsuite",
 ];
 $service = new NetSuiteService($config);
 ```
@@ -213,6 +215,31 @@ by this package (and not NetSuite's own classes that are packaged therein),
 then you can file an issue in github. Per the issue template, please include
 a clear description of the problem, how it is reproduced and the logs of
 relevant requests/responses using the logging features of this package.
+
+You can set logging on or off on the fly, or override the configuration
+setting passed in. Logging is off by default. If you enable logging, you
+there are defaults for the log directory, filename and filename date format.
+Each of these values can be overridden in your configuration. See the
+[quickstart](#quickstart) section of this document for the available config
+keys pertaining to logging and their default values.
+
+**Set a logging path**
+
+```php
+$service->setLogPath('/path/to/logs');
+```
+
+**Turn logging on**
+
+```php
+$service->logRequests(true);  // Turn logging on.
+```
+
+**Turn logging off**
+
+```php
+$service->logRequests(false); // Turn logging off.
+```
 
 ## Contributing
 
