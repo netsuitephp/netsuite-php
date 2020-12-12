@@ -14,7 +14,7 @@
  * @license    https://raw.githubusercontent.com/ryanwinchester/netsuite-php/master/original/NetSuite%20Application%20Developer%20License%20Agreement.txt
  * @link       http://www.netsuite.com/portal/developers/resources/suitetalk-sample-applications.shtml
  *
- * generated:  2020-07-07 11:24:43 AM CDT
+ * generated:  2020-12-11 06:57:10 PM PST
  */
 
 namespace NetSuite\Classes;
@@ -48,6 +48,10 @@ class TransactionSearchRow extends SearchRow {
      * @var \NetSuite\Classes\TransactionSearchRowBasic
      */
     public $applyingTransactionJoin;
+    /**
+     * @var \NetSuite\Classes\ItemSearchRowBasic
+     */
+    public $assemblyJoin;
     /**
      * @var \NetSuite\Classes\AddressSearchRowBasic
      */
@@ -197,6 +201,10 @@ class TransactionSearchRow extends SearchRow {
      */
     public $opportunityJoin;
     /**
+     * @var \NetSuite\Classes\VendorSearchRowBasic
+     */
+    public $outsourcingVendorJoin;
+    /**
      * @var \NetSuite\Classes\TransactionSearchRowBasic
      */
     public $paidTransactionJoin;
@@ -316,6 +324,7 @@ class TransactionSearchRow extends SearchRow {
         "advanceToApplyAccountJoin" => "AccountSearchRowBasic",
         "appliedToTransactionJoin" => "TransactionSearchRowBasic",
         "applyingTransactionJoin" => "TransactionSearchRowBasic",
+        "assemblyJoin" => "ItemSearchRowBasic",
         "billingAddressJoin" => "AddressSearchRowBasic",
         "billingTransactionJoin" => "TransactionSearchRowBasic",
         "binNumberJoin" => "BinSearchRowBasic",
@@ -353,6 +362,7 @@ class TransactionSearchRow extends SearchRow {
         "messagesJoin" => "MessageSearchRowBasic",
         "nextApproverJoin" => "EntitySearchRowBasic",
         "opportunityJoin" => "OpportunitySearchRowBasic",
+        "outsourcingVendorJoin" => "VendorSearchRowBasic",
         "paidTransactionJoin" => "TransactionSearchRowBasic",
         "partnerJoin" => "PartnerSearchRowBasic",
         "payingTransactionJoin" => "TransactionSearchRowBasic",

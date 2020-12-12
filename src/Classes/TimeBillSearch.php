@@ -14,7 +14,7 @@
  * @license    https://raw.githubusercontent.com/ryanwinchester/netsuite-php/master/original/NetSuite%20Application%20Developer%20License%20Agreement.txt
  * @link       http://www.netsuite.com/portal/developers/resources/suitetalk-sample-applications.shtml
  *
- * generated:  2020-07-07 11:24:43 AM CDT
+ * generated:  2020-12-11 06:57:10 PM PST
  */
 
 namespace NetSuite\Classes;
@@ -85,6 +85,10 @@ class TimeBillSearch extends SearchRecord {
      */
     public $taskJoin;
     /**
+     * @var \NetSuite\Classes\TimeSheetSearchBasic
+     */
+    public $timeSheetJoin;
+    /**
      * @var \NetSuite\Classes\EmployeeSearchBasic
      */
     public $userJoin;
@@ -92,10 +96,6 @@ class TimeBillSearch extends SearchRecord {
      * @var \NetSuite\Classes\VendorSearchBasic
      */
     public $vendorJoin;
-    /**
-     * @var \NetSuite\Classes\TimeSheetSearchBasic
-     */
-    public $timeSheetJoin;
     /**
      * @var \NetSuite\Classes\CustomSearchJoin[]
      */
@@ -117,9 +117,9 @@ class TimeBillSearch extends SearchRecord {
         "projectTaskAssignmentJoin" => "ProjectTaskAssignmentSearchBasic",
         "resourceAllocationJoin" => "ResourceAllocationSearchBasic",
         "taskJoin" => "TaskSearchBasic",
+        "timeSheetJoin" => "TimeSheetSearchBasic",
         "userJoin" => "EmployeeSearchBasic",
         "vendorJoin" => "VendorSearchBasic",
-        "timeSheetJoin" => "TimeSheetSearchBasic",
         "customSearchJoin" => "CustomSearchJoin[]",
     );
 }

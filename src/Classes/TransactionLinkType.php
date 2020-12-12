@@ -14,7 +14,7 @@
  * @license    https://raw.githubusercontent.com/ryanwinchester/netsuite-php/master/original/NetSuite%20Application%20Developer%20License%20Agreement.txt
  * @link       http://www.netsuite.com/portal/developers/resources/suitetalk-sample-applications.shtml
  *
- * generated:  2020-07-07 11:24:43 AM CDT
+ * generated:  2020-12-11 06:57:10 PM PST
  */
 
 namespace NetSuite\Classes;
@@ -83,6 +83,7 @@ class TransactionLinkType {
     const _specialOrder = "_specialOrder";
     const _systemJournal = "_systemJournal";
     const _transferOrderFulfillmentReceipt = "_transferOrderFulfillmentReceipt";
+    const _transformation = "_transformation";
     const _vendorBillVariance = "_vendorBillVariance";
     const _vendorRfqToPurchaseContract = "_vendorRfqToPurchaseContract";
     const _waveOrder = "_waveOrder";

@@ -14,7 +14,7 @@
  * @license    https://raw.githubusercontent.com/ryanwinchester/netsuite-php/master/original/NetSuite%20Application%20Developer%20License%20Agreement.txt
  * @link       http://www.netsuite.com/portal/developers/resources/suitetalk-sample-applications.shtml
  *
- * generated:  2020-07-07 11:24:43 AM CDT
+ * generated:  2020-12-11 06:57:10 PM PST
  */
 
 namespace NetSuite\Classes;
@@ -48,6 +48,10 @@ class TransactionSearch extends SearchRecord {
      * @var \NetSuite\Classes\TransactionSearchBasic
      */
     public $applyingTransactionJoin;
+    /**
+     * @var \NetSuite\Classes\ItemSearchBasic
+     */
+    public $assemblyJoin;
     /**
      * @var \NetSuite\Classes\AddressSearchBasic
      */
@@ -197,17 +201,13 @@ class TransactionSearch extends SearchRecord {
      */
     public $opportunityJoin;
     /**
+     * @var \NetSuite\Classes\VendorSearchBasic
+     */
+    public $outsourcingVendorJoin;
+    /**
      * @var \NetSuite\Classes\TransactionSearchBasic
      */
     public $paidTransactionJoin;
-    /**
-     * @var \NetSuite\Classes\PaymentInstrumentSearchBasic
-     */
-    public $paymentInstrumentJoin;
-    /**
-     * @var \NetSuite\Classes\PaymentOptionSearchBasic
-     */
-    public $paymentOptionJoin;
     /**
      * @var \NetSuite\Classes\PartnerSearchBasic
      */
@@ -216,6 +216,14 @@ class TransactionSearch extends SearchRecord {
      * @var \NetSuite\Classes\TransactionSearchBasic
      */
     public $payingTransactionJoin;
+    /**
+     * @var \NetSuite\Classes\PaymentInstrumentSearchBasic
+     */
+    public $paymentInstrumentJoin;
+    /**
+     * @var \NetSuite\Classes\PaymentOptionSearchBasic
+     */
+    public $paymentOptionJoin;
     /**
      * @var \NetSuite\Classes\PayrollItemSearchBasic
      */
@@ -316,6 +324,7 @@ class TransactionSearch extends SearchRecord {
         "advanceToApplyAccountJoin" => "AccountSearchBasic",
         "appliedToTransactionJoin" => "TransactionSearchBasic",
         "applyingTransactionJoin" => "TransactionSearchBasic",
+        "assemblyJoin" => "ItemSearchBasic",
         "billingAddressJoin" => "AddressSearchBasic",
         "billingTransactionJoin" => "TransactionSearchBasic",
         "binNumberJoin" => "BinSearchBasic",
@@ -353,11 +362,12 @@ class TransactionSearch extends SearchRecord {
         "messagesJoin" => "MessageSearchBasic",
         "nextApproverJoin" => "EntitySearchBasic",
         "opportunityJoin" => "OpportunitySearchBasic",
+        "outsourcingVendorJoin" => "VendorSearchBasic",
         "paidTransactionJoin" => "TransactionSearchBasic",
-        "paymentInstrumentJoin" => "PaymentInstrumentSearchBasic",
-        "paymentOptionJoin" => "PaymentOptionSearchBasic",
         "partnerJoin" => "PartnerSearchBasic",
         "payingTransactionJoin" => "TransactionSearchBasic",
+        "paymentInstrumentJoin" => "PaymentInstrumentSearchBasic",
+        "paymentOptionJoin" => "PaymentOptionSearchBasic",
         "payrollItemJoin" => "PayrollItemSearchBasic",
         "projectTaskJoin" => "ProjectTaskSearchBasic",
         "purchaseOrderJoin" => "TransactionSearchBasic",

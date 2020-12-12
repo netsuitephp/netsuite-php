@@ -14,7 +14,7 @@
  * @license    https://raw.githubusercontent.com/ryanwinchester/netsuite-php/master/original/NetSuite%20Application%20Developer%20License%20Agreement.txt
  * @link       http://www.netsuite.com/portal/developers/resources/suitetalk-sample-applications.shtml
  *
- * generated:  2020-07-07 11:24:43 AM CDT
+ * generated:  2020-12-11 06:57:10 PM PST
  */
 
 namespace NetSuite\Classes;
@@ -148,6 +148,10 @@ class ItemSearchBasic extends SearchRecordBasic {
      * @var \NetSuite\Classes\SearchBooleanField
      */
     public $contingentRevenueHandling;
+    /**
+     * @var \NetSuite\Classes\SearchDoubleField
+     */
+    public $conversionRate;
     /**
      * @var \NetSuite\Classes\SearchBooleanField
      */
@@ -300,6 +304,10 @@ class ItemSearchBasic extends SearchRecordBasic {
      * @var \NetSuite\Classes\SearchMultiSelectField
      */
     public $effectiveRevision;
+    /**
+     * @var \NetSuite\Classes\SearchBooleanField
+     */
+    public $enableCatchWeight;
     /**
      * @var \NetSuite\Classes\SearchBooleanField
      */
@@ -673,6 +681,10 @@ class ItemSearchBasic extends SearchRecordBasic {
      */
     public $locForwardConsumptionDays;
     /**
+     * @var \NetSuite\Classes\SearchDoubleField
+     */
+    public $lowerWarningLimit;
+    /**
      * @var \NetSuite\Classes\SearchStringField
      */
     public $manufacturer;
@@ -989,6 +1001,26 @@ class ItemSearchBasic extends SearchRecordBasic {
      */
     public $seasonalDemand;
     /**
+     * @var \NetSuite\Classes\SearchMultiSelectField
+     */
+    public $secondaryConsumptionUnit;
+    /**
+     * @var \NetSuite\Classes\SearchMultiSelectField
+     */
+    public $secondaryPurchaseUnit;
+    /**
+     * @var \NetSuite\Classes\SearchMultiSelectField
+     */
+    public $secondarySaleUnit;
+    /**
+     * @var \NetSuite\Classes\SearchMultiSelectField
+     */
+    public $secondaryStockUnit;
+    /**
+     * @var \NetSuite\Classes\SearchMultiSelectField
+     */
+    public $secondaryUnitsType;
+    /**
      * @var \NetSuite\Classes\SearchBooleanField
      */
     public $sellOnEBay;
@@ -1117,6 +1149,10 @@ class ItemSearchBasic extends SearchRecordBasic {
      */
     public $upcCode;
     /**
+     * @var \NetSuite\Classes\SearchDoubleField
+     */
+    public $upperWarningLimit;
+    /**
      * @var \NetSuite\Classes\SearchStringField
      */
     public $urlComponent;
@@ -1225,6 +1261,7 @@ class ItemSearchBasic extends SearchRecordBasic {
         "componentYield" => "SearchDoubleField",
         "consumptionUnit" => "SearchMultiSelectField",
         "contingentRevenueHandling" => "SearchBooleanField",
+        "conversionRate" => "SearchDoubleField",
         "copyDescription" => "SearchBooleanField",
         "correlatedItem" => "SearchMultiSelectField",
         "correlatedItemCorrelation" => "SearchDoubleField",
@@ -1263,6 +1300,7 @@ class ItemSearchBasic extends SearchRecordBasic {
         "effectiveBomControl" => "SearchEnumMultiSelectField",
         "effectiveDate" => "SearchDateField",
         "effectiveRevision" => "SearchMultiSelectField",
+        "enableCatchWeight" => "SearchBooleanField",
         "endAuctionsWhenOutOfStock" => "SearchBooleanField",
         "excludeFromSitemap" => "SearchBooleanField",
         "externalId" => "SearchMultiSelectField",
@@ -1356,6 +1394,7 @@ class ItemSearchBasic extends SearchRecordBasic {
         "locationTotalValue" => "SearchDoubleField",
         "locBackwardConsumptionDays" => "SearchLongField",
         "locForwardConsumptionDays" => "SearchLongField",
+        "lowerWarningLimit" => "SearchDoubleField",
         "manufacturer" => "SearchStringField",
         "manufactureraddr1" => "SearchStringField",
         "manufacturerCity" => "SearchStringField",
@@ -1435,6 +1474,11 @@ class ItemSearchBasic extends SearchRecordBasic {
         "scheduleBQuantity" => "SearchStringField",
         "searchKeywords" => "SearchStringField",
         "seasonalDemand" => "SearchBooleanField",
+        "secondaryConsumptionUnit" => "SearchMultiSelectField",
+        "secondaryPurchaseUnit" => "SearchMultiSelectField",
+        "secondarySaleUnit" => "SearchMultiSelectField",
+        "secondaryStockUnit" => "SearchMultiSelectField",
+        "secondaryUnitsType" => "SearchMultiSelectField",
         "sellOnEBay" => "SearchBooleanField",
         "serialNumber" => "SearchStringField",
         "serialNumberLocation" => "SearchMultiSelectField",
@@ -1467,6 +1511,7 @@ class ItemSearchBasic extends SearchRecordBasic {
         "type" => "SearchEnumMultiSelectField",
         "unitsType" => "SearchMultiSelectField",
         "upcCode" => "SearchStringField",
+        "upperWarningLimit" => "SearchDoubleField",
         "urlComponent" => "SearchStringField",
         "useBins" => "SearchBooleanField",
         "useComponentYield" => "SearchBooleanField",

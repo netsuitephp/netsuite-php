@@ -14,7 +14,7 @@
  * @license    https://raw.githubusercontent.com/ryanwinchester/netsuite-php/master/original/NetSuite%20Application%20Developer%20License%20Agreement.txt
  * @link       http://www.netsuite.com/portal/developers/resources/suitetalk-sample-applications.shtml
  *
- * generated:  2020-07-07 11:24:43 AM CDT
+ * generated:  2020-12-11 06:57:10 PM PST
  */
 
 namespace NetSuite\Classes;
@@ -57,10 +57,6 @@ class VendorSearchRow extends SearchRow {
      */
     public $messagesJoin;
     /**
-     * @var \NetSuite\Classes\MseSubsidiarySearchRowBasic
-     */
-    public $mseSubsidiaryJoin;
-    /**
      * @var \NetSuite\Classes\MessageSearchRowBasic
      */
     public $messagesFromJoin;
@@ -68,6 +64,10 @@ class VendorSearchRow extends SearchRow {
      * @var \NetSuite\Classes\MessageSearchRowBasic
      */
     public $messagesToJoin;
+    /**
+     * @var \NetSuite\Classes\MseSubsidiarySearchRowBasic
+     */
+    public $mseSubsidiaryJoin;
     /**
      * @var \NetSuite\Classes\EntityTaxRegistrationSearchRowBasic
      */
@@ -102,9 +102,9 @@ class VendorSearchRow extends SearchRow {
         "fileJoin" => "FileSearchRowBasic",
         "manufacturingLocationsJoin" => "LocationSearchRowBasic",
         "messagesJoin" => "MessageSearchRowBasic",
-        "mseSubsidiaryJoin" => "MseSubsidiarySearchRowBasic",
         "messagesFromJoin" => "MessageSearchRowBasic",
         "messagesToJoin" => "MessageSearchRowBasic",
+        "mseSubsidiaryJoin" => "MseSubsidiarySearchRowBasic",
         "taxRegistrationJoin" => "EntityTaxRegistrationSearchRowBasic",
         "timeApproverJoin" => "EmployeeSearchRowBasic",
         "transactionJoin" => "TransactionSearchRowBasic",

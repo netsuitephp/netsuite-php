@@ -14,7 +14,7 @@
  * @license    https://raw.githubusercontent.com/ryanwinchester/netsuite-php/master/original/NetSuite%20Application%20Developer%20License%20Agreement.txt
  * @link       http://www.netsuite.com/portal/developers/resources/suitetalk-sample-applications.shtml
  *
- * generated:  2020-07-07 11:24:43 AM CDT
+ * generated:  2020-12-11 06:57:10 PM PST
  */
 
 namespace NetSuite\Classes;
@@ -32,6 +32,14 @@ class TransactionSearchBasic extends SearchRecordBasic {
      * @var \NetSuite\Classes\SearchMultiSelectField
      */
     public $acctCorpCardExp;
+    /**
+     * @var \NetSuite\Classes\SearchDateField
+     */
+    public $actualProductionEndDate;
+    /**
+     * @var \NetSuite\Classes\SearchDateField
+     */
+    public $actualProductionStartDate;
     /**
      * @var \NetSuite\Classes\SearchDateField
      */
@@ -1235,15 +1243,15 @@ class TransactionSearchBasic extends SearchRecordBasic {
     /**
      * @var \NetSuite\Classes\SearchMultiSelectField
      */
-    public $subsidiaryTaxRegNum;
-    /**
-     * @var \NetSuite\Classes\SearchMultiSelectField
-     */
     public $subscriptionLine;
     /**
      * @var \NetSuite\Classes\SearchMultiSelectField
      */
     public $subsidiary;
+    /**
+     * @var \NetSuite\Classes\SearchMultiSelectField
+     */
+    public $subsidiaryTaxRegNum;
     /**
      * @var \NetSuite\Classes\SearchMultiSelectField
      */
@@ -1428,6 +1436,8 @@ class TransactionSearchBasic extends SearchRecordBasic {
         "account" => "SearchMultiSelectField",
         "accountType" => "SearchEnumMultiSelectField",
         "acctCorpCardExp" => "SearchMultiSelectField",
+        "actualProductionEndDate" => "SearchDateField",
+        "actualProductionStartDate" => "SearchDateField",
         "actualShipDate" => "SearchDateField",
         "altSalesAmount" => "SearchDoubleField",
         "altSalesNetAmount" => "SearchDoubleField",
@@ -1728,9 +1738,9 @@ class TransactionSearchBasic extends SearchRecordBasic {
         "statistical" => "SearchBooleanField",
         "status" => "SearchEnumMultiSelectField",
         "subscription" => "SearchMultiSelectField",
-        "subsidiaryTaxRegNum" => "SearchMultiSelectField",
         "subscriptionLine" => "SearchMultiSelectField",
         "subsidiary" => "SearchMultiSelectField",
+        "subsidiaryTaxRegNum" => "SearchMultiSelectField",
         "taxItem" => "SearchMultiSelectField",
         "taxLine" => "SearchBooleanField",
         "taxPeriod" => "RecordRef",
