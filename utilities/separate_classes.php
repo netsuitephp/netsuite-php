@@ -13,6 +13,9 @@
 require_once "includes/functions.php";
 require "includes/ClassSeparator.php";
 
+// Load the NS_ENDPOINT const for generating the NetSuiteService class
+require base_path() . "/original/PHPToolkit/NSconfig.php";
+
 $file = base_path() . "/original/PHPToolkit/NetSuiteService.php";
 
 $separator = new ClassSeparator($file);
