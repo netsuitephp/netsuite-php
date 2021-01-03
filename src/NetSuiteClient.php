@@ -36,6 +36,10 @@ class NetSuiteClient
     /**
      * @var array
      */
+    private $clientOptions = array();
+    /**
+     * @var array
+     */
     private $soapHeaders = array();
     /**
      * @var \NetSuite\Logger
@@ -55,13 +59,9 @@ class NetSuiteClient
             $this->config = self::getEnvConfig();
         }
         $this->validateConfig($this->config);
-        $options = $this->createOptions($this->config, $options);
-        $wsdl = $this->createWsdl($this->config);
-        $this->client = $client ?: new SoapClient($wsdl, $options);
-        if ($this->config['host'] == 'https://webservices.netsuite.com') {
-            // Fetch the data center URL for this account because the user
-            // provided the legacy webservices URL.
-            $this->setDataCenterUrl($config);
+        $this->clientOptions = $options;
+        if (isset($client)) {
+          $this->client = $client;
         }
         $this->logger = new Logger(
             isset($this->config['log_path']) ? $this->config['log_path'] : NULL
@@ -83,7 +83,7 @@ class NetSuiteClient
         $result = $this->getDataCenterUrls($params)->getDataCenterUrlsResult;
         $domain = $result->dataCenterUrls->webservicesDomain;
         $dataCenterUrl = $domain.'/services/NetSuitePort_'.$config['endpoint'];
-        $this->client->__setLocation($dataCenterUrl);
+        $this->getClient()->__setLocation($dataCenterUrl);
     }
 
     /**
@@ -189,9 +189,8 @@ class NetSuiteClient
             $this->addHeader("passport", $this->createPassportFromConfig($this->config));
         }
 
-
         try {
-            $response = $this->client->__soapCall($operation, array($parameter), null, $this->soapHeaders);
+            $response = $this->getClient()->__soapCall($operation, array($parameter), null, $this->soapHeaders);
             $this->logSoapCall($operation);
             return $response;
         } catch (\Exception $e) {
@@ -378,7 +377,29 @@ class NetSuiteClient
      */
     private function fixWtfCookieBug()
     {
-        $this->client->__setCookie("JSESSIONID");
+        $this->getClient()->__setCookie('JSESSIONID');
+    }
+
+    /**
+     * Get the current soap client.
+     *
+     * @return \SoapClient
+     * @throws \SoapFault
+     */
+    public function getClient()
+    {
+        if (!isset($this->client)) {
+            $options = $this->createOptions($this->config, $this->clientOptions);
+            $wsdl = $this->createWsdl($this->config);
+            $this->client = new SoapClient($wsdl, $options);
+        }
+        if (isset($this->config['host']) && $this->config['host'] == 'https://webservices.netsuite.com') {
+            // Fetch the data center URL for this account because the user
+            // provided the legacy webservices URL.
+            unset($this->config['host']);
+            $this->setDataCenterUrl($this->config);
+        }
+        return $this->client;
     }
 
     /**
@@ -410,7 +431,7 @@ class NetSuiteClient
     private function logSoapCall($operation)
     {
         if (isset($this->config['logging']) && $this->config['logging']) {
-            $this->logger->logSoapCall($this->client, $operation);
+            $this->logger->logSoapCall($this->getClient(), $operation);
         }
     }
 

@@ -15,7 +15,7 @@
  * @link       http://www.netsuite.com/portal/developers/resources/suitetalk-sample-applications.shtml
  *
  * created:    2015-01-22  1:04 PM
- * updated:    2020-05-19 05:16:33 PM UTC
+ * updated:    2020-07-07 11:24:43 AM CDT
  */
 
 namespace NetSuite;
@@ -46,6 +46,7 @@ class NetSuiteService extends NetSuiteClient {
      */
     public function changeEmail(Classes\ChangeEmailRequest $arg) {
         return $this->makeSoapCall("changeEmail", $arg);
+
     }
 
     /**
@@ -79,6 +80,7 @@ class NetSuiteService extends NetSuiteClient {
      */
     public function search(Classes\SearchRequest $arg) {
         return $this->makeSoapCall("search", $arg);
+
     }
 
     /**
@@ -90,6 +92,7 @@ class NetSuiteService extends NetSuiteClient {
      */
     public function searchMoreWithId(Classes\SearchMoreWithIdRequest $arg) {
         return $this->makeSoapCall("searchMoreWithId", $arg);
+
     }
 
     /**
@@ -464,6 +467,7 @@ class NetSuiteService extends NetSuiteClient {
      */
     public function getDeleted(Classes\GetDeletedRequest $arg) {
         return $this->makeSoapCall("getDeleted", $arg);
+
     }
 
     /**
@@ -475,6 +479,7 @@ class NetSuiteService extends NetSuiteClient {
      */
     public function getAccountGovernanceInfo(Classes\GetAccountGovernanceInfoRequest $arg) {
         return $this->makeSoapCall("getAccountGovernanceInfo", $arg);
+
     }
 
     /**
@@ -486,6 +491,7 @@ class NetSuiteService extends NetSuiteClient {
      */
     public function getIntegrationGovernanceInfo(Classes\GetIntegrationGovernanceInfoRequest $arg) {
         return $this->makeSoapCall("getIntegrationGovernanceInfo", $arg);
+
     }
 
 }
