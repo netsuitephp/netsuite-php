@@ -14,7 +14,7 @@
  * @license    https://raw.githubusercontent.com/ryanwinchester/netsuite-php/master/original/NetSuite%20Application%20Developer%20License%20Agreement.txt
  * @link       http://www.netsuite.com/portal/developers/resources/suitetalk-sample-applications.shtml
  *
- * generated:  2020-07-07 11:24:43 AM CDT
+ * generated:  2020-12-11 06:57:10 PM PST
  */
 
 namespace NetSuite\Classes;
@@ -32,10 +32,6 @@ class ResourceAllocationSearchRowBasic extends SearchRowBasic {
      * @var \NetSuite\Classes\SearchColumnEnumSelectField[]
      */
     public $approvalStatus;
-    /**
-     * @var \NetSuite\Classes\SearchColumnSelectField[]
-     */
-    public $project;
     /**
      * @var \NetSuite\Classes\SearchColumnSelectField[]
      */
@@ -71,6 +67,10 @@ class ResourceAllocationSearchRowBasic extends SearchRowBasic {
     /**
      * @var \NetSuite\Classes\SearchColumnSelectField[]
      */
+    public $project;
+    /**
+     * @var \NetSuite\Classes\SearchColumnSelectField[]
+     */
     public $requestedBy;
     /**
      * @var \NetSuite\Classes\SearchColumnSelectField[]
@@ -88,7 +88,6 @@ class ResourceAllocationSearchRowBasic extends SearchRowBasic {
         "allocationType" => "SearchColumnSelectField[]",
         "allocationUnit" => "SearchColumnEnumSelectField[]",
         "approvalStatus" => "SearchColumnEnumSelectField[]",
-        "project" => "SearchColumnSelectField[]",
         "customer" => "SearchColumnSelectField[]",
         "endDate" => "SearchColumnDateField[]",
         "externalId" => "SearchColumnSelectField[]",
@@ -97,6 +96,7 @@ class ResourceAllocationSearchRowBasic extends SearchRowBasic {
         "notes" => "SearchColumnStringField[]",
         "numberHours" => "SearchColumnDoubleField[]",
         "percentOfTime" => "SearchColumnDoubleField[]",
+        "project" => "SearchColumnSelectField[]",
         "requestedBy" => "SearchColumnSelectField[]",
         "resource" => "SearchColumnSelectField[]",
         "startDate" => "SearchColumnDateField[]",

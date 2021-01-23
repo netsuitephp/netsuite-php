@@ -14,7 +14,7 @@
  * @license    https://raw.githubusercontent.com/ryanwinchester/netsuite-php/master/original/NetSuite%20Application%20Developer%20License%20Agreement.txt
  * @link       http://www.netsuite.com/portal/developers/resources/suitetalk-sample-applications.shtml
  *
- * generated:  2020-07-07 11:24:43 AM CDT
+ * generated:  2020-12-11 06:57:10 PM PST
  */
 
 namespace NetSuite\Classes;
@@ -929,6 +929,46 @@ class InventoryItem extends Record {
      */
     public $consumptionUnit;
     /**
+     * @var boolean
+     */
+    public $enableCatchWeight;
+    /**
+     * @var \NetSuite\Classes\RecordRef
+     */
+    public $secondaryUnitsType;
+    /**
+     * @var \NetSuite\Classes\RecordRef
+     */
+    public $secondaryBaseUnit;
+    /**
+     * @var float
+     */
+    public $conversionRate;
+    /**
+     * @var \NetSuite\Classes\RecordRef
+     */
+    public $secondaryStockUnit;
+    /**
+     * @var \NetSuite\Classes\RecordRef
+     */
+    public $secondarySaleUnit;
+    /**
+     * @var \NetSuite\Classes\RecordRef
+     */
+    public $secondaryPurchaseUnit;
+    /**
+     * @var \NetSuite\Classes\RecordRef
+     */
+    public $secondaryConsumptionUnit;
+    /**
+     * @var float
+     */
+    public $lowerWarningLimit;
+    /**
+     * @var float
+     */
+    public $upperWarningLimit;
+    /**
      * @var \NetSuite\Classes\CustomFieldList
      */
     public $customFieldList;
@@ -1168,6 +1208,16 @@ class InventoryItem extends Record {
         "presentationItemList" => "PresentationItemList",
         "futureHorizon" => "integer",
         "consumptionUnit" => "RecordRef",
+        "enableCatchWeight" => "boolean",
+        "secondaryUnitsType" => "RecordRef",
+        "secondaryBaseUnit" => "RecordRef",
+        "conversionRate" => "float",
+        "secondaryStockUnit" => "RecordRef",
+        "secondarySaleUnit" => "RecordRef",
+        "secondaryPurchaseUnit" => "RecordRef",
+        "secondaryConsumptionUnit" => "RecordRef",
+        "lowerWarningLimit" => "float",
+        "upperWarningLimit" => "float",
         "customFieldList" => "CustomFieldList",
         "internalId" => "string",
         "externalId" => "string",

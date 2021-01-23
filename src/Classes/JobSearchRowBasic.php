@@ -14,7 +14,7 @@
  * @license    https://raw.githubusercontent.com/ryanwinchester/netsuite-php/master/original/NetSuite%20Application%20Developer%20License%20Agreement.txt
  * @link       http://www.netsuite.com/portal/developers/resources/suitetalk-sample-applications.shtml
  *
- * generated:  2020-07-07 11:24:43 AM CDT
+ * generated:  2020-12-11 06:57:10 PM PST
  */
 
 namespace NetSuite\Classes;
@@ -156,6 +156,10 @@ class JobSearchRowBasic extends SearchRowBasic {
      * @var \NetSuite\Classes\SearchColumnDateField[]
      */
     public $calculatedEndDateBaseline;
+    /**
+     * @var \NetSuite\Classes\SearchColumnDateField[]
+     */
+    public $calculatedStartDate;
     /**
      * @var \NetSuite\Classes\SearchColumnSelectField[]
      */
@@ -397,6 +401,14 @@ class JobSearchRowBasic extends SearchRowBasic {
      */
     public $revRecForecastRule;
     /**
+     * @var \NetSuite\Classes\SearchColumnDateField[]
+     */
+    public $scheduledEndDate;
+    /**
+     * @var \NetSuite\Classes\SearchColumnEnumSelectField[]
+     */
+    public $schedulingMethod;
+    /**
      * @var \NetSuite\Classes\SearchColumnStringField[]
      */
     public $shipAddress1;
@@ -527,6 +539,7 @@ class JobSearchRowBasic extends SearchRowBasic {
         "billZipCode" => "SearchColumnStringField[]",
         "calculatedEndDate" => "SearchColumnDateField[]",
         "calculatedEndDateBaseline" => "SearchColumnDateField[]",
+        "calculatedStartDate" => "SearchColumnDateField[]",
         "category" => "SearchColumnSelectField[]",
         "city" => "SearchColumnStringField[]",
         "comments" => "SearchColumnStringField[]",
@@ -587,6 +600,8 @@ class JobSearchRowBasic extends SearchRowBasic {
         "projectExpenseType" => "SearchColumnSelectField[]",
         "projectManager" => "SearchColumnSelectField[]",
         "revRecForecastRule" => "SearchColumnSelectField[]",
+        "scheduledEndDate" => "SearchColumnDateField[]",
+        "schedulingMethod" => "SearchColumnEnumSelectField[]",
         "shipAddress1" => "SearchColumnStringField[]",
         "shipAddress2" => "SearchColumnStringField[]",
         "shipAddress3" => "SearchColumnStringField[]",
