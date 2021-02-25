@@ -32,5 +32,8 @@
       "src/includes/functions.php"
     ]
   },
-  "minimum-stability": "stable"
+  "minimum-stability": "stable",
+  "scripts": {
+      "generate": "php utilities/separate_classes.php"
+  }
 }
