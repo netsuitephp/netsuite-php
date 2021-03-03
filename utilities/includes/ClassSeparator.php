@@ -20,6 +20,7 @@ class ClassSeparator
     public static $enum_classes = array(
         'RecordType' => TRUE,
         'Country' => TRUE,
+        'StatusDetailCodeType' => TRUE,
     );
 
     function __construct($file)
