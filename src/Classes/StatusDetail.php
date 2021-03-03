@@ -14,14 +14,14 @@
  * @license    https://raw.githubusercontent.com/ryanwinchester/netsuite-php/master/original/NetSuite%20Application%20Developer%20License%20Agreement.txt
  * @link       http://www.netsuite.com/portal/developers/resources/suitetalk-sample-applications.shtml
  *
- * generated:  2021-03-01 01:55:23 PM CST
+ * generated:  2021-03-03 09:44:33 AM CST
  */
 
 namespace NetSuite\Classes;
 
 class StatusDetail {
     /**
-     * @var \NetSuite\Classes\StatusDetailCodeType
+     * @var \NetSuite\Classes\StatusDetailCodeType::*
      */
     public $code;
     /**
