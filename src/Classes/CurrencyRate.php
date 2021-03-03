@@ -14,7 +14,7 @@
  * @license    https://raw.githubusercontent.com/ryanwinchester/netsuite-php/master/original/NetSuite%20Application%20Developer%20License%20Agreement.txt
  * @link       http://www.netsuite.com/portal/developers/resources/suitetalk-sample-applications.shtml
  *
- * generated:  2020-07-07 11:24:43 AM CDT
+ * generated:  2020-12-11 06:57:10 PM PST
  */
 
 namespace NetSuite\Classes;
@@ -37,6 +37,10 @@ class CurrencyRate extends Record {
      */
     public $effectiveDate;
     /**
+     * @var \NetSuite\Classes\RecordRef
+     */
+    public $currencyRateType;
+    /**
      * @var string
      */
     public $internalId;
@@ -45,6 +49,7 @@ class CurrencyRate extends Record {
         "transactionCurrency" => "RecordRef",
         "exchangeRate" => "float",
         "effectiveDate" => "dateTime",
+        "currencyRateType" => "RecordRef",
         "internalId" => "string",
     );
 }

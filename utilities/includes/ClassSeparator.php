@@ -112,8 +112,12 @@ class ClassSeparator
 
     private function makeServiceClassFile($serviceClass)
     {
-        $date = $this->generated_at;
         $template = include utilities_path() . "/includes/templates/netsuiteservice.template.php";
+        $template = preg_replace(
+            '/NS_ENDPOINT;/',
+            sprintf("'%s';", NS_ENDPOINT),
+            $template
+        );
 
         return file_put_contents(app_path() . '/NetSuiteService.php', $template);
     }

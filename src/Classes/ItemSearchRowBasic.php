@@ -14,7 +14,7 @@
  * @license    https://raw.githubusercontent.com/ryanwinchester/netsuite-php/master/original/NetSuite%20Application%20Developer%20License%20Agreement.txt
  * @link       http://www.netsuite.com/portal/developers/resources/suitetalk-sample-applications.shtml
  *
- * generated:  2020-07-07 11:24:43 AM CDT
+ * generated:  2020-12-11 06:57:10 PM PST
  */
 
 namespace NetSuite\Classes;
@@ -156,6 +156,10 @@ class ItemSearchRowBasic extends SearchRowBasic {
      * @var \NetSuite\Classes\SearchColumnBooleanField[]
      */
     public $contingentRevenueHandling;
+    /**
+     * @var \NetSuite\Classes\SearchColumnDoubleField[]
+     */
+    public $conversionRate;
     /**
      * @var \NetSuite\Classes\SearchColumnBooleanField[]
      */
@@ -324,6 +328,10 @@ class ItemSearchRowBasic extends SearchRowBasic {
      * @var \NetSuite\Classes\SearchColumnSelectField[]
      */
     public $effectiveRevision;
+    /**
+     * @var \NetSuite\Classes\SearchColumnBooleanField[]
+     */
+    public $enableCatchWeight;
     /**
      * @var \NetSuite\Classes\SearchColumnBooleanField[]
      */
@@ -717,6 +725,10 @@ class ItemSearchRowBasic extends SearchRowBasic {
      */
     public $locForwardConsumptionDays;
     /**
+     * @var \NetSuite\Classes\SearchColumnDoubleField[]
+     */
+    public $lowerWarningLimit;
+    /**
      * @var \NetSuite\Classes\SearchColumnStringField[]
      */
     public $manufacturer;
@@ -1077,6 +1089,26 @@ class ItemSearchRowBasic extends SearchRowBasic {
      */
     public $seasonalDemand;
     /**
+     * @var \NetSuite\Classes\SearchColumnSelectField[]
+     */
+    public $secondaryConsumptionUnit;
+    /**
+     * @var \NetSuite\Classes\SearchColumnSelectField[]
+     */
+    public $secondaryPurchaseUnit;
+    /**
+     * @var \NetSuite\Classes\SearchColumnSelectField[]
+     */
+    public $secondarySaleUnit;
+    /**
+     * @var \NetSuite\Classes\SearchColumnSelectField[]
+     */
+    public $secondaryStockUnit;
+    /**
+     * @var \NetSuite\Classes\SearchColumnSelectField[]
+     */
+    public $secondaryUnitsType;
+    /**
      * @var \NetSuite\Classes\SearchColumnBooleanField[]
      */
     public $sellOnEBay;
@@ -1221,6 +1253,10 @@ class ItemSearchRowBasic extends SearchRowBasic {
      */
     public $upcCode;
     /**
+     * @var \NetSuite\Classes\SearchColumnDoubleField[]
+     */
+    public $upperWarningLimit;
+    /**
      * @var \NetSuite\Classes\SearchColumnStringField[]
      */
     public $urlComponent;
@@ -1351,6 +1387,7 @@ class ItemSearchRowBasic extends SearchRowBasic {
         "componentYield" => "SearchColumnDoubleField[]",
         "consumptionUnit" => "SearchColumnSelectField[]",
         "contingentRevenueHandling" => "SearchColumnBooleanField[]",
+        "conversionRate" => "SearchColumnDoubleField[]",
         "copyDescription" => "SearchColumnBooleanField[]",
         "correlatedItem" => "SearchColumnSelectField[]",
         "correlatedItemCorrelation" => "SearchColumnDoubleField[]",
@@ -1393,6 +1430,7 @@ class ItemSearchRowBasic extends SearchRowBasic {
         "effectiveBomControl" => "SearchColumnEnumSelectField[]",
         "effectiveDate" => "SearchColumnDateField[]",
         "effectiveRevision" => "SearchColumnSelectField[]",
+        "enableCatchWeight" => "SearchColumnBooleanField[]",
         "endAuctionsWhenOutOfStock" => "SearchColumnBooleanField[]",
         "excludeFromSitemap" => "SearchColumnBooleanField[]",
         "expenseAccount" => "SearchColumnSelectField[]",
@@ -1491,6 +1529,7 @@ class ItemSearchRowBasic extends SearchRowBasic {
         "locationTotalValue" => "SearchColumnDoubleField[]",
         "locBackwardConsumptionDays" => "SearchColumnLongField[]",
         "locForwardConsumptionDays" => "SearchColumnLongField[]",
+        "lowerWarningLimit" => "SearchColumnDoubleField[]",
         "manufacturer" => "SearchColumnStringField[]",
         "manufacturerAddr1" => "SearchColumnStringField[]",
         "manufacturerCity" => "SearchColumnStringField[]",
@@ -1581,6 +1620,11 @@ class ItemSearchRowBasic extends SearchRowBasic {
         "scrapAcct" => "SearchColumnSelectField[]",
         "searchKeywords" => "SearchColumnStringField[]",
         "seasonalDemand" => "SearchColumnBooleanField[]",
+        "secondaryConsumptionUnit" => "SearchColumnSelectField[]",
+        "secondaryPurchaseUnit" => "SearchColumnSelectField[]",
+        "secondarySaleUnit" => "SearchColumnSelectField[]",
+        "secondaryStockUnit" => "SearchColumnSelectField[]",
+        "secondaryUnitsType" => "SearchColumnSelectField[]",
         "sellOnEBay" => "SearchColumnBooleanField[]",
         "serialNumber" => "SearchColumnStringField[]",
         "serialNumberLocation" => "SearchColumnStringField[]",
@@ -1617,6 +1661,7 @@ class ItemSearchRowBasic extends SearchRowBasic {
         "unbuildVarianceAccount" => "SearchColumnSelectField[]",
         "unitsType" => "SearchColumnSelectField[]",
         "upcCode" => "SearchColumnStringField[]",
+        "upperWarningLimit" => "SearchColumnDoubleField[]",
         "urlComponent" => "SearchColumnStringField[]",
         "useBins" => "SearchColumnBooleanField[]",
         "useComponentYield" => "SearchColumnBooleanField[]",

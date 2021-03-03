@@ -14,7 +14,7 @@
  * @license    https://raw.githubusercontent.com/ryanwinchester/netsuite-php/master/original/NetSuite%20Application%20Developer%20License%20Agreement.txt
  * @link       http://www.netsuite.com/portal/developers/resources/suitetalk-sample-applications.shtml
  *
- * generated:  2020-07-07 11:24:43 AM CDT
+ * generated:  2020-12-11 06:57:10 PM PST
  */
 
 namespace NetSuite\Classes;
@@ -84,6 +84,10 @@ class JobSearchBasic extends SearchRecordBasic {
      * @var \NetSuite\Classes\SearchDateField
      */
     public $calculatedEndDateBaseline;
+    /**
+     * @var \NetSuite\Classes\SearchDateField
+     */
+    public $calculatedStartDate;
     /**
      * @var \NetSuite\Classes\SearchMultiSelectField
      */
@@ -333,6 +337,14 @@ class JobSearchBasic extends SearchRecordBasic {
      */
     public $revRecForecastRule;
     /**
+     * @var \NetSuite\Classes\SearchDateField
+     */
+    public $scheduledEndDate;
+    /**
+     * @var \NetSuite\Classes\SearchEnumMultiSelectField
+     */
+    public $schedulingMethod;
+    /**
      * @var \NetSuite\Classes\SearchBooleanField
      */
     public $sourceServiceItemFromRateCard;
@@ -397,6 +409,7 @@ class JobSearchBasic extends SearchRecordBasic {
         "billingSchedule" => "SearchMultiSelectField",
         "calculatedEndDate" => "SearchDateField",
         "calculatedEndDateBaseline" => "SearchDateField",
+        "calculatedStartDate" => "SearchDateField",
         "category" => "SearchMultiSelectField",
         "city" => "SearchStringField",
         "comments" => "SearchStringField",
@@ -459,6 +472,8 @@ class JobSearchBasic extends SearchRecordBasic {
         "projectExpenseType" => "SearchMultiSelectField",
         "projectManager" => "SearchMultiSelectField",
         "revRecForecastRule" => "SearchMultiSelectField",
+        "scheduledEndDate" => "SearchDateField",
+        "schedulingMethod" => "SearchEnumMultiSelectField",
         "sourceServiceItemFromRateCard" => "SearchBooleanField",
         "startDate" => "SearchDateField",
         "startDateBaseline" => "SearchDateField",

@@ -15,7 +15,7 @@
  * @link       http://www.netsuite.com/portal/developers/resources/suitetalk-sample-applications.shtml
  *
  * created:    2015-01-22  1:04 PM
- * updated:    2020-07-07 11:24:43 AM CDT
+ * updated:    2020-12-11 06:57:10 PM PST
  */
 
 namespace NetSuite;
@@ -24,7 +24,7 @@ use NetSuite\Classes;
 
 class NetSuiteService extends NetSuiteClient {
 
-    public $generated_from_endpoint = "2020_1";
+    public $generated_from_endpoint = '2020_2';
 
     /**
      * Service Call: changePassword
@@ -46,7 +46,6 @@ class NetSuiteService extends NetSuiteClient {
      */
     public function changeEmail(Classes\ChangeEmailRequest $arg) {
         return $this->makeSoapCall("changeEmail", $arg);
-
     }
 
     /**
@@ -80,7 +79,6 @@ class NetSuiteService extends NetSuiteClient {
      */
     public function search(Classes\SearchRequest $arg) {
         return $this->makeSoapCall("search", $arg);
-
     }
 
     /**
@@ -92,7 +90,6 @@ class NetSuiteService extends NetSuiteClient {
      */
     public function searchMoreWithId(Classes\SearchMoreWithIdRequest $arg) {
         return $this->makeSoapCall("searchMoreWithId", $arg);
-
     }
 
     /**
@@ -467,7 +464,6 @@ class NetSuiteService extends NetSuiteClient {
      */
     public function getDeleted(Classes\GetDeletedRequest $arg) {
         return $this->makeSoapCall("getDeleted", $arg);
-
     }
 
     /**
@@ -479,7 +475,6 @@ class NetSuiteService extends NetSuiteClient {
      */
     public function getAccountGovernanceInfo(Classes\GetAccountGovernanceInfoRequest $arg) {
         return $this->makeSoapCall("getAccountGovernanceInfo", $arg);
-
     }
 
     /**
@@ -491,7 +486,6 @@ class NetSuiteService extends NetSuiteClient {
      */
     public function getIntegrationGovernanceInfo(Classes\GetIntegrationGovernanceInfoRequest $arg) {
         return $this->makeSoapCall("getIntegrationGovernanceInfo", $arg);
-
     }
 
 }

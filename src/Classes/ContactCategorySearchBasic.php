@@ -14,7 +14,7 @@
  * @license    https://raw.githubusercontent.com/ryanwinchester/netsuite-php/master/original/NetSuite%20Application%20Developer%20License%20Agreement.txt
  * @link       http://www.netsuite.com/portal/developers/resources/suitetalk-sample-applications.shtml
  *
- * generated:  2020-07-07 11:24:43 AM CDT
+ * generated:  2020-12-11 06:57:10 PM PST
  */
 
 namespace NetSuite\Classes;
@@ -48,10 +48,6 @@ class ContactCategorySearchBasic extends SearchRecordBasic {
      * @var \NetSuite\Classes\SearchBooleanField
      */
     public $private;
-    /**
-     * @var \NetSuite\Classes\SearchBooleanField
-     */
-    public $sync;
     static $paramtypesmap = array(
         "externalId" => "SearchMultiSelectField",
         "externalIdString" => "SearchStringField",
@@ -60,6 +56,5 @@ class ContactCategorySearchBasic extends SearchRecordBasic {
         "isInactive" => "SearchBooleanField",
         "name" => "SearchStringField",
         "private" => "SearchBooleanField",
-        "sync" => "SearchBooleanField",
     );
 }

@@ -14,7 +14,7 @@
  * @license    https://raw.githubusercontent.com/ryanwinchester/netsuite-php/master/original/NetSuite%20Application%20Developer%20License%20Agreement.txt
  * @link       http://www.netsuite.com/portal/developers/resources/suitetalk-sample-applications.shtml
  *
- * generated:  2020-07-07 11:24:43 AM CDT
+ * generated:  2020-12-11 06:57:10 PM PST
  */
 
 return array(
@@ -43,7 +43,6 @@ return array(
 		"StatusDetailType" => "NetSuite\\Classes\\StatusDetailType",
 		"StatusDetailCodeType" => "NetSuite\\Classes\\StatusDetailCodeType",
 		"FaultCodeType" => "NetSuite\\Classes\\FaultCodeType",
-		"Passport" => "NetSuite\\Classes\\Passport",
 		"TokenPassportSignature" => "NetSuite\\Classes\\TokenPassportSignature",
 		"TokenPassport" => "NetSuite\\Classes\\TokenPassport",
 		"ChangePassword" => "NetSuite\\Classes\\ChangePassword",
@@ -646,6 +645,7 @@ return array(
 		"CustomerNegativeNumberFormat" => "NetSuite\\Classes\\CustomerNegativeNumberFormat",
 		"CustomerNumberFormat" => "NetSuite\\Classes\\CustomerNumberFormat",
 		"BillingAccountFrequency" => "NetSuite\\Classes\\BillingAccountFrequency",
+		"JobSchedulingMethod" => "NetSuite\\Classes\\JobSchedulingMethod",
 		"Subscriptions" => "NetSuite\\Classes\\Subscriptions",
 		"SubscriptionsList" => "NetSuite\\Classes\\SubscriptionsList",
 		"Contact" => "NetSuite\\Classes\\Contact",
