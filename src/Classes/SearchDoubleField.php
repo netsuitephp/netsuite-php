@@ -14,7 +14,7 @@
  * @license    https://raw.githubusercontent.com/ryanwinchester/netsuite-php/master/original/NetSuite%20Application%20Developer%20License%20Agreement.txt
  * @link       http://www.netsuite.com/portal/developers/resources/suitetalk-sample-applications.shtml
  *
- * generated:  2020-12-11 06:57:10 PM PST
+ * generated:  2021-03-03 09:44:33 AM CST
  */
 
 namespace NetSuite\Classes;
@@ -29,7 +29,7 @@ class SearchDoubleField {
      */
     public $searchValue2;
     /**
-     * @var \NetSuite\Classes\SearchDoubleFieldOperator
+     * @var \NetSuite\Classes\SearchDoubleFieldOperator::*
      */
     public $operator;
     static $paramtypesmap = array(

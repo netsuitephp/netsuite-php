@@ -17,6 +17,12 @@ class ClassSeparator
     private $file;
     private $generated_at;
 
+    public static $enum_classes = array(
+        'RecordType' => TRUE,
+        'Country' => TRUE,
+        'StatusDetailCodeType' => TRUE,
+    );
+
     function __construct($file)
     {
         $this->file = file_get_contents($file);
@@ -194,6 +200,9 @@ class ClassSeparator
                             // Date time is really a string containing a date.
                             elseif ($property_type == 'dateTime' || $property_type == 'dateTime[]') {
                                 $types[$property_name] = str_replace('dateTime', 'string', $property_type);
+                            }
+                            elseif (isset(ClassSeparator::$enum_classes[$property_type]) || preg_match('/Operator$/', $property_type)) {
+                                $types[$property_name] = '\\NetSuite\\Classes\\' . $property_type . '::*';
                             }
                             // This is a NetSuite value so map it to a class.
                             else {

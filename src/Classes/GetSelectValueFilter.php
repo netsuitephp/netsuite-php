@@ -14,7 +14,7 @@
  * @license    https://raw.githubusercontent.com/ryanwinchester/netsuite-php/master/original/NetSuite%20Application%20Developer%20License%20Agreement.txt
  * @link       http://www.netsuite.com/portal/developers/resources/suitetalk-sample-applications.shtml
  *
- * generated:  2020-12-11 06:57:10 PM PST
+ * generated:  2021-03-03 09:44:33 AM CST
  */
 
 namespace NetSuite\Classes;
@@ -25,7 +25,7 @@ class GetSelectValueFilter {
      */
     public $filterValue;
     /**
-     * @var \NetSuite\Classes\GetSelectValueFilterOperator
+     * @var \NetSuite\Classes\GetSelectValueFilterOperator::*
      */
     public $operator;
     static $paramtypesmap = array(
