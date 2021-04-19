@@ -158,7 +158,7 @@ class ClassSeparator
      */
     private function writeClassesToFiles(array $classes)
     {
-        return array_walk($classes, function ($class) use ($date) {
+        return array_walk($classes, function ($class) {
             $tokens = array_filter(token_get_all('<?php class ' . $class), function ($token) {
                 return !(!is_array($token) || $token[0] == T_WHITESPACE);
             });
