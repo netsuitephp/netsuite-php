@@ -24,6 +24,7 @@ simplified client wrapper class (`NetSuiteService`).
 * [Account-Specific Data Center URLs](#Account-Specific-Data-Center-URLs)
 * [Examples](#examples)
 * [Logging](#logging)
+* [Generating Classes](#generating-classes)
 * [Roadmap](#roadmap)
 * [Support](#support)
 * [Contributing](#contributing)
@@ -51,16 +52,18 @@ require 'vendor/autoload.php';
 use NetSuite\NetSuiteService;
 
 $config = [
-   // required -------------------------------------
-   "endpoint"       => "2020_2",
-   "host"           => "https://webservices.netsuite.com",
-   "account"        => "MYACCT1",
-   "consumerKey"    => "0123456789ABCDEF",
-   "consumerSecret" => "0123456789ABCDEF",
-   "token"          => "0123456789ABCDEF",
-   "tokenSecret"    => "0123456789ABCDEF",
-   // optional -------------------------------------
-   "signatureAlgorithm" => 'sha256', // Defaults to 'sha256'
+    // required -------------------------------------
+    "endpoint"       => "2020_2",
+    "host"           => "https://webservices.netsuite.com",
+    "account"        => "MYACCT1",
+    "consumerKey"    => "0123456789ABCDEF",
+    "consumerSecret" => "0123456789ABCDEF",
+    "token"          => "0123456789ABCDEF",
+    "tokenSecret"    => "0123456789ABCDEF",
+    // optional -------------------------------------
+    "signatureAlgorithm" => 'sha256', // Defaults to 'sha256'
+    "logging"  => true,
+    "log_path" => "/var/www/myapp/logs/netsuite"
 ];
 $service = new NetSuiteService($config);
 ```
@@ -76,17 +79,17 @@ use NetSuite\NetSuiteService;
 // *****
 
 $config = [
-   // required -------------------------------------
-   "endpoint" => "2020_2",
-   "host"     => "https://webservices.netsuite.com",
-   "email"    => "jDoe@netsuite.com",
-   "password" => "mySecretPwd",
-   "role"     => "3",
-   "account"  => "MYACCT1",
-   "app_id"   => "4AD027CA-88B3-46EC-9D3E-41C6E6A325E2",
-   // optional -------------------------------------
-   "logging"  => true,
-   "log_path" => "/var/www/myapp/logs/netsuite"
+    // required -------------------------------------
+    "endpoint" => "2020_2",
+    "host"     => "https://webservices.netsuite.com",
+    "email"    => "jDoe@netsuite.com",
+    "password" => "mySecretPwd",
+    "role"     => "3",
+    "account"  => "MYACCT1",
+    "app_id"   => "4AD027CA-88B3-46EC-9D3E-41C6E6A325E2",
+    // optional -------------------------------------
+    "logging"  => true,
+    "log_path" => "/var/www/myapp/logs/netsuite"
 ];
 $service = new NetSuiteService($config);
 ```
@@ -148,26 +151,37 @@ See [EXAMPLES.md](EXAMPLES.md)
 
 ## Logging
 
-You can set logging on or off on the fly, or override the configuration setting passed in.
-Please note that if you don't specify a logging directory in the config or afterwards, then you won't get logs no matter what you do.
+The most common way to enable logging will be to do so at the configuration
+level, see the [quickstart](#quickstart) examples.
 
-**Set a logging path**
+You can also set logging on or off during runtime with methods. Note that
+if you don't specify a logging directory in the config or at runtime, then
+no logs will be created. There must be a valid target location.
 
 ```php
+// Set a logging path
 $service->setLogPath('/path/to/logs');
-```
 
-**Turn logging on**
-
-```php
+// Turn logging on
 $service->logRequests(true);  // Turn logging on.
-```
 
-**Turn logging off**
-
-```php
+// Turn logging off
 $service->logRequests(false); // Turn logging off.
 ```
+
+## Generating Classes
+
+This repository always contains classes generated from the version of the
+NetSuite PHP Toolkit corresponding with the web services version denoted
+by the specific release. Release `v2020.2.0`, for instance, is the first
+release built against NetSuite's `2020_1` web services toolkit. If you want
+to generate the class files yourself, for whatever reason, there is code
+included with the package to do so, using the following steps:
+
+* Download the
+[NetSuite PHP Toolkit](http://www.netsuite.com/portal/developers/resources/suitetalk-sample-applications.shtml)
+* Unzip the contents into the `./original/` folder
+* Run `./utilities/separate_classes.php` or `composer generate`
 
 ## Roadmap
 
@@ -181,7 +195,7 @@ by this package will start to be gradually moved forward.
 
 For the time being, expect the following for `netsuitephp/netsuite-php`:
 
-* require `"php": ">=7"` as of the `2021_1` build
+* require `"php": ">=7.1"` as of the `2021_1` build
 * require `"php": ">=8"` as of the `2023_1` build
 
 **This will apply only to new releases of the package, so you will still be
