@@ -15,7 +15,7 @@
  * @link       http://www.netsuite.com/portal/developers/resources/suitetalk-sample-applications.shtml
  *
  * created:    2015-01-22  1:04 PM
- * updated:    2021-03-03 09:44:33 AM CST
+ * updated:    2021-04-19 07:44:22 PM PDT
  */
 
 namespace NetSuite;
@@ -489,3 +489,4 @@ class NetSuiteService extends NetSuiteClient {
     }
 
 }
+
