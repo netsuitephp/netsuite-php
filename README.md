@@ -3,57 +3,101 @@
  [![License](https://img.shields.io/packagist/l/ryanwinchester/netsuite-php.svg?style=flat-square)](https://packagist.org/packages/ryanwinchester/netsuite-php)
   [![Packagist](https://img.shields.io/packagist/dt/ryanwinchester/netsuite-php.svg?maxAge=2592000)]()
 
-A PHP API client package for NetSuite, pried from the [NetSuite PHP Toolkit](http://www.netsuite.com/portal/developers/resources/suitetalk-sample-applications.shtml).
+A PHP API client package for NetSuite, pried from the
+[NetSuite PHP Toolkit](http://www.netsuite.com/portal/developers/resources/suitetalk-sample-applications.shtml)
+and made more consumable for modern PHP application development. All of the
+classes in the `NetSuite\Classes` namespace are code provided by NetSuite
+with a [license](#license) allowing redistribution. The custom work provided
+by this library separates these nearly 2,000 classes out into their own files
+and allows the classes to be installed with composer and accessed using
+standard autoloading support. It allows configuration to be read from the
+environment, adds support to log requests and responses and provides a
+simplified client wrapper class (`NetSuiteService`).
 
-## Adding it to your project:
+| :warning: PHP5 support being discontinued in 2021|
+|:---------------------------|
+| Please see the [roadmap](#roadmap) for PHP support plans in the coming years.|
+
+* [Installation](#installation)
+* [Quickstart](#quickstart)
+  * [w/Laravel](#laravel-integration)
+* [Account-Specific Data Center URLs](#Account-Specific-Data-Center-URLs)
+* [Examples](#examples)
+* [Logging](#logging)
+* [Generating Classes](#generating-classes)
+* [Roadmap](#roadmap)
+* [Support](#support)
+* [Contributing](#contributing)
+* [License](#license)
+
+## Installation
 
 Require with composer:
-
-**V2 in Alpha**
 
 ```
 composer require ryanwinchester/netsuite-php
 ```
 
-## Changes in v2:
-
-- Changed namespaces
-- Significantly simplified NetSuiteClient
-- Added a convenience method for creating an instance using environment variables for configuration
-- Improved logging, still logs even if exception is thrown in soap call.
-
 ## Quickstart:
 
 #### Instantiating the NetSuiteService class:
 
-The rest of the examples assume that you have done this.
+Any of the examples herein will assume you have already instantiated a client
+object using one of the methods below.
 
 ```php
+// Token-based Authentication
 require 'vendor/autoload.php';
 
 use NetSuite\NetSuiteService;
 
-$config = array(
-   // required -------------------------------------
-   "endpoint" => "2019_1",
-   "host"     => "https://webservices.netsuite.com",
-   "email"    => "jDoe@netsuite.com",
-   "password" => "mySecretPwd",
-   "role"     => "3",
-   "account"  => "MYACCT1",
-   "app_id"   => "4AD027CA-88B3-46EC-9D3E-41C6E6A325E2",
-   // optional -------------------------------------
-   "logging"  => true,
-   "log_path" => "/var/www/myapp/logs/netsuite"
-);
+$config = [
+    // required -------------------------------------
+    "endpoint"       => "2020_2",
+    "host"           => "https://webservices.netsuite.com",
+    "account"        => "MYACCT1",
+    "consumerKey"    => "0123456789ABCDEF",
+    "consumerSecret" => "0123456789ABCDEF",
+    "token"          => "0123456789ABCDEF",
+    "tokenSecret"    => "0123456789ABCDEF",
+    // optional -------------------------------------
+    "signatureAlgorithm" => 'sha256', // Defaults to 'sha256'
+    "logging"  => true,
+    "log_path" => "/var/www/myapp/logs/netsuite"
+];
+$service = new NetSuiteService($config);
+```
 
+```php
+// Authentication with User Credentials
+require 'vendor/autoload.php';
+
+use NetSuite\NetSuiteService;
+
+// *****
+// No longer supported as of web services v2020.2, use TBA instead
+// *****
+
+$config = [
+    // required -------------------------------------
+    "endpoint" => "2020_2",
+    "host"     => "https://webservices.netsuite.com",
+    "email"    => "jDoe@netsuite.com",
+    "password" => "mySecretPwd",
+    "role"     => "3",
+    "account"  => "MYACCT1",
+    "app_id"   => "4AD027CA-88B3-46EC-9D3E-41C6E6A325E2",
+    // optional -------------------------------------
+    "logging"  => true,
+    "log_path" => "/var/www/myapp/logs/netsuite"
+];
 $service = new NetSuiteService($config);
 ```
 
 You can alternatively place your config in environment variables. This is
 helpful in hosted environments where deployment of config files is either
 not desired or practical. You can find the valid keys in the included
-.env.example file with sample values.
+`.env.example` file with sample values.
 
 Previously, instantiating the NetSuiteClient with ENV data entailed using the
 static method `createFromEnv`. This method is now marked as `deprecated` and
@@ -61,6 +105,7 @@ if you are using it, please change your code to use the standard constructor
 which will extract your configuration out of the $_ENV superglobal for you.
 
 ```php
+// Allowing the client to infer configuration from $_ENV
 require 'vendor/autoload.php';
 
 use NetSuite\NetSuiteService;
@@ -68,11 +113,23 @@ use NetSuite\NetSuiteService;
 $service = new NetSuiteService();
 ```
 
+### Laravel Integration
+
+If you're implementing NetSuite web services in a
+[Laravel](https://laravel.com) application, you might want to look at the
+[netsuite-laravel](https://github.com/netsuitephp/netsuite-laravel) package
+to streamline instantiating and making the client available to your app
+via the service container. In that case, you'll simply need to require the
+`netsuitephp/netsuite-laravel` package in your application and then as long
+as the client configuration is present in the application's environment,
+you'll have a client instance in the container.
+
+
 ## Account-Specific Data Center URLs
 
-With 2019_1, this library provides support to utilize NetSuite's new
-account-specific data center URL with each request. In practice, this lookup
-does have a measurable overhead cost. As such, I'd suggest using this
+With `2019_1`, this library provides support to utilize NetSuite's new
+account-specific data center URL detection on each request. In practice, this
+lookup does have a measurable overhead cost. As such, I'd suggest using this
 feature only if your manner of NetSuite integration is such that you make
 fewer connections, handling integration in batches. If your manner of
 integration is to instead make many frequent, brief requests from NetSuite,
@@ -80,7 +137,7 @@ then you will probably prefer to provide your data center URL explicitly and
 remove the lookup from every session.
 
 ```php
-// To use your own defined data center URL (or sandbox, for instance):
+// Recommended: Use your own defined data center URL (or sandbox, for instance):
 $config['host'] = 'https://123456789.suitetalk.api.netsuite.com';
 
 // To allow the service to get the correct URL for your account on the fly,
@@ -88,256 +145,90 @@ $config['host'] = 'https://123456789.suitetalk.api.netsuite.com';
 $config['host'] = 'https://webservices.netsuite.com';
 ```
 
-#### Retreiving a customer record:
+## Examples
+
+See [EXAMPLES.md](EXAMPLES.md)
+
+## Logging
+
+The most common way to enable logging will be to do so at the configuration
+level, see the [quickstart](#quickstart) examples.
+
+You can also set logging on or off during runtime with methods. Note that
+if you don't specify a logging directory in the config or at runtime, then
+no logs will be created. There must be a valid target location.
 
 ```php
-use NetSuite\Classes\GetRequest;
-use NetSuite\Classes\RecordRef;
-
-$request = new GetRequest();
-$request->baseRef = new RecordRef();
-$request->baseRef->internalId = "123";
-$request->baseRef->type = "customer";
-
-$getResponse = $service->get($request);
-
-if ( ! $getResponse->readResponse->status->isSuccess) {
-    echo "GET ERROR";
-} else {
-    $customer = $getResponse->readResponse->record;
-}
-```
-
-#### Searching for customers who emails start with "j":
-
-```php
-use NetSuite\Classes\SearchStringField;
-use NetSuite\Classes\CustomerSearchBasic;
-use NetSuite\Classes\SearchRequest;
-
-$service->setSearchPreferences(false, 20);
-
-$emailSearchField = new SearchStringField();
-$emailSearchField->operator = "startsWith";
-$emailSearchField->searchValue = "j";
-
-$search = new CustomerSearchBasic();
-$search->email = $emailSearchField;
-
-$request = new SearchRequest();
-$request->searchRecord = $search;
-
-$searchResponse = $service->search($request);
-
-if (!$searchResponse->searchResult->status->isSuccess) {
-    echo "SEARCH ERROR";
-} else {
-    $result = $searchResponse->searchResult;
-    $count = $result->totalRecords;
-    $records = $result->recordList;
-
-    echo $count . " records were found.";
-}
-```
-
-#### Adding a new customer:
-
-```php
-use NetSuite\Classes\Customer;
-use NetSuite\Classes\RecordRef;
-use NetSuite\Classes\AddRequest;
-
-$customer = new Customer();
-$customer->lastName = "Doe";
-$customer->firstName = "John";
-$customer->companyName = "ABC company";
-$customer->phone = "123456789";
-$customer->email = "joe.doe@abc.com";
-
-$customer->customForm = new RecordRef();
-$customer->customForm->internalId = -8;
-
-$request = new AddRequest();
-$request->record = $customer;
-
-$addResponse = $service->add($request);
-
-if (!$addResponse->writeResponse->status->isSuccess) {
-    echo "ADD ERROR";
-} else {
-    echo "ADD SUCCESS, id " . $addResponse->writeResponse->baseRef->internalId;
-}
-```
-
-#### Adding a salesOrder with a custom field:
-
-This example of an order creation is not a complete example but shows how
-you set up and add the object generally as well as how you would add custom
-fields to the sale on insert.
-
-```php
-use NetSuite\Classes\AddRequest;
-use NetSuite\Classes\CustomFieldList;
-use NetSuite\Classes\RecordRef;
-use NetSuite\Classes\SalesOrder;
-use NetSuite\Classes\StringCustomField;
-
-$sale = new SalesOrder();
-
-// Associate a customer record with this order
-$sale->entity = new RecordRef();
-$sale->entity->type = 'customer';
-$sale->entity->internalId = $myCustomerInternalId;
-
-// Set the date of the order
-$sale->tranDate = $myOrderDate;
-
-// Set the shipping method and price for the order
-$sale->shipMethod = new RecordRef();
-$sale->shipMethod->internalId = $myShipMethodId;
-$sale->shippingCost = $myShippingTotal;
-
-// Look at the SalesOrder class definition for a list of all the available
-// properties and their types that you can use on a sales order in NetSuite.
-// You'll need to add items, addresses, status, etc.
-
-// Create a sample string-type custom field to the order which represents
-// the ID of the order in our source platform:
-$cfOrderNum = new StringCustomFieldRef();
-$cfOrderNum->scriptId = 'custbody_order_num';
-$cfOrderNum->value = $myOrderNumber;
-
-// Collect all custom fields into an array and add the list of fields to the
-// order add request:
-$customFields[] = $cfOrderNum;
-$sale->customFieldList = new CustomFieldList();
-$sale->customFieldList->customField = $customFields;
-
-// Submit the sales order create request
-$request = new AddRequest();
-$request->record = $sale;
-$response = $service->add($request);
-
-if (!$addResponse->writeResponse->status->isSuccess) {
-    echo "ADD ERROR";
-} else {
-    echo "ADD SUCCESS, id " . $addResponse->writeResponse->baseRef->internalId;
-}
-```
-
-#### Creating an Item Fulfillment:
-
-Creating an item fulfillment against a Sales Order requires initializing the
-new record based on the target record (the sales order). Then you can set
-the properties on the new record accordingly and add it to NetSuite. The
-same method is used for creating CashSale records.
-
-```php
-use NetSuite\Classes\AddRequest;
-use NetSuite\Classes\InitializeRecord;
-use NetSuite\Classes\InitializeRef;
-use NetSuite\Classes\InitializeRequest;
-use NetSuite\Classes\ItemFulfillmentPackage;
-use NetSuite\Classes\ItemFulfillmentPackageList;
-
-// Initialize an item fulfillment from an existing Sales Order
-$reference = new InitializeRef();
-$reference->type = InitializeRefType::salesOrder;
-$reference->internalId = $mySalesOrderInternalId;
-
-$record = new InitializeRecord();
-$record->type = InitializeType::itemFulfillment;
-$record->reference = $reference;
-
-$request = new InitializeRequest();
-$request->initializeRecord = $record;
-
-$response = $service->initialize($request);
-
-if (!$response->readResponse->status->isSuccess) {
-    echo "INIT ERROR";
-}
-
-$itemFulfillment = $response->readResponse->record;
-
-$package = new ItemFulfillmentPackage();
-$package->packageWeight = 1;
-$package->packageTrackingNumber = $myTrackingNumber;
-
-$packageList = new ItemFulfillmentPackageList();
-$packageList->package = $package;
-$itemFulfillment->packageList = $packageList;
-
-$request = new AddRequest();
-$request->record = $itemFulfillment;
-
-$response = $service->add($request);
-
-if (!$response->writeResponse->status->isSuccess) {
-    echo "ADD ERROR";
-} else {
-    echo "ADD SUCCESS, id " . $addResponse->writeResponse->baseRef->internalId;
-}
-```
-
-### Logging
-
-You can set logging on or off on the fly, or override the configuration setting passed in.
-Please note that if you don't specify a logging directory in the config or afterwards, then you won't get logs no matter what you do.
-
-**Set a logging path**
-
-```php
+// Set a logging path
 $service->setLogPath('/path/to/logs');
-```
 
-**Turn logging on**
-
-```php
+// Turn logging on
 $service->logRequests(true);  // Turn logging on.
-```
 
-**Turn logging off**
-
-```php
+// Turn logging off
 $service->logRequests(false); // Turn logging off.
 ```
 
-#### Token-Based Authentication
+## Generating Classes
 
-Instead of instantiating `NetSuiteService` with the standard credentials method, you can pass a set of credentials of the form `consumerKey`/`consumerSecret`/`token`/`tokenSecret`.
+This repository always contains classes generated from the version of the
+NetSuite PHP Toolkit corresponding with the web services version denoted
+by the specific release. Release `v2020.2.0`, for instance, is the first
+release built against NetSuite's `2020_1` web services toolkit. If you want
+to generate the class files yourself, for whatever reason, there is code
+included with the package to do so, using the following steps:
 
-```php
-$config = array(
-   // required -------------------------------------
-   "endpoint"       => "2019_1",
-   "host"           => "https://webservices.netsuite.com",
-   "account"        => "MYACCT1",
-   "consumerKey"    => "0123456789ABCDEF",
-   "consumerSecret" => "0123456789ABCDEF",
-   "token"          => "0123456789ABCDEF",
-   "tokenSecret"    => "0123456789ABCDEF",
-   // optional -------------------------------------
-   "signatureAlgorithm" => 'sha256', // Defaults to 'sha256'
-);
+* Download the
+[NetSuite PHP Toolkit](http://www.netsuite.com/portal/developers/resources/suitetalk-sample-applications.shtml)
+* Unzip the contents into the `./original/` folder
+* Run `./utilities/separate_classes.php` or `composer generate`
 
-$service = new NetSuiteService($config);
-```
+## Roadmap
 
-## Status
+#### PHP Version Support
 
- - [x] Extract the ~1500 classes from their single file...
- - [x] Composer package with autoloading
- - [x] Pass config through constructor
- - [x] Optional environment variable config
- - [x] Namespacing
- - [x] Logging
- - [x] Dynamic Data Center URLs
- - [x] Expanded user documentation
- - [x] Support automagic configuration via ENV variables
+See: https://www.php.net/supported-versions.php
+
+With official support for PHP5 gone since the end of 2018 and with PHP7
+moving to security-only by the end of 2021, the versions of PHP supported
+by this package will start to be gradually moved forward.
+
+For the time being, expect the following for `netsuitephp/netsuite-php`:
+
+* require `"php": ">=7.1"` as of the `2021_1` build
+* require `"php": ">=8"` as of the `2023_1` build
+
+**This will apply only to new releases of the package, so you will still be
+able to continue using the last supported version for your PHP release if
+you can't or won't update PHP.**
+
+## Support
+
+If you need help with implementation, see the
+[resources section](EXAMPLES.md#resources) of the examples file for some
+useful links.
+
+If you believe that your issue is a bug specific to the custom work provided
+by this package (and not NetSuite's own classes that are packaged therein),
+then you can file an issue in github. Per the issue template, please include
+a clear description of the problem, how it is reproduced and the logs of
+relevant requests/responses using the logging features of this package.
+
+## Contributing
+
+Contributions are welcome in the form of pull requests. Please include a clear
+explanation of the reason for the change and try to keep changes as small as
+possible, which will increase the speed with which we can get them reviewed
+and the likelihood of being included into the master branch.
+
+* Make sure to respect the current required `php` version in `composer.json`
+* Avoid introducing new dependencies (no framework hooks, etc)
+* Please try to make all additions comply with
+[PSR-12](https://www.php-fig.org/psr/psr-12/)
+
 
 ## License
 
-[Original work](http://www.netsuite.com/portal/developers/resources/suitetalk-sample-applications.shtml) is Copyright &copy; 2010-2015 NetSuite Inc. and provided "as is." Refer to the [NetSuite Toolkit License Agreement](https://github.com/ryanwinchester/netsuite-php/blob/master/original/NetSuite%20Application%20Developer%20License%20Agreement.txt) file.
+[Original work](http://www.netsuite.com/portal/developers/resources/suitetalk-sample-applications.shtml) is Copyright &copy; 2010-2015 NetSuite Inc. and provided "as is." Refer to the [NetSuite Toolkit License Agreement](original/NetSuite%20Application%20Developer%20License%20Agreement.txt) file.
 
-All additional work is licensed under the **Apache 2.0** open source software license according to the included [LICENSE](https://github.com/ryanwinchester/netsuite-php/blob/master/LICENSE.txt) file.
+All additional work is licensed under the **Apache 2.0** open source software license according to the included [LICENSE](LICENSE.txt) file.
