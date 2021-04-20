@@ -14,7 +14,7 @@
  * @license    https://raw.githubusercontent.com/netsuitephp/netsuite-php/master/original/NetSuite%20Application%20Developer%20License%20Agreement.txt
  * @link       http://www.netsuite.com/portal/developers/resources/suitetalk-sample-applications.shtml
  *
- * generated:  2021-03-03 09:44:33 AM CST
+ * generated:  2021-04-19 07:44:22 PM PDT
  */
 
 return array(
