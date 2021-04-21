@@ -23,6 +23,10 @@ if (!file_exists($file)) {
     return 1;
 }
 
+foreach (glob(base_path() . '/src/Classes/*') as $rm_file) {
+    @unlink($rm_file);
+}
+
 // Load the NS_ENDPOINT const for generating the NetSuiteService class
 require base_path() . "/original/PHPToolkit/NSconfig.php";
 $separator = new ClassSeparator($file);
