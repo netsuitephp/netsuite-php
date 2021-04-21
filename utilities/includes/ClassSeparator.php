@@ -17,11 +17,11 @@ class ClassSeparator
     private $file;
     private $generated_at;
 
-    public static $enum_classes = array(
+    public static $enum_classes = [
         'RecordType' => TRUE,
         'Country' => TRUE,
         'StatusDetailCodeType' => TRUE,
-    );
+    ];
 
     function __construct($file)
     {
@@ -162,7 +162,7 @@ class ClassSeparator
             $tokens = array_filter(token_get_all('<?php class ' . $class), function ($token) {
                 return !(!is_array($token) || $token[0] == T_WHITESPACE);
             });
-            $types = array();
+            $types = [];
             while ($token = current($tokens)) {
                 // If this is the class definition, grab the name.
                 if ($token[0] === T_CLASS) {
@@ -190,8 +190,8 @@ class ClassSeparator
                             $property_type = trim($type_token[1], '"');
                             // If this is describing a scalar value, just use it.
                             if (FALSE !== array_search(
-                                str_replace(array('[',']'), '', $property_type),
-                                array('string', 'integer', 'boolean', 'float')
+                                    str_replace(['[',']'], '', $property_type),
+                                    ['string', 'integer', 'boolean', 'float']
                             )) {
                                 $types[$property_name] = $property_type;
                             }

@@ -31,7 +31,7 @@ class Logger
 
             $xml = simplexml_load_string($Data, 'SimpleXMLElement', LIBXML_NOCDATA);
 
-            $privateFieldXpaths = array(
+            $privateFieldXpaths = [
                 '//password',
                 '//password2',
                 '//currentPassword',
@@ -40,7 +40,7 @@ class Logger
                 '//ccNumber',
                 '//ccSecurityCode',
                 '//socialSecurityNumber',
-            );
+            ];
 
             $privateFields = $xml->xpath(implode(" | ", $privateFieldXpaths));
 
