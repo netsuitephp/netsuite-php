@@ -64,11 +64,10 @@ class NetSuiteClient
           $this->client = $client;
         }
         $this->logger = new Logger(
-            isset($this->config['log_path']) ? $this->config['log_path'] : NULL,
-            isset($this->config['log_format']) ? $this->config['log_format'] : NULL,
-            isset($this->config['log_dateformat']) ? $this->config['log_dateformat'] : NULL
+            empty($this->config['log_path']) ? $this->config['log_path'] : NULL,
+            empty($this->config['log_format']) ? $this->config['log_format'] : Logger::DEFAULT_LOG_FORMAT,
+            empty($this->config['log_dateformat']) ? $this->config['log_dateformat'] : Logger::DEFAULT_DATE_FORMAT
         );
-
     }
 
     /**
