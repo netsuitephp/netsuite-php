@@ -63,7 +63,8 @@ $config = [
     // optional -------------------------------------
     "signatureAlgorithm" => 'sha256', // Defaults to 'sha256'
     "logging"  => true,
-    "log_path" => "/var/www/myapp/logs/netsuite"
+    "log_path" => "/var/www/myapp/logs/netsuite",
+    "logger"   => "Logger", // Custom logger
 ];
 $service = new NetSuiteService($config);
 ```
@@ -89,7 +90,8 @@ $config = [
     "app_id"   => "4AD027CA-88B3-46EC-9D3E-41C6E6A325E2",
     // optional -------------------------------------
     "logging"  => true,
-    "log_path" => "/var/www/myapp/logs/netsuite"
+    "log_path" => "/var/www/myapp/logs/netsuite",
+    "logger"   => "Logger", // Custom logger
 ];
 $service = new NetSuiteService($config);
 ```
@@ -167,6 +169,9 @@ $service->logRequests(true);  // Turn logging on.
 
 // Turn logging off
 $service->logRequests(false); // Turn logging off.
+
+// Use a custom logger - Use Logger.php as sample
+$service->setLogger('MyLogger', '/path/to/logs');
 ```
 
 ## Generating Classes

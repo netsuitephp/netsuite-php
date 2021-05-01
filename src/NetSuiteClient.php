@@ -63,7 +63,11 @@ class NetSuiteClient
         if (isset($client)) {
           $this->client = $client;
         }
-        $this->logger = new Logger(
+
+        if (!isset($this->config['logger'])) {
+            $this->config['logger'] = 'NetSuite\\Logger';
+        }
+        $this->logger = new $this->config['logger'](
             isset($this->config['log_path']) ? $this->config['log_path'] : NULL
         );
 
@@ -94,7 +98,7 @@ class NetSuiteClient
     public static function getEnvConfig()
     {
         $config = [
-            'endpoint'           => getenv('NETSUITE_ENDPOINT') ?: '2019_1',
+            'endpoint'           => getenv('NETSUITE_ENDPOINT') ?: '2021_1',
             'host'               => getenv('NETSUITE_HOST') ?: 'https://webservices.sandbox.netsuite.com',
             'email'              => getenv('NETSUITE_EMAIL'),
             'password'           => getenv('NETSUITE_PASSWORD'),
@@ -413,6 +417,17 @@ class NetSuiteClient
     }
 
     /**
+     * Set a custom logger
+	 * 
+	 * @param string $logger Name of class
+     * @param string $logPath
+     */
+    public function setLogger($logger, $logPath) {
+        $this->config['log_path'] = $logPath;
+        $this->logger = new $this->config['logger']($logPath);
+    }
+
+    /**
      * Set the logging path.
      *
      * @param string $logPath
@@ -420,7 +435,7 @@ class NetSuiteClient
     public function setLogPath($logPath)
     {
         $this->config['log_path'] = $logPath;
-        $this->logger = new Logger($logPath);
+        $this->logger = new $this->config['logger']($logPath);
     }
 
     /**
