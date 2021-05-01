@@ -418,8 +418,8 @@ class NetSuiteClient
 
     /**
      * Set a custom logger
-	 * 
-	 * @param string $logger Name of class
+     * 
+     * @param string $logger Name of class
      * @param string $logPath
      */
     public function setLogger($logger, $logPath) {
