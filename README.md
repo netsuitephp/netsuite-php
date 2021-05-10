@@ -37,6 +37,17 @@ Require with composer:
 ```
 composer require ryanwinchester/netsuite-php
 ```
+In side composer.json add the following lines:
+####Repositories section:
+
+```
+"repositories": [
+  {
+    "type": "vcs",
+    "url": "https://github.com/FSElias/netsuite-php"
+  }
+],
+```
 
 ## Quickstart:
 
