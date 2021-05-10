@@ -1,12 +1,12 @@
 <?php
 /**
- * This file is part of the SevenShores/NetSuite library.
+ * This file is part of the netsuitephp/netsuite-php library.
  *
  * @package    ryanwinchester/netsuite-php
  * @author     Ryan Winchester <fungku@gmail.com>
  * @copyright  Copyright (c) Ryan Winchester
  * @license    http://www.apache.org/licenses/LICENSE-2.0 Apache-2.0
- * @link       https://github.com/ryanwinchester/netsuite-php
+ * @link       https://github.com/netsuitephp/netsuite-php
  * created:    2015-01-22  1:04 PM
  */
 
@@ -16,6 +16,12 @@ class ClassSeparator
 {
     private $file;
     private $generated_at;
+
+    public static $enum_classes = [
+        'RecordType' => TRUE,
+        'Country' => TRUE,
+        'StatusDetailCodeType' => TRUE,
+    ];
 
     function __construct($file)
     {
@@ -152,13 +158,11 @@ class ClassSeparator
      */
     private function writeClassesToFiles(array $classes)
     {
-        $date = $this->generated_at;
-
-        return array_walk($classes, function ($class) use ($date) {
+        return array_walk($classes, function ($class) {
             $tokens = array_filter(token_get_all('<?php class ' . $class), function ($token) {
                 return !(!is_array($token) || $token[0] == T_WHITESPACE);
             });
-            $types = array();
+            $types = [];
             while ($token = current($tokens)) {
                 // If this is the class definition, grab the name.
                 if ($token[0] === T_CLASS) {
@@ -186,14 +190,17 @@ class ClassSeparator
                             $property_type = trim($type_token[1], '"');
                             // If this is describing a scalar value, just use it.
                             if (FALSE !== array_search(
-                                str_replace(array('[',']'), '', $property_type),
-                                array('string', 'integer', 'boolean', 'float')
+                                    str_replace(['[',']'], '', $property_type),
+                                    ['string', 'integer', 'boolean', 'float']
                             )) {
                                 $types[$property_name] = $property_type;
                             }
                             // Date time is really a string containing a date.
                             elseif ($property_type == 'dateTime' || $property_type == 'dateTime[]') {
                                 $types[$property_name] = str_replace('dateTime', 'string', $property_type);
+                            }
+                            elseif (isset(ClassSeparator::$enum_classes[$property_type]) || preg_match('/Operator$/', $property_type)) {
+                                $types[$property_name] = '\\NetSuite\\Classes\\' . $property_type . '::*';
                             }
                             // This is a NetSuite value so map it to a class.
                             else {

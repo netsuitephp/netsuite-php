@@ -42,7 +42,7 @@ namespace {
 
         if (!isset($typesmap)) {
             // if the class does not have paramtypesmap, consider it empty
-            $typesmap = array();
+            $typesmap = [];
         }
 
         if ($fieldArray == null) {
