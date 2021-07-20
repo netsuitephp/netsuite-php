@@ -138,7 +138,7 @@ you'll have a client instance in the container.
 
 ## Account-Specific Data Center URLs
 
-With `2019_1`, this library provides support to utilize NetSuite's new
+With `2020_2`, this library provides support to utilize NetSuite's new
 account-specific data center URL detection on each request. In practice, this
 lookup does have a measurable overhead cost. As such, I'd suggest using this
 feature only if your manner of NetSuite integration is such that you make
