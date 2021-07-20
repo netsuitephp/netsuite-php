@@ -17,11 +17,22 @@
 
 namespace NetSuite\Classes;
 
-class TermRecurrenceFrequency {
+class EmployeeCorporateCards {
+    /**
+     * @var string
+     */
+    public $embossedName;
+    /**
+     * @var string
+     */
+    public $expiration;
+    /**
+     * @var \NetSuite\Classes\RecordRef
+     */
+    public $corporateCardProfile;
     static $paramtypesmap = array(
+        "embossedName" => "string",
+        "expiration" => "dateTime",
+        "corporateCardProfile" => "RecordRef",
     );
-    const _annually = "_annually";
-    const _daily = "_daily";
-    const _monthly = "_monthly";
-    const _weekly = "_weekly";
 }

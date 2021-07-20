@@ -961,6 +961,10 @@ class TransactionSearchBasic extends SearchRecordBasic {
     /**
      * @var \NetSuite\Classes\SearchBooleanField
      */
+    public $policyViolated;
+    /**
+     * @var \NetSuite\Classes\SearchBooleanField
+     */
     public $posting;
     /**
      * @var \NetSuite\Classes\RecordRef
@@ -1666,6 +1670,7 @@ class TransactionSearchBasic extends SearchRecordBasic {
         "payPalTranId" => "SearchStringField",
         "pnRefNum" => "SearchStringField",
         "poAsText" => "SearchStringField",
+        "policyViolated" => "SearchBooleanField",
         "posting" => "SearchBooleanField",
         "postingPeriod" => "RecordRef",
         "postingPeriodRelative" => "PostingPeriodDate",

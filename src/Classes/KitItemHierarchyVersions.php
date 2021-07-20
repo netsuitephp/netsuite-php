@@ -17,11 +17,32 @@
 
 namespace NetSuite\Classes;
 
-class TermRecurrenceFrequency {
+class KitItemHierarchyVersions {
+    /**
+     * @var boolean
+     */
+    public $isIncluded;
+    /**
+     * @var \NetSuite\Classes\RecordRef
+     */
+    public $hierarchyVersion;
+    /**
+     * @var string
+     */
+    public $startDate;
+    /**
+     * @var string
+     */
+    public $endDate;
+    /**
+     * @var \NetSuite\Classes\RecordRef
+     */
+    public $hierarchyNode;
     static $paramtypesmap = array(
+        "isIncluded" => "boolean",
+        "hierarchyVersion" => "RecordRef",
+        "startDate" => "dateTime",
+        "endDate" => "dateTime",
+        "hierarchyNode" => "RecordRef",
     );
-    const _annually = "_annually";
-    const _daily = "_daily";
-    const _monthly = "_monthly";
-    const _weekly = "_weekly";
 }

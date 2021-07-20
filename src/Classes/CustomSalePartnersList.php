@@ -17,11 +17,17 @@
 
 namespace NetSuite\Classes;
 
-class TermRecurrenceFrequency {
+class CustomSalePartnersList {
+    /**
+     * @var \NetSuite\Classes\Partners[]
+     */
+    public $partners;
+    /**
+     * @var boolean
+     */
+    public $replaceAll;
     static $paramtypesmap = array(
+        "partners" => "Partners[]",
+        "replaceAll" => "boolean",
     );
-    const _annually = "_annually";
-    const _daily = "_daily";
-    const _monthly = "_monthly";
-    const _weekly = "_weekly";
 }

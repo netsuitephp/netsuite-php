@@ -17,11 +17,22 @@
 
 namespace NetSuite\Classes;
 
-class TermRecurrenceFrequency {
+class GetAccountGovernanceInfoResult {
+    /**
+     * @var \NetSuite\Classes\Status
+     */
+    public $status;
+    /**
+     * @var integer
+     */
+    public $accountConcurrencyLimit;
+    /**
+     * @var integer
+     */
+    public $unallocatedConcurrencyLimit;
     static $paramtypesmap = array(
+        "status" => "Status",
+        "accountConcurrencyLimit" => "integer",
+        "unallocatedConcurrencyLimit" => "integer",
     );
-    const _annually = "_annually";
-    const _daily = "_daily";
-    const _monthly = "_monthly";
-    const _weekly = "_weekly";
 }

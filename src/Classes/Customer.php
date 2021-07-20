@@ -555,6 +555,10 @@ class Customer extends Record {
      */
     public $taxRegistrationList;
     /**
+     * @var \NetSuite\Classes\RecordRef
+     */
+    public $defaultAllocationStrategy;
+    /**
      * @var \NetSuite\Classes\CustomFieldList
      */
     public $customFieldList;
@@ -701,6 +705,7 @@ class Customer extends Record {
         "groupPricingList" => "CustomerGroupPricingList",
         "itemPricingList" => "CustomerItemPricingList",
         "taxRegistrationList" => "CustomerTaxRegistrationList",
+        "defaultAllocationStrategy" => "RecordRef",
         "customFieldList" => "CustomFieldList",
         "internalId" => "string",
         "externalId" => "string",

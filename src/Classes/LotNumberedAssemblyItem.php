@@ -563,9 +563,21 @@ class LotNumberedAssemblyItem extends Record {
      */
     public $autoLeadTime;
     /**
-     * @var integer
+     * @var float
      */
     public $buildTime;
+    /**
+     * @var float
+     */
+    public $buildTimeLotSize;
+    /**
+     * @var float
+     */
+    public $fixedBuildTime;
+    /**
+     * @var \NetSuite\Classes\RecordRef
+     */
+    public $planningItemCategory;
     /**
      * @var float
      */
@@ -1015,7 +1027,10 @@ class LotNumberedAssemblyItem extends Record {
         "purchaseDescription" => "string",
         "leadTime" => "integer",
         "autoLeadTime" => "boolean",
-        "buildTime" => "integer",
+        "buildTime" => "float",
+        "buildTimeLotSize" => "float",
+        "fixedBuildTime" => "float",
+        "planningItemCategory" => "RecordRef",
         "safetyStockLevel" => "float",
         "safetyStockLevelDays" => "integer",
         "seasonalDemand" => "boolean",

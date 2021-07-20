@@ -17,11 +17,27 @@
 
 namespace NetSuite\Classes;
 
-class TermRecurrenceFrequency {
+class PaymentInstrumentSearchAdvanced extends SearchRecord {
+    /**
+     * @var \NetSuite\Classes\PaymentInstrumentSearch
+     */
+    public $criteria;
+    /**
+     * @var \NetSuite\Classes\PaymentInstrumentSearchRow
+     */
+    public $columns;
+    /**
+     * @var string
+     */
+    public $savedSearchId;
+    /**
+     * @var string
+     */
+    public $savedSearchScriptId;
     static $paramtypesmap = array(
+        "criteria" => "PaymentInstrumentSearch",
+        "columns" => "PaymentInstrumentSearchRow",
+        "savedSearchId" => "string",
+        "savedSearchScriptId" => "string",
     );
-    const _annually = "_annually";
-    const _daily = "_daily";
-    const _monthly = "_monthly";
-    const _weekly = "_weekly";
 }
