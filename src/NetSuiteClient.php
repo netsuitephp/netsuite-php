@@ -94,7 +94,7 @@ class NetSuiteClient
     public static function getEnvConfig()
     {
         $config = [
-            'endpoint'           => getenv('NETSUITE_ENDPOINT') ?: '2019_1',
+            'endpoint'           => getenv('NETSUITE_ENDPOINT') ?: '2021_1',
             'host'               => getenv('NETSUITE_HOST') ?: 'https://webservices.sandbox.netsuite.com',
             'email'              => getenv('NETSUITE_EMAIL'),
             'password'           => getenv('NETSUITE_PASSWORD'),

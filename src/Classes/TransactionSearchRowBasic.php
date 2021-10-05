@@ -971,6 +971,10 @@ class TransactionSearchRowBasic extends SearchRowBasic {
      */
     public $pnRefNum;
     /**
+     * @var \NetSuite\Classes\SearchColumnBooleanField[]
+     */
+    public $policyViolated;
+    /**
      * @var \NetSuite\Classes\SearchColumnDoubleField[]
      */
     public $poRate;
@@ -1086,6 +1090,18 @@ class TransactionSearchRowBasic extends SearchRowBasic {
      * @var \NetSuite\Classes\SearchColumnDateField[]
      */
     public $requestedDate;
+    /**
+     * @var \NetSuite\Classes\SearchColumnDoubleField[]
+     */
+    public $requiredDepositAmount;
+    /**
+     * @var \NetSuite\Classes\SearchColumnDoubleField[]
+     */
+    public $requiredDepositDue;
+    /**
+     * @var \NetSuite\Classes\SearchColumnDoubleField[]
+     */
+    public $requiredDepositPercentage;
     /**
      * @var \NetSuite\Classes\SearchColumnEnumSelectField[]
      */
@@ -1697,6 +1713,7 @@ class TransactionSearchRowBasic extends SearchRowBasic {
         "payPalTranId" => "SearchColumnStringField[]",
         "payrollBatch" => "SearchColumnStringField[]",
         "pnRefNum" => "SearchColumnStringField[]",
+        "policyViolated" => "SearchColumnBooleanField[]",
         "poRate" => "SearchColumnDoubleField[]",
         "posting" => "SearchColumnBooleanField[]",
         "postingPeriod" => "SearchColumnSelectField[]",
@@ -1726,6 +1743,9 @@ class TransactionSearchRowBasic extends SearchRowBasic {
         "recurWeeklyTotal" => "SearchColumnDoubleField[]",
         "refNumber" => "SearchColumnLongField[]",
         "requestedDate" => "SearchColumnDateField[]",
+        "requiredDepositAmount" => "SearchColumnDoubleField[]",
+        "requiredDepositDue" => "SearchColumnDoubleField[]",
+        "requiredDepositPercentage" => "SearchColumnDoubleField[]",
         "revCommitStatus" => "SearchColumnEnumSelectField[]",
         "revCommittingTransaction" => "SearchColumnSelectField[]",
         "revenueStatus" => "SearchColumnEnumSelectField[]",

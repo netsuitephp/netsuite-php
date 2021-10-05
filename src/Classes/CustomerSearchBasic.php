@@ -207,6 +207,10 @@ class CustomerSearchBasic extends SearchRecordBasic {
      */
     public $daysOverdue;
     /**
+     * @var \NetSuite\Classes\SearchMultiSelectField
+     */
+    public $defaultAllocationStrategy;
+    /**
      * @var \NetSuite\Classes\SearchDoubleField
      */
     public $defaultOrderPriority;
@@ -690,6 +694,7 @@ class CustomerSearchBasic extends SearchRecordBasic {
         "dateClosed" => "SearchDateField",
         "dateCreated" => "SearchDateField",
         "daysOverdue" => "SearchLongField",
+        "defaultAllocationStrategy" => "SearchMultiSelectField",
         "defaultOrderPriority" => "SearchDoubleField",
         "defaultTaxReg" => "SearchMultiSelectField",
         "defaultTaxRegText" => "SearchStringField",

@@ -159,6 +159,10 @@ class ExpenseReport extends Record {
      */
     public $subsidiaryTaxRegNum;
     /**
+     * @var boolean
+     */
+    public $policyViolated;
+    /**
      * @var \NetSuite\Classes\CustomFieldList
      */
     public $customFieldList;
@@ -206,6 +210,7 @@ class ExpenseReport extends Record {
         "taxDetailsList" => "TaxDetailsList",
         "nexus" => "RecordRef",
         "subsidiaryTaxRegNum" => "RecordRef",
+        "policyViolated" => "boolean",
         "customFieldList" => "CustomFieldList",
         "internalId" => "string",
         "externalId" => "string",

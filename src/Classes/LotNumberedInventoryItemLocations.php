@@ -91,6 +91,14 @@ class LotNumberedInventoryItemLocations {
      */
     public $buildTime;
     /**
+     * @var float
+     */
+    public $fixedBuildTime;
+    /**
+     * @var float
+     */
+    public $buildTimeLotSize;
+    /**
      * @var string
      */
     public $lastInvtCountDate;
@@ -217,6 +225,8 @@ class LotNumberedInventoryItemLocations {
         "cost" => "float",
         "inventoryCostTemplate" => "RecordRef",
         "buildTime" => "float",
+        "fixedBuildTime" => "float",
+        "buildTimeLotSize" => "float",
         "lastInvtCountDate" => "dateTime",
         "nextInvtCountDate" => "dateTime",
         "isWip" => "boolean",

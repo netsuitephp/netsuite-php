@@ -14,7 +14,7 @@
  * @license    https://raw.githubusercontent.com/netsuitephp/netsuite-php/master/original/NetSuite%20Application%20Developer%20License%20Agreement.txt
  * @link       http://www.netsuite.com/portal/developers/resources/suitetalk-sample-applications.shtml
  *
- * generated:  2021-04-20 11:11:33 PM CDT
+ * generated:  2021-07-20 01:25:32 PM UTC
  */
 
 return array(
@@ -1606,6 +1606,8 @@ return array(
 		"Employee" => "NetSuite\\Classes\\Employee",
 		"EmployeeSubscriptions" => "NetSuite\\Classes\\EmployeeSubscriptions",
 		"EmployeeSubscriptionsList" => "NetSuite\\Classes\\EmployeeSubscriptionsList",
+		"EmployeeCorporateCards" => "NetSuite\\Classes\\EmployeeCorporateCards",
+		"EmployeeCorporateCardsList" => "NetSuite\\Classes\\EmployeeCorporateCardsList",
 		"EmployeeAddressbook" => "NetSuite\\Classes\\EmployeeAddressbook",
 		"EmployeeAddressbookList" => "NetSuite\\Classes\\EmployeeAddressbookList",
 		"EmployeeRoles" => "NetSuite\\Classes\\EmployeeRoles",

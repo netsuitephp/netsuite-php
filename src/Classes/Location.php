@@ -135,6 +135,14 @@ class Location extends Record {
      */
     public $includeInControlTower;
     /**
+     * @var integer
+     */
+    public $soPredictedDays;
+    /**
+     * @var float
+     */
+    public $soPredConfidence;
+    /**
      * @var \NetSuite\Classes\CustomFieldList
      */
     public $customFieldList;
@@ -176,6 +184,8 @@ class Location extends Record {
         "businessHoursList" => "LocationBusinessHoursList",
         "classTranslationList" => "ClassTranslationList",
         "includeInControlTower" => "boolean",
+        "soPredictedDays" => "integer",
+        "soPredConfidence" => "float",
         "customFieldList" => "CustomFieldList",
         "internalId" => "string",
         "externalId" => "string",
