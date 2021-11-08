@@ -1,13 +1,13 @@
 {
-  "name": "ryanwinchester/netsuite-php",
+  "name": "subtech/netsuite-php",
   "description": "NetSuite PHP API wrapper",
   "keywords": [ "netsuite", "api", "php" ],
   "type": "library",
   "license": "Apache-2.0",
   "authors": [
     {
-      "name": "Ryan Winchester (fungku)",
-      "email": "fungku@gmail.com"
+      "name": "Jaden Shepherd",
+      "email": "jaden.shepherd@submissiontechnology.co.uk"
     }
   ],
   "require": {
