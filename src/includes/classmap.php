@@ -14,7 +14,7 @@
  * @license    https://raw.githubusercontent.com/netsuitephp/netsuite-php/master/original/NetSuite%20Application%20Developer%20License%20Agreement.txt
  * @link       http://www.netsuite.com/portal/developers/resources/suitetalk-sample-applications.shtml
  *
- * generated:  2021-07-20 01:25:32 PM UTC
+ * generated:  2021-11-08 09:36:06 AM UTC
  */
 
 return array(
@@ -1229,6 +1229,7 @@ return array(
 		"CashSalePaymentOperation" => "NetSuite\\Classes\\CashSalePaymentOperation",
 		"SalesOrderPaymentOperation" => "NetSuite\\Classes\\SalesOrderPaymentOperation",
 		"SalesOrderHandlingMode" => "NetSuite\\Classes\\SalesOrderHandlingMode",
+		"UsageStatus" => "NetSuite\\Classes\\UsageStatus",
 		"Opportunity" => "NetSuite\\Classes\\Opportunity",
 		"OpportunitySalesTeam" => "NetSuite\\Classes\\OpportunitySalesTeam",
 		"OpportunitySalesTeamList" => "NetSuite\\Classes\\OpportunitySalesTeamList",

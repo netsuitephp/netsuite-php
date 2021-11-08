@@ -159,6 +159,31 @@ class PurchaseOrderItem {
      */
     public $createdFrom;
     /**
+     * @var \NetSuite\Classes\RecordRef
+     */
+    public $assembly;
+    /**
+     * @var boolean
+     */
+    public $createOutsourcedWO;
+    /**
+     * @var string
+     */
+    public $productionEndDate;
+    /**
+     * @var \NetSuite\Classes\RecordRef
+     */
+    public $billOfMaterialsRevision;
+    public $productionStartDate;
+    /**
+     * @var \NetSuite\Classes\RecordRef
+     */
+    public $assemblyUnits;
+    /**
+     * @var \NetSuite\Classes\RecordRef
+     */
+    public $billOfMaterials;
+    /**
      * @var \NetSuite\Classes\RecordRefList
      */
     public $linkedOrderList;
@@ -202,6 +227,13 @@ class PurchaseOrderItem {
         "isClosed" => "boolean",
         "taxDetailsReference" => "string",
         "createdFrom" => "RecordRef",
+        "assembly" => "RecordRef",
+        "createOutsourcedWO" => "boolean",
+        "productionEndDate" => "dateTime",
+        "billOfMaterialsRevision" => "RecordRef",
+        "productionstartdate" => "dateTime",
+        "assemblyUnits" => "RecordRef",
+        "billOfMaterials" => "RecordRef",
         "linkedOrderList" => "RecordRefList",
         "customFieldList" => "CustomFieldList",
     );
