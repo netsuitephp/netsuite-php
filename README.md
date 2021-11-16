@@ -53,7 +53,7 @@ use NetSuite\NetSuiteService;
 
 $config = [
     // required -------------------------------------
-    "endpoint"       => "2021_1",
+    "endpoint"       => "2021_2",
     "host"           => "https://webservices.netsuite.com",
     "account"        => "MYACCT1",
     "consumerKey"    => "0123456789ABCDEF",
@@ -80,7 +80,7 @@ use NetSuite\NetSuiteService;
 
 $config = [
     // required -------------------------------------
-    "endpoint" => "2021_1",
+    "endpoint" => "2021_2",
     "host"     => "https://webservices.netsuite.com",
     "email"    => "jDoe@netsuite.com",
     "password" => "mySecretPwd",
@@ -127,7 +127,7 @@ you'll have a client instance in the container.
 
 ## Account-Specific Data Center URLs
 
-With `2021_1`, this library provides support to utilize NetSuite's new
+With `2021_2`, this library provides support to utilize NetSuite's new
 account-specific data center URL detection on each request. In practice, this
 lookup does have a measurable overhead cost. As such, I'd suggest using this
 feature only if your manner of NetSuite integration is such that you make
@@ -173,8 +173,8 @@ $service->logRequests(false); // Turn logging off.
 
 This repository always contains classes generated from the version of the
 NetSuite PHP Toolkit corresponding with the web services version denoted
-by the specific release. Release `v2021.1.0`, for instance, is the first
-release built against NetSuite's `2021_1` web services toolkit. If you want
+by the specific release. Release `v2021.2.0`, for instance, is the first
+release built against NetSuite's `2021_2` web services toolkit. If you want
 to generate the class files yourself, for whatever reason, there is code
 included with the package to do so, using the following steps:
 
@@ -195,7 +195,7 @@ by this package will start to be gradually moved forward.
 
 For the time being, expect the following for `netsuitephp/netsuite-php`:
 
-* require `"php": ">=7.1"` as of the `2021_1` build
+* require `"php": ">=7.1"` as of the `2021_2` build
 * require `"php": ">=8"` as of the `2023_1` build
 
 **This will apply only to new releases of the package, so you will still be
