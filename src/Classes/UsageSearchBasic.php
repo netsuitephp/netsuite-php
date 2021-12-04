@@ -55,6 +55,10 @@ class UsageSearchBasic extends SearchRecordBasic {
      */
     public $quantity;
     /**
+     * @var \NetSuite\Classes\SearchEnumMultiSelectField
+     */
+    public $status;
+    /**
      * @var \NetSuite\Classes\SearchMultiSelectField
      */
     public $subscription;
@@ -76,6 +80,7 @@ class UsageSearchBasic extends SearchRecordBasic {
         "item" => "SearchMultiSelectField",
         "memo" => "SearchStringField",
         "quantity" => "SearchDoubleField",
+        "status" => "SearchEnumMultiSelectField",
         "subscription" => "SearchMultiSelectField",
         "subscriptionLine" => "SearchMultiSelectField",
         "subscriptionPlan" => "SearchMultiSelectField",

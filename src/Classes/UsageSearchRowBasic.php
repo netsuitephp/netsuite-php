@@ -47,6 +47,10 @@ class UsageSearchRowBasic extends SearchRowBasic {
      */
     public $quantity;
     /**
+     * @var \NetSuite\Classes\SearchColumnEnumSelectField[]
+     */
+    public $status;
+    /**
      * @var \NetSuite\Classes\SearchColumnSelectField[]
      */
     public $subscription;
@@ -66,6 +70,7 @@ class UsageSearchRowBasic extends SearchRowBasic {
         "item" => "SearchColumnSelectField[]",
         "memo" => "SearchColumnStringField[]",
         "quantity" => "SearchColumnDoubleField[]",
+        "status" => "SearchColumnEnumSelectField[]",
         "subscription" => "SearchColumnSelectField[]",
         "subscriptionLine" => "SearchColumnSelectField[]",
         "subscriptionPlan" => "SearchColumnSelectField[]",
