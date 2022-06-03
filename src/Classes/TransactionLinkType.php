@@ -23,6 +23,7 @@ class TransactionLinkType {
     const _advancedCostAmortization = "_advancedCostAmortization";
     const _advancedExpenseAmortization = "_advancedExpenseAmortization";
     const _authorizationDeposit = "_authorizationDeposit";
+    const _billReceipt = "_billReceipt";
     const _blcgaJeFullfillment = "_blcgaJeFullfillment";
     const _captureAuthorization = "_captureAuthorization";
     const _closedPeriodFxVariance = "_closedPeriodFxVariance";
@@ -39,6 +40,7 @@ class TransactionLinkType {
     const _dropShipment = "_dropShipment";
     const _endorseTegata = "_endorseTegata";
     const _estimateInvoicing = "_estimateInvoicing";
+    const _foreignCurrencyGainLossOnContractAsset = "_foreignCurrencyGainLossOnContractAsset";
     const _fulfillmentRequestFulfillment = "_fulfillmentRequestFulfillment";
     const _glImpactAdjustment = "_glImpactAdjustment";
     const _intercompanyAdjustment = "_intercompanyAdjustment";
@@ -47,6 +49,7 @@ class TransactionLinkType {
     const _kitShipment = "_kitShipment";
     const _landedCost = "_landedCost";
     const _linkedReturnCost = "_linkedReturnCost";
+    const _netContractAssetOrLiabilityPerElement = "_netContractAssetOrLiabilityPerElement";
     const _opportunityClose = "_opportunityClose";
     const _opportunityEstimate = "_opportunityEstimate";
     const _orderBillInvoice = "_orderBillInvoice";
@@ -67,6 +70,7 @@ class TransactionLinkType {
     const _receiptBill = "_receiptBill";
     const _receiptFulfillment = "_receiptFulfillment";
     const _reimbursement = "_reimbursement";
+    const _reservationShipment = "_reservationShipment";
     const _revalueWorkOrder = "_revalueWorkOrder";
     const _revenueAmortizatonRecognition = "_revenueAmortizatonRecognition";
     const _revenueArrangement = "_revenueArrangement";

@@ -355,6 +355,10 @@ class Customer extends Record {
      */
     public $thirdPartyCountry;
     /**
+     * @var \NetSuite\Classes\CustomerThirdPartyCarrier
+     */
+    public $thirdPartyCarrier;
+    /**
      * @var boolean
      */
     public $giveAccess;
@@ -655,6 +659,7 @@ class Customer extends Record {
         "thirdPartyAcct" => "string",
         "thirdPartyZipcode" => "string",
         "thirdPartyCountry" => "Country",
+        "thirdPartyCarrier" => "CustomerThirdPartyCarrier",
         "giveAccess" => "boolean",
         "estimatedBudget" => "float",
         "accessRole" => "RecordRef",

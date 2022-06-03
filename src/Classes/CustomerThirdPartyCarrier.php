@@ -17,11 +17,10 @@
 
 namespace NetSuite\Classes;
 
-class ItemSupplyReplenishmentMethod {
+class CustomerThirdPartyCarrier {
     static $paramtypesmap = array(
     );
-    const _masterProductionScheduling = "_masterProductionScheduling";
-    const _materialRequirementsPlanning = "_materialRequirementsPlanning";
-    const _reorderPoint = "_reorderPoint";
-    const _timePhased = "_timePhased";
+    const _fedex = "_fedex";
+    const _ups = "_ups";
+    const _usps = "_usps";
 }
