@@ -174,6 +174,9 @@ class PurchaseOrderItem {
      * @var \NetSuite\Classes\RecordRef
      */
     public $billOfMaterialsRevision;
+    /**
+     * @var string
+     */
     public $productionStartDate;
     /**
      * @var \NetSuite\Classes\RecordRef
@@ -231,7 +234,7 @@ class PurchaseOrderItem {
         "createOutsourcedWO" => "boolean",
         "productionEndDate" => "dateTime",
         "billOfMaterialsRevision" => "RecordRef",
-        "productionstartdate" => "dateTime",
+        "productionStartDate" => "dateTime",
         "assemblyUnits" => "RecordRef",
         "billOfMaterials" => "RecordRef",
         "linkedOrderList" => "RecordRefList",
