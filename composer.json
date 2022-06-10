@@ -18,7 +18,9 @@
     "paragonie/random_compat": ">=1"
   },
   "require-dev": {
-    "phpspec/phpspec": ">=5"
+    "phpspec/phpspec": ">=5",
+    "phpunit/phpunit": "^9.5",
+    "mikey179/vfsstream": "^1.6"
   },
   "suggest": {
     "vlucas/phpdotenv": "Provides loading a .env file for obtaining config variables",
@@ -31,6 +33,12 @@
     "files": [
       "src/includes/functions.php"
     ]
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "spec\\NetSuite\\": "spec",
+      "tests\\Netsuite\\": "tests"
+    }
   },
   "minimum-stability": "stable",
   "scripts": {
