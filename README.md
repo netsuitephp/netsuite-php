@@ -216,31 +216,6 @@ then you can file an issue in github. Per the issue template, please include
 a clear description of the problem, how it is reproduced and the logs of
 relevant requests/responses using the logging features of this package.
 
-You can set logging on or off on the fly, or override the configuration
-setting passed in. Logging is off by default. If you enable logging, you
-there are defaults for the log directory, filename and filename date format.
-Each of these values can be overridden in your configuration. See the
-[quickstart](#quickstart) section of this document for the available config
-keys pertaining to logging and their default values.
-
-**Set a logging path**
-
-```php
-$service->setLogPath('/path/to/logs');
-```
-
-**Turn logging on**
-
-```php
-$service->logRequests(true);  // Turn logging on.
-```
-
-**Turn logging off**
-
-```php
-$service->logRequests(false); // Turn logging off.
-```
-
 ## Contributing
 
 Contributions are welcome in the form of pull requests. Please include a clear
