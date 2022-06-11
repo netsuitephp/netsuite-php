@@ -64,9 +64,9 @@ class NetSuiteClient
           $this->client = $client;
         }
         $this->logger = new Logger(
-            empty($this->config['log_path']) ? $this->config['log_path'] : NULL,
-            empty($this->config['log_format']) ? $this->config['log_format'] : Logger::DEFAULT_LOG_FORMAT,
-            empty($this->config['log_dateformat']) ? $this->config['log_dateformat'] : Logger::DEFAULT_DATE_FORMAT
+            !empty($this->config['log_path']) ? $this->config['log_path'] : NULL,
+            !empty($this->config['log_format']) ? $this->config['log_format'] : Logger::DEFAULT_LOG_FORMAT,
+            !empty($this->config['log_dateformat']) ? $this->config['log_dateformat'] : Logger::DEFAULT_DATE_FORMAT
         );
     }
 
