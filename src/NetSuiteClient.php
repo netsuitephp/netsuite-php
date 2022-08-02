@@ -64,9 +64,10 @@ class NetSuiteClient
           $this->client = $client;
         }
         $this->logger = new Logger(
-            isset($this->config['log_path']) ? $this->config['log_path'] : NULL
+            !empty($this->config['log_path']) ? $this->config['log_path'] : NULL,
+            !empty($this->config['log_format']) ? $this->config['log_format'] : Logger::DEFAULT_LOG_FORMAT,
+            !empty($this->config['log_dateformat']) ? $this->config['log_dateformat'] : Logger::DEFAULT_DATE_FORMAT
         );
-
     }
 
     /**
@@ -103,6 +104,8 @@ class NetSuiteClient
             'app_id'             => getenv('NETSUITE_APP_ID') ?: '4AD027CA-88B3-46EC-9D3E-41C6E6A325E2',
             'logging'            => getenv('NETSUITE_LOGGING'),
             'log_path'           => getenv('NETSUITE_LOG_PATH'),
+            'log_format'         => getenv('NETSUITE_LOG_FORMAT'),
+            'log_dateformat'     => getenv('NETSUITE_LOG_DATEFORMAT'),
         ];
 
         // These config keys aren't required by all users, but if they are
@@ -420,7 +423,7 @@ class NetSuiteClient
     public function setLogPath($logPath)
     {
         $this->config['log_path'] = $logPath;
-        $this->logger = new Logger($logPath);
+        $this->logger->setPath($logPath);
     }
 
     /**
