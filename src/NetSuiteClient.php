@@ -95,17 +95,21 @@ class NetSuiteClient
     public static function getEnvConfig()
     {
         $config = [
-            'endpoint'           => getenv('NETSUITE_ENDPOINT') ?: '2021_1',
-            'host'               => getenv('NETSUITE_HOST') ?: 'https://webservices.sandbox.netsuite.com',
-            'email'              => getenv('NETSUITE_EMAIL'),
-            'password'           => getenv('NETSUITE_PASSWORD'),
-            'role'               => getenv('NETSUITE_ROLE') ?: '3',
-            'account'            => getenv('NETSUITE_ACCOUNT'),
-            'app_id'             => getenv('NETSUITE_APP_ID') ?: '4AD027CA-88B3-46EC-9D3E-41C6E6A325E2',
-            'logging'            => getenv('NETSUITE_LOGGING'),
-            'log_path'           => getenv('NETSUITE_LOG_PATH'),
-            'log_format'         => getenv('NETSUITE_LOG_FORMAT'),
-            'log_dateformat'     => getenv('NETSUITE_LOG_DATEFORMAT'),
+            'endpoint'                          => getenv('NETSUITE_ENDPOINT') ?: '2021_1',
+            'host'                              => getenv('NETSUITE_HOST') ?: 'https://webservices.sandbox.netsuite.com',
+            'email'                             => getenv('NETSUITE_EMAIL'),
+            'password'                          => getenv('NETSUITE_PASSWORD'),
+            'role'                              => getenv('NETSUITE_ROLE') ?: '3',
+            'account'                           => getenv('NETSUITE_ACCOUNT'),
+            'app_id'                            => getenv('NETSUITE_APP_ID') ?: '4AD027CA-88B3-46EC-9D3E-41C6E6A325E2',
+            'logging'                           => getenv('NETSUITE_LOGGING'),
+            'log_path'                          => getenv('NETSUITE_LOG_PATH'),
+            'log_format'                        => getenv('NETSUITE_LOG_FORMAT'),
+            'log_dateformat'                    => getenv('NETSUITE_LOG_DATEFORMAT'),
+            'retry_limit_exceeded'              => getenv('NETSUITE_RETRY_LIMIT_EXCEEDED') ?: false,
+            'retry_limit_exceeded_attempts'     => getenv('NETSUITE_RETRY_LIMIT_EXCEEDED_ATTEMPTS') ?: '3',
+            'retry_limit_exceeded_time_sec'     => getenv('NETSUITE_RETRY_LIMIT_EXCEEDED_TIME_SEC') ?: '1',
+            'retry_limit_exceeded_time_usec'    => getenv('NETSUITE_RETRY_LIMIT_EXCEEDED_TIME_USEC'),
         ];
 
         // These config keys aren't required by all users, but if they are
@@ -183,23 +187,48 @@ class NetSuiteClient
      */
     protected function makeSoapCall($operation, $parameter)
     {
-        $this->fixWtfCookieBug();
+        $soapLimitExceeded = false;
+        $soapLimitRetryCount = 0;
+        do {
+            $this->fixWtfCookieBug();
 
-        if (isset($this->config['token'])) {
-            $this->addHeader('tokenPassport', $this->createTokenPassportFromConfig($this->config));
-        } else {
-            $this->setApplicationInfo($this->config['app_id']);
-            $this->addHeader("passport", $this->createPassportFromConfig($this->config));
-        }
+            if (isset($this->config['token'])) {
+                $this->addHeader('tokenPassport', $this->createTokenPassportFromConfig($this->config));
+            } else {
+                $this->setApplicationInfo($this->config['app_id']);
+                $this->addHeader("passport", $this->createPassportFromConfig($this->config));
+            }
 
-        try {
-            $response = $this->getClient()->__soapCall($operation, [$parameter], null, $this->soapHeaders);
-            $this->logSoapCall($operation);
-            return $response;
-        } catch (\Exception $e) {
-            $this->logSoapCall($operation);
-            throw $e;
-        }
+            try {
+                $this->logSoapCall('soapCall attempt #'.$soapLimitRetryCount);
+                $soapLimitExceeded = false;
+                $response = $this->getClient()->__soapCall($operation, [$parameter], null, $this->soapHeaders);
+                $this->logSoapCall($operation);
+                return $response;
+            } catch (\Exception $e) {
+                $this->logSoapCall($operation);
+                if (isset($e->detail->exceededConcurrentRequestLimitFault) && isset($this->config['retry_limit_exceeded']) && $this->config['retry_limit_exceeded']) {
+                    $soapLimitExceeded = true;
+                    $soapLimitRetryCount++;
+                    if ($soapLimitRetryCount > $this->config['retry_limit_exceeded_attempts']) {
+                        $this->logSoapCall($operation);
+                        $this->logSoapCall('Giving up on SOAP Call - it will fail. Retry limit reached: ('.$soapLimitRetryCount.'/'.$this->config['retry_limit_exceeded_attempts'].')');
+                        throw $e; //If limit was still exceeded, throw so that we don't retry anymore.
+                    }
+
+                    $this->logSoapCall('Retrying SoapCall as limit was exceeded');
+                    if (isset($this->config['retry_limit_exceeded_time_usec']) && $this->config['retry_limit_exceeded_time_usec'])
+                        usleep($this->config['retry_limit_exceeded_time_usec']);
+                    else if (isset($this->config['retry_limit_exceeded_time_sec']) && $this->config['retry_limit_exceeded_time_sec'])
+                        sleep($this->config['retry_limit_exceeded_time_sec']);
+
+                } else {
+                    $this->logSoapCall($operation);
+                    throw $e;
+                }
+            }
+        } while ($soapLimitExceeded && isset($this->config['retry_limit_exceeded']) && $this->config['retry_limit_exceeded'] && $soapLimitRetryCount < $this->config['retry_limit_exceeded_attempts']);
+        $this->logSoapCall('Giving up on SOAP Call - it will fail. Retry limit reached: ('.$soapLimitRetryCount.'/'.$this->config['retry_limit_exceeded_attempts'].')');
     }
 
     /**

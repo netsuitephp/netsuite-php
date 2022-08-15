@@ -66,6 +66,10 @@ $config = [
     "log_path" => "/var/www/myapp/logs/netsuite",
     "log_format"     => "netsuite-php-%date-%operation",
     "log_dateformat" => "Ymd.His.u",
+    "retry_limit_exceeded" => false, //Disable retry if concurrent limit exceeded
+    "retry_limit_exceeded_attempts" => "3",
+    "retry_limit_exceeded_time_sec" => "1",
+    "retry_limit_exceeded_time_usec" => "",
 ];
 $service = new NetSuiteService($config);
 ```
@@ -169,6 +173,32 @@ $service->logRequests(true);  // Turn logging on.
 
 // Turn logging off
 $service->logRequests(false); // Turn logging off.
+```
+
+## Retry SOAP Call if failure is due to Netsuite's Concurrent Request Limit
+
+This feature is disabled by default. It allows you to have the SOAP call
+retried automatically if a call fails with ExceededConcurrentRequestLimitFault.
+
+Once enabled, you can use other options to configure how long to wait between
+retries, in an attempt to avoid repeating the same concurrent request limit.
+Both seconds and microseconds are supported.
+
+```php
+// First enable the feature
+$config['retry_limit_exceeded'] = true;
+
+// Set the number of times to retry a call that fails due to the concurrency
+// Defaults to 3.
+$config['retry_limit_exceeded_attempts'] = '5';
+
+// Set the usec option if you want to wait for less than 1 second.
+// E.g. 500000 for 0.5 seconds. NOTE: Also set the sec option to 0.
+$config['retry_limit_exceeded_time_usec'] = '500000';
+
+// Or increase the number of seconds to wait between attempts.
+// By default it waits 1 second, and usec is not used.
+$config['retry_limit_exceeded_time_sec'] = '5';
 ```
 
 ## Generating Classes
