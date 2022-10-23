@@ -20,6 +20,7 @@ use NetSuite\Classes\RecordRef;
 use NetSuite\Classes\SearchPreferences;
 use NetSuite\Classes\TokenPassport;
 use NetSuite\Classes\TokenPassportSignature;
+use Psr\Log\LoggerInterface;
 use SoapClient;
 use SoapHeader;
 
@@ -42,29 +43,33 @@ class NetSuiteClient
      */
     private $soapHeaders = [];
     /**
-     * @var \NetSuite\Logger
+     * @var \Psr\Log\LoggerInterface
      */
     private $logger;
 
     /**
-     * @param array $config
+     * @param array|null $config
      * @param array $options
-     * @param SoapClient $client
+     * @param SoapClient|null $client
+     * @param \Psr\Log\LoggerInterface|null $logger
      */
-    public function __construct($config = null, $options = [], $client = null)
-    {
-        if ($config) {
-            $this->config = $config;
-        } else {
-            $this->config = self::getEnvConfig();
-        }
+    public function __construct(
+        ?array $config = null,
+        array $options = [],
+        ?SoapClient $client = null,
+        ?LoggerInterface $logger = null
+    ) {
+        $this->config = $config ?? self::getEnvConfig();
+
         $this->validateConfig($this->config);
         $this->clientOptions = $options;
+
         if (isset($client)) {
-          $this->client = $client;
+            $this->client = $client;
         }
-        $this->logger = new Logger(
-            !empty($this->config['log_path']) ? $this->config['log_path'] : NULL,
+
+        $this->logger = $logger ?? new Logger(
+            !empty($this->config['log_path']) ? $this->config['log_path'] : null,
             !empty($this->config['log_format']) ? $this->config['log_format'] : Logger::DEFAULT_LOG_FORMAT,
             !empty($this->config['log_dateformat']) ? $this->config['log_dateformat'] : Logger::DEFAULT_DATE_FORMAT
         );
@@ -423,7 +428,10 @@ class NetSuiteClient
     public function setLogPath($logPath)
     {
         $this->config['log_path'] = $logPath;
-        $this->logger->setPath($logPath);
+
+        if ($this->logger instanceof Logger) {
+            $this->logger->setPath($logPath);
+        }
     }
 
     /**
@@ -434,7 +442,15 @@ class NetSuiteClient
     private function logSoapCall($operation)
     {
         if (isset($this->config['logging']) && $this->config['logging']) {
-            $this->logger->logSoapCall($this->getClient(), $operation);
+            $this->logger->info(
+                Logger::getSoapCallRequestMessage($this->getClient()),
+                ['operation' => $operation, 'type' => Logger::TYPE_REQUEST]
+            );
+
+            $this->logger->info(
+                Logger::getSoapCallResponseMessage($this->getClient()),
+                ['operation' => $operation, 'type' => Logger::TYPE_RESPONSE]
+            );
         }
     }
 
