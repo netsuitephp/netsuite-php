@@ -14,10 +14,6 @@ standard autoloading support. It allows configuration to be read from the
 environment, adds support to log requests and responses and provides a
 simplified client wrapper class (`NetSuiteService`).
 
-| :warning: PHP5 support being discontinued in 2021|
-|:---------------------------|
-| Please see the [roadmap](#roadmap) for PHP support plans in the coming years.|
-
 * [Installation](#installation)
 * [Quickstart](#quickstart)
   * [w/Laravel](#laravel-integration)
@@ -43,7 +39,8 @@ composer require ryanwinchester/netsuite-php
 #### Instantiating the NetSuiteService class:
 
 Any of the examples herein will assume you have already instantiated a client
-object using one of the methods below.
+object using token-based authentication. The method of authenticating with
+user credentials was dropped from support by NetSuite in 2020.
 
 ```php
 // Token-based Authentication
@@ -69,33 +66,6 @@ $config = [
 ];
 $service = new NetSuiteService($config);
 ```
-
-```php
-// Authentication with User Credentials
-require 'vendor/autoload.php';
-
-use NetSuite\NetSuiteService;
-
-// *****
-// No longer supported as of web services v2020.2, use TBA instead
-// *****
-
-$config = [
-    // required -------------------------------------
-    "endpoint" => "2021_1",
-    "host"     => "https://webservices.netsuite.com",
-    "email"    => "jDoe@netsuite.com",
-    "password" => "mySecretPwd",
-    "role"     => "3",
-    "account"  => "MYACCT1",
-    "app_id"   => "4AD027CA-88B3-46EC-9D3E-41C6E6A325E2",
-    // optional -------------------------------------
-    "logging"  => true,
-    "log_path" => "/var/www/myapp/logs/netsuite",
-];
-$service = new NetSuiteService($config);
-```
-
 You can alternatively place your config in environment variables. This is
 helpful in hosted environments where deployment of config files is either
 not desired or practical. You can find the valid keys in the included
