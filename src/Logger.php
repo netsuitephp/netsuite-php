@@ -2,8 +2,13 @@
 
 namespace NetSuite;
 
-class Logger
+use Psr\Log\LoggerInterface;
+use Psr\Log\LoggerTrait;
+
+class Logger implements LoggerInterface
 {
+    use LoggerTrait;
+
     private $path;
 
     /**
@@ -16,9 +21,10 @@ class Logger
      */
     private $dateFormat;
 
-    const DEFAULT_LOG_FORMAT = 'netsuite-php-%date-%operation';
-
-    const DEFAULT_DATE_FORMAT = 'Ymd.His.u';
+    public const DEFAULT_LOG_FORMAT = 'netsuite-php-%date-%operation';
+    public const DEFAULT_DATE_FORMAT = 'Ymd.His.u';
+    public const TYPE_REQUEST = 'request';
+    public const TYPE_RESPONSE = 'response';
 
     public function __construct($path = null, $format = self::DEFAULT_LOG_FORMAT, $dateFormat = self::DEFAULT_DATE_FORMAT)
     {
@@ -38,64 +44,86 @@ class Logger
         $this->path = $path;
     }
 
+    public function log($level, $message, array $context = []): void
+    {
+        $this->writeMessage($message, $context);
+    }
+
+    public static function getSoapCallRequestMessage(\SoapClient $client): string
+    {
+        $data = cleanUpNamespaces($client->__getLastRequest());
+
+        $xml = simplexml_load_string($data, 'SimpleXMLElement', LIBXML_NOCDATA);
+
+        $privateFieldXpaths = [
+            '//password',
+            '//password2',
+            '//currentPassword',
+            '//newPassword',
+            '//newPassword2',
+            '//ccNumber',
+            '//ccSecurityCode',
+            '//socialSecurityNumber',
+        ];
+
+        $privateFields = $xml->xpath(implode(' | ', $privateFieldXpaths));
+
+        foreach ($privateFields as &$privateField) {
+            $privateField[0] = '[Content Removed for Security Reasons]';
+        }
+
+        $stringCustomFields = $xml->xpath("//customField[@xsitype='StringCustomFieldRef']");
+
+        foreach ($stringCustomFields as $customField) {
+            $customField->value = '[Content Removed for Security Reasons]';
+        }
+
+        return str_replace('xsitype', 'xsi:type', $xml->asXML());
+    }
+
+    public static function getSoapCallResponseMessage(\SoapClient $client): string
+    {
+        return $client->__getLastResponse();
+    }
+
     /**
      * Log the last soap call as request and response XML files.
+     *
+     * @deprecated Left for backward compatibility only. Use PSR/Log interface instead
      *
      * @param \SoapClient $client
      * @param string $operation
      */
     public function logSoapCall($client, $operation)
     {
-        if (file_exists($this->path)) {
-            $fileName = strtr($this->format, [
-                '%date' => (new \DateTime())->format($this->dateFormat),
-                '%operation' => $operation,
-            ]);
-            $logFile = $this->path . '/' . $fileName;
+        $this->writeMessage(
+            static::getSoapCallRequestMessage($client),
+            ['operation' => $operation, 'type' => self::TYPE_REQUEST]
+        );
 
-            // REQUEST
-            $request = $logFile . '-request.xml';
-            $Handle = fopen($request, 'w');
-            $Data = $client->__getLastRequest();
-            $Data = cleanUpNamespaces($Data);
+        $this->writeMessage(
+            static::getSoapCallResponseMessage($client),
+            ['operation' => $operation, 'type' => self::TYPE_RESPONSE]
+        );
+    }
 
-            $xml = simplexml_load_string($Data, 'SimpleXMLElement', LIBXML_NOCDATA);
-
-            $privateFieldXpaths = [
-                '//password',
-                '//password2',
-                '//currentPassword',
-                '//newPassword',
-                '//newPassword2',
-                '//ccNumber',
-                '//ccSecurityCode',
-                '//socialSecurityNumber',
-            ];
-
-            $privateFields = $xml->xpath(implode(' | ', $privateFieldXpaths));
-
-            foreach ($privateFields as &$field) {
-                $field[0] = '[Content Removed for Security Reasons]';
-            }
-
-            $stringCustomFields = $xml->xpath("//customField[@xsitype='StringCustomFieldRef']");
-
-            foreach ($stringCustomFields as $field) {
-                $field->value = '[Content Removed for Security Reasons]';
-            }
-
-            $xml_string = str_replace('xsitype', 'xsi:type', $xml->asXML());
-
-            fwrite($Handle, $xml_string);
-            fclose($Handle);
-
-            // RESPONSE
-            $response = $logFile . '-response.xml';
-            $Handle = fopen($response, 'w');
-            $Data = $client->__getLastResponse();
-
-            fwrite($Handle, $Data);
-            fclose($Handle);
+    private function writeMessage(string $message, array $context): void
+    {
+        if (!file_exists($this->path)) {
+            return;
         }
+
+        $fileName = strtr($this->format, [
+            '%date' => (new \DateTime())->format($this->dateFormat),
+            '%operation' => $context['operation'] ?? 'log',
+        ]);
+
+        $logFile = $this->path . DIRECTORY_SEPARATOR . $fileName;
+
+        if (isset($context['type'])) {
+            $logFile .= '-' . $context['type'];
+        }
+
+        file_put_contents("{$logFile}.xml", $message . PHP_EOL, FILE_APPEND);
     }
 }
