@@ -171,6 +171,9 @@ $service->logRequests(true);  // Turn logging on.
 $service->logRequests(false); // Turn logging off.
 ```
 
+If you require more flexibility in relation to logging, you can provide your
+own PSR-3 compatible logger (as of `2023.1.0`).
+
 ## Generating Classes
 
 This repository always contains classes generated from the version of the

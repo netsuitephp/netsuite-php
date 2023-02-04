@@ -15,7 +15,8 @@
     "ext-soap": "*",
     "ext-SimpleXML": "*",
     "ext-openssl": "*",
-    "paragonie/random_compat": ">=1"
+    "paragonie/random_compat": ">=1",
+    "psr/log": "^1.0"
   },
   "require-dev": {
     "phpspec/phpspec": ">=5",
