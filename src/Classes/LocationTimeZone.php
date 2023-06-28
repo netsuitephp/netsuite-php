@@ -67,7 +67,6 @@ class LocationTimeZone {
     const _asiaKolkata = "_asiaKolkata";
     const _asiaKrasnoyarsk = "_asiaKrasnoyarsk";
     const _asiaKualaLumpur = "_asiaKualaLumpur";
-    const _asiaMagadan = "_asiaMagadan";
     const _asiaManila = "_asiaManila";
     const _asiaMuscat = "_asiaMuscat";
     const _asiaRangoon = "_asiaRangoon";
@@ -102,6 +101,7 @@ class LocationTimeZone {
     const _europeParis = "_europeParis";
     const _europeWarsaw = "_europeWarsaw";
     const _pacificAuckland = "_pacificAuckland";
+    const _pacificGuadalcanal = "_pacificGuadalcanal";
     const _pacificGuam = "_pacificGuam";
     const _pacificHonolulu = "_pacificHonolulu";
     const _pacificKwajalein = "_pacificKwajalein";

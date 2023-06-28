@@ -404,7 +404,10 @@ class PermissionCode {
     const _notifications = "_notifications";
     const _nsawConnectorAdministrator = "_nsawConnectorAdministrator";
     const _oauth20authorizedApplicationsManagement = "_oauth20authorizedApplicationsManagement";
-    const _oaxConnectorAdministrator = "_oaxConnectorAdministrator";
+    const _oidcProviderSetup = "_oidcProviderSetup";
+    const _onboardingAdministration = "_onboardingAdministration";
+    const _onboardingPlan = "_onboardingPlan";
+    const _onboardingTask = "_onboardingTask";
     const _onlineCaseForm = "_onlineCaseForm";
     const _onlineCustomerForm = "_onlineCustomerForm";
     const _onlineCustomRecordForm = "_onlineCustomRecordForm";
@@ -415,6 +418,7 @@ class PermissionCode {
     const _orderManagementDashboard = "_orderManagementDashboard";
     const _orderPromising = "_orderPromising";
     const _orderReservation = "_orderReservation";
+    const _orderReservationToDelete = "_orderReservationToDelete";
     const _organizationalValue = "_organizationalValue";
     const _otherAssetRegisters = "_otherAssetRegisters";
     const _otherCurrentAssetRegisters = "_otherCurrentAssetRegisters";
@@ -520,6 +524,7 @@ class PermissionCode {
     const _reconcile = "_reconcile";
     const _reconcileReporting = "_reconcileReporting";
     const _recordCustomField = "_recordCustomField";
+    const _recordsCatalog = "_recordsCatalog";
     const _refundReturns = "_refundReturns";
     const _relatedItems = "_relatedItems";
     const _removePersonalInformationCreate = "_removePersonalInformationCreate";
@@ -569,6 +574,7 @@ class PermissionCode {
     const _salesTerritory = "_salesTerritory";
     const _salesTerritoryRule = "_salesTerritoryRule";
     const _samlSingleSignOn = "_samlSingleSignOn";
+    const _scannedVendorBills = "_scannedVendorBills";
     const _scheduleMassUpdates = "_scheduleMassUpdates";
     const _secretsManagement = "_secretsManagement";
     const _securityIssueObfuscationProcess = "_securityIssueObfuscationProcess";

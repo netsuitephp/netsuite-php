@@ -15,7 +15,7 @@
  * @link       http://www.netsuite.com/portal/developers/resources/suitetalk-sample-applications.shtml
  *
  * created:    2015-01-22  1:04 PM
- * updated:    2022-06-03 10:51:37 AM CDT
+ * updated:    2023-06-27 10:09:33 PM PDT
  */
 
 namespace NetSuite;
@@ -24,7 +24,7 @@ use NetSuite\Classes;
 
 class NetSuiteService extends NetSuiteClient {
 
-    public $generated_from_endpoint = '2022_1';
+    public $generated_from_endpoint = '2023_1';
 
     /**
      * Service Call: changePassword

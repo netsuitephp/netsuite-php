@@ -26,8 +26,13 @@ class MerchandiseHierarchyNodeSearch extends SearchRecord {
      * @var \NetSuite\Classes\MerchandiseHierarchyNodeSearchBasic
      */
     public $parentNodeJoin;
+    /**
+     * @var \NetSuite\Classes\CustomSearchJoin[]
+     */
+    public $customSearchJoin;
     static $paramtypesmap = array(
         "basic" => "MerchandiseHierarchyNodeSearchBasic",
         "parentNodeJoin" => "MerchandiseHierarchyNodeSearchBasic",
+        "customSearchJoin" => "CustomSearchJoin[]",
     );
 }
