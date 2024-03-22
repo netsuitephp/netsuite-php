@@ -102,7 +102,7 @@ class Logger implements LoggerInterface
         );
 
         $this->writeMessage(
-            static::getSoapCallResponseMessage($client),
+            static::getSoapCallResponseMessage($client) ?? '',
             ['operation' => $operation, 'type' => self::TYPE_RESPONSE]
         );
     }

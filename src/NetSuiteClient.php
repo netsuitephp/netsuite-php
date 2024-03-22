@@ -421,12 +421,12 @@ class NetSuiteClient
     {
         if (isset($this->config['logging']) && $this->config['logging']) {
             $this->logger->info(
-                Logger::getSoapCallRequestMessage($this->getClient()),
+                Logger::getSoapCallRequestMessage($this->getClient()) ?? '',
                 ['operation' => $operation, 'type' => Logger::TYPE_REQUEST]
             );
 
             $this->logger->info(
-                Logger::getSoapCallResponseMessage($this->getClient()),
+                Logger::getSoapCallResponseMessage($this->getClient()) ?? '',
                 ['operation' => $operation, 'type' => Logger::TYPE_RESPONSE]
             );
         }
