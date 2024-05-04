@@ -22,6 +22,5 @@ class TimeBillTimeType {
     );
     const _actualTime = "_actualTime";
     const _allocatedTime = "_allocatedTime";
-    const _availableTime = "_availableTime";
     const _plannedTime = "_plannedTime";
 }

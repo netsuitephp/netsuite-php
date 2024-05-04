@@ -94,6 +94,7 @@ class PermissionCode {
     const _budget = "_budget";
     const _buildAssemblies = "_buildAssemblies";
     const _buildWorkOrders = "_buildWorkOrders";
+    const _bulkProcessingSubmissions = "_bulkProcessingSubmissions";
     const _bulkTimeEntryModification = "_bulkTimeEntryModification";
     const _calculateTime = "_calculateTime";
     const _calendar = "_calendar";
@@ -146,6 +147,7 @@ class PermissionCode {
     const _createAllocationSchedules = "_createAllocationSchedules";
     const _createConsolidationCompany = "_createConsolidationCompany";
     const _createFiscalCalendar = "_createFiscalCalendar";
+    const _createHtmlFormulasInSearch = "_createHtmlFormulasInSearch";
     const _createInventoryCounts = "_createInventoryCounts";
     const _createProjectsFromSalesTransactions = "_createProjectsFromSalesTransactions";
     const _creditCard = "_creditCard";
@@ -251,6 +253,7 @@ class PermissionCode {
     const _enterVendorCredits = "_enterVendorCredits";
     const _enterYearToDatePayrollAdjustments = "_enterYearToDatePayrollAdjustments";
     const _entityAccountMapping = "_entityAccountMapping";
+    const _entitySubsidiaryRelationship = "_entitySubsidiaryRelationship";
     const _equityRegisters = "_equityRegisters";
     const _escalationAssignment = "_escalationAssignment";
     const _escalationAssignmentRule = "_escalationAssignmentRule";
@@ -298,6 +301,7 @@ class PermissionCode {
     const _generateSingleOrderRevenueContracts = "_generateSingleOrderRevenueContracts";
     const _generateStatements = "_generateStatements";
     const _genericResources = "_genericResources";
+    const _giftCertificate = "_giftCertificate";
     const _globalAccountMapping = "_globalAccountMapping";
     const _globalInventoryRelationship = "_globalInventoryRelationship";
     const _governmentIssuedIdTypes = "_governmentIssuedIdTypes";
