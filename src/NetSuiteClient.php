@@ -17,10 +17,10 @@ use NetSuite\Classes\GetDataCenterUrlsRequest;
 use NetSuite\Classes\Preferences;
 use NetSuite\Classes\SearchPreferences;
 use NetSuite\Classes\TokenPassport;
-use NetSuite\Classes\TokenPassportSignature;
 use Psr\Log\LoggerInterface;
 use SoapClient;
 use SoapHeader;
+use SoapVar;
 
 class NetSuiteClient
 {
@@ -252,8 +252,7 @@ class NetSuiteClient
 
         $signatureAlgorithm = isset($config['signatureAlgorithm']) ? $config['signatureAlgorithm'] : 'sha256';
 
-        $tokenSignature = new TokenPassportSignature();
-        $tokenSignature->_ = $this->computeTokenPassportSignature(
+        $signature = $this->computeTokenPassportSignature(
             $config['account'],
             $config['consumerKey'],
             $config['consumerSecret'],
@@ -263,8 +262,9 @@ class NetSuiteClient
             $tokenPassport->timestamp,
             $signatureAlgorithm
         );
-        $tokenSignature->algorithm = 'HMAC_' . strtoupper($signatureAlgorithm);
-        $tokenPassport->signature = $tokenSignature;
+        $algorithm = 'HMAC_' . strtoupper($signatureAlgorithm);
+
+        $tokenPassport->signature = new SoapVar("<signature algorithm='$algorithm'>$signature</signature>", XSD_ANYXML);
 
         return $tokenPassport;
     }
