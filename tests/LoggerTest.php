@@ -34,18 +34,24 @@ class LoggerTest extends TestCase
         $this->assertCount(2, $files);
 
         // Find the date.
-        $first = current($files);
-        preg_match('/netsuite-php-(.*)-upsert/', $first, $matches);
-        $this->assertNotEmpty($matches, 'Log matches format');
-        $timestamp = $matches[1];
-
-        $this->assertFileExists( "vfs://app/log/netsuite-php-$timestamp-upsert-request.xml");
-        $this->assertFileExists( "vfs://app/log/netsuite-php-$timestamp-upsert-response.xml");
-        $this->assertEquals(file_get_contents("vfs://app/log/netsuite-php-$timestamp-upsert-request.xml"), "<?xml version=\"1.0\"?>\n<request/>\n");
-        // Should this be pretty and cleaned up too?
-        $this->assertEquals(file_get_contents("vfs://app/log/netsuite-php-$timestamp-upsert-response.xml"), "<response/>");
-
-        // @todo assert sanitization.
+        foreach ($files as $file) {
+            preg_match('/netsuite-php-(.*)-upsert-(.*).xml$/', $file, $matches);
+            $real_file = 'vfs://app/log/' . $file;
+            $this->assertNotEmpty($matches, 'Log matches format');
+            $this->assertFileExists($real_file);
+            if ($matches[2] === 'request') {
+                $this->assertEquals(
+                    "<?xml version=\"1.0\"?>\n<request/>\n\n",
+                    file_get_contents($real_file),
+                );
+            }
+            elseif (preg_match('/netsuite-php-(.*)-upsert-(.*).xml$/', $file, $matches)) {
+                $this->assertEquals(
+                    "<response/>\n",
+                    file_get_contents($real_file),
+                );
+            }
+        }
     }
 
     public function testSetPath()
