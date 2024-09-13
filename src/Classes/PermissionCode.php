@@ -35,6 +35,7 @@ class PermissionCode {
     const _accountsReceivableRegister = "_accountsReceivableRegister";
     const _accountsReceivableUnbilled = "_accountsReceivableUnbilled";
     const _address = "_address";
+    const _addressListInSearch = "_addressListInSearch";
     const _adjustInventory = "_adjustInventory";
     const _adjustInventoryWorksheet = "_adjustInventoryWorksheet";
     const _admindocs = "_admindocs";
@@ -472,6 +473,7 @@ class PermissionCode {
     const _periodEndJournals = "_periodEndJournals";
     const _persistSearch = "_persistSearch";
     const _personalBankingInformation = "_personalBankingInformation";
+    const _personalInformationAccessLog = "_personalInformationAccessLog";
     const _phasedProcesses = "_phasedProcesses";
     const _phoneCalls = "_phoneCalls";
     const _pickStrategy = "_pickStrategy";
@@ -490,6 +492,7 @@ class PermissionCode {
     const _printShipmentDocuments = "_printShipmentDocuments";
     const _processGSTRefund = "_processGSTRefund";
     const _processPayroll = "_processPayroll";
+    const _productAnalyticsRecords = "_productAnalyticsRecords";
     const _projectBudget = "_projectBudget";
     const _projectIntercompanyCrossChargeRequest = "_projectIntercompanyCrossChargeRequest";
     const _projectProfitability = "_projectProfitability";
@@ -695,6 +698,7 @@ class PermissionCode {
     const _undeliveredEmails = "_undeliveredEmails";
     const _units = "_units";
     const _unlockedTimePeriod = "_unlockedTimePeriod";
+    const _unrestrictedAnalyticsAuditTrail = "_unrestrictedAnalyticsAuditTrail";
     const _updatePrices = "_updatePrices";
     const _upsellAssistant = "_upsellAssistant";
     const _upsellSetup = "_upsellSetup";
