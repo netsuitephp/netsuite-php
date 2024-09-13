@@ -161,6 +161,10 @@ class CrmCustomField extends CustomFieldType {
     /**
      * @var boolean
      */
+    public $appliesToResourceAllocation;
+    /**
+     * @var boolean
+     */
     public $appliesToPhoneCall;
     /**
      * @var boolean
@@ -266,6 +270,7 @@ class CrmCustomField extends CustomFieldType {
         "appliesToTask" => "boolean",
         "appliesToMfgProjectTask" => "boolean",
         "appliesToProjectTask" => "boolean",
+        "appliesToResourceAllocation" => "boolean",
         "appliesToPhoneCall" => "boolean",
         "appliesToEvent" => "boolean",
         "appliesToCase" => "boolean",

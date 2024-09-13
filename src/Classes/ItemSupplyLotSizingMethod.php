@@ -23,5 +23,6 @@ class ItemSupplyLotSizingMethod {
     const _fixedLotMultiple = "_fixedLotMultiple";
     const _fixedLotSize = "_fixedLotSize";
     const _lotForLot = "_lotForLot";
+    const _minimumOrderQuantity = "_minimumOrderQuantity";
     const _periodsOfSupply = "_periodsOfSupply";
 }
