@@ -174,7 +174,7 @@ class NetSuiteClient
      */
     public static function createFromEnv(
         array $options = [],
-        \SoapClient $client = null
+        ?\SoapClient $client = null
     ) {
         $config = self::getEnvConfig();
 

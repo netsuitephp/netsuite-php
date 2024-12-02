@@ -33,7 +33,7 @@ namespace Netsuite {
 
 namespace {
 
-    function setFields($object, array $fieldArray=null)
+    function setFields($object, ?array $fieldArray=null): void
     {
         // helper method that allows creating objects and setting their properties based on an associative array passed as argument. Mimics functionality from PHP toolkit
         $classname = get_class($object);
