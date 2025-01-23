@@ -21,6 +21,7 @@ class BillingAccountFrequency {
     static $paramtypesmap = array(
     );
     const _annually = "_annually";
+    const _autoRefill = "_autoRefill";
     const _custom = "_custom";
     const _daily = "_daily";
     const _endOfPeriod = "_endOfPeriod";

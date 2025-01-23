@@ -674,6 +674,7 @@ class PermissionCode {
     const _templateCategories = "_templateCategories";
     const _terminationReasons = "_terminationReasons";
     const _testdriveMasters = "_testdriveMasters";
+    const _textEnhance = "_textEnhance";
     const _timeCodes = "_timeCodes";
     const _timeOffAdministration = "_timeOffAdministration";
     const _timer = "_timer";

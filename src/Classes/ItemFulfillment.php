@@ -343,6 +343,10 @@ class ItemFulfillment extends Record {
      */
     public $shipMethod;
     /**
+     * @var \NetSuite\Classes\RecordRef
+     */
+    public $inventoryLocation;
+    /**
      * @var boolean
      */
     public $generateIntegratedShipperLabel;
@@ -480,6 +484,7 @@ class ItemFulfillment extends Record {
         "tranDate" => "dateTime",
         "tranId" => "string",
         "shipMethod" => "RecordRef",
+        "inventoryLocation" => "RecordRef",
         "generateIntegratedShipperLabel" => "boolean",
         "shippingCost" => "float",
         "handlingCost" => "float",

@@ -49,7 +49,7 @@ class BomRevisionComponent {
     /**
      * @var string
      */
-    public $internalId;
+    public $id;
     /**
      * @var \NetSuite\Classes\CustomFieldList
      */
@@ -62,7 +62,7 @@ class BomRevisionComponent {
         "itemSource" => "ItemSource",
         "quantity" => "float",
         "units" => "RecordRef",
-        "internalId" => "string",
+        "id" => "string",
         "customFieldList" => "CustomFieldList",
     );
 }
