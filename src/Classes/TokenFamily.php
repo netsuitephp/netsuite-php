@@ -20,15 +20,24 @@ namespace NetSuite\Classes;
 class TokenFamily {
     static $paramtypesmap = array(
     );
+    const _accessWorldpay = "_accessWorldpay";
     const _adyen = "_adyen";
     const _altaPay = "_altaPay";
+    const _blueSnap = "_blueSnap";
     const _cyberSource = "_cyberSource";
+    const _eightQuanta = "_eightQuanta";
     const _eway = "_eway";
+    const _fortis = "_fortis";
     const _freedomPay = "_freedomPay";
     const _merchantESolutions = "_merchantESolutions";
     const _payCorp = "_payCorp";
+    const _payPal = "_payPal";
     const _payu = "_payu";
     const _securePay = "_securePay";
-    const _soluPay = "_soluPay";
-    const _vantivPayments = "_vantivPayments";
+    const _square = "_square";
+    const _sumUp = "_sumUp";
+    const _versapay = "_versapay";
+    const _windcave = "_windcave";
+    const _worldpay = "_worldpay";
+    const _worldPayIntegratedPayments = "_worldPayIntegratedPayments";
 }

@@ -38,11 +38,16 @@ class UsageSearch extends SearchRecord {
      * @var \NetSuite\Classes\ItemSearchBasic
      */
     public $subscriptionPlanJoin;
+    /**
+     * @var \NetSuite\Classes\CustomSearchJoin[]
+     */
+    public $customSearchJoin;
     static $paramtypesmap = array(
         "basic" => "UsageSearchBasic",
         "chargeJoin" => "ChargeSearchBasic",
         "customerJoin" => "CustomerSearchBasic",
         "itemJoin" => "ItemSearchBasic",
         "subscriptionPlanJoin" => "ItemSearchBasic",
+        "customSearchJoin" => "CustomSearchJoin[]",
     );
 }

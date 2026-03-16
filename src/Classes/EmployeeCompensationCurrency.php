@@ -214,9 +214,11 @@ class EmployeeCompensationCurrency {
     const _yer = "_yer";
     const _yum = "_yum";
     const _zar = "_zar";
+    const _zig = "_zig";
     const _zmk = "_zmk";
     const _zmw = "_zmw";
     const _zrn = "_zrn";
     const _zwd = "_zwd";
+    const _zwg = "_zwg";
     const _zwl = "_zwl";
 }
