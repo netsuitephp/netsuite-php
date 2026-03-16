@@ -175,4 +175,44 @@ class NetSuiteClientTest extends TestCase
         $this->assertTrue(true);
     }
 
+    public function testComputeTokenPassportSignature()
+    {
+        $client = new NetSuiteClient($this->validConfig(), [], $this->createMock(\SoapClient::class));
+
+        $method = new \ReflectionMethod(NetSuiteClient::class, 'computeTokenPassportSignature');
+        $method->setAccessible(true);
+
+        $result = $method->invoke(
+            $client,
+            'TESTACCT',       // account
+            'consumer-key',   // consumerKey
+            'consumer-secret',// consumerSecret
+            'token-id',       // token
+            'token-secret',   // tokenSecret
+            'abc123',         // nonce
+            '1700000000',     // timestamp
+            'sha256'          // algorithm
+        );
+
+        $baseString = 'TESTACCT&consumer-key&token-id&abc123&1700000000';
+        $key = 'consumer-secret&token-secret';
+        $expected = base64_encode(hash_hmac('sha256', $baseString, $key, true));
+
+        $this->assertEquals($expected, $result);
+    }
+
+    public function testGenerateTokenPassportNonceLength()
+    {
+        $client = new NetSuiteClient($this->validConfig(), [], $this->createMock(\SoapClient::class));
+
+        $method = new \ReflectionMethod(NetSuiteClient::class, 'generateTokenPassportNonce');
+        $method->setAccessible(true);
+
+        $nonce = $method->invoke($client);
+        $this->assertEquals(32, strlen($nonce));
+        $this->assertMatchesRegularExpression('/^[a-zA-Z0-9]+$/', $nonce);
+
+        $nonce16 = $method->invoke($client, 16);
+        $this->assertEquals(16, strlen($nonce16));
+    }
 }
