@@ -137,4 +137,33 @@ class FunctionsTest extends TestCase
 
         $this->assertFalse($ref->internalId);
     }
+
+    // --- cleanUpNamespaces ---
+
+    public function testCleanUpNamespacesRemovesPrefixes()
+    {
+        $xml = '<?xml version="1.0"?>'
+            . '<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/"'
+            . ' xmlns:platformMsgs="urn:messages">'
+            . '<soapenv:Body><platformMsgs:add>'
+            . '<record xsi:type="Customer"/>'
+            . '</platformMsgs:add></soapenv:Body></soapenv:Envelope>';
+
+        $result = cleanUpNamespaces($xml);
+
+        $this->assertStringNotContainsString('soapenv:', $result);
+        $this->assertStringNotContainsString('platformMsgs:', $result);
+        $this->assertStringContainsString('xsitype', $result);
+    }
+
+    public function testCleanUpNamespacesPreservesXsiType()
+    {
+        $xml = '<?xml version="1.0"?>'
+            . '<Envelope xmlns:ns="urn:test">'
+            . '<ns:Body><record xsi:type="SomeType"/></ns:Body></Envelope>';
+
+        $result = cleanUpNamespaces($xml);
+
+        $this->assertStringContainsString('xsitype', $result);
+    }
 }
