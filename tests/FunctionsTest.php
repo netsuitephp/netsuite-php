@@ -69,4 +69,72 @@ class FunctionsTest extends TestCase
     {
         $this->assertTrue(\Netsuite\array_is_associative([0 => 'a', 'key' => 'b']));
     }
+
+    // --- setFields ---
+
+    public function testSetFieldsWithSimpleScalarValues()
+    {
+        $ref = new \NetSuite\Classes\RecordRef();
+        setFields($ref, ['internalId' => '123', 'externalId' => '456']);
+
+        $this->assertEquals('123', $ref->internalId);
+        $this->assertEquals('456', $ref->externalId);
+    }
+
+    public function testSetFieldsWithNullDoesNothing()
+    {
+        $ref = new \NetSuite\Classes\RecordRef();
+        setFields($ref, null);
+
+        $this->assertNull($ref->internalId);
+    }
+
+    public function testSetFieldsSkipsEmptyValues()
+    {
+        $ref = new \NetSuite\Classes\RecordRef();
+        setFields($ref, ['internalId' => '', 'externalId' => '456']);
+
+        $this->assertNull($ref->internalId);
+        $this->assertEquals('456', $ref->externalId);
+    }
+
+    public function testSetFieldsWithNestedAssociativeArray()
+    {
+        $item = new \NetSuite\Classes\SalesOrderItem();
+        setFields($item, [
+            'item' => ['internalId' => '42'],
+        ]);
+
+        $this->assertInstanceOf(\NetSuite\Classes\RecordRef::class, $item->item);
+        $this->assertEquals('42', $item->item->internalId);
+    }
+
+    public function testSetFieldsWithObjectValue()
+    {
+        $ref = new \NetSuite\Classes\RecordRef();
+        $ref->internalId = '99';
+
+        $item = new \NetSuite\Classes\SalesOrderItem();
+        setFields($item, ['item' => $ref]);
+
+        $this->assertSame($ref, $item->item);
+    }
+
+    public function testSetFieldsWarnsOnInvalidParameter()
+    {
+        $ref = new \NetSuite\Classes\RecordRef();
+
+        $this->expectWarning();
+        $this->expectWarningMessage('SetFields error: parameter "nonExistent" is not a valid parameter');
+
+        setFields($ref, ['nonExistent' => 'value']);
+    }
+
+    public function testSetFieldsWithFalseStringValue()
+    {
+        $ref = new \NetSuite\Classes\RecordRef();
+        setFields($ref, ['internalId' => 'false']);
+
+        $this->assertFalse($ref->internalId);
+    }
 }
