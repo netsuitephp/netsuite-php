@@ -124,10 +124,20 @@ class FunctionsTest extends TestCase
     {
         $ref = new \NetSuite\Classes\RecordRef();
 
-        $this->expectWarning();
-        $this->expectWarningMessage('SetFields error: parameter "nonExistent" is not a valid parameter');
+        $warning = null;
+        set_error_handler(function (int $errno, string $errstr) use (&$warning) {
+            $warning = $errstr;
+            return true;
+        }, E_USER_WARNING);
 
-        setFields($ref, ['nonExistent' => 'value']);
+        try {
+            setFields($ref, ['nonExistent' => 'value']);
+        } finally {
+            restore_error_handler();
+        }
+
+        $this->assertNotNull($warning);
+        $this->assertStringContainsString('SetFields error: parameter "nonExistent" is not a valid parameter', $warning);
     }
 
     public function testSetFieldsWithFalseStringValue()
