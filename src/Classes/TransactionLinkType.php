@@ -24,7 +24,7 @@ class TransactionLinkType {
     const _advancedExpenseAmortization = "_advancedExpenseAmortization";
     const _authorizationDeposit = "_authorizationDeposit";
     const _billReceipt = "_billReceipt";
-    const _blcgaJeFullfillment = "_blcgaJeFullfillment";
+    const _blcgaJeFulfillment = "_blcgaJeFulfillment";
     const _captureAuthorization = "_captureAuthorization";
     const _closedPeriodFxVariance = "_closedPeriodFxVariance";
     const _closeWorkOrder = "_closeWorkOrder";
@@ -72,7 +72,7 @@ class TransactionLinkType {
     const _reimbursement = "_reimbursement";
     const _reservationShipment = "_reservationShipment";
     const _revalueWorkOrder = "_revalueWorkOrder";
-    const _revenueAmortizatonRecognition = "_revenueAmortizatonRecognition";
+    const _revenueAmortizationRecognition = "_revenueAmortizationRecognition";
     const _revenueArrangement = "_revenueArrangement";
     const _revenueCommitted = "_revenueCommitted";
     const _rfqToVendorRfq = "_rfqToVendorRfq";

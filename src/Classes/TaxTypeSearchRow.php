@@ -26,8 +26,13 @@ class TaxTypeSearchRow extends SearchRow {
      * @var \NetSuite\Classes\EmployeeSearchRowBasic
      */
     public $userJoin;
+    /**
+     * @var \NetSuite\Classes\CustomSearchRowBasic[]
+     */
+    public $customSearchJoin;
     static $paramtypesmap = array(
         "basic" => "TaxTypeSearchRowBasic",
         "userJoin" => "EmployeeSearchRowBasic",
+        "customSearchJoin" => "CustomSearchRowBasic[]",
     );
 }
