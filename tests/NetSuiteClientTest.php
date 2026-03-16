@@ -137,4 +137,42 @@ class NetSuiteClientTest extends TestCase
             }
         }
     }
+
+    public function testAddAndClearHeader()
+    {
+        $client = new NetSuiteClient($this->validConfig(), [], $this->createMock(\SoapClient::class));
+
+        $client->addHeader('testHeader', 'testValue');
+        $client->clearHeader('testHeader');
+        $this->assertTrue(true);
+    }
+
+    public function testSetAndClearPreferences()
+    {
+        $client = new NetSuiteClient($this->validConfig(), [], $this->createMock(\SoapClient::class));
+
+        $client->setPreferences(true, true, false, true);
+        $client->clearPreferences();
+        $this->assertTrue(true);
+    }
+
+    public function testSetAndClearSearchPreferences()
+    {
+        $client = new NetSuiteClient($this->validConfig(), [], $this->createMock(\SoapClient::class));
+
+        $client->setSearchPreferences(false, 100, true);
+        $client->clearSearchPreferences();
+        $this->assertTrue(true);
+    }
+
+    public function testLogRequestsToggle()
+    {
+        $config = $this->validConfig();
+        $client = new NetSuiteClient($config, [], $this->createMock(\SoapClient::class));
+
+        $client->logRequests(true);
+        $client->logRequests(false);
+        $this->assertTrue(true);
+    }
+
 }
