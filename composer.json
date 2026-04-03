@@ -15,7 +15,6 @@
     "ext-soap": "*",
     "ext-SimpleXML": "*",
     "ext-openssl": "*",
-    "paragonie/random_compat": ">=1",
     "psr/log": "^1|^2|^3"
   },
   "require-dev": {
