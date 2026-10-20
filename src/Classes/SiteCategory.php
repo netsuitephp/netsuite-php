@@ -110,6 +110,18 @@ class SiteCategory extends Record {
      * @var string
      */
     public $externalId;
+    /**
+     * @var \NetSuite\Classes\RecordRef
+     */
+    public $category;
+    /**
+     * @var boolean
+     */
+    public $isDefault;
+    /**
+     * @var string
+     */
+    public $categoryDescription;
     static $paramtypesmap = array(
         "website" => "RecordRef",
         "itemId" => "string",
@@ -134,5 +146,8 @@ class SiteCategory extends Record {
         "translationsList" => "SiteCategoryTranslationList",
         "internalId" => "string",
         "externalId" => "string",
+        "category" => "RecordRef",
+        "isDefault" => "boolean",
+        "categoryDescription" => "string",
     );
 }

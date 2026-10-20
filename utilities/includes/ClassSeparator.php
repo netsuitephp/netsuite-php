@@ -41,6 +41,7 @@ class ClassSeparator
         $this->file = $this->replaceTabsWithSpaces($this->file);
 
         $classes = $this->classesToArray();
+        $classes = $this->mergeSameNameTypes($classes);
 
         return $this->writeClassesToFiles($classes);
     }
@@ -149,6 +150,54 @@ class ClassSeparator
     {
         $classes = explode("class ", $this->file);
         array_shift($classes); // The first one is always empty
+        return $classes;
+    }
+
+    /**
+     * Declare on a class the properties of the WSDL type that shares its name.
+     *
+     * Some types share their local name with a type in another namespace, e.g. SiteCategory in
+     * urn:website (the Site Category record) and in urn:accounting (an entry of an item's
+     * siteCategoryList). The toolkit names the second one Name_namespace and leaves it out of the
+     * classmap, but SoapClient's classmap keys on the local name only, so both are hydrated into
+     * Name. Properties only Name_namespace has would be dynamic properties, deprecated since PHP 8.2.
+     *
+     * @param array $classes
+     * @return array
+     */
+    private function mergeSameNameTypes(array $classes)
+    {
+        $indexes = [];
+        foreach ($classes as $index => $class) {
+            preg_match('/^\w+/', $class, $name);
+            $indexes[$name[0]] = $index;
+        }
+
+        foreach ($indexes as $name => $index) {
+            if (!preg_match('/^(\w+)_[a-z]+$/', $name, $match) || !isset($indexes[$match[1]])) {
+                continue;
+            }
+            $target = $classes[$indexes[$match[1]]];
+            preg_match_all('/public \$(\w+);/', $target, $declared);
+            preg_match_all('/"(\w+)" => "([^"]+)",/', $classes[$index], $types, PREG_SET_ORDER);
+            foreach ($types as [, $property, $type]) {
+                if (in_array($property, $declared[1], true)) {
+                    continue;
+                }
+                $target = preg_replace(
+                    '/^(\s*)static \$paramtypesmap = array\(/m',
+                    "$1public \$$property;\n$0",
+                    $target
+                );
+                $target = preg_replace(
+                    '/(static \$paramtypesmap = array\([^)]*?)(\n\s*\);)/',
+                    "$1\n        \"$property\" => \"$type\",$2",
+                    $target
+                );
+            }
+            $classes[$indexes[$match[1]]] = $target;
+        }
+
         return $classes;
     }
 
