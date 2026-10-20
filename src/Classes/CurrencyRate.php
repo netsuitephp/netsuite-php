@@ -42,6 +42,10 @@ class CurrencyRate extends Record {
      * @var string
      */
     public $internalId;
+    /**
+     * @var \NetSuite\Classes\RecordRef
+     */
+    public $fromCurrency;
     static $paramtypesmap = array(
         "baseCurrency" => "RecordRef",
         "transactionCurrency" => "RecordRef",
@@ -49,5 +53,6 @@ class CurrencyRate extends Record {
         "effectiveDate" => "dateTime",
         "currencyRateType" => "RecordRef",
         "internalId" => "string",
+        "fromCurrency" => "RecordRef",
     );
 }
